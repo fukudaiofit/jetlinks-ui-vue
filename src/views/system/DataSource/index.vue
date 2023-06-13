@@ -159,14 +159,15 @@ import {
     delDataSource_api,
 } from '@/api/system/dataSource';
 import { message } from 'jetlinks-ui-components';
-
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n();
 const permission = 'system/DataSource';
 
 const router = useRouter();
 
 const columns = [
     {
-        title: '名称',
+        title: t('button'),
         dataIndex: 'name',
         key: 'name',
         search: {

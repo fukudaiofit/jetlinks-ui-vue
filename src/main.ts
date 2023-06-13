@@ -8,10 +8,12 @@ import './style.less'
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 dayjs.locale('zh-cn');
+import i18n from './locales'
 
 const app = createApp(App)
 
 app.use(store)
   .use(router)
   .use(components)
+  .use(i18n)
   .mount('#app')

@@ -1,25 +1,10 @@
 <template>
-    <j-modal
-        visible
-        title="选择产品"
-        width="700px"
-        @ok="confirm"
-        @cancel="emits('update:visible', false)"
-        :filter-option="filterOption"
-        :maskClosable="false"
-        class="access-method-dialog-container"
-    >
+    <j-modal visible :title="t('common.choiseProduct')" width="700px" @ok="confirm" @cancel="emits('update:visible', false)"
+        :filter-option="filterOption" :maskClosable="false" class="access-method-dialog-container">
         <j-form :model="form" name="basic" autocomplete="off" layout="vertical">
-            <j-form-item
-                label="产品"
-                name="productId"
-                :rules="[{ required: true, message: '该字段是必填字段' }]"
-            >
-                <j-select
-                    v-model:value="form.productId"
-                    style="width: 100%"
-                    :options="productList"
-                >
+            <j-form-item :label="t('common.product')" name="productId"
+                :rules="[{ required: true, message: t('common.validate.required') }]">
+                <j-select v-model:value="form.productId" style="width: 100%" :options="productList">
                 </j-select>
             </j-form-item>
         </j-form>
@@ -29,7 +14,9 @@
 <script setup lang="ts">
 import { getProductList_api } from '@/api/home';
 import { productItem } from '../../typing';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emits = defineEmits(['confirm', 'update:visible']);
 const props = defineProps<{
     visible: boolean;
@@ -68,6 +55,7 @@ getOptions();
         .ant-form {
             .ant-form-item-label {
                 color: green;
+
                 .ant-form-item-required {
                     &::before {
                         position: absolute;

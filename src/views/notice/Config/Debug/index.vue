@@ -2,22 +2,22 @@
 <template>
     <j-modal
         v-model:visible="_vis"
-        title="调试"
-        cancelText="取消"
-        okText="确定"
+        :title="t('common.debug')"
+        :cancelText="t('common.cancel')"
+        :okText="t('common.ok')"
         @ok="handleOk"
         @cancel="handleCancel"
         :confirmLoading="btnLoading"
     >
         <j-form ref="formRef" layout="vertical" :model="formData">
             <j-form-item
-                label="通知模板"
+                :label="t('common.notifiTem')"
                 name="templateId"
-                :rules="{ required: true, message: '该字段为必填字段' }"
+                :rules="{ required: true, message: t('common.validata.required') }"
             >
                 <j-select
                     v-model:value="formData.templateId"
-                    placeholder="请选择通知模板"
+                    :placeholder="t('common.tips.notifiTem')"
                     @change="getTemplateDetail"
                 >
                     <j-select-option
@@ -30,7 +30,7 @@
                 </j-select>
             </j-form-item>
             <j-form-item
-                label="变量"
+                :label="t('common.variate')"
                 v-if="
                     formData.templateDetailTable &&
                     formData.templateDetailTable.length
@@ -55,7 +55,7 @@
                                 :rules="[
                                     {
                                         required: record.required,
-                                        message: '该字段为必填字段',
+                                        message: t('common.validate.required'),
                                     },
                                     ...record.otherRules,
                                 ]"
@@ -119,6 +119,9 @@ import ToOrg from '@/views/notice/Template/Detail/components/ToOrg.vue';
 import ToTag from '@/views/notice/Template/Detail/components/ToTag.vue';
 import type { Rule } from 'ant-design-vue/es/form';
 import { phoneRegEx } from '@/utils/validate';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 type Emits = {
     (e: 'update:visible', data: boolean): void;
@@ -180,7 +183,7 @@ const getTemplateDetail = async () => {
                     ? [
                           {
                               max: 64,
-                              message: '最多可输入64个字符',
+                              message: t('common.tips.max64'),
                               trigger: 'change',
                           },
                           {
@@ -188,7 +191,7 @@ const getTemplateDetail = async () => {
                               validator(_rule: Rule, value: string) {
                                   if (!value) return Promise.resolve();
                                   if (!phoneRegEx(value))
-                                      return Promise.reject('请输入有效号码');
+                                      return Promise.reject(t('common.tips.number'));
                                   return Promise.resolve();
                               },
                           },
@@ -200,17 +203,17 @@ const getTemplateDetail = async () => {
 
 const columns = [
     {
-        title: '变量',
+        title: t('common.variate'),
         dataIndex: 'id',
         scopedSlots: { customRender: 'id' },
     },
     {
-        title: '名称',
+        title: t('common.name'),
         dataIndex: 'name',
         scopedSlots: { customRender: 'name' },
     },
     {
-        title: '值',
+        title: t('common.value'),
         dataIndex: 'type',
         width: 160,
         scopedSlots: { customRender: 'type' },
@@ -246,7 +249,7 @@ const handleOk = () => {
             ConfigApi.debug(params, props.data.id, formData.value.templateId)
                 .then((res) => {
                     if (res.success) {
-                        message.success('操作成功');
+                        message.success(t('common.tips.suc'));
                         handleCancel();
                     }
                 })

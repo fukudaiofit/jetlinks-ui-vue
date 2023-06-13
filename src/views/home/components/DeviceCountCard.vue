@@ -1,16 +1,16 @@
 <template>
     <div class="device-count-container">
-        <h5 class="title">设备统计</h5>
-        <span class="detail" @click="jumpPage('device/DashBoard')" v-if="isNoCommunity"> 详情 </span>
+        <h5 class="title">{{ t('pages.iot.home.device.title') }}</h5>
+        <span class="detail" @click="jumpPage('device/DashBoard')" v-if="isNoCommunity"> {{ t('common.details') }} </span>
 
         <div class="box-list">
             <div class="box-item">
-                <div class="label">产品数量</div>
+                <div class="label">{{ t('pages.iot.home.device.product') }}</div>
                 <div class="value">{{ projectNum }}</div>
                 <img src="/images/home/product.png" alt="" />
             </div>
             <div class="box-item">
-                <div class="label">设备数量</div>
+                <div class="label">{{ t('pages.iot.home.device.amount') }}</div>
                 <div class="value">{{ deviceNum }}</div>
                 <img src="/images/home/top-1.png" alt="" />
             </div>
@@ -22,6 +22,8 @@
 import { getDeviceCount_api, getProductCount_api } from '@/api/home';
 import { useMenuStore } from '@/store/menu';
 import { isNoCommunity } from '@/utils/utils'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n();
 
 const { jumpPage } = useMenuStore();
 const projectNum = ref(0);
@@ -49,6 +51,7 @@ getData();
     background-color: #fff;
     padding: 24px 14px;
     position: relative;
+
     .title {
         position: relative;
         z-index: 2;
@@ -71,6 +74,7 @@ getData();
             content: ' ';
         }
     }
+
     .detail {
         color: #1d39c4;
         cursor: pointer;
@@ -89,17 +93,16 @@ getData();
         .box-item {
             position: relative;
             padding: 16px;
-            background: linear-gradient(
-                135.62deg,
-                #f6f7fd 22.27%,
-                hsla(0, 0%, 100%, 0.86) 91.82%
-            );
+            background: linear-gradient(135.62deg,
+                    #f6f7fd 22.27%,
+                    hsla(0, 0%, 100%, 0.86) 91.82%);
             border-radius: 2px;
             box-shadow: 0 4px 18px #efefef;
 
             .label {
                 color: #4f4f4f;
             }
+
             .value {
                 margin: 20px 0;
                 color: rgba(0, 0, 0, 0.85);

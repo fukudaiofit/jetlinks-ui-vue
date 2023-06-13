@@ -5,133 +5,63 @@
             <j-row>
                 <j-col :span="10">
                     <j-form layout="vertical">
-                        <j-form-item
-                            label="通知方式"
-                            v-bind="validateInfos.type"
-                        >
-                            <j-select
-                                v-model:value="formData.type"
-                                placeholder="请选择通知方式"
-                                :disabled="!!formData.id"
-                                @change="handleTypeChange"
-                            >
-                                <j-select-option
-                                    v-for="(item, index) in NOTICE_METHOD"
-                                    :key="index"
-                                    :value="item.value"
-                                >
+                        <j-form-item :label="t('common.notiMode')" v-bind="validateInfos.type">
+                            <j-select v-model:value="formData.type" :placeholder="t('common.tips.notification')"
+                                :disabled="!!formData.id" @change="handleTypeChange">
+                                <j-select-option v-for="(item, index) in NOTICE_METHOD" :key="index" :value="item.value">
                                     {{ item.label }}
                                 </j-select-option>
                             </j-select>
                         </j-form-item>
-                        <j-form-item label="名称" v-bind="validateInfos.name">
-                            <j-input
-                                v-model:value="formData.name"
-                                placeholder="请输入名称"
-                            />
+                        <j-form-item :label="t('common.name')" v-bind="validateInfos.name">
+                            <j-input v-model:value="formData.name" :placeholder="t('common.tips.name')" />
                         </j-form-item>
-                        <j-form-item
-                            label="类型"
-                            v-bind="validateInfos.provider"
-                            v-if="formData.type !== 'email'"
-                        >
-                            <RadioCard
-                                :options="msgType"
-                                v-model="formData.provider"
-                                @change="handleProviderChange"
-                            />
+                        <j-form-item :label="t('common.type')" v-bind="validateInfos.provider"
+                            v-if="formData.type !== 'email'">
+                            <RadioCard :options="msgType" v-model="formData.provider" @change="handleProviderChange" />
                         </j-form-item>
                         <!-- 钉钉 -->
                         <template v-if="formData.type === 'dingTalk'">
-                            <template
-                                v-if="formData.provider === 'dingTalkMessage'"
-                            >
-                                <j-form-item
-                                    label="AppKey"
-                                    v-bind="
-                                        validateInfos['configuration.appKey']
-                                    "
-                                >
-                                    <j-input
-                                        v-model:value="
-                                            formData.configuration.appKey
-                                        "
-                                        placeholder="请输入AppKey"
-                                    />
+                            <template v-if="formData.provider === 'dingTalkMessage'">
+                                <j-form-item label="AppKey" v-bind="validateInfos['configuration.appKey']
+                                    ">
+                                    <j-input v-model:value="formData.configuration.appKey
+                                        " :placeholder="t('common.tips.AppKey')" />
                                 </j-form-item>
-                                <j-form-item
-                                    label="AppSecret"
-                                    v-bind="
-                                        validateInfos['configuration.appSecret']
-                                    "
-                                >
-                                    <j-input
-                                        v-model:value="
-                                            formData.configuration.appSecret
-                                        "
-                                        placeholder="请输入AppSecret"
-                                    />
+                                <j-form-item label="AppSecret" v-bind="validateInfos['configuration.appSecret']
+                                    ">
+                                    <j-input v-model:value="formData.configuration.appSecret
+                                        " :placeholder="t('common.tips.AppSecret')" />
                                 </j-form-item>
                             </template>
-                            <template
-                                v-if="
-                                    formData.provider === 'dingTalkRobotWebHook'
-                                "
-                            >
-                                <j-form-item
-                                    label="webHook"
-                                    v-bind="validateInfos['configuration.url']"
-                                    :rules='[{ max: 64, message: "最多可输入64个字符" }]'
-                                >
-                                    <j-input
-                                        v-model:value="
-                                            formData.configuration.url
-                                        "
-                                        placeholder="请输入webHook"
-                                    />
+                            <template v-if="formData.provider === 'dingTalkRobotWebHook'
+                                ">
+                                <j-form-item label="webHook" v-bind="validateInfos['configuration.url']"
+                                    :rules="[{ max: 64, message: t('common.tips.max64') }]">
+                                    <j-input v-model:value="formData.configuration.url
+                                        " :placeholder="t('common.tips.webHook')" />
                                 </j-form-item>
                             </template>
                         </template>
                         <!-- 微信 -->
                         <template v-if="formData.type === 'weixin'">
-                            <j-form-item
-                                label="corpId"
-                                v-bind="validateInfos['configuration.corpId']"
-                            >
-                                <j-input
-                                    v-model:value="
-                                        formData.configuration.corpId
-                                    "
-                                    placeholder="请输入corpId"
-                                />
+                            <j-form-item label="corpId" v-bind="validateInfos['configuration.corpId']">
+                                <j-input v-model:value="formData.configuration.corpId
+                                    " :placeholder="t('common.tips.corpId')" />
                             </j-form-item>
-                            <j-form-item
-                                label="corpSecret"
-                                v-bind="
-                                    validateInfos['configuration.corpSecret']
-                                "
-                            >
-                                <j-input
-                                    v-model:value="
-                                        formData.configuration.corpSecret
-                                    "
-                                    placeholder="请输入corpSecret"
-                                />
+                            <j-form-item label="corpSecret" v-bind="validateInfos['configuration.corpSecret']
+                                ">
+                                <j-input v-model:value="formData.configuration.corpSecret
+                                    " :placeholder="t('pages.iot.notice.config.corpSecretTip')" />
                             </j-form-item>
                         </template>
                         <!-- 邮件 -->
                         <template v-if="formData.type === 'email'">
-                            <j-form-item
-                                label="服务器地址"
-                                v-bind="validateInfos['configuration.host']"
-                            >
+                            <j-form-item :label="t('pages.iot.notice.config.serverAddress')"
+                                v-bind="validateInfos['configuration.host']">
                                 <j-space>
-                                    <j-auto-complete
-                                        v-model:value="
-                                            formData.configuration.host
-                                        "
-                                        placeholder="请输入服务器地址"
-                                        style="width: 180px"
+                                    <j-auto-complete v-model:value="formData.configuration.host
+                                        " :placeholder="t('pages.iot.notice.config.serverTip')" style="width: 180px"
                                         :options="[
                                             {
                                                 label: 'smtp.163.com',
@@ -169,146 +99,70 @@
                                                 label: 'pop.126.com',
                                                 value: 'pop.126.com',
                                             },
-                                        ]"
-                                    />
-                                    <j-input-number
-                                        v-model:value="
-                                            formData.configuration.port
-                                        "
-                                        :precision="0"
-                                        :min="1"
-                                        :max="65535"
-                                    />
-                                    <j-checkbox
-                                        v-model:checked="
-                                            formData.configuration.ssl
-                                        "
-                                        @change="handleSslChange"
-                                    >
-                                        开启SSL
+                                        ]" />
+                                    <j-input-number v-model:value="formData.configuration.port
+                                        " :precision="0" :min="1" :max="65535" />
+                                    <j-checkbox v-model:checked="formData.configuration.ssl
+                                        " @change="handleSslChange">
+                                        {{ t('common.open') + 'SSL' }}
                                     </j-checkbox>
                                 </j-space>
                             </j-form-item>
-                            <j-form-item
-                                label="发件人"
-                                v-bind="validateInfos['configuration.sender']"
-                            >
-                                <j-input
-                                    v-model:value="
-                                        formData.configuration.sender
-                                    "
-                                    placeholder="请输入发件人"
-                                />
+                            <j-form-item :label="t('pages.iot.notice.config.addresser')"
+                                v-bind="validateInfos['configuration.sender']">
+                                <j-input v-model:value="formData.configuration.sender
+                                    " :placeholder="t('pages.iot.notice.config.addresserTip')" />
                             </j-form-item>
-                            <j-form-item
-                                label="用户名"
-                                v-bind="validateInfos['configuration.username']"
-                            >
-                                <j-input
-                                    v-model:value="
-                                        formData.configuration.username
-                                    "
-                                    placeholder="请输入用户名"
-                                />
+                            <j-form-item :label="t('common.userName')" v-bind="validateInfos['configuration.username']">
+                                <j-input v-model:value="formData.configuration.username
+                                    " :placeholder="t('common.tips.userName')" />
                             </j-form-item>
-                            <j-form-item
-                                label="密码"
-                                v-bind="validateInfos['configuration.password']"
-                            >
-                                <j-input
-                                    v-model:value="
-                                        formData.configuration.password
-                                    "
-                                    placeholder="请输入密码"
-                                />
+                            <j-form-item :label="t('common.pwd')" v-bind="validateInfos['configuration.password']">
+                                <j-input v-model:value="formData.configuration.password
+                                    " :placeholder="t('common.pwdTips')" />
                             </j-form-item>
                         </template>
                         <!-- 语音/短信 -->
-                        <template
-                            v-if="
-                                formData.type === 'voice' ||
-                                formData.type === 'sms'
-                            "
-                        >
-                            <j-form-item
-                                label="RegionId"
-                                v-bind="validateInfos['configuration.regionId']"
-                            >
-                                <j-select
-                                    v-model:value="
-                                        formData.configuration.regionId
-                                    "
-                                    placeholder="请选择RegionId"
-                                >
-                                    <j-select-option
-                                        v-for="(item, index) in regionList"
-                                        :key="index"
-                                        :value="item.value"
-                                    >
+                        <template v-if="formData.type === 'voice' ||
+                            formData.type === 'sms'
+                            ">
+                            <j-form-item label="RegionId" v-bind="validateInfos['configuration.regionId']">
+                                <j-select v-model:value="formData.configuration.regionId
+                                    " :placeholder="t('common.tips.select') + 'RegionId'">
+                                    <j-select-option v-for="( item, index ) in  regionList " :key="index"
+                                        :value="item.value">
                                         {{ item.label }}
                                     </j-select-option>
                                 </j-select>
                             </j-form-item>
-                            <j-form-item
-                                label="AccessKeyId"
-                                v-bind="
-                                    validateInfos['configuration.accessKeyId']
-                                "
-                            >
-                                <j-input
-                                    v-model:value="
-                                        formData.configuration.accessKeyId
-                                    "
-                                    placeholder="请输入AccessKeyId"
-                                />
+                            <j-form-item label="AccessKeyId" v-bind="validateInfos['configuration.accessKeyId']
+                                ">
+                                <j-input v-model:value="formData.configuration.accessKeyId
+                                    " :placeholder="t('common.tips.input') + 'AccessKeyId'" />
                             </j-form-item>
-                            <j-form-item
-                                label="Secret"
-                                v-bind="validateInfos['configuration.secret']"
-                            >
-                                <j-input
-                                    v-model:value="
-                                        formData.configuration.secret
-                                    "
-                                    placeholder="请输入Secret"
-                                />
+                            <j-form-item label="Secret" v-bind="validateInfos['configuration.secret']">
+                                <j-input v-model:value="formData.configuration.secret
+                                    " :placeholder="t('common.tips.input') + 'Secret'" />
                             </j-form-item>
                         </template>
                         <!-- webhook -->
                         <template v-if="formData.type === 'webhook'">
-                            <j-form-item
-                                label="Webhook"
-                                v-bind="validateInfos['configuration.url']"
-                            >
-                                <j-input
-                                    v-model:value="formData.configuration.url"
-                                    placeholder="请输入Webhook"
-                                />
+                            <j-form-item label="Webhook" v-bind="validateInfos['configuration.url']">
+                                <j-input v-model:value="formData.configuration.url"
+                                    :placeholder="t('common.tips.webHook')" />
                             </j-form-item>
-                            <j-form-item label="请求头">
-                                <EditTable
-                                    v-model:headers="
-                                        formData.configuration.headers
-                                    "
-                                />
+                            <j-form-item :label="t('common.reqHeader')">
+                                <EditTable v-model:headers="formData.configuration.headers
+                                    " />
                             </j-form-item>
                         </template>
-                        <j-form-item label="说明">
-                            <j-textarea
-                                v-model:value="formData.description"
-                                show-count
-                                :maxlength="200"
-                                :rows="5"
-                                placeholder="请输入说明"
-                            />
+                        <j-form-item :label="t('common.descri')">
+                            <j-textarea v-model:value="formData.description" show-count :maxlength="200" :rows="5"
+                                :placeholder="t('common.tips.descri')" />
                         </j-form-item>
                         <j-form-item>
-                            <j-button
-                                type="primary"
-                                @click="handleSubmit"
-                                :loading="btnLoading"
-                            >
-                                保存
+                            <j-button type="primary" @click="handleSubmit" :loading="btnLoading">
+                                {{ t('common.save') }}
                             </j-button>
                         </j-form-item>
                     </j-form>
@@ -335,7 +189,9 @@ import regionList from './regionId';
 import EditTable from './components/EditTable.vue';
 import configApi from '@/api/notice/config';
 import Doc from './doc/index';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const router = useRouter();
 const route = useRoute();
 const useForm = Form.useForm;
@@ -343,12 +199,12 @@ const useForm = Form.useForm;
 // 消息类型
 const msgType = ref([
     {
-        label: '钉钉消息',
+        label: t('pages.iot.notice.common.dingding'),
         value: 'dingTalkMessage',
         logo: getImage('/notice/dingtalk.png'),
     },
     {
-        label: '群机器人消息',
+        label: t('pages.iot.notice.common.robot'),
         value: 'dingTalkRobotWebHook',
         logo: getImage('/notice/dingTalk-rebot.png'),
     },
@@ -385,68 +241,68 @@ watch(
 
 // 验证规则
 const formRules = ref({
-    type: [{ required: true, message: '请选择通知方式' }],
+    type: [{ required: true, message: t('common.tips.notification') }],
     name: [
-        { required: true, message: '请输入名称' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('common.tips.name') },
+        { max: 64, message: t('common.tips.max64') },
     ],
-    provider: [{ required: true, message: '请选择类型' }],
+    provider: [{ required: true, message: t('common.tips.type') }],
     // 钉钉
     'configuration.appKey': [
-        { required: true, message: '请输入AppKey', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符', trigger: 'change' },
+        { required: true, message: t('common.tips.AppKey'), trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64'), trigger: 'change' },
     ],
     'configuration.appSecret': [
-        { required: true, message: '请输入AppSecret', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符', trigger: 'change' },
+        { required: true, message: t('common.tips.AppSecret'), trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64'), trigger: 'change' },
     ],
     // 'configuration.url': [{ required: true, message: '请输入WebHook' }],
     // 微信
     'configuration.corpId': [
-        { required: true, message: '请输入corpId', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('common.tips.corpId'), trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     'configuration.corpSecret': [
-        { required: true, message: '请输入corpSecret', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('pages.iot.notice.config.corpSecretTip'), trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     // 阿里云语音/短信
     'configuration.regionId': [
-        { required: true, message: '请输入RegionId', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('common.tips.select') + 'RegionId', trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     'configuration.accessKeyId': [
-        { required: true, message: '请输入AccessKeyId', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('common.tips.input') + 'AccessKeyId', trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     'configuration.secret': [
-        { required: true, message: '请输入Secret', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('common.tips.input') + 'Secret', trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     // 邮件
-    'configuration.host': [{ required: true, message: '请输入服务器地址', trigger: 'blur' }],
+    'configuration.host': [{ required: true, message: t('pages.iot.notice.config.serverTip'), trigger: 'blur' }],
     'configuration.sender': [
-        { required: true, message: '请输入发件人', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('pages.iot.notice.config.addresserTip'), trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     'configuration.username': [
-        { required: true, message: '请输入用户名', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('common.tips.userName'), trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     'configuration.password': [
-        { required: true, message: '请输入密码', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('common.pwdTips'), trigger: 'blur' },
+        { max: 64, message: t('common.tips.max64') },
     ],
     // webhook
     'configuration.url': [
-        { required: true, message: '请输入Webhook', trigger: 'blur' },
+        { required: true, message: t('common.tips.webHook'), trigger: 'blur' },
         // {
         //     pattern:
         //         /^(((ht|f)tps?):\/\/)?([^!@#$%^&*?.\s-]([^!@#$%^&*?.\s]{0,63}[^!@#$%^&*?.\s])?\.)+[j-z]{2,6}\/?/,
         //     message: 'Webhook需要是一个合法的URL',
         // },
     ],
-    description: [{ max: 200, message: '最多可输入200个字符' }],
+    description: [{ max: 200, message: t('common.tips.max200') }],
 });
 
 const { resetFields, validate, validateInfos, clearValidate } = useForm(
@@ -544,7 +400,7 @@ const handleSubmit = () => {
                 res = await configApi.update(formData.value);
             }
             if (res?.success) {
-                message.success('保存成功');
+                message.success(t('common.tips.suc'));
                 router.back();
             }
         })

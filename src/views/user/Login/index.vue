@@ -3,16 +3,9 @@
         <j-spin :spinning="loading" :delay="500">
             <div class="container">
                 <div class="left">
-                    <img
-                        style="width: 100%; height: 100%"
-                        :src="basis.backgroud || getImage('/login.png')"
-                    />
-                    <a
-                        href="https://beian.miit.gov.cn/#/Integrated/index"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="records"
-                    >
+                    <img style="width: 100%; height: 100%" :src="basis.backgroud || getImage('/login.png')" />
+                    <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer"
+                        class="records">
                         备案：渝ICP备19017719号-1
                     </a>
                 </div>
@@ -21,116 +14,62 @@
                         <div class="top">
                             <div class="header">
                                 <!-- <link to="/"> -->
-                                <img
-                                    alt="logo"
-                                    class="logo"
-                                    :src="basis.logo || getImage('/logo.png')"
-                                />
+                                <img alt="logo" class="logo" :src="basis.logo || getImage('/logo.png')" />
                                 <!-- </link> -->
                             </div>
                             <div class="desc">
                                 {{ basis.title || SystemConst.SYSTEM_NAME }}
                             </div>
                             <div class="main">
-                                <j-form
-                                    layout="vertical"
-                                    :model="form"
-                                    class="login-form"
-                                    @finish="onFinish"
-                                    :rules='rules'
-                                >
-                                    <j-form-item
-                                        label="账号"
-                                        name="username"
-                                    >
-                                        <j-input
-                                            v-model:value="form.username"
-                                            placeholder="请输入账号"
-                                            :maxlength="64"
-                                        ></j-input>
+                                <j-form layout="vertical" :model="form" class="login-form" @finish="onFinish"
+                                    :rules='rules'>
+                                    <j-form-item :label="t('commen.id')" name="username">
+                                        <j-input v-model:value="form.username" :placeholder="t('commen.idTips')"
+                                            :maxlength="64"></j-input>
                                     </j-form-item>
-                                    <j-form-item
-                                        label="密码"
-                                        name="password"
-                                    >
-                                        <j-input-password
-                                            v-model:value="form.password"
-                                            placeholder="请输入密码"
-                                            :maxlength="64"
-                                        ></j-input-password>
+                                    <j-form-item :label="t('commen.pwd')" name="password">
+                                        <j-input-password v-model:value="form.password" :placeholder="t('commen.pwdTips')"
+                                            :maxlength="64"></j-input-password>
                                     </j-form-item>
-                                    <j-form-item
-                                        v-if="codeConfig"
-                                        class="verifyCode"
-                                        label="验证码"
-                                        name="verifyCode"
-                                    >
-                                        <j-input
-                                            v-model:value="form.verifyCode"
-                                            autocomplete="off"
-                                            :maxlength="64"
-                                            placeholder="请输入验证码"
-                                        >
+                                    <j-form-item v-if="codeConfig" class="verifyCode" :label="t('commen.verification')"
+                                        name="verifyCode">
+                                        <j-input v-model:value="form.verifyCode" autocomplete="off" :maxlength="64"
+                                            :placeholder="t('commen.verificationTips')">
                                             <template #addonAfter>
                                                 <div>
-                                                    <img
-                                                        :src="codeUrl"
-                                                        @click="getCode()"
-                                                    />
+                                                    <img :src="codeUrl" @click="getCode()" />
                                                 </div>
                                             </template>
                                         </j-input>
                                     </j-form-item>
-                                    <j-form-item
-                                        name="remember"
-                                        style="text-align: left"
-                                    >
-                                        <j-checkbox
-                                            v-model:checked="form.remember"
-                                            @change="
-                                                () =>
-                                                    (form.expires =
-                                                        form.remember
-                                                            ? -1
-                                                            : 3600000)
-                                            "
-                                            >记住我</j-checkbox
-                                        >
+                                    <j-form-item name="remember" style="text-align: left">
+                                        <j-checkbox v-model:checked="form.remember" @change="() =>
+                                            (form.expires =
+                                                form.remember
+                                                    ? -1
+                                                    : 3600000)
+                                            ">{{ t('login.remember') }}</j-checkbox>
                                     </j-form-item>
                                     <j-form-item>
-                                        <j-button
-                                            :loading="loading"
-                                            type="primary"
-                                            html-type="submit"
-                                            class="login-form-button"
-                                            block
-                                        >
-                                            登录
+                                        <j-button :loading="loading" type="primary" html-type="submit"
+                                            class="login-form-button" block>
+                                            {{ t('commen.login') }}
                                         </j-button>
                                     </j-form-item>
                                 </j-form>
                                 <div class="other">
                                     <j-divider plain>
                                         <div class="other-text">
-                                            其他登录方式
+                                            {{ t('login.otherLogin') }}
                                         </div>
                                     </j-divider>
                                     <div class="other-button">
-                                        <div
-                                          class='other-button-item'
-                                          v-for="(item, index) in bindings"
-                                          :key="index"
-                                          @click="handleClickOther(item)"
-                                        >
-                                          <img
-                                            style="width: 32px; height: 32px"
-                                            :alt="item.name"
-                                            :src="
-                                                    item.logoUrl || iconMap.get(
-                                                        item.provider,
-                                                    ) || defaultImg
-                                                "
-                                          />
+                                        <div class='other-button-item' v-for="(item, index) in bindings" :key="index"
+                                            @click="handleClickOther(item)">
+                                            <img style="width: 32px; height: 32px" :alt="item.name" :src="item.logoUrl || iconMap.get(
+                                                item.provider,
+                                            ) || defaultImg
+                                                " />
                                         </div>
                                     </div>
                                 </div>
@@ -139,18 +78,14 @@
                     </div>
                     <div class="bottom">
                         <div class="view">
-                            JETLINKS团队全新力作可视化大屏系统
+                            JETLINKS{{t('login.introduce')}}
                         </div>
                         <div class="url">
                             <div style="height: 33px">
                                 <img :src="viewLogo" />
                             </div>
-                            <a
-                                href="https://view.jetlinks.cn/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                体验DEMO
+                            <a href="https://view.jetlinks.cn/" target="_blank" rel="noopener noreferrer">
+                                {{t('login.experience_button')}}DEMO
                             </a>
                         </div>
                     </div>
@@ -163,20 +98,21 @@
 <script setup lang="ts">
 import { getImage } from '@/utils/comm';
 import {
-  config,
-  code,
-  authLogin,
-  getInitSet,
-  systemVersion,
-  bindInfo,
-  settingDetail, userDetail
+    config,
+    code,
+    authLogin,
+    getInitSet,
+    systemVersion,
+    bindInfo,
+    settingDetail, userDetail
 } from '@/api/login'
 import { useUserInfo } from '@/store/userInfo';
 import { useSystem } from '@/store/system'
 import { LocalStore } from '@/utils/comm';
 import { BASE_API_PATH, TOKEN_KEY, Version_Code } from '@/utils/variable';
 import { SystemConst } from '@/utils/consts';
-
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n();
 const store = useUserInfo();
 const systemStore = useSystem();
 const router = useRouter();
@@ -200,36 +136,36 @@ const form = reactive({
 });
 
 const rules = {
-  username: [
-    {
-      validator(_: any, value: string) {
-        if (!value) {
-          return Promise.reject('请输入账号!')
+    username: [
+        {
+            validator(_: any, value: string) {
+                if (!value) {
+                    return Promise.reject('请输入账号!')
+                }
+                return Promise.resolve()
+            }
         }
-        return Promise.resolve()
-      }
-    }
-  ],
-  password: [
-    {
-      validator(_: any, value: string) {
-        if (!value) {
-          return Promise.reject('请输入密码!')
+    ],
+    password: [
+        {
+            validator(_: any, value: string) {
+                if (!value) {
+                    return Promise.reject('请输入密码!')
+                }
+                return Promise.resolve()
+            }
         }
-        return Promise.resolve()
-      }
-    }
-  ],
-  verifyCode: [
-    {
-      validator(_: any, value: string) {
-        if (!value) {
-          return Promise.reject('请输入验证码!')
+    ],
+    verifyCode: [
+        {
+            validator(_: any, value: string) {
+                if (!value) {
+                    return Promise.reject('请输入验证码!')
+                }
+                return Promise.resolve()
+            }
         }
-        return Promise.resolve()
-      }
-    }
-  ]
+    ]
 }
 
 const codeUrl = ref('');
@@ -252,29 +188,29 @@ const onFinish = async () => {
         const res: any = await authLogin(form);
         loading.value = false;
         if (res.success) {
-          LocalStore.set(TOKEN_KEY, res?.result.token);
-          const userResp = await userDetail()
-          if (userResp.success) {
-            store.$patch({
-              userInfos: {
-                ...userResp.result,
-                token: res?.result.token,
-              },
-              isAdmin: userResp.username === "admin",
-            });
+            LocalStore.set(TOKEN_KEY, res?.result.token);
+            const userResp = await userDetail()
+            if (userResp.success) {
+                store.$patch({
+                    userInfos: {
+                        ...userResp.result,
+                        token: res?.result.token,
+                    },
+                    isAdmin: userResp.username === "admin",
+                });
 
-            if (userResp.result?.username === 'admin') {
-              const resp: any = await getInitSet();
-              if (resp.status === 200 && !resp.result.length) {
-                window.location.href = '/#/init-home';
-                return;
-              }
+                if (userResp.result?.username === 'admin') {
+                    const resp: any = await getInitSet();
+                    if (resp.status === 200 && !resp.result.length) {
+                        window.location.href = '/#/init-home';
+                        return;
+                    }
+                }
+            } else {
+                store.$patch({
+                    ...res.result
+                });
             }
-          } else {
-            store.$patch({
-              ...res.result
-            });
-          }
             window.location.href = '/';
         }
     } catch (error) {
@@ -469,8 +405,8 @@ screenRotation(screenWidth.value, screenHeight.value);
                             flex-wrap: wrap;
 
                             .other-button-item {
-                              cursor: pointer;
-                              padding: 4px;
+                                cursor: pointer;
+                                padding: 4px;
                             }
 
                         }
@@ -494,9 +430,9 @@ screenRotation(screenWidth.value, screenHeight.value);
                         }
                     }
 
-                  .login-form-button {
-                    width: 100%;
-                  }
+                    .login-form-button {
+                        width: 100%;
+                    }
                 }
             }
         }

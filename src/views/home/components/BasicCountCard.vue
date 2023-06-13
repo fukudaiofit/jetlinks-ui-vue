@@ -1,30 +1,20 @@
 <template>
     <div class="device-count-container">
-        <h5 class="title">基础统计</h5>
-        <span class="detail" @click="jumpPage('link/DashBoard')"> 详情 </span>
+        <h5 class="title">{{ t('pages.iot.home.basics.title') }}</h5>
+        <span class="detail" @click="jumpPage('link/DashBoard')"> {{ t('common.details') }} </span>
 
         <div class="box-list">
             <div class="box-item">
-                <div class="label">CPU使用率</div>
+                <div class="label">{{ t('pages.iot.home.basics.cpu') }}</div>
                 <div class="value">{{ cpu + '%' }}</div>
-                <Pie
-                    class="chart"
-                    :value="cpu"
-                    chart-ref="cpuChart"
-                    :color-arr="['#ebebeb', '#d3adf7']"
-                    image="/images/home/top-3.svg"
-                />
+                <Pie class="chart" :value="cpu" chart-ref="cpuChart" :color-arr="['#ebebeb', '#d3adf7']"
+                    image="/images/home/top-3.svg" />
             </div>
             <div class="box-item">
-                <div class="label">JVM内存</div>
+                <div class="label">{{ t('pages.iot.home.basics.jvm') }}</div>
                 <div class="value">{{ jvm + '%' }}</div>
-                <Pie
-                    class="chart"
-                    chart-ref="jvmChart"
-                    :value="jvm"
-                    :color-arr="['#d6e4ff', '#85a5ff']"
-                    image="/images/home/top-4.svg"
-                />
+                <Pie class="chart" chart-ref="jvmChart" :value="jvm" :color-arr="['#d6e4ff', '#85a5ff']"
+                    image="/images/home/top-4.svg" />
             </div>
         </div>
     </div>
@@ -35,6 +25,9 @@ import { getWebSocket } from '@/utils/websocket';
 import Pie from './Pie.vue';
 import { map } from 'rxjs/operators';
 import { useMenuStore } from '@/store/menu';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const cpu = ref(0);
 const jvm = ref(0);
@@ -79,6 +72,7 @@ onUnmounted(() => {
     background-color: #fff;
     padding: 24px 14px;
     position: relative;
+
     .detail {
         color: #1d39c4;
         cursor: pointer;
@@ -87,6 +81,7 @@ onUnmounted(() => {
         top: 24px;
         z-index: 3;
     }
+
     .title {
         position: relative;
         z-index: 2;
@@ -119,17 +114,16 @@ onUnmounted(() => {
         .box-item {
             position: relative;
             padding: 16px;
-            background: linear-gradient(
-                135.62deg,
-                #f6f7fd 22.27%,
-                hsla(0, 0%, 100%, 0.86) 91.82%
-            );
+            background: linear-gradient(135.62deg,
+                    #f6f7fd 22.27%,
+                    hsla(0, 0%, 100%, 0.86) 91.82%);
             border-radius: 2px;
             box-shadow: 0 4px 18px #efefef;
 
             .label {
                 color: #4f4f4f;
             }
+
             .value {
                 margin: 20px 0;
                 color: rgba(0, 0, 0, 0.85);
