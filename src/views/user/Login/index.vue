@@ -23,18 +23,18 @@
                             <div class="main">
                                 <j-form layout="vertical" :model="form" class="login-form" @finish="onFinish"
                                     :rules='rules'>
-                                    <j-form-item :label="t('commen.id')" name="username">
-                                        <j-input v-model:value="form.username" :placeholder="t('commen.idTips')"
+                                    <j-form-item :label="t('common.id')" name="username">
+                                        <j-input v-model:value="form.username" :placeholder="t('common.idTips')"
                                             :maxlength="64"></j-input>
                                     </j-form-item>
-                                    <j-form-item :label="t('commen.pwd')" name="password">
-                                        <j-input-password v-model:value="form.password" :placeholder="t('commen.pwdTips')"
+                                    <j-form-item :label="t('common.pwd')" name="password">
+                                        <j-input-password v-model:value="form.password" :placeholder="t('common.pwdTips')"
                                             :maxlength="64"></j-input-password>
                                     </j-form-item>
-                                    <j-form-item v-if="codeConfig" class="verifyCode" :label="t('commen.verification')"
+                                    <j-form-item v-if="codeConfig" class="verifyCode" :label="t('common.verification')"
                                         name="verifyCode">
                                         <j-input v-model:value="form.verifyCode" autocomplete="off" :maxlength="64"
-                                            :placeholder="t('commen.verificationTips')">
+                                            :placeholder="t('common.verificationTips')">
                                             <template #addonAfter>
                                                 <div>
                                                     <img :src="codeUrl" @click="getCode()" />
@@ -53,7 +53,7 @@
                                     <j-form-item>
                                         <j-button :loading="loading" type="primary" html-type="submit"
                                             class="login-form-button" block>
-                                            {{ t('commen.login') }}
+                                            {{ t('common.login') }}
                                         </j-button>
                                     </j-form-item>
                                 </j-form>

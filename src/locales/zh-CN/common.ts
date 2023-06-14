@@ -28,6 +28,7 @@ export default {
             AppSecret: '请输入AppSecret',
             max64: '最多可输入64个字符',
             max200: '最多可输入200个字符',
+            max500:'最多可输入500个字符',
             webHook: '请输入webHook',
             corpId: '请输入corpId',
             descri: '请输入说明',
@@ -35,7 +36,9 @@ export default {
             select: '请选择',
             input: '请输入',
             notifiTem:'请选择通知模板',
-            number:'请输入有效号码'
+            number:'请输入有效号码',
+            unbind:'确认解绑?',
+            type:'请选择类型'
         },
         //功能按钮
         details: '详情',
@@ -52,6 +55,8 @@ export default {
         cancel: '取消',
         save: '保存',
         open: '开启',
+        bind:'绑定',
+        unbind:'解绑',
         //基础项
         name: '名称',
         type: '类型',
@@ -68,9 +73,22 @@ export default {
         notifiTem:'通知模板',
         variate:'变量',
         value:'值',
+        user:'用户',
+        string:'字符串',
+        time:'时间',
+        number:'数字',
+        format:'格式',
+        dingding:'钉钉',
+        wx:'微信',
+        email:'邮件',
+        voice:'语音',
+        sms:'短信',
         // 说明内容
         summarize:'概述',
         summarizeContent:' 通知配置可以结合通知配置为告警消息通知提供支撑。也可以用于系统中其他自定义模块的调用。',
-        noticonfigdes:'通知配置说明'
+        noticonfigdes:'通知配置说明',
+        //下拉选项
+        suc:'成功',
+        err:'失败',       
     }
 }

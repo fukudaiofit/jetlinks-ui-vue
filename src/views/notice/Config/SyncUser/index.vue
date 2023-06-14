@@ -3,7 +3,7 @@
     <div>
         <j-modal
             v-model:visible="_vis"
-            title="同步用户"
+            :title="t('pages.iot.notice.config.synchronization')"
             :footer="null"
             @cancel="_vis = false"
             width="80%"
@@ -14,7 +14,7 @@
                         v-model:value="deptName"
                         @keyup.enter="getDepartment"
                         allowClear
-                        placeholder="请输入部门名称"
+                        :placeholder="t('pages.iot.notice.config.sectionTip')"
                         style="margin-bottom: 8px"
                     >
                         <template #addonAfter>
@@ -36,7 +36,7 @@
                 </j-col>
                 <j-col :span="20">
                     <j-button type="primary" @click="handleAutoBind">
-                        自动绑定
+                        {{ t('pages.iot.notice.config.autoBind') }}
                     </j-button>
                     <JTable
                         ref="tableRef"
@@ -109,14 +109,14 @@
         <!-- 绑定用户 -->
         <j-modal
             v-model:visible="bindVis"
-            title="绑定用户"
+            :title="t('pages.iot.notice.config.bind')"
             :maskClosable="false"
             :confirm-loading="confirmLoading"
             @cancel="handleCancel"
             @ok="handleBindSubmit"
         >
             <j-form layout="vertical">
-                <j-form-item label="用户" v-bind="validateInfos.userId">
+                <j-form-item :label="t('common.user')" v-bind="validateInfos.userId">
                     <j-select
                         v-model:value="formData.userId"
                         :options="allUserList"
@@ -124,7 +124,7 @@
                         show-search
                         option-filter-prop="children"
                         :filter-option="filterOption"
-                        placeholder="请选择用户"
+                        :placeholder="t('pages.iot.notice.config.userTip')"
                     />
                 </j-form-item>
             </j-form>
@@ -138,7 +138,9 @@ import { PropType } from 'vue';
 import { message } from 'jetlinks-ui-components';
 import type { ActionsType } from '@/views/device/Instance/typings';
 import { Form } from 'ant-design-vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const useForm = Form.useForm;
 
 type Emits = {
@@ -218,24 +220,24 @@ const onTreeSelect = (keys: any) => {
 
 const columns = [
     {
-        title: '钉钉用户名',
+        title: t('pages.iot.notice.config.dingdingName'),
         dataIndex: 'thirdPartyUserName',
         key: 'thirdPartyUserName',
     },
     {
-        title: '用户',
+        title: t('common.user'),
         dataIndex: 'userName',
         key: 'userName',
         scopedSlots: true,
     },
     {
-        title: '绑定状态',
+        title: t('pages.iot.notice.config.bindState'),
         dataIndex: 'status',
         key: 'status',
         scopedSlots: true,
     },
     {
-        title: '操作',
+        title: t('common.action'),
         dataIndex: 'action',
         key: 'action',
         scopedSlots: true,
@@ -249,9 +251,9 @@ const getActions = (
     const actions = [
         {
             key: 'bind',
-            text: '绑定',
+            text: t('common.bind'),
             tooltip: {
-                title: '绑定',
+                title:  t('common.bind'),
             },
             icon: 'EditOutlined',
             onClick: () => {
@@ -260,15 +262,15 @@ const getActions = (
         },
         {
             key: 'unbind',
-            text: '解绑',
+            text: t('common.unbind'),
             icon: 'DisconnectOutlined',
             popConfirm: {
-                title: '确认解绑?',
+                title: t('common.tips.unbind'),
                 onConfirm: async () => {
                     configApi
                         .unBindUser({ bindingId: data.bindId }, data.bindId)
                         .then(() => {
-                            message.success('操作成功');
+                            message.success(t('common.tips.suc'));
                             getTableData();
                         });
                 },
@@ -298,12 +300,12 @@ const handleAutoBind = async () => {
 
     if (props.data.type === 'dingTalk') {
         configApi.dingTalkBindUser(params, props.data.id).then(() => {
-            message.success('操作成功');
+            message.success(t('common.tips.suc'));
             getTableData();
         });
     } else if (props.data.type === 'weixin') {
         configApi.weChatBindUser(params, props.data.id).then(() => {
-            message.success('操作成功');
+            message.success(t('common.tips.suc'));
             getTableData();
         });
     }
@@ -427,7 +429,7 @@ const formData = ref({
     bindId: '',
 });
 const formRules = ref({
-    userId: [{ required: true, message: '请选择用户', trigger: 'change' }],
+    userId: [{ required: true, message: t('pages.iot.notice.config.userTip'), trigger: 'change' }],
 });
 
 const { resetFields, validate, validateInfos, clearValidate } = useForm(
@@ -473,7 +475,7 @@ const handleBindSubmit = () => {
             configApi
                 .dingTalkBindUser([params], props.data.id)
                 .then(() => {
-                    message.success('操作成功');
+                    message.success(t('common.tips.suc'));
                     bindVis.value = false;
                     getTableData();
                 })
@@ -484,7 +486,7 @@ const handleBindSubmit = () => {
             configApi
                 .weChatBindUser([params], props.data.id)
                 .then(() => {
-                    message.success('操作成功');
+                    message.success(t('common.tips.suc'));
                     bindVis.value = false;
                     getTableData();
                 })
