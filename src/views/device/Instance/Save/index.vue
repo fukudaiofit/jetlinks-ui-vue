@@ -3,7 +3,7 @@
         :maskClosable="false"
         width="650px"
         :visible="true"
-        :title="!!data?.id ? '编辑' : '新增'"
+        :title="!!data?.id ? t('Instance.Save.index.5rcy87xo9jg0') : t('Instance.Save.index.5rcy87xoaoo0')"
         @ok="handleSave"
         @cancel="handleCancel"
         :confirmLoading="loading"
@@ -22,11 +22,11 @@
                             :rules="[
                                 {
                                     pattern: /^[a-zA-Z0-9_\-]+$/,
-                                    message: '请输入英文或者数字或者-或者_',
+                                    message: t('Instance.Save.index.5rcy87xoavw0'),
                                 },
                                 {
                                     max: 64,
-                                    message: '最多输入64个字符',
+                                    message: t('Instance.Save.index.5rcy87xob1g0'),
                                 },
                                 {
                                     validator: vailId,
@@ -38,7 +38,7 @@
                                 <span>
                                     ID
                                     <j-tooltip
-                                        title="若不填写，系统将自动生成唯一ID"
+                                        :title="t('Instance.Save.index.5rcy87xob6s0')"
                                     >
                                         <AIcon
                                             type="QuestionCircleOutlined"
@@ -49,27 +49,27 @@
                             </template>
                             <j-input
                                 v-model:value="modelRef.id"
-                                placeholder="请输入ID"
+                                :placeholder="t('Instance.Save.index.5rcy87xobc40')"
                                 :disabled="!!data?.id"
                             />
                         </j-form-item>
                         <j-form-item
-                            label="名称"
+                            :label="t('Instance.Save.index.5rcy87xobgk0')"
                             name="name"
                             :rules="[
                                 {
                                     required: true,
-                                    message: '请输入名称',
+                                    message: t('Instance.Save.index.5rcy87xobl80'),
                                 },
                                 {
                                     max: 64,
-                                    message: '最多输入64个字符',
+                                    message: t('Instance.Save.index.5rcy87xob1g0'),
                                 },
                             ]"
                         >
                             <j-input
                                 v-model:value="modelRef.name"
-                                placeholder="请输入名称"
+                                :placeholder="t('Instance.Save.index.5rcy87xobl80')"
                             />
                         </j-form-item>
                     </j-col>
@@ -79,14 +79,14 @@
                     :rules="[
                         {
                             required: true,
-                            message: '请选择所属产品',
+                            message: t('Instance.Save.index.5rcy87xobpo0'),
                         },
                     ]"
                 >
                     <template #label>
                         <span
                             >所属产品
-                            <j-tooltip title="只能选择“正常”状态的产品">
+                            <j-tooltip :title="t('Instance.Save.index.5rcy87xobu40')">
                                 <AIcon
                                     type="QuestionCircleOutlined"
                                     style="margin-left: 2px"
@@ -98,7 +98,7 @@
                         showSearch
                         v-model:value="modelRef.productId"
                         :disabled="!!data?.id"
-                        placeholder="请选择状态为“正常”的产品"
+                        :placeholder="t('Instance.Save.index.5rcy87xoc040')"
                     >
                         <j-select-option
                             :value="item.id"
@@ -110,18 +110,18 @@
                     </j-select>
                 </j-form-item>
                 <j-form-item
-                    label="说明"
+                    :label="t('Instance.Save.index.5rcy87xoc4s0')"
                     name="describe"
                     :rules="[
                         {
                             max: 200,
-                            message: '最多输入200个字符'
+                            message: t('Instance.Save.index.5rcy87xoc8s0')
                         },
                     ]"
                 >
                     <j-textarea
                         v-model:value="modelRef.describe"
-                        placeholder="请输入说明"
+                        :placeholder="t('Instance.Save.index.5rcy87xocd40')"
                         showCount
                         :maxlength="200"
                     />
@@ -136,7 +136,9 @@ import { queryNoPagingPost } from '@/api/device/product';
 import { isExists, update } from '@/api/device/instance';
 import { getImage } from '@/utils/comm';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emit = defineEmits(['close', 'save']);
 const props = defineProps({
     data: {
@@ -217,7 +219,7 @@ const handleSave = () => {
                 loading.value = false;
             });
             if (resp.status === 200) {
-                message.success('操作成功！');
+                message.success(t('Instance.Save.index.5rcy87xochc0'));
                 emit('save');
                 formRef.value.resetFields();
             }

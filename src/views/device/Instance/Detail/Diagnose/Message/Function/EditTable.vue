@@ -27,8 +27,8 @@
                                     )
                                 : record.type === 'boolean'
                                 ? [
-                                        { label: '是', value: true },
-                                        { label: '否', value: false },
+                                        { label: t('Message.Function.EditTable.5rcyf72g1r80'), value: true },
+                                        { label: t('Message.Function.EditTable.5rcyf72g3js0'), value: false },
                                     ]
                                 : undefined
                         "
@@ -41,7 +41,9 @@
 
 <script lang="ts" setup>
 import { PropType } from "vue";
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 type Emits = {
     (e: 'update:modelValue', data: Record<string, any>[]): void;
 };
@@ -55,17 +57,17 @@ const _props = defineProps({
 });
 const columns = [
     {
-        title: '参数名称',
+        title: t('Message.Function.EditTable.5rcyf72g3ps0'),
         dataIndex: 'name',
         with: '33%',
     },
     {
-        title: '类型',
+        title: t('Message.Function.EditTable.5rcyf72g3tk0'),
         dataIndex: 'valueType',
         with: '33%',
     },
     {
-        title: '值',
+        title: t('Message.Function.EditTable.5rcyf72g3x00'),
         dataIndex: 'value',
         with: '34%',
     },

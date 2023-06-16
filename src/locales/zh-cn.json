@@ -17,6 +17,107 @@
                 "5rcxkm5e4m80": "在线数",
                 "5rcxkm5e4xs0": "消息量"
             }
+        },
+        "Product": {
+            "index": {
+                "5rcy142sjs40": "新增",
+                "5rcy142sl800": "导入",
+                "5rcy142slf80": "正常",
+                "5rcy142sljs0": "禁用",
+                "5rcy142slu40": "设备类型",
+                "5rcy142slzs0": "接入方式",
+                "5rcy142tl080": "未接入",
+                "5rcy142tlgw0": "产品名称",
+                "5rcy142tlvo0": "状态",
+                "5rcy142tm5g0": "说明",
+                "5rcy142tmdw0": "操作",
+                "5rcy142tmsw0": "查看",
+                "5rcy142tn2o0": "编辑",
+                "5rcy142tnbk0": "导出",
+                "5rcy142tnio0": "产品",
+                "5rcy142tnp40": "启用",
+                "5rcy142tnw00": "操作成功！",
+                "5rcy142to240": "操作失败！",
+                "5rcy142to7s0": "删除",
+                "5rcy142toe80": "已启用的产品不能删除",
+                "5rcy142tomg0": "确认删除?",
+                "5rcy142tor80": "请上传json格式文件",
+                "5rcy142tox40": "操作成功",
+                "5rcy142tp1s0": "名称",
+                "5rcy142tpb00": "网关类型",
+                "5rcy142tpi00": "直连设备",
+                "5rcy142tpp40": "网关子设备",
+                "5rcy142tpu80": "网关设备",
+                "5rcy142tpz00": "分类",
+                "5rcy142tq4k0": "所属组织"
+            }
+        },
+        "Category": {
+            "index": {
+                "5rcy4wlxlf00": "新增",
+                "5rcy4wlxmro0": "名称",
+                "5rcy4wlxn140": "排序",
+                "5rcy4wlxn8c0": "描述",
+                "5rcy4wlxnf40": "操作",
+                "5rcy4wlxnm80": "编辑",
+                "5rcy4wlxnss0": "编辑分类",
+                "5rcy4wlxnys0": "添加子分类",
+                "5rcy4wlxo580": "新增子分类",
+                "5rcy4wlxoes0": "删除",
+                "5rcy4wlxou40": "确认删除?",
+                "5rcy4wlxp0s0": "取消",
+                "5rcy4wlxp6o0": "操作成功！",
+                "5rcy4wlxpf80": "操作失败！",
+                "5rcy4wlxpls0": "说明",
+                "5rcy4wlxprw0": "新增分类"
+            }
+        },
+        "Instance": {
+            "index": {
+                "5rcy7qt1ljg0": "新增",
+                "5rcy7qt1mw80": "批量操作",
+                "5rcy7qt1n740": "批量导出设备",
+                "5rcy7qt1nhg0": "批量导入设备",
+                "5rcy7qt1nwg0": "确认激活全部设备？",
+                "5rcy7qt1o5s0": "激活全部设备",
+                "5rcy7qt1odw0": "同步设备状态",
+                "5rcy7qt1olk0": "已启用的设备无法删除，确认删除选中的禁用状态设备？",
+                "5rcy7qt1otw0": "删除选中设备",
+                "5rcy7qt1p240": "确认激活选中设备",
+                "5rcy7qt1p9s0": "激活选中设备",
+                "5rcy7qt1pi80": "确认禁用选中设备?",
+                "5rcy7qt1pq80": "禁用选中设备",
+                "5rcy7qt1pxo0": "设备类型",
+                "5rcy7qt1qeo0": "产品名称",
+                "5rcy7qt1qmg0": "设备名称",
+                "5rcy7qt1qu00": "创建时间",
+                "5rcy7qt1r1g0": "状态",
+                "5rcy7qt1r8k0": "禁用",
+                "5rcy7qt1rgc0": "离线",
+                "5rcy7qt1rr00": "在线",
+                "5rcy7qt1rx80": "产品分类",
+                "5rcy7qt1s6s0": "网关类型",
+                "5rcy7qt1sdk0": "接入方式",
+                "5rcy7qt1sj40": "直连设备",
+                "5rcy7qt1spc0": "网关子设备",
+                "5rcy7qt1svs0": "网关设备",
+                "5rcy7qt1t1s0": "所属组织",
+                "5rcy7qt1t7g0": "说明",
+                "5rcy7qt1tcw0": "操作",
+                "5rcy7qt1tio0": "查看",
+                "5rcy7qt1tow0": "编辑",
+                "5rcy7qt1tuw0": "启用",
+                "5rcy7qt1u240": "操作成功！",
+                "5rcy7qt1u8c0": "操作失败！",
+                "5rcy7qt1ue00": "删除",
+                "5rcy7qt1uno0": "已启用的设备不能删除",
+                "5rcy7qt1uts0": "确认删除?",
+                "5rcy7qt1v0s0": "请选择设备",
+                "5rcy7qt1v7w0": "启用全部设备",
+                "5rcy7qt1vgg0": "确认启用全部设备？",
+                "5rcy7qt1vmw0": "批量删除设备",
+                "5rcy7qt1vso0": "批量禁用设备"
+            }
         }
     },
     "common": {
@@ -343,6 +444,813 @@
                     "aliyunSms": "阿里云短信",
                     "voice": "语音通知"
                 }
+            }
+        }
+    },
+    "DashBoard": {
+        "components": {
+            "TimeSelect": {
+                "5rcxzrvjee40": "今日",
+                "5rcxzrvjftk0": "近一周",
+                "5rcxzrvjkgg0": "近一月",
+                "5rcxzrvjl700": "近一年"
+            }
+        }
+    },
+    "Product": {
+        "Save": {
+            "index": {
+                "5rcy1r9vifk0": "确定",
+                "5rcy1r9vjqc0": "取消",
+                "5rcy1r9vk3o0": "若不填写，系统将自动生成唯一ID",
+                "5rcy1r9vkdg0": "请输入ID",
+                "5rcy1r9vkpc0": "名称",
+                "5rcy1r9vl4o0": "请输入名称",
+                "5rcy1r9vldk0": "产品分类",
+                "5rcy1r9vlmg0": "请选择产品分类",
+                "5rcy1r9vlw40": "设备类型",
+                "5rcy1r9vm5g0": "说明",
+                "5rcy1r9vme80": "请输入说明",
+                "5rcy1r9vmng0": "直连设备",
+                "5rcy1r9vmvw0": "直连物联网平台的设备",
+                "5rcy1r9vn5c0": "网关子设备",
+                "5rcy1r9vnj80": "作为网关的子设备，有网关代理连接到物联网平台",
+                "5rcy1r9vnro0": "网关设备",
+                "5rcy1r9vo0o0": "能挂载子设备与平台进行通信的设备",
+                "5rcy1r9vo9s0": "请输入英文或者数字或者-或者_",
+                "5rcy1r9voig0": "请选择设备类型",
+                "5rcy1r9vosc0": "最多可输入64位字符",
+                "5rcy1r9vp3s0": "最多可输入200位字符",
+                "5rcy1r9vpb40": "保存成功！",
+                "5rcy1r9vpnc0": "操作失败"
+            }
+        },
+        "DialogTips": {
+            "index": {
+                "5rcy2231c2g0": "产品创建成功",
+                "5rcy2231djo0": "关闭",
+                "5rcy2231dv40": "查看详情",
+                "5rcy2231e400": "点击具体产品的查看按钮,进入“设备接入”tab页，并参照设备铭牌说明选择匹配的接入方式",
+                "5rcy2231ec80": "进入设备列表，添加单个设备，用于验证产品模型是否配置正确",
+                "5rcy2231elg0": "点击查看具体设备，进入“设备诊断”对添加的测试设备进行功能调试，验证能否连接到平台，设备功能是否配置正确",
+                "5rcy2231etc0": "进入设备列表页面，点击批量导入设备，批量添加同一产品下的设备"
+            }
+        },
+        "Detail": {
+            "index": {
+                "5rcy2a8o53o0": "确认禁用",
+                "5rcy2a8o6o40": "确定",
+                "5rcy2a8o70k0": "取消",
+                "5rcy2a8o79w0": "正常",
+                "5rcy2a8o7i80": "禁用",
+                "5rcy2a8o87k0": "确认启用",
+                "5rcy2a8o8gk0": "设备数量",
+                "5rcy2a8o8os0": "请先启用产品",
+                "5rcy2a8o8xc0": "应用配置",
+                "5rcy2a8o95c0": "配置信息",
+                "5rcy2a8o9cs0": "物模型",
+                "5rcy2a8o9lw0": "设备接入",
+                "5rcy2a8o9t00": "操作成功！",
+                "5rcy2a8oa1c0": "数据解析",
+                "5rcy2a8oa9k0": "物模型映射"
+            }
+        }
+    },
+    "Detail": {
+        "BasicInfo": {
+            "indev": {
+                "5rcy2g5apas0": "配置信息",
+                "5rcy2g5aulk0": "产品分类",
+                "5rcy2g5avlk0": "设备类型",
+                "5rcy2g5avyo0": "接入方式",
+                "5rcy2g5awbc0": "配置接入方式",
+                "5rcy2g5awpg0": "创建时间",
+                "5rcy2g5awy40": "更新时间",
+                "5rcy2g5axok0": "说明",
+                "5rcy2g5ayec0": "编辑"
+            }
+        },
+        "DataAnalysis": {
+            "index": {
+                "5rcy2jz4wyk0": "模拟输入",
+                "5rcy2jz4y640": "请输入Topic",
+                "5rcy2jz4ygo0": "请输入URL",
+                "5rcy2jz4yq80": "运行结果",
+                "5rcy2jz4yy80": "需输入脚本和模拟数据后再点击",
+                "5rcy2jz4z780": "调试",
+                "5rcy2jz4zf40": "请先调试",
+                "5rcy2jz4zng0": "保存",
+                "5rcy2jz4zyg0": "保存成功",
+                "5rcy2jz506g0": "请输入topic",
+                "5rcy2jz50e00": "请输入url"
+            }
+        },
+        "DeviceAccess": {
+            "accessModal": {
+                "5rcy2s0lyho0": "设备接入配置",
+                "5rcy2s0m04g0": "确定",
+                "5rcy2s0m0g00": "取消",
+                "5rcy2s0m0p80": "新增",
+                "5rcy2s0m0xk0": "协议",
+                "5rcy2s0m16k0": "名称",
+                "5rcy2s0m1ek0": "网关类型",
+                "5rcy2s0m1ro0": "状态",
+                "5rcy2s0m2000": "正常",
+                "5rcy2s0m28c0": "禁用",
+                "5rcy2s0m2fg0": "说明",
+                "5rcy2s0m2no0": "请选择接入方式"
+            },
+            "index": {
+                "5rcy2w1ljj80": "请先",
+                "5rcy2w1lkmg0": "选择",
+                "5rcy2w1lkug0": "请联系管理员配置产品接入方式",
+                "5rcy2w1ll040": "接入方式",
+                "5rcy2w1ll680": "更换",
+                "5rcy2w1llbg0": "消息协议",
+                "5rcy2w1llg40": "连接信息",
+                "5rcy2w1llm40": "暂无连接信息",
+                "5rcy2w1lls00": "产品类型",
+                "5rcy2w1llwk0": "请选择产品类型",
+                "5rcy2w1lm4o0": "此配置来自于产品接入方式所选择的协议",
+                "5rcy2w1lm900": "请选择",
+                "5rcy2w1lmg80": "请输入",
+                "5rcy2w1lml80": "存储策略",
+                "5rcy2w1lmqc0": "若修改存储策略,需要手动做数据迁移,平台只能搜索最新存储策略中的数据",
+                "5rcy2w1lmuw0": "保存",
+                "5rcy2w1lmzw0": "我知道了",
+                "5rcy2w1ln4s0": "不再提示",
+                "5rcy2w1ln980": "下一步",
+                "5rcy2w1lne40": "上一步",
+                "5rcy2w1lnn40": "上下行",
+                "5rcy2w1lnr80": "说明",
+                "5rcy2w1lnww0": "地址",
+                "5rcy2w1lo0g0": "示例",
+                "5rcy2w1lo3o0": "上行",
+                "5rcy2w1lo6w0": "下行",
+                "5rcy2w1loaw0": "分组",
+                "5rcy2w1loe80": "流传输模式",
+                "5rcy2w1loho0": "操作成功！",
+                "5rcy2w1lokw0": "产品下有设备实例时不能更换接入方式",
+                "5rcy2w1lors0": "停用产品后才可更换接入方式"
+            },
+            "metadataModal": {
+                "5rcy30umqtc0": "选择处理方式",
+                "5rcy30umrzg0": "确定",
+                "5rcy30umscs0": "取消",
+                "5rcy30umsn00": "平台",
+                "5rcy30umsw80": "物模型",
+                "5rcy30umt600": "中已有数据，请选择处理方式。",
+                "5rcy30umtf00": "默认采用覆盖的方式处理功能、事件、标签下的数据",
+                "5rcy30umtnw0": "处理方式",
+                "5rcy30umtxc0": "取交集",
+                "5rcy30umu5s0": "仅保留标识一致的属性",
+                "5rcy30umui80": "取并集",
+                "5rcy30umurg0": "保留平台、插件中的所有属性",
+                "5rcy30umuzw0": "忽略",
+                "5rcy30umv8k0": "仅保留平台中的属性",
+                "5rcy30umvho0": "覆盖",
+                "5rcy30umvq00": "仅保留插件中的属性",
+                "5rcy30umvyw0": "操作成功！"
+            }
+        },
+        "MetadataMap": {
+            "index": {
+                "5rcy34vkxv80": "搜索平台属性名称",
+                "5rcy34vkze00": "功能说明",
+                "5rcy34vkzmk0": "该功能用于将插件中的",
+                "5rcy34vkztc0": "物模型属性标识",
+                "5rcy34vkzzc0": "平台物模型属性标识",
+                "5rcy34vl05s0": "未完成映射的属性标识“目标属性”列数据为空，代表该属性值来源以在平台配置的来源为准。",
+                "5rcy34vl0bo0": "数据条背景亮起代表",
+                "5rcy34vl0h00": "标识一致",
+                "5rcy34vl0n80": "或",
+                "5rcy34vl0so0": "已完成映射",
+                "5rcy34vl0xw0": "功能图示",
+                "5rcy34vl13o0": "序号",
+                "5rcy34vl1aw0": "平台属性",
+                "5rcy34vl1gw0": "目标属性",
+                "5rcy34vl1mk0": "操作成功"
+            }
+        },
+        "ChildDevice": {
+            "index": {
+                "5rcyczrkjyw0": "新增并绑定",
+                "5rcyczrkkt40": "绑定",
+                "5rcyczrkky80": "确定解绑吗？",
+                "5rcyczrkl1w0": "批量解除",
+                "5rcyczrkl5o0": "设备名称",
+                "5rcyczrkl980": "所属产品",
+                "5rcyczrklds0": "注册时间",
+                "5rcyczrklgw0": "状态",
+                "5rcyczrklk40": "禁用",
+                "5rcyczrkln00": "离线",
+                "5rcyczrklqw0": "在线",
+                "5rcyczrklu00": "说明",
+                "5rcyczrklx00": "操作",
+                "5rcyczrkm040": "查看",
+                "5rcyczrkm340": "解绑",
+                "5rcyczrkm5s0": "确认解绑吗？",
+                "5rcyczrkma80": "确定",
+                "5rcyczrkmdg0": "取消",
+                "5rcyczrkmg80": "操作成功！",
+                "5rcyczrkmj40": "编辑",
+                "5rcyczrkmnk0": "请勾选需要解绑的数据"
+            }
+        },
+        "components": {
+            "MSelect": {
+                "5rcyej679y00": "请选择"
+            }
+        },
+        "Diagnose": {
+            "index": {
+                "5rcyh18y5ak0": "连接状态",
+                "5rcyh18y6wg0": "消息通信"
+            }
+        },
+        "EdgeMap": {
+            "index": {
+                "5rcyhehog580": "批量映射",
+                "5rcyhehohjo0": "保存",
+                "5rcyhehohuc0": "采集器",
+                "5rcyhehoi1s0": "边缘网关代理的真实物理设备",
+                "5rcyhehoi8g0": "请选择",
+                "5rcyhehoifk0": "请选择采集器",
+                "5rcyhehoilk0": "请选择点位",
+                "5rcyhehoir40": "在线",
+                "5rcyhehoix00": "离线",
+                "5rcyhehoj2o0": "未绑定",
+                "5rcyhehoj8c0": "解绑",
+                "5rcyhehoje80": "暂无权限，请联系管理员",
+                "5rcyhehojm80": "确认解绑？",
+                "5rcyhehojrw0": "禁用",
+                "5rcyhehojxc0": "启用",
+                "5rcyhehok2w0": "确认禁用？",
+                "5rcyhehok8k0": "确认启用?",
+                "5rcyhehoke80": "暂无数据，请配置物模型",
+                "5rcyhehokjc0": "名称",
+                "5rcyhehokpc0": "通道",
+                "5rcyhehokx40": "点位",
+                "5rcyhehol400": "状态",
+                "5rcyhehol9k0": "操作",
+                "5rcyhehole40": "操作成功！"
+            },
+            "MSelect": {
+                "5rcyhngueow0": "请选择"
+            },
+            "PatchMapping": {
+                "5rcyhu8dqbg0": "批量映射",
+                "5rcyhu8drhg0": "采集器的点位名称与属性名称一致时将自动映射绑定；有多个采集器点位名称与属性名称一致时以第1个采集器的点位数据进行绑定",
+                "5rcyhu8droc0": "源数据",
+                "5rcyhu8drts0": "加入右侧",
+                "5rcyhu8dryo0": "采集器",
+                "5rcyhu8ds5g0": "确定删除?",
+                "5rcyhu8dsa80": "请选择采集器",
+                "5rcyhu8dsek0": "操作成功",
+                "5rcyhu8dsjg0": "暂无对应属性的映射"
+            }
+        },
+        "Function": {
+            "index": {
+                "5rcyimhrhp00": "请配置对应产品的",
+                "5rcyimhrm7k0": "物模型属性功能",
+                "5rcyimhrmlc0": "精简模式",
+                "5rcyimhrmqs0": "高级模式"
+            }
+        },
+        "Info": {
+            "index": {
+                "5rcyl6fnhtk0": "设备信息",
+                "5rcyl6fnjsg0": "编辑",
+                "5rcyl6fnk7k0": "设备ID",
+                "5rcyl6fnkr40": "第三方系统设备ID",
+                "5rcyl6fnl040": "通过调用SDK或HTTP请求的方式接入第三方系统设备数据时，第三方系统与平台当前设备对应的设备ID。",
+                "5rcyl6fnlnk0": "如双方ID值一致，则无需填写",
+                "5rcyl6fnlwc0": "映射",
+                "5rcyl6fnm400": "产品名称",
+                "5rcyl6fnmc40": "设备类型",
+                "5rcyl6fnn2o0": "固件版本",
+                "5rcyl6fnncg0": "连接协议",
+                "5rcyl6fnny80": "消息协议",
+                "5rcyl6fno5w0": "创建时间",
+                "5rcyl6fnodo0": "注册时间",
+                "5rcyl6fnovc0": "最后上线时间",
+                "5rcyl6fnp2o0": "父设备",
+                "5rcyl6fnpac0": "说明"
+            }
+        },
+        "Log": {
+            "index": {
+                "5rcylnndebk0": "类型",
+                "5rcylnndfvw0": "时间",
+                "5rcylnndg5o0": "内容",
+                "5rcylnndgdg0": "操作",
+                "5rcylnndgt00": "查看",
+                "5rcylnndh0s0": "详细信息"
+            }
+        },
+        "Parsing": {
+            "index": {
+                "5rcyly034780": "当前数据解析内容已脱离产品影响，",
+                "5rcyly035xw0": "重置",
+                "5rcyly0368k0": "后将继承产品数据解析内容",
+                "5rcyly036gs0": "当前数据解析内容继承自产品,",
+                "5rcyly036s00": "修改",
+                "5rcyly0370o0": "后将脱离产品影响。",
+                "5rcyly0378g0": "请点击上方修改字样,用以编辑脚本",
+                "5rcyly037fk0": "模拟输入",
+                "5rcyly037ng0": "请输入Topic",
+                "5rcyly037v00": "请输入URL",
+                "5rcyly0381w0": "运行结果",
+                "5rcyly0389c0": "需输入脚本和模拟数据后再点击",
+                "5rcyly038gg0": "调试",
+                "5rcyly038oo0": "请先调试",
+                "5rcyly038yw0": "保存",
+                "5rcyly0395s0": "操作成功",
+                "5rcyly039dc0": "保存成功",
+                "5rcyly039kc0": "请输入topic",
+                "5rcyly039r80": "请输入url"
+            }
+        },
+        "Running": {
+            "index": {
+                "5rcyqqfj59s0": "请输入事件名称",
+                "5rcyqqfjamw0": "属性"
+            }
+        }
+    },
+    "components": {
+        "modifyModal": {
+            "index": {
+                "5rcy4mn1zu00": "确定",
+                "5rcy4mn21qo0": "取消",
+                "5rcy4mn226w0": "名称",
+                "5rcy4mn22gs0": "请输入名称",
+                "5rcy4mn22ps0": "排序",
+                "5rcy4mn22z80": "请输入排序",
+                "5rcy4mn23800": "说明",
+                "5rcy4mn23gw0": "请输入说明",
+                "5rcy4mn23u80": "最多可输入64个字符",
+                "5rcy4mn242s0": "操作成功！",
+                "5rcy4mn24bc0": "操作失败！",
+                "5rcy4mn24k40": "树形结构最多添加5层"
+            }
+        },
+        "BindParentDevice": {
+            "index": {
+                "5rcydoml5hk0": "绑定父设备",
+                "5rcydoml75w0": "确定",
+                "5rcydoml7m40": "取消",
+                "5rcydoml7y80": "设备名称",
+                "5rcydoml88k0": "所属产品",
+                "5rcydoml8k00": "注册时间",
+                "5rcydoml8u40": "状态",
+                "5rcydoml93k0": "禁用",
+                "5rcydoml9e00": "离线",
+                "5rcydoml9rk0": "在线",
+                "5rcydomla5w0": "请选择需要绑定的设备",
+                "5rcydomlagg0": "操作成功"
+            }
+        },
+        "EditTable": {
+            "index": {
+                "5rcye0hx8mw0": "批量映射",
+                "5rcye0hxb7c0": "保存",
+                "5rcye0hxbiw0": "采集器",
+                "5rcye0hxbvc0": "数据采集中配置的真实物理设备",
+                "5rcye0hxc2c0": "请选择",
+                "5rcye0hxca80": "请选择采集器",
+                "5rcye0hxcgk0": "请选择点位",
+                "5rcye0hxcmk0": "已绑定",
+                "5rcye0hxcsw0": "未绑定",
+                "5rcye0hxcyk0": "解绑",
+                "5rcye0hxd680": "确认解绑",
+                "5rcye0hxdd00": "暂无数据，请配置物模型",
+                "5rcye0hxdj00": "名称",
+                "5rcye0hxdtw0": "通道",
+                "5rcye0hxe480": "点位",
+                "5rcye0hxeao0": "状态",
+                "5rcye0hxehc0": "操作",
+                "5rcye0hxeo80": "操作成功！"
+            },
+            "PatchMapping": {
+                "5rcyeb76mkg0": "批量映射",
+                "5rcyeb76o400": "采集器的点位名称与属性名称一致时将自动映射绑定；有多个采集器点位名称与属性名称一致时以第1个采集器的点位数据进行绑定",
+                "5rcyeb76ods0": "源数据",
+                "5rcyeb76ol80": "加入右侧",
+                "5rcyeb76oso0": "采集器",
+                "5rcyeb76p6c0": "确定删除?",
+                "5rcyeb76pd80": "请选择采集器",
+                "5rcyeb76pkk0": "操作成功",
+                "5rcyeb76pww0": "暂无对应属性的映射"
+            }
+        },
+        "Config": {
+            "index": {
+                "5rcyjclwxlw0": "配置",
+                "5rcyjclx06s0": "编辑",
+                "5rcyjclx1b40": "确认重新应用该配置？",
+                "5rcyjclx1uk0": "应用配置",
+                "5rcyjclx3gw0": "修改配置后需重新应用后才能生效。",
+                "5rcyjclx3tc0": "确认恢复默认配置？",
+                "5rcyjclx42w0": "恢复默认",
+                "5rcyjclx4ik0": "该设备单独编辑过配置信息，点击此将恢复成默认的配置信息，请谨慎操作。",
+                "5rcyjclx5dg0": "操作成功",
+                "5rcyjclx65c0": "恢复默认配置成功"
+            },
+            "Save": {
+                "5rcyjkshg4w0": "编辑配置",
+                "5rcyjkshhgk0": "保存",
+                "5rcyjkshhp80": "操作成功！"
+            }
+        },
+        "InklingModal": {
+            "index": {
+                "5rcyjxpysns0": "设备ID映射",
+                "5rcyjxpyu8g0": "请选择设备"
+            }
+        },
+        "Relation": {
+            "index": {
+                "5rcyk945af00": "关系信息",
+                "5rcyk945dco0": "编辑",
+                "5rcyk945e7c0": "管理设备与其他业务的关联关系，关系来源于关系配置"
+            },
+            "Save": {
+                "5rcykfxkim80": "编辑",
+                "5rcykfxkkmo0": "保存",
+                "5rcykfxkkyo0": "操作成功！"
+            }
+        },
+        "Tags": {
+            "index": {
+                "5rcykpi2is00": "标签"
+            },
+            "Save": {
+                "5rcykwmcdew0": "编辑标签",
+                "5rcykwmcet80": "名称",
+                "5rcykwmcf3k0": "值",
+                "5rcykwmcfbs0": "操作成功！"
+            }
+        }
+    },
+    "Instance": {
+        "Save": {
+            "index": {
+                "5rcy87xo9jg0": "编辑",
+                "5rcy87xoaoo0": "新增",
+                "5rcy87xoavw0": "请输入英文或者数字或者-或者_",
+                "5rcy87xob1g0": "最多输入64个字符",
+                "5rcy87xob6s0": "若不填写，系统将自动生成唯一ID",
+                "5rcy87xobc40": "请输入ID",
+                "5rcy87xobgk0": "名称",
+                "5rcy87xobl80": "请输入名称",
+                "5rcy87xobpo0": "请选择所属产品",
+                "5rcy87xobu40": "只能选择“正常”状态的产品",
+                "5rcy87xoc040": "请选择状态为“正常”的产品",
+                "5rcy87xoc4s0": "说明",
+                "5rcy87xoc8s0": "最多输入200个字符",
+                "5rcy87xocd40": "请输入说明",
+                "5rcy87xochc0": "操作成功！"
+            }
+        },
+        "Process": {
+            "index": {
+                "5rcy8rtoch40": "启用",
+                "5rcy8rtodx00": "同步",
+                "5rcy8rtoe500": "正在启用全部设备",
+                "5rcy8rtoecc0": "正在同步设备状态",
+                "5rcy8rtoeic0": "完成"
+            }
+        },
+        "Import": {
+            "file": {
+                "5rcy9hmpvqc0": "文件格式",
+                "5rcy9hmpx080": "自动启用",
+                "5rcy9hmpxjo0": "文件上传",
+                "5rcy9hmpxuo0": "上传文件",
+                "5rcy9hmpy480": "下载模板",
+                "5rcy9hmpyec0": "进行中",
+                "5rcy9hmpynk0": "已完成",
+                "5rcy9hmpyxc0": "请上传.csv格式文件",
+                "5rcy9hmpz6s0": "请上传.xlsx格式文件",
+                "5rcy9hmpzg00": "失败",
+                "5rcy9hmpzsg0": "暂无权限，请联系管理员",
+                "5rcy9hmq07s0": "请先上传文件"
+            },
+            "index": {
+                "5rcy9v73m000": "导入",
+                "5rcy9v73n9w0": "产品",
+                "5rcy9v73njg0": "请选择产品",
+                "5rcy9v73nqo0": "文件格式",
+                "5rcy9v73nx40": "文件上传",
+                "5rcy9v73o440": "关闭"
+            },
+            "modal": {
+                "5rcya2g622g0": "批量导入",
+                "5rcya2g63c00": "选择导入方式",
+                "5rcya2g63m80": "取消",
+                "5rcya2g64340": "上一步",
+                "5rcya2g64gk0": "下一步",
+                "5rcya2g64n80": "确认",
+                "5rcya2g64sw0": "导入完成",
+                "5rcya2g650w0": "已完成",
+                "5rcya2g65800": "新增设备",
+                "5rcya2g65gg0": "文件导入",
+                "5rcya2g65ng0": "支持上传XLSX、CSV格式文件",
+                "5rcya2g65u40": "插件导入",
+                "5rcya2g66080": "读取插件中的设备信息同步至平台",
+                "5rcya2g66dk0": "请选择产品",
+                "5rcya2g66ss0": "请选择导入方式",
+                "5rcya2g67040": "操作成功",
+                "5rcya2g67og0": "请选择设备"
+            },
+            "product": {
+                "5rcyag5mej00": "正常",
+                "5rcyag5mfv40": "禁用",
+                "5rcyag5mg5k0": "设备类型",
+                "5rcyag5mgdw0": "名称",
+                "5rcyag5mglk0": "网关类型",
+                "5rcyag5mgu80": "状态",
+                "5rcyag5mh1k0": "说明"
+            }
+        },
+        "Export": {
+            "index": {
+                "5rcyax8aor40": "导出",
+                "5rcyax8aqdk0": "选择单个产品时可导出其下属设备的详细数据,不选择产品时导出所有设备的基础数据。",
+                "5rcyax8aqo80": "产品",
+                "5rcyax8aqxw0": "请选择产品",
+                "5rcyax8ar780": "文件格式",
+                "5rcyax8argw0": "请选择文件格式"
+            }
+        },
+        "Detail": {
+            "index": {
+                "5rcyr31fjkc0": "状态：",
+                "5rcyr31fn900": "确认启用设备",
+                "5rcyr31fnp00": "启用设备",
+                "5rcyr31fnws0": "确认断开连接？",
+                "5rcyr31fo4s0": "断开连接",
+                "5rcyr31foe00": "该设备的在线状态与父设备(网关设备)保持一致",
+                "5rcyr31fol00": "该设备在线状态由设备自身运行状态决定，不继承父设备（网关设备）的在线状态",
+                "5rcyr31forc0": "所属产品",
+                "5rcyr31foy40": "实例信息",
+                "5rcyr31fp4g0": "运行状态",
+                "5rcyr31fpac0": "物模型",
+                "5rcyr31fpgw0": "设备功能",
+                "5rcyr31fpn40": "日志管理",
+                "5rcyr31fpx80": "设备诊断",
+                "5rcyr31fq5s0": "数据解析",
+                "5rcyr31fqes0": "子设备",
+                "5rcyr31fqo80": "边缘端映射",
+                "5rcyr31fqww0": "操作成功！",
+                "5rcyr31fr5o0": "操作成功"
+            }
+        }
+    },
+    "ChildDevice": {
+        "BindChildDevice": {
+            "index": {
+                "5rcybahs76g0": "绑定子设备",
+                "5rcybahs8i40": "确定",
+                "5rcybahs8qs0": "取消",
+                "5rcybahs8wg0": "设备名称",
+                "5rcybahs91k0": "所属产品",
+                "5rcybahs9700": "注册时间",
+                "5rcybahs9c40": "状态",
+                "5rcybahs9i00": "禁用",
+                "5rcybahs9o00": "离线",
+                "5rcybahs9u00": "在线",
+                "5rcybahs9yk0": "请选择需要绑定的设备",
+                "5rcybahsa600": "操作成功"
+            }
+        },
+        "EdgeMap": {
+            "index": {
+                "5rcybkuuwc00": "点位映射",
+                "5rcybkuuxpk0": "批量映射",
+                "5rcybkuuxxs0": "保存并应用",
+                "5rcybkuuy4k0": "采集器",
+                "5rcybkuuya00": "边缘网关代理的真实物理设备",
+                "5rcybkuuyfw0": "请选择",
+                "5rcybkuuykw0": "请选择采集器",
+                "5rcybkuuyq00": "请选择点位",
+                "5rcybkuuywc0": "已绑定",
+                "5rcybkuuz1c0": "未绑定",
+                "5rcybkuuz6g0": "解绑",
+                "5rcybkuuzbc0": "确认解绑",
+                "5rcybkuuzn00": "暂无数据，请配置物模型",
+                "5rcybkuuzs00": "名称",
+                "5rcybkuuzwg0": "通道",
+                "5rcybkuv0140": "点位",
+                "5rcybkuv07o0": "状态",
+                "5rcybkuv0g40": "操作",
+                "5rcybkuv0kw0": "操作成功！",
+                "5rcybkuv0pk0": "请配置物模型",
+                "5rcybkuv0xc0": "保存成功"
+            },
+            "MSelect": {
+                "5rcybxznrss0": "请选择"
+            },
+            "PatchMapping": {
+                "5rcyc70psro0": "批量映射",
+                "5rcyc70puig0": "采集器的点位名称与属性名称一致时将自动映射绑定；有多个采集器点位名称与属性名称一致时以第1个采集器的点位数据进行绑定",
+                "5rcyc70pv0g0": "源数据",
+                "5rcyc70pvco0": "加入右侧",
+                "5rcyc70pvmg0": "采集器",
+                "5rcyc70pvw00": "确定删除?",
+                "5rcyc70pw4c0": "请选择采集器",
+                "5rcyc70pwd00": "操作成功",
+                "5rcyc70px0w0": "暂无对应属性的映射"
+            }
+        },
+        "SaveChild": {
+            "index": {
+                "5rcycozqht00": "基本信息",
+                "5rcycozqjh00": "返回",
+                "5rcycozqjpg0": "设备名称",
+                "5rcycozqjy80": "请输入设备名称",
+                "5rcycozqk6s0": "产品名称",
+                "5rcycozqkcs0": "请选择产品名称"
+            }
+        }
+    },
+    "Message": {
+        "Dialog": {
+            "index": {
+                "5rcyex1we400": "连接",
+                "5rcyex1wfk40": "权限验证",
+                "5rcyex1wfsg0": "解码",
+                "5rcyex1wfzs0": "编码",
+                "5rcyex1wg6o0": "请求",
+                "5rcyex1wge40": "响应",
+                "5rcyex1wgkw0": "下行消息",
+                "5rcyex1wgts0": "上行消息"
+            }
+        },
+        "Function": {
+            "EditTable": {
+                "5rcyf72g1r80": "是",
+                "5rcyf72g3js0": "否",
+                "5rcyf72g3ps0": "参数名称",
+                "5rcyf72g3tk0": "类型",
+                "5rcyf72g3x00": "值"
+            },
+            "index": {
+                "5rcyferuv3k0": "请选择",
+                "5rcyferuwvs0": "读取属性",
+                "5rcyferux4k0": "修改属性",
+                "5rcyferuxa00": "调用功能",
+                "5rcyferuxe00": "请选择属性",
+                "5rcyferuxhw0": "请输入值",
+                "5rcyferuxl80": "请选择功能",
+                "5rcyferuxog0": "发送",
+                "5rcyferuxrs0": "参数列表",
+                "5rcyferuxvg0": "请输入参数列表"
+            }
+        },
+        "Log": {
+            "index": {
+                "5rcyfoe9hqo0": "连接",
+                "5rcyfoe9jk00": "权限验证",
+                "5rcyfoe9juc0": "解码",
+                "5rcyfoe9k180": "编码",
+                "5rcyfoe9kak0": "请求",
+                "5rcyfoe9ki00": "响应",
+                "5rcyfoe9koc0": "下行消息",
+                "5rcyfoe9ku80": "上行消息"
+            }
+        }
+    },
+    "Diagnose": {
+        "Message": {
+            "index": {
+                "5rcyfxsdxiw0": "调试",
+                "5rcyfxsdzd80": "日志",
+                "5rcyfxsdzt00": "上行消息诊断中",
+                "5rcyfxse0340": "下行消息诊断中",
+                "5rcyfxse0bg0": "下行消息通信异常",
+                "5rcyfxse0kw0": "下行消息通信正常",
+                "5rcyfxse0t00": "上行消息通信异常",
+                "5rcyfxse1140": "上行消息通信正常"
+            }
+        }
+    },
+    "Function": {
+        "components": {
+            "Advance": {
+                "5rcyi6s5j7s0": "执行",
+                "5rcyi6s5n3c0": "清空",
+                "5rcyi6s5nxo0": "执行结果：",
+                "5rcyi6s5o700": "操作成功"
+            },
+            "Simple": {
+                "5rcyid5q8r40": "精简模式下参数只支持输入框的方式录入",
+                "5rcyid5qa9s0": "请按照json格式输入",
+                "5rcyid5qak00": "该字段为必填字段",
+                "5rcyid5qark0": "执行",
+                "5rcyid5qaz00": "清空",
+                "5rcyid5qb740": "执行结果：",
+                "5rcyid5qbds0": "参数名称",
+                "5rcyid5qbkc0": "输入类型",
+                "5rcyid5qbr00": "值",
+                "5rcyid5qbxg0": "操作成功"
+            }
+        }
+    },
+    "Running": {
+        "Event": {
+            "index": {
+                "5rcym62apc00": "详情",
+                "5rcym62aqwc0": "关闭",
+                "5rcym62ar440": "时间",
+                "5rcym62arac0": "操作",
+                "5rcym62argo0": "数据"
+            }
+        },
+        "Property": {
+            "index": {
+                "5rcyowibqy40": "请输入名称",
+                "5rcyowibsp40": "名称",
+                "5rcyowibt2s0": "值",
+                "5rcyowibtbw0": "更新时间",
+                "5rcyowibtk80": "操作",
+                "5rcyowibtyc0": "设置属性至设备",
+                "5rcyowibu780": "指标",
+                "5rcyowibugk0": "获取最新属性值",
+                "5rcyowibups0": "操作成功！",
+                "5rcyowibuy40": "详情"
+            },
+            "Indicators": {
+                "5rcypfk4yvo0": "编辑指标",
+                "5rcypfk512w0": "场景联动页面可引用指标配置触发条件",
+                "5rcypfk51j00": "选择",
+                "5rcypfk51tc0": "输入",
+                "5rcypfk521k0": "指标值",
+                "5rcypfk52c40": "操作成功！"
+            },
+            "PropertyCard": {
+                "5rcypq24ldc0": "更新时间"
+            },
+            "Save": {
+                "5rcypzhgygg0": "编辑",
+                "5rcypzhh0280": "当数据来源为设备时，填写的值将下发到设备",
+                "5rcypzhh0b00": "自定义属性",
+                "5rcypzhh0ho0": "该字段是必填字段",
+                "5rcypzhh0nw0": "操作成功！"
+            },
+            "ValueDetail": {
+                "5rcyq640pqo0": "详情",
+                "5rcyq640qq80": "确定",
+                "5rcyq640r000": "取消"
+            },
+            "ValueRender": {
+                "5rcyqc5r2yw0": "域名为https时，不支持访问http地址",
+                "5rcyqc5r5940": "该图片无法访问",
+                "5rcyqc5r5kg0": "当前仅支持播放.mp4,.flv,.m3u8格式的视频"
+            }
+        }
+    },
+    "Property": {
+        "Detail": {
+            "Charts": {
+                "5rcymopzshc0": "统计周期：",
+                "5rcymopzu340": "实际值",
+                "5rcymopzuc00": "按分钟统计",
+                "5rcymopzuhk0": "按小时统计",
+                "5rcymopzumk0": "按天统计",
+                "5rcymopzurw0": "按周统计",
+                "5rcymopzuxc0": "按月统计",
+                "5rcymopzv240": "统计规则：",
+                "5rcymopzv740": "平均值",
+                "5rcymopzvg00": "最大值",
+                "5rcymopzvkc0": "最小值",
+                "5rcymopzvp40": "总数",
+                "5rcymopzvvs0": "时间"
+            },
+            "index": {
+                "5rcymvg63l00": "详情",
+                "5rcymvg65ow0": "列表",
+                "5rcymvg66080": "图表",
+                "5rcymvg669k0": "轨迹"
+            },
+            "PropertyAMap": {
+                "5rcyn0yib180": "开始动画",
+                "5rcyn0yics80": "停止动画"
+            },
+            "Table": {
+                "5rcynbb1sr40": "详情",
+                "5rcynbb1uw00": "自定义属性",
+                "5rcynbb1v9s0": "时间",
+                "5rcynbb1vk40": "操作"
+            },
+            "TimeComponent": {
+                "5rcynmzg29k0": "今日",
+                "5rcynmzg3jo0": "近一周",
+                "5rcynmzg3rc0": "近一月",
+                "5rcynmzg3wk0": "开始时间",
+                "5rcynmzg41g0": "结束时间"
             }
         }
     }

@@ -13,9 +13,9 @@
                         type="CloseOutlined"
                         style="margin-right: 5px"
                         @click="onClose"
-                    />编辑</span
+                    />{{t('components.Relation.Save.5rcykfxkim80')}}</span
                 >
-                <j-button type="primary" @click="saveBtn">保存</j-button>
+                <j-button type="primary" @click="saveBtn">{{t('components.Relation.Save.5rcykfxkkmo0')}}</j-button>
             </div>
         </template>
         <j-form layout="vertical" ref="formRef" :model="modelRef">
@@ -47,7 +47,9 @@
 import { queryUserListNoPaging, saveRelations } from '@/api/device/instance';
 import { useInstanceStore } from '@/store/instance';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emit = defineEmits(['close', 'save']);
 
 const formRef = ref();
@@ -114,7 +116,7 @@ const saveBtn = () => {
             if(param.length && instanceStore.current.id){
                 const resp = await saveRelations(instanceStore.current.id, param);
                 if (resp.status === 200) {
-                    message.success('操作成功！');
+                    message.success(t('components.Relation.Save.5rcykfxkkyo0'));
                     emit('save');
                     formRef.value.resetFields();
                 }

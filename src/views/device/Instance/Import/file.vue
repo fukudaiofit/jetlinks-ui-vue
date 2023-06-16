@@ -1,16 +1,16 @@
 <template>
   <div class='file'>
     <j-form layout='vertical'>
-      <j-form-item label='文件格式' >
+      <j-form-item :label="t('Instance.Import.file.5rcy9hmpvqc0')" >
         <div class='file-type-label'>
           <a-radio-group class='file-type-radio' v-model:value="modelRef.file.fileType" >
             <a-radio-button value="xlsx">xlsx</a-radio-button>
             <a-radio-button value="csv">csv</a-radio-button>
           </a-radio-group>
-          <a-checkbox v-model:checked="modelRef.file.autoDeploy">自动启用</a-checkbox>
+          <a-checkbox v-model:checked="modelRef.file.autoDeploy">{{t('Instance.Import.file.5rcy9hmpx080')}}</a-checkbox>
         </div>
       </j-form-item>
-      <j-form-item label="文件上传">
+      <j-form-item :label="t('Instance.Import.file.5rcy9hmpxjo0')">
         <j-upload
           v-model:fileList="modelRef.upload"
           name="file"
@@ -29,11 +29,11 @@
         >
           <j-button style='width: 760px;'>
             <template #icon><AIcon type="UploadOutlined" /></template>
-            上传文件
+            {{t('Instance.Import.file.5rcy9hmpxuo0')}}
           </j-button>
         </j-upload>
       </j-form-item>
-      <j-form-item label='下载模板'>
+      <j-form-item :label="t('Instance.Import.file.5rcy9hmpy480')">
         <div class='file-download'>
           <j-button @click="downFile('xlsx')">.xlsx</j-button>
           <j-button @click="downFile('csv')">.csv</j-button>
@@ -41,8 +41,8 @@
       </j-form-item>
     </j-form>
     <div v-if="importLoading">
-      <j-badge v-if="flag" status="processing" text="进行中" />
-      <j-badge v-else status="success" text="已完成" />
+      <j-badge v-if="flag" status="processing" :text="t('Instance.Import.file.5rcy9hmpyec0')" />
+      <j-badge v-else status="success" :text="t('Instance.Import.file.5rcy9hmpynk0')" />
       <span>总数量：{{ count }}</span>
       <p style="color: red">{{ errMessage }}</p>
     </div>
@@ -60,7 +60,9 @@ import {
 } from '@/api/device/instance';
 import { EventSourcePolyfill } from 'event-source-polyfill';
 import { message } from 'jetlinks-ui-components'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
   product: {
     type: String,
@@ -97,10 +99,10 @@ const beforeUpload = (_file: any) => {
   const isCsv = _file.type === 'text/csv';
   const isXlsx = _file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
   if (!isCsv && fileType !== 'xlsx') {
-    onlyMessage('请上传.csv格式文件', 'warning');
+    onlyMessage(t('Instance.Import.file.5rcy9hmpyxc0'), 'warning');
   }
   if (!isXlsx && fileType !== 'csv') {
-    onlyMessage('请上传.xlsx格式文件', 'warning');
+    onlyMessage(t('Instance.Import.file.5rcy9hmpz6s0'), 'warning');
   }
   return (isCsv && fileType !== 'xlsx') || (isXlsx && fileType !== 'csv');
 };
@@ -122,19 +124,19 @@ const submitData = async (fileUrl: string) => {
         dt += temp;
         count.value = dt;
       } else {
-        errMessage.value = res.message || '失败';
+        errMessage.value = res.message || t('Instance.Import.file.5rcy9hmpzg00');
       }
       disabled.value = false
     };
     source.onerror = (e: { status: number }) => {
-      if (e.status === 403) errMessage.value = '暂无权限，请联系管理员';
+      if (e.status === 403) errMessage.value = t('Instance.Import.file.5rcy9hmpzsg0');
       flag.value = false;
       disabled.value = false
       source.close();
     };
     source.onopen = () => {};
   } else {
-    message.error('请先上传文件');
+    message.error(t('Instance.Import.file.5rcy9hmq07s0'));
   }
 };
 

@@ -6,27 +6,27 @@
                 <div>
                     <AIcon type="ExclamationCircleOutlined" />
                     <template v-if="topTitle === 'rest'">
-                        当前数据解析内容已脱离产品影响，
+                        {{t('Detail.Parsing.index.5rcyly034780')}}
                         <PermissionButton
                             type="link"
                             hasPermission="device/Instance:update"
                             @click="rest()"
                         >
-                            重置
+                            {{t('Detail.Parsing.index.5rcyly035xw0')}}
                         </PermissionButton>
-                        后将继承产品数据解析内容
+                        {{t('Detail.Parsing.index.5rcyly0368k0')}}
                     </template>
                     <template v-else>
-                        当前数据解析内容继承自产品,
+                        {{t('Detail.Parsing.index.5rcyly036gs0')}}
                         <PermissionButton
                             type="link"
                             hasPermission="device/Instance:update"
                             @click="readOnly = false"
                             :style="color"
                         >
-                            修改
+                            {{t('Detail.Parsing.index.5rcyly036s00')}}
                         </PermissionButton>
-                        后将脱离产品影响。
+                        {{t('Detail.Parsing.index.5rcyly0370o0')}}
                     </template>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     () => {
                         message.warning({
                             key: 1,
-                            content: () => '请点击上方修改字样,用以编辑脚本',
+                            content: () => t('Detail.Parsing.index.5rcyly0378g0'),
                             style: {
                                 marginTop: '260px',
                             },
@@ -73,14 +73,14 @@
         <div class="bottom">
             <div style="width: 49.5%">
                 <div class="bottom-title">
-                    <div class="bottom-title-text">模拟输入</div>
+                    <div class="bottom-title-text">{{t('Detail.Parsing.index.5rcyly037fk0')}}</div>
                     <div class="bottom-title-topic">
                         <template
                             v-if="instanceStore.current.transport === 'MQTT'"
                         >
                             <div style="margin-right: 5px">Topic:</div>
                             <j-auto-complete
-                                placeholder="请输入Topic"
+                                :placeholder="t('Detail.Parsing.index.5rcyly037ng0')"
                                 style="width: 300px"
                                 :options="topicList"
                                 :allowClear="true"
@@ -91,7 +91,7 @@
                         <template v-else>
                             <div style="margin-right: 5px">URL:</div>
                             <j-input
-                                placeholder="请输入URL"
+                                :placeholder="t('Detail.Parsing.index.5rcyly037v00')"
                                 v-model:value="url"
                                 style="width: 300px"
                             ></j-input>
@@ -107,7 +107,7 @@
             </div>
             <div style="width: 49.5%">
                 <div class="bottom-title">
-                    <div class="bottom-title-text">运行结果</div>
+                    <div class="bottom-title-text">{{t('Detail.Parsing.index.5rcyly0381w0')}}</div>
                 </div>
                 <j-textarea
                     :autoSize="{ minRows: 5 }"
@@ -125,10 +125,10 @@
             :disabled="isDisabled"
             @click="debug()"
             :tooltip="{
-                title: '需输入脚本和模拟数据后再点击',
+                title: t('Detail.Parsing.index.5rcyly0389c0'),
             }"
         >
-            调试
+            {{t('Detail.Parsing.index.5rcyly038gg0')}}
         </PermissionButton>
         <PermissionButton
             hasPermission="device/Instance:update"
@@ -137,10 +137,10 @@
             @click="save()"
             :style="{ marginLeft: '10px' }"
             :tooltip="{
-                title: isTest ? '' : '请先调试',
+                title: isTest ? '' : t('Detail.Parsing.index.5rcyly038oo0'),
             }"
         >
-            保存
+            {{t('Detail.Parsing.index.5rcyly038yw0')}}
         </PermissionButton>
     </div>
 </template>
@@ -159,7 +159,9 @@ import {
 } from '@/api/device/instance';
 import { message } from 'jetlinks-ui-components';
 import { isBoolean } from 'lodash';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const defaultValue =
     '//解码函数\r\nfunction decode(context) {\r\n    //原始报文\r\n    var buffer = context.payload();\r\n    // 转为json\r\n    // var json = context.json();\r\n    //mqtt 时通过此方法获取topic\r\n    // var topic = context.topic();\r\n\r\n    // 提取变量\r\n    // var topicVars = context.pathVars("/{deviceId}/**",topic)\r\n    //温度属性\r\n    var temperature = buffer.getShort(3) * 10;\r\n    //湿度属性\r\n    var humidity = buffer.getShort(6) * 10;\r\n    return {\r\n        "temperature": temperature,\r\n        "humidity": humidity\r\n    };\r\n}\r\n';
 
@@ -210,7 +212,7 @@ const rest = async () => {
     );
     if (res.status === 200) {
         getDeviceCode();
-        message.success('操作成功');
+        message.success(t('Detail.Parsing.index.5rcyly0395s0'));
     }
 };
 //获取topic
@@ -275,7 +277,7 @@ const save = async () => {
         item,
     );
     if (res.status === 200) {
-        message.success('保存成功');
+        message.success(t('Detail.Parsing.index.5rcyly039dc0'));
         getDeviceCode();
     }
 };
@@ -296,7 +298,7 @@ const debug = () => {
             });
             isTest.value = true;
         } else {
-            message.error('请输入topic');
+            message.error(t('Detail.Parsing.index.5rcyly039kc0'));
         }
     } else {
         if (url.value !== '') {
@@ -313,7 +315,7 @@ const debug = () => {
             });
             isTest.value = true;
         } else {
-            message.error('请输入url');
+            message.error(t('Detail.Parsing.index.5rcyly039r80'));
         }
     }
 };

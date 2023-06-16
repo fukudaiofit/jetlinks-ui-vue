@@ -109,7 +109,9 @@ import { getImage } from '@/utils/comm';
 import { message } from 'jetlinks-ui-components';
 import ValueDetail from './ValueDetail.vue';
 import { getType, imgMap, imgList, videoList, fileList } from './index';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const _data = defineProps({
     data: {
         type: Object,
@@ -149,9 +151,9 @@ const getDetail = (_type: string) => {
     let flag: string = '';
     if (_type === 'img') {
         if (isHttps && value?.formatValue.indexOf('http:') !== -1) {
-            message.error('域名为https时，不支持访问http地址');
+            message.error(t('Running.Property.ValueRender.5rcyqc5r2yw0'));
         } else if (temp.value) {
-            message.error('该图片无法访问');
+            message.error(t('Running.Property.ValueRender.5rcyqc5r5940'));
         } else {
             flag =
                 ['.jpg', '.png'].find((item) =>
@@ -162,11 +164,11 @@ const getDetail = (_type: string) => {
         }
     } else if (_type === 'video') {
         if (isHttps && value?.formatValue.indexOf('http:') !== -1) {
-            message.error('域名为https时，不支持访问http地址');
+            message.error(t('Running.Property.ValueRender.5rcyqc5r2yw0'));
         } else if (
             ['.rmvb', '.mvb'].some((item) => value?.formatValue.includes(item))
         ) {
-            message.error('当前仅支持播放.mp4,.flv,.m3u8格式的视频');
+            message.error(t('Running.Property.ValueRender.5rcyqc5r5kg0'));
         } else {
             flag =
                 ['.m3u8', '.flv', '.mp4'].find((item) =>

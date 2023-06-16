@@ -3,7 +3,7 @@
     <div class='left'>
       <j-input-search
         style='width: 350px;margin-bottom:24px;'
-        placeholder='搜索平台属性名称'
+        :placeholder="t('Detail.MetadataMap.index.5rcy34vkxv80')"
         allowClear
         @search='search'
       />
@@ -47,21 +47,21 @@
     <div class='right'>
       <j-scrollbar>
         <div class='title'>
-          功能说明
+          {{t('Detail.MetadataMap.index.5rcy34vkze00')}}
         </div>
         <p>
-          该功能用于将插件中的
-          <b>物模型属性标识</b>与
-          <b>平台物模型属性标识</b>进行映射,当两方属性标识不一致时，可在当前页面直接修改映射管理，系统将以映射后的物模型属性进行数据处理。
+          {{t('Detail.MetadataMap.index.5rcy34vkzmk0')}}
+          <b>{{t('Detail.MetadataMap.index.5rcy34vkztc0')}}</b>与
+          <b>{{t('Detail.MetadataMap.index.5rcy34vkzzc0')}}</b>进行映射,当两方属性标识不一致时，可在当前页面直接修改映射管理，系统将以映射后的物模型属性进行数据处理。
         </p>
         <p>
-          未完成映射的属性标识“目标属性”列数据为空，代表该属性值来源以在平台配置的来源为准。
+          {{t('Detail.MetadataMap.index.5rcy34vl05s0')}}
         </p>
         <p>
-          数据条背景亮起代表<b>标识一致</b>或<b>已完成映射</b>的属性。
+          {{t('Detail.MetadataMap.index.5rcy34vl0bo0')}}<b>{{t('Detail.MetadataMap.index.5rcy34vl0h00')}}</b>{{t('Detail.MetadataMap.index.5rcy34vl0n80')}}<b>{{t('Detail.MetadataMap.index.5rcy34vl0so0')}}</b>的属性。
         </p>
         <div class='title'>
-          功能图示
+          {{t('Detail.MetadataMap.index.5rcy34vl0xw0')}}
         </div>
         <div>
           <img :src='getImage("/device/matadataMap.png")' />
@@ -78,7 +78,9 @@ import { detail as queryPluginAccessDetail } from '@/api/link/accessConfig'
 import { getPluginData, getProductByPluginId } from '@/api/link/plugin'
 import { getImage, onlyMessage } from '@/utils/comm'
 import { getMetadateMapById, metadateMapById } from '@/api/device/instance'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const productStore = useProductStore();
 const { current: productDetail } = storeToRefs(productStore)
 const dataSourceCache = ref([])
@@ -92,16 +94,16 @@ const tableFilter = (value: string, record: any) => {
 
 const columns = [
   {
-    title: '序号',
+    title: t('Detail.MetadataMap.index.5rcy34vl13o0'),
     dataIndex: 'index',
     width: 100
   },
   {
-    title: '平台属性',
+    title: t('Detail.MetadataMap.index.5rcy34vl1aw0'),
     dataIndex: 'name',
   },
   {
-    title: '目标属性',
+    title: t('Detail.MetadataMap.index.5rcy34vl1gw0'),
     dataIndex: 'plugin',
     width: 250,
     sorter: tableFilter
@@ -188,7 +190,7 @@ const pluginChange = async (value: any, id: string) => {
     originalId: id
   }])
   if (res.success) {
-    onlyMessage('操作成功')
+    onlyMessage(t('Detail.MetadataMap.index.5rcy34vl1mk0'))
   }
 }
 

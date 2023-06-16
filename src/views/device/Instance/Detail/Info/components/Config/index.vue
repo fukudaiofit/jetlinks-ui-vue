@@ -1,7 +1,7 @@
 <template>
     <div style="margin-top: 20px" v-if="config.length">
         <div style="display: flex; margin-bottom: 20px; align-items: center">
-            <div style="font-size: 16px; font-weight: 700">配置</div>
+            <div style="font-size: 16px; font-weight: 700">{{t('components.Config.index.5rcyjclwxlw0')}}</div>
             <j-space>
                 <PermissionButton
                     type="link"
@@ -9,19 +9,19 @@
                     hasPermission="device/Instance:update"
                 >
                     <template #icon><AIcon type="EditOutlined" /></template>
-                    编辑
+                    {{t('components.Config.index.5rcyjclx06s0')}}
                 </PermissionButton>
                 <PermissionButton
                     type="link"
                     v-if="instanceStore.detail.current?.value !== 'notActive'"
                     :popConfirm="{
-                        title: '确认重新应用该配置？',
+                        title: t('components.Config.index.5rcyjclx1b40'),
                         onConfirm: deployBtn,
                     }"
                     hasPermission="device/Instance:update"
                 >
-                    <AIcon type="CheckOutlined" />应用配置<j-tooltip
-                        title="修改配置后需重新应用后才能生效。"
+                    <AIcon type="CheckOutlined" />{{t('components.Config.index.5rcyjclx1uk0')}}<j-tooltip
+                        :title="t('components.Config.index.5rcyjclx3gw0')"
                         ><AIcon type="QuestionCircleOutlined"
                     /></j-tooltip>
                 </PermissionButton>
@@ -29,13 +29,13 @@
                     type="link"
                     v-if="instanceStore.detail.aloneConfiguration"
                     :popConfirm="{
-                        title: '确认恢复默认配置？',
+                        title: t('components.Config.index.5rcyjclx3tc0'),
                         onConfirm: resetBtn,
                     }"
                     hasPermission="device/Instance:update"
                 >
-                    <AIcon type="SyncOutlined" />恢复默认<j-tooltip
-                        title="该设备单独编辑过配置信息，点击此将恢复成默认的配置信息，请谨慎操作。"
+                    <AIcon type="SyncOutlined" />{{t('components.Config.index.5rcyjclx42w0')}}<j-tooltip
+                        :title="t('components.Config.index.5rcyjclx4ik0')"
                         ><AIcon type="QuestionCircleOutlined"
                     /></j-tooltip>
                 </PermissionButton>
@@ -103,7 +103,9 @@ import {
 } from '@/api/device/instance';
 import { message } from 'jetlinks-ui-components';
 import Save from './Save.vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const instanceStore = useInstanceStore();
 const visible = ref<boolean>(false);
 const config = ref<ConfigMetadata[]>([]);
@@ -132,7 +134,7 @@ const deployBtn = async () => {
     if (instanceStore.current.id) {
         const resp = await _deploy(instanceStore.current.id);
         if (resp.status === 200) {
-            message.success('操作成功');
+            message.success(t('components.Config.index.5rcyjclx5dg0'));
             instanceStore.refresh(instanceStore.current.id);
         }
     }
@@ -142,7 +144,7 @@ const resetBtn = async () => {
     if (instanceStore.current.id) {
         const resp = await configurationReset(instanceStore.current.id);
         if (resp.status === 200) {
-            message.success('恢复默认配置成功');
+            message.success(t('components.Config.index.5rcyjclx65c0'));
             instanceStore.refresh(instanceStore.current.id);
         }
     }

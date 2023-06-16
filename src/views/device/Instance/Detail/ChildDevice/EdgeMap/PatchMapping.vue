@@ -1,18 +1,18 @@
 <template>
     <j-modal
         width="900px"
-        title="批量映射"
+        :title="t('ChildDevice.EdgeMap.PatchMapping.5rcyc70psro0')"
         visible
         @ok="handleClick"
         @cancel="handleClose"
     >
         <div class="map-tree">
             <div class="map-tree-top">
-                采集器的点位名称与属性名称一致时将自动映射绑定；有多个采集器点位名称与属性名称一致时以第1个采集器的点位数据进行绑定
+                {{t('ChildDevice.EdgeMap.PatchMapping.5rcyc70puig0')}}
             </div>
             <j-spin :spinning="loading">
                 <div class="map-tree-content">
-                    <j-card class="map-tree-content-card" title="源数据">
+                    <j-card class="map-tree-content-card" :title="t('ChildDevice.EdgeMap.PatchMapping.5rcyc70pv0g0')">
                         <j-tree
                             checkable
                             :height="300"
@@ -25,10 +25,10 @@
                         <j-button
                             :disabled="rightList.length >= leftList.length"
                             @click="onRight"
-                            >加入右侧</j-button
+                            >{{t('ChildDevice.EdgeMap.PatchMapping.5rcyc70pvco0')}}</j-button
                         >
                     </div>
-                    <j-card class="map-tree-content-card" title="采集器">
+                    <j-card class="map-tree-content-card" :title="t('ChildDevice.EdgeMap.PatchMapping.5rcyc70pvmg0')">
                         <j-list
                             size="small"
                             :data-source="rightList"
@@ -39,7 +39,7 @@
                                     {{ item.title }}
                                     <template #actions>
                                         <j-popconfirm
-                                            title="确定删除?"
+                                            :title="t('ChildDevice.EdgeMap.PatchMapping.5rcyc70pvw00')"
                                             @confirm="_delete(item.key)"
                                         >
                                             <AIcon type="DeleteOutlined" />
@@ -58,6 +58,9 @@
 <script lang="ts" setup>
 import { treeEdgeMap, saveEdgeMap, addDevice } from '@/api/device/instance';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const _props = defineProps({
     metaData: {
         type: Array,
@@ -132,7 +135,7 @@ const _delete = (_key: string) => {
 
 const handleClick = async () => {
     if (!rightList.value.length) {
-        message.warning('请选择采集器');
+        message.warning(t('ChildDevice.EdgeMap.PatchMapping.5rcyc70pw4c0'));
     } else {
         const params: any[] = [];
         rightList.value.map((item: any) => {
@@ -159,11 +162,11 @@ const handleClick = async () => {
                     requestList: filterParms,
                 });
                 if (res.status === 200) {
-                    message.success('操作成功');
+                    message.success(t('ChildDevice.EdgeMap.PatchMapping.5rcyc70pwd00'));
                     _emits('save');
                 }
             } else {
-                message.error('暂无对应属性的映射');
+                message.error(t('ChildDevice.EdgeMap.PatchMapping.5rcyc70px0w0'));
             }
         } else {
             if (filterParms && filterParms.length !== 0) {
@@ -175,12 +178,12 @@ const handleClick = async () => {
                         requestList: filterParms,
                     });
                     if (res.status === 200) {
-                        message.success('操作成功');
+                        message.success(t('ChildDevice.EdgeMap.PatchMapping.5rcyc70pwd00'));
                         _emits('save');
                     }
                 }
             } else {
-                message.error('暂无对应属性的映射');
+                message.error(t('ChildDevice.EdgeMap.PatchMapping.5rcyc70px0w0'));
             }
         }
     }

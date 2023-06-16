@@ -20,19 +20,19 @@
                                     type="primary"
                                     @click="handleExecute(func)"
                                 >
-                                    执行
+                                    {{t('Function.components.Advance.5rcyi6s5j7s0')}}
                                 </j-button>
                                 <j-button
                                     type="default"
                                     @click="handleClear(func)"
                                 >
-                                    清空
+                                    {{t('Function.components.Advance.5rcyi6s5n3c0')}}
                                 </j-button>
                             </j-space>
                         </div>
                     </j-col>
                     <j-col :span="9">
-                        <h6>执行结果：</h6>
+                        <h6>{{t('Function.components.Advance.5rcyi6s5nxo0')}}</h6>
                         <span class="execute-result">
                             {{ func.executeResult }}
                         </span>
@@ -48,7 +48,9 @@ import { ComponentInternalInstance } from 'vue';
 import { message } from 'jetlinks-ui-components';
 import { useInstanceStore } from '@/store/instance';
 import { execute } from '@/api/device/instance';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const instanceStore = useInstanceStore();
 const route = useRoute();
 const { proxy } = getCurrentInstance() as ComponentInternalInstance;
@@ -106,7 +108,7 @@ const setInitValue = (type: string, json?: any) => {
 };
 
 /**
- * 执行
+ * {{t('Function.components.Advance.5rcyi6s5j7s0')}}
  */
 const handleExecute = async (func: any) => {
     const { success, result } = await execute(
@@ -115,12 +117,12 @@ const handleExecute = async (func: any) => {
         JSON.parse(func.json),
     );
     if (!success) return;
-    message.success('操作成功');
+    message.success(t('Function.components.Advance.5rcyi6s5o700'));
     func.executeResult = result instanceof Array ? result[0] : result;
     proxy?.$forceUpdate();
 };
 /**
- * 清空
+ * {{t('Function.components.Advance.5rcyi6s5n3c0')}}
  */
 const handleClear = (func: any) => {
     func.json = '';

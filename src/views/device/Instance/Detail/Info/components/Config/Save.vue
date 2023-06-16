@@ -13,9 +13,9 @@
                         type="CloseOutlined"
                         style="margin-right: 5px"
                         @click="onClose"
-                    />编辑配置</span
+                    />{{t('components.Config.Save.5rcyjkshg4w0')}}</span
                 >
-                <j-button type="primary" @click="saveBtn">保存</j-button>
+                <j-button type="primary" @click="saveBtn">{{t('components.Config.Save.5rcyjkshhgk0')}}</j-button>
             </div>
         </template>
         <j-form layout="vertical" ref="formRef" :model="modelRef">
@@ -57,7 +57,9 @@
 import { modify } from '@/api/device/instance';
 import { useInstanceStore } from '@/store/instance';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emit = defineEmits(['close', 'save']);
 
 const formRef = ref();
@@ -100,7 +102,7 @@ const saveBtn = () => {
             configuration: { ...values }
         })
         if(resp.status === 200){
-            message.success('操作成功！')
+            message.success(t('components.Config.Save.5rcyjkshhp80'))
             emit('save');
         }
       }

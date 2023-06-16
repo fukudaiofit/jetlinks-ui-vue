@@ -3,7 +3,7 @@
         <div class="tips">
             <j-space>
                 <AIcon type="QuestionCircleOutlined" />
-                <span>精简模式下参数只支持输入框的方式录入</span>
+                <span>{{t('Function.components.Simple.5rcyid5q8r40')}}</span>
             </j-space>
         </div>
         <j-tabs v-model="activeKey" tab-position="left" @change="onTabChange" :destroyInactiveTabPane="true">
@@ -31,7 +31,7 @@
                                             v-if="record.type === 'object'"
                                         >
                                             <template slot="title">
-                                                请按照json格式输入
+                                                {{t('Function.components.Simple.5rcyid5qa9s0')}}
                                             </template>
 
                                             <AIcon
@@ -50,7 +50,7 @@
                                             :name="['table', index, 'value']"
                                             :rules="{
                                                 required: true,
-                                                message: '该字段为必填字段',
+                                                message: t('Function.components.Simple.5rcyid5qak00'),
                                             }"
                                             has-feedback
                                         >
@@ -78,19 +78,19 @@
                                     type="primary"
                                     @click="handleExecute(func)"
                                 >
-                                    执行
+                                    {{t('Function.components.Simple.5rcyid5qark0')}}
                                 </j-button>
                                 <j-button
                                     type="default"
                                     @click="handleClear(func)"
                                 >
-                                    清空
+                                    {{t('Function.components.Simple.5rcyid5qaz00')}}
                                 </j-button>
                             </j-space>
                         </div>
                     </j-col>
                     <j-col :span="9">
-                        <h6>执行结果：</h6>
+                        <h6>{{t('Function.components.Simple.5rcyid5qb740')}}</h6>
                         <span
                             :ref="`result${func.id}Ref`"
                             class="execute-result"
@@ -109,7 +109,9 @@ import { ComponentInternalInstance } from 'vue';
 import { message } from 'jetlinks-ui-components';
 import { useInstanceStore } from '@/store/instance';
 import { execute } from '@/api/device/instance';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const instanceStore = useInstanceStore();
 const route = useRoute();
 const { proxy } = getCurrentInstance() as ComponentInternalInstance;
@@ -119,18 +121,18 @@ const activeKey = ref('');
 const metadata = computed(() => JSON.parse(instanceStore.detail.metadata));
 const columns = ref([
     {
-        title: '参数名称',
+        title: t('Function.components.Simple.5rcyid5qbds0'),
         dataIndex: 'name',
         width: 150,
         ellipsis: true,
     },
     {
-        title: '输入类型',
+        title: t('Function.components.Simple.5rcyid5qbkc0'),
         dataIndex: 'type',
         width: 150,
     },
     {
-        title: '值',
+        title: t('Function.components.Simple.5rcyid5qbr00'),
         dataIndex: 'value',
     },
 ]);
@@ -186,7 +188,7 @@ const newFunctions = computed(() => {
 });
 
 /**
- * 执行
+ * {{t('Function.components.Simple.5rcyid5qark0')}}
  */
 const handleExecute = async (func: any) => {
     proxy?.$refs[`${func.id}Ref`][0]
@@ -206,7 +208,7 @@ const handleExecute = async (func: any) => {
                 obj,
             );
             if (!success) return;
-            message.success('操作成功');
+            message.success(t('Function.components.Simple.5rcyid5qbxg0'));
             executeResult.value = result instanceof Array ? result[0] : result;
             proxy?.$forceUpdate();
         })
@@ -215,7 +217,7 @@ const handleExecute = async (func: any) => {
         });
 };
 /**
- * 清空
+ * {{t('Function.components.Simple.5rcyid5qaz00')}}
  */
 const handleClear = (func: any) => {
     executeResult.value = ''

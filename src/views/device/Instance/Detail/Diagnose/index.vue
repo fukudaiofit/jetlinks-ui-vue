@@ -93,14 +93,16 @@ import { getImage } from '@/utils/comm';
 import Status from './Status/index';
 import Message from './Message/index.vue';
 import { useInstanceStore } from '@/store/instance';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 type TypeProps = 'network' | 'child-device' | 'media' | 'cloud' | 'channel';
 
 const instanceStore = useInstanceStore();
 
 const tabList = [
-    { key: 'status', text: '连接状态' },
-    { key: 'message', text: '消息通信' },
+    { key: 'status', text: t('Detail.Diagnose.index.5rcyh18y5ak0') },
+    { key: 'message', text: t('Detail.Diagnose.index.5rcyh18y6wg0') },
 ];
 
 const activeStyle = {

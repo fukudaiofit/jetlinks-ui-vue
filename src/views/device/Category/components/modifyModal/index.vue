@@ -8,8 +8,8 @@
         visible
         @ok="submitData"
         @cancel="close"
-        okText="确定"
-        cancelText="取消"
+        :okText="t('components.modifyModal.index.5rcy4mn1zu00')"
+        :cancelText="t('components.modifyModal.index.5rcy4mn21qo0')"
         v-bind="layout"
     >
         <j-form
@@ -18,28 +18,28 @@
             :rules="rules"
             :model="formModel"
         >
-            <j-form-item label="名称" name="name">
+            <j-form-item :label="t('components.modifyModal.index.5rcy4mn226w0')" name="name">
                 <j-input
                     v-model:value="formModel.name"
                     :maxlength="64"
-                    placeholder="请输入名称"
+                    :placeholder="t('components.modifyModal.index.5rcy4mn22gs0')"
                 />
             </j-form-item>
-            <j-form-item label="排序" name="sortIndex">
+            <j-form-item :label="t('components.modifyModal.index.5rcy4mn22ps0')" name="sortIndex">
                 <j-input-number
                     style="width: 100%"
                     id="inputNumber"
                     v-model:value="formModel.sortIndex"
                     :min="1"
-                    placeholder="请输入排序"
+                    :placeholder="t('components.modifyModal.index.5rcy4mn22z80')"
                 />
             </j-form-item>
-            <j-form-item label="说明">
+            <j-form-item :label="t('components.modifyModal.index.5rcy4mn23800')">
                 <j-textarea
                     v-model:value="formModel.description"
                     show-count
                     :maxlength="200"
-                    placeholder="请输入说明"
+                    :placeholder="t('components.modifyModal.index.5rcy4mn23gw0')"
                 />
             </j-form-item>
         </j-form>
@@ -52,7 +52,9 @@ import { queryTree, saveTree, updateTree } from '@/api/device/category';
 import { ValidateErrorEntity } from 'ant-design-vue/es/form/interface';
 import { list } from '@/api/iot-card/home';
 import { number } from 'echarts';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emits = defineEmits(['refresh']);
 const formRef = ref();
 const useForm = Form.useForm;
@@ -95,13 +97,13 @@ const formModel = ref<formState>({
 });
 const rules = ref({
     name: [
-        { required: true, message: '请输入名称', trigger: 'blur' },
+        { required: true, message: t('components.modifyModal.index.5rcy4mn22gs0'), trigger: 'blur' },
         {
             max: 64,
-            message: '最多可输入64个字符',
+            message: t('components.modifyModal.index.5rcy4mn23u80'),
         },
     ],
-    sortIndex: [{ required: true, message: '请输入排序', trigger: 'blur' }],
+    sortIndex: [{ required: true, message: t('components.modifyModal.index.5rcy4mn22z80'), trigger: 'blur' }],
 });
 const visible = ref(false);
 const { resetFields, validate, validateInfos } = useForm(
@@ -136,11 +138,11 @@ const submitData = async () => {
             }
             const res = await saveTree(addParams.value);
             if (res.status === 200) {
-                message.success('操作成功！');
+                message.success(t('components.modifyModal.index.5rcy4mn242s0'));
                 visible.value = false;
                 emits('refresh');
             } else {
-                message.error('操作失败！');
+                message.error(t('components.modifyModal.index.5rcy4mn24bc0'));
             }
         } else if (props.isAdd === 2) {
             const id = updateObj.value.id;
@@ -152,11 +154,11 @@ const submitData = async () => {
             };
             const res = await updateTree(id, updateParams);
             if (res.status === 200) {
-                message.success('操作成功！');
+                message.success(t('components.modifyModal.index.5rcy4mn242s0'));
                 visible.value = false;
                 emits('refresh');
             } else {
-                message.error('操作失败！');
+                message.error(t('components.modifyModal.index.5rcy4mn24bc0'));
             }
         }
     });
@@ -192,7 +194,7 @@ const show = async (row: any) => {
             visible.value = true;
         } else if (props.isChild === 2) {
             if (row.level === 5) {
-                message.warning('树形结构最多添加5层');
+                message.warning(t('components.modifyModal.index.5rcy4mn24k40'));
                 visible.value = false;
             } else {
                 addObj.value = row;
@@ -217,7 +219,7 @@ const show = async (row: any) => {
 };
 
 /**
- * 排序
+ * {{t('components.modifyModal.index.5rcy4mn22ps0')}}
  */
 const compare = (property: any) => {
         return function (obj1: any, obj2: any) {
