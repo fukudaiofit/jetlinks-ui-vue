@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n';
-import zh  from './zh-CN';
+import zh  from './zh-cn.json';
 import en  from './en-US';
 
 // 获取浏览器界面语言，默认语言
