@@ -11,7 +11,8 @@
                           <AIcon type="PlusOutlined" />新增
                           </j-button> -->
                       <PermissionButton @click="handleAdd" :hasPermission="'iot-card/Platform:add'" type="primary">
-                          <AIcon type="PlusOutlined" />新增
+                          <AIcon type="PlusOutlined" />
+                          {{t('iot-card.Platform.index.5rgbkt23gzo0')}}
                       </PermissionButton>
                   </j-space>
               </template>
@@ -35,12 +36,12 @@
                           <j-row>
                               <j-col :span="12">
                                   <div class="card-item-content-text">
-                                      平台类型
+                                      {{t('iot-card.Platform.index.5rgbkt23i9w0')}}
                                   </div>
                                   <div>{{ slotProps.operatorName }}</div>
                               </j-col>
                               <j-col :span="12">
-                                  <div class="card-item-content-text">说明</div>
+                                  <div class="card-item-content-text">{{t('iot-card.Platform.index.5rgbkt23ii00')}}</div>
                                   <Ellipsis>{{ slotProps.explain }}</Ellipsis>
                               </j-col>
                           </j-row>
@@ -90,6 +91,9 @@ import type { ActionsType } from '@/components/Table';
 import { message } from 'jetlinks-ui-components';
 import { queryList, update, del } from '@/api/iot-card/platform';
 import { useMenuStore } from 'store/menu'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const menuStory = useMenuStore()
 const router = useRouter()
 const platformRef = ref<Record<string, any>>({});
@@ -97,7 +101,7 @@ const params = ref<Record<string, any>>({});
 
 const columns = [
     {
-        title: '名称',
+        title: t('iot-card.Platform.index.5rgbkt23iqo0'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -106,20 +110,20 @@ const columns = [
         },
     },
     {
-        title: '平台类型',
+        title: t('iot-card.Platform.index.5rgbkt23i9w0'),
         dataIndex: 'operatorName',
         key: 'operatorName',
         search: {
             type: 'select',
             options: [
-                { label: '移动OneLink', value: 'onelink' },
-                { label: '电信Ctwing', value: 'ctwing' },
-                { label: '联通Unicom', value: 'unicom' },
+                { label: t('iot-card.Platform.index.5rgbkt23ivk0'), value: 'onelink' },
+                { label: t('iot-card.Platform.index.5rgbkt23j500'), value: 'ctwing' },
+                { label: t('iot-card.Platform.index.5rgbkt23jag0'), value: 'unicom' },
             ],
         },
     },
     {
-        title: '状态',
+        title: t('iot-card.Platform.index.5rgbkt23jio0'),
         dataIndex: 'state',
         key: 'state',
         scopedSlots: true,
@@ -127,19 +131,19 @@ const columns = [
         search: {
             type: 'select',
             options: [
-                { label: '启用', value: 'enabled' },
-                { label: '禁用', value: 'disabled' },
+                { label: t('iot-card.Platform.index.5rgbkt23jng0'), value: 'enabled' },
+                { label: t('iot-card.Platform.index.5rgbkt23jrg0'), value: 'disabled' },
             ],
         },
     },
     {
-        title: '说明',
+        title: t('iot-card.Platform.index.5rgbkt23ii00'),
         dataIndex: 'explain',
         key: 'explain',
         ellipsis: true,
     },
     {
-        title: '操作',
+        title: t('iot-card.Platform.index.5rgbkt23jvc0'),
         key: 'action',
         fixed: 'right',
         width: 120,
@@ -150,7 +154,7 @@ const columns = [
 const statusUpdate = async (data: any) => {
     const res = await update(data);
     if (res.status === 200) {
-        message.success('操作成功');
+        message.success(t('iot-card.Platform.index.5rgbkt23k0c0'));
         platformRef.value?.reload();
     }
 };
@@ -163,9 +167,9 @@ const getActions = (
     return [
         {
             key: 'update',
-            text: '编辑',
+            text: t('iot-card.Platform.index.5rgbkt23k4c0'),
             tooltip: {
-                title: '编辑',
+                title: t('iot-card.Platform.index.5rgbkt23k4c0'),
             },
             icon: 'EditOutlined',
             onClick: () => {
@@ -175,19 +179,19 @@ const getActions = (
         },
         {
             key: 'action',
-            text: data.state.value === 'enabled' ? '禁用' : '启用',
+            text: data.state.value === 'enabled' ? t('iot-card.Platform.index.5rgbkt23jrg0') : t('iot-card.Platform.index.5rgbkt23jng0'),
             tooltip: {
-                title: data.state.value === 'enabled' ? '禁用' : '启用',
+                title: data.state.value === 'enabled' ? t('iot-card.Platform.index.5rgbkt23jrg0') : t('iot-card.Platform.index.5rgbkt23jng0'),
             },
             icon:
                 data.state.value === 'enabled'
                     ? 'StopOutlined'
                     : 'PlayCircleOutlined',
             popConfirm: {
-                title: `确认${data.state.value === 'enabled' ? '禁用' : '启用'
+                title: `确认${data.state.value === 'enabled' ? t('iot-card.Platform.index.5rgbkt23jrg0') : t('iot-card.Platform.index.5rgbkt23jng0')
                     }？`,
                 okText: ' 确定',
-                cancelText: '取消',
+                cancelText: t('iot-card.Platform.index.5rgbkt23kcs0'),
                 onConfirm: () => {
                     if (data.state.value === 'enabled') {
                         statusUpdate({
@@ -209,23 +213,23 @@ const getActions = (
         },
         {
             key: 'delete',
-            text: '删除',
+            text: t('iot-card.Platform.index.5rgbkt23kkc0'),
             tooltip: {
                 title:
-                    data.state.value !== 'enabled' ? '删除' : '请先禁用再删除',
+                    data.state.value !== 'enabled' ? t('iot-card.Platform.index.5rgbkt23kkc0') : t('iot-card.Platform.index.5rgbkt23kpc0'),
             },
             disabled: data.state.value === 'enabled',
             popConfirm: {
-                title: '确认删除?',
+                title: t('iot-card.Platform.index.5rgbkt23kts0'),
                 okText: ' 确定',
-                cancelText: '取消',
+                cancelText: t('iot-card.Platform.index.5rgbkt23kcs0'),
                 onConfirm: async () => {
                     const resp: any = await del(data.id);
                     if (resp.status === 200) {
-                        message.success('操作成功！');
+                        message.success(t('iot-card.Platform.index.5rgbkt23l0w0'));
                         platformRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('iot-card.Platform.index.5rgbkt23l9g0'));
                     }
                 },
             },
@@ -239,7 +243,7 @@ const handleSearch = (e: any) => {
 };
 
 /**
- * 新增
+ * {{t('iot-card.Platform.index.5rgbkt23gzo0')}}
  */
 const handleAdd = () => {
     menuStory.jumpPage('iot-card/Platform/Detail', { id: ':id' })

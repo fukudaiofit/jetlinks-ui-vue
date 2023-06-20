@@ -1,7 +1,7 @@
 <template>
     <div v-if="type === 'onelink'" class="doc">
         <div class="url">
-            中国移动物联卡能力开放平台：
+            {{t('Platform.doc.index.5rgbkd1fs9s0')}}
             <a
                 style="word-break: break-all"
                 href="https://api.iot.10086.cn/api/index.html#/login"
@@ -13,15 +13,15 @@
         </div>
         <h1>1.概述</h1>
         <p>
-            平台对接通过API的方式与三方系统进行数据对接，为物联卡的管理提供数据交互支持。
+            {{t('Platform.doc.index.5rgbkd1ftjg0')}}
         </p>
         <h1>2.配置说明</h1>
         <h2>1、APP ID</h2>
         <p>
-            第三方应用唯一标识，中国移动物联网全网管理员在 OneLink
-            能力开放平台上分配并展示给集团客户。
+            {{t('Platform.doc.index.5rgbkd1ftps0')}} OneLink
+            {{t('Platform.doc.index.5rgbkd1fttw0')}}
             <br />
-            获取路径：“中移物联卡能力开放平台”--“个人中心”--“客户信息”--“接入信息”
+            {{t('Platform.doc.index.5rgbkd1ftx00')}}
         </p>
         <div class="image">
             <j-image
@@ -31,10 +31,10 @@
         </div>
         <h2>2、Password</h2>
         <p>
-            API 接入秘钥,由中国移动物联网提供，集团客户从“OneLink
-            能力开放平台”获取。
+            API {{t('Platform.doc.index.5rgbkd1fu0c0')}}
+            {{t('Platform.doc.index.5rgbkd1fu2w0')}}
             <br />
-            获取路径：“中移物联卡能力开放平台”--“个人中心”--“客户信息”--“接入信息”
+            {{t('Platform.doc.index.5rgbkd1ftx00')}}
         </p>
         <div class="image">
             <j-image
@@ -67,14 +67,14 @@
         <div>
             <h1>1.概述</h1>
             <p>
-                平台对接通过API的方式与三方系统进行数据对接，为物联卡的管理提供数据交互支持。
+                {{t('Platform.doc.index.5rgbkd1ftjg0')}}
             </p>
             <h1>2.配置说明</h1>
             <h2>1、用户 id</h2>
             <p>
                 5G连接管理平台用户的唯一标识，用于身份识别。
                 <br />
-                获取路径：“5G连接管理平台”--“能力开放”--“API网关账号管理”
+                {{t('Platform.doc.index.5rgbkd1fu5o0')}}
             </p>
             <div class="image">
                 <j-image
@@ -85,9 +85,9 @@
 
             <h2>2、密码</h2>
             <p>
-                用户id经加密之后的密码。
+                {{t('Platform.doc.index.5rgbkd1fu9s0')}}
                 <br />
-                获取路径：“5G连接管理平台”--“能力开放”--“API网关账号管理”
+                {{t('Platform.doc.index.5rgbkd1fu5o0')}}
             </p>
             <div class="image">
                 <j-image
@@ -100,7 +100,7 @@
             <p>
                 APP secret唯一秘钥。
                 <br />
-                获取路径：“5G连接管理平台”--“能力开放”--“API网关账号管理”
+                {{t('Platform.doc.index.5rgbkd1fu5o0')}}
             </p>
             <div class="image">
                 <j-image
@@ -113,7 +113,7 @@
 
     <div v-if="type === 'unicom'" class="doc">
         <div class="url">
-            雁飞智连CMP平台：
+            {{t('Platform.doc.index.5rgbkd1fuc80')}}
             <a
                 style="word-break: break-all"
                 href="  https://cmp.10646.cn/webframe/login"
@@ -127,14 +127,14 @@
         <div>
             <h1>1.概述</h1>
             <p>
-                平台对接通过API的方式与三方系统进行数据对接，为物联卡的管理提供数据交互支持。
+                {{t('Platform.doc.index.5rgbkd1ftjg0')}}
             </p>
             <h1>2.配置说明</h1>
             <h2>1、APP ID</h2>
             <p>
-                第三方应用唯一标识。
+                {{t('Platform.doc.index.5rgbkd1fues0')}}
                 <br />
-                获取路径：“雁飞智连CMP平台”--“我的应用”--“应用列表”
+                {{t('Platform.doc.index.5rgbkd1fuhk0')}}
             </p>
             <div class="image">
                 <j-image
@@ -145,9 +145,9 @@
 
             <h2>2、App Secret</h2>
             <p>
-                API 接入秘钥。
+                API {{t('Platform.doc.index.5rgbkd1fuk00')}}
                 <br />
-                获取路径：“雁飞智连CMP平台”--“我的应用”--“应用列表”
+                {{t('Platform.doc.index.5rgbkd1fuhk0')}}
             </p>
             <div class="image">
                 <j-image
@@ -158,9 +158,9 @@
 
             <h2>3、创建者ID</h2>
             <p>
-                接口参数中的 OpenId。
+                {{t('Platform.doc.index.5rgbkd1fums0')}} OpenId。
                 <br />
-                获取路径：“雁飞智连CMP平台”--“我的应用”--“应用列表”
+                {{t('Platform.doc.index.5rgbkd1fuhk0')}}
                 <br />
             </p>
             <div class="image">
@@ -175,7 +175,9 @@
 
 <script setup lang="ts">
 import { getImage } from '@/utils/comm';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     type: { type: String, default: 'onelink' },
 });

@@ -4587,5 +4587,313 @@
                 "5rgb4b0pdnc0": "配置成功"
             }
         }
+    },
+    "iot-card": {
+        "Home": {
+            "index": {
+                "5rgba6ernmc0": "物联卡引导",
+                "5rgba6ert440": "基础统计",
+                "5rgba6ervxg0": "详情",
+                "5rgba6erw9c0": "昨日流量统计",
+                "5rgba6erwmw0": "物联卡",
+                "5rgba6erwuo0": "平台架构图",
+                "5rgba6erx1w0": "平台对接",
+                "5rgba6erx6o0": "物联卡管理",
+                "5rgba6erxc80": "操作记录",
+                "5rgba6erynw0": "正常",
+                "5rgba6eryvo0": "未激活",
+                "5rgba6erz1w0": "停用",
+                "5rgba6erz5k0": "暂无权限，请联系管理员",
+                "5rgba6erzb40": "流量消耗"
+            }
+        },
+        "Dashboard": {
+            "index": {
+                "5rgbbh6841g0": "数据统计",
+                "5rgbbh685380": "昨日流量消耗",
+                "5rgbbh6859k0": "当月流量消耗",
+                "5rgbbh685ek0": "本年流量消耗",
+                "5rgbbh685iw0": "流量统计",
+                "5rgbbh685o00": "流量使用TOP10",
+                "5rgbbh685s80": "昨日",
+                "5rgbbh685w40": "近一周",
+                "5rgbbh6860k0": "近一月",
+                "5rgbbh6864k0": "近一年"
+            }
+        },
+        "components": {
+            "LineChart": {
+                "5rgbby6e0uo0": "流量消耗"
+            }
+        },
+        "CardManagement": {
+            "BindDevice": {
+                "5rgbfd1lxrk0": "选择设备",
+                "5rgbfd1lz8k0": "确定",
+                "5rgbfd1lzok0": "取消",
+                "5rgbfd1lzwo0": "设备名称",
+                "5rgbfd1m02w0": "注册时间",
+                "5rgbfd1m09g0": "状态",
+                "5rgbfd1m0fk0": "禁用",
+                "5rgbfd1m0l00": "离线",
+                "5rgbfd1m0rk0": "在线",
+                "5rgbfd1m0x80": "操作成功"
+            },
+            "Export": {
+                "5rgbfti06ss0": "导出",
+                "5rgbfti08hg0": "确定",
+                "5rgbfti08rg0": "取消",
+                "5rgbfti08xg0": "文件格式：",
+                "5rgbfti096s0": "请选择文件格式"
+            },
+            "Import": {
+                "5rgbg3fk6740": "导入",
+                "5rgbg3fk7ho0": "确定",
+                "5rgbg3fk7mw0": "取消",
+                "5rgbg3fk7pg0": "平台对接",
+                "5rgbg3fk7s80": "请选择平台对接",
+                "5rgbg3fk7vk0": "文件格式",
+                "5rgbg3fk7y80": "请选择文件格式",
+                "5rgbg3fk80o0": "文件上传",
+                "5rgbg3fk83k0": "下载模板",
+                "5rgbg3fk85w0": "已完成",
+                "5rgbg3fk8b40": "总数量",
+                "5rgbg3fk8ds0": "失败",
+                "5rgbg3fk8g80": "关闭"
+            },
+            "index": {
+                "5rgbgjpzw340": "新增",
+                "5rgbgjpzwqk0": "批量操作",
+                "5rgbgjpzwus0": "批量导出",
+                "5rgbgjpzwxo0": "确认激活吗？",
+                "5rgbgjpzx0g0": "批量激活",
+                "5rgbgjpzx800": "确认停用吗？",
+                "5rgbgjpzxbk0": "批量停用",
+                "5rgbgjpzxe00": "确认复机吗？",
+                "5rgbgjpzxh40": "批量复机",
+                "5rgbgjpzxkg0": "确认同步状态吗？",
+                "5rgbgjpzxn80": "同步状态",
+                "5rgbgjpzxqo0": "确认删除吗？",
+                "5rgbgjpzxtw0": "批量删除",
+                "5rgbgjpzxxg0": "平台对接",
+                "5rgbgjpzy1o0": "类型",
+                "5rgbgjpzy480": "绑定设备",
+                "5rgbgjpzy7c0": "总共",
+                "5rgbgjpzybc0": "卡号",
+                "5rgbgjpzyeg0": "运营商",
+                "5rgbgjpzykc0": "年卡",
+                "5rgbgjpzyq80": "季卡",
+                "5rgbgjpzytk0": "月卡",
+                "5rgbgjpzyxo0": "其他",
+                "5rgbgjpzz000": "总流量",
+                "5rgbgjpzz3w0": "使用流量",
+                "5rgbgjpzz680": "剩余流量",
+                "5rgbgjpzz8o0": "激活日期",
+                "5rgbgjpzzbc0": "更新时间",
+                "5rgbgjpzze00": "状态",
+                "5rgbgjpzzgg0": "激活",
+                "5rgbgjpzzj80": "未激活",
+                "5rgbgjpzzn40": "停机",
+                "5rgbgjpzzpk0": "其它",
+                "5rgbgjpzzs00": "操作",
+                "5rgbgjpzzu80": "编辑",
+                "5rgbgjpzzxc0": "解绑设备",
+                "5rgbgjpzzzk0": "确认解绑设备？",
+                "5rgbgjq00200": "确定",
+                "5rgbgjq004o0": "取消",
+                "5rgbgjq00700": "操作成功",
+                "5rgbgjq009o0": "复机",
+                "5rgbgjq00bk0": "停用",
+                "5rgbgjq00dk0": "确认激活？",
+                "5rgbgjq00fs0": "确认复机？",
+                "5rgbgjq00lw0": "确认停用?",
+                "5rgbgjq00og0": "删除",
+                "5rgbgjq00to0": "确认删除?",
+                "5rgbgjq00x00": "操作失败！",
+                "5rgbgjq01000": "查看",
+                "5rgbgjq01300": "请选择数据",
+                "5rgbgjq015s0": "仅支持同一个运营商下且最少10条数据,最多100条数据",
+                "5rgbgjq01880": "同步状态成功",
+                "5rgbgjq01aw0": "批量导入"
+            },
+            "Save": {
+                "5rgbgvn6chw0": "新增",
+                "5rgbgvn6ehg0": "编辑",
+                "5rgbgvn6ewk0": "确定",
+                "5rgbgvn6f3w0": "取消",
+                "5rgbgvn6fc40": "卡号",
+                "5rgbgvn6flo0": "请输入卡号",
+                "5rgbgvn6g1s0": "请输入ICCID",
+                "5rgbgvn6g9o0": "运营商",
+                "5rgbgvn6gik0": "请选择运营商",
+                "5rgbgvn6grg0": "平台对接",
+                "5rgbgvn6gz40": "请选择平台对接",
+                "5rgbgvn6hg80": "类型",
+                "5rgbgvn6hn40": "请选择类型",
+                "5rgbgvn6hw80": "说明",
+                "5rgbgvn6i400": "请输入说明",
+                "5rgbgvn6idc0": "请输入输入正确的ICCID",
+                "5rgbgvn6ikw0": "最多输入64个字符",
+                "5rgbgvn6irk0": "操作成功"
+            },
+            "UploadFile": {
+                "5rgbhe4qr880": "文件上传",
+                "5rgbhe4qsf40": "下载模板",
+                "5rgbhe4qslw0": "进行中",
+                "5rgbhe4qsww0": "已完成",
+                "5rgbhe4qt7w0": "请上传.csv格式文件",
+                "5rgbhe4qtdo0": "请上传.xlsx格式文件",
+                "5rgbhe4qtis0": "导入成功",
+                "5rgbhe4qtno0": "导入失败"
+            }
+        },
+        "Recharge": {
+            "Detail": {
+                "5rgbj155z4c0": "详情",
+                "5rgbj15628g0": "确定",
+                "5rgbj1562kk0": "取消",
+                "5rgbj1562vs0": "充值金额",
+                "5rgbj1563400": "账户id",
+                "5rgbj1563do0": "平台对接",
+                "5rgbj1563lg0": "订单号",
+                "5rgbj1563u80": "支付方式",
+                "5rgbj15643g0": "支付URL",
+                "5rgbj1564ak0": "订单时间"
+            },
+            "index": {
+                "5rgbjc3ydao0": "充值",
+                "5rgbjc3yehs0": "本平台仅提供充值入口，具体充值结果需以运营商的充值结果为准",
+                "5rgbjc3yeq80": "充值金额",
+                "5rgbjc3yeww0": "支付方式",
+                "5rgbjc3yf200": "订单号",
+                "5rgbjc3yf5s0": "支付URL",
+                "5rgbjc3yf9o0": "订单时间",
+                "5rgbjc3yfd40": "操作",
+                "5rgbjc3yfgo0": "查看"
+            },
+            "Save": {
+                "5rgbjmnhygo0": "充值",
+                "5rgbjmni02k0": "确定",
+                "5rgbjmni0aw0": "取消",
+                "5rgbjmni0lo0": "暂只支持移动OneLink平台",
+                "5rgbjmni0s00": "平台对接",
+                "5rgbjmni0z40": "请选择平台对接",
+                "5rgbjmni1540": "账户id",
+                "5rgbjmni1aw0": "请输入账户id",
+                "5rgbjmni1g40": "充值金额",
+                "5rgbjmni1mk0": "请输入1~500之间的金额",
+                "5rgbjmni1s80": "支付方式",
+                "5rgbjmni1z00": "请选择支付方式",
+                "5rgbjmni24c0": "最多输入64个字符",
+                "5rgbjmni2a80": "请输入充值金额",
+                "5rgbjmni2g80": "失败",
+                "5rgbjmni2lw0": "缴费失败",
+                "5rgbjmni2ro0": "操作过于频繁，请稍后再试！"
+            }
+        },
+        "Platform": {
+            "index": {
+                "5rgbkt23gzo0": "新增",
+                "5rgbkt23i9w0": "平台类型",
+                "5rgbkt23ii00": "说明",
+                "5rgbkt23iqo0": "名称",
+                "5rgbkt23ivk0": "移动OneLink",
+                "5rgbkt23j500": "电信Ctwing",
+                "5rgbkt23jag0": "联通Unicom",
+                "5rgbkt23jio0": "状态",
+                "5rgbkt23jng0": "启用",
+                "5rgbkt23jrg0": "禁用",
+                "5rgbkt23jvc0": "操作",
+                "5rgbkt23k0c0": "操作成功",
+                "5rgbkt23k4c0": "编辑",
+                "5rgbkt23kcs0": "取消",
+                "5rgbkt23kkc0": "删除",
+                "5rgbkt23kpc0": "请先禁用再删除",
+                "5rgbkt23kts0": "确认删除?",
+                "5rgbkt23l0w0": "操作成功！",
+                "5rgbkt23l9g0": "操作失败！"
+            }
+        },
+        "Record": {
+            "index": {
+                "5rgbm1zgxxg0": "卡号",
+                "5rgbm1zgz7s0": "操作类型",
+                "5rgbm1zgzh00": "操作时间",
+                "5rgbm1zgzoc0": "操作人"
+            }
+        }
+    },
+    "CardManagement": {
+        "Detail": {
+            "index": {
+                "5rgbexy1gvc0": "基本信息",
+                "5rgbexy1hww0": "编辑",
+                "5rgbexy1i9w0": "卡号",
+                "5rgbexy1ifk0": "绑定设备",
+                "5rgbexy1ikw0": "平台类型",
+                "5rgbexy1ir40": "平台名称",
+                "5rgbexy1iwg0": "运营商",
+                "5rgbexy1j1s0": "类型",
+                "5rgbexy1j740": "激活日期",
+                "5rgbexy1jbo0": "更新时间",
+                "5rgbexy1jg40": "总流量",
+                "5rgbexy1jlg0": "使用流量",
+                "5rgbexy1jq40": "剩余流量",
+                "5rgbexy1jv40": "状态",
+                "5rgbexy1k000": "说明",
+                "5rgbexy1k4c0": "流量统计",
+                "5rgbexy1k9c0": "数据统计",
+                "5rgbexy1kds0": "昨日流量消耗",
+                "5rgbexy1kig0": "当月流量消耗",
+                "5rgbexy1knk0": "本年流量消耗",
+                "5rgbexy1kwg0": "昨日",
+                "5rgbexy1l440": "近一周",
+                "5rgbexy1l940": "近一月",
+                "5rgbexy1lco0": "近一年"
+            }
+        }
+    },
+    "Platform": {
+        "Detail": {
+            "index": {
+                "5rgbk1o74h00": "详情",
+                "5rgbk1o77rs0": "平台类型",
+                "5rgbk1o781k0": "名称",
+                "5rgbk1o78940": "请输入名称",
+                "5rgbk1o78rk0": "请输入密码",
+                "5rgbk1o792s0": "接口地址",
+                "5rgbk1o797c0": "请输入接口地址",
+                "5rgbk1o79co0": "用户id",
+                "5rgbk1o79i00": "请输入用户id",
+                "5rgbk1o79mk0": "密码",
+                "5rgbk1o79qo0": "请输入secretKey",
+                "5rgbk1o79vs0": "创建者ID",
+                "5rgbk1o79zs0": "请输入创建者ID",
+                "5rgbk1o7a4c0": "说明",
+                "5rgbk1o7a8w0": "请输入说明",
+                "5rgbk1o7ad40": "保存",
+                "5rgbk1o7ahw0": "最多可输入64个字符",
+                "5rgbk1o7amc0": "最多可输入200个字符",
+                "5rgbk1o7av80": "保存成功！"
+            }
+        },
+        "doc": {
+            "index": {
+                "5rgbkd1fs9s0": "中国移动物联卡能力开放平台：",
+                "5rgbkd1ftjg0": "平台对接通过API的方式与三方系统进行数据对接，为物联卡的管理提供数据交互支持。",
+                "5rgbkd1ftps0": "第三方应用唯一标识，中国移动物联网全网管理员在",
+                "5rgbkd1fttw0": "能力开放平台上分配并展示给集团客户。",
+                "5rgbkd1ftx00": "获取路径：“中移物联卡能力开放平台”--“个人中心”--“客户信息”--“接入信息”",
+                "5rgbkd1fu0c0": "接入秘钥,由中国移动物联网提供，集团客户从“OneLink",
+                "5rgbkd1fu2w0": "能力开放平台”获取。",
+                "5rgbkd1fu5o0": "获取路径：“5G连接管理平台”--“能力开放”--“API网关账号管理”",
+                "5rgbkd1fu9s0": "用户id经加密之后的密码。",
+                "5rgbkd1fuc80": "雁飞智连CMP平台：",
+                "5rgbkd1fues0": "第三方应用唯一标识。",
+                "5rgbkd1fuhk0": "获取路径：“雁飞智连CMP平台”--“我的应用”--“应用列表”",
+                "5rgbkd1fuk00": "接入秘钥。",
+                "5rgbkd1fums0": "接口参数中的"
+            }
+        }
     }
 }
