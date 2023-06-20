@@ -4,11 +4,11 @@
         width="650px"
         destroyOnClose
         visible
-        :title="props.data?.id ? '编辑' : '新增'"
+        :title="props.data?.id ? t('Instance.Save.index.5rg4mi4y4qs0') : t('Instance.Save.index.5rg4mi4y7f00')"
         @ok="handleSave"
         @cancel="handleCancel"
-        okText="确定"
-        cancelText="取消"
+        :okText="t('Instance.Save.index.5rg4mi4y7w00')"
+        :cancelText="t('Instance.Save.index.5rg4mi4y84k0')"
         :confirmLoading="loading"
     >
         <div style="margin-top: 10px">
@@ -18,16 +18,16 @@
                 :rules="rules"
                 :model="modelRef"
             >
-                <j-form-item label="名称" name="name">
+                <j-form-item :label="t('Instance.Save.index.5rg4mi4y8jo0')" name="name">
                     <j-input
                         v-model:value="modelRef.name"
-                        placeholder="请输入名称"
+                        :placeholder="t('Instance.Save.index.5rg4mi4y8sw0')"
                     />
                 </j-form-item>
-                <j-form-item label="说明" name="describe">
+                <j-form-item :label="t('Instance.Save.index.5rg4mi4y91w0')" name="describe">
                     <j-textarea
                         v-model:value="modelRef.description"
-                        placeholder="请输入说明"
+                        :placeholder="t('Instance.Save.index.5rg4mi4y9bw0')"
                         showCount
                         :maxlength="200"
                         :rows="4"
@@ -42,7 +42,9 @@
 import { saveRule, modify } from '@/api/rule-engine/instance';
 import { getImage } from '@/utils/comm';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emit = defineEmits(['success', 'closeSave']);
 const props = defineProps({
     data: {
@@ -59,11 +61,11 @@ const rules = {
     name: [
         {
             required: true,
-            message: '请输入名称',
+            message: t('Instance.Save.index.5rg4mi4y8sw0'),
         },
         {
             max: 64,
-            message: '最多输入64个字符',
+            message: t('Instance.Save.index.5rg4mi4y9i80'),
         },
     ],
 };
@@ -80,21 +82,21 @@ const handleSave = () => {
                 let resp = await saveRule(modelRef.value);
                 loading.value = false;
                 if (resp.status === 200) {
-                    message.success('操作成功！');
+                    message.success(t('Instance.Save.index.5rg4mi4y9s00'));
                     emit('closeSave');
                     emit('success');
                 } else {
-                    message.error('操作失败');
+                    message.error(t('Instance.Save.index.5rg4mi4ya0g0'));
                 }
             } else {
                 let resp = await modify(modelRef.value?.id, modelRef.value);
                 loading.value = false;
                 if (resp.status === 200) {
-                    message.success('操作成功！');
+                    message.success(t('Instance.Save.index.5rg4mi4y9s00'));
                     emit('closeSave');
                     emit('success');
                 } else {
-                    message.error('操作失败！');
+                    message.error(t('Instance.Save.index.5rg4mi4ya8g0'));
                 }
             }
         })

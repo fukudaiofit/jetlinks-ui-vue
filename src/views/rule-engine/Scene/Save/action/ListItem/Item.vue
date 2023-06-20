@@ -24,19 +24,19 @@
                       v-if="data?.executor === 'alarm'"
                   >
                       <template v-if="data?.alarm?.mode === 'trigger'">
-                          满足条件后将触发<j-button
+                          {{t('action.ListItem.Item.5rg4saoj4q80')}}<j-button
                               style="padding: 0"
                               type="link"
                               @click.stop="triggerVisible = true"
-                              >关联此场景的告警</j-button
+                              >{{t('action.ListItem.Item.5rg4saoj60w0')}}</j-button
                           >
                       </template>
                       <template v-else>
-                          满足条件后将解除<j-button
+                          {{t('action.ListItem.Item.5rg4saoj69c0')}}<j-button
                               style="padding: 0"
                               type="link"
                               @click.stop="triggerVisible = true"
-                              >关联此场景的告警</j-button
+                              >{{t('action.ListItem.Item.5rg4saoj60w0')}}</j-button
                           >
                       </template>
                   </div>
@@ -50,10 +50,10 @@
                               v-if="options?.provider === 'dingTalkRobotWebHook'"
                           >
                               <div>
-                                  通过<span class="notify-text-highlight"
-                                      >群机器人消息</span
+                                  {{t('action.ListItem.Item.5rg4saoj6fo0')}}<span class="notify-text-highlight"
+                                      >{{t('action.ListItem.Item.5rg4saoj6no0')}}</span
                                   >
-                                  发送
+                                  {{t('action.ListItem.Item.5rg4saoj6ug0')}}
                                   <span class="notify-text-highlight">
                                       {{
                                           options?.templateName ||
@@ -64,7 +64,7 @@
                           </template>
                           <template v-else>
                               <div>
-                                  通过
+                                  {{t('action.ListItem.Item.5rg4saoj6fo0')}}
                                   <span class="notify-text-highlight">
                                       <img
                                           style="width: 18px"
@@ -74,15 +74,15 @@
                                               )
                                           "
                                       />
-                                      钉钉
+                                      {{t('action.ListItem.Item.5rg4saoj7000')}}
                                   </span>
-                                  向<span class="notify-text-highlight">{{
+                                  {{t('action.ListItem.Item.5rg4saoj7540')}}<span class="notify-text-highlight">{{
                                       options?.sendTo || ''
                                   }}</span>
                                   <span class="notify-text-highlight">{{
                                       options?.orgName || ''
                                   }}</span>
-                                  发送
+                                  {{t('action.ListItem.Item.5rg4saoj6ug0')}}
                                   <span class="notify-text-highlight">
                                       {{
                                           options?.templateName ||
@@ -94,7 +94,7 @@
                       </template>
                       <template v-else-if="data?.notify?.notifyType === 'weixin'">
                           <div>
-                              通过
+                              {{t('action.ListItem.Item.5rg4saoj6fo0')}}
                               <span class="notify-text-highlight">
                                   <img
                                       style="width: 18px"
@@ -104,9 +104,9 @@
                                           )
                                       "
                                   />
-                                  微信
+                                  {{t('action.ListItem.Item.5rg4saoj7ac0')}}
                               </span>
-                              向<span class="notify-text-highlight">{{
+                              {{t('action.ListItem.Item.5rg4saoj7540')}}<span class="notify-text-highlight">{{
                                   options?.sendTo || ''
                               }}</span>
                               <span class="notify-text-highlight">{{
@@ -115,7 +115,7 @@
                               <span class="notify-text-highlight">{{
                                   options?.tagName || ''
                               }}</span>
-                              发送
+                              {{t('action.ListItem.Item.5rg4saoj6ug0')}}
                               <span class="notify-text-highlight">
                                   {{
                                       options?.templateName ||
@@ -126,7 +126,7 @@
                       </template>
                       <template v-else-if="data?.notify?.notifyType === 'email'">
                           <div style="display: flex;">
-                              通过
+                              {{t('action.ListItem.Item.5rg4saoj6fo0')}}
                               <span class="notify-text-highlight">
                                   <img
                                       style="width: 18px"
@@ -136,16 +136,16 @@
                                           )
                                       "
                                   />
-                                  邮件
+                                  {{t('action.ListItem.Item.5rg4saoj7fo0')}}
                               </span>
-                              向<span class="notify-text-highlight">
+                              {{t('action.ListItem.Item.5rg4saoj7540')}}<span class="notify-text-highlight">
                                 <Ellipsis style='max-width: 400px;'>
                                 {{
                                     options?.sendTo || ''
                                   }}
                                 </Ellipsis>
                             </span>
-                              发送
+                              {{t('action.ListItem.Item.5rg4saoj6ug0')}}
                               <span class="notify-text-highlight">
                                   {{
                                       options?.templateName ||
@@ -156,7 +156,7 @@
                       </template>
                       <template v-else-if="data?.notify?.notifyType === 'voice'">
                           <div>
-                              通过
+                              {{t('action.ListItem.Item.5rg4saoj6fo0')}}
                               <span class="notify-text-highlight">
                                   <img
                                       style="width: 18px"
@@ -166,12 +166,12 @@
                                           )
                                       "
                                   />
-                                  语音
+                                  {{t('action.ListItem.Item.5rg4saoj7k00')}}
                               </span>
-                              向<span class="notify-text-highlight">{{
+                              {{t('action.ListItem.Item.5rg4saoj7540')}}<span class="notify-text-highlight">{{
                                   options?.sendTo || ''
                               }}</span>
-                              发送
+                              {{t('action.ListItem.Item.5rg4saoj6ug0')}}
                               <span class="notify-text-highlight">
                                   {{
                                       options?.templateName ||
@@ -182,7 +182,7 @@
                       </template>
                       <template v-else-if="data?.notify?.notifyType === 'sms'">
                           <div>
-                              通过
+                              {{t('action.ListItem.Item.5rg4saoj6fo0')}}
                               <span class="notify-text-highlight">
                                   <img
                                       style="width: 18px"
@@ -192,12 +192,12 @@
                                           )
                                       "
                                   />
-                                  短信
+                                  {{t('action.ListItem.Item.5rg4saoj7ow0')}}
                               </span>
-                              向<span class="notify-text-highlight">{{
+                              {{t('action.ListItem.Item.5rg4saoj7540')}}<span class="notify-text-highlight">{{
                                   options?.sendTo || ''
                               }}</span>
-                              发送
+                              {{t('action.ListItem.Item.5rg4saoj6ug0')}}
                               <span class="notify-text-highlight">
                                   {{
                                       options?.templateName ||
@@ -210,7 +210,7 @@
                           v-else-if="data?.notify?.notifyType === 'webhook'"
                       >
                           <div>
-                              通过
+                              {{t('action.ListItem.Item.5rg4saoj6fo0')}}
                               <span class="notify-text-highlight">
                                   <img
                                       style="width: 18px"
@@ -222,7 +222,7 @@
                                   />
                                   webhook
                               </span>
-                              发送
+                              {{t('action.ListItem.Item.5rg4saoj6ug0')}}
                               <span>{{
                                   options?.templateName ||
                                   data?.notify?.templateId
@@ -265,7 +265,7 @@
                             <Ellipsis style='max-width: 400px;'>
                               {{data?.options?.propertiesName}}
                             </Ellipsis>
-                            <span v-if='!isBoolean(data?.options?.propertiesValue) && data?.options?.propertiesValue'>为 </span>
+                            <span v-if='!isBoolean(data?.options?.propertiesValue) && data?.options?.propertiesValue'>{{t('action.ListItem.Item.5rg4saoj7tg0')}} </span>
                             <Ellipsis style='max-width: 200px;'>
                               {{
                                 `${
@@ -313,17 +313,17 @@
                               {{ data?.options?.type }}与<span>{{
                                   data?.options?.triggerName
                               }}</span
-                              >具有相同 {{ data?.options?.relationName }}的{{
+                              >{{t('action.ListItem.Item.5rg4saoj7yc0')}} {{ data?.options?.relationName }}的{{
                                   data?.options?.productName
                               }}设备的
                               {{ data?.options?.propertiesName }}
                           </div>
                       </template>
                   </div>
-                  <j-button v-else @click="onAdd">点击配置执行动作</j-button>
+                  <j-button v-else @click="onAdd">{{t('action.ListItem.Item.5rg4saoj8580')}}</j-button>
               </div>
               <div class="item-number">{{ name + 1 }}</div>
-              <j-popconfirm title="确认删除？" @confirm="onDelete" placement="topRight" :overlayStyle='{minWidth: "190px"}'>
+              <j-popconfirm :title="t('action.ListItem.Item.5rg4saoj89w0')" @confirm="onDelete" placement="topRight" :overlayStyle='{minWidth: "190px"}'>
                   <div class="item-delete">
                       <AIcon type="DeleteOutlined" />
                   </div>
@@ -340,7 +340,7 @@
             >
                 <template v-if="termsOptions.length">
                     <div class="actions-item-filter-warp-tip">
-                        满足此条件后执行后续动作
+                        {{t('action.ListItem.Item.5rg4saoj8hs0')}}
                     </div>
                     <div class="actions-item-filter-overflow">
                         <FilterGroup
@@ -357,7 +357,7 @@
                 </template>
                 <div v-else class="filter-add-button" @click='addFilterParams'>
                     <AIcon type="PlusOutlined" style="padding-right: 4px" />
-                    <span>添加过滤条件</span>
+                    <span>{{t('action.ListItem.Item.5rg4saoj8mo0')}}</span>
                 </div>
             </div>
         </template>
@@ -406,7 +406,9 @@ import FilterGroup from './FilterGroup.vue';
 import { randomString } from '@/utils/utils'
 import { EventEmitter, EventEmitterKeys } from '@/views/rule-engine/Scene/Save/util'
 import CheckItem from './CheckItem.vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const sceneStore = useSceneStore();
 const { data: _data } = storeToRefs(sceneStore);
 
@@ -478,7 +480,7 @@ const onClose = () => {
 };
 
 /**
- * 添加过滤条件
+ * {{t('action.ListItem.Item.5rg4saoj8mo0')}}
  */
 const addFilterParams = () => {
   const item: any = {
@@ -504,7 +506,7 @@ const addFilterParams = () => {
   }
   _data.value.branches![props.branchesName].then[props.thenName].actions[props.name].options!.terms = [{
     terms: [['','eq','','and']],
-    termType: '并且'
+    termType: t('action.ListItem.Item.5rg4saoj8r80')
   }]
 }
 
@@ -564,7 +566,7 @@ const rules = [{
         (_device?.selector === 'relation' && !_device?.selectorValues?.length) ||
         _device?.changeData === true
       ) {
-        return Promise.reject(new Error('该数据已发生变更，请重新配置'))
+        return Promise.reject(new Error(t('action.ListItem.Item.5rg4saoj8w80')))
       }
     } else if (v?.executor === 'notify') {
       const _notify = v.notify
@@ -573,7 +575,7 @@ const rules = [{
         !_notify?.templateId ||
         _notify?.changeData === true
       ) {
-        return Promise.reject(new Error('该数据已发生变更，请重新配置'))
+        return Promise.reject(new Error(t('action.ListItem.Item.5rg4saoj8w80')))
       }
     }
     return Promise.resolve()

@@ -1191,26 +1191,114 @@
             "index": {
                 "5rg38m5uiv00": "接入"
             }
+        },
+        "DropdownButton": {
+            "Menus": {
+                "5rg4x9pp2bo0": "是",
+                "5rg4x9pp3n80": "否"
+            }
+        },
+        "FunctionCall": {
+            "FunctionCall": {
+                "5rg4xj8bbzg0": "请按照json格式输入",
+                "5rg4xj8bdus0": "参数名称",
+                "5rg4xj8be400": "类型",
+                "5rg4xj8beb00": "值"
+            }
+        },
+        "ShakeLimit": {
+            "index": {
+                "5rg4xv2rnkc0": "开启防抖",
+                "5rg4xv2rojw0": "关闭防抖",
+                "5rg4xv2ropc0": "秒内发送",
+                "5rg4xv2rotk0": "次及以上时，处理",
+                "5rg4xv2roxw0": "第一次",
+                "5rg4xv2rp1w0": "最后一次"
+            }
+        },
+        "Terms": {
+            "Branches": {
+                "5rg4y4mv6ts0": "当",
+                "5rg4y4mv97k0": "否则",
+                "5rg4y4mv9jo0": "确认删除？",
+                "5rg4y4mv9ps0": "该操作将清空其它所有否则条件，确认删除？",
+                "5rg4y4mv9yk0": "添加过滤条件",
+                "5rg4y4mva500": "并且",
+                "5rg4y4mvab00": "至少配置一个执行动作"
+            },
+            "ParamsItem": {
+                "5rg4ybmwqlc0": "并且",
+                "5rg4ybmwreg0": "或者",
+                "5rg4ybmwrk80": "请选择参数",
+                "5rg4ybmwro00": "操作符",
+                "5rg4ybmwrro0": "参数值",
+                "5rg4ybmwrvg0": "确认删除？",
+                "5rg4ybmws280": "手动输入",
+                "5rg4ybmws5k0": "指标值",
+                "5rg4ybmws9c0": "是",
+                "5rg4ybmwsco0": "否"
+            },
+            "Terms": {
+                "5rg4yhwvhhg0": "触发条件",
+                "5rg4yhwvimg0": "开",
+                "5rg4yhwvis00": "关",
+                "5rg4yhwvivo0": "否则"
+            },
+            "TermsItem": {
+                "5rg4ytrts500": "该数据已发生变更，请重新配置",
+                "5rg4ytrtt1s0": "请选择参数",
+                "5rg4ytrtt7k0": "请选择操作符",
+                "5rg4ytrttbs0": "请选择或输入参数值"
+            },
+            "WhenItem": {
+                "5rg4yz2khok0": "并且",
+                "5rg4yz2kj1c0": "或者",
+                "5rg4yz2kjbo0": "确认删除？",
+                "5rg4yz2kjhg0": "分组"
+            }
+        },
+        "Timer": {
+            "index": {
+                "5rg4zm6w1mk0": "按周",
+                "5rg4zm6w2pk0": "按月",
+                "5rg4zm6w2vk0": "周期执行",
+                "5rg4zm6w2zw0": "执行一次",
+                "5rg4zm6w33s0": "每",
+                "5rg4zm6w38g0": "请输入时间",
+                "5rg4zm6w3c80": "秒",
+                "5rg4zm6w3fw0": "分",
+                "5rg4zm6w3jo0": "小时",
+                "5rg4zm6w3ow0": "最多可输入64个字符",
+                "5rg4zm6w3sc0": "请输入正确的cron表达式",
+                "5rg4zm6w3wk0": "请输入cron表达式"
+            },
+            "WhenOption": {
+                "5rg52lvzw200": "每天"
+            }
         }
     },
     "Instance": {
         "Save": {
             "index": {
-                "5rcy87xo9jg0": "编辑",
-                "5rcy87xoaoo0": "新增",
                 "5rcy87xoavw0": "请输入英文或者数字或者-或者_",
-                "5rcy87xob1g0": "最多输入64个字符",
                 "5rcy87xob6s0": "若不填写，系统将自动生成唯一ID",
                 "5rcy87xobc40": "请输入ID",
-                "5rcy87xobgk0": "名称",
-                "5rcy87xobl80": "请输入名称",
                 "5rcy87xobpo0": "请选择所属产品",
                 "5rcy87xobu40": "只能选择“正常”状态的产品",
                 "5rcy87xoc040": "请选择状态为“正常”的产品",
-                "5rcy87xoc4s0": "说明",
                 "5rcy87xoc8s0": "最多输入200个字符",
-                "5rcy87xocd40": "请输入说明",
-                "5rcy87xochc0": "操作成功！"
+                "5rg4mi4y4qs0": "编辑",
+                "5rg4mi4y7f00": "新增",
+                "5rg4mi4y7w00": "确定",
+                "5rg4mi4y84k0": "取消",
+                "5rg4mi4y8jo0": "名称",
+                "5rg4mi4y8sw0": "请输入名称",
+                "5rg4mi4y91w0": "说明",
+                "5rg4mi4y9bw0": "请输入说明",
+                "5rg4mi4y9i80": "最多输入64个字符",
+                "5rg4mi4y9s00": "操作成功！",
+                "5rg4mi4ya0g0": "操作失败",
+                "5rg4mi4ya8g0": "操作失败！"
             }
         },
         "Process": {
@@ -2107,6 +2195,55 @@
                 "5rg3u2dzbqk0": "其它",
                 "5rg3u2dzbu80": "告警数"
             }
+        },
+        "Instance": {
+            "index": {
+                "5rg4mqvp4dg0": "新增",
+                "5rg4mqvp6d00": "正常",
+                "5rg4mqvp6s00": "禁用",
+                "5rg4mqvp7040": "名称",
+                "5rg4mqvp75c0": "状态",
+                "5rg4mqvp7a00": "说明",
+                "5rg4mqvp7g80": "操作",
+                "5rg4mqvp7n80": "编辑",
+                "5rg4mqvp7s40": "查看",
+                "5rg4mqvp7wc0": "启用",
+                "5rg4mqvp8000": "操作成功！",
+                "5rg4mqvp84g0": "操作失败！",
+                "5rg4mqvp8840": "删除",
+                "5rg4mqvp8dc0": "请先禁用再删除",
+                "5rg4mqvp8h80": "确认删除?"
+            }
+        },
+        "Scene": {
+            "index": {
+                "5rg593nz4ng0": "新增",
+                "5rg593nz5vo0": "说明：",
+                "5rg593nz6300": "手动触发",
+                "5rg593nz68o0": "适用于第三方平台向物联网平台下发指令控制设备",
+                "5rg593nz6d00": "定时触发",
+                "5rg593nz6is0": "适用于定期执行固定任务",
+                "5rg593nz6no0": "设备触发",
+                "5rg593nz6s00": "适用于设备数据或行为满足触发条件时，执行指定的动作",
+                "5rg593nz6vw0": "名称",
+                "5rg593nz6zg0": "触发方式",
+                "5rg593nz73k0": "状态",
+                "5rg593nz79s0": "正常",
+                "5rg593nz7dc0": "禁用",
+                "5rg593nz7hs0": "说明",
+                "5rg593nz7rg0": "操作",
+                "5rg593nz7vk0": "编辑",
+                "5rg593nz8080": "启用",
+                "5rg593nz8480": "未配置规则的不能启用",
+                "5rg593nz8840": "操作成功！",
+                "5rg593nz8c00": "操作失败！",
+                "5rg593nz8mo0": "删除",
+                "5rg593nz8s80": "请先禁用该场景,再删除",
+                "5rg593nz8wg0": "确认删除?",
+                "5rg593nz8z80": "未启用，不能手动触发",
+                "5rg593nz9340": "确认手动触发？",
+                "5rg593nz9640": "查看"
+            }
         }
     },
     "Io": {
@@ -2280,6 +2417,132 @@
                 "5rg425yip8w0": "确定解绑？",
                 "5rg425yipe80": "操作成功"
             }
+        },
+        "action": {
+            "index": {
+                "5rg4wraqu140": "执行",
+                "5rg4wraqwbk0": "串行",
+                "5rg4wraqwzs0": "按顺序依次执行动作，适用于基于动作输出参数，判断是否执行后续动作的场景",
+                "5rg4wraqxc40": "并行",
+                "5rg4wraqxis0": "同时执行所有动作，适用于不需要关注执行动作先后顺序和结果的场景"
+            }
+        },
+        "components": {
+            "Title": {
+                "5rg52xbd8q00": "点击配置设备触发"
+            },
+            "TriggerWay": {
+                "5rg53a9a27o0": "设备触发",
+                "5rg53a9a3uo0": "适用于设备数据或行为满足触发条件时，执行指定的动作",
+                "5rg53a9a4400": "手动触发",
+                "5rg53a9a4h80": "适用于第三方平台向物联网平台下发指令控制设备",
+                "5rg53a9a4ms0": "定时触发",
+                "5rg53a9a4wk0": "适用于定期执行固定任务"
+            }
+        },
+        "Device": {
+            "AddModal": {
+                "5rg5432adis0": "触发规则",
+                "5rg5432aej40": "选择产品",
+                "5rg5432aes00": "选择设备",
+                "5rg5432aex80": "触发类型",
+                "5rg5432af180": "取消",
+                "5rg5432af5k0": "上一步",
+                "5rg5432af980": "下一步",
+                "5rg5432afeg0": "确定",
+                "5rg5432afkk0": "的",
+                "5rg5432afo00": "所有的",
+                "5rg5432afrk0": "上线",
+                "5rg5432afvg0": "离线",
+                "5rg5432afyw0": "属性上报",
+                "5rg5432ag340": "请选择产品",
+                "5rg5432ag6o0": "请选择设备",
+                "5rg5432agac0": "请选择部门"
+            },
+            "DeviceList": {
+                "5rg54fb74vg0": "设备类型",
+                "5rg54fb762k0": "产品名称",
+                "5rg54fb76ak0": "设备名称",
+                "5rg54fb76es0": "创建时间",
+                "5rg54fb76j00": "状态",
+                "5rg54fb76qs0": "禁用",
+                "5rg54fb76uw0": "离线",
+                "5rg54fb76yg0": "在线"
+            },
+            "DeviceSelect": {
+                "5rg54ra6rpk0": "自定义",
+                "5rg54ra6suo0": "自定义选择当前产品下的任意设备",
+                "5rg54ra6t3k0": "全部",
+                "5rg54ra6t880": "产品下的所有设备",
+                "5rg54ra6tcg0": "按组织",
+                "5rg54ra6tgw0": "选择产品下归属于具体组织的设备"
+            },
+            "index": {
+                "5rg54x58vq40": "触发规则",
+                "5rg54x58y4s0": "请配置设备触发规则",
+                "5rg54x58yj40": "该数据已发生变更，请重新配置"
+            },
+            "InvokeFunction": {
+                "5rg55550ts00": "请选择功能",
+                "5rg55550v0w0": "定时调用所选功能",
+                "5rg55550vcc0": "是",
+                "5rg55550vj40": "否",
+                "5rg55550vp40": "请输入功能值"
+            },
+            "OrgList": {
+                "5rg55d5xwk80": "名称",
+                "5rg55d5xxks0": "排序"
+            },
+            "Product": {
+                "5rg55mrnvqg0": "正常",
+                "5rg55mrnx6c0": "禁用",
+                "5rg55mrnxf00": "设备类型",
+                "5rg55mrnxjg0": "直连设备",
+                "5rg55mrnxnc0": "名称",
+                "5rg55mrnxs80": "网关类型",
+                "5rg55mrnxw40": "接入方式",
+                "5rg55mrnxzs0": "网关子设备",
+                "5rg55mrny3g0": "网关设备",
+                "5rg55mrny700": "状态",
+                "5rg55mrnyb40": "说明",
+                "5rg55mrnyes0": "分类",
+                "5rg55mrnyik0": "所属组织"
+            },
+            "ReadProperties": {
+                "5rg55xpch2s0": "请选择属性",
+                "5rg55xpcjjc0": "定时读取所选属性值"
+            },
+            "Type": {
+                "5rg5643j7xs0": "触发类型",
+                "5rg5643jadc0": "请选择事件",
+                "5rg5643japc0": "设备上线",
+                "5rg5643jaxs0": "设备离线"
+            },
+            "WriteProperty": {
+                "5rg56e7y9z80": "请输入修改值",
+                "5rg56e7ybpo0": "请选择属性",
+                "5rg56e7ycc40": "定时调用所选属性",
+                "5rg56e7ydlc0": "请选择属性值",
+                "5rg56e7ygj40": "请输入属性值"
+            }
+        },
+        "Manual": {
+            "index": {
+                "5rg56uuk4rk0": "至少配置一个执行动作"
+            }
+        },
+        "Timer": {
+            "AddModal": {
+                "5rg57wk2ce40": "触发规则"
+            },
+            "index": {
+                "5rg580jly400": "触发规则",
+                "5rg580jlzlk0": "请配置定时触发规则",
+                "5rg580jlzxo0": "至少配置一个执行动作"
+            },
+            "Title": {
+                "5rg5875wzo40": "点击配置定时触发"
+            }
         }
     },
     "Scene": {
@@ -2299,8 +2562,20 @@
                 "5rg41y6htt00": "适用于第三方平台向物联网平台下发指令控制设备",
                 "5rg41y6htz00": "适用于定期执行固定任务",
                 "5rg41y6hu540": "适用于设备数据或行为满足触发条件时，执行指定的动作",
-                "5rg41y6huas0": "操作成功",
-                "5rg41y6huh00": "请选择至少一条数据"
+                "5rg41y6huh00": "请选择至少一条数据",
+                "5rg58exx8w00": "说明",
+                "5rg58exxamk0": "请输入说明",
+                "5rg58exxaz80": "保存",
+                "5rg58exxb4k0": "操作成功"
+            },
+            "save": {
+                "5rg58okopew0": "名称",
+                "5rg58okor1o0": "请输入名称",
+                "5rg58okordc0": "最多输入64个字符",
+                "5rg58okork00": "触发方式",
+                "5rg58okors00": "请选择触发方式",
+                "5rg58okos4o0": "编辑",
+                "5rg58okosac0": "新增"
             }
         }
     },
@@ -2445,6 +2720,271 @@
                 "5rg4hbavmos0": "请输入说明",
                 "5rg4hbavmuk0": "保存",
                 "5rg4hbavn100": "操作成功！"
+            }
+        }
+    },
+    "action": {
+        "Delay": {
+            "index": {
+                "5rg4ngxgi400": "延迟执行",
+                "5rg4ngxgl4s0": "请输入时间",
+                "5rg4ngxgljs0": "秒",
+                "5rg4ngxglzg0": "分",
+                "5rg4ngxgm680": "小时"
+            }
+        },
+        "Device": {
+            "index": {
+                "5rg4pzsetms0": "执行动作",
+                "5rg4pzsevcg0": "选择产品",
+                "5rg4pzsevkg0": "选择设备",
+                "5rg4pzsevqo0": "取消",
+                "5rg4pzsevx80": "上一步",
+                "5rg4pzsew3g0": "下一步",
+                "5rg4pzsew8g0": "确定",
+                "5rg4pzsewdg0": "触发设备",
+                "5rg4pzsewls0": "执行",
+                "5rg4pzsews00": "读取",
+                "5rg4pzsewww0": "设置",
+                "5rg4pzsex1w0": "请选择产品",
+                "5rg4pzsex6g0": "请选择设备"
+            },
+            "Product": {
+                "5rg4q830fk80": "正常",
+                "5rg4q830h940": "禁用",
+                "5rg4q830hgw0": "设备类型",
+                "5rg4q830hnw0": "接入方式",
+                "5rg4q830htc0": "未接入",
+                "5rg4q830hys0": "名称",
+                "5rg4q830i7g0": "网关类型",
+                "5rg4q830ie40": "直连设备",
+                "5rg4q830inc0": "网关子设备",
+                "5rg4q830is40": "网关设备",
+                "5rg4q830iw80": "状态",
+                "5rg4q830j1c0": "说明",
+                "5rg4q830j5s0": "分类",
+                "5rg4q830jb80": "所属组织"
+            }
+        },
+        "ListItem": {
+            "FilterCondition": {
+                "5rg4quec97w0": "并且",
+                "5rg4quecc3s0": "或者",
+                "5rg4quecch80": "请选择参数",
+                "5rg4queccs00": "操作符",
+                "5rg4queccyk0": "参数值",
+                "5rg4quecd880": "确认删除？",
+                "5rg4quecdg00": "手动输入",
+                "5rg4quecdnc0": "内置参数",
+                "5rg4quecdy40": "是",
+                "5rg4quece480": "否"
+            },
+            "FilterGroup": {
+                "5rg4r3wra740": "并且",
+                "5rg4r3wrcrw0": "或者",
+                "5rg4r3wrd3c0": "确认删除？",
+                "5rg4r3wrd980": "分组",
+                "5rg4r3wrddo0": "该数据已发生变更，请重新配置",
+                "5rg4r3wrdk40": "请选择参数",
+                "5rg4r3wre0k0": "请选择操作符",
+                "5rg4r3wrea40": "请选择或输入参数值"
+            },
+            "Item": {
+                "5rg4saoj4q80": "满足条件后将触发",
+                "5rg4saoj60w0": "关联此场景的告警",
+                "5rg4saoj69c0": "满足条件后将解除",
+                "5rg4saoj6fo0": "通过",
+                "5rg4saoj6no0": "群机器人消息",
+                "5rg4saoj6ug0": "发送",
+                "5rg4saoj7000": "钉钉",
+                "5rg4saoj7540": "向",
+                "5rg4saoj7ac0": "微信",
+                "5rg4saoj7fo0": "邮件",
+                "5rg4saoj7k00": "语音",
+                "5rg4saoj7ow0": "短信",
+                "5rg4saoj7tg0": "为",
+                "5rg4saoj7yc0": "具有相同",
+                "5rg4saoj8580": "点击配置执行动作",
+                "5rg4saoj89w0": "确认删除？",
+                "5rg4saoj8hs0": "满足此条件后执行后续动作",
+                "5rg4saoj8mo0": "添加过滤条件",
+                "5rg4saoj8r80": "并且",
+                "5rg4saoj8w80": "该数据已发生变更，请重新配置"
+            },
+            "List": {
+                "5rg4somxko40": "添加执行动作"
+            }
+        },
+        "Modal": {
+            "index": {
+                "5rg4szf88p00": "类型",
+                "5rg4szf89rs0": "请选择类型",
+                "5rg4szf89x80": "设备输出",
+                "5rg4szf8a1o0": "配置设备调用功能、读取属性、设置属性规则",
+                "5rg4szf8a7o0": "消息通知",
+                "5rg4szf8aeg0": "配置向指定用户发邮件、钉钉、微信、短信等通知",
+                "5rg4szf8aig0": "延迟执行",
+                "5rg4szf8am40": "等待一段时间后，再执行后续动作",
+                "5rg4szf8aq80": "触发告警",
+                "5rg4szf8ats0": "配置触发告警规则，需配合“告警配置”使用",
+                "5rg4szf8axc0": "解除告警",
+                "5rg4szf8b380": "配置解除告警规则，需配合“告警配置”使用"
+            }
+        },
+        "Notify": {
+            "index": {
+                "5rg4v6py6v00": "执行动作",
+                "5rg4v6py7tg0": "通知方式",
+                "5rg4v6py80o0": "通知配置",
+                "5rg4v6py86g0": "通知模板",
+                "5rg4v6py8bw0": "模板变量",
+                "5rg4v6py8h40": "应用",
+                "5rg4v6py8o40": "请选择通知方式",
+                "5rg4v6py8sk0": "取消",
+                "5rg4v6py8x80": "上一步",
+                "5rg4v6py91k0": "下一步",
+                "5rg4v6py9880": "确定",
+                "5rg4v6py9cw0": "请选择通知配置",
+                "5rg4v6py9h40": "请选择通知模板"
+            },
+            "NotifyConfig": {
+                "5rg4vji4ubw0": "通知方式",
+                "5rg4vji4vsw0": "说明",
+                "5rg4vji4w1k0": "名称"
+            },
+            "NotifyTemplate": {
+                "5rg4vtardm80": "通知方式",
+                "5rg4vtarenk0": "说明",
+                "5rg4vtaret40": "名称"
+            },
+            "VariableDefinitions": {
+                "5rg4w51pmy80": "暂无模板变量",
+                "5rg4w51pqzk0": "请输入",
+                "5rg4w51prf40": "最多64个字符",
+                "5rg4w51pro00": "请选择",
+                "5rg4w51prys0": "请输入收件人",
+                "5rg4w51pscw0": "请输入正确的邮箱地址",
+                "5rg4w51psjg0": "请输入正确的手机号码"
+            }
+        },
+        "TriggerAlarm": {
+            "index": {
+                "5rg4wkndh9o0": "关联此场景的告警",
+                "5rg4wkndi8g0": "产品",
+                "5rg4wkndifs0": "设备",
+                "5rg4wkndikg0": "组织",
+                "5rg4wkndiqg0": "其他",
+                "5rg4wkndivc0": "名称",
+                "5rg4wkndiz40": "类型",
+                "5rg4wkndj300": "告警级别",
+                "5rg4wkndj740": "状态",
+                "5rg4wkndjh40": "说明"
+            }
+        }
+    },
+    "Device": {
+        "actions": {
+            "EditTable": {
+                "5rg4nqrntbc0": "参数名称",
+                "5rg4nqrnukw0": "类型",
+                "5rg4nqrnus80": "值"
+            },
+            "FunctionItem": {
+                "5rg4nzufsxw0": "请选择",
+                "5rg4nzufu440": "手动输入",
+                "5rg4nzufudo0": "内置参数"
+            },
+            "index": {
+                "5rg4oblqw1g0": "动作类型",
+                "5rg4oblqym40": "请选择动作类型",
+                "5rg4oblqyvk0": "功能调用",
+                "5rg4oblqz8g0": "请选择功能",
+                "5rg4oblqzgo0": "读取属性",
+                "5rg4oblqzmw0": "请选择读取属性",
+                "5rg4oblqzt80": "请选择属性",
+                "5rg4oblqzz00": "设置属性",
+                "5rg4oblr0440": "请输入功能值"
+            },
+            "WriteProperty": {
+                "5rg4oji3a3s0": "设置属性",
+                "5rg4oji3bps0": "请选择设置属性",
+                "5rg4oji3c000": "请选择属性",
+                "5rg4oji3c6g0": "属性值",
+                "5rg4oji3cc40": "请选择",
+                "5rg4oji3cm00": "手动输入",
+                "5rg4oji3csk0": "内置参数"
+            }
+        },
+        "device": {
+            "Device": {
+                "5rg4p1ftvoc0": "设备类型",
+                "5rg4p1ftwl40": "产品名称"
+            },
+            "index": {
+                "5rg4p6h78aw0": "选择方式",
+                "5rg4p6h7b200": "请选择方式",
+                "5rg4p6h7bko0": "关系",
+                "5rg4p6h7buc0": "请选择关系",
+                "5rg4p6h7c440": "请选择标签",
+                "5rg4p6h7cjk0": "变量",
+                "5rg4p6h7cqc0": "请选择",
+                "5rg4p6h7cyk0": "请选择参数",
+                "5rg4p6h7d640": "自定义",
+                "5rg4p6h7dds0": "自定义选择当前产品下的任意设备",
+                "5rg4p6h7f5c0": "按关系",
+                "5rg4p6h7iqg0": "选择与触发设备具有相同关系的设备",
+                "5rg4p6h7j8w0": "按标签",
+                "5rg4p6h7jiw0": "按标签选择产品下具有特定标签的设备",
+                "5rg4p6h7jv40": "按变量",
+                "5rg4p6h7k3w0": "选择设备ID为上游变量值的设备",
+                "5rg4p6h7kb00": "设备",
+                "5rg4p6h7ki00": "并且",
+                "5rg4p6h7koc0": "或者",
+                "5rg4p6h7kvc0": "请选择设备"
+            },
+            "RelationSelect": {
+                "5rg4pf5z51s0": "请选择关系",
+                "5rg4pf5z6d80": "设备"
+            },
+            "Tag": {
+                "5rg4pmv0x7k0": "标签选择",
+                "5rg4pmv0yk40": "并且",
+                "5rg4pmv0yuk0": "或者",
+                "5rg4pmv0z100": "请选择标签",
+                "5rg4pmv0z7o0": "是",
+                "5rg4pmv0zeg0": "否",
+                "5rg4pmv0zkg0": "标签"
+            }
+        }
+    },
+    "Notify": {
+        "variableItem": {
+            "BuildIn": {
+                "5rg4u0cs8gg0": "手动输入",
+                "5rg4u0csd1s0": "内置参数",
+                "5rg4u0csdog0": "请选择参数"
+            },
+            "InputFile": {
+                "5rg4ubxxbsc0": "请上传文件",
+                "5rg4ubxxd1w0": "上传附件",
+                "5rg4ubxxda00": "请上传正确格式图片"
+            },
+            "Org": {
+                "5rg4um18rf80": "请选择组织"
+            },
+            "Tag": {
+                "5rg4urioz8c0": "请选择标签"
+            },
+            "User": {
+                "5rg4uvqqzv40": "平台用户",
+                "5rg4uvqr1u80": "钉钉用户",
+                "5rg4uvqr25o0": "微信用户",
+                "5rg4uvqr2a00": "固定邮箱",
+                "5rg4uvqr2e00": "固定号码",
+                "5rg4uvqr2ig0": "请选择收信人",
+                "5rg4uvqr2m40": "请输入收件人邮箱,多个收件人用换行分隔",
+                "5rg4uvqr2ps0": "请输入固定号码",
+                "5rg4uvqr2ts0": "关系用户"
             }
         }
     }
