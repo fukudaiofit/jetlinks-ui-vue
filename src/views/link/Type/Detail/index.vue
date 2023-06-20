@@ -13,26 +13,26 @@
                         <j-row :gutter="[24, 0]">
                             <j-col :span="12">
                                 <j-form-item
-                                    label="名称"
+                                    :label="t('Type.Detail.index.5rg3eiq3c2w0')"
                                     name="name"
                                     :rules="Rules.name"
                                 >
                                     <j-input
                                         v-model:value="formData.name"
-                                        placeholder="请输入名称"
+                                        :placeholder="t('Type.Detail.index.5rg3eiq3d2g0')"
                                     />
                                 </j-form-item>
                             </j-col>
                             <j-col :span="12">
                                 <j-form-item
-                                    label="类型"
+                                    :label="t('Type.Detail.index.5rg3eiq3d8g0')"
                                     name="type"
                                     :rules="Rules.type"
                                 >
                                     <j-select
                                         v-model:value="formData.type"
                                         :options="typeOptions"
-                                        placeholder="请选择类型"
+                                        :placeholder="t('Type.Detail.index.5rg3eiq3dd00')"
                                         allowClear
                                         show-search
                                         :filter-option="filterOption"
@@ -47,7 +47,7 @@
                                     :rules="Rules.shareCluster"
                                 >
                                     <template #label>
-                                        集群
+                                        {{t('Type.Detail.index.5rg3eiq3dgw0')}}
                                         <j-tooltip
                                             title="共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置"
                                         >
@@ -67,10 +67,10 @@
                                         "
                                     >
                                         <j-radio-button :value="true"
-                                            >共享配置</j-radio-button
+                                            >{{t('Type.Detail.index.5rg3eiq3dlg0')}}</j-radio-button
                                         >
                                         <j-radio-button :value="false"
-                                            >独立配置</j-radio-button
+                                            >{{t('Type.Detail.index.5rg3eiq3dpg0')}}</j-radio-button
                                         >
                                     </j-radio-group>
                                 </j-form-item>
@@ -135,7 +135,7 @@
                                                 "
                                             >
                                                 <span class="delete-btn">
-                                                    删除
+                                                    {{t('Type.Detail.index.5rg3eiq3dtc0')}}
                                                 </span>
                                             </j-popconfirm>
                                         </template>
@@ -150,7 +150,7 @@
                                                         index,
                                                         'serverId',
                                                     ]"
-                                                    label="节点名称"
+                                                    :label="t('Type.Detail.index.5rg3eiq3dxg0')"
                                                     :rules="Rules.serverId"
                                                 >
                                                     <j-select
@@ -162,7 +162,7 @@
                                                                 index
                                                             ]
                                                         "
-                                                        placeholder="请选择节点名称"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3e180')"
                                                         allowClear
                                                         show-search
                                                         :filter-option="
@@ -197,7 +197,7 @@
                                                     :rules="Rules.host"
                                                 >
                                                     <template #label>
-                                                        本地地址
+                                                        {{t('Type.Detail.index.5rg3eiq3e500')}}
                                                         <j-tooltip
                                                             title="绑定到服务器上的网卡地址,绑定到所有网卡:0.0.0.0"
                                                         >
@@ -220,7 +220,7 @@
                                                                 index
                                                             ]
                                                         "
-                                                        placeholder="请选择本地地址"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3eak0')"
                                                         allowClear
                                                         show-search
                                                         :disabled="shareCluster"
@@ -266,9 +266,9 @@
                                                     :rules="Rules.port"
                                                 >
                                                     <template #label>
-                                                        本地端口
+                                                        {{t('Type.Detail.index.5rg3eiq3eeg0')}}
                                                         <j-tooltip
-                                                            title="监听指定端口的请求"
+                                                            :title="t('Type.Detail.index.5rg3eiq3ei80')"
                                                         >
                                                             <AIcon
                                                                 type="QuestionCircleOutlined"
@@ -289,7 +289,7 @@
                                                                 index
                                                             ]
                                                         "
-                                                        placeholder="请选择本地端口"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3elw0')"
                                                         allowClear
                                                         show-search
                                                         :filter-option="
@@ -318,9 +318,9 @@
                                                     :rules="Rules.publicHost"
                                                 >
                                                     <template #label>
-                                                        公网地址
+                                                        {{t('Type.Detail.index.5rg3eiq3epg0')}}
                                                         <j-tooltip
-                                                            title="对外提供访问的地址,内网环境时填写服务器的内网IP地址"
+                                                            :title="t('Type.Detail.index.5rg3eiq3etg0')"
                                                         >
                                                             <AIcon
                                                                 type="QuestionCircleOutlined"
@@ -336,7 +336,7 @@
                                                                 .configuration
                                                                 .publicHost
                                                         "
-                                                        placeholder="请输入公网地址"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3ex80')"
                                                         allowClear
                                                     />
                                                 </j-form-item>
@@ -360,9 +360,9 @@
                                                     :rules="Rules.publicPort"
                                                 >
                                                     <template #label>
-                                                        公网端口
+                                                        {{t('Type.Detail.index.5rg3eiq3f240')}}
                                                         <j-tooltip
-                                                            title="对外提供访问的端口"
+                                                            :title="t('Type.Detail.index.5rg3eiq3f600')"
                                                         >
                                                             <AIcon
                                                                 type="QuestionCircleOutlined"
@@ -374,7 +374,7 @@
                                                     </template>
                                                     <j-input-number
                                                         style="width: 100%"
-                                                        placeholder="请输入端口"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3faw0')"
                                                         v-model:value="
                                                             cluster
                                                                 .configuration
@@ -402,10 +402,10 @@
                                                         'remoteHost',
                                                     ]"
                                                     :rules="Rules.remoteHost"
-                                                    label="远程地址"
+                                                    :label="t('Type.Detail.index.5rg3eiq3fe40')"
                                                 >
                                                     <j-input
-                                                        placeholder="请输入远程地址"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3fic0')"
                                                         v-model:value="
                                                             cluster
                                                                 .configuration
@@ -424,7 +424,7 @@
                                                 "
                                             >
                                                 <j-form-item
-                                                    label="远程端口"
+                                                    :label="t('Type.Detail.index.5rg3eiq3flg0')"
                                                     :name="[
                                                         'cluster',
                                                         index,
@@ -435,7 +435,7 @@
                                                 >
                                                     <j-input-number
                                                         style="width: 100%"
-                                                        placeholder="请输入远程端口"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3fpo0')"
                                                         v-model:value="
                                                             cluster
                                                                 .configuration
@@ -471,7 +471,7 @@
                                                                 .configuration
                                                                 .clientId
                                                         "
-                                                        placeholder="请输入ClientId"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3fso0')"
                                                     />
                                                 </j-form-item>
                                             </j-col>
@@ -486,7 +486,7 @@
                                                 "
                                             >
                                                 <j-form-item
-                                                    label="用户名"
+                                                    :label="t('Type.Detail.index.5rg3eiq3fw40')"
                                                     :name="[
                                                         'cluster',
                                                         index,
@@ -501,7 +501,7 @@
                                                                 .configuration
                                                                 .username
                                                         "
-                                                        placeholder="请输入用户名"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3fzk0')"
                                                     />
                                                 </j-form-item>
                                             </j-col>
@@ -515,7 +515,7 @@
                                                 "
                                             >
                                                 <j-form-item
-                                                    label="密码"
+                                                    :label="t('Type.Detail.index.5rg3eiq3g2s0')"
                                                     :name="[
                                                         'cluster',
                                                         index,
@@ -530,7 +530,7 @@
                                                                 .configuration
                                                                 .password
                                                         "
-                                                        placeholder="请输入密码"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3g600')"
                                                     />
                                                 </j-form-item>
                                             </j-col>
@@ -553,7 +553,7 @@
                                                     :rules="Rules.topicPrefix"
                                                 >
                                                     <template #label>
-                                                        订阅前缀
+                                                        {{t('Type.Detail.index.5rg3eiq3g940')}}
                                                         <j-tooltip
                                                             title="当连接的服务为EMQ时,可能需要使用共享的订阅前缀,如:$queue或$share"
                                                         >
@@ -571,7 +571,7 @@
                                                                 .configuration
                                                                 .topicPrefix
                                                         "
-                                                        placeholder="请输入订阅前缀"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3gc40')"
                                                     />
                                                 </j-form-item>
                                             </j-col>
@@ -597,7 +597,7 @@
                                                     "
                                                 >
                                                     <template #label>
-                                                        最大消息长度
+                                                        {{t('Type.Detail.index.5rg3eiq3ggk0')}}
                                                         <j-tooltip
                                                             title="单次收发消息的最大长度,单位:字节;设置过大可能会影响性能"
                                                         >
@@ -616,7 +616,7 @@
                                                                 .configuration
                                                                 .maxMessageSize
                                                         "
-                                                        placeholder="请输入最大消息长度"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3gk00')"
                                                         :min="1024"
                                                         :max="1073741824"
                                                     />
@@ -629,8 +629,8 @@
                                                             'secure',
                                                             formData.type,
                                                         )
-                                                            ? '开启DTLS'
-                                                            : '开启TLS'
+                                                            ? t('Type.Detail.index.5rg3eiq3gmw0')
+                                                            : t('Type.Detail.index.5rg3eiq3gq40')
                                                     "
                                                     :name="[
                                                         'cluster',
@@ -656,10 +656,10 @@
                                                         "
                                                     >
                                                         <j-radio :value="true"
-                                                            >是</j-radio
+                                                            >{{t('Type.Detail.index.5rg3eiq3gtg0')}}</j-radio
                                                         >
                                                         <j-radio :value="false"
-                                                            >否</j-radio
+                                                            >{{t('Type.Detail.index.5rg3eiq3gwk0')}}</j-radio
                                                         >
                                                     </j-radio-group>
                                                 </j-form-item>
@@ -673,7 +673,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="证书"
+                                                        :label="t('Type.Detail.index.5rg3eiq3gzk0')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -692,7 +692,7 @@
                                                             :options="
                                                                 certIdOptions
                                                             "
-                                                            placeholder="请选择证书"
+                                                            :placeholder="t('Type.Detail.index.5rg3eiq3h3s0')"
                                                             allowClear
                                                             show-search
                                                             :filter-option="
@@ -709,7 +709,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="私钥别名"
+                                                        :label="t('Type.Detail.index.5rg3eiq3h700')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -727,7 +727,7 @@
                                                                     .configuration
                                                                     .privateKeyAlias
                                                             "
-                                                            placeholder="请输入私钥别名"
+                                                            :placeholder="t('Type.Detail.index.5rg3eiq3hac0')"
                                                         />
                                                     </j-form-item>
                                                 </j-col>
@@ -752,9 +752,9 @@
                                                     :rules="Rules.parserType"
                                                 >
                                                     <template #label>
-                                                        粘拆包规则
+                                                        {{t('Type.Detail.index.5rg3eiq3hdc0')}}
                                                         <j-tooltip
-                                                            title="处理TCP粘拆包的方式"
+                                                            :title="t('Type.Detail.index.5rg3eiq3hgk0')"
                                                         >
                                                             <AIcon
                                                                 type="QuestionCircleOutlined"
@@ -774,7 +774,7 @@
                                                         :options="
                                                             ParserTypeOptions
                                                         "
-                                                        placeholder="请选择粘拆包规则"
+                                                        :placeholder="t('Type.Detail.index.5rg3eiq3hms0')"
                                                         allowClear
                                                         show-search
                                                         :filter-option="
@@ -804,7 +804,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="分隔符"
+                                                        :label="t('Type.Detail.index.5rg3eiq3hps0')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -822,7 +822,7 @@
                                                                     .parserConfiguration
                                                                     .delimited
                                                             "
-                                                            placeholder="请输入分隔符"
+                                                            :placeholder="t('Type.Detail.index.5rg3eiq3hsw0')"
                                                         />
                                                     </j-form-item>
                                                 </j-col>
@@ -839,7 +839,7 @@
                                 >
                                     <j-form-item
                                         v-show="false"
-                                        label="脚本语言"
+                                        :label="t('Type.Detail.index.5rg3eiq3hvw0')"
                                         :name="[
                                             'cluster',
                                             index,
@@ -871,7 +871,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="解析脚本"
+                                                        :label="t('Type.Detail.index.5rg3eiq3hz00')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -914,7 +914,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="长度值"
+                                                        :label="t('Type.Detail.index.5rg3eiq3i200')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -933,7 +933,7 @@
                                                                     .parserConfiguration
                                                                     .size
                                                             "
-                                                            placeholder="请输入长度值"
+                                                            :placeholder="t('Type.Detail.index.5rg3eiq3i500')"
                                                         />
                                                     </j-form-item>
                                                 </j-col>
@@ -949,7 +949,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="长度"
+                                                        :label="t('Type.Detail.index.5rg3eiq3i8c0')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -971,7 +971,7 @@
                                                             :options="
                                                                 LengthOptions
                                                             "
-                                                            placeholder="请选择长度"
+                                                            :placeholder="t('Type.Detail.index.5rg3eiq3ico0')"
                                                             allowClear
                                                             show-search
                                                             :filter-option="
@@ -992,7 +992,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="偏移量"
+                                                        :label="t('Type.Detail.index.5rg3eiq3ifo0')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -1011,7 +1011,7 @@
                                                                     .parserConfiguration
                                                                     .offset
                                                             "
-                                                            placeholder="请输入偏移量"
+                                                            :placeholder="t('Type.Detail.index.5rg3eiq3iio0')"
                                                             :min="0"
                                                             :max="65535"
                                                         />
@@ -1029,7 +1029,7 @@
                                                     "
                                                 >
                                                     <j-form-item
-                                                        label="大小端"
+                                                        :label="t('Type.Detail.index.5rg3eiq3ilo0')"
                                                         :name="[
                                                             'cluster',
                                                             index,
@@ -1050,7 +1050,7 @@
                                                             :options="
                                                                 LittleOptions
                                                             "
-                                                            placeholder="请选择大小端"
+                                                            :placeholder="t('Type.Detail.index.5rg3eiq3ioo0')"
                                                             allowClear
                                                             show-search
                                                             :filter-option="
@@ -1072,14 +1072,14 @@
                                     @click="addCluster"
                                 >
                                     <AIcon type="PlusOutlined" />
-                                    新增
+                                    {{t('Type.Detail.index.5rg3eiq3irw0')}}
                                 </j-button>
                             </j-form-item>
                         </j-form>
 
                         <j-row :gutter="[24, 0]">
                             <j-col :span="24">
-                                <j-form-item label="说明" name="description">
+                                <j-form-item :label="t('Type.Detail.index.5rg3eiq3ius0')" name="description">
                                     <j-textarea
                                         v-model:value="formData.description"
                                         show-count
@@ -1100,7 +1100,7 @@
                             id !== ':id' ? 'update' : 'add'
                         }`"
                     >
-                        保存
+                        {{t('Type.Detail.index.5rg3eiq3ixs0')}}
                     </PermissionButton>
                 </div>
             </j-card>
@@ -1140,7 +1140,9 @@ import type { FormData2Type, FormDataType } from '../type';
 import { Store } from 'jetlinks-store';
 import LocalAddressSelect from './LocalAddressSelect.vue';
 import { isNoCommunity } from '@/utils/utils';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const route = useRoute();
 const NetworkType = route.query.type as string;
 const view = NetworkType ? 'false' : (route.query.view as string);
@@ -1321,7 +1323,7 @@ const saveData = async () => {
     });
 
     if (!formRef2Data?.cluster) {
-        return onlyMessage('请新增或完善配置', 'error');
+        return onlyMessage(t('Type.Detail.index.5rg3eiq3j0o0'), 'error');
     }
 
     const { configuration } = formRef2Data?.cluster[0];
@@ -1336,7 +1338,7 @@ const saveData = async () => {
             : await update({ ...params, id }).catch(() => {});
     loading.value = false;
     if (resp?.status === 200) {
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Type.Detail.index.5rg3eiq3j3o0'), 'success');
         history.back();
         if ((window as any).onTabSaveSuccess) {
             if (resp.result?.id) {

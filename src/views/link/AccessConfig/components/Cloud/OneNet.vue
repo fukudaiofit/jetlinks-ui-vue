@@ -7,7 +7,7 @@
             <div class="steps-box" v-if="current === 0">
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    通过OneNet平台的HTTP推送服务进行数据接入
+                    {{t('components.Cloud.OneNet.5rg35msxx1s0')}}
                 </div>
                 <div style="margin-top: 42px">
                     <j-row :gutter="[24, 24]">
@@ -30,9 +30,9 @@
                                             ]"
                                         >
                                             <template #label>
-                                                接口地址
+                                                {{t('components.Cloud.OneNet.5rg35msxxys0')}}
                                                 <j-tooltip
-                                                    title="同步物联网平台设备数据到OneNet"
+                                                    :title="t('components.Cloud.OneNet.5rg35msxy540')"
                                                 >
                                                     <AIcon
                                                         type="QuestionCircleOutlined"
@@ -57,19 +57,19 @@
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请输入apiKey',
+                                                    message: t('components.Cloud.OneNet.5rg35msxy9w0'),
                                                 },
                                                 {
                                                     max: 64,
                                                     message:
-                                                        '最多可输入64个字符',
+                                                        t('components.Cloud.OneNet.5rg35msxygg0'),
                                                     trigger: 'blur',
                                                 },
                                             ]"
                                         >
                                             <j-input
                                                 v-model:value="formState.apiKey"
-                                                placeholder="请输入apiKey"
+                                                :placeholder="t('components.Cloud.OneNet.5rg35msxy9w0')"
                                             />
                                         </j-form-item>
                                     </j-col>
@@ -81,20 +81,20 @@
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请输入通知Token',
+                                                    message: t('components.Cloud.OneNet.5rg35msxylg0'),
                                                 },
                                                 {
                                                     max: 64,
                                                     message:
-                                                        '最多可输入64个字符',
+                                                        t('components.Cloud.OneNet.5rg35msxygg0'),
                                                     trigger: 'blur',
                                                 },
                                             ]"
                                         >
                                             <template #label>
-                                                通知Token
+                                                {{t('components.Cloud.OneNet.5rg35msxypo0')}}
                                                 <j-tooltip
-                                                    title="自定义token,可用于验证请求是否来自OneNet"
+                                                    :title="t('components.Cloud.OneNet.5rg35msxyu40')"
                                                 >
                                                     <AIcon
                                                         type="QuestionCircleOutlined"
@@ -106,7 +106,7 @@
                                                 v-model:value="
                                                     formState.validateToken
                                                 "
-                                                placeholder="请输入通知Token"
+                                                :placeholder="t('components.Cloud.OneNet.5rg35msxylg0')"
                                             />
                                         </j-form-item>
                                     </j-col>
@@ -117,7 +117,7 @@
                                                 {
                                                     max: 64,
                                                     message:
-                                                        '最多可输入64个字符',
+                                                        t('components.Cloud.OneNet.5rg35msxygg0'),
                                                     trigger: 'blur',
                                                 },
                                             ]"
@@ -135,18 +135,18 @@
                                             </template>
                                             <j-input
                                                 v-model:value="formState.aesKey"
-                                                placeholder="请输入aesKey"
+                                                :placeholder="t('components.Cloud.OneNet.5rg35msxyyg0')"
                                             /> </j-form-item
                                     ></j-col>
                                 </j-row>
                                 <j-row :gutter="[24, 24]">
                                     <j-col :span="24">
                                         <j-form-item
-                                            label="说明"
+                                            :label="t('components.Cloud.OneNet.5rg35msxz300')"
                                             name="description"
                                         >
                                             <j-textarea
-                                                placeholder="请输入说明"
+                                                :placeholder="t('components.Cloud.OneNet.5rg35msxz780')"
                                                 :rows="4"
                                                 v-model:value="
                                                     formState.description
@@ -161,7 +161,7 @@
                         <j-col :span="8">
                             <j-scrollbar height="500">
                                 <div class="doc">
-                                    <h1>操作指引：</h1>
+                                    <h1>{{t('components.Cloud.OneNet.5rg35msxzbo0')}}</h1>
                                     <div>
                                         1、OneNet端创建产品、设备，并配置HTTP推送
                                     </div>
@@ -193,13 +193,13 @@
                                         :column="1"
                                         :labelStyle="{ width: '100px' }"
                                     >
-                                        <j-descriptions-item label="参数"
-                                            >说明</j-descriptions-item
+                                        <j-descriptions-item :label="t('components.Cloud.OneNet.5rg35msxzfs0')"
+                                            >{{t('components.Cloud.OneNet.5rg35msxz300')}}</j-descriptions-item
                                         >
-                                        <j-descriptions-item label="实例名称"
-                                            >推送实例的名称</j-descriptions-item
+                                        <j-descriptions-item :label="t('components.Cloud.OneNet.5rg35msxzjw0')"
+                                            >{{t('components.Cloud.OneNet.5rg35msxzpo0')}}</j-descriptions-item
                                         >
-                                        <j-descriptions-item label="推送地址">
+                                        <j-descriptions-item :label="t('components.Cloud.OneNet.5rg35msxzts0')">
                                             用于接收OneNet推送设备数据的地址物联网平台地址:
                                             <div style="word-wrap: break-word">
                                                 {{
@@ -208,34 +208,34 @@
                                             </div>
                                         </j-descriptions-item>
                                         <j-descriptions-item label="Token">
-                                            自定义token,可用于验证请求是否来自OneNet
+                                            {{t('components.Cloud.OneNet.5rg35msxyu40')}}
                                         </j-descriptions-item>
-                                        <j-descriptions-item label="消息加密">
-                                            采用AES加密算法对推送的数据进行数据加密，AesKey为加密秘钥
+                                        <j-descriptions-item :label="t('components.Cloud.OneNet.5rg35msxzy80')">
+                                            {{t('components.Cloud.OneNet.5rg35msy02g0')}}
                                         </j-descriptions-item>
                                     </j-descriptions>
 
-                                    <h1>设备接入网关配置说明</h1>
+                                    <h1>{{t('components.Cloud.OneNet.5rg35msy0700')}}</h1>
                                     <j-descriptions
                                         bordered
                                         size="small"
                                         :column="1"
                                         :labelStyle="{ width: '100px' }"
                                     >
-                                        <j-descriptions-item label="参数"
-                                            >说明</j-descriptions-item
+                                        <j-descriptions-item :label="t('components.Cloud.OneNet.5rg35msxzfs0')"
+                                            >{{t('components.Cloud.OneNet.5rg35msxz300')}}</j-descriptions-item
                                         >
                                         <j-descriptions-item label="apiKey"
                                             >OneNet平台中具体产品的Key</j-descriptions-item
                                         >
-                                        <j-descriptions-item label="通知Token">
-                                            填写OneNet数据推送配置中设置的Token
+                                        <j-descriptions-item :label="t('components.Cloud.OneNet.5rg35msxypo0')">
+                                            {{t('components.Cloud.OneNet.5rg35msy0bg0')}}
                                         </j-descriptions-item>
                                         <j-descriptions-item label="aesKey">
-                                            若OneNet数据推送配置了消息加密，此处填写OneNet端数据推送配置中设置的aesKey
+                                            {{t('components.Cloud.OneNet.5rg35msy0i40')}}
                                         </j-descriptions-item>
                                     </j-descriptions>
-                                    <h1>其他说明</h1>
+                                    <h1>{{t('components.Cloud.OneNet.5rg35msy0ls0')}}</h1>
                                     <div>
                                         1.在IOT端启用设备时，若OneNet平台没有与之对应的设备，则将在OneNet端自动创建新设备
                                     </div>
@@ -250,12 +250,12 @@
             <div class="steps-box" v-if="current === 1">
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    只能选择HTTP通信方式的协议
+                    {{t('components.Cloud.OneNet.5rg35msy0rc0')}}
                 </div>
                 <div class="search">
                     <j-input-search
                         allowClear
-                        placeholder="请输入"
+                        :placeholder="t('components.Cloud.OneNet.5rg35msy0v40')"
                         style="width: 300px"
                         @search="procotolSearch"
                     />
@@ -266,7 +266,7 @@
                         hasPermission="link/Protocol:add"
                     >
                         <template #icon><AIcon type="PlusOutlined" /></template>
-                        新增
+                        {{t('components.Cloud.OneNet.5rg35msy0yw0')}}
                     </PermissionButton>
                 </div>
                 <j-scrollbar height="480">
@@ -292,7 +292,7 @@
                     <j-empty
                         style="margin-top: 10%"
                         v-else
-                        description="暂无数据"
+                        :description="t('components.Cloud.OneNet.5rg35msy12c0')"
                     />
                 </j-scrollbar>
             </div>
@@ -300,7 +300,7 @@
         <div v-if="current === 2" class="card-last">
             <j-row :gutter="[24, 24]">
                 <j-col :span="12">
-                    <title-component data="基本信息" />
+                    <title-component :data="t('components.Cloud.OneNet.5rg35msy16w0')" />
                     <div>
                         <j-form
                             :model="formData"
@@ -310,29 +310,29 @@
                             ref="formRef2"
                         >
                             <j-form-item
-                                label="名称"
+                                :label="t('components.Cloud.OneNet.5rg35msy1bc0')"
                                 name="name"
                                 :rules="[
                                     {
                                         required: true,
-                                        message: '请输入名称',
+                                        message: t('components.Cloud.OneNet.5rg35msy1f00'),
                                         trigger: 'blur',
                                     },
                                     {
                                         max: 64,
-                                        message: '最多可输入64个字符',
+                                        message: t('components.Cloud.OneNet.5rg35msxygg0'),
                                         trigger: 'blur',
                                     },
                                 ]"
                             >
                                 <j-input
-                                    placeholder="请输入名称"
+                                    :placeholder="t('components.Cloud.OneNet.5rg35msy1f00')"
                                     v-model:value="formData.name"
                                 />
                             </j-form-item>
-                            <j-form-item label="说明" name="description">
+                            <j-form-item :label="t('components.Cloud.OneNet.5rg35msxz300')" name="description">
                                 <j-textarea
-                                    placeholder="请输入说明"
+                                    :placeholder="t('components.Cloud.OneNet.5rg35msxz780')"
                                     :rows="4"
                                     v-model:value="formData.description"
                                     show-count
@@ -344,13 +344,13 @@
                 </j-col>
                 <j-col :span="12">
                     <div class="doc" style="height: 606px">
-                        <TitleComponent data="配置概览" />
+                        <TitleComponent :data="t('components.Cloud.OneNet.5rg35msy1is0')" />
                         <p>接入方式：{{ provider.name }}</p>
                         <p>
                             {{ provider.description }}
                         </p>
                         <p>消息协议：{{ procotolCurrent }}</p>
-                        <TitleComponent data="设备接入指引" />
+                        <TitleComponent :data="t('components.Cloud.OneNet.5rg35msy1mc0')" />
                         <p>
                             1、创建类型为{{
                                 props?.provider?.id === 'OneNet'
@@ -374,7 +374,7 @@
             </j-row>
         </div>
         <div :class="current !== 2 ? 'steps-action' : 'steps-action-save'">
-          <j-button v-if="current > 0" @click="prev" style="margin-right: 8px"> 上一步 </j-button>
+          <j-button v-if="current > 0" @click="prev" style="margin-right: 8px"> {{t('components.Cloud.OneNet.5rg35msy1pw0')}} </j-button>
             <PermissionButton
                 style="margin-right: 8px"
                 v-if="current === 2 && view === 'false'"
@@ -384,7 +384,7 @@
                     id === ':id' ? 'add' : 'update'
                 }`"
             >
-                保存
+                {{t('components.Cloud.OneNet.5rg35msy1t40')}}
             </PermissionButton>
           <j-button
             v-if="[0, 1].includes(current)"
@@ -392,7 +392,7 @@
 
             @click="next"
           >
-            下一步
+            {{t('components.Cloud.OneNet.5rg35msy1ww0')}}
           </j-button>
 
         </div>
@@ -408,7 +408,9 @@ import { randomString } from '@/utils/utils';
 import { getImage } from '@/utils/comm';
 import { ProtocolMapping } from '../../data';
 import { useMenuStore } from 'store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const origin = window.location.origin;
 const img5 = getImage('/network/05.jpg');
@@ -463,7 +465,7 @@ const formData = ref<Form>({
 
 const current = ref(0);
 const stepCurrent = ref(0);
-const steps = ref(['接入配置', '消息协议', '完成']);
+const steps = ref([t('components.Cloud.OneNet.5rg35msy20c0'), t('components.Cloud.OneNet.5rg35msy23o0'), t('components.Cloud.OneNet.5rg35msy29c0')]);
 const procotolList: any = ref([]);
 const allProcotolList = ref([]);
 const procotolCurrent: any = ref('');
@@ -510,7 +512,7 @@ const saveData = async () => {
               });
 
     if (resp.status === 200) {
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('components.Cloud.OneNet.5rg35msy2cw0'), 'success');
         history.back();
         if ((window as any).onTabSaveSuccess) {
             (window as any).onTabSaveSuccess(resp);
@@ -551,7 +553,7 @@ const next = async () => {
         current.value = current.value + 1;
     } else if (current.value === 1) {
         if (!procotolCurrent.value) {
-            onlyMessage('请选择消息协议！', 'error');
+            onlyMessage(t('components.Cloud.OneNet.5rg35msy2hc0'), 'error');
         } else {
             current.value = current.value + 1;
         }

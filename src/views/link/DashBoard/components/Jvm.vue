@@ -21,13 +21,13 @@
                             v-model:value="data.type"
                         >
                             <j-radio-button value="hour">
-                                最近1小时
+                                {{t('DashBoard.components.Jvm.5rg33mevn3s0')}}
                             </j-radio-button>
                             <j-radio-button value="today">
-                                今日
+                                {{t('DashBoard.components.Jvm.5rg33mevos40')}}
                             </j-radio-button>
                             <j-radio-button value="week">
-                                近一周
+                                {{t('DashBoard.components.Jvm.5rg33mevtbg0')}}
                             </j-radio-button>
                         </j-radio-group></template
                     >
@@ -60,7 +60,9 @@ import {
     defulteParamsData,
 } from './tool.ts';
 import { DataType } from '../typings';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
   serviceId: {
     type: String,

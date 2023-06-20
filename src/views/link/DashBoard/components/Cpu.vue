@@ -21,13 +21,13 @@
                             v-model:value="data.type"
                         >
                             <j-radio-button value="hour">
-                                最近1小时
+                                {{t('DashBoard.components.Cpu.5rg32qecq8o0')}}
                             </j-radio-button>
                             <j-radio-button value="today">
-                                今日
+                                {{t('DashBoard.components.Cpu.5rg32qecrvs0')}}
                             </j-radio-button>
                             <j-radio-button value="week">
-                                近一周
+                                {{t('DashBoard.components.Cpu.5rg32qecs7w0')}}
                             </j-radio-button>
                         </j-radio-group></template
                     >
@@ -47,7 +47,6 @@
         </div>
     </j-spin>
 </template>
-m
 <script lang="ts" setup name="Cpu">
 import * as echarts from 'echarts';
 import { dashboard } from '@/api/link/dashboard';
@@ -60,7 +59,9 @@ import {
     typeDataLine,
 } from './tool.ts';
 import { DataType } from '../typings';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 
 const props = defineProps({
   serviceId: {

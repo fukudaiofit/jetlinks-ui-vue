@@ -22,7 +22,7 @@
             </div>
             <div class="dash-board-item">
                 <TopEchartsItemNode
-                    title="磁盘占用"
+                    :title="t('DashBoard.components.TopCard.5rg346ec9kc0')"
                     :max="topValues.usageTotal"
                     :bottom="`总磁盘大小 ${topValues.usageTotal}G`"
                     formatter="G"
@@ -31,7 +31,7 @@
             </div>
             <div class="dash-board-item">
                 <TopEchartsItemNode
-                    title="系统内存"
+                    :title="t('DashBoard.components.TopCard.5rg346eccjc0')"
                     :max="topValues.systemUsageTotal"
                     :bottom="`系统内存 ${topValues.systemUsageTotal}G`"
                     formatter="G"
@@ -48,7 +48,9 @@ import TopEchartsItemNode from './TopEchartsItemNode.vue';
 import { getWebSocket } from '@/utils/websocket';
 import { map } from 'rxjs/operators';
 import { isNoCommunity } from '@/utils/utils'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const serverId = ref();
 const serverNodeOptions = ref<Array<any>>([]);
 const topValues = ref({

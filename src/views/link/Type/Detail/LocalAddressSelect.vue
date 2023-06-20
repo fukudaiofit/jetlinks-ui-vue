@@ -2,7 +2,7 @@
     <j-select
         :value="host"
         :options="options"
-        placeholder="请选择本地地址"
+        :placeholder="t('Type.Detail.LocalAddressSelect.5rg3etsypko0')"
         allowClear
         show-search
         :disabled="shareCluster"
@@ -14,7 +14,9 @@
 <script lang="ts" setup>
 import { Store } from "jetlinks-store"
 import { resourceClustersById } from "@/api/link/type"
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     value: {
         type: String,

@@ -2,7 +2,7 @@
     <div v-if="type === 'channel'" class="card-last">
         <j-row :gutter="[24, 24]">
             <j-col :span="12">
-                <title-component data="基本信息" />
+                <title-component :data="t('components.Channel.index.5rg34u5fd1w0')" />
                 <div>
                     <j-form
                         :model="formState"
@@ -12,29 +12,29 @@
                         @finish="onFinish"
                     >
                         <j-form-item
-                            label="名称"
+                            :label="t('components.Channel.index.5rg34u5fgx40')"
                             name="name"
                             :rules="[
                                 {
                                     required: true,
-                                    message: '请输入名称',
+                                    message: t('components.Channel.index.5rg34u5fhc80'),
                                     trigger: 'blur',
                                 },
                                 {
                                     max: 64,
-                                    message: '最多可输入64个字符',
+                                    message: t('components.Channel.index.5rg34u5fhjg0'),
                                     trigger: 'blur',
                                 },
                             ]"
                         >
                             <j-input
-                                placeholder="请输入名称"
+                                :placeholder="t('components.Channel.index.5rg34u5fhc80')"
                                 v-model:value="formState.name"
                             />
                         </j-form-item>
-                        <j-form-item label="说明" name="description">
+                        <j-form-item :label="t('components.Channel.index.5rg34u5fi700')" name="description">
                             <j-textarea
-                                placeholder="请输入说明"
+                                :placeholder="t('components.Channel.index.5rg34u5firs0')"
                                 :rows="4"
                                 v-model:value="formState.description"
                                 show-count
@@ -50,7 +50,7 @@
                                     id === ':id' ? 'add' : 'update'
                                 }`"
                             >
-                                保存
+                                {{t('components.Channel.index.5rg34u5fj6c0')}}
                             </PermissionButton>
                         </j-form-item>
                     </j-form>
@@ -58,13 +58,13 @@
             </j-col>
             <j-col :span="12">
                 <div class="doc" style="height: 600px">
-                    <TitleComponent data="配置概览" />
+                    <TitleComponent :data="t('components.Channel.index.5rg34u5fjqg0')" />
                     <p>接入方式：{{ provider.name }}</p>
                     <p>
                         {{ provider.description }}
                     </p>
                     <p>消息协议：{{ provider.id }}</p>
-                    <TitleComponent data="设备接入指引" />
+                    <TitleComponent :data="t('components.Channel.index.5rg34u5fk540')" />
                     <p>1、配置{{ provider.name }}通道</p>
                     <p>2、创建{{ provider.name }}设备接入网关</p>
                     <p>3、创建产品，并选中接入方式为{{ provider.name }}</p>
@@ -79,7 +79,9 @@
 import { onlyMessage } from '@/utils/comm';
 import { update, save } from '@/api/link/accessConfig';
 import { ProtocolMapping } from '../../data';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 interface FormState {
     name: string;
     description: string;
@@ -117,7 +119,7 @@ const onFinish = async (values: any) => {
     const resp =
         id === ':id' ? await save(params) : await update({ ...params, id });
     if (resp.status === 200) {
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('components.Channel.index.5rg34u5fkfw0'), 'success');
         history.back();
         if ((window as any).onTabSaveSuccess) {
             (window as any).onTabSaveSuccess(resp);

@@ -3,16 +3,16 @@
         <div class="dash-board">
             <div class="header">
                 <div class="left">
-                    <h3 style="width: 80px">网络流量</h3>
+                    <h3 style="width: 80px">{{t('DashBoard.components.Network.5rg33t70bss0')}}</h3>
                     <j-radio-group
                         button-style="solid"
                         v-model:value="data.type"
                     >
                         <j-radio-button value="bytesRead">
-                            上行
+                            {{t('DashBoard.components.Network.5rg33t70cys0')}}
                         </j-radio-button>
                         <j-radio-button value="bytesSent">
-                            下行
+                            {{t('DashBoard.components.Network.5rg33t70djw0')}}
                         </j-radio-button>
                     </j-radio-group>
                 </div>
@@ -24,10 +24,10 @@
                         v-model:value="data.time.type"
                     >
                         <j-radio-button value="hour">
-                            最近1小时
+                            {{t('DashBoard.components.Network.5rg33t70e0g0')}}
                         </j-radio-button>
-                        <j-radio-button value="today"> 今日 </j-radio-button>
-                        <j-radio-button value="week"> 近一周 </j-radio-button>
+                        <j-radio-button value="today"> {{t('DashBoard.components.Network.5rg33t70ehk0')}} </j-radio-button>
+                        <j-radio-button value="week"> {{t('DashBoard.components.Network.5rg33t70epc0')}} </j-radio-button>
                     </j-radio-group>
                     <j-range-picker
                         :allowClear="false"
@@ -68,7 +68,9 @@ import {
 import dayjs from 'dayjs';
 import * as echarts from 'echarts';
 import { DataType } from '../typings.d';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
   serviceId: {
     type: String,

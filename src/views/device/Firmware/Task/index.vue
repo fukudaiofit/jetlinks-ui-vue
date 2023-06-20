@@ -19,7 +19,7 @@
                     hasPermission="device/Firmware:add"
                 >
                     <template #icon><AIcon type="PlusOutlined" /></template>
-                    新增
+                    {{t('Firmware.Task.index.5rg3no6rw940')}}
                 </PermissionButton>
             </template>
             <template #mode="slotProps">
@@ -57,7 +57,9 @@ import { task, startTask, stopTask } from '@/api/device/firmware';
 import { onlyMessage } from '@/utils/comm';
 import Save from './Save/index.vue';
 import { useMenuStore } from 'store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const tableRef = ref<Record<string, any>>({});
 const route = useRoute();
@@ -68,7 +70,7 @@ const current = ref({});
 
 const columns = [
     {
-        title: '任务名称',
+        title: t('Firmware.Task.index.5rg3no6rxnc0'),
         dataIndex: 'name',
         key: 'name',
         fixed: 'left',
@@ -79,7 +81,7 @@ const columns = [
         },
     },
     {
-        title: '推送方式',
+        title: t('Firmware.Task.index.5rg3no6rxww0'),
         dataIndex: 'mode',
         key: 'mode',
         ellipsis: true,
@@ -87,11 +89,11 @@ const columns = [
             type: 'select',
             options: [
                 {
-                    label: '设备拉取',
+                    label: t('Firmware.Task.index.5rg3no6ry500'),
                     value: 'pull',
                 },
                 {
-                    label: '平台推送',
+                    label: t('Firmware.Task.index.5rg3no6ry940'),
                     value: 'push',
                 },
             ],
@@ -101,7 +103,7 @@ const columns = [
     },
 
     {
-        title: '说明',
+        title: t('Firmware.Task.index.5rg3no6rydc0'),
         dataIndex: 'description',
         key: 'description',
         ellipsis: true,
@@ -110,14 +112,14 @@ const columns = [
         },
     },
     {
-        title: '完成比例',
+        title: t('Firmware.Task.index.5rg3no6rygs0'),
         dataIndex: 'progress',
         key: 'progress',
         ellipsis: true,
         scopedSlots: true,
     },
     {
-        title: '操作',
+        title: t('Firmware.Task.index.5rg3no6rynw0'),
         key: 'action',
         fixed: 'right',
         width: 200,
@@ -147,9 +149,9 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
     const Actions = [
         {
             key: 'view',
-            text: '详情',
+            text: t('Firmware.Task.index.5rg3no6ryrs0'),
             tooltip: {
-                title: '详情',
+                title: t('Firmware.Task.index.5rg3no6ryrs0'),
             },
             icon: 'icon-details',
             onClick: async () => {
@@ -158,9 +160,9 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
         },
         {
             key: 'view',
-            text: '查看',
+            text: t('Firmware.Task.index.5rg3no6rywg0'),
             tooltip: {
-                title: '查看',
+                title: t('Firmware.Task.index.5rg3no6rywg0'),
             },
             icon: 'EyeOutlined',
             onClick: async () => {
@@ -172,14 +174,14 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
     if (stop) {
         Actions.push({
             key: 'update',
-            text: '停止',
+            text: t('Firmware.Task.index.5rg3no6rz000'),
             tooltip: {
-                title: '停止',
+                title: t('Firmware.Task.index.5rg3no6rz000'),
             },
             onClick: async () => {
                 const res = await stopTask(data.id);
                 if (res.success) {
-                    onlyMessage('操作成功', 'success');
+                    onlyMessage(t('Firmware.Task.index.5rg3no6rz3o0'), 'success');
                     tableRef.value.reload();
                 }
             },
@@ -188,14 +190,14 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
     } else if (pause) {
         Actions.push({
             key: 'update',
-            text: '继续升级',
+            text: t('Firmware.Task.index.5rg3no6rz740'),
             tooltip: {
-                title: '继续升级',
+                title: t('Firmware.Task.index.5rg3no6rz740'),
             },
             onClick: async () => {
                 const res = await startTask(data.id, ['canceled']);
                 if (res.success) {
-                    onlyMessage('操作成功', 'success');
+                    onlyMessage(t('Firmware.Task.index.5rg3no6rz3o0'), 'success');
                     tableRef.value.reload();
                 }
             },
@@ -223,7 +225,7 @@ const saveChange = (value: boolean) => {
     visible.value = false;
     current.value = {};
     if (value) {
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Firmware.Task.index.5rg3no6rz3o0'), 'success');
         tableRef.value.reload();
     }
 };

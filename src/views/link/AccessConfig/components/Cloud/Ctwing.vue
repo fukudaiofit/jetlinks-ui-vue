@@ -7,7 +7,7 @@
             <div class="steps-box" v-if="current === 0">
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    通过CTWing平台的HTTP推送服务进行数据接入
+                    {{t('components.Cloud.Ctwing.5rg357patz40')}}
                 </div>
                 <div style="margin-top: 42px">
                     <j-row :gutter="[24, 24]">
@@ -22,7 +22,7 @@
                                 <j-row :gutter="[24, 24]">
                                     <j-col :span="12">
                                         <j-form-item
-                                            label="接口地址"
+                                            :label="t('components.Cloud.Ctwing.5rg357pav1s0')"
                                             name="apiAddress"
                                             :rules="[
                                                 {
@@ -45,19 +45,19 @@
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请输入appKey',
+                                                    message: t('components.Cloud.Ctwing.5rg357pav7s0'),
                                                 },
                                                 {
                                                     max: 64,
                                                     message:
-                                                        '最多可输入64个字符',
+                                                        t('components.Cloud.Ctwing.5rg357pavno0'),
                                                     trigger: 'blur',
                                                 },
                                             ]"
                                         >
                                             <j-input
                                                 v-model:value="formState.appKey"
-                                                placeholder="请输入appKey"
+                                                :placeholder="t('components.Cloud.Ctwing.5rg357pav7s0')"
                                             />
                                         </j-form-item>
                                     </j-col>
@@ -70,12 +70,12 @@
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请输入appSecret',
+                                                    message: t('components.Cloud.Ctwing.5rg357pavs40'),
                                                 },
                                                 {
                                                     max: 64,
                                                     message:
-                                                        '最多可输入64个字符',
+                                                        t('components.Cloud.Ctwing.5rg357pavno0'),
                                                     trigger: 'blur',
                                                 },
                                             ]"
@@ -84,7 +84,7 @@
                                                 v-model:value="
                                                     formState.appSecret
                                                 "
-                                                placeholder="请输入appSecret"
+                                                :placeholder="t('components.Cloud.Ctwing.5rg357pavs40')"
                                             />
                                         </j-form-item>
                                     </j-col>
@@ -92,11 +92,11 @@
                                 <j-row :gutter="[24, 24]">
                                     <j-col :span="24">
                                         <j-form-item
-                                            label="说明"
+                                            :label="t('components.Cloud.Ctwing.5rg357pavzc0')"
                                             name="description"
                                         >
                                             <j-textarea
-                                                placeholder="请输入说明"
+                                                :placeholder="t('components.Cloud.Ctwing.5rg357paw3c0')"
                                                 :rows="4"
                                                 v-model:value="
                                                     formState.description
@@ -111,7 +111,7 @@
                         <j-col :span="8">
                             <j-scrollbar height="500">
                                 <div class="doc">
-                                    <h1>操作指引：</h1>
+                                    <h1>{{t('components.Cloud.Ctwing.5rg357paw780')}}</h1>
                                     <div>
                                         1、CTWing端创建产品、设备，以及一个第三方应用
                                     </div>
@@ -144,7 +144,7 @@
                                     <div class="image">
                                         <j-image width="100%" :src="img3" />
                                     </div>
-                                    <h1>设备接入网关配置说明</h1>
+                                    <h1>{{t('components.Cloud.Ctwing.5rg357pawbc0')}}</h1>
                                     <div>
                                         1.请将CTWing的AEP平台-应用管理中的App
                                         Key和App Secret复制到当前页面
@@ -152,7 +152,7 @@
                                     <div class="image">
                                         <j-image width="100%" :src="img4" />
                                     </div>
-                                    <h1>其他说明</h1>
+                                    <h1>{{t('components.Cloud.Ctwing.5rg357pawfg0')}}</h1>
                                     <div>
                                         1.在IOT端启用设备时，若CTWing平台没有与之对应的设备，则将在CTWing端自动创建新设备
                                     </div>
@@ -167,12 +167,12 @@
             <div class="steps-box" v-if="current === 1">
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    只能选择HTTP通信方式的协议
+                    {{t('components.Cloud.Ctwing.5rg357pawis0')}}
                 </div>
                 <div class="search">
                     <j-input-search
                         allowClear
-                        placeholder="请输入"
+                        :placeholder="t('components.Cloud.Ctwing.5rg357pawmo0')"
                         style="width: 300px"
                         @search="procotolSearch"
                     />
@@ -183,7 +183,7 @@
                         hasPermission="link/Protocol:add"
                     >
                         <template #icon><AIcon type="PlusOutlined" /></template>
-                        新增
+                        {{t('components.Cloud.Ctwing.5rg357pawqg0')}}
                     </PermissionButton>
                 </div>
                 <j-scrollbar height="480">
@@ -209,7 +209,7 @@
                     <j-empty
                         style="margin-top: 10%"
                         v-else
-                        description="暂无数据"
+                        :description="t('components.Cloud.Ctwing.5rg357pawuo0')"
                     />
                 </j-scrollbar>
             </div>
@@ -217,7 +217,7 @@
         <div v-if="current === 2" class="card-last">
             <j-row :gutter="[24, 24]">
                 <j-col :span="12">
-                    <TitleComponent data="基本信息" />
+                    <TitleComponent :data="t('components.Cloud.Ctwing.5rg357pawzo0')" />
                     <j-form
                         :model="formData"
                         name="basic"
@@ -226,29 +226,29 @@
                         ref="formRef2"
                     >
                         <j-form-item
-                            label="名称"
+                            :label="t('components.Cloud.Ctwing.5rg357pax3k0')"
                             name="name"
                             :rules="[
                                 {
                                     required: true,
-                                    message: '请输入名称',
+                                    message: t('components.Cloud.Ctwing.5rg357pax740'),
                                     trigger: 'blur',
                                 },
                                 {
                                     max: 64,
-                                    message: '最多可输入64个字符',
+                                    message: t('components.Cloud.Ctwing.5rg357pavno0'),
                                     trigger: 'blur',
                                 },
                             ]"
                         >
                             <j-input
-                                placeholder="请输入名称"
+                                :placeholder="t('components.Cloud.Ctwing.5rg357pax740')"
                                 v-model:value="formData.name"
                             />
                         </j-form-item>
-                        <j-form-item label="说明" name="description">
+                        <j-form-item :label="t('components.Cloud.Ctwing.5rg357pavzc0')" name="description">
                             <j-textarea
-                                placeholder="请输入说明"
+                                :placeholder="t('components.Cloud.Ctwing.5rg357paw3c0')"
                                 :rows="4"
                                 v-model:value="formData.description"
                                 show-count
@@ -259,13 +259,13 @@
                 </j-col>
                 <j-col :span="12">
                     <div class="doc" style="height: 606px">
-                        <TitleComponent data="配置概览" />
+                        <TitleComponent :data="t('components.Cloud.Ctwing.5rg357paxao0')" />
                         <p>接入方式：{{ provider.name }}</p>
                         <p>
                             {{ provider.description }}
                         </p>
                         <p>消息协议：{{ procotolCurrent }}</p>
-                        <TitleComponent data="设备接入指引" />
+                        <TitleComponent :data="t('components.Cloud.Ctwing.5rg357paxeg0')" />
                         <p>
                             1、创建类型为{{
                                 props?.provider?.id === 'OneNet'
@@ -290,7 +290,7 @@
         </div>
         <div :class="current !== 2 ? 'steps-action' : 'steps-action-save'">
 
-          <j-button v-if="current > 0" @click="prev" style="margin-right: 8px"> 上一步 </j-button>
+          <j-button v-if="current > 0" @click="prev" style="margin-right: 8px"> {{t('components.Cloud.Ctwing.5rg357paxko0')}} </j-button>
             <PermissionButton
                 v-if="current === 2 && view === 'false'"
                 type="primary"
@@ -300,7 +300,7 @@
                     id === ':id' ? 'add' : 'update'
                 }`"
             >
-                保存
+                {{t('components.Cloud.Ctwing.5rg357paxqw0')}}
             </PermissionButton>
           <j-button
             v-if="[0, 1].includes(current)"
@@ -308,7 +308,7 @@
 
             @click="next"
           >
-            下一步
+            {{t('components.Cloud.Ctwing.5rg357paxu00')}}
           </j-button>
         </div>
     </div>
@@ -323,7 +323,9 @@ import AccessCard from '../AccessCard/index.vue';
 import { randomString } from '@/utils/utils';
 import { getImage } from '@/utils/comm';
 import { useMenuStore } from 'store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const origin = window.location.origin;
 const img1 = getImage('/network/01.png');
@@ -380,7 +382,7 @@ const showAddBtn = computed(() => {
 
 const current = ref(0);
 const stepCurrent = ref(0);
-const steps = ref(['接入配置', '消息协议', '完成']);
+const steps = ref([t('components.Cloud.Ctwing.5rg357paxzk0'), t('components.Cloud.Ctwing.5rg357pay2g0'), t('components.Cloud.Ctwing.5rg357pay5s0')]);
 const procotolList: any = ref([]);
 const allProcotolList = ref([]);
 const procotolCurrent: any = ref('');
@@ -422,7 +424,7 @@ const saveData = async () => {
                   id,
               });
     if (resp.status === 200) {
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('components.Cloud.Ctwing.5rg357pay900'), 'success');
         history.back();
         if ((window as any).onTabSaveSuccess) {
             (window as any).onTabSaveSuccess(resp);
@@ -463,7 +465,7 @@ const next = async () => {
         current.value = current.value + 1;
     } else if (current.value === 1) {
         if (!procotolCurrent.value) {
-            onlyMessage('请选择消息协议！', 'error');
+            onlyMessage(t('components.Cloud.Ctwing.5rg357payc00'), 'error');
         } else {
             current.value = current.value + 1;
         }

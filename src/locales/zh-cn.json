@@ -118,6 +118,24 @@
                 "5rcy7qt1vmw0": "批量删除设备",
                 "5rcy7qt1vso0": "批量禁用设备"
             }
+        },
+        "Firmware": {
+            "index": {
+                "5rg3o0pa74w0": "新增",
+                "5rg3o0pa84c0": "固件名称",
+                "5rg3o0pa8ds0": "固件版本",
+                "5rg3o0pa8iw0": "所属产品",
+                "5rg3o0pa8mw0": "签名方式",
+                "5rg3o0pa8sw0": "创建时间",
+                "5rg3o0pa8wk0": "说明",
+                "5rg3o0pa91s0": "操作",
+                "5rg3o0pa9600": "升级任务",
+                "5rg3o0pa99k0": "编辑",
+                "5rg3o0pa9d00": "删除",
+                "5rg3o0pa9gs0": "确认删除?",
+                "5rg3o0pa9k40": "取消",
+                "5rg3o0pa9o00": "操作成功"
+            }
         }
     },
     "common": {
@@ -454,6 +472,28 @@
                 "5rcxzrvjftk0": "近一周",
                 "5rcxzrvjkgg0": "近一月",
                 "5rcxzrvjl700": "近一年"
+            },
+            "Cpu": {
+                "5rg32qecq8o0": "最近1小时",
+                "5rg32qecrvs0": "今日",
+                "5rg32qecs7w0": "近一周"
+            },
+            "Jvm": {
+                "5rg33mevn3s0": "最近1小时",
+                "5rg33mevos40": "今日",
+                "5rg33mevtbg0": "近一周"
+            },
+            "Network": {
+                "5rg33t70bss0": "网络流量",
+                "5rg33t70cys0": "上行",
+                "5rg33t70djw0": "下行",
+                "5rg33t70e0g0": "最近1小时",
+                "5rg33t70ehk0": "今日",
+                "5rg33t70epc0": "近一周"
+            },
+            "TopCard": {
+                "5rg346ec9kc0": "磁盘占用",
+                "5rg346eccjc0": "系统内存"
             }
         }
     },
@@ -892,6 +932,234 @@
                 "5rcykwmcf3k0": "值",
                 "5rcykwmcfbs0": "操作成功！"
             }
+        },
+        "Channel": {
+            "index": {
+                "5rg34u5fd1w0": "基本信息",
+                "5rg34u5fgx40": "名称",
+                "5rg34u5fhc80": "请输入名称",
+                "5rg34u5fhjg0": "最多可输入64个字符",
+                "5rg34u5fi700": "说明",
+                "5rg34u5firs0": "请输入说明",
+                "5rg34u5fj6c0": "保存",
+                "5rg34u5fjqg0": "配置概览",
+                "5rg34u5fk540": "设备接入指引",
+                "5rg34u5fkfw0": "操作成功"
+            }
+        },
+        "Cloud": {
+            "Ctwing": {
+                "5rg357patz40": "通过CTWing平台的HTTP推送服务进行数据接入",
+                "5rg357pav1s0": "接口地址",
+                "5rg357pav7s0": "请输入appKey",
+                "5rg357pavno0": "最多可输入64个字符",
+                "5rg357pavs40": "请输入appSecret",
+                "5rg357pavzc0": "说明",
+                "5rg357paw3c0": "请输入说明",
+                "5rg357paw780": "操作指引：",
+                "5rg357pawbc0": "设备接入网关配置说明",
+                "5rg357pawfg0": "其他说明",
+                "5rg357pawis0": "只能选择HTTP通信方式的协议",
+                "5rg357pawmo0": "请输入",
+                "5rg357pawqg0": "新增",
+                "5rg357pawuo0": "暂无数据",
+                "5rg357pawzo0": "基本信息",
+                "5rg357pax3k0": "名称",
+                "5rg357pax740": "请输入名称",
+                "5rg357paxao0": "配置概览",
+                "5rg357paxeg0": "设备接入指引",
+                "5rg357paxko0": "上一步",
+                "5rg357paxqw0": "保存",
+                "5rg357paxu00": "下一步",
+                "5rg357paxzk0": "接入配置",
+                "5rg357pay2g0": "消息协议",
+                "5rg357pay5s0": "完成",
+                "5rg357pay900": "操作成功",
+                "5rg357payc00": "请选择消息协议！"
+            },
+            "OneNet": {
+                "5rg35msxx1s0": "通过OneNet平台的HTTP推送服务进行数据接入",
+                "5rg35msxxys0": "接口地址",
+                "5rg35msxy540": "同步物联网平台设备数据到OneNet",
+                "5rg35msxy9w0": "请输入apiKey",
+                "5rg35msxygg0": "最多可输入64个字符",
+                "5rg35msxylg0": "请输入通知Token",
+                "5rg35msxypo0": "通知Token",
+                "5rg35msxyu40": "自定义token,可用于验证请求是否来自OneNet",
+                "5rg35msxyyg0": "请输入aesKey",
+                "5rg35msxz300": "说明",
+                "5rg35msxz780": "请输入说明",
+                "5rg35msxzbo0": "操作指引：",
+                "5rg35msxzfs0": "参数",
+                "5rg35msxzjw0": "实例名称",
+                "5rg35msxzpo0": "推送实例的名称",
+                "5rg35msxzts0": "推送地址",
+                "5rg35msxzy80": "消息加密",
+                "5rg35msy02g0": "采用AES加密算法对推送的数据进行数据加密，AesKey为加密秘钥",
+                "5rg35msy0700": "设备接入网关配置说明",
+                "5rg35msy0bg0": "填写OneNet数据推送配置中设置的Token",
+                "5rg35msy0i40": "若OneNet数据推送配置了消息加密，此处填写OneNet端数据推送配置中设置的aesKey",
+                "5rg35msy0ls0": "其他说明",
+                "5rg35msy0rc0": "只能选择HTTP通信方式的协议",
+                "5rg35msy0v40": "请输入",
+                "5rg35msy0yw0": "新增",
+                "5rg35msy12c0": "暂无数据",
+                "5rg35msy16w0": "基本信息",
+                "5rg35msy1bc0": "名称",
+                "5rg35msy1f00": "请输入名称",
+                "5rg35msy1is0": "配置概览",
+                "5rg35msy1mc0": "设备接入指引",
+                "5rg35msy1pw0": "上一步",
+                "5rg35msy1t40": "保存",
+                "5rg35msy1ww0": "下一步",
+                "5rg35msy20c0": "接入配置",
+                "5rg35msy23o0": "消息协议",
+                "5rg35msy29c0": "完成",
+                "5rg35msy2cw0": "操作成功",
+                "5rg35msy2hc0": "请选择消息协议！"
+            }
+        },
+        "Edge": {
+            "index": {
+                "5rg35yn3cq40": "选择与设备通信的网络组件",
+                "5rg35yn3e6o0": "请输入",
+                "5rg35yn3ef80": "新增",
+                "5rg35yn3em80": "暂无数据",
+                "5rg35yn3ex80": "基本信息",
+                "5rg35yn3f5k0": "名称",
+                "5rg35yn3fbo0": "请输入名称",
+                "5rg35yn3flk0": "最多可输入64个字符",
+                "5rg35yn3frw0": "说明",
+                "5rg35yn3fy80": "请输入说明",
+                "5rg35yn3g3o0": "保存",
+                "5rg35yn3ga00": "配置概览",
+                "5rg35yn3gfk0": "上一步",
+                "5rg35yn3gnk0": "下一步",
+                "5rg35yn3gvo0": "网络组件",
+                "5rg35yn3h180": "完成",
+                "5rg35yn3h600": "操作成功",
+                "5rg35yn3hd40": "请选择网络组件！"
+            }
+        },
+        "Media": {
+            "GB28181": {
+                "5rg365montk0": "域\"",
+                "5rg365moo4o0": "域',",
+                "5rg365mop740": "地址\"",
+                "5rg365moqng0": "地址',",
+                "5rg371r676s0": "配置设备信令参数",
+                "5rg371r685s0": "请输入SIP域",
+                "5rg371r68bk0": "最多可输入64个字符",
+                "5rg371r68hk0": "请输入SIPID",
+                "5rg371r68lg0": "请选择集群",
+                "5rg371r68po0": "集群",
+                "5rg371r68to0": "共享配置",
+                "5rg371r68x80": "独立配置",
+                "5rg371r69100": "请选择SIP地址",
+                "5rg371r694s0": "请选择端口",
+                "5rg371r698g0": "公网Host",
+                "5rg371r69cc0": "请输入IP地址",
+                "5rg371r69fw0": "请输入正确的IP地址",
+                "5rg371r69l00": "输入端口",
+                "5rg371r69oo0": "请输入端口",
+                "5rg371r69s80": "删除",
+                "5rg371r69wc0": "节点名称",
+                "5rg371r6a0c0": "请选择节点名称",
+                "5rg371r6a3s0": "地址",
+                "5rg371r6a7k0": "请选择IP地址",
+                "5rg371r6ac80": "请输入公网Host",
+                "5rg371r6af80": "公网",
+                "5rg371r6aks0": "监听指定端口的请求",
+                "5rg371r6ano0": "新增",
+                "5rg371r6aqs0": "基本信息",
+                "5rg371r6ato0": "名称",
+                "5rg371r6awo0": "请输入名称",
+                "5rg371r6azk0": "说明",
+                "5rg371r6b3s0": "请输入说明",
+                "5rg371r6b6s0": "接入方式",
+                "5rg371r6ba00": "消息协议",
+                "5rg371r6bd00": "下一步",
+                "5rg371r6bfs0": "保存",
+                "5rg371r6bio0": "上一步",
+                "5rg371r6bls0": "信令配置",
+                "5rg371r6bqw0": "完成",
+                "5rg371r6bts0": "最多可输入200个字符",
+                "5rg371r6bwo0": "操作成功",
+                "5rg371r6bzk0": "请新增或完善配置"
+            },
+            "index": {
+                "5rg37iwxsow0": "基本信息",
+                "5rg37iwxu080": "名称",
+                "5rg37iwxu8k0": "请输入名称",
+                "5rg37iwxuf40": "最多可输入64个字符",
+                "5rg37iwxul00": "说明",
+                "5rg37iwxurg0": "请输入说明",
+                "5rg37iwxuzg0": "保存",
+                "5rg37iwxv500": "接入方式",
+                "5rg37iwxvao0": "消息协议",
+                "5rg37iwxvfw0": "操作成功"
+            }
+        },
+        "Network": {
+            "index": {
+                "5rg37sm5quk0": "选择与设备通信的网络组件",
+                "5rg37sm5s0c0": "请输入",
+                "5rg37sm5s6c0": "新增",
+                "5rg37sm5sb40": "暂无数据",
+                "5rg37sm5sf80": "使用选择的消息协议，对网络组件通信数据进行编解码、认证等操作",
+                "5rg37sm5sk80": "基本信息",
+                "5rg37sm5so40": "名称",
+                "5rg37sm5ssc0": "请输入名称",
+                "5rg37sm5sws0": "说明",
+                "5rg37sm5t0w0": "请输入说明",
+                "5rg37sm5t4w0": "接入方式",
+                "5rg37sm5tak0": "消息协议",
+                "5rg37sm5tec0": "网络组件",
+                "5rg37sm5ti80": "上一步",
+                "5rg37sm5tm00": "保存",
+                "5rg37sm5tpw0": "下一步",
+                "5rg37sm5tu00": "完成",
+                "5rg37sm5u200": "最多可输入64个字符",
+                "5rg37sm5u640": "最多可输入200个字符",
+                "5rg37sm5ua80": "上行、下行",
+                "5rg37sm5ug40": "上行",
+                "5rg37sm5ujc0": "下行",
+                "5rg37sm5un80": "操作成功",
+                "5rg37sm5uqk0": "请选择网络组件！",
+                "5rg37sm5uuo0": "请选择消息协议！",
+                "5rg37sm5uzo0": "分组"
+            }
+        },
+        "Plugin": {
+            "index": {
+                "5rg386071gw0": "选择插件",
+                "5rg386072x80": "完成",
+                "5rg386073740": "请输入",
+                "5rg386073ec0": "新增",
+                "5rg386073kk0": "插件ID：",
+                "5rg386073q40": "版本号：",
+                "5rg386073z40": "暂无数据",
+                "5rg386074680": "基本信息",
+                "5rg386074c40": "名称",
+                "5rg386074jc0": "请输入名称",
+                "5rg386074ro0": "最多可输入64个字符",
+                "5rg386074xs0": "说明",
+                "5rg3860752o0": "最多可输入200个字符",
+                "5rg3860757s0": "请输入说明",
+                "5rg386075cg0": "通用配置",
+                "5rg386075gw0": "上一步",
+                "5rg386075p80": "保存",
+                "5rg386075v80": "下一步",
+                "5rg386075zk0": "输入",
+                "5rg386076500": "选择",
+                "5rg386076dw0": "请选择插件！",
+                "5rg386076hw0": "操作成功"
+            }
+        },
+        "Provider": {
+            "index": {
+                "5rg38m5uiv00": "接入"
+            }
         }
     },
     "Instance": {
@@ -1251,6 +1519,480 @@
                 "5rcynmzg3rc0": "近一月",
                 "5rcynmzg3wk0": "开始时间",
                 "5rcynmzg41g0": "结束时间"
+            }
+        }
+    },
+    "AccessConfig": {
+        "Detail": {
+            "index": {
+                "5rg38tlqhw80": "返回",
+                "5rg38tlqiyk0": "视频类设备接入",
+                "5rg38tlqj680": "云平台接入",
+                "5rg38tlqjc80": "通道类设备接入",
+                "5rg38tlqjg00": "官方接入",
+                "5rg38tlqjk00": "自定义设备接入"
+            }
+        }
+    },
+    "link": {
+        "AccessConfig": {
+            "index": {
+                "5rg395qkd1o0": "新增",
+                "5rg395qke9c0": "协议",
+                "5rg395qkeis0": "名称",
+                "5rg395qkeq00": "网关类型",
+                "5rg395qkex40": "状态",
+                "5rg395qkf340": "禁用",
+                "5rg395qkf9g0": "正常",
+                "5rg395qkff00": "说明",
+                "5rg395qkfko0": "操作",
+                "5rg395qkfv00": "启用",
+                "5rg395qkg200": "编辑",
+                "5rg395qkg880": "操作成功",
+                "5rg395qkgdo0": "删除",
+                "5rg395qkgj80": "请先禁用，再删除",
+                "5rg395qkgpc0": "确认删除?"
+            }
+        },
+        "Protocol": {
+            "index": {
+                "5rg3cmuyuck0": "新增",
+                "5rg3cmuyvbk0": "类型",
+                "5rg3cmuyvi40": "名称",
+                "5rg3cmuyvno0": "说明",
+                "5rg3cmuyvrs0": "操作",
+                "5rg3cmuyvwc0": "编辑",
+                "5rg3cmuyw0o0": "删除",
+                "5rg3cmuyw4s0": "确认删除?",
+                "5rg3cmuyw9c0": "操作成功"
+            }
+        },
+        "Type": {
+            "index": {
+                "5rg3f4lisdw0": "新增",
+                "5rg3f4litms0": "类型",
+                "5rg3f4litsw0": "详情",
+                "5rg3f4litxs0": "共享配置",
+                "5rg3f4liu240": "独立配置",
+                "5rg3f4liu6o0": "名称",
+                "5rg3f4liuag0": "集群",
+                "5rg3f4liue40": "状态",
+                "5rg3f4liuhw0": "正常",
+                "5rg3f4liupk0": "禁用",
+                "5rg3f4liut40": "说明",
+                "5rg3f4liuwo0": "操作",
+                "5rg3f4liv040": "启用",
+                "5rg3f4liv3w0": "查看",
+                "5rg3f4liv7g0": "编辑",
+                "5rg3f4livb00": "操作成功",
+                "5rg3f4livhs0": "删除",
+                "5rg3f4livlo0": "请先禁用该组件，再删除。",
+                "5rg3f4livp00": "确认删除?"
+            }
+        },
+        "Certificate": {
+            "index": {
+                "5rg3ho1cvv00": "新增",
+                "5rg3ho1cwq80": "证书标准",
+                "5rg3ho1cwwk0": "国际标准",
+                "5rg3ho1cx100": "证书名称",
+                "5rg3ho1cx580": "说明",
+                "5rg3ho1cxa00": "操作",
+                "5rg3ho1cxe40": "编辑",
+                "5rg3ho1cxhw0": "删除",
+                "5rg3ho1cxo40": "确认删除?",
+                "5rg3ho1cxsc0": "取消",
+                "5rg3ho1cxwg0": "操作成功"
+            }
+        },
+        "plugin": {
+            "index": {
+                "5rg3olbuesc0": "新增",
+                "5rg3olbuioc0": "插件ID",
+                "5rg3olbuixs0": "插件类型",
+                "5rg3olbuj340": "插件名称",
+                "5rg3olbuj8w0": "说明",
+                "5rg3olbujg80": "操作",
+                "5rg3olbujks0": "编辑",
+                "5rg3olbujow0": "删除",
+                "5rg3olbuk2s0": "确认删除?",
+                "5rg3olbukp00": "操作成功！",
+                "5rg3olbuku40": "操作失败！"
+            },
+            "Save": {
+                "5rg3orwt8fs0": "编辑",
+                "5rg3orwt9ow0": "新增",
+                "5rg3orwt9xg0": "插件ID",
+                "5rg3orwta6o0": "若不填写，系统将自动生成唯一ID",
+                "5rg3orwtabk0": "插件名称",
+                "5rg3orwtakg0": "文件",
+                "5rg3orwtar00": "请上传文件",
+                "5rg3orwtavs0": "插件类型：",
+                "5rg3orwtb140": "版本：",
+                "5rg3orwtb5g0": "说明",
+                "5rg3orwtbb00": "请输入说明",
+                "5rg3orwtbgs0": "操作成功！"
+            },
+            "UploadFile": {
+                "5rg3pdwr2co0": "上传文件",
+                "5rg3pdwr3qo0": "格式要求：.jar",
+                "5rg3pdwr3ws0": "请上传.jar,.zip格式的文件",
+                "5rg3pdwr41g0": "上传成功！",
+                "5rg3pdwr45c0": "系统提示",
+                "5rg3pdwr4a80": "系统未知错误，请反馈给管理员"
+            }
+        }
+    },
+    "Protocol": {
+        "Save": {
+            "FileUpload": {
+                "5rg3c03fs5s0": "请上传文件",
+                "5rg3c03fsy80": "上传jar包",
+                "5rg3c03ft400": "请上传.zip.jar格式的文件",
+                "5rg3c03ft8s0": "上传成功！",
+                "5rg3c03ftd80": "系统提示",
+                "5rg3c03ftho0": "系统未知错误，请反馈给管理员"
+            },
+            "index": {
+                "5rg3c8t7zl00": "编辑",
+                "5rg3c8t82as0": "新增",
+                "5rg3c8t82ko0": "名称",
+                "5rg3c8t82qg0": "请输入名称",
+                "5rg3c8t82xk0": "最多可输入64个字符",
+                "5rg3c8t83400": "类型",
+                "5rg3c8t83800": "请选择类型",
+                "5rg3c8t83d00": "文件地址",
+                "5rg3c8t83io0": "请输入文件地址",
+                "5rg3c8t83ms0": "说明",
+                "5rg3c8t83s00": "请输入说明",
+                "5rg3c8t83wo0": "取消",
+                "5rg3c8t840c0": "确认",
+                "5rg3c8t844k0": "上传成功！"
+            }
+        }
+    },
+    "Log": {
+        "Access": {
+            "index": {
+                "5rg3d9zz8fo0": "详情",
+                "5rg3d9zz9ok0": "请求方法",
+                "5rg3d9zz9vw0": "动作",
+                "5rg3d9zza1g0": "类名",
+                "5rg3d9zza6o0": "方法名",
+                "5rg3d9zzac00": "请求时间",
+                "5rg3d9zzah00": "请求耗时",
+                "5rg3d9zzamk0": "请求头",
+                "5rg3d9zzark0": "请求参数",
+                "5rg3d9zzb080": "异常信息",
+                "5rg3d9zzb6s0": "暂无数据",
+                "5rg3d9zzbbk0": "关闭",
+                "5rg3d9zzbg00": "请求路径",
+                "5rg3d9zzbkc0": "说明",
+                "5rg3d9zzbow0": "请求用户",
+                "5rg3d9zzbt40": "操作",
+                "5rg3d9zzbxo0": "查看"
+            }
+        },
+        "System": {
+            "index": {
+                "5rg3dimnkg00": "详情",
+                "5rg3dimnlr00": "暂无数据",
+                "5rg3dimnlzg0": "关闭",
+                "5rg3dimnm5o0": "名称",
+                "5rg3dimnme80": "日志级别",
+                "5rg3dimnmkg0": "日志内容",
+                "5rg3dimnmpg0": "服务名",
+                "5rg3dimnmuk0": "创建时间",
+                "5rg3dimnn000": "操作",
+                "5rg3dimnn580": "查看"
+            }
+        }
+    },
+    "views": {
+        "Log": {
+            "index": {
+                "5rg3dtx8n4g0": "访问日志",
+                "5rg3dtx8o0s0": "系统日志"
+            }
+        }
+    },
+    "Type": {
+        "Detail": {
+            "index": {
+                "5rg3eiq3c2w0": "名称",
+                "5rg3eiq3d2g0": "请输入名称",
+                "5rg3eiq3d8g0": "类型",
+                "5rg3eiq3dd00": "请选择类型",
+                "5rg3eiq3dgw0": "集群",
+                "5rg3eiq3dlg0": "共享配置",
+                "5rg3eiq3dpg0": "独立配置",
+                "5rg3eiq3dtc0": "删除",
+                "5rg3eiq3dxg0": "节点名称",
+                "5rg3eiq3e180": "请选择节点名称",
+                "5rg3eiq3e500": "本地地址",
+                "5rg3eiq3eak0": "请选择本地地址",
+                "5rg3eiq3eeg0": "本地端口",
+                "5rg3eiq3ei80": "监听指定端口的请求",
+                "5rg3eiq3elw0": "请选择本地端口",
+                "5rg3eiq3epg0": "公网地址",
+                "5rg3eiq3etg0": "对外提供访问的地址,内网环境时填写服务器的内网IP地址",
+                "5rg3eiq3ex80": "请输入公网地址",
+                "5rg3eiq3f240": "公网端口",
+                "5rg3eiq3f600": "对外提供访问的端口",
+                "5rg3eiq3faw0": "请输入端口",
+                "5rg3eiq3fe40": "远程地址",
+                "5rg3eiq3fic0": "请输入远程地址",
+                "5rg3eiq3flg0": "远程端口",
+                "5rg3eiq3fpo0": "请输入远程端口",
+                "5rg3eiq3fso0": "请输入ClientId",
+                "5rg3eiq3fw40": "用户名",
+                "5rg3eiq3fzk0": "请输入用户名",
+                "5rg3eiq3g2s0": "密码",
+                "5rg3eiq3g600": "请输入密码",
+                "5rg3eiq3g940": "订阅前缀",
+                "5rg3eiq3gc40": "请输入订阅前缀",
+                "5rg3eiq3ggk0": "最大消息长度",
+                "5rg3eiq3gk00": "请输入最大消息长度",
+                "5rg3eiq3gmw0": "开启DTLS",
+                "5rg3eiq3gq40": "开启TLS",
+                "5rg3eiq3gtg0": "是",
+                "5rg3eiq3gwk0": "否",
+                "5rg3eiq3gzk0": "证书",
+                "5rg3eiq3h3s0": "请选择证书",
+                "5rg3eiq3h700": "私钥别名",
+                "5rg3eiq3hac0": "请输入私钥别名",
+                "5rg3eiq3hdc0": "粘拆包规则",
+                "5rg3eiq3hgk0": "处理TCP粘拆包的方式",
+                "5rg3eiq3hms0": "请选择粘拆包规则",
+                "5rg3eiq3hps0": "分隔符",
+                "5rg3eiq3hsw0": "请输入分隔符",
+                "5rg3eiq3hvw0": "脚本语言",
+                "5rg3eiq3hz00": "解析脚本",
+                "5rg3eiq3i200": "长度值",
+                "5rg3eiq3i500": "请输入长度值",
+                "5rg3eiq3i8c0": "长度",
+                "5rg3eiq3ico0": "请选择长度",
+                "5rg3eiq3ifo0": "偏移量",
+                "5rg3eiq3iio0": "请输入偏移量",
+                "5rg3eiq3ilo0": "大小端",
+                "5rg3eiq3ioo0": "请选择大小端",
+                "5rg3eiq3irw0": "新增",
+                "5rg3eiq3ius0": "说明",
+                "5rg3eiq3ixs0": "保存",
+                "5rg3eiq3j0o0": "请新增或完善配置",
+                "5rg3eiq3j3o0": "操作成功"
+            },
+            "LocalAddressSelect": {
+                "5rg3etsypko0": "请选择本地地址"
+            }
+        }
+    },
+    "Certificate": {
+        "Detail": {
+            "CertificateFile": {
+                "5rg3h3i3al80": "上传文件",
+                "5rg3h3i3bqs0": "上传成功！",
+                "5rg3h3i3bww0": "请上传.pem格式的文件"
+            },
+            "index": {
+                "5rg3hg3xaeo0": "证书标准",
+                "5rg3hg3xc9g0": "证书名称",
+                "5rg3hg3xco40": "请输入证书名称",
+                "5rg3hg3xcvk0": "证书文件",
+                "5rg3hg3xdbk0": "请输入证书文件",
+                "5rg3hg3xdjs0": "证书私钥",
+                "5rg3hg3xe000": "请输入证书私钥",
+                "5rg3hg3xe6k0": "说明",
+                "5rg3hg3xedg0": "请输入说明",
+                "5rg3hg3xek00": "保存",
+                "5rg3hg3xeoc0": "概述",
+                "5rg3hg3xes00": "证书由受信任的数字证书颁发机构CA，在验证服务器身份后颁发，具有服务器身份验证和数据传输加密功能，保障设备与平台间的数据传输安全。配置后可被网络组件引用。",
+                "5rg3hg3xevk0": "配置说明",
+                "5rg3hg3xezg0": "您可以使用文本编辑工具打开PEM格式的证书文件，复制其中的内容并粘贴到该文本框，或者单击该文本框下的上传，并选择存储在本地计算机的证书文件，将文件内容上传到文本框。",
+                "5rg3hg3xf4s0": "填写证书私钥内容的PEM编码。",
+                "5rg3hg3xf8o0": "您可以使用文本编辑工具打开KEY格式的证书私钥文件，复制其中的内容并粘贴到该文本框，或者单击该文本框下的上传并选择存储在本地计算机的证书私钥文件，将文件内容上传到文本框。",
+                "5rg3hg3xfc80": "请选择证书标准",
+                "5rg3hg3xffs0": "最多可输入64个字符",
+                "5rg3hg3xfjw0": "请输入或上传文件",
+                "5rg3hg3xfns0": "最多可输入200个字符",
+                "5rg3hg3xfyo0": "操作成功",
+                "5rg3hg3xg1s0": "上传成功！"
+            }
+        }
+    },
+    "Stream": {
+        "Detail": {
+            "index": {
+                "5rg3j3op5cg0": "流媒体名称",
+                "5rg3j3op6w80": "请输入流媒体名称",
+                "5rg3j3op75s0": "最大可输入64个字符",
+                "5rg3j3op7hc0": "服务商",
+                "5rg3j3op7o40": "请选择服务商",
+                "5rg3j3op7tw0": "密钥",
+                "5rg3j3op7yo0": "请输入密钥",
+                "5rg3j3op8340": "请输入正确的IP地址或者域名",
+                "5rg3j3op88g0": "调用流媒体接口时请求的服务地址",
+                "5rg3j3op8co0": "请输入端口",
+                "5rg3j3op8gw0": "请输入输入端口",
+                "5rg3j3op8lk0": "视频设备将流推送到该IP地址下，部分设备仅支持IP地址，建议全是用IP地址",
+                "5rg3j3op8uc0": "请输入起始端口",
+                "5rg3j3op9000": "起始端口",
+                "5rg3j3op95c0": "至",
+                "5rg3j3op9b80": "请输入终止端口",
+                "5rg3j3op9ho0": "终止端口",
+                "5rg3j3op9n00": "动态端口",
+                "5rg3j3op9sg0": "保存",
+                "5rg3j3op9z80": "操作成功"
+            }
+        }
+    },
+    "media": {
+        "Stream": {
+            "index": {
+                "5rg3jccphhs0": "新增",
+                "5rg3jccpizw0": "服务商",
+                "5rg3jccpjcw0": "名称",
+                "5rg3jccpjl00": "状态",
+                "5rg3jccpjw80": "禁用",
+                "5rg3jccpk440": "正常",
+                "5rg3jccpkag0": "启用",
+                "5rg3jccpkh40": "编辑",
+                "5rg3jccpkok0": "操作成功",
+                "5rg3jccpkxs0": "删除",
+                "5rg3jccpl3w0": "正常的流媒体不能删除",
+                "5rg3jccpl9w0": "确认删除?"
+            }
+        }
+    },
+    "Firmware": {
+        "Save": {
+            "FileUpload": {
+                "5rg3k3pfnsw0": "请上传文件",
+                "5rg3k3pfpbk0": "上传文件",
+                "5rg3k3pfplc0": "上传成功！",
+                "5rg3k3pfpsc0": "系统提示",
+                "5rg3k3pfpy40": "系统未知错误，请反馈给管理员"
+            },
+            "index": {
+                "5rg3ke3wyqk0": "编辑",
+                "5rg3ke3x02w0": "新增",
+                "5rg3ke3x0bo0": "确认",
+                "5rg3ke3x0ho0": "取消",
+                "5rg3ke3x0n40": "名称",
+                "5rg3ke3x0t00": "请输入名称",
+                "5rg3ke3x0y80": "所属产品",
+                "5rg3ke3x13c0": "请选择所属产品",
+                "5rg3ke3x1bo0": "版本号",
+                "5rg3ke3x1hw0": "请输入版本号",
+                "5rg3ke3x1n40": "版本序号",
+                "5rg3ke3x1s80": "请输入版本序号",
+                "5rg3ke3x2040": "签名方式",
+                "5rg3ke3x25c0": "请选择签名方式",
+                "5rg3ke3x29w0": "签名",
+                "5rg3ke3x2ec0": "请输入本地文件进行签名加密后的值",
+                "5rg3ke3x2jg0": "请输入签名",
+                "5rg3ke3x2o40": "固件上传",
+                "5rg3ke3x2tg0": "其他配置",
+                "5rg3ke3x31s0": "请输入KEY",
+                "5rg3ke3x39w0": "请输入VALUE",
+                "5rg3ke3x3gw0": "操作",
+                "5rg3ke3x3m80": "确认删除吗？",
+                "5rg3ke3x3qc0": "添加",
+                "5rg3ke3x3ug0": "说明",
+                "5rg3ke3x3z00": "请输入说明",
+                "5rg3ke3x42o0": "签名不一致，请检查文件是否上传正确",
+                "5rg3ke3x45w0": "版本序号已存在",
+                "5rg3ke3x4dc0": "最多可输入64个字符",
+                "5rg3ke3x4hc0": "请上传文件",
+                "5rg3ke3x4l40": "最多可输入200个字符",
+                "5rg3ke3x4p00": "操作成功"
+            }
+        },
+        "Task": {
+            "index": {
+                "5rg3no6rw940": "新增",
+                "5rg3no6rxnc0": "任务名称",
+                "5rg3no6rxww0": "推送方式",
+                "5rg3no6ry500": "设备拉取",
+                "5rg3no6ry940": "平台推送",
+                "5rg3no6rydc0": "说明",
+                "5rg3no6rygs0": "完成比例",
+                "5rg3no6rynw0": "操作",
+                "5rg3no6ryrs0": "详情",
+                "5rg3no6rywg0": "查看",
+                "5rg3no6rz000": "停止",
+                "5rg3no6rz3o0": "操作成功",
+                "5rg3no6rz740": "继续升级"
+            }
+        }
+    },
+    "Task": {
+        "Detail": {
+            "index": {
+                "5rg3ld5xs5k0": "批量重试",
+                "5rg3ld5xtek0": "等待升级",
+                "5rg3ld5xtns0": "升级中",
+                "5rg3ld5xtu40": "升级完成",
+                "5rg3ld5xu0k0": "升级失败",
+                "5rg3ld5xu6g0": "已停止",
+                "5rg3ld5xuc00": "设备名称",
+                "5rg3ld5xui40": "所属产品",
+                "5rg3ld5xuog0": "创建时间",
+                "5rg3ld5xuuc0": "完成时间",
+                "5rg3ld5xuzo0": "进度",
+                "5rg3ld5xva40": "状态",
+                "5rg3ld5xvfc0": "操作",
+                "5rg3ld5xvkg0": "查看",
+                "5rg3ld5xvps0": "重试",
+                "5rg3ld5xvv40": "操作成功"
+            },
+            "Save": {
+                "5rg3lv59ig00": "查看",
+                "5rg3lv59j7w0": "确认",
+                "5rg3lv59jdg0": "取消"
+            }
+        },
+        "Save": {
+            "index": {
+                "5rg3m1fsf1o0": "查看",
+                "5rg3m1fsgm80": "新增",
+                "5rg3m1fsgxk0": "任务",
+                "5rg3m1fsh5s0": "确认",
+                "5rg3m1fshd00": "取消",
+                "5rg3m1fshks0": "任务名称",
+                "5rg3m1fshs00": "请输入任务名称",
+                "5rg3m1fshyk0": "推送方式",
+                "5rg3m1fsi5k0": "平台推送",
+                "5rg3m1fsic00": "设备拉取",
+                "5rg3m1fsiiw0": "请选择推送方式",
+                "5rg3m1fsipc0": "响应超时时间",
+                "5rg3m1fsj280": "请输入响应超时时间(秒)",
+                "5rg3m1fsjdk0": "升级超时时间",
+                "5rg3m1fsjmo0": "请输入升级超时时间(秒)",
+                "5rg3m1fsjss0": "升级设备",
+                "5rg3m1fsjzc0": "所有设备",
+                "5rg3m1fsk540": "选择设备",
+                "5rg3m1fskb40": "说明",
+                "5rg3m1fski40": "请输入说明",
+                "5rg3m1fskss0": "最多可输入64个字符",
+                "5rg3m1fskxc0": "请输入响应超时时间",
+                "5rg3m1fsl5k0": "请输入升级超时时间",
+                "5rg3m1fslao0": "请选择设备",
+                "5rg3m1fslfo0": "最多可输入200个字符"
+            },
+            "SelectDevices": {
+                "5rg3nf1cszo0": "请选择设备",
+                "5rg3nf1culg0": "选择设备",
+                "5rg3nf1cutk0": "确认",
+                "5rg3nf1cv3k0": "取消",
+                "5rg3nf1cv8w0": "全选",
+                "5rg3nf1cvjw0": "设备名称",
+                "5rg3nf1cvq80": "固件版本",
+                "5rg3nf1cvvw0": "注册时间",
+                "5rg3nf1cw1c0": "状态",
+                "5rg3nf1cw6c0": "在线",
+                "5rg3nf1cwb80": "离线",
+                "5rg3nf1cwg80": "禁用"
             }
         }
     }

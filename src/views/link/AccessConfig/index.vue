@@ -28,7 +28,7 @@
                             <template #icon
                                 ><AIcon type="PlusOutlined"
                             /></template>
-                            新增
+                            {{t('link.AccessConfig.index.5rg395qkd1o0')}}
                         </PermissionButton>
                     </template>
                     <template #card="slotProps">
@@ -108,7 +108,7 @@
                                             <div
                                                 class="card-item-content-text-title"
                                             >
-                                                协议
+                                                {{t('link.AccessConfig.index.5rg395qke9c0')}}
                                             </div>
                                             <Ellipsis
                                                 style="
@@ -194,7 +194,9 @@ import {
 import { onlyMessage } from '@/utils/comm';
 import { useMenuStore } from 'store/menu';
 import { accessConfigTypeFilter } from '@/utils/setting';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const tableRef = ref<Record<string, any>>({});
 const params = ref<Record<string, any>>({});
@@ -208,7 +210,7 @@ statusMap.set('disabled', 'error');
 
 const columns = [
     {
-        title: '名称',
+        title: t('link.AccessConfig.index.5rg395qkeis0'),
         dataIndex: 'name',
         key: 'name',
         search: {
@@ -217,7 +219,7 @@ const columns = [
         // scopedSlots: true,
     },
     {
-        title: '网关类型',
+        title: t('link.AccessConfig.index.5rg395qkeq00'),
         dataIndex: 'provider',
         key: 'provider',
         search: {
@@ -226,18 +228,18 @@ const columns = [
         },
     },
     {
-        title: '状态',
+        title: t('link.AccessConfig.index.5rg395qkex40'),
         dataIndex: 'state',
         key: 'state',
         search: {
             type: 'select',
             options: [
                 {
-                    label: '禁用',
+                    label: t('link.AccessConfig.index.5rg395qkf340'),
                     value: 'disabled',
                 },
                 {
-                    label: '正常',
+                    label: t('link.AccessConfig.index.5rg395qkf9g0'),
                     value: 'enabled',
                 },
             ],
@@ -245,7 +247,7 @@ const columns = [
         scopedSlots: true,
     },
     {
-        title: '说明',
+        title: t('link.AccessConfig.index.5rg395qkff00'),
         dataIndex: 'description',
         key: 'description',
         search: {
@@ -253,7 +255,7 @@ const columns = [
         },
     },
     {
-        title: '操作',
+        title: t('link.AccessConfig.index.5rg395qkfko0'),
         key: 'action',
         fixed: 'right',
         width: 200,
@@ -264,13 +266,13 @@ const columns = [
 const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
     if (!data) return [];
     const state = data.state.value;
-    const stateText = state === 'enabled' ? '禁用' : '启用';
+    const stateText = state === 'enabled' ? t('link.AccessConfig.index.5rg395qkf340') : t('link.AccessConfig.index.5rg395qkfv00');
     return [
         {
             key: 'update',
-            text: '编辑',
+            text: t('link.AccessConfig.index.5rg395qkg200'),
             tooltip: {
-                title: '编辑',
+                title: t('link.AccessConfig.index.5rg395qkg200'),
             },
             icon: 'EditOutlined',
             onClick: async () => {
@@ -293,7 +295,7 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
                             : await deploy(data.id);
 
                     if (res.success) {
-                        onlyMessage('操作成功', 'success');
+                        onlyMessage(t('link.AccessConfig.index.5rg395qkg880'), 'success');
                         tableRef.value?.reload();
                     }
                 },
@@ -301,17 +303,17 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
         },
         {
             key: 'delete',
-            text: '删除',
+            text: t('link.AccessConfig.index.5rg395qkgdo0'),
             disabled: state === 'enabled',
             tooltip: {
-                title: state === 'enabled' ? '请先禁用，再删除' : '删除',
+                title: state === 'enabled' ? t('link.AccessConfig.index.5rg395qkgj80') : t('link.AccessConfig.index.5rg395qkgdo0'),
             },
             popConfirm: {
-                title: '确认删除?',
+                title: t('link.AccessConfig.index.5rg395qkgpc0'),
                 onConfirm: async () => {
                     const res: any = await remove(data.id);
                     if (res.status === 200) {
-                        onlyMessage('操作成功', 'success');
+                        onlyMessage(t('link.AccessConfig.index.5rg395qkg880'), 'success');
                         tableRef.value.reload();
                     } else {
                         onlyMessage(res?.message, 'error');

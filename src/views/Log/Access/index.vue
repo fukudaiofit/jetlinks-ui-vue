@@ -62,56 +62,56 @@
             </template>
         </j-pro-table>
     </div>
-    <j-modal :width="1100" v-model:visible="visible" title="详情">
+    <j-modal :width="1100" v-model:visible="visible" :title="t('Log.Access.index.5rg3d9zz8fo0')">
         <j-descriptions :data="descriptionsData" title="" bordered :column="2">
             <j-descriptions-item label="URL">
                 {{ descriptionsData?.url }}
             </j-descriptions-item>
-            <j-descriptions-item label="请求方法">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zz9ok0')">
                 {{ descriptionsData?.httpMethod }}
             </j-descriptions-item>
-            <j-descriptions-item label="动作">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zz9vw0')">
                 {{ descriptionsData?.action }}
             </j-descriptions-item>
-            <j-descriptions-item label="类名">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zza1g0')">
                 {{ descriptionsData?.target }}
             </j-descriptions-item>
-            <j-descriptions-item label="方法名">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zza6o0')">
                 {{ descriptionsData?.method }}
             </j-descriptions-item>
             <j-descriptions-item label="IP">
                 {{ descriptionsData?.ip }}
             </j-descriptions-item>
-            <j-descriptions-item label="请求时间">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zzac00')">
                 {{
                     moment(descriptionsData?.requestTime).format(
                         'YYYY-MM-DD HH:mm:ss',
                     )
                 }}
             </j-descriptions-item>
-            <j-descriptions-item label="请求耗时">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zzah00')">
                 {{
                     descriptionsData?.responseTime -
                     descriptionsData?.responseTime +
                     'ms'
                 }}
             </j-descriptions-item>
-            <j-descriptions-item label="请求头" :span="2">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zzamk0')" :span="2">
                 {{ descriptionsData?.httpHeaders }}
             </j-descriptions-item>
-            <j-descriptions-item label="请求参数" :span="2">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zzark0')" :span="2">
                 {{ descriptionsData?.parameters }}
             </j-descriptions-item>
-            <j-descriptions-item label="异常信息" :span="2">
+            <j-descriptions-item :label="t('Log.Access.index.5rg3d9zzb080')" :span="2">
                 <j-textarea
                     v-model:value="descriptionsData.exception"
-                    placeholder="暂无数据"
+                    :placeholder="t('Log.Access.index.5rg3d9zzb6s0')"
                     :auto-size="{ minRows: 3, maxRows: 20 }"
                 />
             </j-descriptions-item>
         </j-descriptions>
         <template #footer>
-            <j-button type="primary" @click="handleOk">关闭</j-button>
+            <j-button type="primary" @click="handleOk">{{t('Log.Access.index.5rg3d9zzbbk0')}}</j-button>
         </template>
     </j-modal>
 </template>
@@ -121,7 +121,9 @@ import type { AccessLogItem } from '../typings';
 import { queryAccess } from '@/api/link/log';
 import moment from 'moment';
 import { modifySearchColumnValue } from '@/utils/comm';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const tableRef = ref<Record<string, any>>({});
 const params = ref<Record<string, any>>({});
 
@@ -138,7 +140,7 @@ const columns = [
         fixed: 'left',
     },
     {
-        title: '请求路径',
+        title: t('Log.Access.index.5rg3d9zzbg00'),
         dataIndex: 'url',
         key: 'url',
         search: {
@@ -147,7 +149,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '说明',
+        title: t('Log.Access.index.5rg3d9zzbkc0'),
         dataIndex: 'description',
         key: 'description',
         scopedSlots: true,
@@ -157,7 +159,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '请求方法',
+        title: t('Log.Access.index.5rg3d9zz9ok0'),
         dataIndex: 'httpMethod',
         key: 'httpMethod',
         search: {
@@ -189,7 +191,7 @@ const columns = [
         width: 100,
     },
     {
-        title: '请求时间',
+        title: t('Log.Access.index.5rg3d9zzac00'),
         dataIndex: 'requestTime',
         key: 'requestTime',
         scopedSlots: true,
@@ -199,14 +201,14 @@ const columns = [
         width: 200,
     },
     {
-        title: '请求耗时',
+        title: t('Log.Access.index.5rg3d9zzah00'),
         dataIndex: 'responseTime',
         key: 'responseTime',
         scopedSlots: true,
         width: 100,
     },
     {
-        title: '请求用户',
+        title: t('Log.Access.index.5rg3d9zzbow0'),
         dataIndex: 'username',
         key: 'username',
         // search: {
@@ -216,7 +218,7 @@ const columns = [
         scopedSlots: true,
     },
     {
-        title: '操作',
+        title: t('Log.Access.index.5rg3d9zzbt40'),
         key: 'action',
         fixed: 'right',
         width: 60,
@@ -250,9 +252,9 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
     return [
         {
             key: 'eye',
-            text: '查看',
+            text: t('Log.Access.index.5rg3d9zzbxo0'),
             tooltip: {
-                title: '查看',
+                title: t('Log.Access.index.5rg3d9zzbxo0'),
             },
             icon: 'EyeOutlined',
             onClick: (data: AccessLogItem) => {
