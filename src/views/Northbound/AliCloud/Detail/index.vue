@@ -5,7 +5,7 @@
                 <div class="box">
                     <div class="left">
                         <div class="left-content">
-                            <TitleComponent data="基本信息" />
+                            <TitleComponent :data="t('AliCloud.Detail.index.5rg4hbavf1s0')" />
                             <j-form
                                 :layout="'vertical'"
                                 ref="formRef"
@@ -14,21 +14,21 @@
                                 <j-row :gutter="24">
                                     <j-col :span="24">
                                         <j-form-item
-                                            label="名称"
+                                            :label="t('AliCloud.Detail.index.5rg4hbavguk0')"
                                             name="name"
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请输入名称',
+                                                    message: t('AliCloud.Detail.index.5rg4hbavh7c0'),
                                                 },
                                                 {
                                                     max: 64,
-                                                    message: '最多输入64个字符',
+                                                    message: t('AliCloud.Detail.index.5rg4hbavhgs0'),
                                                 },
                                             ]"
                                         >
                                             <j-input
-                                                placeholder="请输入名称"
+                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavh7c0')"
                                                 v-model:value="modelRef.name"
                                             />
                                         </j-form-item>
@@ -39,15 +39,15 @@
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请选择服务地址',
+                                                    message: t('AliCloud.Detail.index.5rg4hbavhog0'),
                                                 },
                                             ]"
                                         >
                                             <template #label>
                                                 <span>
-                                                    服务地址
+                                                    {{t('AliCloud.Detail.index.5rg4hbavhuw0')}}
                                                     <j-tooltip
-                                                        title="阿里云内部给每台机器设置的唯一编号"
+                                                        :title="t('AliCloud.Detail.index.5rg4hbavia80')"
                                                     >
                                                         <AIcon
                                                             type="QuestionCircleOutlined"
@@ -59,7 +59,7 @@
                                                 </span>
                                             </template>
                                             <j-select
-                                                placeholder="请选择服务地址"
+                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavhog0')"
                                                 v-model:value="
                                                     modelRef.accessConfig
                                                         .regionId
@@ -88,9 +88,9 @@
                                         >
                                             <template #label>
                                                 <span>
-                                                    实例ID
+                                                    {{t('AliCloud.Detail.index.5rg4hbavij00')}}
                                                     <j-tooltip
-                                                        title="阿里云物联网平台中的实例ID,没有则不填"
+                                                        :title="t('AliCloud.Detail.index.5rg4hbavixc0')"
                                                     >
                                                         <AIcon
                                                             type="QuestionCircleOutlined"
@@ -102,7 +102,7 @@
                                                 </span>
                                             </template>
                                             <j-input
-                                                placeholder="请输入实例ID"
+                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavj2o0')"
                                                 v-model:value="
                                                     modelRef.accessConfig
                                                         .instanceId
@@ -120,11 +120,11 @@
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请输入accessKey',
+                                                    message: t('AliCloud.Detail.index.5rg4hbavj7s0'),
                                                 },
                                                 {
                                                     max: 64,
-                                                    message: '最多输入64个字符',
+                                                    message: t('AliCloud.Detail.index.5rg4hbavhgs0'),
                                                 },
                                             ]"
                                         >
@@ -132,7 +132,7 @@
                                                 <span>
                                                     accessKey
                                                     <j-tooltip
-                                                        title="用于程序通知方式调用云服务API的用户标识"
+                                                        :title="t('AliCloud.Detail.index.5rg4hbavjd80')"
                                                     >
                                                         <AIcon
                                                             type="QuestionCircleOutlined"
@@ -144,7 +144,7 @@
                                                 </span>
                                             </template>
                                             <j-input
-                                                placeholder="请输入accessKey"
+                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavj7s0')"
                                                 v-model:value="
                                                     modelRef.accessConfig
                                                         .accessKeyId
@@ -163,11 +163,11 @@
                                                 {
                                                     required: true,
                                                     message:
-                                                        '请输入accessSecret',
+                                                        t('AliCloud.Detail.index.5rg4hbavjlc0'),
                                                 },
                                                 {
                                                     max: 64,
-                                                    message: '最多输入64个字符',
+                                                    message: t('AliCloud.Detail.index.5rg4hbavhgs0'),
                                                 },
                                             ]"
                                         >
@@ -175,7 +175,7 @@
                                                 <span>
                                                     accessSecret
                                                     <j-tooltip
-                                                        title="用于程序通知方式调用云服务费API的秘钥标识"
+                                                        :title="t('AliCloud.Detail.index.5rg4hbavjqo0')"
                                                     >
                                                         <AIcon
                                                             type="QuestionCircleOutlined"
@@ -187,7 +187,7 @@
                                                 </span>
                                             </template>
                                             <j-input
-                                                placeholder="请输入accessSecret"
+                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavjlc0')"
                                                 v-model:value="
                                                     modelRef.accessConfig
                                                         .accessSecret
@@ -201,14 +201,14 @@
                                             name="bridgeProductKey"
                                             :rules="{
                                                 required: true,
-                                                message: '请选择网桥产品',
+                                                message: t('AliCloud.Detail.index.5rg4hbavjxo0'),
                                             }"
                                         >
                                             <template #label>
                                                 <span>
-                                                    网桥产品
+                                                    {{t('AliCloud.Detail.index.5rg4hbavkfw0')}}
                                                     <j-tooltip
-                                                        title="物联网平台对应的阿里云产品"
+                                                        :title="t('AliCloud.Detail.index.5rg4hbavkq00')"
                                                     >
                                                         <AIcon
                                                             type="QuestionCircleOutlined"
@@ -220,7 +220,7 @@
                                                 </span>
                                             </template>
                                             <j-select
-                                                placeholder="请选择网桥产品"
+                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavjxo0')"
                                                 v-model:value="
                                                     modelRef.bridgeProductKey
                                                 "
@@ -239,7 +239,7 @@
                                         </j-form-item>
                                     </j-col>
                                     <j-col :span="24">
-                                        <p>产品映射</p>
+                                        <p>{{t('AliCloud.Detail.index.5rg4hbavkxw0')}}</p>
                                         <j-collapse
                                             v-if="modelRef.mappings.length"
                                             :activeKey="activeKey"
@@ -269,7 +269,7 @@
                                                 <j-row :gutter="24">
                                                     <j-col :span="12">
                                                         <j-form-item
-                                                            label="阿里云产品"
+                                                            :label="t('AliCloud.Detail.index.5rg4hbavlfo0')"
                                                             :name="[
                                                                 'mappings',
                                                                 index,
@@ -278,11 +278,11 @@
                                                             :rules="{
                                                                 required: true,
                                                                 message:
-                                                                    '请选择阿里云产品',
+                                                                    t('AliCloud.Detail.index.5rg4hbavln80'),
                                                             }"
                                                         >
                                                             <j-select
-                                                                placeholder="请选择阿里云产品"
+                                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavln80')"
                                                                 v-model:value="
                                                                     item.productKey
                                                                 "
@@ -311,7 +311,7 @@
                                                     </j-col>
                                                     <j-col :span="12">
                                                         <j-form-item
-                                                            label="平台产品"
+                                                            :label="t('AliCloud.Detail.index.5rg4hbavlww0')"
                                                             :name="[
                                                                 'mappings',
                                                                 index,
@@ -320,11 +320,11 @@
                                                             :rules="{
                                                                 required: true,
                                                                 message:
-                                                                    '请选择平台产品',
+                                                                    t('AliCloud.Detail.index.5rg4hbavm3k0'),
                                                             }"
                                                         >
                                                             <j-select
-                                                                placeholder="请选择平台产品"
+                                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavm3k0')"
                                                                 v-model:value="
                                                                     item.productId
                                                                 "
@@ -373,18 +373,18 @@
                                     </j-col>
                                     <j-col :span="24" style="margin-top: 20px">
                                         <j-form-item
-                                            label="说明"
+                                            :label="t('AliCloud.Detail.index.5rg4hbavmb80')"
                                             name="description"
                                             :rules="{
                                                 max: 200,
-                                                message: '最多输入200个字符',
+                                                message: t('AliCloud.Detail.index.5rg4hbavmio0'),
                                             }"
                                         >
                                             <j-textarea
                                                 v-model:value="
                                                     modelRef.description
                                                 "
-                                                placeholder="请输入说明"
+                                                :placeholder="t('AliCloud.Detail.index.5rg4hbavmos0')"
                                                 showCount
                                                 :maxlength="200"
                                             />
@@ -402,7 +402,7 @@
                                         'Northbound/AliCloud:update',
                                     ]"
                                 >
-                                    保存
+                                    {{t('AliCloud.Detail.index.5rg4hbavmuk0')}}
                                 </PermissionButton>
                             </div>
                         </div>
@@ -427,7 +427,9 @@ import {
 } from '@/api/northbound/alicloud';
 import _ from 'lodash';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const router = useRouter();
 const route = useRoute();
 
@@ -547,7 +549,7 @@ const saveBtn = () => {
                 loading.value = false;
             });
             if (resp.status === 200) {
-                message.success('操作成功！');
+                message.success(t('AliCloud.Detail.index.5rg4hbavn100'));
                 formRef.value.resetFields();
                 router.push('/iot/northbound/AliCloud');
             }

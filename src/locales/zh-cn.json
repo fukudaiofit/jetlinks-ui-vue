@@ -820,6 +820,34 @@
                 "5rcyqqfj59s0": "请输入事件名称",
                 "5rcyqqfjamw0": "属性"
             }
+        },
+        "command": {
+            "EditTable": {
+                "5rg4emwqf2c0": "请选择",
+                "5rg4emwqg700": "请输入",
+                "5rg4emwqgh80": "是",
+                "5rg4emwqh0g0": "否",
+                "5rg4emwqh9c0": "参数名称",
+                "5rg4emwqhi80": "类型",
+                "5rg4emwqhqw0": "值"
+            },
+            "index": {
+                "5rg4ez76jy80": "指令类型",
+                "5rg4ez76l3w0": "请选择指令类型",
+                "5rg4ez76ln00": "读取属性",
+                "5rg4ez76m440": "修改属性",
+                "5rg4ez76mcw0": "调用功能",
+                "5rg4ez76mkc0": "属性",
+                "5rg4ez76mqc0": "请选择属性",
+                "5rg4ez76n080": "值",
+                "5rg4ez76n6o0": "请输入值",
+                "5rg4ez76nc80": "是",
+                "5rg4ez76nhs0": "否",
+                "5rg4ez76nps0": "功能",
+                "5rg4ez76nv80": "请选择功能",
+                "5rg4ez76o0w0": "参数列表",
+                "5rg4ez76o6w0": "请输入参数列表"
+            }
         }
     },
     "components": {
@@ -2283,6 +2311,140 @@
                 "5rg42qgd1u80": "关联场景联动",
                 "5rg42qgd2040": "告警记录",
                 "5rg42qgd24w0": "请先保存基础配置"
+            }
+        }
+    },
+    "DuerOS": {
+        "Detail": {
+            "doc": {
+                "5rg4fahrxhk0": "小度智能家居开放平台：",
+                "5rg4fahryk00": "概述",
+                "5rg4fahrywg0": "操作步骤",
+                "5rg4fahrz2k0": "授权地址",
+                "5rg4fahrz940": "物联网平台的登录地址。注意需要为https。",
+                "5rg4fahrzfw0": "请填写系统管理-应用管理中的clientId。",
+                "5rg4fahrzl80": "回调地址",
+                "5rg4fahrzrk0": "请复制DuerOS平台中的值，填写到系统管理-应用管理中-redirectUrl中。",
+                "5rg4fahrzy00": "请复制系统管理-应用管理中的secureKey，填写到DuerOS平台。",
+                "5rg4fahs06c0": "请复制并填写：/dueros/product/_query",
+                "5rg4fahs0bo0": "配置说明"
+            },
+            "index": {
+                "5rg4fvdam8g0": "基本信息",
+                "5rg4fvdan5k0": "名称",
+                "5rg4fvdang00": "请输入名称",
+                "5rg4fvdanlk0": "最多输入64个字符",
+                "5rg4fvdansg0": "产品",
+                "5rg4fvdany00": "请选择产品",
+                "5rg4fvdao2w0": "请选择设备类型",
+                "5rg4fvdao7o0": "设备类型",
+                "5rg4fvdaocg0": "产品名称",
+                "5rg4fvdaoh00": "动作映射",
+                "5rg4fvdaolk0": "请选择动作",
+                "5rg4fvdaot00": "动作",
+                "5rg4fvdaoxg0": "请选择操作",
+                "5rg4fvdap2g0": "操作",
+                "5rg4fvdap8s0": "映射物联网平台中所选产品具备的动作",
+                "5rg4fvdapd80": "下发指令",
+                "5rg4fvdaphs0": "获取历史数据",
+                "5rg4fvdapm80": "属性映射",
+                "5rg4fvdapqg0": "请选择DuerOS属性",
+                "5rg4fvdapv40": "平台属性",
+                "5rg4fvdaq0w0": "请选择平台属性",
+                "5rg4fvdaq4o0": "说明",
+                "5rg4fvdaqas0": "最多输入200个字符",
+                "5rg4fvdaqek0": "请输入说明",
+                "5rg4fvdaqi80": "保存",
+                "5rg4fvdaqlw0": "操作成功！"
+            }
+        }
+    },
+    "Northbound": {
+        "DuerOS": {
+            "index": {
+                "5rg4goobu0o0": "新增",
+                "5rg4goobxh80": "产品",
+                "5rg4goobxow0": "设备类型",
+                "5rg4goobxtk0": "名称",
+                "5rg4goobxxk0": "产品名称",
+                "5rg4gooby280": "说明",
+                "5rg4gooby8s0": "状态",
+                "5rg4goobycg0": "正常",
+                "5rg4goobyhc0": "禁用",
+                "5rg4goobykw0": "操作",
+                "5rg4goobyoc0": "查看",
+                "5rg4goobys00": "编辑",
+                "5rg4goobyww0": "启用",
+                "5rg4goobz300": "操作成功！",
+                "5rg4goobz880": "操作失败！",
+                "5rg4goobzfg0": "删除",
+                "5rg4goobzq80": "请先禁用该数据，再删除。",
+                "5rg4gooc0tc0": "确认删除?"
+            }
+        },
+        "AliCloud": {
+            "index": {
+                "5rg4hlqn56w0": "新增",
+                "5rg4hlqn7ac0": "网桥产品",
+                "5rg4hlqn7gs0": "说明",
+                "5rg4hlqn7lc0": "名称",
+                "5rg4hlqn7p80": "状态",
+                "5rg4hlqn7uc0": "正常",
+                "5rg4hlqn7yc0": "禁用",
+                "5rg4hlqn85k0": "操作",
+                "5rg4hlqn89c0": "查看",
+                "5rg4hlqn8dg0": "编辑",
+                "5rg4hlqn8hc0": "启用",
+                "5rg4hlqn8n00": "操作成功！",
+                "5rg4hlqn8qo0": "操作失败！",
+                "5rg4hlqn8ug0": "删除",
+                "5rg4hlqn8y40": "请先禁用该数据，再删除。",
+                "5rg4hlqn91o0": "确认删除?"
+            }
+        }
+    },
+    "AliCloud": {
+        "Detail": {
+            "doc": {
+                "5rg4h2e76rk0": "阿里云物联网平台：",
+                "5rg4h2e79980": "概述",
+                "5rg4h2e79o00": "在特定场景下，设备无法直接接入阿里云物联网平台时，您可先将设备接入物联网平台，再使用阿里云“云云对接SDK”，快速构建桥接服务，搭建物联网平台与阿里云物联网平台的双向数据通道。",
+                "5rg4h2e7a200": "阿里云内部给每台机器设置的唯一编号。请根据购买的阿里云服务器地址进行选择。",
+                "5rg4h2e7a7o0": "获取路径：“阿里云物联网平台”--“服务地址”",
+                "5rg4h2e7ai80": "用于程序通知方式调用云服务费API的用户标识和秘钥获取路径：“阿里云管理控制台”--“用户头像”--“”--“AccessKey管理”--“查看”",
+                "5rg4h2e7as00": "网桥产品",
+                "5rg4h2e7axg0": "物联网平台对于阿里云物联网平台，是一个网关设备，需要映射到阿里云物联网平台的具体产品",
+                "5rg4h2e7b6s0": "产品映射",
+                "5rg4h2e7bcg0": "将阿里云物联网平台中的产品实例与物联网平台的产品实例进行关联。关联后需要进入该产品下的每一个设备的实例信息页，填入对应的阿里云物联网平台设备的DeviceName、DeviceSecret进行一对一绑定。"
+            },
+            "index": {
+                "5rg4hbavf1s0": "基本信息",
+                "5rg4hbavguk0": "名称",
+                "5rg4hbavh7c0": "请输入名称",
+                "5rg4hbavhgs0": "最多输入64个字符",
+                "5rg4hbavhog0": "请选择服务地址",
+                "5rg4hbavhuw0": "服务地址",
+                "5rg4hbavia80": "阿里云内部给每台机器设置的唯一编号",
+                "5rg4hbavij00": "实例ID",
+                "5rg4hbavixc0": "阿里云物联网平台中的实例ID,没有则不填",
+                "5rg4hbavj2o0": "请输入实例ID",
+                "5rg4hbavj7s0": "请输入accessKey",
+                "5rg4hbavjd80": "用于程序通知方式调用云服务API的用户标识",
+                "5rg4hbavjlc0": "请输入accessSecret",
+                "5rg4hbavjqo0": "用于程序通知方式调用云服务费API的秘钥标识",
+                "5rg4hbavjxo0": "请选择网桥产品",
+                "5rg4hbavkfw0": "网桥产品",
+                "5rg4hbavkq00": "物联网平台对应的阿里云产品",
+                "5rg4hbavkxw0": "产品映射",
+                "5rg4hbavlfo0": "阿里云产品",
+                "5rg4hbavln80": "请选择阿里云产品",
+                "5rg4hbavlww0": "平台产品",
+                "5rg4hbavm3k0": "请选择平台产品",
+                "5rg4hbavmb80": "说明",
+                "5rg4hbavmio0": "最多输入200个字符",
+                "5rg4hbavmos0": "请输入说明",
+                "5rg4hbavmuk0": "保存",
+                "5rg4hbavn100": "操作成功！"
             }
         }
     }

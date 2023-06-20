@@ -5,7 +5,7 @@
                 <div class="box">
                     <div class="left">
                         <div class="left-content">
-                            <TitleComponent data="基本信息" />
+                            <TitleComponent :data="t('DuerOS.Detail.index.5rg4fvdam8g0')" />
                             <j-form
                                 :layout="'vertical'"
                                 ref="formRef"
@@ -14,33 +14,33 @@
                                 <j-row :gutter="24">
                                     <j-col :span="24">
                                         <j-form-item
-                                            label="名称"
+                                            :label="t('DuerOS.Detail.index.5rg4fvdan5k0')"
                                             name="name"
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请输入名称',
+                                                    message: t('DuerOS.Detail.index.5rg4fvdang00'),
                                                 },
                                                 {
                                                     max: 64,
-                                                    message: '最多输入64个字符',
+                                                    message: t('DuerOS.Detail.index.5rg4fvdanlk0'),
                                                 },
                                             ]"
                                         >
                                             <j-input
-                                                placeholder="请输入名称"
+                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdang00')"
                                                 v-model:value="modelRef.name"
                                             />
                                         </j-form-item>
                                     </j-col>
                                     <j-col :span="12">
                                         <j-form-item
-                                            label="产品"
+                                            :label="t('DuerOS.Detail.index.5rg4fvdansg0')"
                                             name="id"
                                             :rules="[
                                                 {
                                                     required: true,
-                                                    message: '请选择产品',
+                                                    message: t('DuerOS.Detail.index.5rg4fvdany00'),
                                                 },
                                             ]"
                                         >
@@ -50,7 +50,7 @@
                                                     modelRef.id &&
                                                     modelRef.id !== ':id'
                                                 "
-                                                placeholder="请选择产品"
+                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdany00')"
                                                 v-model:value="modelRef.id"
                                                 show-search
                                                 @change="productChange"
@@ -72,12 +72,12 @@
                                             name="applianceType"
                                             :rules="{
                                                 required: true,
-                                                message: '请选择设备类型',
+                                                message: t('DuerOS.Detail.index.5rg4fvdao2w0'),
                                             }"
                                         >
                                             <template #label>
                                                 <span>
-                                                    设备类型
+                                                    {{t('DuerOS.Detail.index.5rg4fvdao7o0')}}
                                                     <j-tooltip
                                                         title="DuerOS平台拟定的规范"
                                                     >
@@ -91,7 +91,7 @@
                                                 </span>
                                             </template>
                                             <j-select
-                                                placeholder="请选择设备类型"
+                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdao2w0')"
                                                 v-model:value="
                                                     modelRef.applianceType
                                                 "
@@ -112,7 +112,7 @@
                                         <j-form-item
                                             name="productName"
                                             v-show="false"
-                                            label="产品名称"
+                                            :label="t('DuerOS.Detail.index.5rg4fvdaocg0')"
                                         >
                                             <j-input
                                                 v-model:value="
@@ -122,7 +122,7 @@
                                         </j-form-item>
                                     </j-col>
                                     <j-col :span="24">
-                                        <p>动作映射</p>
+                                        <p>{{t('DuerOS.Detail.index.5rg4fvdaoh00')}}</p>
                                         <j-collapse
                                             v-if="
                                                 modelRef.actionMappings.length
@@ -163,12 +163,12 @@
                                                             :rules="{
                                                                 required: true,
                                                                 message:
-                                                                    '请选择动作',
+                                                                    t('DuerOS.Detail.index.5rg4fvdaolk0'),
                                                             }"
                                                         >
                                                             <template #label>
                                                                 <span>
-                                                                    动作
+                                                                    {{t('DuerOS.Detail.index.5rg4fvdaot00')}}
                                                                     <j-tooltip
                                                                         title="DuerOS平台拟定的设备类型具有的相关动作"
                                                                     >
@@ -179,7 +179,7 @@
                                                                 </span>
                                                             </template>
                                                             <j-select
-                                                                placeholder="请选择动作"
+                                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdaolk0')"
                                                                 v-model:value="
                                                                     item.action
                                                                 "
@@ -214,14 +214,14 @@
                                                             :rules="{
                                                                 required: true,
                                                                 message:
-                                                                    '请选择操作',
+                                                                    t('DuerOS.Detail.index.5rg4fvdaoxg0'),
                                                             }"
                                                         >
                                                             <template #label>
                                                                 <span>
-                                                                    操作
+                                                                    {{t('DuerOS.Detail.index.5rg4fvdap2g0')}}
                                                                     <j-tooltip
-                                                                        title="映射物联网平台中所选产品具备的动作"
+                                                                        :title="t('DuerOS.Detail.index.5rg4fvdap8s0')"
                                                                     >
                                                                         <AIcon
                                                                             type="QuestionCircleOutlined"
@@ -230,7 +230,7 @@
                                                                 </span>
                                                             </template>
                                                             <j-select
-                                                                placeholder="请选择操作"
+                                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdaoxg0')"
                                                                 v-model:value="
                                                                     item.actionType
                                                                 "
@@ -244,11 +244,11 @@
                                                             >
                                                                 <j-select-option
                                                                     value="command"
-                                                                    >下发指令</j-select-option
+                                                                    >{{t('DuerOS.Detail.index.5rg4fvdapd80')}}</j-select-option
                                                                 >
                                                                 <j-select-option
                                                                     value="latestData"
-                                                                    >获取历史数据</j-select-option
+                                                                    >{{t('DuerOS.Detail.index.5rg4fvdaphs0')}}</j-select-option
                                                                 >
                                                             </j-select>
                                                         </j-form-item>
@@ -301,7 +301,7 @@
                                         </j-button>
                                     </j-col>
                                     <j-col :span="24">
-                                        <p style="margin-top: 20px">属性映射</p>
+                                        <p style="margin-top: 20px">{{t('DuerOS.Detail.index.5rg4fvdapm80')}}</p>
                                         <j-collapse
                                             v-if="
                                                 modelRef.propertyMappings.length
@@ -347,11 +347,11 @@
                                                             :rules="{
                                                                 required: true,
                                                                 message:
-                                                                    '请选择DuerOS属性',
+                                                                    t('DuerOS.Detail.index.5rg4fvdapqg0'),
                                                             }"
                                                         >
                                                             <j-select
-                                                                placeholder="请选择DuerOS属性"
+                                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdapqg0')"
                                                                 v-model:value="
                                                                     item.source
                                                                 "
@@ -375,7 +375,7 @@
                                                     </j-col>
                                                     <j-col :span="12">
                                                         <j-form-item
-                                                            label="平台属性"
+                                                            :label="t('DuerOS.Detail.index.5rg4fvdapv40')"
                                                             :name="[
                                                                 'propertyMappings',
                                                                 index,
@@ -384,11 +384,11 @@
                                                             :rules="{
                                                                 required: true,
                                                                 message:
-                                                                    '请选择平台属性',
+                                                                    t('DuerOS.Detail.index.5rg4fvdaq0w0'),
                                                             }"
                                                         >
                                                             <j-select
-                                                                placeholder="请选择平台属性"
+                                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdaq0w0')"
                                                                 v-model:value="
                                                                     item.target
                                                                 "
@@ -434,18 +434,18 @@
                                     </j-col>
                                     <j-col :span="24" style="margin-top: 20px">
                                         <j-form-item
-                                            label="说明"
+                                            :label="t('DuerOS.Detail.index.5rg4fvdaq4o0')"
                                             name="description"
                                             :rules="{
                                                 max: 200,
-                                                message: '最多输入200个字符',
+                                                message: t('DuerOS.Detail.index.5rg4fvdaqas0'),
                                             }"
                                         >
                                             <j-textarea
                                                 v-model:value="
                                                     modelRef.description
                                                 "
-                                                placeholder="请输入说明"
+                                                :placeholder="t('DuerOS.Detail.index.5rg4fvdaqek0')"
                                                 showCount
                                                 :maxlength="200"
                                             />
@@ -463,7 +463,7 @@
                                         'Northbound/DuerOS:update',
                                     ]"
                                 >
-                                    保存
+                                    {{t('DuerOS.Detail.index.5rg4fvdaqi80')}}
                                 </PermissionButton>
                             </div>
                         </div>
@@ -489,7 +489,9 @@ import {
 import _ from 'lodash';
 import { message } from 'jetlinks-ui-components';
 import { useMenuStore } from '@/store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const route = useRoute();
 
@@ -708,7 +710,7 @@ const saveBtn = async () => {
                     loading.value = false;
                 });
                 if (resp.status === 200) {
-                    message.success('操作成功！');
+                    message.success(t('DuerOS.Detail.index.5rg4fvdaqlw0'));
                     formRef.value.resetFields();
                     menuStory.jumpPage('Northbound/DuerOS');
                 }
