@@ -494,6 +494,9 @@
             "TopCard": {
                 "5rg346ec9kc0": "磁盘占用",
                 "5rg346eccjc0": "系统内存"
+            },
+            "NewAlarm": {
+                "5rg3tc92gmc0": "最新告警"
             }
         }
     },
@@ -1706,6 +1709,70 @@
                 "5rg3dimnn000": "操作",
                 "5rg3dimnn580": "查看"
             }
+        },
+        "Detail": {
+            "index": {
+                "5rg447u5n3o0": "告警时间",
+                "5rg447u5o0o0": "告警名称",
+                "5rg447u5o6g0": "说明",
+                "5rg447u5oac0": "操作",
+                "5rg447u5oe00": "查看",
+                "5rg447u5ohw0": "告警设备"
+            },
+            "info": {
+                "5rg44l76xs40": "详情",
+                "5rg44l76zlc0": "确定",
+                "5rg44l76zv40": "取消",
+                "5rg44l7702o0": "告警设备",
+                "5rg44l7709c0": "设备ID",
+                "5rg44l770gg0": "告警名称",
+                "5rg44l770mo0": "告警时间",
+                "5rg44l770wg0": "告警级别",
+                "5rg44l771480": "告警说明",
+                "5rg44l771b40": "告警流水"
+            }
+        },
+        "Record": {
+            "index": {
+                "5rg453slguw0": "记录列表",
+                "5rg453slje00": "处理时间",
+                "5rg453sljow0": "处理类型",
+                "5rg453sljt00": "系统",
+                "5rg453sljy00": "人工",
+                "5rg453slk4w0": "告警时间",
+                "5rg453slk8o0": "告警处理"
+            }
+        },
+        "SolveComponent": {
+            "index": {
+                "5rg45j1q54c0": "告警处理",
+                "5rg45j1q6rg0": "确定",
+                "5rg45j1q78o0": "取消",
+                "5rg45j1q7gg0": "处理结果",
+                "5rg45j1q7lo0": "请输入处理结果",
+                "5rg45j1q7vs0": "操作成功！",
+                "5rg45j1q8140": "操作失败！"
+            }
+        },
+        "TabComponent": {
+            "indev": {
+                "5rg464hagf80": "最近告警时间",
+                "5rg464hak780": "状态",
+                "5rg464hakl00": "产品",
+                "5rg464hakrg0": "设备",
+                "5rg464hakxk0": "其他",
+                "5rg464hal5c0": "组织",
+                "5rg464halgc0": "名称",
+                "5rg464halps0": "告警中",
+                "5rg464halws0": "无告警",
+                "5rg464ham3c0": "产品名称",
+                "5rg464ham800": "设备名称",
+                "5rg464hamfs0": "组织名称",
+                "5rg464hamm00": "无",
+                "5rg464hamqk0": "告警处理",
+                "5rg464hamv40": "告警日志",
+                "5rg464hamz80": "处理记录"
+            }
         }
     },
     "views": {
@@ -1993,6 +2060,229 @@
                 "5rg3nf1cw6c0": "在线",
                 "5rg3nf1cwb80": "离线",
                 "5rg3nf1cwg80": "禁用"
+            }
+        }
+    },
+    "rule-engine": {
+        "DashBoard": {
+            "index": {
+                "5rg3u2dz9hk0": "今日告警",
+                "5rg3u2dzaog0": "告警配置",
+                "5rg3u2dzau80": "告警统计",
+                "5rg3u2dzb000": "告警排名",
+                "5rg3u2dzb3w0": "当月告警",
+                "5rg3u2dzb840": "正常",
+                "5rg3u2dzbc80": "禁用",
+                "5rg3u2dzbfs0": "设备",
+                "5rg3u2dzbjk0": "产品",
+                "5rg3u2dzbn40": "组织",
+                "5rg3u2dzbqk0": "其它",
+                "5rg3u2dzbu80": "告警数"
+            }
+        }
+    },
+    "Io": {
+        "Save": {
+            "input": {
+                "5rg3yc0d6o00": "编辑",
+                "5rg3yc0d8d00": "取消",
+                "5rg3yc0d8p40": "确定",
+                "5rg3yc0d8xc0": "最多输入64个字符",
+                "5rg3yc0d9400": "请输入kafka地址",
+                "5rg3yc0d9c80": "状态",
+                "5rg3yc0d9j80": "禁用",
+                "5rg3yc0d9pg0": "启用",
+                "5rg3yc0d9vw0": "操作成功"
+            },
+            "output": {
+                "5rg3yoihjmg0": "编辑",
+                "5rg3yoihks00": "取消",
+                "5rg3yoihkxw0": "确定",
+                "5rg3yoihl2s0": "状态",
+                "5rg3yoihl700": "禁用",
+                "5rg3yoihlbs0": "启用",
+                "5rg3yoihlfk0": "请输入kafka地址",
+                "5rg3yoihlj80": "最多输入64个字符",
+                "5rg3yoihln80": "请输入topic",
+                "5rg3yoihlsw0": "操作成功"
+            }
+        }
+    },
+    "Config": {
+        "Io": {
+            "index": {
+                "5rg40ihzqpo0": "告警数据输出",
+                "5rg40ihzs5w0": "将告警数据输出到其他第三方系统",
+                "5rg40ihzsbw0": "状态",
+                "5rg40ihzsg40": "告警处理结果输入",
+                "5rg40ihzsk00": "接收第三方系统处理的告警结果",
+                "5rg40ihzsr40": "功能图示",
+                "5rg40ihzt0w0": "功能说明",
+                "5rg40ihzt500": "输出参数",
+                "5rg40ihzt8w0": "示例",
+                "5rg40ihztcg0": "订阅参数",
+                "5rg40ihztgg0": "告警配置名称",
+                "5rg40ihztk00": "推送的告警配置名称",
+                "5rg40ihztng0": "烟感告警",
+                "5rg40ihztr00": "告警配置ID",
+                "5rg40ihztv40": "推送的告警配置ID",
+                "5rg40ihztys0": "告警数据ID",
+                "5rg40ihzu5s0": "告警唯一性标识",
+                "5rg40ihzu9k0": "告警记录ID",
+                "5rg40ihzud40": "告警记录的唯一标识，可根据此ID处理告警",
+                "5rg40ihzugs0": "告警目标类型",
+                "5rg40ihzuo00": "告警所属的业务类型，具体有产品、设备、部门、其他",
+                "5rg40ihzur00": "产品",
+                "5rg40ihzuv40": "告警目标ID",
+                "5rg40ihzuy40": "告警目标唯一性标识",
+                "5rg40ihzv1c0": "告警目标名称",
+                "5rg40ihzv4c0": "告警目标实例名称",
+                "5rg40ihzv7g0": "海康烟感",
+                "5rg40ihzvao0": "告警时间",
+                "5rg40ihzvf00": "告警触发时间",
+                "5rg40ihzvig0": "告警源类型",
+                "5rg40ihzvlc0": "触发告警的源类型。当前只有device",
+                "5rg40ihzvo40": "告警源ID",
+                "5rg40ihzvr00": "触发告警的源Id。如设备Id",
+                "5rg40ihzx800": "告警源名称",
+                "5rg40ihzxj40": "触发告警的源名称。如设备名称",
+                "5rg40ihzxrk0": "告警级别",
+                "5rg40ihzxvw0": "告警严重程度指标",
+                "5rg40ihzxzk0": "告警说明",
+                "5rg40ihzynk0": "告警规则说明",
+                "5rg40ihzz880": "是",
+                "5rg40ihzzdk0": "处理时间",
+                "5rg40ihzzhg0": "告警处理时间，不填是默认为消息处理时间",
+                "5rg40ihzzmk0": "处理说明",
+                "5rg40ihzzq80": "告警处理内容详细描述说明",
+                "5rg40ihzzv00": "已联系第三方人员进行告警处理，现告警已恢复",
+                "5rg40ihzzyo0": "处理类型",
+                "5rg40ii00400": "支持system、user",
+                "5rg40ii00c00": "处理后的状态",
+                "5rg40ii00g80": "名称",
+                "5rg40ii00k40": "标识",
+                "5rg40ii00oc0": "类型",
+                "5rg40ii00sw0": "说明",
+                "5rg40ii00wk0": "示例值",
+                "5rg40ii012g0": "必填",
+                "5rg40ii017k0": "设备温度过高",
+                "5rg40ii01b80": "温度探测设备"
+            }
+        }
+    },
+    "Alarm": {
+        "Config": {
+            "index": {
+                "5rg40s8e8fs0": "告警级别配置",
+                "5rg40s8ea600": "保存",
+                "5rg40s8eafs0": "功能说明",
+                "5rg40s8eap80": "告警级别",
+                "5rg40s8eaw80": "数据流转",
+                "5rg40s8eb2k0": "操作成功"
+            }
+        },
+        "Configuration": {
+            "index": {
+                "5rg42zhpamw0": "新增",
+                "5rg42zhpbjk0": "关联场景联动",
+                "5rg42zhpboo0": "告警级别",
+                "5rg42zhpbsw0": "正常",
+                "5rg42zhpbww0": "禁用",
+                "5rg42zhpc1o0": "名称",
+                "5rg42zhpc5c0": "类型",
+                "5rg42zhpc8w0": "产品",
+                "5rg42zhpccc0": "设备",
+                "5rg42zhpci80": "组织",
+                "5rg42zhpcls0": "其他",
+                "5rg42zhpcpc0": "状态",
+                "5rg42zhpcso0": "说明",
+                "5rg42zhpcw80": "操作",
+                "5rg42zhpczk0": "手动触发",
+                "5rg42zhpd2k0": "未启用,不能手动触发",
+                "5rg42zhpd6s0": "确定手动触发？",
+                "5rg42zhpdb80": "操作成功",
+                "5rg42zhpdfo0": "操作失败",
+                "5rg42zhpdkc0": "编辑",
+                "5rg42zhpdto0": "启用",
+                "5rg42zhpdxs0": "禁用告警不会影响关联的场景状态，确定要禁用吗",
+                "5rg42zhpe2g0": "确认启用",
+                "5rg42zhpe680": "操作成功！",
+                "5rg42zhpe9w0": "操作失败！",
+                "5rg42zhpee00": "删除",
+                "5rg42zhpehw0": "请先禁用该告警，再删除",
+                "5rg42zhpels0": "确认删除?"
+            }
+        },
+        "Log": {
+            "index": {
+                "5rg46pvieuo0": "全部",
+                "5rg46pvih5o0": "产品",
+                "5rg46pvihe80": "设备",
+                "5rg46pvihio0": "组织",
+                "5rg46pvihmg0": "其他"
+            }
+        }
+    },
+    "Save": {
+        "Base": {
+            "index": {
+                "5rg41krgv9w0": "名称",
+                "5rg41krgwa40": "请输入名称",
+                "5rg41krgwg00": "类型",
+                "5rg41krgwkg0": "级别",
+                "5rg41krgwoc0": "说明",
+                "5rg41krgwsk0": "保存",
+                "5rg41krgww80": "最多输入64个字符",
+                "5rg41krgwzg0": "请选择类型",
+                "5rg41krgx2w0": "请选择级别",
+                "5rg41krgx680": "最多可输入200个字符",
+                "5rg41krgx9o0": "操作成功,请配置关联的场景联动"
+            }
+        },
+        "Scene": {
+            "index": {
+                "5rg425yim6w0": "新增",
+                "5rg425yinvc0": "手动触发",
+                "5rg425yio4g0": "适用于第三方平台向物联网平台下发指令控制设备",
+                "5rg425yioa80": "定时触发",
+                "5rg425yiokw0": "适用于定期执行固定任务",
+                "5rg425yiork0": "设备触发",
+                "5rg425yioxs0": "适用于设备数据或行为满足触发条件时，执行指定的动作",
+                "5rg425yip440": "解绑",
+                "5rg425yip8w0": "确定解绑？",
+                "5rg425yipe80": "操作成功"
+            }
+        }
+    },
+    "Scene": {
+        "Save": {
+            "index": {
+                "5rg41y6hqh00": "新增",
+                "5rg41y6hrlc0": "确定",
+                "5rg41y6hrvo0": "取消",
+                "5rg41y6hs380": "名称",
+                "5rg41y6hsac0": "触发方式",
+                "5rg41y6hsi40": "手动触发",
+                "5rg41y6hspc0": "定时触发",
+                "5rg41y6hsvs0": "设备触发",
+                "5rg41y6ht380": "状态",
+                "5rg41y6htcg0": "正常",
+                "5rg41y6htm80": "禁用",
+                "5rg41y6htt00": "适用于第三方平台向物联网平台下发指令控制设备",
+                "5rg41y6htz00": "适用于定期执行固定任务",
+                "5rg41y6hu540": "适用于设备数据或行为满足触发条件时，执行指定的动作",
+                "5rg41y6huas0": "操作成功",
+                "5rg41y6huh00": "请选择至少一条数据"
+            }
+        }
+    },
+    "Configuration": {
+        "Save": {
+            "index": {
+                "5rg42qgd0no0": "基础配置",
+                "5rg42qgd1u80": "关联场景联动",
+                "5rg42qgd2040": "告警记录",
+                "5rg42qgd24w0": "请先保存基础配置"
             }
         }
     }

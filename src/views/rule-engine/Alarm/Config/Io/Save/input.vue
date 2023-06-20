@@ -2,12 +2,12 @@
     <j-modal
         :maskClosable="false"
         width="45vw"
-        title="编辑"
+        :title="t('Io.Save.input.5rg3yc0d6o00')"
         @cancel="close"
         @ok="save"
         visible
-        cancelText="取消"
-        okText="确定"
+        :cancelText="t('Io.Save.input.5rg3yc0d8d00')"
+        :okText="t('Io.Save.input.5rg3yc0d8p40')"
     >
         <j-form layout="vertical" :model="inputData" ref="formRef">
             <j-form-item
@@ -16,13 +16,13 @@
                 :rules="[
                     {
                         max: 64,
-                        message: '最多输入64个字符',
+                        message: t('Io.Save.input.5rg3yc0d8xc0'),
                     },
                 ]"
             >
                 <j-input
                     v-model:value="inputData.address"
-                    placeholder="请输入kafka地址"
+                    :placeholder="t('Io.Save.input.5rg3yc0d9400')"
                 ></j-input>
             </j-form-item>
             <j-form-item
@@ -31,16 +31,16 @@
                 :rules="[
                     {
                         max: 64,
-                        message: '最多输入64个字符',
+                        message: t('Io.Save.input.5rg3yc0d8xc0'),
                     },
                 ]"
             >
                 <j-input v-model:value="inputData.topic"></j-input>
             </j-form-item>
-            <j-form-item label="状态">
+            <j-form-item :label="t('Io.Save.input.5rg3yc0d9c80')">
                 <j-switch
-                    checked-children="启用"
-                    un-checked-children="启用"
+                    :checked-children="t('Io.Save.input.5rg3yc0d9j80')"
+                    :un-checked-children="t('Io.Save.input.5rg3yc0d9pg0')"
                     v-model:checked="inputData.status"
                 ></j-switch>
             </j-form-item>
@@ -51,6 +51,9 @@
 <script lang="ts" setup>
 import { saveOutputData } from '@/api/rule-engine/config';
 import { Form, message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const useForm = Form.useForm;
 const formRef = ref();
 const Myprops = defineProps({
@@ -89,7 +92,7 @@ const save = () => {
             exchangeType: 'consume',
         }).then((res) => {
             if (res.status === 200) {
-                message.success('操作成功');
+                message.success(t('Io.Save.input.5rg3yc0d9vw0'));
                 emit('saveSuc');
             }
         });

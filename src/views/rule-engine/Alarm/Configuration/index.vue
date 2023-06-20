@@ -28,7 +28,7 @@
                                 <template #icon
                                     ><AIcon type="PlusOutlined"
                                 /></template>
-                                新增
+                                {{t('Alarm.Configuration.index.5rg42zhpamw0')}}
                             </PermissionButton>
                         </j-space>
                     </template>
@@ -76,7 +76,7 @@
                                 <j-row>
                                     <j-col :span="12">
                                         <div class="content-des-title">
-                                            关联场景联动
+                                            {{t('Alarm.Configuration.index.5rg42zhpbjk0')}}
                                         </div>
                                         <Ellipsis style='margin-bottom: 18px;'
                                             ><div>
@@ -86,7 +86,7 @@
                                     </j-col>
                                     <j-col :span="12">
                                         <div class="content-des-title">
-                                            告警级别
+                                            {{t('Alarm.Configuration.index.5rg42zhpboo0')}}
                                         </div>
                                         <div>
                                             {{ (Store.get('default-level') || []).find((item: any) => item?.level === slotProps.level)?.title ||
@@ -142,8 +142,8 @@
                         <BadgeStatus
                             :text="
                                 slotProps.state?.value === 'enabled'
-                                    ? '正常'
-                                    : '禁用'
+                                    ? t('Alarm.Configuration.index.5rg42zhpbsw0')
+                                    : t('Alarm.Configuration.index.5rg42zhpbww0')
                             "
                             :status="slotProps.state?.value"
                             :statusNames="{
@@ -202,6 +202,9 @@ import { message } from 'jetlinks-ui-components';
 import { getImage } from '@/utils/comm';
 import { useMenuStore } from '@/store/menu';
 import encodeQuery from '@/utils/encodeQuery';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const params = ref<Record<string, any>>({});
 let isAdd = ref<number>(0);
 let title = ref<string>('');
@@ -209,7 +212,7 @@ const tableRef = ref<Record<string, any>>({});
 const menuStory = useMenuStore();
 const columns = [
     {
-        title: '名称',
+        title: t('Alarm.Configuration.index.5rg42zhpc1o0'),
         dataIndex: 'name',
         key: 'name',
         search: {
@@ -219,7 +222,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '类型',
+        title: t('Alarm.Configuration.index.5rg42zhpc5c0'),
         dataIndex: 'targetType',
         key: 'targetType',
         scopedSlots: true,
@@ -227,19 +230,19 @@ const columns = [
             type: 'select',
             options: [
                 {
-                    label: '产品',
+                    label: t('Alarm.Configuration.index.5rg42zhpc8w0'),
                     value: 'product',
                 },
                 {
-                    label: '设备',
+                    label: t('Alarm.Configuration.index.5rg42zhpccc0'),
                     value: 'device',
                 },
                 {
-                    label: '组织',
+                    label: t('Alarm.Configuration.index.5rg42zhpci80'),
                     value: 'org',
                 },
                 {
-                    label: '其他',
+                    label: t('Alarm.Configuration.index.5rg42zhpcls0'),
                     value: 'other',
                 },
             ],
@@ -247,7 +250,7 @@ const columns = [
         width: 100,
     },
     {
-        title: '告警级别',
+        title: t('Alarm.Configuration.index.5rg42zhpboo0'),
         dataIndex: 'level',
         key: 'level',
         scopedSlots: true,
@@ -270,7 +273,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '关联场景联动',
+        title: t('Alarm.Configuration.index.5rg42zhpbjk0'),
         dataIndex: 'scene',
         scopedSlots: true,
         key: 'scene',
@@ -296,7 +299,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '状态',
+        title: t('Alarm.Configuration.index.5rg42zhpcpc0'),
         dataIndex: 'state',
         key: 'state',
         scopedSlots: true,
@@ -304,11 +307,11 @@ const columns = [
             type: 'select',
             options: [
                 {
-                    label: '正常',
+                    label: t('Alarm.Configuration.index.5rg42zhpbsw0'),
                     value: 'enabled',
                 },
                 {
-                    label: '禁用',
+                    label: t('Alarm.Configuration.index.5rg42zhpbww0'),
                     value: 'disabled',
                 },
             ],
@@ -316,7 +319,7 @@ const columns = [
         width: 90,
     },
     {
-        title: '说明',
+        title: t('Alarm.Configuration.index.5rg42zhpcso0'),
         dataIndex: 'description',
         key: 'description',
         search: {
@@ -325,7 +328,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '操作',
+        title: t('Alarm.Configuration.index.5rg42zhpcw80'),
         key: 'action',
         fixed: 'right',
         width: 120,
@@ -333,10 +336,10 @@ const columns = [
     },
 ];
 const map = {
-    product: '产品',
-    device: '设备',
-    org: '组织',
-    other: '其他',
+    product: t('Alarm.Configuration.index.5rg42zhpc8w0'),
+    device: t('Alarm.Configuration.index.5rg42zhpccc0'),
+    org: t('Alarm.Configuration.index.5rg42zhpci80'),
+    other: t('Alarm.Configuration.index.5rg42zhpcls0'),
 };
 const handleSearch = (e: any) => {
     const _terms = (e?.terms || []).map((item: any) => {
@@ -375,16 +378,16 @@ const getActions = (
     const actions = [
         {
             key: 'tigger',
-            text: '手动触发',
+            text: t('Alarm.Configuration.index.5rg42zhpczk0'),
             disabled: data?.state?.value === 'disabled',
             tooltip: {
                 title:
                     data?.state?.value === 'disabled'
-                        ? '未启用,不能手动触发'
-                        : '手动触发',
+                        ? t('Alarm.Configuration.index.5rg42zhpd2k0')
+                        : t('Alarm.Configuration.index.5rg42zhpczk0'),
             },
             popConfirm: {
-                title: '确定手动触发？',
+                title: t('Alarm.Configuration.index.5rg42zhpd6s0'),
                 onConfirm: async () => {
                     const scene = (data.scene || [])
                         .filter((item: any) => item?.triggerType === 'manual')
@@ -393,10 +396,10 @@ const getActions = (
                         });
                     _execute(scene).then((res) => {
                         if (res.status === 200) {
-                            message.success('操作成功');
+                            message.success(t('Alarm.Configuration.index.5rg42zhpdb80'));
                             tableRef.value?.reload();
                         } else {
-                            message.error('操作失败');
+                            message.error(t('Alarm.Configuration.index.5rg42zhpdfo0'));
                         }
                     });
                 },
@@ -405,9 +408,9 @@ const getActions = (
         },
         {
             key: 'update',
-            text: '编辑',
+            text: t('Alarm.Configuration.index.5rg42zhpdkc0'),
             tooltip: {
-                title: '编辑',
+                title: t('Alarm.Configuration.index.5rg42zhpdkc0'),
             },
 
             icon: 'EditOutlined',
@@ -421,9 +424,9 @@ const getActions = (
         },
         {
             key: 'action',
-            text: data.state?.value !== 'disabled' ? '禁用' : '启用',
+            text: data.state?.value !== 'disabled' ? t('Alarm.Configuration.index.5rg42zhpbww0') : t('Alarm.Configuration.index.5rg42zhpdto0'),
             tooltip: {
-                title: data.state?.value !== 'disabled' ? '禁用' : '启用',
+                title: data.state?.value !== 'disabled' ? t('Alarm.Configuration.index.5rg42zhpbww0') : t('Alarm.Configuration.index.5rg42zhpdto0'),
             },
             icon:
                 data.state?.value !== 'disabled'
@@ -432,8 +435,8 @@ const getActions = (
             popConfirm: {
                 title: `${
                     data.state?.value !== 'disabled'
-                        ? '禁用告警不会影响关联的场景状态，确定要禁用吗'
-                        : '确认启用'
+                        ? t('Alarm.Configuration.index.5rg42zhpdxs0')
+                        : t('Alarm.Configuration.index.5rg42zhpe2g0')
                 }?`,
                 onConfirm: async () => {
                     let response = undefined;
@@ -443,33 +446,33 @@ const getActions = (
                         response = await _disable(data.id);
                     }
                     if (response && response.status === 200) {
-                        message.success('操作成功！');
+                        message.success(t('Alarm.Configuration.index.5rg42zhpe680'));
                         tableRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('Alarm.Configuration.index.5rg42zhpe9w0'));
                     }
                 },
             },
         },
         {
             key: 'delete',
-            text: '删除',
+            text: t('Alarm.Configuration.index.5rg42zhpee00'),
             disabled: data?.state?.value !== 'disabled',
             tooltip: {
                 title:
                     data?.state?.value !== 'disabled'
-                        ? '请先禁用该告警，再删除'
-                        : '删除',
+                        ? t('Alarm.Configuration.index.5rg42zhpehw0')
+                        : t('Alarm.Configuration.index.5rg42zhpee00'),
             },
             popConfirm: {
-                title: '确认删除?',
+                title: t('Alarm.Configuration.index.5rg42zhpels0'),
                 onConfirm: async () => {
                     const resp = await remove(data.id);
                     if (resp.status === 200) {
-                        message.success('操作成功！');
+                        message.success(t('Alarm.Configuration.index.5rg42zhpe680'));
                         tableRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('Alarm.Configuration.index.5rg42zhpe9w0'));
                     }
                 },
             },

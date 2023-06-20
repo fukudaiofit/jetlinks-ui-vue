@@ -19,7 +19,7 @@
                             >
                                 <template #title>
                                     <div class="alarmLevelTitle">
-                                        告警级别配置
+                                        {{t('Alarm.Config.index.5rg40s8e8fs0')}}
                                     </div>
                                 </template>
                                 <div
@@ -51,14 +51,14 @@
                             type="primary"
                             size="middle"
                             @click="handleSaveLevel"
-                            >保存</j-button
+                            >{{t('Alarm.Config.index.5rg40s8ea600')}}</j-button
                         > -->
                             <PermissionButton
                                 type="primary"
                                 size="middle"
                                 @click="handleSaveLevel"
                                 hasPermission="rule-engine/Alarm/Config:update"
-                                >保存</PermissionButton
+                                >{{t('Alarm.Config.index.5rg40s8ea600')}}</PermissionButton
                             >
                         </div>
                     </FullPage>
@@ -66,7 +66,7 @@
                 <j-col :span="10">
                     <FullPage>
                         <div class="description">
-                            <h1>功能说明</h1>
+                            <h1>{{t('Alarm.Config.index.5rg40s8eafs0')}}</h1>
                             <div>
                                 1、告警级别用于描述告警的严重程度，请根据业务管理方式进行自定义。
                             </div>
@@ -87,14 +87,17 @@ import { queryLevel, saveLevel } from '@/api/rule-engine/config';
 import { LevelItem } from './typing';
 import { message } from 'jetlinks-ui-components';
 import Io from './Io/index.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const list = ref([
     {
         key: 'config',
-        tab: '告警级别',
+        tab: t('Alarm.Config.index.5rg40s8eap80'),
     },
     {
         key: 'io',
-        tab: '数据流转',
+        tab: t('Alarm.Config.index.5rg40s8eaw80'),
     },
 ]);
 let levels = ref<LevelItem[]>([]);
@@ -110,7 +113,7 @@ getAlarmLevel();
 const handleSaveLevel = async () => {
     saveLevel(levels.value).then((res) => {
         if (res.status === 200) {
-            message.success('操作成功');
+            message.success(t('Alarm.Config.index.5rg40s8eb2k0'));
         }
     });
 };
