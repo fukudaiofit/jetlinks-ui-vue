@@ -6,11 +6,11 @@
                 <j-col :span="12">
                     <j-form ref="formRef" :model="formData" layout="vertical">
                         <j-form-item
-                            label="接入方式"
+                            :label="$t('Device.Save.index.5rg8ellkn4g0')"
                             name="channel"
                             :rules="{
                                 required: true,
-                                message: '请选择接入方式',
+                                message: $t('Device.Save.index.5rg8ellkocc0'),
                             }"
                         >
                             <RadioCard
@@ -37,59 +37,59 @@
                                             required:
                                                 formData.channel ===
                                                 'gb28181-2016',
-                                            message: '请输入ID',
+                                            message: t('Device.Save.index.5rg8ellkoio0'),
                                         },
                                         {
                                             max: 64,
-                                            message: '最多输入64个字符',
+                                            message: t('Device.Save.index.5rg8ellkonk0'),
                                         },
                                         {
                                             pattern: /^[a-zA-Z0-9_\-]+$/,
                                             message:
-                                                '请输入英文或者数字或者-或者_',
+                                                t('Device.Save.index.5rg8ellkorw0'),
                                         },
                                     ]"
                                 >
                                     <j-input
                                         v-model:value="formData.id"
-                                        placeholder="请输入ID"
+                                        :placeholder="t('Device.Save.index.5rg8ellkoio0')"
                                         :disabled="!!route.query.id"
                                     />
                                 </j-form-item>
                                 <j-form-item
-                                    label="设备名称"
+                                    :label="$t('Device.Save.index.5rg8ellkoz40')"
                                     name="name"
                                     :rules="[
                                         {
                                             required: true,
-                                            message: '请输入设备名称',
+                                            message: $t('Device.Save.index.5rg8ellkp3o0'),
                                         },
                                         {
                                             max: 64,
-                                            message: '最多可输入64个字符',
+                                            message: t('Device.Save.index.5rg8ellkp7s0'),
                                         },
                                     ]"
                                 >
                                     <j-input
                                         v-model:value="formData.name"
-                                        placeholder="请输入设备名称"
+                                        :placeholder="t('Device.Save.index.5rg8ellkp3o0')"
                                     />
                                 </j-form-item>
                             </j-col>
                         </j-row>
                         <j-form-item
-                            label="所属产品"
+                            :label="t('Device.Save.index.5rg8ellkpbw0')"
                             name="productId"
                             :rules="{
                                 required: true,
-                                message: '请选择所属产品',
+                                message: t('Device.Save.index.5rg8ellkpgo0'),
                             }"
                         >
                             <j-row :gutter="[0, 10]">
                                 <j-col :span="!!route.query.id ? 24 : 22">
                                     <j-select
                                         v-model:value="formData.productId"
-                                        placeholder="请选择所属产品"
+                                        :placeholder="t('Device.Save.index.5rg8ellkpgo0')"
                                         :disabled="!!route.query.id"
                                         showSearch
                                         @change="handleProductChange"
@@ -116,32 +116,32 @@
                             </j-row>
                         </j-form-item>
                         <j-form-item
-                            label="接入密码"
+                            :label="t('Device.Save.index.5rg8ellkpkg0')"
                             :name="['others', 'access_pwd']"
                             :rules="[
                                 {
                                     required: true,
-                                    message: '请输入接入密码',
+                                    message: t('Device.Save.index.5rg8ellkpos0'),
                                 },
                                 {
                                     max: 64,
-                                    message: '最多可输入64个字符',
+                                    message: t('Device.Save.index.5rg8ellkp7s0'),
                                 },
                             ]"
                             v-if="formData.channel === 'gb28181-2016'"
                         >
                             <j-input-password
                                 v-model:value="formData.others.access_pwd"
-                                placeholder="请输入接入密码"
+                                :placeholder="t('Device.Save.index.5rg8ellkpos0')"
                             />
                         </j-form-item>
                         <template v-if="!!route.query.id">
                             <j-form-item
-                                label="流传输模式"
+                                :label="t('Device.Save.index.5rg8ellkpsk0')"
                                 name="streamMode"
                                 :rules="{
                                     required: true,
-                                    message: '请选择流传输模式',
+                                    message: t('Device.Save.index.5rg8ellkpws0'),
                                 }"
                             >
                                 <j-radio-group
@@ -156,33 +156,33 @@
                                     </j-radio-button>
                                 </j-radio-group>
                             </j-form-item>
-                            <j-form-item label="设备厂商">
+                            <j-form-item :label="t('Device.Save.index.5rg8ellkq180')">
                                 <j-input
                                     v-model:value="formData.manufacturer"
-                                    placeholder="请输入设备厂商"
+                                    :placeholder="t('Device.Save.index.5rg8ellkq500')"
                                 />
                             </j-form-item>
-                            <j-form-item label="设备型号">
+                            <j-form-item :label="t('Device.Save.index.5rg8ellkqco0')">
                                 <j-input
                                     v-model:value="formData.model"
-                                    placeholder="请输入设备型号"
+                                    :placeholder="t('Device.Save.index.5rg8ellkqgw0')"
                                 />
                             </j-form-item>
-                            <j-form-item label="固件版本">
+                            <j-form-item :label="t('Device.Save.index.5rg8ellkql00')">
                                 <j-input
                                     v-model:value="formData.firmware"
-                                    placeholder="请输入固件版本"
+                                    :placeholder="t('Device.Save.index.5rg8ellkqp80')"
                                 />
                             </j-form-item>
                         </template>
 
-                        <j-form-item label="说明">
+                        <j-form-item :label="t('Device.Save.index.5rg8ellkqv80')">
                             <j-textarea
                                 v-model:value="formData.description"
                                 show-count
                                 :maxlength="200"
                                 :rows="5"
-                                placeholder="请输入说明"
+                                :placeholder="t('Device.Save.index.5rg8ellkqyg0')"
                             />
                         </j-form-item>
                         <j-form-item>
@@ -191,7 +191,7 @@
                                 @click="handleSubmit"
                                 :loading="btnLoading"
                             >
-                                保存
+                                {{t('Device.Save.index.5rg8ellkr2g0')}}
                             </j-button>
                         </j-form-item>
                     </j-form>
@@ -200,23 +200,23 @@
                     <div v-if="1" class="doc" style="height: 800">
                         <h1>1.概述</h1>
                         <div>
-                            视频设备通过GB/T28181接入平台整体分为2部分，包括平台端配置和设备端配置，不同的设备端配置的路径或页面存在差异，但配置项基本大同小异。
+                            {{t('Device.Save.index.5rg8ellkr5s0')}}
                         </div>
                         <h1>2.配置说明</h1>
-                        <h1>平台端配置</h1>
+                        <h1>{{t('Device.Save.index.5rg8ellkrc00')}}</h1>
                         <h2>1、ID</h2>
-                        <div>设备唯一标识，请填写设备端配置的设备编号。</div>
+                        <div>{{t('Device.Save.index.5rg8ellkrfc0')}}</div>
                         <h2>2、所属产品</h2>
                         <div>
-                            只能选择接入方式为GB/T28281的产品，若当前无对应产品，可点击右侧快速添加按钮，填写产品名称和选择GB/T28181类型的网关完成产品创建
+                            {{t('Device.Save.index.5rg8ellkrig0')}}
                         </div>
                         <h2>3、接入密码</h2>
                         <div>
-                            配置接入密码，设备端配置的密码需与该密码一致。该字段可在产品-设备接入页面进行统一配置，配置后所有设备将继承产品配置。设备单独修改后将脱离继承关系。
+                            {{t('Device.Save.index.5rg8ellkrms0')}}
                         </div>
-                        <h1>设备端配置</h1>
+                        <h1>{{t('Device.Save.index.5rg8ellkrpw0')}}</h1>
                         <div>
-                            各个厂家、不同设备型号的设备端配置页面布局存在差异，但配置项基本大同小异，此处以大华摄像头为例作为接入配置示例
+                            {{t('Device.Save.index.5rg8ellkrts0')}}
                         </div>
                         <div class="image">
                             <j-image
@@ -247,11 +247,11 @@
                         </div>
                         <h2>3、设备编号</h2>
                         <div>
-                            设备编号为设备唯一性标识，物联网平台的设备接入没有校验该字段，输入任意数字均不影响设备接入平台。
+                            {{t('Device.Save.index.5rg8ellkrxs0')}}
                         </div>
                         <h2>4、注册密码</h2>
                         <div>
-                            填入该设备所属产品-接入方式页面中“GB28281配置”处的接入密码
+                            {{t('Device.Save.index.5rg8ellks0w0')}}
                         </div>
                         <div class="image">
                             <j-image
@@ -260,27 +260,27 @@
                             />
                         </div>
                         <h2>5、其他字段</h2>
-                        <div>不影响设备接入平台，可保持设备初始化值。</div>
+                        <div>{{t('Device.Save.index.5rg8ellks4c0')}}</div>
                     </div>
 
                     <div v-else class="doc" style="height: 600">
                         <h1>1.概述</h1>
                         <div>
-                            视频设备通过RTSP、RTMP固定地址接入平台分为2步。
+                            {{t('Device.Save.index.5rg8ellks7k0')}}
                         </div>
                         <div>1、添加视频设备</div>
                         <div>2、添加视频下的通道地址。</div>
                         <div>
-                            注：当前页面为新增视频设备，新增完成后点击设备的“通道”按钮，添加通道。
+                            {{t('Device.Save.index.5rg8ellksb00')}}
                         </div>
                         <h1>2.配置说明</h1>
                         <h2>1、ID</h2>
                         <div>
-                            设备唯一标识，若不填写，系统将自动生成唯一标识。
+                            {{t('Device.Save.index.5rg8ellkseg0')}}
                         </div>
                         <h2>2、所属产品</h2>
                         <div>
-                            只能选择接入方式为固定地址的产品，若当前无对应产品，可点击右侧快速添加按钮，填写产品名称和选择固定地址类型的网关完成产品创建。
+                            {{t('Device.Save.index.5rg8ellkshs0')}}
                         </div>
                     </div>
                 </j-col>
@@ -303,7 +303,9 @@ import DeviceApi from '@/api/media/device';
 import { PROVIDER_OPTIONS } from '@/views/media/Device/const';
 import type { ProductType } from '@/views/media/Device/typings';
 import SaveProduct from './SaveProduct.vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const router = useRouter();
 const route = useRoute();
 
@@ -417,7 +419,7 @@ const handleSubmit = () => {
                 ? await DeviceApi.save(params)
                 : await DeviceApi.update(params);
             if (res?.success) {
-                message.success('保存成功');
+                message.success(t('Device.Save.index.5rg8ellkskw0'));
                 history.back();
             }
         })

@@ -23,7 +23,7 @@
                         hasPermission="media/Device:add"
                     >
                         <template #icon
-                            ><AIcon type="PlusOutlined" />新增</template
+                            ><AIcon type="PlusOutlined" />{{t('media.Device.index.5rg8fywrmpg0')}}</template
                         >
                     </PermissionButton>
                 </template>
@@ -52,25 +52,25 @@
                             <j-row>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        厂商
+                                        {{t('media.Device.index.5rg8fywrom00')}}
                                     </div>
                                     <div>{{ slotProps.manufacturer }}</div>
                                 </j-col>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        通道数量
+                                        {{t('media.Device.index.5rg8fywrouo0')}}
                                     </div>
                                     <div>{{ slotProps.channelNumber }}</div>
                                 </j-col>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        型号
+                                        {{t('media.Device.index.5rg8fywrp1w0')}}
                                     </div>
                                     <Ellipsis>{{ slotProps.model }}</Ellipsis>
                                 </j-col>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        接入方式
+                                        {{t('media.Device.index.5rg8fywrpiw0')}}
                                     </div>
                                     <div>
                                         {{ providerType[slotProps.provider] }}
@@ -171,7 +171,9 @@ import { providerType } from './const';
 import encodeQuery from '@/utils/encodeQuery';
 
 import { useMenuStore } from 'store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 
 const listRef = ref<Record<string, any>>({});
@@ -189,7 +191,7 @@ const columns = [
         },
     },
     {
-        title: '名称',
+        title: t('media.Device.index.5rg8fywrpqs0'),
         dataIndex: 'name',
         key: 'name',
         search: {
@@ -198,7 +200,7 @@ const columns = [
         },
     },
     {
-        title: '接入方式',
+        title: t('media.Device.index.5rg8fywrpiw0'),
         dataIndex: 'provider',
         key: 'provider',
         scopedSlots: true,
@@ -211,14 +213,14 @@ const columns = [
         },
     },
     {
-        title: '通道数量',
+        title: t('media.Device.index.5rg8fywrouo0'),
         dataIndex: 'channelNumber',
         key: 'channelNumber',
         scopedSlots: true,
         width: 100,
     },
     {
-        title: '厂商',
+        title: t('media.Device.index.5rg8fywrom00'),
         dataIndex: 'manufacturer',
         key: 'manufacturer',
         search: {
@@ -226,7 +228,7 @@ const columns = [
         },
     },
     {
-        title: '产品名称',
+        title: t('media.Device.index.5rg8fywrpxg0'),
         dataIndex: 'productId',
         key: 'productId',
         scopedSlots: true,
@@ -258,7 +260,7 @@ const columns = [
         },
     },
     {
-        title: '状态',
+        title: t('media.Device.index.5rg8fywrq3c0'),
         dataIndex: 'state',
         key: 'state',
         scopedSlots: true,
@@ -266,9 +268,9 @@ const columns = [
         search: {
             type: 'select',
             options: [
-                { label: '禁用', value: 'notActive' },
-                { label: '离线', value: 'offline' },
-                { label: '在线', value: 'online' },
+                { label: t('media.Device.index.5rg8fywrq9g0'), value: 'notActive' },
+                { label: t('media.Device.index.5rg8fywrqeg0'), value: 'offline' },
+                { label: t('media.Device.index.5rg8fywrqjw0'), value: 'online' },
             ],
             handleValue: (v: any) => {
                 return v;
@@ -276,7 +278,7 @@ const columns = [
         },
     },
     {
-        title: '操作',
+        title: t('media.Device.index.5rg8fywrqqc0'),
         key: 'action',
         fixed: 'right',
         width: 200,
@@ -294,7 +296,7 @@ const handleSearch = (e: any) => {
 };
 
 /**
- * 新增
+ * {{t('media.Device.index.5rg8fywrmpg0')}}
  */
 const handleAdd = () => {
     menuStory.jumpPage('media/Device/Save', {
@@ -310,9 +312,9 @@ const getActions = (
     const actions = [
         {
             key: 'update',
-            text: '编辑',
+            text: t('media.Device.index.5rg8fywrqv80'),
             tooltip: {
-                title: '编辑',
+                title: t('media.Device.index.5rg8fywrqv80'),
             },
             icon: 'EditOutlined',
             onClick: () => {
@@ -327,9 +329,9 @@ const getActions = (
         },
         {
             key: 'view',
-            text: '查看通道',
+            text: t('media.Device.index.5rg8fywrr280'),
             tooltip: {
-                title: '查看通道',
+                title: t('media.Device.index.5rg8fywrr280'),
             },
             icon: 'PartitionOutlined',
             onClick: () => {
@@ -345,9 +347,9 @@ const getActions = (
         },
         {
             key: 'viewDevice',
-            text: '查看',
+            text: t('media.Device.index.5rg8fywrr740'),
             tooltip: {
-                title: '查看',
+                title: t('media.Device.index.5rg8fywrr740'),
             },
             icon: 'EyeOutlined',
             onClick: () => {
@@ -356,16 +358,16 @@ const getActions = (
         },
         {
             key: 'updateChannel',
-            text: '更新通道',
+            text: t('media.Device.index.5rg8fywrrdc0'),
             tooltip: {
                 title:
                     data.provider === 'fixed-media'
-                        ? '固定地址无法更新通道'
+                        ? t('media.Device.index.5rg8fywrrkg0')
                         : data.state.value === 'offline'
-                        ? '设备已离线'
+                        ? t('media.Device.index.5rg8fywrrq80')
                         : data.state.value === 'notActive'
-                        ? '设备已禁用'
-                        : '更新通道',
+                        ? t('media.Device.index.5rg8fywrrw80')
+                        : t('media.Device.index.5rg8fywrrdc0'),
             },
             disabled:
                 data.state.value === 'offline' ||
@@ -375,28 +377,28 @@ const getActions = (
             onClick: async () => {
                 const res = await DeviceApi.updateChannels(data.id);
                 if (res.success) {
-                    message.success('通道更新成功');
+                    message.success(t('media.Device.index.5rg8fywrs2k0'));
                     listRef.value?.reload();
                 }
             },
         },
         {
             key: 'delete',
-            text: '删除',
+            text: t('media.Device.index.5rg8fywrsc00'),
             tooltip: {
                 title:
-                    data.state.value === 'online' ? '在线设备无法删除' : '删除',
+                    data.state.value === 'online' ? t('media.Device.index.5rg8fywrsgo0') : t('media.Device.index.5rg8fywrsc00'),
             },
             disabled: data.state.value === 'online',
             popConfirm: {
-                title: '确认删除?',
+                title: t('media.Device.index.5rg8fywrsmo0'),
                 onConfirm: async () => {
                     const resp = await DeviceApi.del(data.id);
                     if (resp.status === 200) {
-                        message.success('操作成功！');
+                        message.success(t('media.Device.index.5rg8fywrsww0'));
                         listRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('media.Device.index.5rg8fywrt1o0'));
                     }
                 },
             },

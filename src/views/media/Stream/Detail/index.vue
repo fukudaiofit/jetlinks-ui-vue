@@ -76,7 +76,7 @@
                                 :rules="[
                                     {
                                         required: true,
-                                        message: '请输入API Host',
+                                        message: ('Stream.Detail.index.5rg8mnb3vw40'),
                                     },
                                     {
                                         validator: validateAddress,
@@ -96,7 +96,7 @@
                                     </j-tooltip>
                                 </template>
                                 <j-input
-                                    placeholder="请输入API Host"
+                                    :placeholder="('Stream.Detail.index.5rg8mnb3vw40')"
                                     v-model:value="
                                         formData.configuration.apiHost
                                     "
@@ -134,7 +134,7 @@
                                 :rules="[
                                     {
                                         required: true,
-                                        message: '请输入RTP IP',
+                                        message: ('Stream.Detail.index.5rg8mnb3wv00'),
                                     },
                                     {
                                         validator: validateAddress,
@@ -154,7 +154,7 @@
                                     </j-tooltip>
                                 </template>
                                 <j-input
-                                    placeholder="请输入RTP IP"
+                                    :placeholder="('Stream.Detail.index.5rg8mnb3wv00')"
                                     v-model:value="formData.configuration.rtpIp"
                                 />
                             </j-form-item>

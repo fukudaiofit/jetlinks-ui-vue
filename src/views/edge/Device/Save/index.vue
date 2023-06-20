@@ -49,7 +49,7 @@
                             </template>
                             <j-input
                                 v-model:value="modelRef.id"
-                                :placeholder="t('Device.Save.index.5rg5cooxtfc0')"
+                                :placeholder="t('Device.Save.index.5rg8ellkoio0')"
                                 :disabled="!!data?.id"
                             />
                         </j-form-item>
@@ -100,7 +100,7 @@
                                 showSearch
                                 v-model:value="modelRef.productId"
                                 :disabled="!!data?.id"
-                                :placeholder="t('Device.Save.index.5rg5cooxty80')"
+                                :placeholder="t('Device.Save.index.5rg8ellkpgo0')"
                             >
                                 <j-select-option
                                     :value="item.id"
@@ -124,7 +124,7 @@
                     </j-col>
                 </j-row>
                 <j-form-item
-                    :label="t('Device.Save.index.5rg5cooxua40')"
+                    :label="t('Device.Save.index.5rg8ellkqv80')"
                     name="describe"
                     :rules="[
                         {
@@ -135,7 +135,7 @@
                 >
                     <j-textarea
                         v-model:value="modelRef.describe"
-                        :placeholder="t('Device.Save.index.5rg5cooxuqk0')"
+                        :placeholder="t('Device.Save.index.5rg8ellkqyg0')"
                         showCount
                         :maxlength="200"
                     />

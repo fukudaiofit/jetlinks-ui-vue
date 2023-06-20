@@ -24,24 +24,24 @@
                 }"
             >
                 <template #headerTitle>
-                    <h3>通道列表</h3>
+                    <h3>{{t('Cascade.Channel.index.5rg8o9q3hwo0')}}</h3>
                 </template>
                 <template #rightExtraRender>
                     <j-space>
                         <j-button type="primary" @click="bindVis = true">
-                            绑定通道
+                            {{t('Cascade.Channel.index.5rg8o9q3jfo0')}}
                         </j-button>
                         <j-popconfirm
-                            title="确认解绑?"
+                            :title="t('Cascade.Channel.index.5rg8o9q3jow0')"
                             @confirm="handleMultipleUnbind"
                         >
-                            <j-button> 批量解绑 </j-button>
+                            <j-button> {{t('Cascade.Channel.index.5rg8o9q3jwo0')}} </j-button>
                         </j-popconfirm>
                     </j-space>
                 </template>
                 <template #gbChannelIdHeader="title">
                     <j-tooltip
-                        title="国标级联有16位、20位两种格式。在当前页面修改不会修改视频设备-通道页面中的国标ID"
+                        :title="t('Cascade.Channel.index.5rg8o9q3k1w0')"
                     >
                         <j-space>
                             <span>{{ title }}</span>
@@ -60,7 +60,7 @@
                         >
                             <template #title>
                                 <div class="header">
-                                    <span>编辑国标ID</span>
+                                    <span>{{t('Cascade.Channel.index.5rg8o9q3ka80')}}</span>
                                     <AIcon
                                         type="CloseOutlined"
                                         @click="handleClose(slotProps)"
@@ -72,14 +72,14 @@
                                     <j-input
                                         v-model:value="gbID"
                                         @change="validField(slotProps)"
-                                        placeholder="请输入国标ID"
+                                        :placeholder="t('Cascade.Channel.index.5rg8o9q3kew0')"
                                     />
                                     <div
                                         class="error"
                                         v-if="valid && !valid?.passed"
                                     >
                                         <!-- {{ valid?.reason }} -->
-                                        该国标ID在同一设备下已存在
+                                        {{t('Cascade.Channel.index.5rg8o9q3kj40')}}
                                     </div>
                                 </div>
                                 <j-button
@@ -88,7 +88,7 @@
                                     :loading="loading"
                                     style="width: 100%"
                                 >
-                                    保存
+                                    {{t('Cascade.Channel.index.5rg8o9q3knw0')}}
                                 </j-button>
                             </template>
                             <j-button
@@ -159,12 +159,14 @@ import CascadeApi from '@/api/media/cascade';
 import type { ActionsType } from '@/views/device/Instance/typings';
 import { message } from 'jetlinks-ui-components';
 import BindChannel from './BindChannel/index.vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const route = useRoute();
 
 const columns = [
     {
-        title: '设备名称',
+        title: t('Cascade.Channel.index.5rg8o9q3ksc0'),
         dataIndex: 'deviceName',
         key: 'deviceName',
         // width: 200,
@@ -174,7 +176,7 @@ const columns = [
         },
     },
     {
-        title: '通道名称',
+        title: t('Cascade.Channel.index.5rg8o9q3kx00'),
         dataIndex: 'name',
         key: 'name',
         search: {
@@ -183,7 +185,7 @@ const columns = [
         },
     },
     {
-        title: '国标ID',
+        title: t('Cascade.Channel.index.5rg8o9q3l1o0'),
         dataIndex: 'channelId',
         key: 'channelId',
         scopedSlots: true,
@@ -193,7 +195,7 @@ const columns = [
         },
     },
     {
-        title: '安装地址',
+        title: t('Cascade.Channel.index.5rg8o9q3l600'),
         dataIndex: 'address',
         key: 'address',
         search: {
@@ -201,7 +203,7 @@ const columns = [
         },
     },
     {
-        title: '厂商',
+        title: t('Cascade.Channel.index.5rg8o9q3lbo0'),
         dataIndex: 'manufacturer',
         key: 'manufacturer',
         search: {
@@ -209,15 +211,15 @@ const columns = [
         },
     },
     {
-        title: '在线状态',
+        title: t('Cascade.Channel.index.5rg8o9q3lg00'),
         dataIndex: 'status',
         key: 'status',
         scopedSlots: true,
         search: {
             type: 'select',
             options: [
-                { label: '已连接', value: 'online' },
-                { label: '未连接', value: 'offline' },
+                { label: t('Cascade.Channel.index.5rg8o9q3lk40'), value: 'online' },
+                { label: t('Cascade.Channel.index.5rg8o9q3lrk0'), value: 'offline' },
             ],
             handleValue: (v: any) => {
                 return v;
@@ -225,7 +227,7 @@ const columns = [
         },
     },
     {
-        title: '操作',
+        title: t('Cascade.Channel.index.5rg8o9q3lw40'),
         key: 'action',
         scopedSlots: true,
     },
@@ -262,23 +264,23 @@ const getActions = (
     const actions = [
         {
             key: 'delete',
-            text: '解绑',
+            text: t('Cascade.Channel.index.5rg8o9q3m0c0'),
             tooltip: {
-                title: '解绑',
+                title: t('Cascade.Channel.index.5rg8o9q3m0c0'),
             },
             icon: 'DisconnectOutlined',
             popConfirm: {
-                title: '确认解绑?',
+                title: t('Cascade.Channel.index.5rg8o9q3jow0'),
                 onConfirm: async () => {
                     const resp = await CascadeApi.unbindChannel(
                         route.query.id as string,
                         [data.channelId],
                     );
                     if (resp.success) {
-                        message.success('操作成功！');
+                        message.success(t('Cascade.Channel.index.5rg8o9q3m4w0'));
                         listRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('Cascade.Channel.index.5rg8o9q3mbc0'));
                     }
                 },
             },
@@ -288,11 +290,11 @@ const getActions = (
 };
 
 /**
- * 批量解绑
+ * {{t('Cascade.Channel.index.5rg8o9q3jwo0')}}
  */
 const handleMultipleUnbind = async () => {
     if (!_selectedRowKeys.value.length) {
-        message.error('请先选择需要解绑的通道列表');
+        message.error(t('Cascade.Channel.index.5rg8o9q3mf00'));
         return;
     }
     const channelIds = listRef.value?._dataSource
@@ -303,20 +305,20 @@ const handleMultipleUnbind = async () => {
         channelIds,
     );
     if (resp.success) {
-        message.success('操作成功！');
+        message.success(t('Cascade.Channel.index.5rg8o9q3m4w0'));
         listRef.value?.reload();
     } else {
-        message.error('操作失败！');
+        message.error(t('Cascade.Channel.index.5rg8o9q3mbc0'));
     }
 };
 
 /**
- * 编辑国标ID
+ * {{t('Cascade.Channel.index.5rg8o9q3ka80')}}
  */
 const gbID = ref('');
 const loading = ref(false);
 const handleSave = async (data: any) => {
-    if (!gbID.value) message.error('请输入国标ID');
+    if (!gbID.value) message.error(t('Cascade.Channel.index.5rg8o9q3kew0'));
     if (!valid.value?.passed) return;
 
     loading.value = true;
@@ -325,12 +327,12 @@ const handleSave = async (data: any) => {
     });
     loading.value = false;
     if (resp.success) {
-        message.success('操作成功！');
+        message.success(t('Cascade.Channel.index.5rg8o9q3m4w0'));
         listRef.value?.reload();
         valid.value = undefined;
         gbID.value = '';
     } else {
-        message.error('操作失败！');
+        message.error(t('Cascade.Channel.index.5rg8o9q3mbc0'));
     }
 };
 

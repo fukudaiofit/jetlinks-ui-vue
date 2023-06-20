@@ -1,9 +1,9 @@
 <template>
     <j-modal
         v-model:visible="_vis"
-        title="快速添加"
-        cancelText="取消"
-        okText="确定"
+        :title="t('Device.Save.SaveProduct.5rg8folmzl00')"
+        :cancelText="t('Device.Save.SaveProduct.5rg8foln0rc0')"
+        :okText="t('Device.Save.SaveProduct.5rg8foln0x00')"
         @ok="handleOk"
         @cancel="handleCancel"
         :confirmLoading="btnLoading"
@@ -11,19 +11,19 @@
     >
         <j-form ref="formRef" :model="formData" layout="vertical">
             <j-form-item
-                label="产品名称"
+                :label="t('Device.Save.SaveProduct.5rg8foln11s0')"
                 name="name"
                 :rules="[
-                    { required: true, message: '请输入产品名称' },
+                    { required: true, message: t('Device.Save.SaveProduct.5rg8foln1640') },
                     {
                         max: 64,
-                        message: '最多输入64个字符',
+                        message: t('Device.Save.SaveProduct.5rg8foln1aw0'),
                     },
                 ]"
             >
                 <j-input
                     v-model:value="formData.name"
-                    placeholder="请输入名称"
+                    :placeholder="t('Device.Save.SaveProduct.5rg8foln1ew0')"
                 />
             </j-form-item>
             <template v-if="deviceType !== 'gateway'">
@@ -39,7 +39,7 @@
                             },
                             {
                                 max: 64,
-                                message: '最多输入64个字符',
+                                message: t('Device.Save.SaveProduct.5rg8foln1aw0'),
                             },
                         ]"
                     >
@@ -63,9 +63,9 @@
                 </template>
             </template>
             <j-form-item
-                label="接入网关"
+                :label="t('Device.Save.SaveProduct.5rg8foln1ik0')"
                 name="accessId"
-                :rules="{ required: true, message: '请选择接入网关' }"
+                :rules="{ required: true, message: t('Device.Save.SaveProduct.5rg8foln1ms0') }"
             >
                 <div class="gateway-box">
                     <j-empty
@@ -74,10 +74,10 @@
                     >
                         <template #description>
                             <template v-if="!isPermission"
-                                >暂无权限, 请联系管理员</template
+                                >{{t('Device.Save.SaveProduct.5rg8foln1qo0')}} {{t('Device.Save.SaveProduct.5rg8foln1uk0')}}</template
                             >
                             <template v-else>
-                                暂无数据，请先
+                                {{t('Device.Save.SaveProduct.5rg8foln1yc0')}}
                                 <j-button
                                     type="link"
                                     style="padding: 0"
@@ -173,7 +173,9 @@ import { getImage } from '@/utils/comm';
 import { gatewayType } from '@/views/media/Device/typings';
 import { providerType } from '../const';
 import { usePermissionStore } from '@/store/permission';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const isPermission = usePermissionStore().hasPermission(
     'link/AccessConfig:add',
 );
@@ -296,7 +298,7 @@ const handleOk = () => {
                 );
                 if (deployResp.success) {
                     emit('save', { ...res.result });
-                    message.success('操作成功');
+                    message.success(t('Device.Save.SaveProduct.5rg8foln23w0'));
                     handleCancel();
                 }
             }

@@ -43,10 +43,10 @@
                         <template #headerTitle>
                             <j-tooltip
                                 v-if="route?.query.type === 'gb28181-2016'"
-                                title="接入方式为GB/T28281时，不支持新增"
+                                :title="t('Device.Channel.index.5rg8asbn6mc0')"
                             >
                                 <j-button type="primary" disabled>
-                                    新增
+                                    {{t('Device.Channel.index.5rg8asbn7sw0')}}
                                 </j-button>
                             </j-tooltip>
                             <PermissionButton
@@ -56,7 +56,7 @@
                                 hasPermission="media/Device:add"
                             >
                                 <template #icon
-                                    ><AIcon type="PlusOutlined" />新增</template
+                                    ><AIcon type="PlusOutlined" />{{t('Device.Channel.index.5rg8asbn7sw0')}}</template
                                 >
                             </PermissionButton>
                         </template>
@@ -149,13 +149,15 @@ import Live from './Live/index.vue';
 import Tree from './Tree/index.vue';
 import { cloneDeep } from 'lodash-es';
 import { useElementSize } from '@vueuse/core';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const route = useRoute();
 
 const columns = [
     {
-        title: '通道ID',
+        title: t('Device.Channel.index.5rg8asbn7yo0'),
         dataIndex: 'channelId',
         key: 'channelId',
         search: {
@@ -163,7 +165,7 @@ const columns = [
         },
     },
     {
-        title: '名称',
+        title: t('Device.Channel.index.5rg8asbn82s0'),
         dataIndex: 'name',
         key: 'name',
         search: {
@@ -172,7 +174,7 @@ const columns = [
         },
     },
     {
-        title: '厂商',
+        title: t('Device.Channel.index.5rg8asbn86k0'),
         dataIndex: 'manufacturer',
         key: 'manufacturer',
         search: {
@@ -180,7 +182,7 @@ const columns = [
         },
     },
     {
-        title: '安装地址',
+        title: t('Device.Channel.index.5rg8asbn8ak0'),
         dataIndex: 'address',
         key: 'address',
         search: {
@@ -188,15 +190,15 @@ const columns = [
         },
     },
     {
-        title: '状态',
+        title: t('Device.Channel.index.5rg8asbn8e40'),
         dataIndex: 'status',
         key: 'status',
         scopedSlots: true,
         search: {
             type: 'select',
             options: [
-                { label: '已连接', value: 'online' },
-                { label: '未连接', value: 'offline' },
+                { label: t('Device.Channel.index.5rg8asbn8ig0'), value: 'online' },
+                { label: t('Device.Channel.index.5rg8asbn8nk0'), value: 'offline' },
             ],
             handleValue: (v: any) => {
                 return v;
@@ -204,7 +206,7 @@ const columns = [
         },
     },
     {
-        title: '操作',
+        title: t('Device.Channel.index.5rg8asbn8sg0'),
         key: 'action',
         scopedSlots: true,
     },
@@ -242,9 +244,9 @@ const getActions = (
     const actions = [
         {
             key: 'update',
-            text: '编辑',
+            text: t('Device.Channel.index.5rg8asbn8zg0'),
             tooltip: {
-                title: '编辑',
+                title: t('Device.Channel.index.5rg8asbn8zg0'),
             },
             icon: 'EditOutlined',
             onClick: () => {
@@ -254,9 +256,9 @@ const getActions = (
         },
         {
             key: 'play',
-            text: '播放',
+            text: t('Device.Channel.index.5rg8asbn94w0'),
             tooltip: {
-                title: '播放',
+                title: t('Device.Channel.index.5rg8asbn94w0'),
             },
             icon: 'VideoCameraOutlined',
             onClick: () => {
@@ -266,9 +268,9 @@ const getActions = (
         },
         {
             key: 'backPlay',
-            text: '回放',
+            text: t('Device.Channel.index.5rg8asbn9980'),
             tooltip: {
-                title: '回放',
+                title: t('Device.Channel.index.5rg8asbn9980'),
             },
             icon: 'HistoryOutlined',
             onClick: () => {
@@ -285,19 +287,19 @@ const getActions = (
         },
         {
             key: 'delete',
-            text: '删除',
+            text: t('Device.Channel.index.5rg8asbn9ec0'),
             tooltip: {
-                title: '删除',
+                title: t('Device.Channel.index.5rg8asbn9ec0'),
             },
             popConfirm: {
-                title: '确认删除?',
+                title: t('Device.Channel.index.5rg8asbn9hw0'),
                 onConfirm: async () => {
                     const resp = await ChannelApi.del(data.id);
                     if (resp.status === 200) {
-                        message.success('操作成功！');
+                        message.success(t('Device.Channel.index.5rg8asbn9lk0'));
                         listRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('Device.Channel.index.5rg8asbn9r00'));
                     }
                 },
             },

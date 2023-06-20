@@ -1,7 +1,7 @@
 <template>
     <div class="channel-tree">
         <div class="channel-tree-query">
-            <j-input @change="queryTree" placeholder="请输入目录名称">
+            <j-input @change="queryTree" :placeholder="t('Channel.Tree.index.5rg8aizzfw00')">
                 <template #suffix>
                     <AIcon type="SearchOutlined" />
                 </template>
@@ -30,7 +30,9 @@
 import { debounce } from 'lodash';
 import ChannelApi from '@/api/media/channel';
 import DeviceApi from '@/api/media/device';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 interface TreeProps {
     deviceId: string;
     onSelect: (id: string) => void;
