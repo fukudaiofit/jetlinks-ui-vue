@@ -34,7 +34,9 @@
 <script lang="ts" setup>
 import { getImage } from '@/utils/comm';
 import MUpload from './MUpload.vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     disabled: {
         type: Boolean,
@@ -54,32 +56,32 @@ const emit = defineEmits(['update:value', 'update:photoUrl']);
 const list = [
     {
         value: 'internal-standalone',
-        text: '内部独立应用',
+        text: t('components.ApplyList.index.5rgb17wiqzg0'),
         imgUrl: getImage('/apply/provider1.png'),
     },
     {
         value: 'internal-integrated',
-        text: '内部集成应用',
+        text: t('components.ApplyList.index.5rgb17wis440'),
         imgUrl: getImage('/apply/provider2.png'),
     },
     {
         value: 'wechat-webapp',
-        text: '微信网站应用',
+        text: t('components.ApplyList.index.5rgb17wis8c0'),
         imgUrl: getImage('/apply/provider4.png'),
     },
     {
         value: 'dingtalk-ent-app',
-        text: '钉钉企业内部应用',
+        text: t('components.ApplyList.index.5rgb17wisbw0'),
         imgUrl: getImage('/apply/provider3.png'),
     },
     {
         value: 'third-party',
-        text: '第三方应用',
+        text: t('components.ApplyList.index.5rgb17wises0'),
         imgUrl: getImage('/apply/provider5.png'),
     },
     {
         value: 'wechat-miniapp',
-        text: '小程序应用',
+        text: t('components.ApplyList.index.5rgb17wisic0'),
         imgUrl: getImage('/apply/provider1.png'),
     },
 ];

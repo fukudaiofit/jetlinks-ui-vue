@@ -11,7 +11,7 @@
                 <PermissionButton
                     type="primary"
                     :hasPermission="`${permission}:update`"
-                    @click="openDialog('新增', {})"
+                    @click="openDialog('add', {})"
                 >
                     <AIcon type="PlusOutlined" />新增
                 </PermissionButton>
@@ -21,22 +21,22 @@
                     <PermissionButton
                         type="link"
                         :hasPermission="`${permission}:update`"
-                        :tooltip="{ title: '编辑' }"
-                        @click="openDialog('编辑', slotProps)"
+                        :tooltip="{ title: t('Menu.Detail.ButtonMange.5rg9pphvu7k0') }"
+                        @click="openDialog('updata', slotProps)"
                     >
                         <AIcon type="EditOutlined" />
                     </PermissionButton>
                     <PermissionButton
                         type="link"
                         :hasPermission="`${permission}:view`"
-                        :tooltip="{ title: '查看' }"
-                        @click="openDialog('查看', slotProps)"
+                        :tooltip="{ title: t('Menu.Detail.ButtonMange.5rg9pphvv8s0') }"
+                        @click="openDialog('view', slotProps)"
                     >
                         <AIcon type="SearchOutlined" />
                     </PermissionButton>
                     <PermissionButton
                         type="link"
-                        :tooltip="{ title: '删除' }"
+                        :tooltip="{ title: t('Menu.Detail.ButtonMange.5rg9pphvvfg0') }"
                         :popConfirm="{
                             title: `确认删除`,
                             onConfirm: () => table.clickDel(slotProps),
@@ -66,7 +66,10 @@ import PermissionButton from '@/components/PermissionButton/index.vue';
 import ButtonAddDialog from '../components/ButtonAddDialog.vue';
 import { getMenuInfo_api, saveMenuInfo_api } from '@/api/system/menu';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
+type ModelType = 'add' | 'view' | 'updata' 
 const permission = 'system/Menu';
 // 路由
 const route = useRoute();
@@ -79,10 +82,10 @@ const paramsId = ref('');
 // 弹窗相关
 const selectItem = ref<any>({});
 const dialogVisible = ref(false);
-const dialogTitle = ref<'查看' | '新增' | '编辑'>('新增');
-const openDialog = (mode: '查看' | '新增' | '编辑', row: object) => {
+const dialogTitle = ref<ModelType>('add');
+const openDialog = (mode: ModelType, row: object) => {
     if (!routeParams.id && !paramsId.value) {
-        return message.warning('请先新增菜单基本信息');
+        return message.warning(t('Menu.Detail.ButtonMange.5rg9pphvvkg0'));
     }
     console.log(3);
 
@@ -96,24 +99,24 @@ const menuInfo = ref<any>({});
 const table = reactive({
     columns: [
         {
-            title: '编码',
+            title: t('Menu.Detail.ButtonMange.5rg9pphvvp00'),
             dataIndex: 'id',
             key: 'id',
             width: 220,
         },
         {
-            title: '名称',
+            title: t('Menu.Detail.ButtonMange.5rg9pphvvu00'),
             dataIndex: 'name',
             key: 'name',
             width: 300,
         },
         {
-            title: '说明',
+            title: t('Menu.Detail.ButtonMange.5rg9pphvvy80'),
             dataIndex: 'description',
             key: 'description',
         },
         {
-            title: '操作',
+            title: t('Menu.Detail.ButtonMange.5rg9pphvw280'),
             dataIndex: 'action',
             key: 'action',
             scopedSlots: true,
@@ -138,7 +141,7 @@ const table = reactive({
             buttons,
         };
         saveMenuInfo_api(params).then(() => {
-            message.success('操作成功');
+            message.success(t('Menu.Detail.ButtonMange.5rg9pphvw6k0'));
             table.getList();
         });
     },

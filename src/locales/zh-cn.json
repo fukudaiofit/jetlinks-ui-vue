@@ -1318,6 +1318,80 @@
                 "5rg7tjifbyw0": "取消",
                 "5rg7tjifc7g0": "确认"
             }
+        },
+        "Auth": {
+            "index": {
+                "5rga80st4r00": "权限控制",
+                "5rga80st5qg0": "请配置角色权限"
+            }
+        },
+        "Detail": {
+            "index": {
+                "5rga8ahulh80": "配置详情",
+                "5rga8ahum8g0": "通知方式",
+                "5rga8ahume00": "通知配置",
+                "5rga8ahumig0": "通知模板",
+                "5rga8ahummg0": "通知内容",
+                "5rga8ahumq80": "模板变量",
+                "5rga8ahumu80": "用户权限",
+                "5rga8ahumxs0": "确定"
+            }
+        },
+        "Role": {
+            "index": {
+                "5rga8iaeh3s0": "全选",
+                "5rga8iaeiak0": "标识",
+                "5rga8iaeifk0": "名称",
+                "5rga8iaeij80": "说明"
+            }
+        },
+        "variableItem": {
+            "BuildIn": {
+                "5rga8u77ze40": "手动输入",
+                "5rga8u780uo0": "内置参数",
+                "5rga8u781ms0": "请选择参数"
+            },
+            "InputFile": {
+                "5rga92u1g280": "请上传文件",
+                "5rga92u1h5k0": "上传附件",
+                "5rga92u1hbs0": "请上传正确格式图片"
+            },
+            "Tag": {
+                "5rga993m65w0": "请选择标签"
+            }
+        },
+        "Save": {
+            "index": {
+                "5rgaa7r7y2k0": "配置通知方式",
+                "5rgaa7r7zck0": "取消",
+                "5rgaa7r7zkg0": "上一步",
+                "5rgaa7r7zqk0": "下一步",
+                "5rgaa7r7zvo0": "确认",
+                "5rgaa7r80140": "选择通知方式",
+                "5rgaa7r806k0": "选择通知配置",
+                "5rgaa7r80bk0": "选择通知模板",
+                "5rgaa7r80go0": "配置模板变量",
+                "5rgaa7r80l80": "配置用户权限",
+                "5rgaa7r80qw0": "请选择通知方式",
+                "5rgaa7r80wo0": "请选择通知配置",
+                "5rgaa7r812k0": "请选择通知模板",
+                "5rgaa7r81740": "请配置模版变量",
+                "5rgaa7r81is0": "请配置角色权限"
+            }
+        },
+        "ApplyList": {
+            "index": {
+                "5rgb17wiqzg0": "内部独立应用",
+                "5rgb17wis440": "内部集成应用",
+                "5rgb17wis8c0": "微信网站应用",
+                "5rgb17wisbw0": "钉钉企业内部应用",
+                "5rgb17wises0": "第三方应用",
+                "5rgb17wisic0": "小程序应用"
+            },
+            "MUpload": {
+                "5rgb1dttv2w0": "替换图标",
+                "5rgb1dttw0g0": "删除图标"
+            }
         }
     },
     "Instance": {
@@ -2557,6 +2631,165 @@
                 "5rg53a9a4h80": "适用于第三方平台向物联网平台下发指令控制设备",
                 "5rg53a9a4ms0": "定时触发",
                 "5rg53a9a4wk0": "适用于定期执行固定任务"
+            },
+            "NotifyConfig": {
+                "5rga9hme45o0": "通知方式",
+                "5rga9hme5lk0": "说明",
+                "5rga9hme5uo0": "名称"
+            },
+            "NotifyTemplate": {
+                "5rga9requr80": "通知方式",
+                "5rga9reqvk00": "说明",
+                "5rga9reqvp00": "名称"
+            },
+            "VariableDefinitions": {
+                "5rgaa0i4k1s0": "当前模版暂无变量",
+                "5rgaa0i4kvs0": "请输入",
+                "5rgaa0i4l4g0": "最多64个字符",
+                "5rgaa0i4l8w0": "请选择"
+            },
+            "Does": {
+                "5rgb1lt1h000": "内部独立应用适用于将",
+                "5rgb1lt1ibk0": "官方开发",
+                "5rgb1lt1ijs0": "的其他应用与",
+                "5rgb1lt1ip80": "物联网平台相互集成",
+                "5rgb1lt1itc0": "内部独立应用的",
+                "5rgb1lt1ixw0": "后端服务",
+                "5rgb1lt1j1s0": "相互",
+                "5rgb1lt1j5k0": "独立运行",
+                "5rgb1lt1j9s0": "集成其他应用的",
+                "5rgb1lt1jdk0": "前端页面",
+                "5rgb1lt1jh00": "通常还需要配置API服务",
+                "5rgb1lt1jl40": "物联网平台",
+                "5rgb1lt1jow0": "请求",
+                "5rgb1lt1jsk0": "其他应用",
+                "5rgb1lt1jw40": "的接口，以实现将物联网平台集成至其他应用系统。如需实现",
+                "5rgb1lt1jzk0": "登录后可以访问",
+                "5rgb1lt1k3g0": "页面，",
+                "5rgb1lt1k740": "还需要配置单点登录",
+                "5rgb1lt1kas0": "外部应用",
+                "5rgb1lt1kec0": "通常还需要配置页面集成",
+                "5rgb1lt1kjs0": "配置API服务后，系统将",
+                "5rgb1lt1kmo0": "自动创建",
+                "5rgb1lt1kq80": "对应的",
+                "5rgb1lt1ksw0": "账号/密码",
+                "5rgb1lt1kwc0": "第三方用户",
+                "5rgb1lt1kz40": "可调用的API服务",
+                "5rgb1lt1l1w0": "在其应用管理卡片的",
+                "5rgb1lt1l4o0": "页面，进行",
+                "5rgb1lt1l7k0": "自定义配置",
+                "5rgb1lt1lac0": "通过",
+                "5rgb1lt1ldc0": "第三方平台账号",
+                "5rgb1lt1lg40": "登录到物联网平台。",
+                "5rgb1lt1lis0": "内部集成应用适用于将",
+                "5rgb1lt1llk0": "后端服务在同一个环境运行",
+                "5rgb1lt1lo80": "至物联网平台中。集成后系统顶部将新增对应的应用管理菜单",
+                "5rgb1lt1lr80": "钉钉开放平台：",
+                "5rgb1lt1luc0": "钉钉企业内部应用适用于通过钉钉登录",
+                "5rgb1lt1lx40": "通过钉钉账号登录到物联网平台。",
+                "5rgb1lt1lzw0": "微信开放平台：",
+                "5rgb1lt1m300": "微信网站应用适用于通过微信授权登录",
+                "5rgb1lt1m5s0": "通过微信账号登录到物联网平台。",
+                "5rgb1lt1m900": "概述",
+                "5rgb1lt1mbs0": "第三方应用适用于",
+                "5rgb1lt1meo0": "第三方应用",
+                "5rgb1lt1mj80": "与",
+                "5rgb1lt1mm80": "还需要配置API服务",
+                "5rgb1lt1mp00": "的接口，以实现将物联网平台集成至其他应用。如需实现",
+                "5rgb1lt1mrs0": "通过API服务配置，请求物联网平台接口，实现",
+                "5rgb1lt1mug0": "的服务调用能力，",
+                "5rgb1lt1mx00": "暂未开发"
+            },
+            "EditForm": {
+                "5rgb2bzputc0": "名称",
+                "5rgb2bzpw1w0": "请输入名称",
+                "5rgb2bzpw9k0": "最多可输入64个字符",
+                "5rgb2bzpwec0": "应用",
+                "5rgb2bzpwiw0": "请选择应用",
+                "5rgb2bzpwo00": "接入方式",
+                "5rgb2bzpwz80": "请选择接入方式",
+                "5rgb2bzpx6k0": "页面集成",
+                "5rgb2bzpxb40": "请输入接入地址",
+                "5rgb2bzpxfw0": "接入地址",
+                "5rgb2bzpxk00": "填写访问其它平台的地址",
+                "5rgb2bzpxoo0": "路由方式",
+                "5rgb2bzpxw40": "请选择路由方式",
+                "5rgb2bzpy140": "参数",
+                "5rgb2bzpy5o0": "用户ID",
+                "5rgb2bzpy9k0": "用户名",
+                "5rgb2bzpye40": "请输入接口地址",
+                "5rgb2bzpyic0": "接口地址",
+                "5rgb2bzpymk0": "访问Api服务的地址",
+                "5rgb2bzpywg0": "请输入授权地址",
+                "5rgb2bzpz440": "授权地址",
+                "5rgb2bzpz8k0": "认证授权地址",
+                "5rgb2bzpzdc0": "请输入token地址",
+                "5rgb2bzpzgw0": "设置token令牌的地址",
+                "5rgb2bzpzk40": "回调地址",
+                "5rgb2bzpznk0": "授权完成后跳转到具体页面的回调地址",
+                "5rgb2bzpzqo0": "请输入回调地址",
+                "5rgb2bzpzvg0": "请输入appId",
+                "5rgb2bzpzyw0": "第三方应用唯一标识",
+                "5rgb2bzq02g0": "请输入appKey",
+                "5rgb2bzq05w0": "第三方应用唯一标识的密钥",
+                "5rgb2bzq0940": "认证方式",
+                "5rgb2bzq0co0": "基本认证",
+                "5rgb2bzq0ko0": "请求方式",
+                "5rgb2bzq0oc0": "请选择请求方式",
+                "5rgb2bzq0rg0": "请求体",
+                "5rgb2bzq0vc0": "请求头",
+                "5rgb2bzq0z00": "请输入client_id",
+                "5rgb2bzq1240": "应用唯一标识",
+                "5rgb2bzq15g0": "请输入client_secret",
+                "5rgb2bzq18s0": "应用唯一标识的秘钥",
+                "5rgb2bzq1c80": "请输入用户名",
+                "5rgb2bzq1fo0": "密码",
+                "5rgb2bzq1is0": "请输入密码",
+                "5rgb2bzq1nc0": "请输入token",
+                "5rgb2bzq1ss0": "请输入请求头",
+                "5rgb2bzq1xs0": "根据不同应用的调用规范，自定义请求头内容",
+                "5rgb2bzq21s0": "请输入参数",
+                "5rgb2bzq24w0": "请输入secureKey",
+                "5rgb2bzq27w0": "第三方应用唯一标识匹配的秘钥",
+                "5rgb2bzq2co0": "请输入redirectUri",
+                "5rgb2bzq2fk0": "请选择角色",
+                "5rgb2bzq2io0": "角色",
+                "5rgb2bzq2m00": "为应用用户分配角色，根据绑定的角色，进行系统菜单赋权",
+                "5rgb2bzq2po0": "组织",
+                "5rgb2bzq2sw0": "为应用用户分配所属组织，根据绑定的组织，进行数据隔离",
+                "5rgb2bzq2vw0": "请选择组织",
+                "5rgb2bzq2z00": "授权后自动跳转的页面地址",
+                "5rgb2bzq3240": "请输入redirectUrl",
+                "5rgb2bzq35k0": "请输入IP白名单，多个地址回车分隔，不填默认均可访问",
+                "5rgb2bzq3a40": "单点登录",
+                "5rgb2bzq3ds0": "请选择认证方式",
+                "5rgb2bzq3lk0": "请输入scope",
+                "5rgb2bzq3ow0": "限制用户访问应用程序的权限",
+                "5rgb2bzq3s40": "点击上传图片",
+                "5rgb2bzq3xc0": "用户信息地址",
+                "5rgb2bzq40c0": "请输入用户信息地址",
+                "5rgb2bzq43k0": "请输入用户ID",
+                "5rgb2bzq46o0": "通过jsonpath表达式从授权结果中获取第三方平台用户的唯一标识",
+                "5rgb2bzq4a00": "头像",
+                "5rgb2bzq4d80": "请输入appSecret",
+                "5rgb2bzq4h80": "应用的唯一标识的秘钥",
+                "5rgb2bzq4kw0": "自动创建用户",
+                "5rgb2bzq4oc0": "开启后，第三方用户第一次授权登录系统时，无需进入授权绑定页面。系统默认创建一个新用户与之绑定。",
+                "5rgb2bzq4ro0": "用户名前缀",
+                "5rgb2bzq4w80": "请输入用户名前缀",
+                "5rgb2bzq5000": "默认密码",
+                "5rgb2bzq53g0": "请输入默认密码",
+                "5rgb2bzq5800": "最少输入8个字符",
+                "5rgb2bzq5c00": "说明",
+                "5rgb2bzq5fk0": "请输入说明",
+                "5rgb2bzq5ig0": "保存",
+                "5rgb2bzq5lc0": "请输入完整的请求头",
+                "5rgb2bzq5o40": "请输入完整的请求参数",
+                "5rgb2bzq5wo0": "配置单点登录需同时配置API客服端",
+                "5rgb2bzq6080": "保存成功"
+            },
+            "RequestTable": {
+                "5rgb30d4w4g0": "该字段为必填字段"
             }
         },
         "Device": {
@@ -3707,6 +3940,651 @@
                 "5rg8oqlcktg0": "请输入正确的IP地址",
                 "5rg8oqlckw00": "端口请输入1~65535之间的正整数",
                 "5rg8oqlckyk0": "操作成功"
+            }
+        }
+    },
+    "system": {
+        "Basis": {
+            "index": {
+                "5rg8sgvihmk0": "系统名称",
+                "5rg8sgvijk40": "请输入系统名称",
+                "5rg8sgviju80": "主题色",
+                "5rg8sgvik1k0": "白色",
+                "5rg8sgvik7k0": "黑色",
+                "5rg8sgvike80": "高德API",
+                "5rg8sgvikls0": "配置后平台可调用高德地图GIS服务",
+                "5rg8sgvikr40": "系统后台访问的url。",
+                "5rg8sgvikwg0": "系统logo",
+                "5rg8sgvil1k0": "点击修改",
+                "5rg8sgvil600": "推荐尺寸200*200",
+                "5rg8sgvilak0": "支持jpg,png,jfif,pjp,pjpeg,jpeg",
+                "5rg8sgvilf40": "浏览器页签",
+                "5rg8sgviljk0": "浏览器tab页中显示的图片元素",
+                "5rg8sgvilo80": "推荐尺寸64*64",
+                "5rg8sgvilu80": "支持ico格式",
+                "5rg8sgvilyo0": "登录背景图",
+                "5rg8sgvim4w0": "建议尺寸1400x1080",
+                "5rg8sgvim9c0": "保存",
+                "5rg8sgvime40": "名称必填",
+                "5rg8sgvimls0": "最多可输入64个字符",
+                "5rg8sgvimpk0": "请选择主题色",
+                "5rg8sgvimxg0": "请输入base-path",
+                "5rg8sgvin1o0": "保存成功",
+                "5rg8sgvin6c0": "暂无权限，请联系管理员",
+                "5rg8sgvinc80": "系统logo上传失败，请稍后再试",
+                "5rg8sgvini00": "背景图上传失败，请稍后再试",
+                "5rg8sgvinrk0": "浏览器页签上传失败，请稍后再试"
+            }
+        },
+        "User": {
+            "index": {
+                "5rg8tfgglf40": "正常",
+                "5rg8tfggmow0": "禁用",
+                "5rg8tfggmx40": "编辑",
+                "5rg8tfggn1w0": "启用",
+                "5rg8tfggn5o0": "重置密码",
+                "5rg8tfggne40": "请先禁用，再删除",
+                "5rg8tfggnlw0": "删除",
+                "5rg8tfggnps0": "姓名",
+                "5rg8tfggntg0": "用户名",
+                "5rg8tfggnww0": "用户类型",
+                "5rg8tfggo040": "状态",
+                "5rg8tfggo6w0": "手机号",
+                "5rg8tfggoa80": "邮箱",
+                "5rg8tfggodw0": "操作",
+                "5rg8tfggoh80": "操作成功"
+            }
+        },
+        "Menu": {
+            "index": {
+                "5rg9r9vz71s0": "菜单配置",
+                "5rg9r9vz7z00": "编辑",
+                "5rg9r9vz84o0": "新增子菜单",
+                "5rg9r9vz88g0": "删除",
+                "5rg9r9vz8cc0": "编码",
+                "5rg9r9vz8gg0": "名称",
+                "5rg9r9vz8jw0": "页面地址",
+                "5rg9r9vz8pc0": "排序",
+                "5rg9r9vz8sw0": "说明",
+                "5rg9r9vz8wg0": "创建时间",
+                "5rg9r9vz8zk0": "操作",
+                "5rg9r9vz9300": "操作成功!"
+            }
+        },
+        "Permission": {
+            "index": {
+                "5rg9un6bg3k0": "新增",
+                "5rg9un6bhos0": "批量操作",
+                "5rg9un6bi280": "导入",
+                "5rg9un6bib40": "导出",
+                "5rg9un6bik40": "启用",
+                "5rg9un6bisk0": "禁用",
+                "5rg9un6bj340": "编辑",
+                "5rg9un6bjcg0": "请先禁用，再删除",
+                "5rg9un6bjpg0": "删除",
+                "5rg9un6bjxs0": "标识",
+                "5rg9un6bk5c0": "名称",
+                "5rg9un6bke00": "状态",
+                "5rg9un6bklg0": "操作",
+                "5rg9un6bktc0": "导入成功",
+                "5rg9un6bl0w0": "导入失败，请重试！",
+                "5rg9un6bl8g0": "请上传json格式",
+                "5rg9un6blgw0": "权限数据",
+                "5rg9un6blsk0": "导出成功",
+                "5rg9un6bm1c0": "导出错误",
+                "5rg9un6bmdc0": "操作成功",
+                "5rg9un6bmnw0": "操作成功!"
+            }
+        },
+        "Relationship": {
+            "index": {
+                "5rg9wmwbz5k0": "新增",
+                "5rg9wmwc0no0": "编辑",
+                "5rg9wmwc0vk0": "删除",
+                "5rg9wmwc1100": "名称",
+                "5rg9wmwc15g0": "关联方",
+                "5rg9wmwc19s0": "用户",
+                "5rg9wmwc1e80": "设备",
+                "5rg9wmwc1ik0": "被关联方",
+                "5rg9wmwc1ms0": "说明",
+                "5rg9wmwc1qs0": "操作",
+                "5rg9wmwc1y00": "操作成功!"
+            }
+        },
+        "DataSource": {
+            "index": {
+                "5rg9zyk73i40": "编辑",
+                "5rg9zyk74gc0": "暂不支持管理功能",
+                "5rg9zyk74nk0": "管理",
+                "5rg9zyk74t80": "请先启用数据源",
+                "5rg9zyk74yo0": "禁用",
+                "5rg9zyk75780": "启用",
+                "5rg9zyk75cs0": "请先禁用，再删除",
+                "5rg9zyk75i40": "删除",
+                "5rg9zyk75nc0": "名称",
+                "5rg9zyk75ss0": "类型",
+                "5rg9zyk75xk0": "说明",
+                "5rg9zyk76340": "状态",
+                "5rg9zyk76880": "正常",
+                "5rg9zyk76d80": "操作",
+                "5rg9zyk76i40": "操作成功!",
+                "5rg9zyk76mo0": "操作成功"
+            }
+        },
+        "Platforms": {
+            "index": {
+                "5rga5ah5jgo0": "配置系统支持API赋权的范围"
+            }
+        },
+        "NoticeRule": {
+            "index": {
+                "5rgaaeoqij00": "你可以为每种通知类型配置不同的通知方式与通知模版；",
+                "5rgaaeoqjw80": "默认平台中所有用户都能接收到通知，如需限制接收权限可以在配置通知方式时完成，或在通知类型后方的“权限控制”处配置外层权限。",
+                "5rgaaeoqk340": "权限控制",
+                "5rgaaeoqk740": "查看",
+                "5rgaaeoqkc80": "编辑",
+                "5rgaaeoqkhk0": "删除",
+                "5rgaaeoqkn80": "告警",
+                "5rgaaeoqkrg0": "产品告警",
+                "5rgaaeoqkwo0": "站内信",
+                "5rgaaeoql1o0": "钉钉",
+                "5rgaaeoql5g0": "微信",
+                "5rgaaeoqla80": "邮箱",
+                "5rgaaeoqlek0": "设备告警",
+                "5rgaaeoqlio0": "语音",
+                "5rgaaeoqlmg0": "系统监控",
+                "5rgaaeoqlu80": "缓冲区数据丢弃",
+                "5rgaaeoqly80": "业务监控",
+                "5rgaaeoqm2c0": "透传消息解析异常"
+            }
+        },
+        "Apply": {
+            "index": {
+                "5rgb3hpe3hs0": "应用管理将多个应用系统的登录简化为一次登录，实现多处访问、集中管控的业务场景。",
+                "5rgb3hpe4lk0": "类型",
+                "5rgb3hpe4s40": "说明",
+                "5rgb3hpe4zc0": "内部独立应用",
+                "5rgb3hpe53w0": "微信网站应用",
+                "5rgb3hpe5aw0": "内部集成应用",
+                "5rgb3hpe5f40": "钉钉企业内部应用",
+                "5rgb3hpe5jg0": "第三方应用",
+                "5rgb3hpe5o00": "小程序应用",
+                "5rgb3hpe5s80": "名称",
+                "5rgb3hpe5wg0": "状态",
+                "5rgb3hpe60s0": "正常",
+                "5rgb3hpe64k0": "禁用",
+                "5rgb3hpe68s0": "操作",
+                "5rgb3hpe6co0": "操作成功",
+                "5rgb3hpe6gs0": "编辑",
+                "5rgb3hpe6kw0": "启用",
+                "5rgb3hpe6p00": "删除",
+                "5rgb3hpe6sk0": "请先禁用再删除",
+                "5rgb3hpe6zg0": "确认删除?",
+                "5rgb3hpe7600": "其他",
+                "5rgb3hpe7980": "集成菜单",
+                "5rgb3hpe7dw0": "赋权",
+                "5rgb3hpe7hk0": "查看API"
+            }
+        },
+        "License": {
+            "index": {
+                "5rgb4hv02440": "请配置License",
+                "5rgb4hv03280": "配置成功"
+            }
+        }
+    },
+    "User": {
+        "components": {
+            "EditUserDialog": {
+                "5rg8t2bn4ps0": "取消",
+                "5rg8t2bn5t00": "确定",
+                "5rg8t2bn5yo0": "姓名",
+                "5rg8t2bn62w0": "请输入姓名",
+                "5rg8t2bn67c0": "最多可输入64个字符",
+                "5rg8t2bn6b80": "用户名",
+                "5rg8t2bn6ek0": "请输入用户名",
+                "5rg8t2bn6i40": "密码",
+                "5rg8t2bn6lk0": "请输入密码",
+                "5rg8t2bn6p40": "确认密码",
+                "5rg8t2bn6so0": "请再次输入密码",
+                "5rg8t2bn6w80": "角色",
+                "5rg8t2bn7100": "请选择角色",
+                "5rg8t2bn74c0": "组织",
+                "5rg8t2bn77s0": "请选择组织",
+                "5rg8t2bn7bw0": "手机号",
+                "5rg8t2bn7f40": "请输入正确的手机号",
+                "5rg8t2bn7ig0": "请输入手机号",
+                "5rg8t2bn7ls0": "邮箱",
+                "5rg8t2bn7pg0": "请输入正确的邮箱",
+                "5rg8t2bn7v00": "请输入邮箱",
+                "5rg8t2bn7xo0": "新增",
+                "5rg8t2bn8280": "编辑",
+                "5rg8t2bn84w0": "重置密码",
+                "5rg8t2bn87o0": "操作成功",
+                "5rg8t2bn8a80": "密码不能少于8位",
+                "5rg8t2bn8d40": "密码必须包含大小写英文和数字",
+                "5rg8t2bn8g00": "请输入8~64位的密码",
+                "5rg8t2bn8ik0": "两次密码输入不一致"
+            }
+        }
+    },
+    "Department": {
+        "components": {
+            "AddDeviceOrProductDialog": {
+                "5rg938w5sjc0": "绑定",
+                "5rg938w5tps0": "只能分配有“共享”权限的资产数据",
+                "5rg938w5twg0": "批量配置",
+                "5rg938w5u8w0": "开",
+                "5rg938w5ud40": "关",
+                "5rg938w5uhw0": "资产权限",
+                "5rg938w5ulc0": "请先勾选数据",
+                "5rg938w5uow0": "操作成功",
+                "5rg938w5usk0": "该资产不支持共享",
+                "5rg938w5uw80": "正常",
+                "5rg938w5uzk0": "禁用"
+            },
+            "EditDepartmentDialog": {
+                "5rg93if6vvs0": "取消",
+                "5rg93if6wzk0": "确定",
+                "5rg93if6xd40": "上级组织",
+                "5rg93if6xjk0": "请选择上级组织",
+                "5rg93if6xoo0": "名称",
+                "5rg93if6xu80": "请输入名称",
+                "5rg93if6xzo0": "最多可输入64个字符",
+                "5rg93if6y5o0": "排序",
+                "5rg93if6ybo0": "请输入排序",
+                "5rg93if6ykg0": "操作成功",
+                "5rg93if6yqc0": "编辑",
+                "5rg93if6yvc0": "新增子组织",
+                "5rg93if6z0w0": "新增"
+            },
+            "EditPermissionDialog": {
+                "5rg93su54rk0": "编辑",
+                "5rg93su564k0": "只能分配有'共享'权限的资产数据",
+                "5rg93su56c00": "资产权限：",
+                "5rg93su56i80": "操作成功"
+            },
+            "LeftTree": {
+                "5rg93yswq900": "请输入组织名称",
+                "5rg93yswrfc0": "新增",
+                "5rg93yswrlc0": "编辑",
+                "5rg93yswrq40": "新增子组织",
+                "5rg93yswru40": "删除",
+                "5rg93yswrxs0": "暂无数据",
+                "5rg93ysws1w0": "操作成功"
+            },
+            "NextDialog": {
+                "5rg946akc0o0": "绑定",
+                "5rg946akf5w0": "是否继续分配产品下的具体设备"
+            }
+        },
+        "device": {
+            "index": {
+                "5rg94fwttp80": "批量操作",
+                "5rg94fwtxkw0": "资产权限",
+                "5rg94fwtxyo0": "名称",
+                "5rg94fwty6w0": "所属产品",
+                "5rg94fwtyfk0": "注册时间",
+                "5rg94fwtyog0": "状态",
+                "5rg94fwtyuo0": "禁用",
+                "5rg94fwtz5c0": "离线",
+                "5rg94fwtzcg0": "在线",
+                "5rg94fwtzhs0": "操作",
+                "5rg94fwtzmk0": "编辑",
+                "5rg94fwtzt00": "解除绑定",
+                "5rg94fwtzxk0": "请勾选需要编辑的数据",
+                "5rg94fwu02w0": "请勾选需要解绑的数据",
+                "5rg94fwu0bc0": "操作成功"
+            }
+        },
+        "product": {
+            "index": {
+                "5rg94stwrfs0": "批量操作",
+                "5rg94stwsc80": "资产权限",
+                "5rg94stwsik0": "名称",
+                "5rg94stwso00": "说明",
+                "5rg94stwsss0": "状态",
+                "5rg94stwsxk0": "正常",
+                "5rg94stwt1s0": "禁用",
+                "5rg94stwt600": "操作",
+                "5rg94stwtak0": "编辑",
+                "5rg94stwteg0": "解除绑定",
+                "5rg94stwu6w0": "请勾选需要编辑的数据",
+                "5rg94stwubg0": "请勾选需要解绑的数据",
+                "5rg94stwufg0": "操作成功",
+                "5rg95ejbqcs0": "资产分配",
+                "5rg95ejbrus0": "批量解绑",
+                "5rg95ejbs580": "批量编辑"
+            }
+        },
+        "user": {
+            "index": {
+                "5rg967xq3vs0": "正常",
+                "5rg967xq4to0": "禁用",
+                "5rg967xq4z40": "姓名",
+                "5rg967xq53k0": "用户名",
+                "5rg967xq5980": "状态",
+                "5rg967xq5m80": "操作",
+                "5rg967xq5qs0": "请勾选需要解绑的数据",
+                "5rg967xq5u80": "操作成功",
+                "5rg96l7e8ts0": "绑定用户",
+                "5rg96l7ebi00": "批量解绑"
+            }
+        }
+    },
+    "user": {
+        "components": {
+            "AddBindUserDialog": {
+                "5rg97rye06g0": "绑定",
+                "5rg97rye11s0": "操作成功",
+                "5rg97rye18w0": "请选择要绑定的用户",
+                "5rg97rye1d40": "姓名",
+                "5rg97rye1ig0": "用户名"
+            }
+        }
+    },
+    "Menu": {
+        "components": {
+            "ButtonAddDialog": {
+                "5rg9nf3rtf80": "编码",
+                "5rg9nf3rucs0": "请输入编码",
+                "5rg9nf3ruio0": "最多可输入64个字符",
+                "5rg9nf3run00": "名称",
+                "5rg9nf3rur40": "请输入名称",
+                "5rg9nf3ruvg0": "权限",
+                "5rg9nf3ruz00": "请选择权限",
+                "5rg9nf3rv4g0": "说明",
+                "5rg9nf3rv8c0": "请输入说明",
+                "5rg9nf3rvbo0": "新增",
+                "5rg9nf3rvf40": "查看",
+                "5rg9nf3rvis0": "编辑",
+                "5rg9nf3rvm80": "操作成功",
+                "5rg9nf3rvpk0": "删除",
+                "5rg9nf3rvso0": "更新"
+            },
+            "ChooseIconDialog": {
+                "5rg9otsxd7o0": "菜单图标"
+            },
+            "PermissChoose": {
+                "5rg9p24ql6k0": "请输入权限名称",
+                "5rg9p24qm8k0": "权限名称",
+                "5rg9p24qmdo0": "权限操作"
+            }
+        },
+        "Detail": {
+            "BasicInfo": {
+                "5rg9pbi5rw00": "基本信息",
+                "5rg9pbi5swk0": "菜单图标",
+                "5rg9pbi5t200": "请上传图标",
+                "5rg9pbi5t6c0": "点击修改",
+                "5rg9pbi5ta40": "点击选择图标",
+                "5rg9pbi5te80": "名称",
+                "5rg9pbi5tj40": "请输入名称",
+                "5rg9pbi5tn00": "最多可输入64个字符",
+                "5rg9pbi5tqs0": "编码",
+                "5rg9pbi5tu80": "请输入编码",
+                "5rg9pbi5txg0": "页面地址",
+                "5rg9pbi5u100": "请输入页面地址",
+                "5rg9pbi5u4g0": "最多可输入128字符",
+                "5rg9pbi5u800": "排序",
+                "5rg9pbi5ubs0": "请输入大于0的整数",
+                "5rg9pbi5uew0": "请输入排序",
+                "5rg9pbi5uis0": "说明",
+                "5rg9pbi5um00": "请输入说明",
+                "5rg9pbi5uq40": "权限配置",
+                "5rg9pbi5utg0": "数据权限控制",
+                "5rg9pbi5uy80": "此菜单页面数据所对应的资产类型",
+                "5rg9pbi5v0w0": "不支持",
+                "5rg9pbi5v4c0": "支持",
+                "5rg9pbi5v6w0": "间接控制",
+                "5rg9pbi5v9k0": "此菜单内的数据基于其他菜单的数据权限控制",
+                "5rg9pbi5vcg0": "请选择资产类型",
+                "5rg9pbi5vh80": "请选择关联菜单",
+                "5rg9pbi5vk00": "权限",
+                "5rg9pbi5vog0": "保存",
+                "5rg9pbi5vrg0": "该编码重复",
+                "5rg9pbi5vws0": "操作成功！",
+                "5rg9pbi5vzk0": "操作失败！"
+            },
+            "ButtonMange": {
+                "5rg9pphvu7k0": "编辑",
+                "5rg9pphvv8s0": "查看",
+                "5rg9pphvvfg0": "删除",
+                "5rg9pphvvkg0": "请先新增菜单基本信息",
+                "5rg9pphvvp00": "编码",
+                "5rg9pphvvu00": "名称",
+                "5rg9pphvvy80": "说明",
+                "5rg9pphvw280": "操作",
+                "5rg9pphvw6k0": "操作成功"
+            },
+            "index": {
+                "5rg9qkmkmi80": "基本信息",
+                "5rg9qkmkng00": "按钮管理"
+            }
+        },
+        "Setting": {
+            "index": {
+                "5rg9qt8xecg0": "菜单配置",
+                "5rg9qt8xgc00": "保存",
+                "5rg9qt8xgp40": "保存后当前系统菜单数据将被覆盖，确认操作？",
+                "5rg9qt8xgxg0": "操作成功",
+                "5rg9qt8xhdc0": "仅支持3级菜单"
+            }
+        }
+    },
+    "Permission": {
+        "components": {
+            "EditDialog": {
+                "5rg9t8k9y9o0": "标识",
+                "5rg9t8k9zs00": "标识ID需与代码中的标识ID一致",
+                "5rg9t8ka0300": "请输入标识(ID)",
+                "5rg9t8ka09s0": "编辑",
+                "5rg9t8ka0fs0": "名称",
+                "5rg9t8ka0os0": "请输入名称",
+                "5rg9t8ka0vc0": "最多可输入64个字符",
+                "5rg9t8ka11k0": "添加",
+                "5rg9t8ka1740": "查询",
+                "5rg9t8ka1cg0": "保存",
+                "5rg9t8ka1hk0": "删除",
+                "5rg9t8ka1n80": "新增",
+                "5rg9t8ka1sc0": "操作成功",
+                "5rg9t8ka1x00": "操作类型",
+                "5rg9t8ka23w0": "说明",
+                "5rg9t8ka28w0": "操作"
+            }
+        }
+    },
+    "Relationship": {
+        "components": {
+            "EditDialog": {
+                "5rg9w5kh7s40": "名称",
+                "5rg9w5kh8uw0": "请输入名称",
+                "5rg9w5kh9080": "最多可输入64个字符",
+                "5rg9w5kh94g0": "标识",
+                "5rg9w5kh9as0": "请输入标识",
+                "5rg9w5kh9ew0": "关联方",
+                "5rg9w5kh9iw0": "请选择关联方",
+                "5rg9w5kh9mg0": "被关联方",
+                "5rg9w5kh9vk0": "请选择被关联方",
+                "5rg9w5kh9z00": "说明",
+                "5rg9w5kha280": "请输入说明",
+                "5rg9w5kha6g0": "编辑",
+                "5rg9w5kha9o0": "新增",
+                "5rg9w5khacw0": "操作成功",
+                "5rg9w5khagg0": "标识只能由数字、字母、下划线、中划线组成",
+                "5rg9w5khak00": "用户"
+            }
+        }
+    },
+    "DataSource": {
+        "components": {
+            "EditDialog": {
+                "5rg9yza8ygg0": "名称",
+                "5rg9yza8zw00": "请输入名称",
+                "5rg9yza90800": "最多可输入64个字符",
+                "5rg9yza90fk0": "类型",
+                "5rg9yza90mo0": "请选择类型",
+                "5rg9yza90u00": "请输入URL",
+                "5rg9yza90zg0": "管理地址",
+                "5rg9yza915k0": "请输入管理地址",
+                "5rg9yza91bw0": "链接地址",
+                "5rg9yza91ho0": "请输入链接地址",
+                "5rg9yza91ms0": "用户名",
+                "5rg9yza91vo0": "请输入用户名",
+                "5rg9yza921c0": "密码",
+                "5rg9yza926w0": "请输入密码",
+                "5rg9yza92c40": "虚拟域",
+                "5rg9yza92hg0": "请输入虚拟域",
+                "5rg9yza92n40": "请输入schema",
+                "5rg9yza92tc0": "说明",
+                "5rg9yza92z00": "请输入说明",
+                "5rg9yza93500": "编辑数据源",
+                "5rg9yza93ds0": "新增数据源",
+                "5rg9yza93l80": "请输入正确的URL",
+                "5rg9yza93rw0": "请输入正确的管理地址",
+                "5rg9yza93wk0": "请输入正确的链接地址",
+                "5rg9yza941g0": "操作成功"
+            }
+        },
+        "Management": {
+            "index": {
+                "5rg9zlwj22k0": "请输入",
+                "5rg9zlwj3gg0": "保存",
+                "5rg9zlwj3mc0": "最多可输入64个字符",
+                "5rg9zlwj3rw0": "请输入名称",
+                "5rg9zlwj3vw0": "请输入类型",
+                "5rg9zlwj4080": "请选择是否不能为空",
+                "5rg9zlwj4440": "是",
+                "5rg9zlwj47c0": "否",
+                "5rg9zlwj4aw0": "请输入说明",
+                "5rg9zlwj4ek0": "删除",
+                "5rg9zlwj4i00": "新增行",
+                "5rg9zlwj4nk0": "新增",
+                "5rg9zlwj4qo0": "名称",
+                "5rg9zlwj4tw0": "名称只能由数字、字母、下划线、中划线组成",
+                "5rg9zlwj4xk0": "列名",
+                "5rg9zlwj5200": "类型",
+                "5rg9zlwj55k0": "长度",
+                "5rg9zlwj58s0": "精度",
+                "5rg9zlwj5fg0": "不能为空",
+                "5rg9zlwj5j80": "说明",
+                "5rg9zlwj5o80": "操作",
+                "5rg9zlwj5r80": "请配置数据源字段",
+                "5rg9zlwj5ug0": "操作成功",
+                "5rg9zlwj5x00": "不能以数字开头"
+            }
+        }
+    },
+    "Api": {
+        "components": {
+            "ApiDoes": {
+                "5rga28pom0o0": "请求数据类型",
+                "5rga28pongc0": "响应数据类型",
+                "5rga28ponu00": "接口描述",
+                "5rga28poo0k0": "请求示例",
+                "5rga28poo6w0": "请求参数",
+                "5rga28pooe40": "响应状态",
+                "5rga28poojs0": "响应参数",
+                "5rga28poop40": "参数名",
+                "5rga28poouo0": "参数说明",
+                "5rga28pop3k0": "请求类型",
+                "5rga28pop8s0": "是否必须",
+                "5rga28pope80": "参数类型",
+                "5rga28popj00": "状态码",
+                "5rga28popqs0": "说明",
+                "5rga28popz80": "参数名称",
+                "5rga28poq480": "类型"
+            },
+            "ApiTest": {
+                "5rga2ieo44s0": "发送",
+                "5rga2ieo50s0": "请求参数",
+                "5rga2ieo5680": "该字段是必填字段",
+                "5rga2ieo5a80": "响应参数",
+                "5rga2ieo5e00": "参数名称",
+                "5rga2ieo5hs0": "参数值",
+                "5rga2ieo5lc0": "操作"
+            },
+            "ChooseApi": {
+                "5rga3nx6p880": "保存",
+                "5rga3nx6qrw0": "说明",
+                "5rga3nx6r4k0": "操作成功",
+                "5rga3nx6rb00": "请选择API接口,error"
+            },
+            "HomePage": {
+                "5rga3xywvvk0": "第三方接入说明",
+                "5rga3xywxi80": "第三方平台接口请求基于数据签名调用方式，使用签名来校验客户端请求的完整性以及合法性，您可以参看如下文档，来构造",
+                "5rga3xywxrc0": "接口以调用对应的第三方平台接口",
+                "5rga3xywxws0": "签名示例说明",
+                "5rga3xyx1gw0": "签名方式,支持MD5和Sha256两种方式.",
+                "5rga3xyx2uo0": "发起请求的签名信息都需要放到请求头中,而不是请求体.",
+                "5rga3xyx3ds0": "签名规则",
+                "5rga3xyx5940": "注意：签名时间戳与服务器时间不能相差五分钟以上，否则服务器将拒绝本次请求",
+                "5rga3xyx5l40": "使用md5(pageIndex=0&pageSize=201574993804802testSecure)得到837fe7fa29e7a5e4852d447578269523",
+                "5rga3xyx5s40": "请求头示例",
+                "5rga3xyx5x00": "响应结果示例",
+                "5rga3xyx6ak0": "示例数据",
+                "5rga3xyx6g00": "示例数据类型",
+                "5rga3xyx6lc0": "服务器验签流程",
+                "5rga3xyx6q80": "验签说明",
+                "5rga3xyx7es0": "使用和签名相同的算法(不需要对响应结果排序)",
+                "5rga3xyx7nw0": "添加",
+                "5rga3xyx7t80": "依赖",
+                "5rga3xyx88k0": "将以下Maven依赖加入到pom.xml文件中",
+                "5rga3xyx8no0": "客户端的初始化和请求方式",
+                "5rga3xyx8z40": "请求URI",
+                "5rga3xyx9580": "请求方式",
+                "5rga3xyx9hw0": "请求参数",
+                "5rga3xyx9n00": "签名方式",
+                "5rga3xyxals0": "签名示例时间戳"
+            },
+            "LeftTree": {
+                "5rga4bzkg8w0": "首页"
+            }
+        }
+    },
+    "Platforms": {
+        "Api": {
+            "index": {
+                "5rga4ixze680": "返回",
+                "5rga4ixzftc0": "文档",
+                "5rga4ixzg340": "调试"
+            }
+        },
+        "Setting": {
+            "index": {
+                "5rga4wj4hsc0": "配置系统支持API赋权的范围"
+            }
+        }
+    },
+    "Apply": {
+        "componenets": {
+            "MenuDialog": {
+                "5rgb0vzg8jo0": "集成菜单",
+                "5rgb0vzga8c0": "请选择集成系统",
+                "5rgb0vzgaek0": "当前集成菜单",
+                "5rgb0vzgb2s0": "操作成功",
+                "5rgb0vzgb7w0": "请勾选配置菜单",
+                "5rgb0vzgbpk0": "请选择所属系统"
+            }
+        },
+        "View": {
+            "index": {
+                "5rgb39zhhl80": "基本信息"
+            }
+        }
+    },
+    "License": {
+        "component": {
+            "Card": {
+                "5rgb42m24g80": "基础信息",
+                "5rgb42m25l00": "请输入License",
+                "5rgb42m25ts0": "保存"
+            }
+        },
+        "init": {
+            "index": {
+                "5rgb4b0pcrk0": "请配置License",
+                "5rgb4b0pdnc0": "配置成功"
             }
         }
     }

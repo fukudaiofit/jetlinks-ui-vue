@@ -2,7 +2,7 @@
     <j-modal
         :width="900"
         visible
-        title="配置通知方式"
+        :title="t('components.Save.index.5rgaa7r7y2k0')"
         @cancel="emit('close')"
         @ok="onSave"
     >
@@ -40,16 +40,16 @@
         <template #footer>
             <j-space>
                 <j-button v-if="current === 0" @click="emit('close')"
-                    >取消</j-button
+                    >{{t('components.Save.index.5rgaa7r7zck0')}}</j-button
                 >
-                <j-button v-else @click="onPrev">上一步</j-button>
+                <j-button v-else @click="onPrev">{{t('components.Save.index.5rgaa7r7zkg0')}}</j-button>
                 <j-button
                     type="primary"
                     @click="onNext"
                     v-if="current !== stepList.length - 1"
-                    >下一步</j-button
+                    >{{t('components.Save.index.5rgaa7r7zqk0')}}</j-button
                 >
-                <j-button type="primary" @click="onSave" v-else>确认</j-button>
+                <j-button type="primary" @click="onSave" v-else>{{t('components.Save.index.5rgaa7r7zvo0')}}</j-button>
             </j-space>
         </template>
     </j-modal>
@@ -63,15 +63,17 @@ import VariableDefinitions from './components/VariableDefinitions.vue';
 import Role from '../Role/index.vue';
 import { onlyMessage } from '@/utils/comm';
 import Template from '@/api/notice/template';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emit = defineEmits(['close', 'save']);
 
 const stepList = [
-    '选择通知方式',
-    '选择通知配置',
-    '选择通知模板',
-    '配置模板变量',
-    '配置用户权限',
+    t('components.Save.index.5rgaa7r80140'),
+    t('components.Save.index.5rgaa7r806k0'),
+    t('components.Save.index.5rgaa7r80bk0'),
+    t('components.Save.index.5rgaa7r80go0'),
+    t('components.Save.index.5rgaa7r80l80'),
 ];
 const current = ref<number>(0);
 const variable = ref([]);
@@ -97,13 +99,13 @@ const jumpStep = async (val: number) => {
         if (formModel.notifyType) {
             current.value = val;
         } else {
-            onlyMessage('请选择通知方式', 'error');
+            onlyMessage(t('components.Save.index.5rgaa7r80qw0'), 'error');
         }
     } else if (val === 2) {
         if (formModel.notifierId) {
             current.value = val;
         } else {
-            onlyMessage('请选择通知配置', 'error');
+            onlyMessage(t('components.Save.index.5rgaa7r80wo0'), 'error');
         }
     } else if (val === 3) {
         if (formModel.templateId) {
@@ -113,7 +115,7 @@ const jumpStep = async (val: number) => {
                 current.value = val;
             }
         } else {
-            onlyMessage('请选择通知模板', 'error');
+            onlyMessage(t('components.Save.index.5rgaa7r812k0'), 'error');
         }
     } else if (val === 4) {
         if (_variableDefinitions.value.length) {
@@ -121,7 +123,7 @@ const jumpStep = async (val: number) => {
             if (formModel.variables) {
                 current.value = val;
             } else {
-                onlyMessage('请配置模版变量', 'error');
+                onlyMessage(t('components.Save.index.5rgaa7r81740'), 'error');
             }
         } else {
             current.value = val;
@@ -145,7 +147,7 @@ const onSave = () => {
     if (formModel.role.length) {
         emit('save');
     } else {
-        onlyMessage('请配置角色权限', 'error');
+        onlyMessage(t('components.Save.index.5rgaa7r81is0'), 'error');
     }
 };
 </script>

@@ -2,7 +2,7 @@
     <j-modal
         :width="900"
         visible
-        title="权限控制"
+        :title="t('components.Auth.index.5rga80st4r00')"
         @cancel="emit('close')"
         @ok="onSave"
     >
@@ -13,7 +13,9 @@
 <script lang="ts" setup>
 import { onlyMessage } from '@/utils/comm';
 import Role from '../Role/index.vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emit = defineEmits(['close', 'save']);
 
 const _selectedRowKeys = ref<string[]>([]);
@@ -23,7 +25,7 @@ const onSave = () => {
     if(_selectedRowKeys.value.length) {
         emit('save', _selectedRowKeys.value);
     } else {
-        onlyMessage('请配置角色权限', 'error')
+        onlyMessage(t('components.Auth.index.5rga80st5qg0'), 'error')
     }
 };
 

@@ -10,27 +10,27 @@
                 >
                     <j-row :span="24" :gutter="24">
                         <j-col :span="10">
-                            <j-form-item label="系统名称" name="title">
+                            <j-form-item :label="t('system.Basis.index.5rg8sgvihmk0')" name="title">
                                 <j-input
                                     v-model:value="formValue.title"
-                                    placeholder="请输入系统名称"
+                                    :placeholder="t('system.Basis.index.5rg8sgvijk40')"
                                 />
                             </j-form-item>
-                            <j-form-item label="主题色" name="headerTheme">
+                            <j-form-item :label="t('system.Basis.index.5rg8sgviju80')" name="headerTheme">
                                 <j-select v-model:value="formValue.headerTheme">
                                     <j-select-option value="light">
-                                        白色
+                                        {{t('system.Basis.index.5rg8sgvik1k0')}}
                                     </j-select-option>
                                     <j-select-option value="dark">
-                                        黑色
+                                        {{t('system.Basis.index.5rg8sgvik7k0')}}
                                     </j-select-option>
                                 </j-select>
                             </j-form-item>
                             <j-form-item>
                                 <template #label>
-                                    <span>高德API Key</span>
+                                    <span>{{t('system.Basis.index.5rg8sgvike80')}} Key</span>
                                     <j-tooltip
-                                        title="配置后平台可调用高德地图GIS服务"
+                                        :title="t('system.Basis.index.5rg8sgvikls0')"
                                     >
                                         <img
                                             class="img-style"
@@ -52,7 +52,7 @@
                                       <template #title>
                                         <div style='word-break: break-all;'>
                                           <div>
-                                            系统后台访问的url。
+                                            {{t('system.Basis.index.5rg8sgvikr40')}}
                                           </div>
                                           <div>
                                            格式：{http/https}: //{前端所在服务器IP地址}:{前端暴露的服务端口}/api
@@ -75,7 +75,7 @@
                             </j-form-item>
                             <j-row :gutter="24" :span="24">
                                 <j-col>
-                                    <j-form-item label="系统logo">
+                                    <j-form-item :label="t('system.Basis.index.5rg8sgvikwg0')">
                                         <div class="upload-image-warp-logo">
                                             <div
                                                 class="upload-image-border-logo"
@@ -126,7 +126,7 @@
                                                             "
                                                             class="upload-image-mask"
                                                         >
-                                                            点击修改
+                                                            {{t('system.Basis.index.5rg8sgvil1k0')}}
                                                         </div>
                                                         <div v-else>
                                                             <AIcon
@@ -152,19 +152,19 @@
                                         </div>
 
                                         <div class="upload-tips">
-                                            推荐尺寸200*200
+                                            {{t('system.Basis.index.5rg8sgvil600')}}
                                         </div>
                                         <div class="upload-tips">
-                                            支持jpg,png,jfif,pjp,pjpeg,jpeg
+                                            {{t('system.Basis.index.5rg8sgvilak0')}}
                                         </div>
                                     </j-form-item>
                                 </j-col>
                                 <j-col>
                                     <j-form-item>
                                         <template #label>
-                                            <span>浏览器页签</span>
+                                            <span>{{t('system.Basis.index.5rg8sgvilf40')}}</span>
                                             <j-tooltip
-                                                title="浏览器tab页中显示的图片元素"
+                                                :title="t('system.Basis.index.5rg8sgviljk0')"
                                             >
                                                 <img
                                                     class="img-style"
@@ -219,7 +219,7 @@
                                                             v-if="formValue.ico"
                                                             class="upload-image-mask"
                                                         >
-                                                            点击修改
+                                                            {{t('system.Basis.index.5rg8sgvil1k0')}}
                                                         </div>
                                                         <div v-else>
                                                             <div>
@@ -234,17 +234,17 @@
                                         </div>
 
                                         <div class="upload-tips">
-                                            推荐尺寸64*64
+                                            {{t('system.Basis.index.5rg8sgvilo80')}}
                                         </div>
                                         <div class="upload-tips">
-                                            支持ico格式
+                                            {{t('system.Basis.index.5rg8sgvilu80')}}
                                         </div>
                                     </j-form-item>
                                 </j-col>
                             </j-row>
                         </j-col>
                         <j-col :span="14">
-                            <j-form-item label="登录背景图">
+                            <j-form-item :label="t('system.Basis.index.5rg8sgvilyo0')">
                                 <div class="upload-image-warp-back">
                                     <div class="upload-image-border-back">
                                         <j-upload
@@ -282,7 +282,7 @@
                                                     v-if="formValue.backgroud"
                                                     class="upload-image-mask"
                                                 >
-                                                    点击修改
+                                                    {{t('system.Basis.index.5rg8sgvil1k0')}}
                                                 </div>
                                                 <div v-else>
                                                     <div>
@@ -297,9 +297,9 @@
                                 </div>
                                 <div class="upload-tips">
                                     支持4M以内的图片:
-                                    支持jpg,png,jfif,pjp,pjpeg,jpeg
+                                    {{t('system.Basis.index.5rg8sgvilak0')}}
                                 </div>
-                                <div class="upload-tips">建议尺寸1400x1080</div>
+                                <div class="upload-tips">{{t('system.Basis.index.5rg8sgvim4w0')}}</div>
                             </j-form-item>
                         </j-col>
                     </j-row>
@@ -315,7 +315,7 @@
                         form.backLoading
                     "
                 >
-                    保存
+                    {{t('system.Basis.index.5rg8sgvim9c0')}}
                 </j-button>
             </div>
         </FullPage>
@@ -333,7 +333,9 @@ import { save_api } from '@/api/system/basis';
 import { usePermissionStore } from '@/store/permission';
 import { useSystem } from '@/store/system';
 import { settingDetail } from '@/api/login';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const action = `${BASE_API_PATH}/file/static`;
 const headers = { [TOKEN_KEY]: LocalStore.get(TOKEN_KEY) };
 const formRef = ref();
@@ -353,24 +355,24 @@ const form = reactive<formType>({
         title: [
             {
                 required: true,
-                message: '名称必填',
+                message: t('system.Basis.index.5rg8sgvime40'),
             },
             {
                 max: 64,
-                message: '最多可输入64个字符',
+                message: t('system.Basis.index.5rg8sgvimls0'),
             },
         ],
         headerTheme: [
             {
                 required: true,
-                message: '请选择主题色',
+                message: t('system.Basis.index.5rg8sgvimpk0'),
                 trigger: 'blur',
             },
         ],
         'base-path': [
             {
                 required: true,
-                message: '请输入base-path',
+                message: t('system.Basis.index.5rg8sgvimxg0'),
                 trigger: 'blur',
             },
         ],
@@ -426,7 +428,7 @@ const form = reactive<formType>({
                 save_api(params)
                     .then(async (resp) => {
                         if (resp.status === 200) {
-                            message.success('保存成功');
+                            message.success(t('system.Basis.index.5rg8sgvin1o0'));
                             await system.getSystemConfig()
                             await form.getDetails();
                         }
@@ -434,7 +436,7 @@ const form = reactive<formType>({
                     .finally(() => (form.saveLoading = false));
             });
         } else {
-            message.warning('暂无权限，请联系管理员');
+            message.warning(t('system.Basis.index.5rg8sgvin6c0'));
         }
     },
 });
@@ -489,7 +491,7 @@ const uploader: uploaderType = {
             form.formValue.logo = info.file.response?.result;
         } else if (info.file.status === 'error') {
             form.logoLoading = false;
-            message.error('系统logo上传失败，请稍后再试');
+            message.error(t('system.Basis.index.5rg8sgvinc80'));
         }
     },
     // 背景上传改变事件
@@ -502,7 +504,7 @@ const uploader: uploaderType = {
             form.formValue.backgroud = info.file.response?.result;
         } else if (info.file.status === 'error') {
             form.logoLoading = false;
-            message.error('背景图上传失败，请稍后再试');
+            message.error(t('system.Basis.index.5rg8sgvini00'));
         }
     },
     // 浏览器页签上传改变事件
@@ -515,7 +517,7 @@ const uploader: uploaderType = {
             form.formValue.ico = info.file.response?.result;
         } else if (info.file.status === 'error') {
             form.logoLoading = false;
-            message.error('浏览器页签上传失败，请稍后再试');
+            message.error(t('system.Basis.index.5rg8sgvinrk0'));
         }
     },
 };

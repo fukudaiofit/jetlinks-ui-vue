@@ -33,7 +33,7 @@
                             <AIcon type="PlusOutlined" />资产分配
                         </PermissionButton>
                         <j-dropdown trigger="hover">
-                            <j-button>批量操作</j-button>
+                            <j-button>{{t('Department.device.index.5rg94fwttp80')}}</j-button>
                             <template #overlay>
                                 <j-menu>
                                     <j-menu-item>
@@ -110,7 +110,7 @@
                                 </j-col>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        资产权限
+                                        {{t('Department.device.index.5rg94fwtxkw0')}}
                                     </div>
                                     <div
                                         style="cursor: pointer"
@@ -235,7 +235,9 @@ import type { dictType, optionsType } from '../typing';
 import { message } from 'jetlinks-ui-components';
 import { useDepartmentStore } from '@/store/department';
 import dayjs from 'dayjs';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const departmentStore = useDepartmentStore();
 
 const permission = 'system/Department';
@@ -257,7 +259,7 @@ const columns = [
         },
     },
     {
-        title: '名称',
+        title: t('Department.device.index.5rg94fwtxyo0'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -267,7 +269,7 @@ const columns = [
         },
     },
     {
-        title: '所属产品',
+        title: t('Department.device.index.5rg94fwty6w0'),
         dataIndex: 'productName',
         key: 'productName',
         ellipsis: true,
@@ -299,7 +301,7 @@ const columns = [
         },
     },
     {
-        title: '资产权限',
+        title: t('Department.device.index.5rg94fwtxkw0'),
         dataIndex: 'permission',
         key: 'permission',
         ellipsis: true,
@@ -307,7 +309,7 @@ const columns = [
         width: 300,
     },
     {
-        title: '注册时间',
+        title: t('Department.device.index.5rg94fwtyfk0'),
         dataIndex: 'registryTime',
         key: 'registryTime',
         ellipsis: true,
@@ -318,23 +320,23 @@ const columns = [
         },
     },
     {
-        title: '状态',
+        title: t('Department.device.index.5rg94fwtyog0'),
         dataIndex: 'state',
         key: 'state',
         ellipsis: true,
         search: {
             type: 'select',
             options: [
-                { label: '禁用', value: 'notActive' },
-                { label: '离线', value: 'offline' },
-                { label: '在线', value: 'online' },
+                { label: t('Department.device.index.5rg94fwtyuo0'), value: 'notActive' },
+                { label: t('Department.device.index.5rg94fwtz5c0'), value: 'offline' },
+                { label: t('Department.device.index.5rg94fwtzcg0'), value: 'online' },
             ],
         },
         scopedSlots: true,
     },
 
     {
-        title: '操作',
+        title: t('Department.device.index.5rg94fwtzhs0'),
         dataIndex: 'action',
         key: 'action',
         fixed: 'right',
@@ -371,14 +373,14 @@ const table = {
                 {
                     permission: `${permission}:assert`,
                     key: 'edit',
-                    tooltip: { title: '编辑' },
+                    tooltip: { title: t('Department.device.index.5rg94fwtzmk0') },
                     icon: 'EditOutlined',
                     onClick: () => table.clickEdit(data),
                 },
                 {
                     permission: `${permission}:bind`,
                     key: 'unbind',
-                    tooltip: { title: '解除绑定' },
+                    tooltip: { title: t('Department.device.index.5rg94fwtzt00') },
                     popConfirm: {
                         title: `是否解除绑定`,
                         onConfirm: () => table.clickUnBind(data),
@@ -555,7 +557,7 @@ const table = {
     },
     clickEdit: async (row?: any) => {
         const ids = row ? [row.id] : [...table._selectedRowKeys.value];
-        if (ids.length < 1) return message.warning('请勾选需要编辑的数据');
+        if (ids.length < 1) return message.warning(t('Department.device.index.5rg94fwtzxk0'));
 
         table.defaultPermission = row ? row?.permission : intersection(...table.selectedRows.map(
             (item) => item.permission,
@@ -568,7 +570,7 @@ const table = {
     },
     clickUnBind: (row?: any) => {
         const ids = row ? [row.id] : [...table._selectedRowKeys.value];
-        if (ids.length < 1) return message.warning('请勾选需要解绑的数据');
+        if (ids.length < 1) return message.warning(t('Department.device.index.5rg94fwu02w0'));
         const params = [
             {
                 targetType: 'org',
@@ -578,7 +580,7 @@ const table = {
             },
         ];
         unBindDeviceOrProduct_api('device', params).then(() => {
-            message.success('操作成功');
+            message.success(t('Department.device.index.5rg94fwu0bc0'));
             table.refresh();
         });
     },

@@ -3,7 +3,7 @@
         <j-input
             v-model:value="searchValue"
             @change="search"
-            placeholder="请输入组织名称"
+            :placeholder="t('Department.components.LeftTree.5rg93yswq900')"
             class="search-input"
             allowClear
         >
@@ -18,7 +18,7 @@
                 :hasPermission="`${permission}:add`"
                 @click="openDialog()"
             >
-                新增
+                {{t('Department.components.LeftTree.5rg93yswrfc0')}}
             </PermissionButton>
         </div>
 
@@ -43,7 +43,7 @@
                               :hasPermission="`${permission}:update`"
                               type="link"
                               :tooltip="{
-                                  title: '编辑',
+                                  title: t('Department.components.LeftTree.5rg93yswrlc0'),
                               }"
                               @click="openDialog(data)"
                           >
@@ -53,7 +53,7 @@
                               :hasPermission="`${permission}:add`"
                               type="link"
                               :tooltip="{
-                                  title: '新增子组织',
+                                  title: t('Department.components.LeftTree.5rg93yswrq40'),
                               }"
                               @click="
                                   openDialog({
@@ -68,7 +68,7 @@
                           <PermissionButton
                               type="link"
                               :hasPermission="`${permission}:delete`"
-                              :tooltip="{ title: '删除' }"
+                              :tooltip="{ title: t('Department.components.LeftTree.5rg93yswru40') }"
                               :popConfirm="{
                                   title: `确定要删除吗`,
                                   onConfirm: () => delDepartment(data.id),
@@ -80,7 +80,7 @@
                     </div>
                   </template>
               </jTree>
-              <j-empty v-else description="暂无数据" />
+              <j-empty v-else :description="t('Department.components.LeftTree.5rg93yswrxs0')" />
           </j-spin>
         </div>
         <!-- 编辑弹窗 -->
@@ -102,7 +102,9 @@ import { ArrayToTree } from '@/utils/utils';
 import EditDepartmentDialog from './EditDepartmentDialog.vue';
 
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const permission = 'system/Department';
 
 const save = useRoute().query.save;
@@ -187,7 +189,7 @@ function handleTreeMap(_data: any[]) {
 // 删除部门
 function delDepartment(id: string) {
     delDepartment_api(id).then(() => {
-        message.success('操作成功');
+        message.success(t('Department.components.LeftTree.5rg93ysws1w0'));
         getTree();
     });
 }

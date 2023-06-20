@@ -1,52 +1,29 @@
 <template>
     <page-container>
         <div class="apply-container">
-            <pro-search
-                :columns="columns"
-                target="category"
-                @search="(params:any)=>queryParams = {...params}"
-            />
+            <pro-search :columns="columns" target="category" @search="(params: any) => queryParams = { ...params }" />
             <FullPage>
-                <j-pro-table
-                    ref="tableRef"
-                    :columns="columns"
-                    :request="getApplyList_api"
-                    :defaultParams="{
-                        sorts: [{ name: 'createTime', order: 'desc' }],
-                    }"
-                    :params="queryParams"
-                    :gridColumn="3"
-                >
+                <j-pro-table ref="tableRef" :columns="columns" :request="getApplyList_api" :defaultParams="{
+                    sorts: [{ name: 'createTime', order: 'desc' }],
+                }" :params="queryParams" :gridColumn="3">
                     <template #headerTitle>
                         <div style="display: flex; align-items: center">
-                            <PermissionButton
-                                :hasPermission="`${permission}:add`"
-                                type="primary"
-                                @click="() => table.toSave()"
-                            >
+                            <PermissionButton :hasPermission="`${permission}:add`" type="primary"
+                                @click="() => table.toSave()">
                                 <AIcon type="PlusOutlined" />新增
                             </PermissionButton>
                             <p style="margin: 0 0 0 30px; color: #0000008c">
-                                <AIcon
-                                    type="ExclamationCircleOutlined"
-                                    style="margin-right: 12px"
-                                />
-                                应用管理将多个应用系统的登录简化为一次登录，实现多处访问、集中管控的业务场景。
+                                <AIcon type="ExclamationCircleOutlined" style="margin-right: 12px" />
+                                {{t('system.Apply.index.5rgb3hpe3hs0')}}
                             </p>
                         </div>
                     </template>
                     <template #card="slotProps">
-                        <CardBox
-                            :value="slotProps"
-                            :actions="table.getActions(slotProps, 'card')"
-                            v-bind="slotProps"
-                            :status="slotProps.state?.value"
-                            :statusText="slotProps.state?.text"
-                            :statusNames="{
+                        <CardBox :value="slotProps" :actions="table.getActions(slotProps, 'card')" v-bind="slotProps"
+                            :status="slotProps.state?.value" :statusText="slotProps.state?.text" :statusNames="{
                                 enabled: 'processing',
                                 disabled: 'error',
-                            }"
-                        >
+                            }">
                             <template #img>
                                 <slot name="img">
                                     <img :src="getImage('/apply.png')" />
@@ -61,7 +38,7 @@
                                 <j-row>
                                     <j-col :span="12">
                                         <div class="card-item-content-text">
-                                            类型
+                                            {{t('system.Apply.index.5rgb3hpe4lk0')}}
                                         </div>
                                         <div>
                                             {{
@@ -73,7 +50,7 @@
                                     </j-col>
                                     <j-col :span="12">
                                         <div class="card-item-content-text">
-                                            说明
+                                            {{t('system.Apply.index.5rgb3hpe4s40')}}
                                         </div>
                                         <Ellipsis>
                                             {{ slotProps.description }}
@@ -82,30 +59,18 @@
                                 </j-row>
                             </template>
                             <template #actions="item">
-                                <j-tooltip
-                                    v-bind="item.tooltip"
-                                    :title="item.disabled && item.tooltip.title"
-                                >
-                                    <j-dropdown
-                                        placement="bottomRight"
-                                        v-if="item.key === 'others'"
-                                    >
+                                <j-tooltip v-bind="item.tooltip" :title="item.disabled && item.tooltip.title">
+                                    <j-dropdown placement="bottomRight" v-if="item.key === 'others'">
                                         <j-button>
                                             <AIcon :type="item.icon" />
                                             <span>{{ item.text }}</span>
                                         </j-button>
                                         <template #overlay>
                                             <j-menu>
-                                                <j-menu-item
-                                                    v-for="(
+                                                <j-menu-item v-for="(
                                                         o, i
-                                                    ) in item.children"
-                                                    :key="i"
-                                                >
-                                                    <j-button
-                                                        type="link"
-                                                        @click="o.onClick"
-                                                    >
+                                                    ) in item.children" :key="i">
+                                                    <j-button type="link" @click="o.onClick">
                                                         <AIcon :type="o.icon" />
                                                         <span>{{
                                                             o.text
@@ -115,14 +80,8 @@
                                             </j-menu>
                                         </template>
                                     </j-dropdown>
-                                    <PermissionButton
-                                        v-else
-                                        :hasPermission="item.permission"
-                                        :tooltip="item.tooltip"
-                                        :pop-confirm="item.popConfirm"
-                                        @click="item.onClick"
-                                        :disabled="item.disabled"
-                                    >
+                                    <PermissionButton v-else :hasPermission="item.permission" :tooltip="item.tooltip"
+                                        :pop-confirm="item.popConfirm" @click="item.onClick" :disabled="item.disabled">
                                         <AIcon :type="item.icon" />
                                         <span v-if="item.key !== 'delete'">{{
                                             item.text
@@ -132,13 +91,8 @@
                             </template>
 
                             <template #mark>
-                                <AIcon
-                                    type="EyeOutlined"
-                                    style="font-size: 24px"
-                                    @click="
-                                        () => table.toSave(slotProps.id, true)
-                                    "
-                                />
+                                <AIcon type="EyeOutlined" style="font-size: 24px" @click="() => table.toSave(slotProps.id, true)
+                                        " />
                             </template>
                         </CardBox>
                     </template>
@@ -147,29 +101,18 @@
                         {{ table.getTypeLabel(slotProps.provider) }}
                     </template>
                     <template #status="slotProps">
-                        <BadgeStatus
-                            :status="slotProps.state.value"
-                            :text="slotProps.state.text"
-                            :statusNames="{
-                                enabled: 'processing',
-                                disabled: 'error',
-                            }"
-                        ></BadgeStatus>
+                        <BadgeStatus :status="slotProps.state.value" :text="slotProps.state.text" :statusNames="{
+                            enabled: 'processing',
+                            disabled: 'error',
+                        }"></BadgeStatus>
                     </template>
                     <template #action="slotProps">
                         <j-space :size="16">
-                            <PermissionButton
-                                v-for="i in table.getActions(
-                                    slotProps,
-                                    'table',
-                                )"
-                                :hasPermission="i.permission"
-                                type="link"
-                                :tooltip="i.tooltip"
-                                :pop-confirm="i.popConfirm"
-                                @click="i.onClick"
-                                :disabled="i.disabled"
-                            >
+                            <PermissionButton v-for="i in table.getActions(
+                                slotProps,
+                                'table',
+                            )" :hasPermission="i.permission" type="link" :tooltip="i.tooltip"
+                                :pop-confirm="i.popConfirm" @click="i.onClick" :disabled="i.disabled">
                                 <AIcon :type="i.icon" />
                             </PermissionButton>
                         </j-space>
@@ -178,13 +121,8 @@
             </FullPage>
         </div>
         <div class="dialogs">
-            <MenuDialog
-                v-if="dialogVisible"
-                v-model:visible="dialogVisible"
-                :id="selectId"
-                :provider="selectProvider"
-                mode="edit"
-            />
+            <MenuDialog v-if="dialogVisible" v-model:visible="dialogVisible" :id="selectId" :provider="selectProvider"
+                mode="edit" />
         </div>
     </page-container>
 </template>
@@ -202,38 +140,40 @@ import { getImage } from '@/utils/comm';
 import { useMenuStore } from '@/store/menu';
 import { message } from 'jetlinks-ui-components';
 import BadgeStatus from '@/components/BadgeStatus/index.vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const permission = 'system/Apply';
 const typeOptions = [
     {
-        label: '内部独立应用',
+        label: t('system.Apply.index.5rgb3hpe4zc0'),
         value: 'internal-standalone',
     },
     {
-        label: '微信网站应用',
+        label: t('system.Apply.index.5rgb3hpe53w0'),
         value: 'wechat-webapp',
     },
     {
-        label: '内部集成应用',
+        label: t('system.Apply.index.5rgb3hpe5aw0'),
         value: 'internal-integrated',
     },
     {
-        label: '钉钉企业内部应用',
+        label: t('system.Apply.index.5rgb3hpe5f40'),
         value: 'dingtalk-ent-app',
     },
     {
-        label: '第三方应用',
+        label: t('system.Apply.index.5rgb3hpe5jg0'),
         value: 'third-party',
     },
     {
-        label: '小程序应用',
+        label: t('system.Apply.index.5rgb3hpe5o00'),
         value: 'wechat-miniapp',
     },
 ];
 const columns = [
     {
-        title: '名称',
+        title: t('system.Apply.index.5rgb3hpe5s80'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -243,7 +183,7 @@ const columns = [
     },
 
     {
-        title: '类型',
+        title: t('system.Apply.index.5rgb3hpe4lk0'),
         dataIndex: 'provider',
         key: 'provider',
         ellipsis: true,
@@ -255,7 +195,7 @@ const columns = [
         scopedSlots: true,
     },
     {
-        title: '状态',
+        title: t('system.Apply.index.5rgb3hpe5wg0'),
         dataIndex: 'status',
         key: 'status',
         ellipsis: true,
@@ -264,11 +204,11 @@ const columns = [
             type: 'select',
             options: [
                 {
-                    label: '正常',
+                    label: t('system.Apply.index.5rgb3hpe60s0'),
                     value: 'enabled',
                 },
                 {
-                    label: '禁用',
+                    label: t('system.Apply.index.5rgb3hpe64k0'),
                     value: 'disabled',
                 },
             ],
@@ -276,7 +216,7 @@ const columns = [
         scopedSlots: true,
     },
     {
-        title: '说明',
+        title: t('system.Apply.index.5rgb3hpe4s40'),
         dataIndex: 'description',
         key: 'description',
         ellipsis: true,
@@ -285,7 +225,7 @@ const columns = [
         },
     },
     {
-        title: '操作',
+        title: t('system.Apply.index.5rgb3hpe68s0'),
         dataIndex: 'action',
         key: 'action',
         scopedSlots: true,
@@ -308,7 +248,7 @@ const table = {
         const state = row.state.value === 'enabled' ? 'disabled' : 'enabled';
         changeApplyStatus_api(row.id, { state }).then((resp: any) => {
             if (resp.status === 200) {
-                message.success('操作成功');
+                message.success(t('system.Apply.index.5rgb3hpe6co0'));
                 table.refresh();
             }
         });
@@ -316,7 +256,7 @@ const table = {
     clickDel: (row: any) => {
         delApply_api(row.id).then((resp: any) => {
             if (resp.status === 200) {
-                message.success('操作成功');
+                message.success(t('system.Apply.index.5rgb3hpe6co0'));
                 table.refresh();
             }
         });
@@ -332,9 +272,9 @@ const table = {
             {
                 permission: `${permission}:update`,
                 key: 'edit',
-                text: '编辑',
+                text: t('system.Apply.index.5rgb3hpe6gs0'),
                 tooltip: {
-                    title: '编辑',
+                    title: t('system.Apply.index.5rgb3hpe6gs0'),
                 },
                 icon: 'EditOutlined',
                 onClick: () => table.toSave(data.id),
@@ -342,12 +282,12 @@ const table = {
             {
                 permission: `${permission}:action`,
                 key: 'action',
-                text: disabled ? '禁用' : '启用',
+                text: disabled ? t('system.Apply.index.5rgb3hpe64k0') : t('system.Apply.index.5rgb3hpe6kw0'),
                 tooltip: {
-                    title: disabled ? '禁用' : '启用',
+                    title: disabled ? t('system.Apply.index.5rgb3hpe64k0') : t('system.Apply.index.5rgb3hpe6kw0'),
                 },
                 popConfirm: {
-                    title: `确认${disabled ? '禁用' : '启用'}`,
+                    title: `确认${disabled ? t('system.Apply.index.5rgb3hpe64k0') : t('system.Apply.index.5rgb3hpe6kw0')}`,
                     onConfirm: () => table.changeStatus(data),
                 },
                 icon: disabled ? 'StopOutlined' : 'PlayCircleOutlined',
@@ -355,12 +295,12 @@ const table = {
             {
                 permission: `${permission}:delete`,
                 key: 'delete',
-                text: '删除',
+                text: t('system.Apply.index.5rgb3hpe6p00'),
                 tooltip: {
-                    title: disabled ? '请先禁用再删除' : '删除',
+                    title: disabled ? t('system.Apply.index.5rgb3hpe6sk0') : t('system.Apply.index.5rgb3hpe6p00'),
                 },
                 popConfirm: {
-                    title: '确认删除?',
+                    title: t('system.Apply.index.5rgb3hpe6zg0'),
                     onConfirm: () => table.clickDel(data),
                 },
                 disabled,
@@ -372,7 +312,7 @@ const table = {
         );
         const others = {
             key: 'others',
-            text: '其他',
+            text: t('system.Apply.index.5rgb3hpe7600'),
             icon: 'EllipsisOutlined',
             children: [] as any[],
         };
@@ -381,9 +321,9 @@ const table = {
             others.children?.push({
                 permission: [`${permission}:add`, `${permission}:update`],
                 key: 'page',
-                text: '集成菜单',
+                text: t('system.Apply.index.5rgb3hpe7980'),
                 tooltip: {
-                    title: '集成菜单',
+                    title: t('system.Apply.index.5rgb3hpe7980'),
                 },
                 icon: 'MenuUnfoldOutlined',
                 onClick: () => {
@@ -398,9 +338,9 @@ const table = {
                 {
                     permission: [`${permission}:add`, `${permission}:update`],
                     key: 'empowerment',
-                    text: '赋权',
+                    text: t('system.Apply.index.5rgb3hpe7dw0'),
                     tooltip: {
-                        title: '赋权',
+                        title: t('system.Apply.index.5rgb3hpe7dw0'),
                     },
                     icon: 'icon-fuquan',
                     onClick: () => {
@@ -414,9 +354,9 @@ const table = {
                 {
                     permission: [`${permission}:add`, `${permission}:update`],
                     key: 'viewApi',
-                    text: '查看API',
+                    text: t('system.Apply.index.5rgb3hpe7hk0'),
                     tooltip: {
-                        title: '查看API',
+                        title: t('system.Apply.index.5rgb3hpe7hk0'),
                     },
                     icon: 'icon-chakanAPI',
                     onClick: () => {

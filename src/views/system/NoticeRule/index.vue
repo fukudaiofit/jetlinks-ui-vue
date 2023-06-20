@@ -4,11 +4,11 @@
             <div style="padding: 24px">
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    你可以为每种通知类型配置不同的通知方式与通知模版；
+                    {{t('system.NoticeRule.index.5rgaaeoqij00')}}
                 </div>
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    默认平台中所有用户都能接收到通知，如需限制接收权限可以在配置通知方式时完成，或在通知类型后方的“权限控制”处配置外层权限。
+                    {{t('system.NoticeRule.index.5rgaaeoqjw80')}}
                 </div>
                 <div style="margin-top: 20px">
                     <j-collapse :bordered="false" v-model:activeKey="activeKey">
@@ -44,7 +44,7 @@
                                                 @click="onAuth(item, child)"
                                             >
                                                 <AIcon type="UserOutlined" />
-                                                <span>权限控制</span>
+                                                <span>{{t('system.NoticeRule.index.5rgaaeoqk340')}}</span>
                                             </div>
                                         </div>
                                         <div class="child-item-right">
@@ -81,7 +81,7 @@
                                                                                 true
                                                                             "
                                                                         >
-                                                                            查看
+                                                                            {{t('system.NoticeRule.index.5rgaaeoqk740')}}
                                                                         </PermissionButton>
                                                                     </j-menu-item>
                                                                     <j-menu-item>
@@ -97,7 +97,7 @@
                                                                                 true
                                                                             "
                                                                         >
-                                                                            编辑
+                                                                            {{t('system.NoticeRule.index.5rgaaeoqkc80')}}
                                                                         </PermissionButton>
                                                                     </j-menu-item>
                                                                     <j-menu-item>
@@ -114,7 +114,7 @@
                                                                                 true
                                                                             "
                                                                         >
-                                                                            删除
+                                                                            {{t('system.NoticeRule.index.5rgaaeoqkhk0')}}
                                                                         </PermissionButton>
                                                                     </j-menu-item>
                                                                 </j-menu>
@@ -176,82 +176,84 @@ import { getImage } from '@/utils/comm';
 import Save from './components/Save/index.vue';
 import Detail from './components/Detail/index.vue';
 import Auth from './components/Auth/index.vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const dataSource = ref([
     {
         id: 'a',
-        name: '告警',
+        name: t('system.NoticeRule.index.5rgaaeoqkn80'),
         children: [
             {
                 id: 'product',
-                name: '产品告警',
+                name: t('system.NoticeRule.index.5rgaaeoqkrg0'),
                 active: true,
                 children: [
                     {
                         id: 'sms9',
-                        name: '站内信',
+                        name: t('system.NoticeRule.index.5rgaaeoqkwo0'),
                         type: 'sms',
                     },
                     {
                         id: 'dingtalk8',
-                        name: '钉钉',
+                        name: t('system.NoticeRule.index.5rgaaeoql1o0'),
                         type: 'dingtalk',
                     },
                     {
                         id: 'wechat7',
-                        name: '微信',
+                        name: t('system.NoticeRule.index.5rgaaeoql5g0'),
                         type: 'wechat',
                     },
                     {
                         id: 'email6',
-                        name: '邮箱',
+                        name: t('system.NoticeRule.index.5rgaaeoqla80'),
                         type: 'email',
                     },
                     {
                         id: 'dingtalk5',
-                        name: '钉钉',
+                        name: t('system.NoticeRule.index.5rgaaeoql1o0'),
                         type: 'dingtalk',
                     },
                     {
                         id: 'wechat4',
-                        name: '微信',
+                        name: t('system.NoticeRule.index.5rgaaeoql5g0'),
                         type: 'wechat',
                     },
                     {
                         id: 'email3',
-                        name: '邮箱',
+                        name: t('system.NoticeRule.index.5rgaaeoqla80'),
                         type: 'email',
                     },
                     {
                         id: 'email2',
-                        name: '邮箱',
+                        name: t('system.NoticeRule.index.5rgaaeoqla80'),
                         type: 'email',
                     },
                     {
                         id: 'email1',
-                        name: '邮箱',
+                        name: t('system.NoticeRule.index.5rgaaeoqla80'),
                         type: 'email',
                     },
                 ],
             },
             {
                 id: 'device',
-                name: '设备告警',
+                name: t('system.NoticeRule.index.5rgaaeoqlek0'),
                 active: false,
                 children: [
                     {
                         id: 'sms11',
-                        name: '站内信',
+                        name: t('system.NoticeRule.index.5rgaaeoqkwo0'),
                         type: 'sms',
                     },
                     {
                         id: 'wechat11',
-                        name: '微信',
+                        name: t('system.NoticeRule.index.5rgaaeoql5g0'),
                         type: 'wechat',
                     },
                     {
                         id: 'voice11',
-                        name: '语音',
+                        name: t('system.NoticeRule.index.5rgaaeoqlio0'),
                         type: 'voice',
                     },
                 ],
@@ -260,16 +262,16 @@ const dataSource = ref([
     },
     {
         id: 'b',
-        name: '系统监控',
+        name: t('system.NoticeRule.index.5rgaaeoqlmg0'),
         children: [
             {
                 id: 'cache',
-                name: '缓冲区数据丢弃',
+                name: t('system.NoticeRule.index.5rgaaeoqlu80'),
                 active: false,
                 children: [
                     {
                         id: 'message111',
-                        name: '站内信',
+                        name: t('system.NoticeRule.index.5rgaaeoqkwo0'),
                         type: 'sms',
                     },
                 ],
@@ -281,7 +283,7 @@ const dataSource = ref([
                 children: [
                     {
                         id: 'message22',
-                        name: '站内信',
+                        name: t('system.NoticeRule.index.5rgaaeoqkwo0'),
                         type: 'sms',
                     },
                 ],
@@ -290,16 +292,16 @@ const dataSource = ref([
     },
     {
         id: 'c',
-        name: '业务监控',
+        name: t('system.NoticeRule.index.5rgaaeoqly80'),
         children: [
             {
                 id: 'error',
-                name: '透传消息解析异常',
+                name: t('system.NoticeRule.index.5rgaaeoqm2c0'),
                 active: false,
                 children: [
                     {
                         id: 'message333',
-                        name: '站内信',
+                        name: t('system.NoticeRule.index.5rgaaeoqkwo0'),
                         type: 'sms',
                     },
                 ],

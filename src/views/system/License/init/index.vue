@@ -20,6 +20,9 @@ import {
     initPage,
     getLicense,
 } from '@/api/system/license';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 let info = ref();
 let license = ref();
 let licenseTime = ref();
@@ -27,7 +30,7 @@ const saveData = (data: any) => {
     if (data) {
         save(data);
     } else {
-        message.error('请配置License');
+        message.error(t('License.init.index.5rgb4b0pcrk0'));
     }
 };
 const getlicense = async () => {
@@ -46,7 +49,7 @@ const getInfo = async () => {
 const save = async (data: any) => {
     const res: any = await licenseInit(data);
     if (res.status === 200) {
-        message.success('配置成功');
+        message.success(t('License.init.index.5rgb4b0pdnc0'));
         const resp: any = await initPage();
         if (resp.status === 200 && !resp.result.length) {
             window.location.href = '/#/init-home';

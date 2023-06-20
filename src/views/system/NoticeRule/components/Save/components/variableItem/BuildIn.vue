@@ -2,8 +2,8 @@
     <j-input-group compact>
         <j-select
             :options="[
-                { label: '手动输入', value: 'fixed' },
-                { label: '内置参数', value: 'upper' },
+                { label: t('components.variableItem.BuildIn.5rga8u77ze40'), value: 'fixed' },
+                { label: t('components.variableItem.BuildIn.5rga8u780uo0'), value: 'upper' },
             ]"
             style="width: 120px"
             :value="value?.source"
@@ -13,7 +13,7 @@
             <j-tree-select
                 v-model:value="upperKey"
                 :treeData="builtInList"
-                placeholder="请选择参数"
+                :placeholder="t('components.variableItem.BuildIn.5rga8u781ms0')"
                 style="width: calc(100% - 120px)"
                 :fieldNames="{ label: 'name', value: 'id' }"
                 @change="(val, label, extra) => itemOnChange(undefined, val, label, extra)"
@@ -62,7 +62,9 @@
 import { queryBuiltInParams } from '@/api/rule-engine/scene';
 import { useSceneStore } from '@/store/scene';
 import { storeToRefs } from 'pinia';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const sceneStore = useSceneStore();
 const { data } = storeToRefs(sceneStore);
 

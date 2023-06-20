@@ -28,7 +28,7 @@
                             v-if="admin"
                             style="margin-left: 12px"
                             @click="router.push('/system/Menu/Setting')"
-                            >菜单配置</j-button
+                            >{{t('system.Menu.index.5rg9r9vz71s0')}}</j-button
                         >
                     </template>
                     <template #createTime="slotProps">
@@ -41,7 +41,7 @@
                     <template #action="slotProps">
                         <j-space :size="16">
                             <j-tooltip>
-                                <template #title>编辑</template>
+                                <template #title>{{t('system.Menu.index.5rg9r9vz7z00')}}</template>
                                 <j-button
                                     style="padding: 0"
                                     type="link"
@@ -54,7 +54,7 @@
                             <PermissionButton
                                 type="link"
                                 :hasPermission="`${permission}:add`"
-                                :tooltip="{ title: '新增子菜单' }"
+                                :tooltip="{ title: t('system.Menu.index.5rg9r9vz84o0') }"
                                 @click="table.addChildren(slotProps)"
                             >
                                 <AIcon type="PlusCircleOutlined" />
@@ -62,7 +62,7 @@
                             <PermissionButton
                                 type="link"
                                 :hasPermission="`${permission}:delete`"
-                                :tooltip="{ title: '删除' }"
+                                :tooltip="{ title: t('system.Menu.index.5rg9r9vz88g0') }"
                                 :popConfirm="{
                                     title: `是否删除该菜单`,
                                     onConfirm: () => table.clickDel(slotProps),
@@ -86,7 +86,9 @@ import dayjs from 'dayjs';
 import { useUserInfo } from '@/store/userInfo';
 import { MESSAGE_SUBSCRIBE_MENU_CODE, USER_CENTER_MENU_CODE } from '@/utils/consts'
 import { storeToRefs } from 'pinia';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const permission = 'system/Menu';
 
 const router = useRouter();
@@ -99,7 +101,7 @@ const admin = computed(() => {
 
 const columns = [
     {
-        title: '编码',
+        title: t('system.Menu.index.5rg9r9vz8cc0'),
         dataIndex: 'code',
         key: 'code',
         ellipsis: true,
@@ -110,7 +112,7 @@ const columns = [
         width: 300,
     },
     {
-        title: '名称',
+        title: t('system.Menu.index.5rg9r9vz8gg0'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -120,7 +122,7 @@ const columns = [
         // width: 220,
     },
     {
-        title: '页面地址',
+        title: t('system.Menu.index.5rg9r9vz8jw0'),
         dataIndex: 'url',
         key: 'url',
         ellipsis: true,
@@ -129,7 +131,7 @@ const columns = [
         },
     },
     {
-        title: '排序',
+        title: t('system.Menu.index.5rg9r9vz8pc0'),
         dataIndex: 'sortIndex',
         key: 'sortIndex',
         ellipsis: true,
@@ -139,14 +141,14 @@ const columns = [
         width: 80,
     },
     {
-        title: '说明',
+        title: t('system.Menu.index.5rg9r9vz8sw0'),
         dataIndex: 'describe',
         key: 'describe',
         ellipsis: true,
         // width: 200,
     },
     {
-        title: '创建时间',
+        title: t('system.Menu.index.5rg9r9vz8wg0'),
         dataIndex: 'createTime',
         key: 'createTime',
         ellipsis: true,
@@ -157,7 +159,7 @@ const columns = [
         scopedSlots: true,
     },
     {
-        title: '操作',
+        title: t('system.Menu.index.5rg9r9vz8zk0'),
         dataIndex: 'action',
         key: 'action',
         fixed: 'right',
@@ -244,7 +246,7 @@ const table = reactive({
         delMenuInfo_api(row.id).then((resp: any) => {
             if (resp.status === 200) {
                 tableRef.value?.reload();
-                message.success('操作成功!');
+                message.success(t('system.Menu.index.5rg9r9vz9300'));
             }
         });
     },

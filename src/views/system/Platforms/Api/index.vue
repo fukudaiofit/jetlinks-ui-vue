@@ -40,16 +40,16 @@
                         <j-button
                             @click="selectedApi = initSelectedApi"
                             style="margin-bottom: 24px"
-                            >返回</j-button
+                            >{{t('Platforms.Api.index.5rga4ixze680')}}</j-button
                         >
                         <j-tabs v-model:activeKey="activeKey" type="card">
-                            <j-tab-pane key="does" tab="文档">
+                            <j-tab-pane key="does" :tab="t('Platforms.Api.index.5rga4ixzftc0')">
                                 <ApiDoes
                                     :select-api="selectedApi"
                                     :schemas="schemas"
                                 />
                             </j-tab-pane>
-                            <j-tab-pane key="test" tab="调试">
+                            <j-tab-pane key="test" :tab="t('Platforms.Api.index.5rga4ixzg340')">
                                 <ApiTest
                                     :select-api="selectedApi"
                                     :schemas="schemas"
@@ -77,7 +77,9 @@ import ChooseApi from './components/ChooseApi.vue';
 import ApiDoes from './components/ApiDoes.vue';
 import ApiTest from './components/ApiTest.vue';
 import { useDepartmentStore } from '@/store/department';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const department = useDepartmentStore();
 
 const props = defineProps<{

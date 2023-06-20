@@ -1,7 +1,7 @@
 <template>
     <j-modal
         visible
-        title="集成菜单"
+        :title="t('Apply.componenets.MenuDialog.5rgb0vzg8jo0')"
         width="600px"
         @ok="handleOk"
         @cancel="cancel"
@@ -12,7 +12,7 @@
             v-model:value="form.checkedSystem"
             @change="(value:string) => value && getTree(value)"
             style="width: 200px"
-            placeholder="请选择集成系统"
+            :placeholder="t('Apply.componenets.MenuDialog.5rgb0vzga8c0')"
         >
             <j-select-option
                 v-for="item in form.systemList"
@@ -22,7 +22,7 @@
         </j-select>
 
         <p style="margin: 20px 0 0 0" v-show="form.menuTree.length > 0">
-            当前集成菜单
+            {{t('Apply.componenets.MenuDialog.5rgb0vzgaek0')}}
         </p>
         <j-tree
             v-model:checkedKeys="form.checkedMenu"
@@ -53,7 +53,9 @@ import { CheckInfo } from 'ant-design-vue/lib/vc-tree/props';
 import { useMenuStore } from '@/store/menu';
 import { message } from 'jetlinks-ui-components';
 import { getMenuTree_api } from '@/api/system/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 const emits = defineEmits(['update:visible']);
 const props = defineProps<{
@@ -75,16 +77,16 @@ const handleOk = () => {
             saveOwnerMenu_api('iot', form.id, items)
                 .then((resp) => {
                     if (resp.status === 200) {
-                        message.success('操作成功');
+                        message.success(t('Apply.componenets.MenuDialog.5rgb0vzgb2s0'));
                         emits('update:visible', false);
                     }
                 })
                 .finally(() => (loading.value = false));
         } else {
-            message.warning('请勾选配置菜单');
+            message.warning(t('Apply.componenets.MenuDialog.5rgb0vzgb7w0'));
         }
     } else {
-        message.warning('请选择所属系统');
+        message.warning(t('Apply.componenets.MenuDialog.5rgb0vzgbpk0'));
     }
 };
 const cancel = () => {

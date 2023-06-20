@@ -29,7 +29,7 @@
         }"
     >
         <!-- <template #headerTitle>
-                <j-checkbox v-model:checked="checked">全选</j-checkbox>
+                <j-checkbox v-model:checked="checked">{{t('components.Role.index.5rga8iaeh3s0')}}</j-checkbox>
             </template> -->
     </j-pro-table>
 </template>
@@ -37,7 +37,9 @@
 <script lang="ts" setup>
 import { queryRoleList } from '@/api/system/noticeRule';
 import { PropType } from 'vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     modelValue: {
         type: Array as PropType<string[]>,
@@ -56,14 +58,14 @@ watchEffect(() => {
 
 const columns = [
     {
-        title: '标识',
+        title: t('components.Role.index.5rga8iaeiak0'),
         dataIndex: 'id',
         key: 'id',
         ellipsis: true,
         fixed: 'left',
     },
     {
-        title: '名称',
+        title: t('components.Role.index.5rga8iaeifk0'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -72,7 +74,7 @@ const columns = [
         },
     },
     {
-        title: '说明',
+        title: t('components.Role.index.5rga8iaeij80'),
         key: 'description',
         ellipsis: true,
         dataIndex: 'description',
