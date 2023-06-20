@@ -2955,6 +2955,24 @@
                 "5rg4pmv0zeg0": "否",
                 "5rg4pmv0zkg0": "标签"
             }
+        },
+        "Save": {
+            "index": {
+                "5rg5cooxqwc0": "编辑",
+                "5rg5cooxs800": "新增",
+                "5rg5cooxsls0": "请输入英文或者数字或者-或者_",
+                "5rg5cooxswc0": "最多输入64个字符",
+                "5rg5cooxt7k0": "若不填写，系统将自动生成唯一ID",
+                "5rg5cooxtfc0": "请输入ID",
+                "5rg5cooxtlo0": "名称",
+                "5rg5cooxts40": "请输入名称",
+                "5rg5cooxty80": "请选择所属产品",
+                "5rg5cooxu4s0": "只能选择“正常”状态的产品",
+                "5rg5cooxua40": "说明",
+                "5rg5cooxuh00": "最多输入200个字符",
+                "5rg5cooxuqk0": "请输入说明",
+                "5rg5cooxuww0": "操作成功！"
+            }
         }
     },
     "Notify": {
@@ -2985,6 +3003,89 @@
                 "5rg4uvqr2m40": "请输入收件人邮箱,多个收件人用换行分隔",
                 "5rg4uvqr2ps0": "请输入固定号码",
                 "5rg4uvqr2ts0": "关系用户"
+            }
+        }
+    },
+    "edge": {
+        "Device": {
+            "index": {
+                "5rg5czh0vu00": "新增",
+                "5rg5czh0x2g0": "导入",
+                "5rg5czh0xec0": "设备类型",
+                "5rg5czh0xmg0": "产品名称",
+                "5rg5czh0xs40": "设备名称",
+                "5rg5czh0xxg0": "注册时间",
+                "5rg5czh0y1o0": "状态",
+                "5rg5czh0y580": "禁用",
+                "5rg5czh0ybk0": "离线",
+                "5rg5czh0yfo0": "在线",
+                "5rg5czh0yjk0": "产品分类",
+                "5rg5czh0ync0": "直连设备",
+                "5rg5czh0yqs0": "网关子设备",
+                "5rg5czh0yuk0": "网关设备",
+                "5rg5czh0yy00": "说明",
+                "5rg5czh0z1g0": "操作",
+                "5rg5czh0z540": "查看",
+                "5rg5czh0z8c0": "编辑",
+                "5rg5czh0zbo0": "启用",
+                "5rg5czh0zh40": "操作成功！",
+                "5rg5czh0zm40": "操作失败！",
+                "5rg5czh0zpc0": "远程控制",
+                "5rg5czh0zv40": "重置密码",
+                "5rg5czh0zyg0": "确认重置密码为P@ssw0rd？",
+                "5rg5czh101g0": "删除",
+                "5rg5czh10480": "已启用的设备不能删除",
+                "5rg5czh107g0": "确认删除?",
+                "5rg5czh10a40": "其他"
+            }
+        },
+        "Resource": {
+            "index": {
+                "5rg5fwsihz80": "通讯协议",
+                "5rg5fwsij3k0": "所属边缘网关",
+                "5rg5fwsij9o0": "名称",
+                "5rg5fwsijg00": "通信协议",
+                "5rg5fwsijl80": "创建时间",
+                "5rg5fwsijps0": "状态",
+                "5rg5fwsijts0": "禁用",
+                "5rg5fwsijy00": "正常",
+                "5rg5fwsik400": "操作",
+                "5rg5fwsik7k0": "查看",
+                "5rg5fwsikb40": "编辑",
+                "5rg5fwsikfg0": "下发",
+                "5rg5fwsikiw0": "请先启用，再下发",
+                "5rg5fwsikmg0": "启用",
+                "5rg5fwsikq00": "操作成功！",
+                "5rg5fwsikxo0": "操作失败！",
+                "5rg5fwsil1o0": "删除",
+                "5rg5fwsil540": "请先禁用，再删除。",
+                "5rg5fwsil9k0": "确认删除?"
+            }
+        }
+    },
+    "Resource": {
+        "Issue": {
+            "index": {
+                "5rg5eezjtr40": "下发设备",
+                "5rg5eezjx380": "产品名称",
+                "5rg5eezjxko0": "设备名称",
+                "5rg5eezjxs80": "注册时间",
+                "5rg5eezjy8g0": "状态",
+                "5rg5eezjz000": "禁用",
+                "5rg5eezjz800": "离线",
+                "5rg5eezjzds0": "在线",
+                "5rg5eezjzjo0": "请选择设备"
+            },
+            "Result": {
+                "5rg5elnyh480": "下发结果",
+                "5rg5elnyjjo0": "下发失败原因",
+                "5rg5elnyjto0": "下载"
+            }
+        },
+        "Save": {
+            "index": {
+                "5rg5fquzk1c0": "编辑",
+                "5rg5fquzl3o0": "操作成功"
             }
         }
     }

@@ -41,7 +41,7 @@
                             <j-row style="margin-top: 18px">
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        通讯协议
+                                        {{t('edge.Resource.index.5rg5fwsihz80')}}
                                     </div>
                                     <Ellipsis>{{
                                         options.find(
@@ -52,7 +52,7 @@
                                 </j-col>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        所属边缘网关
+                                        {{t('edge.Resource.index.5rg5fwsij3k0')}}
                                     </div>
                                     <Ellipsis style="width: 100%">
                                         {{ slotProps.sourceName }}
@@ -165,7 +165,9 @@ import { query, _delete, _start, _stop } from '@/api/edge/resource';
 import Save from './Save/index.vue';
 import Issue from './Issue/index.vue';
 import BadgeStatus from '@/components/BadgeStatus/index.vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const menuStory = useMenuStore();
 
 const defaultParams = { sorts: [{ name: 'createTime', order: 'desc' }] };
@@ -195,7 +197,7 @@ const columns = [
         key: 'id',
     },
     {
-        title: '名称',
+        title: t('edge.Resource.index.5rg5fwsij9o0'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -205,7 +207,7 @@ const columns = [
     },
     {
         dataIndex: 'category',
-        title: '通信协议',
+        title: t('edge.Resource.index.5rg5fwsijg00'),
         valueType: 'select',
         scopedSlots: true,
         key: 'category',
@@ -215,7 +217,7 @@ const columns = [
         },
     },
     {
-        title: '所属边缘网关',
+        title: t('edge.Resource.index.5rg5fwsij3k0'),
         dataIndex: 'sourceId',
         key: 'sourceId',
         scopedSlots: true,
@@ -243,7 +245,7 @@ const columns = [
         },
     },
     {
-        title: '创建时间',
+        title: t('edge.Resource.index.5rg5fwsijl80'),
         dataIndex: 'createTime',
         key: 'createTime',
         scopedSlots: true,
@@ -252,20 +254,20 @@ const columns = [
         },
     },
     {
-        title: '状态',
+        title: t('edge.Resource.index.5rg5fwsijps0'),
         dataIndex: 'state',
         key: 'state',
         scopedSlots: true,
         search: {
             type: 'select',
             options: [
-                { label: '禁用', value: 'disabled' },
-                { label: '正常', value: 'enabled' },
+                { label: t('edge.Resource.index.5rg5fwsijts0'), value: 'disabled' },
+                { label: t('edge.Resource.index.5rg5fwsijy00'), value: 'enabled' },
             ],
         },
     },
     {
-        title: '操作',
+        title: t('edge.Resource.index.5rg5fwsik400'),
         key: 'action',
         fixed: 'right',
         width: 200,
@@ -281,9 +283,9 @@ const getActions = (
     const actions = [
         {
             key: 'view',
-            text: '查看',
+            text: t('edge.Resource.index.5rg5fwsik7k0'),
             tooltip: {
-                title: '查看',
+                title: t('edge.Resource.index.5rg5fwsik7k0'),
             },
             icon: 'EyeOutlined',
             onClick: () => {
@@ -292,9 +294,9 @@ const getActions = (
         },
         {
             key: 'update',
-            text: '编辑',
+            text: t('edge.Resource.index.5rg5fwsikb40'),
             tooltip: {
-                title: '编辑',
+                title: t('edge.Resource.index.5rg5fwsikb40'),
             },
             icon: 'EditOutlined',
             onClick: () => {
@@ -304,13 +306,13 @@ const getActions = (
         },
         {
             key: 'setting',
-            text: '下发',
+            text: t('edge.Resource.index.5rg5fwsikfg0'),
             disabled: data.state?.value === 'disabled',
             tooltip: {
                 title:
                     data.state.value === 'disabled'
-                        ? '请先启用，再下发'
-                        : '下发',
+                        ? t('edge.Resource.index.5rg5fwsikiw0')
+                        : t('edge.Resource.index.5rg5fwsikfg0'),
             },
             icon: 'DownSquareOutlined',
             onClick: () => {
@@ -320,9 +322,9 @@ const getActions = (
         },
         {
             key: 'action',
-            text: data.state?.value !== 'disabled' ? '禁用' : '启用',
+            text: data.state?.value !== 'disabled' ? t('edge.Resource.index.5rg5fwsijts0') : t('edge.Resource.index.5rg5fwsikmg0'),
             tooltip: {
-                title: data.state?.value !== 'disabled' ? '禁用' : '启用',
+                title: data.state?.value !== 'disabled' ? t('edge.Resource.index.5rg5fwsijts0') : t('edge.Resource.index.5rg5fwsikmg0'),
             },
             icon:
                 data.state.value !== 'disabled'
@@ -330,7 +332,7 @@ const getActions = (
                     : 'CheckCircleOutlined',
             popConfirm: {
                 title: `确认${
-                    data.state.value !== 'disabled' ? '禁用' : '启用'
+                    data.state.value !== 'disabled' ? t('edge.Resource.index.5rg5fwsijts0') : t('edge.Resource.index.5rg5fwsikmg0')
                 }?`,
                 onConfirm: async () => {
                     let response = undefined;
@@ -340,33 +342,33 @@ const getActions = (
                         response = await _start([data.id]);
                     }
                     if (response && response.status === 200) {
-                        message.success('操作成功！');
+                        message.success(t('edge.Resource.index.5rg5fwsikq00'));
                         edgeResourceRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('edge.Resource.index.5rg5fwsikxo0'));
                     }
                 },
             },
         },
         {
             key: 'delete',
-            text: '删除',
+            text: t('edge.Resource.index.5rg5fwsil1o0'),
             disabled: data.state?.value !== 'disabled',
             tooltip: {
                 title:
                     data.state.value !== 'disabled'
-                        ? '请先禁用，再删除。'
-                        : '删除',
+                        ? t('edge.Resource.index.5rg5fwsil540')
+                        : t('edge.Resource.index.5rg5fwsil1o0'),
             },
             popConfirm: {
-                title: '确认删除?',
+                title: t('edge.Resource.index.5rg5fwsil9k0'),
                 onConfirm: async () => {
                     const resp = await _delete(data.id);
                     if (resp.status === 200) {
-                        message.success('操作成功！');
+                        message.success(t('edge.Resource.index.5rg5fwsikq00'));
                         edgeResourceRef.value?.reload();
                     } else {
-                        message.error('操作失败！');
+                        message.error(t('edge.Resource.index.5rg5fwsikxo0'));
                     }
                 },
             },

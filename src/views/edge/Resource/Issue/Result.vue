@@ -1,7 +1,7 @@
 <template>
     <j-modal
         visible
-        title="下发结果"
+        :title="t('Resource.Issue.Result.5rg5elnyh480')"
         :width="900"
         @ok="emit('close')"
         @cancel="emit('close')"
@@ -11,8 +11,8 @@
                 <div>成功：{{ count }}</div>
                 <div>
                     失败：{{ countErr }}
-                    <j-button @click="_download(errMessage || '', '下发失败原因')" v-if="errMessage.length" type="link"
-                        >下载</j-button
+                    <j-button @click="_download(errMessage || '', t('Resource.Issue.Result.5rg5elnyjjo0'))" v-if="errMessage.length" type="link"
+                        >{{t('Resource.Issue.Result.5rg5elnyjto0')}}</j-button
                     >
                 </div>
             </j-col>
@@ -30,7 +30,9 @@ import { LocalStore } from '@/utils/comm';
 import { BASE_API_PATH, TOKEN_KEY } from '@/utils/variable';
 import dayjs from 'dayjs';
 import { EventSourcePolyfill } from 'event-source-polyfill';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     data: {
         type: Object,

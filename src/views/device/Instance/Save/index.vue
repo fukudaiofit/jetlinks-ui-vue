@@ -3,7 +3,7 @@
         :maskClosable="false"
         width="650px"
         :visible="true"
-        :title="!!data?.id ? t('Instance.Save.index.5rcy87xo9jg0') : t('Instance.Save.index.5rcy87xoaoo0')"
+        :title="!!data?.id ? t('Instance.Save.index.5rg4mi4y4qs0') : t('Instance.Save.index.5rg4mi4y7f00')"
         @ok="handleSave"
         @cancel="handleCancel"
         :confirmLoading="loading"
@@ -26,7 +26,7 @@
                                 },
                                 {
                                     max: 64,
-                                    message: t('Instance.Save.index.5rcy87xob1g0'),
+                                    message: t('Instance.Save.index.5rg4mi4y9i80'),
                                 },
                                 {
                                     validator: vailId,
@@ -54,22 +54,22 @@
                             />
                         </j-form-item>
                         <j-form-item
-                            :label="t('Instance.Save.index.5rcy87xobgk0')"
+                            :label="t('Instance.Save.index.5rg4mi4y8jo0')"
                             name="name"
                             :rules="[
                                 {
                                     required: true,
-                                    message: t('Instance.Save.index.5rcy87xobl80'),
+                                    message: t('Instance.Save.index.5rg4mi4y8sw0'),
                                 },
                                 {
                                     max: 64,
-                                    message: t('Instance.Save.index.5rcy87xob1g0'),
+                                    message: t('Instance.Save.index.5rg4mi4y9i80'),
                                 },
                             ]"
                         >
                             <j-input
                                 v-model:value="modelRef.name"
-                                :placeholder="t('Instance.Save.index.5rcy87xobl80')"
+                                :placeholder="t('Instance.Save.index.5rg4mi4y8sw0')"
                             />
                         </j-form-item>
                     </j-col>
@@ -110,7 +110,7 @@
                     </j-select>
                 </j-form-item>
                 <j-form-item
-                    :label="t('Instance.Save.index.5rcy87xoc4s0')"
+                    :label="t('Instance.Save.index.5rg4mi4y91w0')"
                     name="describe"
                     :rules="[
                         {
@@ -121,7 +121,7 @@
                 >
                     <j-textarea
                         v-model:value="modelRef.describe"
-                        :placeholder="t('Instance.Save.index.5rcy87xocd40')"
+                        :placeholder="t('Instance.Save.index.5rg4mi4y9bw0')"
                         showCount
                         :maxlength="200"
                     />

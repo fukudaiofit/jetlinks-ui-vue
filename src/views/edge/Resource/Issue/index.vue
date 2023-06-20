@@ -1,7 +1,7 @@
 <template>
     <j-modal
         visible
-        title="下发设备"
+        :title="t('Resource.Issue.index.5rg5eezjtr40')"
         :width="1000"
         @ok="onSave"
         @cancel="onCancel"
@@ -66,7 +66,9 @@ import { queryDeviceList } from '@/api/edge/resource';
 import dayjs from 'dayjs';
 import Result from './Result.vue';
 import { queryNoPagingPost } from '@/api/device/product';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const defaultParams = {
     pageSize: 10,
     sorts: [{ name: 'registerTime', order: 'desc' }],
@@ -116,7 +118,7 @@ const columns = [
         },
     },
     {
-        title: '产品名称',
+        title: t('Resource.Issue.index.5rg5eezjx380'),
         dataIndex: 'productName',
         key: 'productName',
         ellipsis: true,
@@ -138,7 +140,7 @@ const columns = [
         },
     },
     {
-        title: '设备名称',
+        title: t('Resource.Issue.index.5rg5eezjxko0'),
         ellipsis: true,
         dataIndex: 'name',
         key: 'name',
@@ -147,7 +149,7 @@ const columns = [
         },
     },
     {
-        title: '注册时间',
+        title: t('Resource.Issue.index.5rg5eezjxs80'),
         dataIndex: 'registerTime',
         key: 'registerTime',
         width: 200,
@@ -158,16 +160,16 @@ const columns = [
         },
     },
     {
-        title: '状态',
+        title: t('Resource.Issue.index.5rg5eezjy8g0'),
         dataIndex: 'state',
         key: 'state',
         scopedSlots: true,
         search: {
             type: 'select',
             options: [
-                { label: '禁用', value: 'notActive' },
-                { label: '离线', value: 'offline' },
-                { label: '在线', value: 'online' },
+                { label: t('Resource.Issue.index.5rg5eezjz000'), value: 'notActive' },
+                { label: t('Resource.Issue.index.5rg5eezjz800'), value: 'offline' },
+                { label: t('Resource.Issue.index.5rg5eezjzds0'), value: 'online' },
             ],
         },
     },
@@ -186,7 +188,7 @@ const onSave = () => {
     if (_data.value.length) {
         visible.value = true;
     } else {
-        onlyMessage('请选择设备', 'error');
+        onlyMessage(t('Resource.Issue.index.5rg5eezjzjo0'), 'error');
     }
 };
 
