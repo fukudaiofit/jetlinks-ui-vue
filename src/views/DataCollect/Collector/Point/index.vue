@@ -29,7 +29,7 @@
                                 <template #icon
                                     ><AIcon type="PlusOutlined"
                                 /></template>
-                                新增点位
+                                {{t('Collector.Point.index.5rg7w8bmw1k0')}}
                             </PermissionButton>
 
                             <PermissionButton
@@ -41,14 +41,14 @@
                                 <template #icon
                                     ><AIcon type="PlusOutlined"
                                 /></template>
-                                扫描
+                                {{t('Collector.Point.index.5rg7w8bmz1c0')}}
                             </PermissionButton>
                             <j-dropdown
                                 v-if="data?.provider === 'OPC_UA'"
                                 :trigger="['click']"
                             >
                                 <j-button @click.prevent="clickBatch"
-                                    >批量操作 <AIcon type="DownOutlined"
+                                    >{{t('Collector.Point.index.5rg7w8bmzus0')}} <AIcon type="DownOutlined"
                                 /></j-button>
                                 <template #overlay>
                                     <j-menu v-if="showBatch">
@@ -60,7 +60,7 @@
                                                 <template #icon
                                                     ><AIcon type="FormOutlined"
                                                 /></template>
-                                                编辑
+                                                {{t('Collector.Point.index.5rg7w8bn0a80')}}
                                             </PermissionButton>
                                         </j-menu-item>
                                         <j-menu-item>
@@ -75,7 +75,7 @@
                                                 <template #icon
                                                     ><AIcon type="EditOutlined"
                                                 /></template>
-                                                删除
+                                                {{t('Collector.Point.index.5rg7w8bn0h80')}}
                                             </PermissionButton>
                                         </j-menu-item>
                                     </j-menu>
@@ -89,7 +89,7 @@
                             <j-checkbox
                                 v-model:checked="checkAll"
                                 @change="onCheckAllChange"
-                                >全选</j-checkbox
+                                >{{t('Collector.Point.index.5rg7w8bn0n40')}}</j-checkbox
                             >
                         </div>
                     </template>
@@ -120,7 +120,7 @@
                                     <PermissionButton
                                         type="text"
                                         :tooltip="{
-                                            title: '删除',
+                                            title: t('Collector.Point.index.5rg7w8bn0h80'),
                                         }"
                                         hasPermission="DataCollect/Collector:delete"
                                         :popConfirm="{
@@ -343,7 +343,9 @@ import { cloneDeep, isNumber, throttle } from 'lodash-es';
 import { getWebSocket } from '@/utils/websocket';
 import { map } from 'rxjs/operators';
 import dayjs from 'dayjs';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     data: {
         type: Object,
@@ -386,18 +388,18 @@ const defaultParams = ref({
 
 const accessModesMODBUS_TCP = [
     {
-        label: '读',
+        label: t('Collector.Point.index.5rg7w8bn0t40'),
         value: 'read',
     },
     {
-        label: '写',
+        label: t('Collector.Point.index.5rg7w8bn0yc0'),
         value: 'write',
     },
 ];
 
 const columns = [
     {
-        title: '点位名称',
+        title: t('Collector.Point.index.5rg7w8bn16w0'),
         dataIndex: 'name',
         key: 'name',
         search: {
@@ -405,7 +407,7 @@ const columns = [
         },
     },
     {
-        title: '通讯协议',
+        title: t('Collector.Point.index.5rg7w8bn1do0'),
         dataIndex: 'provider',
         key: 'provider',
         search: {
@@ -423,7 +425,7 @@ const columns = [
         },
     },
     {
-        title: '访问类型',
+        title: t('Collector.Point.index.5rg7w8bn1kc0'),
         dataIndex: 'accessModes$in$any',
         key: 'accessModes$in$any',
         search: {
@@ -432,33 +434,33 @@ const columns = [
         },
     },
     {
-        title: '运行状态',
+        title: t('Collector.Point.index.5rg7w8bn24w0'),
         dataIndex: 'runningState',
         key: 'runningState',
         search: {
             type: 'select',
             options: [
                 {
-                    label: '运行中',
+                    label: t('Collector.Point.index.5rg7w8bn2gk0'),
                     value: 'running',
                 },
                 {
-                    label: '部分错误',
+                    label: t('Collector.Point.index.5rg7w8bn2oc0'),
                     value: 'partialError',
                 },
                 {
-                    label: '错误',
+                    label: t('Collector.Point.index.5rg7w8bn2wc0'),
                     value: 'failed',
                 },
                 {
-                    label: '已停止',
+                    label: t('Collector.Point.index.5rg7w8bn35c0'),
                     value: 'stopped',
                 },
             ],
         },
     },
     {
-        title: '说明',
+        title: t('Collector.Point.index.5rg7w8bn3gs0'),
         dataIndex: 'description',
         key: 'description',
         search: {
@@ -474,7 +476,7 @@ const showBatch = ref(false);
 
 const clickBatch = () => {
     if (_selectedRowKeys.value.length === 0) {
-        onlyMessage('请先选择', 'warning');
+        onlyMessage(t('Collector.Point.index.5rg7w8bn3qo0'), 'warning');
         showBatch.value = false;
     } else {
         showBatch.value = true;
@@ -505,7 +507,7 @@ const handlDelete = async (id: string | undefined = undefined) => {
     if (res?.status === 200) {
         cancelSelect();
         tableRef.value?.reload();
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Collector.Point.index.5rg7w8bn3yo0'), 'success');
     }
     spinning.value = false;
 };
@@ -541,7 +543,7 @@ const clickRead = async (data: any) => {
         ReadIdMap.set(data?.id, { ..._data, ...readData });
         cancelSelect();
         tableRef.value?.reload();
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Collector.Point.index.5rg7w8bn3yo0'), 'success');
     }
 };
 
@@ -565,7 +567,7 @@ const getText = (item: Partial<Record<string, any>>) => {
 };
 const getInterval = (item: Partial<Record<string, any>>) => {
     const { interval } = item.configuration || '';
-    return !!interval ? '采集频率' + interval + 'ms' : '';
+    return !!interval ? t('Collector.Point.index.5rg7w8bn45s0') + interval + 'ms' : '';
 };
 
 const getAccessModes = (item: Partial<Record<string, any>>) => {
@@ -594,7 +596,7 @@ const saveChange = (value: object) => {
     current.value = {};
     if (value) {
         tableRef.value?.reload();
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Collector.Point.index.5rg7w8bn3yo0'), 'success');
     }
 };
 
@@ -692,7 +694,7 @@ watch(
                 value?.provider === 'MODBUS_TCP'
                     ? accessModesMODBUS_TCP
                     : accessModesMODBUS_TCP.concat({
-                          label: '订阅',
+                          label: t('Collector.Point.index.5rg7w8bn4hk0'),
                           value: 'subscribe',
                       });
             defaultParams.value.terms[0].terms[0].value = !value.id ? 'undefined' : (value.id === '*' ? undefined : value.id);

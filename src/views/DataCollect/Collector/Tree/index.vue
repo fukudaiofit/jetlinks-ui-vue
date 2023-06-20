@@ -3,7 +3,7 @@
         <j-input-search
             v-model:value="searchValue"
             style="margin-bottom: 8px"
-            placeholder="请输入"
+            :placeholder="t('Collector.Tree.index.5rg7wust0b40')"
             @search="handleSearch"
             allowClear
         />
@@ -16,7 +16,7 @@
                 hasPermission="DataCollect/Collector:add"
             >
                 <template #icon><AIcon type="PlusOutlined" /></template>
-                新增采集器
+                {{t('Collector.Tree.index.5rg7wust2380')}}
             </PermissionButton>
         </div>
         <j-spin :spinning="spinning">
@@ -56,7 +56,7 @@
                         <PermissionButton
                             type="link"
                             :tooltip="{
-                                title: '编辑',
+                                title: t('Collector.Tree.index.5rg7wust2ek0'),
                             }"
                             @click="handlEdit(data)"
                             hasPermission="DataCollect/Collector:update"
@@ -68,15 +68,15 @@
                             :tooltip="{
                                 title:
                                     data?.state?.value === 'disabled'
-                                        ? '启用'
-                                        : '禁用',
+                                        ? t('Collector.Tree.index.5rg7wust2m40')
+                                        : t('Collector.Tree.index.5rg7wust2u80'),
                             }"
                             hasPermission="DataCollect/Collector:action"
                             :popConfirm="{
                                 title:
                                     data?.state?.value === 'disabled'
-                                        ? '确定启用?'
-                                        : '确定禁用?',
+                                        ? t('Collector.Tree.index.5rg7wust31w0')
+                                        : t('Collector.Tree.index.5rg7wust3fg0'),
                                 onConfirm: () => handlUpdate(data),
                             }"
                         >
@@ -94,8 +94,8 @@
                             :tooltip="{
                                 title:
                                     data?.state?.value !== 'disabled'
-                                        ? '请先禁用，再删除'
-                                        : '删除',
+                                        ? t('Collector.Tree.index.5rg7wust3r40')
+                                        : t('Collector.Tree.index.5rg7wust42w0'),
                             }"
                             :danger="data?.state?.value === 'disabled'"
                             hasPermission="DataCollect/Collector:delete"
@@ -109,7 +109,7 @@
                     </span>
                 </template>
             </j-tree>
-            <j-empty v-else description="暂无数据" />
+            <j-empty v-else :description="t('Collector.Tree.index.5rg7wust4h40')" />
         </j-spin>
         <Save v-if="visible" :data="current" @change="saveChange" />
     </div>
@@ -127,7 +127,9 @@ import { onlyMessage } from '@/utils/comm';
 import { Store } from 'jetlinks-store';
 import _ from 'lodash';
 import { colorMap } from '../data.ts';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     data: {
         type: Object,
@@ -148,7 +150,7 @@ const collectorAll = ref();
 const root = [
     {
         id: '*',
-        name: '全部',
+        name: t('Collector.Tree.index.5rg7wust4no0'),
         children: [],
     },
 ];
@@ -190,14 +192,14 @@ const handlUpdate = async (data: any) => {
     });
     if (resp.status === 200) {
         handleSearch(params.value);
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Collector.Tree.index.5rg7wust59c0'), 'success');
     }
 };
 const handlDelete = async (id: string) => {
     const resp = await remove(id);
     if (resp.status === 200) {
         handleSearch(params.value);
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Collector.Tree.index.5rg7wust59c0'), 'success');
     }
 };
 
@@ -206,7 +208,7 @@ const saveChange = (value: object) => {
     current.value = {};
     if (value) {
         handleSearch(params.value);
-        onlyMessage('操作成功', 'success');
+        onlyMessage(t('Collector.Tree.index.5rg7wust59c0'), 'success');
     }
 };
 

@@ -1275,6 +1275,41 @@
             "WhenOption": {
                 "5rg52lvzw200": "每天"
             }
+        },
+        "BatchUpdate": {
+            "index": {
+                "5rg7ss2s2xs0": "批量编辑",
+                "5rg7ss2s4gg0": "将批量修改",
+                "5rg7ss2s4pc0": "条数据的访问类型、采集频率、只推送变化的数据",
+                "5rg7ss2s5040": "访问类型",
+                "5rg7ss2s5680": "读",
+                "5rg7ss2s5gg0": "写",
+                "5rg7ss2s5po0": "订阅",
+                "5rg7ss2s6040": "请输入0或者正整数",
+                "5rg7ss2s69c0": "采集频率",
+                "5rg7ss2s6fg0": "采集频率为0时不执行轮询任务",
+                "5rg7ss2s6ns0": "请输入采集频率",
+                "5rg7ss2s6ws0": "只推送变化的数据",
+                "5rg7ss2s72c0": "取消",
+                "5rg7ss2s77w0": "确认",
+                "5rg7ss2s7d00": "最多可输入64个字符"
+            }
+        },
+        "PointCardBox": {
+            "index": {
+                "5rg7ta77q600": "正常"
+            }
+        },
+        "WritePoint": {
+            "index": {
+                "5rg7tjif9dw0": "写入",
+                "5rg7tjifav40": "请输入",
+                "5rg7tjifb5w0": "是",
+                "5rg7tjifbn40": "否",
+                "5rg7tjifbu80": "请选择",
+                "5rg7tjifbyw0": "取消",
+                "5rg7tjifc7g0": "确认"
+            }
         }
     },
     "Instance": {
@@ -3086,6 +3121,231 @@
             "index": {
                 "5rg5fquzk1c0": "编辑",
                 "5rg5fquzl3o0": "操作成功"
+            }
+        }
+    },
+    "Dashboard": {
+        "components": {
+            "Card": {
+                "5rg5nkmtkfo0": "点位数据量",
+                "5rg5nkmtldg0": "最近1小时",
+                "5rg5nkmtlj00": "今日",
+                "5rg5nkmtlns0": "近一周",
+                "5rg5nkmtlrs0": "消息量"
+            }
+        }
+    },
+    "Channel": {
+        "Save": {
+            "index": {
+                "5rg5orzohtk0": "编辑",
+                "5rg5orzojf80": "新增",
+                "5rg5orzojq40": "通道名称",
+                "5rg5orzojyo0": "请输入通道名称",
+                "5rg5orzok780": "通讯协议",
+                "5rg5orzokfc0": "请选择通讯协议",
+                "5rg5orzokmc0": "支持ipv4、ipv6、域名",
+                "5rg5orzoktw0": "请输入Modbus主机IP",
+                "5rg5orzol400": "端口",
+                "5rg5orzolb00": "请输入端口",
+                "5rg5orzollo0": "端点url",
+                "5rg5orzolwg0": "请输入端点url",
+                "5rg5orzom400": "安全策略",
+                "5rg5orzome80": "请选择安全策略",
+                "5rg5orzomlo0": "安全模式",
+                "5rg5orzoms00": "请选择安全模式",
+                "5rg5orzomzc0": "证书",
+                "5rg5orzon740": "请选择证书",
+                "5rg5orzoni80": "权限认证",
+                "5rg5orzonp00": "用户名",
+                "5rg5orzonyk0": "请输入用户名",
+                "5rg5orzoo7k0": "密码",
+                "5rg5orzoofk0": "请输入密码",
+                "5rg5orzooks0": "说明",
+                "5rg5orzoops0": "请输入说明",
+                "5rg5orzoouo0": "取消",
+                "5rg5orzooz80": "确认"
+            }
+        }
+    },
+    "DataCollect": {
+        "Channel": {
+            "index": {
+                "5rg5p0xfs8o0": "新增通道",
+                "5rg5p0xfut00": "协议",
+                "5rg5p0xfv500": "地址",
+                "5rg5p0xfveo0": "通道名称",
+                "5rg5p0xfvkg0": "通讯协议",
+                "5rg5p0xfvsg0": "状态",
+                "5rg5p0xfvxs0": "正常",
+                "5rg5p0xfw3s0": "禁用",
+                "5rg5p0xfwak0": "运行状态",
+                "5rg5p0xfwg00": "运行中",
+                "5rg5p0xfwm00": "部分错误",
+                "5rg5p0xfws80": "错误",
+                "5rg5p0xfwxw0": "说明",
+                "5rg5p0xfx680": "操作",
+                "5rg5p0xfxd80": "启用",
+                "5rg5p0xfxis0": "编辑",
+                "5rg5p0xfxo40": "操作成功",
+                "5rg5p0xfxto0": "删除",
+                "5rg5p0xfy0c0": "请先禁用该组件，再删除。",
+                "5rg5p0xfy6w0": "该操作将会删除下属采集器与点位，确定删除?"
+            }
+        }
+    },
+    "Point": {
+        "Save": {
+            "SaveModBus": {
+                "5rg7tv8s8zg0": "编辑",
+                "5rg7tv8sa380": "新增",
+                "5rg7tv8sahg0": "点位名称",
+                "5rg7tv8saog0": "请输入点位名称",
+                "5rg7tv8saso0": "功能码",
+                "5rg7tv8sax80": "请选择所功能码",
+                "5rg7tv8sb1k0": "地址",
+                "5rg7tv8sb5o0": "请输入地址",
+                "5rg7tv8sb9w0": "寄存器数量",
+                "5rg7tv8sbf00": "请输入寄存器数量",
+                "5rg7tv8sbik0": "数据类型",
+                "5rg7tv8sbm40": "请选择数据类型",
+                "5rg7tv8sbps0": "缩放因子",
+                "5rg7tv8sbtg0": "请输入缩放因子",
+                "5rg7tv8sbzk0": "小数保留位数",
+                "5rg7tv8sc2w0": "请输入小数保留位数",
+                "5rg7tv8sc6o0": "访问类型",
+                "5rg7tv8sca40": "读",
+                "5rg7tv8scf80": "写",
+                "5rg7tv8sckg0": "非标准协议写入配置",
+                "5rg7tv8scqk0": "是否写入数据区长度",
+                "5rg7tv8sctg0": "是",
+                "5rg7tv8scx00": "否",
+                "5rg7tv8sczs0": "自定义数据区长度（byte）",
+                "5rg7tv8sd2s0": "请输入自定义数据区长度（byte）",
+                "5rg7tv8sd5k0": "采集频率",
+                "5rg7tv8sd8c0": "请输入采集频率",
+                "5rg7tv8sdb00": "只推送变化的数据",
+                "5rg7tv8sdgc0": "说明",
+                "5rg7tv8sdj80": "请输入说明",
+                "5rg7tv8sdm80": "取消",
+                "5rg7tv8sdp00": "确认"
+            },
+            "SaveOPCUA": {
+                "5rg7v9xg3d40": "编辑",
+                "5rg7v9xg4es0": "点位名称",
+                "5rg7v9xg4mc0": "请输入点位名称",
+                "5rg7v9xg4sk0": "数据类型",
+                "5rg7v9xg4y80": "请选择数据类型",
+                "5rg7v9xg5900": "访问类型",
+                "5rg7v9xg5g00": "读",
+                "5rg7v9xg5ow0": "写",
+                "5rg7v9xg5uo0": "订阅",
+                "5rg7v9xg5z40": "采集频率",
+                "5rg7v9xg63g0": "请输入采集频率",
+                "5rg7v9xg68g0": "只推送变化的数据",
+                "5rg7v9xg6co0": "说明",
+                "5rg7v9xg6h00": "请输入说明",
+                "5rg7v9xg6lc0": "取消",
+                "5rg7v9xg6ps0": "确认"
+            }
+        },
+        "Scan": {
+            "index": {
+                "5rg7vkzmmk00": "扫描",
+                "5rg7vkzmnk80": "取消",
+                "5rg7vkzmnpw0": "确认"
+            },
+            "Table": {
+                "5rg7vqi4t1w0": "请输入",
+                "5rg7vqi4u500": "请选择",
+                "5rg7vqi4uc00": "读",
+                "5rg7vqi4ui40": "写",
+                "5rg7vqi4uns0": "订阅",
+                "5rg7vqi4uv80": "同上",
+                "5rg7vqi4v8o0": "请输入0或者正整数",
+                "5rg7vqi4wqc0": "是",
+                "5rg7vqi4x2k0": "否",
+                "5rg7vqi4zwg0": "删除",
+                "5rg7vqi52hk0": "确认删除",
+                "5rg7vqi53480": "最多可输入64个字符"
+            },
+            "Tree": {
+                "5rg7vz8ksh40": "数据源",
+                "5rg7vz8ku780": "隐藏已有节点"
+            }
+        }
+    },
+    "Collector": {
+        "Point": {
+            "index": {
+                "5rg7w8bmw1k0": "新增点位",
+                "5rg7w8bmz1c0": "扫描",
+                "5rg7w8bmzus0": "批量操作",
+                "5rg7w8bn0a80": "编辑",
+                "5rg7w8bn0h80": "删除",
+                "5rg7w8bn0n40": "全选",
+                "5rg7w8bn0t40": "读",
+                "5rg7w8bn0yc0": "写",
+                "5rg7w8bn16w0": "点位名称",
+                "5rg7w8bn1do0": "通讯协议",
+                "5rg7w8bn1kc0": "访问类型",
+                "5rg7w8bn24w0": "运行状态",
+                "5rg7w8bn2gk0": "运行中",
+                "5rg7w8bn2oc0": "部分错误",
+                "5rg7w8bn2wc0": "错误",
+                "5rg7w8bn35c0": "已停止",
+                "5rg7w8bn3gs0": "说明",
+                "5rg7w8bn3qo0": "请先选择",
+                "5rg7w8bn3yo0": "操作成功",
+                "5rg7w8bn45s0": "采集频率",
+                "5rg7w8bn4hk0": "订阅"
+            }
+        },
+        "Tree": {
+            "index": {
+                "5rg7wust0b40": "请输入",
+                "5rg7wust2380": "新增采集器",
+                "5rg7wust2ek0": "编辑",
+                "5rg7wust2m40": "启用",
+                "5rg7wust2u80": "禁用",
+                "5rg7wust31w0": "确定启用?",
+                "5rg7wust3fg0": "确定禁用?",
+                "5rg7wust3r40": "请先禁用，再删除",
+                "5rg7wust42w0": "删除",
+                "5rg7wust4h40": "暂无数据",
+                "5rg7wust4no0": "全部",
+                "5rg7wust59c0": "操作成功"
+            }
+        }
+    },
+    "Tree": {
+        "Save": {
+            "index": {
+                "5rg7wkstors0": "编辑",
+                "5rg7wkstshg0": "新增",
+                "5rg7wkstswg0": "所属通道",
+                "5rg7wkstt2k0": "请选择所属通道",
+                "5rg7wkstt6w0": "采集器名称",
+                "5rg7wksttd40": "请输入采集器名称",
+                "5rg7wksttmw0": "从机地址",
+                "5rg7wksttrc0": "请输入从机地址",
+                "5rg7wksttwk0": "故障处理",
+                "5rg7wkstu3c0": "降频",
+                "5rg7wkstu740": "断开",
+                "5rg7wkstub80": "忽略",
+                "5rg7wkstuew0": "双字高低位切换",
+                "5rg7wkstuio0": "单字高低位切换",
+                "5rg7wkstums0": "只有4字节数据类型(int32、ieee754",
+                "5rg7wksturk0": "具有4种内存布局，其它只有ABCD、DCBA两种内存布局(以双字配置为准)",
+                "5rg7wkstuxg0": "请求超时时间配置",
+                "5rg7wkstv2o0": "请输入请求超时时间配置",
+                "5rg7wkstv600": "说明",
+                "5rg7wkstvbk0": "请输入说明",
+                "5rg7wkstvm80": "取消",
+                "5rg7wkstvps0": "确认",
+                "5rg7wkstvto0": "连续20次异常，降低连接频率至原有频率的1/10（重试间隔不超过1分钟），故障处理后自动恢复至设定连接频率",
+                "5rg7wkstw0s0": "连续10分钟异常，停止采集数据进入断开状态，设备重新启用后恢复采集状态",
+                "5rg7wkstw3k0": "忽略异常，保持原采集频率超时时间为5s"
             }
         }
     }
