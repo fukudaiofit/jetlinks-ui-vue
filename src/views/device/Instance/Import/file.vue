@@ -43,7 +43,7 @@
     <div v-if="importLoading">
       <j-badge v-if="flag" status="processing" :text="t('Instance.Import.file.5rcy9hmpyec0')" />
       <j-badge v-else status="success" :text="t('Instance.Import.file.5rcy9hmpynk0')" />
-      <span>总数量：{{ count }}</span>
+      <span>{{t('Instance.Import.file.amount') + count }}</span>
       <p style="color: red">{{ errMessage }}</p>
     </div>
   </div>

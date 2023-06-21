@@ -25,7 +25,7 @@
                     :name="i.property"
                     :key="i.property"
                     :required='!!i.type.expands?.required'
-                    :rules='!!i.type.expands?.required ? [{ required: true, message: `请输入${i.name}`}] :[]'
+                    :rules="!!i.type.expands?.required ? [{ required: true, message: `${t('components.Config.Save.input') + i.name}`}] :[]"
                 >
                     <template #label>
                         <span style="margin-right: 5px">{{ i.name }}</span>

@@ -3,7 +3,7 @@
     <div>
         <div class="top">
             <div>
-                脚本语言:
+                {{ t('Detail.DataAnalysis.index.SCRIPT') }}
                 <j-select
                     :defaultValue="'JavaScript'"
                     style="width: 200; margin-left: 5px"
@@ -61,7 +61,7 @@
                 </div>
                 <j-textarea
                     :rows="5"
-                    placeholder="// 二进制数据以0x开头的十六进制输入，字符串数据输入原始字符串"
+                    :placeholder="t('Detail.DataAnalysis.index.inputTip')"
                     style="margin-top: 10px"
                     v-model:value="simulation"
                 />
@@ -122,8 +122,7 @@ import { isBoolean } from 'lodash';
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-const defaultValue =
-    '//解码函数\r\nfunction decode(context) {\r\n    //原始报文\r\n    var buffer = context.payload();\r\n    // 转为json\r\n    // var json = context.json();\r\n    //mqtt 时通过此方法获取topic\r\n    // var topic = context.topic();\r\n\r\n    // 提取变量\r\n    // var topicVars = context.pathVars("/{deviceId}/**",topic)\r\n    //温度属性\r\n    var temperature = buffer.getShort(3) * 10;\r\n    //湿度属性\r\n    var humidity = buffer.getShort(6) * 10;\r\n    return {\r\n        "temperature": temperature,\r\n        "humidity": humidity\r\n    };\r\n}\r\n';
+const defaultValue = t('Detail.DataAnalysis.index.analysisValue');
 
 const el = ref<HTMLElement | null>(null);
 const { toggle } = useFullscreen(el);

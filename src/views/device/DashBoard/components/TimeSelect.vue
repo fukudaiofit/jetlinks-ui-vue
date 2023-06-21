@@ -1,29 +1,13 @@
 <template>
     <div>
-        <j-radio-group
-            v-if="quickBtn"
-            default-value="today"
-            button-style="solid"
-            v-model:value="radioValue"
-            @change="(e) => handleBtnChange(e.target.value)"
-        >
-            <j-radio-button
-                v-for="item in quickBtnList"
-                :key="item.value"
-                :value="item.value"
-            >
+        <j-radio-group v-if="quickBtn" default-value="today" button-style="solid" v-model:value="radioValue"
+            @change="(e) => handleBtnChange(e.target.value)">
+            <j-radio-button v-for="item in btnList" :key="item.value" :value="item.value">
                 {{ item.label }}
             </j-radio-button>
         </j-radio-group>
-        <j-range-picker
-            format="YYYY-MM-DD HH:mm:ss"
-            valueFormat="YYYY-MM-DD HH:mm:ss"
-            style="margin-left: 12px"
-            :show-time="{ format: 'HH:mm:ss' }"
-            @change="rangeChange"
-            v-model:value="rangeVal"
-            :allowClear="false"
-        >
+        <j-range-picker format="YYYY-MM-DD HH:mm:ss" valueFormat="YYYY-MM-DD HH:mm:ss" style="margin-left: 12px"
+            :show-time="{ format: 'HH:mm:ss' }" @change="rangeChange" v-model:value="rangeVal" :allowClear="false">
         </j-range-picker>
     </div>
 </template>
@@ -31,7 +15,9 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
 import { PropType } from 'vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 interface BtnOptions {
     label: string;
     value: string;
@@ -52,12 +38,6 @@ const props = defineProps({
     // 快捷按钮列表
     quickBtnList: {
         type: Array as PropType<BtnOptions[]>,
-        default: [
-            { label: '今日', value: 'today' },
-            { label: '近一周', value: 'week' },
-            { label: '近一月', value: 'month' },
-            { label: '近一年', value: 'year' },
-        ],
     },
     type: {
         type: String,
@@ -65,6 +45,14 @@ const props = defineProps({
     },
 });
 
+const btnList = computed(() => {
+    return props.quickBtnList || [
+        { label: t('DashBoard.components.TimeSelect.5rcxzrvjee40'), value: 'today' },
+        { label: t('DashBoard.components.TimeSelect.5rcxzrvjftk0'), value: 'week' },
+        { label: t('DashBoard.components.TimeSelect.5rcxzrvjkgg0'), value: 'month' },
+        { label: t('DashBoard.components.TimeSelect.5rcxzrvjl700'), value: 'year' },
+    ]
+})
 const radioValue = ref(props.type || 'week' || undefined);
 const rangeVal = ref<[string, string]>();
 

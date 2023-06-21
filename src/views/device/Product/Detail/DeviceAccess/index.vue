@@ -9,7 +9,7 @@
                     "
                 >
                     {{t('Detail.DeviceAccess.index.5rcy2w1ljj80')}}<j-button type="link" @click="showModal">{{t('Detail.DeviceAccess.index.5rcy2w1lkmg0')}}</j-button
-                    >设备接入网关，用以提供设备接入能力
+                    >{{t('Detail.DeviceAccess.index.accessTip')}}
                 </span>
                 <span v-else>{{t('Detail.DeviceAccess.index.5rcy2w1lkug0')}}</span>
             </template>
@@ -188,7 +188,7 @@
                                 access?.provider === 'mqtt-server-gateway' ||
                                 access?.provider === 'mqtt-client-gateway'
                                     ? 'topic'
-                                    : 'URL信息'
+                                    : t('Detail.DeviceAccess.index.URL')
                             }}
                         </div>
                         <j-table

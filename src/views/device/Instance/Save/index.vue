@@ -85,7 +85,8 @@
                 >
                     <template #label>
                         <span
-                            >所属产品
+                            >
+                            {{t('Instance.Save.index.5rh473it3qc0')}}
                             <j-tooltip :title="t('Instance.Save.index.5rcy87xobu40')">
                                 <AIcon
                                     type="QuestionCircleOutlined"

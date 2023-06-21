@@ -34,7 +34,7 @@
                         <template v-if="topState !== 'loading'">{{
                             headerDescMap.get(topState)
                         }}</template>
-                        <template v-else>已诊断{{ count }}个</template>
+                        <template v-else>{{t('Detail.Diagnose.index.diagnosed') + count + t('Detail.Diagnose.index.number')}}</template>
                     </div>
                 </div>
             </div>

@@ -25,7 +25,7 @@
                 <div class="product-title">{{t('Product.DialogTips.index.5rcy2231c2g0')}}</div>
             </div>
             <div style="display: flex">
-                <div class="product-id">产品ID: {{ idValue }}</div>
+                <div class="product-id">{{ t('Product.DialogTips.index.productId')+idValue }}</div>
                 <div
                     class="product-btn"
                     @click="showDetail"
@@ -34,20 +34,20 @@
                     {{t('Product.DialogTips.index.5rcy2231dv40')}}
                 </div>
             </div>
-            <div>接下来推荐操作:</div>
-            <div class="product-main">1、配置产品接入方式</div>
+            <div>{{ t('Product.DialogTips.index.stepTitle') }}</div>
+            <div class="product-main">{{ t('Product.DialogTips.index.step1') }}</div>
             <div class="product-text">
                 {{t('Product.DialogTips.index.5rcy2231e400')}}
             </div>
-            <div class="product-main">2、添加测试设备</div>
+            <div class="product-main">{{ t('Product.DialogTips.index.step2') }}</div>
             <div class="product-text">
                 {{t('Product.DialogTips.index.5rcy2231ec80')}}
             </div>
-            <div class="product-main">3、功能调试</div>
+            <div class="product-main">{{ t('Product.DialogTips.index.step3') }}</div>
             <div class="product-text">
                 {{t('Product.DialogTips.index.5rcy2231elg0')}}
             </div>
-            <div class="product-main">4、批量添加设备</div>
+            <div class="product-main">{{ t('Product.DialogTips.index.step4') }}</div>
             <div class="product-text">
                 {{t('Product.DialogTips.index.5rcy2231etc0')}}
             </div>

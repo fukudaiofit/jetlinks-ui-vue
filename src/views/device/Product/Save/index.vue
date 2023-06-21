@@ -198,7 +198,7 @@ const validateInput = async (_rule: Rule, value: string) => {
             if (props.isAdd === 1) {
                 const res = await queryProductId(value);
                 if (res.status === 200 && res.result) {
-                    return Promise.reject('ID重复');
+                    return Promise.reject(t('Product.Save.index.IDRepeat'));
                 } else {
                     return Promise.resolve();
                 }

@@ -76,7 +76,7 @@
             <PermissionButton
                 type="primary"
                 :popConfirm="{
-                    title: `确定应用配置?`,
+                    title:t('Product.Detail.index.tip'),
                     placement: 'bottomRight',
                     onConfirm: handleDeploy,
                 }"

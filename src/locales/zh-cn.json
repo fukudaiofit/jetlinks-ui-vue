@@ -533,7 +533,8 @@
                 "5rcy1r9vosc0": "最多可输入64位字符",
                 "5rcy1r9vp3s0": "最多可输入200位字符",
                 "5rcy1r9vpb40": "保存成功！",
-                "5rcy1r9vpnc0": "操作失败"
+                "5rcy1r9vpnc0": "操作失败",
+                "IDRepeat": "ID重复"
             }
         },
         "DialogTips": {
@@ -544,7 +545,13 @@
                 "5rcy2231e400": "点击具体产品的查看按钮,进入“设备接入”tab页，并参照设备铭牌说明选择匹配的接入方式",
                 "5rcy2231ec80": "进入设备列表，添加单个设备，用于验证产品模型是否配置正确",
                 "5rcy2231elg0": "点击查看具体设备，进入“设备诊断”对添加的测试设备进行功能调试，验证能否连接到平台，设备功能是否配置正确",
-                "5rcy2231etc0": "进入设备列表页面，点击批量导入设备，批量添加同一产品下的设备"
+                "5rcy2231etc0": "进入设备列表页面，点击批量导入设备，批量添加同一产品下的设备",
+                "stepTitle": "接下来推荐操作:",
+                "step1": "1、配置产品接入方式",
+                "step2": "2、添加测试设备",
+                "step3": "3、功能调试",
+                "step4": "4、批量添加设备",
+                "productId": "产品ID："
             }
         },
         "Detail": {
@@ -563,7 +570,8 @@
                 "5rcy2a8o9lw0": "设备接入",
                 "5rcy2a8o9t00": "操作成功！",
                 "5rcy2a8oa1c0": "数据解析",
-                "5rcy2a8oa9k0": "物模型映射"
+                "5rcy2a8oa9k0": "物模型映射",
+                "tip": "确定应用配置?"
             }
         }
     },
@@ -593,7 +601,10 @@
                 "5rcy2jz4zng0": "保存",
                 "5rcy2jz4zyg0": "保存成功",
                 "5rcy2jz506g0": "请输入topic",
-                "5rcy2jz50e00": "请输入url"
+                "5rcy2jz50e00": "请输入url",
+                "SCRIPT": " 脚本语言:",
+                "inputTip": "// 二进制数据以0x开头的十六进制输入，字符串数据输入原始字符串",
+                "analysisValue": "//解码函数\r\nfunction decode(context) {\r\n    //原始报文\r\n    var buffer = context.payload();\r\n    // 转为json\r\n    // var json = context.json();\r\n    //mqtt 时通过此方法获取topic\r\n    // var topic = context.topic();\r\n\r\n    // 提取变量\r\n    // var topicVars = context.pathVars('/{deviceId}/**',topic)\r\n    //温度属性\r\n    var temperature = buffer.getShort(3) * 10;\r\n    //湿度属性\r\n    var humidity = buffer.getShort(6) * 10;\r\n    return {\r\n        'temperature': temperature,\r\n        'humidity': humidity\r\n    };\r\n}\r\n"
             }
         },
         "DeviceAccess": {
@@ -609,7 +620,9 @@
                 "5rcy2s0m2000": "正常",
                 "5rcy2s0m28c0": "禁用",
                 "5rcy2s0m2fg0": "说明",
-                "5rcy2s0m2no0": "请选择接入方式"
+                "5rcy2s0m2no0": "请选择接入方式",
+                "accessTip": "设备接入网关，用以提供设备接入能力",
+                "URL": "URL信息"
             },
             "index": {
                 "5rcy2w1ljj80": "请先",
@@ -661,7 +674,8 @@
                 "5rcy30umv8k0": "仅保留平台中的属性",
                 "5rcy30umvho0": "覆盖",
                 "5rcy30umvq00": "仅保留插件中的属性",
-                "5rcy30umvyw0": "操作成功！"
+                "5rcy30umvyw0": "操作成功！",
+                "processingMode": "请选择处理方式"
             }
         },
         "MetadataMap": {
@@ -680,7 +694,10 @@
                 "5rcy34vl13o0": "序号",
                 "5rcy34vl1aw0": "平台属性",
                 "5rcy34vl1gw0": "目标属性",
-                "5rcy34vl1mk0": "操作成功"
+                "5rcy34vl1mk0": "操作成功",
+                "5rgxr8foquw0": "与",
+                "5rgxr8fosfc0": "进行映射,当两方属性标识不一致时，可在当前页面直接修改映射管理，系统将以映射后的物模型属性进行数据处理。",
+                "5rgxr8foskg0": "的属性。"
             }
         },
         "ChildDevice": {
@@ -716,7 +733,9 @@
         "Diagnose": {
             "index": {
                 "5rcyh18y5ak0": "连接状态",
-                "5rcyh18y6wg0": "消息通信"
+                "5rcyh18y6wg0": "消息通信",
+                "diagnosed": "已诊断",
+                "number": "个"
             }
         },
         "EdgeMap": {
@@ -935,12 +954,14 @@
                 "5rcyjclx42w0": "恢复默认",
                 "5rcyjclx4ik0": "该设备单独编辑过配置信息，点击此将恢复成默认的配置信息，请谨慎操作。",
                 "5rcyjclx5dg0": "操作成功",
-                "5rcyjclx65c0": "恢复默认配置成功"
+                "5rcyjclx65c0": "恢复默认配置成功",
+                "effective": "有效值："
             },
             "Save": {
                 "5rcyjkshg4w0": "编辑配置",
                 "5rcyjkshhgk0": "保存",
-                "5rcyjkshhp80": "操作成功！"
+                "5rcyjkshhp80": "操作成功！",
+                "input": "请输入"
             }
         },
         "InklingModal": {
@@ -958,12 +979,17 @@
             "Save": {
                 "5rcykfxkim80": "编辑",
                 "5rcykfxkkmo0": "保存",
-                "5rcykfxkkyo0": "操作成功！"
+                "5rcykfxkkyo0": "操作成功！",
+                "select": "请选择"
             }
         },
         "Tags": {
             "index": {
-                "5rcykpi2is00": "标签"
+                "5rcykpi2is00": "标签",
+                "5rh40qyokzg0": "编辑",
+                "SCRIPT": " 脚本语言:",
+                "inputTip": "// 二进制数据以0x开头的十六进制输入，字符串数据输入原始字符串",
+                "analysisValue": "//解码函数\r\nfunction decode(context) {\r\n    //原始报文\r\n    var buffer = context.payload();\r\n    // 转为json\r\n    // var json = context.json();\r\n    //mqtt 时通过此方法获取topic\r\n    // var topic = context.topic();\r\n\r\n    // 提取变量\r\n    // var topicVars = context.pathVars('/{deviceId}/**',topic)\r\n    //温度属性\r\n    var temperature = buffer.getShort(3) * 10;\r\n    //湿度属性\r\n    var humidity = buffer.getShort(6) * 10;\r\n    return {\r\n        'temperature': temperature,\r\n        'humidity': humidity\r\n    };\r\n}\r\n"
             },
             "Save": {
                 "5rcykwmcdew0": "编辑标签",
@@ -1415,7 +1441,8 @@
                 "5rg4mi4y9i80": "最多输入64个字符",
                 "5rg4mi4y9s00": "操作成功！",
                 "5rg4mi4ya0g0": "操作失败",
-                "5rg4mi4ya8g0": "操作失败！"
+                "5rg4mi4ya8g0": "操作失败！",
+                "5rh473it3qc0": "所属产品"
             }
         },
         "Process": {
@@ -1440,7 +1467,8 @@
                 "5rcy9hmpz6s0": "请上传.xlsx格式文件",
                 "5rcy9hmpzg00": "失败",
                 "5rcy9hmpzsg0": "暂无权限，请联系管理员",
-                "5rcy9hmq07s0": "请先上传文件"
+                "5rcy9hmq07s0": "请先上传文件",
+                "amount": "总数量"
             },
             "index": {
                 "5rcy9v73m000": "导入",
@@ -1510,6 +1538,78 @@
                 "5rcyr31fqo80": "边缘端映射",
                 "5rcyr31fqww0": "操作成功！",
                 "5rcyr31fr5o0": "操作成功"
+            }
+        },
+        "tsx": {
+            "diagnostic": {
+                "modalTitle": "设备诊断",
+                "suggest": "设备建议",
+                "tip": "所有诊断均无异常但设备仍未上线，请检查以下内容",
+                "join": "连接信息",
+                "deviceId": "设备ID",
+                "address": "连接地址"
+            },
+            "index": {
+                "module": "网络组件",
+                "moduleTip": "诊断网络组件配置是否正确，配置错误将导致设备连接失败",
+                "normal": "正常",
+                "abnormal": "异常",
+                "enableTip": "网络组件已禁用，请先",
+                "confirmEnable": "确认启用",
+                "suc": "操作成功！",
+                "enable": "启用",
+                "portTip": "请检查服务器端口是否开放，如未开放，请开放后尝试重新连接",
+                "firewallTip": "请检查服务器防火策略，如有开启防火墙，请关闭防火墙或调整防火墙策略后重试",
+                "requestErr": "请求发生错误",
+                "noAccessId": "设备不含accessId",
+                "deviceAccessState1": "诊断设备接入网关状态是否正常，网关配置是否正确",
+                "deviceAccessState2": "诊断设备接入网关状态是否正常，禁用状态将导致连接失败",
+                "gateway": "设备接入网关",
+                "possibleAb": "可能存在异常",
+                "please": "请",
+                "manualCheck": "人工检查",
+                "dispositionTip": "网关配置是否已填写正确，若您确定该项无需诊断可",
+                "ignoreTip": "确认忽略？",
+                "disposition": "配置",
+                "ignore": "忽略",
+                "gatewayDisableTip": "设备接入网关已禁用，请先",
+                "gatewayParent": "网关父设备",
+                "gatewayParentTip": "诊断网关父设备状态是否正常，禁用或离线将导致连接失败",
+                "parentUnbind": "未绑定父设备，请先",
+                "bind": "绑定",
+                "parentRetry": "父设备后重试",
+                "parentDisable": "网关父设备已禁用，请先",
+                "parentOffline": "网关父设备已离线，请先排查网关设备故障",
+                "productState": "产品状态",
+                "productTip": "诊断产品状态是否正常，禁用状态将导致设备连接失败",
+                "productDisable": "产品已禁用，请",
+                "product": "产品",
+                "deviceState": "设备状态",
+                "deviceTip": "诊断设备状态是否正常，禁用状态将导致设备连接失败",
+                "deviceDisable": "设备已禁用，请",
+                "offline": "离线",
+                "device": "设备",
+                "MQTTTip": "诊断产品MQTT认证配置是否正确，错误的配置将导致连接失败",
+                "diagnosing": "正在诊断中...",
+                "approveTip": "请根据设备接入配置需要",
+                "fillOut": "填写",
+                "approveNoNeed": "，若您确定该项无需诊断可",
+                "NoNeedTip": "配置是否已填写正确,若您确定该项无需诊断可",
+                "deviceMQTT": "诊断设备MQTT认证配置是否正确，错误的配置将导致连接失败",
+                "deviceOneNet": "设备-OneNet配置",
+                "deviceOneNetTip": "诊断设备OneNet是否已配置，未配置将导致连接失败",
+                "deviceoneNetNo": "设备-OneNet配置是否已填写正确,若您确定该项无需诊断可",
+                "ctwing": "设备-CTWing配置",
+                "ctwingTip": "诊断设备CTWing是否已配置，未配置将导致连接失败",
+                "ctwingNo": " 设备-CTWing配置是否已填写正确,若您确定该项无需诊断可",
+                "inspectState": "请检查设备运行状态是否正常",
+                "inspectNetwork1": "请检查设备网络是否畅通，并确保设备已连接到以下地址之一:",
+                "inspectNetwork2": "请检查设备网络是否畅通，并确保设备已连接到:",
+                "reason": "请根据",
+                "joinDisposition": "设备接入配置",
+                "in": "中",
+                "message": "信息，任意上报一条数据",
+                "contactadministrator": "请联系管理员提供"
             }
         }
     },

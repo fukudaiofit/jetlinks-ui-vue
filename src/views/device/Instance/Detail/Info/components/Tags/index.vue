@@ -8,7 +8,8 @@
                     @click="visible = true"
                     hasPermission="device/Instance:update"
                 >
-                    <AIcon type="EditOutlined" />编辑
+                    <AIcon type="EditOutlined" />
+                    {{t('components.Tags.index.5rh40qyokzg0')}}
                 </PermissionButton>
             </template>
             <j-descriptions-item

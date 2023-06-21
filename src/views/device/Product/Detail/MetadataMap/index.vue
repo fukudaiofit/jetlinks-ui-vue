@@ -51,14 +51,17 @@
         </div>
         <p>
           {{t('Detail.MetadataMap.index.5rcy34vkzmk0')}}
-          <b>{{t('Detail.MetadataMap.index.5rcy34vkztc0')}}</b>与
-          <b>{{t('Detail.MetadataMap.index.5rcy34vkzzc0')}}</b>进行映射,当两方属性标识不一致时，可在当前页面直接修改映射管理，系统将以映射后的物模型属性进行数据处理。
+          <b>{{t('Detail.MetadataMap.index.5rcy34vkztc0')}}</b>
+          {{t('Detail.MetadataMap.index.5rgxr8foquw0')}}
+          <b>{{t('Detail.MetadataMap.index.5rcy34vkzzc0')}}</b>
+          {{t('Detail.MetadataMap.index.5rgxr8fosfc0')}}
         </p>
         <p>
           {{t('Detail.MetadataMap.index.5rcy34vl05s0')}}
         </p>
         <p>
-          {{t('Detail.MetadataMap.index.5rcy34vl0bo0')}}<b>{{t('Detail.MetadataMap.index.5rcy34vl0h00')}}</b>{{t('Detail.MetadataMap.index.5rcy34vl0n80')}}<b>{{t('Detail.MetadataMap.index.5rcy34vl0so0')}}</b>的属性。
+          {{t('Detail.MetadataMap.index.5rcy34vl0bo0')}}<b>{{t('Detail.MetadataMap.index.5rcy34vl0h00')}}</b>{{t('Detail.MetadataMap.index.5rcy34vl0n80')}}<b>{{t('Detail.MetadataMap.index.5rcy34vl0so0')}}</b>
+          {{t('Detail.MetadataMap.index.5rgxr8foskg0')}}
         </p>
         <div class='title'>
           {{t('Detail.MetadataMap.index.5rcy34vl0xw0')}}

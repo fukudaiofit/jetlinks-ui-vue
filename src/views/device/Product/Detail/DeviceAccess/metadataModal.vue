@@ -19,7 +19,7 @@
       </j-tooltip>
     </div>
     <j-form :layout="'vertical'" ref='formRef' :model='handleData'>
-      <j-form-item :label="t('Detail.DeviceAccess.metadataModal.5rcy30umtnw0')" :rules='[{ required: true, message: "请选择处理方式"}]' >
+      <j-form-item :label="t('Detail.DeviceAccess.metadataModal.5rcy30umtnw0')" :rules="[{ required: true, message: t('Detail.DeviceAccess.metadataModal.processingMode')}]" >
         <j-card-select
           v-model:value="handleData.type"
           :column='4'
