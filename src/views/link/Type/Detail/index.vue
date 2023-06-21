@@ -49,7 +49,7 @@
                                     <template #label>
                                         {{t('Type.Detail.index.5rg3eiq3dgw0')}}
                                         <j-tooltip
-                                            title="共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置"
+                                            :title="t('Type.Detail.index.cluster')"
                                         >
                                             <AIcon
                                                 type="QuestionCircleOutlined"
@@ -199,7 +199,7 @@
                                                     <template #label>
                                                         {{t('Type.Detail.index.5rg3eiq3e500')}}
                                                         <j-tooltip
-                                                            title="绑定到服务器上的网卡地址,绑定到所有网卡:0.0.0.0"
+                                                            :title="t('Type.Detail.index.address')"
                                                         >
                                                             <AIcon
                                                                 type="QuestionCircleOutlined"
@@ -599,7 +599,7 @@
                                                     <template #label>
                                                         {{t('Type.Detail.index.5rg3eiq3ggk0')}}
                                                         <j-tooltip
-                                                            title="单次收发消息的最大长度,单位:字节;设置过大可能会影响性能"
+                                                            :title="t('Type.Detail.index.maxTip')"
                                                         >
                                                             <AIcon
                                                                 type="QuestionCircleOutlined"

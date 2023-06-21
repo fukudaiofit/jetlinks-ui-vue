@@ -7,120 +7,80 @@
             <div class="steps-box" v-if="current === 0">
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    {{t('components.Cloud.Ctwing.5rg357patz40')}}
+                    {{ t('components.Cloud.Ctwing.5rg357patz40') }}
                 </div>
                 <div style="margin-top: 42px">
                     <j-row :gutter="[24, 24]">
                         <j-col :span="16">
-                            <j-form
-                                :model="formState"
-                                ref="formRef1"
-                                name="basic"
-                                autocomplete="off"
-                                layout="vertical"
-                            >
+                            <j-form :model="formState" ref="formRef1" name="basic" autocomplete="off" layout="vertical">
                                 <j-row :gutter="[24, 24]">
                                     <j-col :span="12">
-                                        <j-form-item
-                                            :label="t('components.Cloud.Ctwing.5rg357pav1s0')"
-                                            name="apiAddress"
+                                        <j-form-item :label="t('components.Cloud.Ctwing.5rg357pav1s0')" name="apiAddress"
                                             :rules="[
                                                 {
                                                     required: true,
                                                 },
-                                            ]"
-                                        >
-                                            <j-input
-                                                disabled
-                                                v-model:value="
-                                                    formState.apiAddress
-                                                "
-                                            />
+                                            ]">
+                                            <j-input disabled v-model:value="formState.apiAddress
+                                                " />
                                         </j-form-item>
                                     </j-col>
                                     <j-col :span="12">
-                                        <j-form-item
-                                            label="appKey"
-                                            name="appKey"
-                                            :rules="[
-                                                {
-                                                    required: true,
-                                                    message: t('components.Cloud.Ctwing.5rg357pav7s0'),
-                                                },
-                                                {
-                                                    max: 64,
-                                                    message:
-                                                        t('components.Cloud.Ctwing.5rg357pavno0'),
-                                                    trigger: 'blur',
-                                                },
-                                            ]"
-                                        >
-                                            <j-input
-                                                v-model:value="formState.appKey"
-                                                :placeholder="t('components.Cloud.Ctwing.5rg357pav7s0')"
-                                            />
+                                        <j-form-item label="appKey" name="appKey" :rules="[
+                                            {
+                                                required: true,
+                                                message: t('components.Cloud.Ctwing.5rg357pav7s0'),
+                                            },
+                                            {
+                                                max: 64,
+                                                message:
+                                                    t('components.Cloud.Ctwing.5rg357pavno0'),
+                                                trigger: 'blur',
+                                            },
+                                        ]">
+                                            <j-input v-model:value="formState.appKey"
+                                                :placeholder="t('components.Cloud.Ctwing.5rg357pav7s0')" />
                                         </j-form-item>
                                     </j-col>
                                 </j-row>
                                 <j-row :gutter="[24, 24]">
                                     <j-col :span="12">
-                                        <j-form-item
-                                            label="appSecret"
-                                            name="appSecret"
-                                            :rules="[
-                                                {
-                                                    required: true,
-                                                    message: t('components.Cloud.Ctwing.5rg357pavs40'),
-                                                },
-                                                {
-                                                    max: 64,
-                                                    message:
-                                                        t('components.Cloud.Ctwing.5rg357pavno0'),
-                                                    trigger: 'blur',
-                                                },
-                                            ]"
-                                        >
-                                            <j-input
-                                                v-model:value="
-                                                    formState.appSecret
-                                                "
-                                                :placeholder="t('components.Cloud.Ctwing.5rg357pavs40')"
-                                            />
+                                        <j-form-item label="appSecret" name="appSecret" :rules="[
+                                            {
+                                                required: true,
+                                                message: t('components.Cloud.Ctwing.5rg357pavs40'),
+                                            },
+                                            {
+                                                max: 64,
+                                                message:
+                                                    t('components.Cloud.Ctwing.5rg357pavno0'),
+                                                trigger: 'blur',
+                                            },
+                                        ]">
+                                            <j-input v-model:value="formState.appSecret
+                                                " :placeholder="t('components.Cloud.Ctwing.5rg357pavs40')" />
                                         </j-form-item>
                                     </j-col>
                                 </j-row>
                                 <j-row :gutter="[24, 24]">
                                     <j-col :span="24">
-                                        <j-form-item
-                                            :label="t('components.Cloud.Ctwing.5rg357pavzc0')"
-                                            name="description"
-                                        >
-                                            <j-textarea
-                                                :placeholder="t('components.Cloud.Ctwing.5rg357paw3c0')"
-                                                :rows="4"
-                                                v-model:value="
-                                                    formState.description
-                                                "
-                                                show-count
-                                                :maxlength="200"
-                                            />
+                                        <j-form-item :label="t('components.Cloud.Ctwing.5rg357pavzc0')" name="description">
+                                            <j-textarea :placeholder="t('components.Cloud.Ctwing.5rg357paw3c0')" :rows="4"
+                                                v-model:value="formState.description
+                                                    " show-count :maxlength="200" />
                                         </j-form-item>
                                     </j-col>
-                                </j-row> </j-form
-                        ></j-col>
+                                </j-row> </j-form></j-col>
                         <j-col :span="8">
                             <j-scrollbar height="500">
                                 <div class="doc">
-                                    <h1>{{t('components.Cloud.Ctwing.5rg357paw780')}}</h1>
+                                    <h1>{{ t('components.Cloud.Ctwing.5rg357paw780') }}</h1>
                                     <div>
-                                        1、CTWing端创建产品、设备，以及一个第三方应用
+                                        1、{{ t('components.Cloud.Ctwing.step1') }}
                                     </div>
                                     <div>
-                                        2、CTWing端配置产品/设备/分组级订阅，订阅方URL地址请填写:
-                                        <div
-                                            class="url"
-                                            style="word-wrap: break-word"
-                                        >
+                                        2、{{ t('components.Cloud.Ctwing.step2') }}
+                                        <div class="url" style="word-wrap: break-word">
                                             {{
                                                 `${origin}/api/ctwing/${randomString()}/notify`
                                             }}
@@ -130,31 +90,30 @@
                                         <j-image width="100%" :src="img1" />
                                     </div>
                                     <div>
-                                        3、IOT端创建类型为CTWing的设备接入网关
+                                        3、{{ t('components.Cloud.Ctwing.step3') }}
                                     </div>
                                     <div>
-                                        4、IOT端创建产品，选中接入方式为CTWing,填写CTWing平台中的产品ID、Master-APIkey。
+                                        4、{{ t('components.Cloud.Ctwing.step4') }}
                                     </div>
                                     <div class="image">
                                         <j-image width="100%" :src="img2" />
                                     </div>
                                     <div>
-                                        5、IOT端添加设备，为每一台设备设置唯一的IMEI（需与CTWing平台中填写的值一致）
+                                        5、{{ t('components.Cloud.Ctwing.step5') }}
                                     </div>
                                     <div class="image">
                                         <j-image width="100%" :src="img3" />
                                     </div>
-                                    <h1>{{t('components.Cloud.Ctwing.5rg357pawbc0')}}</h1>
+                                    <h1>{{ t('components.Cloud.Ctwing.5rg357pawbc0') }}</h1>
                                     <div>
-                                        1.请将CTWing的AEP平台-应用管理中的App
-                                        Key和App Secret复制到当前页面
+                                        1.{{ t('components.Cloud.Ctwing.instructions') }}
                                     </div>
                                     <div class="image">
                                         <j-image width="100%" :src="img4" />
                                     </div>
-                                    <h1>{{t('components.Cloud.Ctwing.5rg357pawfg0')}}</h1>
+                                    <h1>{{ t('components.Cloud.Ctwing.5rg357pawfg0') }}</h1>
                                     <div>
-                                        1.在IOT端启用设备时，若CTWing平台没有与之对应的设备，则将在CTWing端自动创建新设备
+                                        1.{{ t('components.Cloud.Ctwing.ohterInstructions') }}
                                     </div>
                                 </div>
                             </j-scrollbar>
@@ -167,50 +126,28 @@
             <div class="steps-box" v-if="current === 1">
                 <div class="alert">
                     <AIcon type="InfoCircleOutlined" />
-                    {{t('components.Cloud.Ctwing.5rg357pawis0')}}
+                    {{ t('components.Cloud.Ctwing.5rg357pawis0') }}
                 </div>
                 <div class="search">
-                    <j-input-search
-                        allowClear
-                        :placeholder="t('components.Cloud.Ctwing.5rg357pawmo0')"
-                        style="width: 300px"
-                        @search="procotolSearch"
-                    />
-                    <PermissionButton
-                        v-if='showAddBtn'
-                        type="primary"
-                        @click="addProcotol"
-                        hasPermission="link/Protocol:add"
-                    >
-                        <template #icon><AIcon type="PlusOutlined" /></template>
-                        {{t('components.Cloud.Ctwing.5rg357pawqg0')}}
+                    <j-input-search allowClear :placeholder="t('components.Cloud.Ctwing.5rg357pawmo0')" style="width: 300px"
+                        @search="procotolSearch" />
+                    <PermissionButton v-if='showAddBtn' type="primary" @click="addProcotol"
+                        hasPermission="link/Protocol:add">
+                        <template #icon>
+                            <AIcon type="PlusOutlined" />
+                        </template>
+                        {{ t('components.Cloud.Ctwing.5rg357pawqg0') }}
                     </PermissionButton>
                 </div>
                 <j-scrollbar height="480">
-                    <j-row
-                        :gutter="[24, 24]"
-                        style="width: 100%"
-                        v-if="procotolList.length > 0"
-                    >
-                        <j-col
-                            :span="8"
-                            v-for="item in procotolList"
-                            :key="item.id"
-                        >
-                            <AccessCard
-                                @checkedChange="procotolChange"
-                                :checked="procotolCurrent"
-                                :disabled='!showAddBtn'
-                                :data="{ ...item, type: 'protocol' }"
-                            >
+                    <j-row :gutter="[24, 24]" style="width: 100%" v-if="procotolList.length > 0">
+                        <j-col :span="8" v-for="item in procotolList" :key="item.id">
+                            <AccessCard @checkedChange="procotolChange" :checked="procotolCurrent" :disabled='!showAddBtn'
+                                :data="{ ...item, type: 'protocol' }">
                             </AccessCard>
                         </j-col>
                     </j-row>
-                    <j-empty
-                        style="margin-top: 10%"
-                        v-else
-                        :description="t('components.Cloud.Ctwing.5rg357pawuo0')"
-                    />
+                    <j-empty style="margin-top: 10%" v-else :description="t('components.Cloud.Ctwing.5rg357pawuo0')" />
                 </j-scrollbar>
             </div>
         </div>
@@ -218,71 +155,54 @@
             <j-row :gutter="[24, 24]">
                 <j-col :span="12">
                     <TitleComponent :data="t('components.Cloud.Ctwing.5rg357pawzo0')" />
-                    <j-form
-                        :model="formData"
-                        name="basic"
-                        autocomplete="off"
-                        layout="vertical"
-                        ref="formRef2"
-                    >
-                        <j-form-item
-                            :label="t('components.Cloud.Ctwing.5rg357pax3k0')"
-                            name="name"
-                            :rules="[
-                                {
-                                    required: true,
-                                    message: t('components.Cloud.Ctwing.5rg357pax740'),
-                                    trigger: 'blur',
-                                },
-                                {
-                                    max: 64,
-                                    message: t('components.Cloud.Ctwing.5rg357pavno0'),
-                                    trigger: 'blur',
-                                },
-                            ]"
-                        >
-                            <j-input
-                                :placeholder="t('components.Cloud.Ctwing.5rg357pax740')"
-                                v-model:value="formData.name"
-                            />
+                    <j-form :model="formData" name="basic" autocomplete="off" layout="vertical" ref="formRef2">
+                        <j-form-item :label="t('components.Cloud.Ctwing.5rg357pax3k0')" name="name" :rules="[
+                            {
+                                required: true,
+                                message: t('components.Cloud.Ctwing.5rg357pax740'),
+                                trigger: 'blur',
+                            },
+                            {
+                                max: 64,
+                                message: t('components.Cloud.Ctwing.5rg357pavno0'),
+                                trigger: 'blur',
+                            },
+                        ]">
+                            <j-input :placeholder="t('components.Cloud.Ctwing.5rg357pax740')"
+                                v-model:value="formData.name" />
                         </j-form-item>
                         <j-form-item :label="t('components.Cloud.Ctwing.5rg357pavzc0')" name="description">
-                            <j-textarea
-                                :placeholder="t('components.Cloud.Ctwing.5rg357paw3c0')"
-                                :rows="4"
-                                v-model:value="formData.description"
-                                show-count
-                                :maxlength="200"
-                            />
+                            <j-textarea :placeholder="t('components.Cloud.Ctwing.5rg357paw3c0')" :rows="4"
+                                v-model:value="formData.description" show-count :maxlength="200" />
                         </j-form-item>
                     </j-form>
                 </j-col>
                 <j-col :span="12">
                     <div class="doc" style="height: 606px">
                         <TitleComponent :data="t('components.Cloud.Ctwing.5rg357paxao0')" />
-                        <p>接入方式：{{ provider.name }}</p>
+                        <p>{{ t('components.Cloud.Ctwing.accessMode') + provider.name }}</p>
                         <p>
                             {{ provider.description }}
                         </p>
-                        <p>消息协议：{{ procotolCurrent }}</p>
+                        <p>{{ t('components.Cloud.Ctwing.agreement') + procotolCurrent }}</p>
                         <TitleComponent :data="t('components.Cloud.Ctwing.5rg357paxeg0')" />
                         <p>
                             1、创建类型为{{
                                 props?.provider?.id === 'OneNet'
-                                    ? 'OneNet'
-                                    : 'CTWing'
+                                ? 'OneNet'
+                                : 'CTWing'
                             }}的设备接入网关
                         </p>
                         <p>
-                            2、创建产品，并选中接入方式为
-                            {{
+                            2、
+                            {{ t('components.Cloud.Ctwing.accessDeviceStep2') +
                                 props?.provider?.id === 'OneNet'
-                                    ? 'OneNet'
-                                    : 'CTWing,选中后需填写CTWing平台中的产品ID、Master-APIkey。'
+                                ? 'OneNet'
+                                : 'CTWing,选中后需填写CTWing平台中的产品ID、Master-APIkey。'
                             }}
                         </p>
                         <p>
-                            3、添加设备，为每一台设备设置唯一的IMEI、IMSI码（需与OneNet平台中填写的值一致，若OneNet平台没有对应的设备，将会通过OneNet平台提供的LWM2M协议自动创建）
+                            3、{{ t('components.Cloud.Ctwing.accessDeviceStep3') }}
                         </p>
                     </div>
                 </j-col>
@@ -290,26 +210,16 @@
         </div>
         <div :class="current !== 2 ? 'steps-action' : 'steps-action-save'">
 
-          <j-button v-if="current > 0" @click="prev" style="margin-right: 8px"> {{t('components.Cloud.Ctwing.5rg357paxko0')}} </j-button>
-            <PermissionButton
-                v-if="current === 2 && view === 'false'"
-                type="primary"
-                style="margin-right: 8px"
-                @click="saveData"
-                :hasPermission="`link/AccessConfig:${
-                    id === ':id' ? 'add' : 'update'
-                }`"
-            >
-                {{t('components.Cloud.Ctwing.5rg357paxqw0')}}
+            <j-button v-if="current > 0" @click="prev" style="margin-right: 8px">
+                {{ t('components.Cloud.Ctwing.5rg357paxko0') }} </j-button>
+            <PermissionButton v-if="current === 2 && view === 'false'" type="primary" style="margin-right: 8px"
+                @click="saveData" :hasPermission="`link/AccessConfig:${id === ':id' ? 'add' : 'update'
+                    }`">
+                {{ t('components.Cloud.Ctwing.5rg357paxqw0') }}
             </PermissionButton>
-          <j-button
-            v-if="[0, 1].includes(current)"
-            type="primary"
-
-            @click="next"
-          >
-            {{t('components.Cloud.Ctwing.5rg357paxu00')}}
-          </j-button>
+            <j-button v-if="[0, 1].includes(current)" type="primary" @click="next">
+                {{ t('components.Cloud.Ctwing.5rg357paxu00') }}
+            </j-button>
         </div>
     </div>
 </template>
@@ -350,15 +260,15 @@ const id = route.params.id as string;
 const props = defineProps({
     provider: {
         type: Object,
-        default: () => {},
+        default: () => { },
     },
     data: {
         type: Object,
-        default: () => {},
+        default: () => { },
     },
     bindProduct: {
-      type: Boolean,
-      default: false
+        type: Boolean,
+        default: false
     }
 });
 
@@ -377,7 +287,7 @@ const formData = ref<Form>({
 });
 
 const showAddBtn = computed(() => {
-  return route.query.view === 'false' && !props.bindProduct
+    return route.query.view === 'false' && !props.bindProduct
 })
 
 const current = ref(0);
@@ -394,12 +304,12 @@ const procotolChange = (id: string) => {
 const procotolSearch = (value: string) => {
     procotolList.value = value
         ? allProcotolList.value.filter(
-              (i: any) =>
-                  i.name &&
-                  i.name
-                      .toLocaleLowerCase()
-                      .includes(value.toLocaleLowerCase()),
-          )
+            (i: any) =>
+                i.name &&
+                i.name
+                    .toLocaleLowerCase()
+                    .includes(value.toLocaleLowerCase()),
+        )
         : allProcotolList.value;
 };
 
@@ -419,10 +329,10 @@ const saveData = async () => {
         id === ':id'
             ? await save(params)
             : await update({
-                  ...props.data,
-                  ...params,
-                  id,
-              });
+                ...props.data,
+                ...params,
+                id,
+            });
     if (resp.status === 200) {
         onlyMessage(t('components.Cloud.Ctwing.5rg357pay900'), 'success');
         history.back();
@@ -503,6 +413,7 @@ watch(
 .steps-content {
     margin-top: 20px;
 }
+
 .steps-box {
     min-height: 400px;
 
@@ -517,9 +428,11 @@ watch(
     width: 100%;
     margin-top: 24px;
 }
+
 .steps-action-save {
     margin-left: 0;
 }
+
 .alert {
     height: 40px;
     padding-left: 10px;
@@ -527,6 +440,7 @@ watch(
     line-height: 40px;
     background-color: #f6f6f6;
 }
+
 .search {
     display: flex;
     margin: 15px 0;

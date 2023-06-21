@@ -134,7 +134,8 @@
                 "5rg3o0pa9d00": "删除",
                 "5rg3o0pa9gs0": "确认删除?",
                 "5rg3o0pa9k40": "取消",
-                "5rg3o0pa9o00": "操作成功"
+                "5rg3o0pa9o00": "操作成功",
+                "5rh83xe7m2w0": "确定"
             }
         }
     },
@@ -476,12 +477,14 @@
             "Cpu": {
                 "5rg32qecq8o0": "最近1小时",
                 "5rg32qecrvs0": "今日",
-                "5rg32qecs7w0": "近一周"
+                "5rg32qecs7w0": "近一周",
+                "CPU": "CPU使用率趋势"
             },
             "Jvm": {
                 "5rg33mevn3s0": "最近1小时",
                 "5rg33mevos40": "今日",
-                "5rg33mevtbg0": "近一周"
+                "5rg33mevtbg0": "近一周",
+                "JVM": "JVM内存使用率趋势"
             },
             "Network": {
                 "5rg33t70bss0": "网络流量",
@@ -493,7 +496,12 @@
             },
             "TopCard": {
                 "5rg346ec9kc0": "磁盘占用",
-                "5rg346eccjc0": "系统内存"
+                "5rg346eccjc0": "系统内存",
+                "Cpu": "CPU使用率",
+                "Jvm": "JVM内存",
+                "JvmBot": "总JVM内存",
+                "diskBot": "总磁盘大小",
+                "memory": "系统内存"
             },
             "NewAlarm": {
                 "5rg3tc92gmc0": "最新告警"
@@ -1009,7 +1017,11 @@
                 "5rg34u5fj6c0": "保存",
                 "5rg34u5fjqg0": "配置概览",
                 "5rg34u5fk540": "设备接入指引",
-                "5rg34u5fkfw0": "操作成功"
+                "5rg34u5fkfw0": "操作成功",
+                "accessMode": "接入方式：",
+                "agreement": "消息协议：",
+                "productTip": "创建产品，并选中接入方式为",
+                "bind": "添加设备，单独为每一个设备进行数据点绑定"
             }
         },
         "Cloud": {
@@ -1040,7 +1052,18 @@
                 "5rg357pay2g0": "消息协议",
                 "5rg357pay5s0": "完成",
                 "5rg357pay900": "操作成功",
-                "5rg357payc00": "请选择消息协议！"
+                "5rg357payc00": "请选择消息协议！",
+                "step1": "CTWing端创建产品、设备，以及一个第三方应用",
+                "step2": "CTWing端配置产品/设备/分组级订阅，订阅方URL地址请填写:",
+                "step3": "IOT端创建类型为CTWing的设备接入网关",
+                "step4": "IOT端创建产品，选中接入方式为CTWing,填写CTWing平台中的产品ID、Master-APIkey。",
+                "step5": "IOT端添加设备，为每一台设备设置唯一的IMEI（需与CTWing平台中填写的值一致）",
+                "instructions": "请将CTWing的AEP平台-应用管理中的AppKey和App Secret复制到当前页面",
+                "ohterInstructions": "在IOT端启用设备时，若CTWing平台没有与之对应的设备，则将在CTWing端自动创建新设备",
+                "accessMode": "接入方式：",
+                "agreement": "消息协议：",
+                "accessDeviceStep2": "创建产品，并选中接入方式为",
+                "accessDeviceStep3": "添加设备，为每一台设备设置唯一的IMEI、IMSI码（需与OneNet平台中填写的值一致，若OneNet平台没有对应的设备，将会通过OneNet平台提供的LWM2M协议自动创建）"
             },
             "OneNet": {
                 "5rg35msxx1s0": "通过OneNet平台的HTTP推送服务进行数据接入",
@@ -1081,7 +1104,20 @@
                 "5rg35msy23o0": "消息协议",
                 "5rg35msy29c0": "完成",
                 "5rg35msy2cw0": "操作成功",
-                "5rg35msy2hc0": "请选择消息协议！"
+                "5rg35msy2hc0": "请选择消息协议！",
+                "step1": "OneNet端创建产品、设备，并配置HTTP推送",
+                "step2": "IOT端创建类型为OneNet的设备接入网关",
+                "step3": "IOT端创建产品，选中接入方式为OneNet类型的设备接入网关，填写Master-APIkey（OneNet端的产品Key）",
+                "step4": "IOT端添加设备，在设备实例页面为每一台设备设置唯一的IMEI、IMSI码（需与OneNet平台中的值一致）",
+                "HTTP": "HTTP推送配置说明",
+                "HTTPDisposition": "HTTP推送配置路径：应用开发&gt;数据推送",
+                "oneNet": "用于接收OneNet推送设备数据的地址物联网平台地址:",
+                "oneNetKey": "OneNet平台中具体产品的Key",
+                "instructions": "在IOT端启用设备时，若OneNet平台没有与之对应的设备，则将在OneNet端自动创建新设备",
+                "accessMode": "接入方式：",
+                "agreement": "消息协议：",
+                "accessStep2": "创建产品，并选中接入方式为",
+                "accessStep3": "添加设备，为每一台设备设置唯一的IMEI、SN、IMSI、PSK码（需与CTWingt平台中填写的值一致，若CTWing平台没有对应的设备，将会通过CTWing平台提供的LWM2M协议自动创建）"
             }
         },
         "Edge": {
@@ -1103,7 +1139,9 @@
                 "5rg35yn3gvo0": "网络组件",
                 "5rg35yn3h180": "完成",
                 "5rg35yn3h600": "操作成功",
-                "5rg35yn3hd40": "请选择网络组件！"
+                "5rg35yn3hd40": "请选择网络组件！",
+                "accessMode": "接入方式：",
+                "agreement": "消息协议："
             }
         },
         "Media": {
@@ -1150,7 +1188,10 @@
                 "5rg371r6bqw0": "完成",
                 "5rg371r6bts0": "最多可输入200个字符",
                 "5rg371r6bwo0": "操作成功",
-                "5rg371r6bzk0": "请新增或完善配置"
+                "5rg371r6bzk0": "请新增或完善配置",
+                "clusterTip": "共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置",
+                "SIPAddress": "SIP地址",
+                "SIPTip": "到服务器上的网卡地址,绑定到所有网卡:0.0.0.0"
             },
             "index": {
                 "5rg37iwxsow0": "基本信息",
@@ -1192,7 +1233,8 @@
                 "5rg37sm5un80": "操作成功",
                 "5rg37sm5uqk0": "请选择网络组件！",
                 "5rg37sm5uuo0": "请选择消息协议！",
-                "5rg37sm5uzo0": "分组"
+                "5rg37sm5uzo0": "分组",
+                "URL": "URL信息"
             }
         },
         "Plugin": {
@@ -1938,7 +1980,8 @@
                 "5rg3ho1cxhw0": "删除",
                 "5rg3ho1cxo40": "确认删除?",
                 "5rg3ho1cxsc0": "取消",
-                "5rg3ho1cxwg0": "操作成功"
+                "5rg3ho1cxwg0": "操作成功",
+                "5rh7zxrwi2o0": "确定"
             }
         },
         "plugin": {
@@ -2180,7 +2223,10 @@
                 "5rg3eiq3ius0": "说明",
                 "5rg3eiq3ixs0": "保存",
                 "5rg3eiq3j0o0": "请新增或完善配置",
-                "5rg3eiq3j3o0": "操作成功"
+                "5rg3eiq3j3o0": "操作成功",
+                "cluster": "共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置",
+                "address": "绑定到服务器上的网卡地址,绑定到所有网卡:0.0.0.0",
+                "maxTip": "单次收发消息的最大长度,单位:字节;设置过大可能会影响性能"
             },
             "LocalAddressSelect": {
                 "5rg3etsypko0": "请选择本地地址"
@@ -2420,12 +2466,14 @@
                 "5rg3ld5xvfc0": "操作",
                 "5rg3ld5xvkg0": "查看",
                 "5rg3ld5xvps0": "重试",
-                "5rg3ld5xvv40": "操作成功"
+                "5rg3ld5xvv40": "操作成功",
+                "batchRetry": "确定批量重试"
             },
             "Save": {
                 "5rg3lv59ig00": "查看",
                 "5rg3lv59j7w0": "确认",
-                "5rg3lv59jdg0": "取消"
+                "5rg3lv59jdg0": "取消",
+                "err": "失败原因："
             }
         },
         "Save": {

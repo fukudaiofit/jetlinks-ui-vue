@@ -87,11 +87,11 @@
                                 {{t('Certificate.Detail.index.5rg3hg3xes00')}}
                             </div>
                             <h1>2. {{t('Certificate.Detail.index.5rg3hg3xevk0')}}</h1>
-                            <h2>1、证书文件</h2>
+                            <h2>1、{{$t('Certificate.Detail.index.5rg3hg3xcvk0')}}</h2>
                             <div>
                                 {{t('Certificate.Detail.index.5rg3hg3xezg0')}}
                             </div>
-                            <h2>2、证书私钥</h2>
+                            <h2>2、{{$t('Certificate.Detail.index.5rg3hg3xdjs0')}}</h2>
                             <div>
                                 {{t('Certificate.Detail.index.5rg3hg3xf4s0')}}
                                 {{t('Certificate.Detail.index.5rg3hg3xf8o0')}}

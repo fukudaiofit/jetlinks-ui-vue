@@ -156,7 +156,7 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
             },
             popConfirm: {
                 title: t('link.Certificate.index.5rg3ho1cxo40'),
-                okText: ' 确定',
+                okText: t('link.Certificate.index.5rh7zxrwi2o0'),
                 cancelText: t('link.Certificate.index.5rg3ho1cxsc0'),
                 onConfirm: async () => {
                     handlDelete(data.id);

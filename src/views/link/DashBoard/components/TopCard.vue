@@ -1,42 +1,26 @@
 <template>
     <div>
-        <j-select
-            style="width: 300px; margin-bottom: 20px"
-            @change="serverIdChange"
-            :value="serverId"
-            :options="serverNodeOptions"
-            v-if="serverNodeOptions.length > 1"
-        ></j-select>
+        <j-select style="width: 300px; margin-bottom: 20px" @change="serverIdChange" :value="serverId"
+            :options="serverNodeOptions" v-if="serverNodeOptions.length > 1"></j-select>
         <div class="dash-board">
             <div class="dash-board-item">
-                <TopEchartsItemNode title="CPU使用率" :value="topValues.cpu" />
+                <TopEchartsItemNode :title="t('DashBoard.components.TopCard.Cpu')" :value="topValues.cpu" />
             </div>
             <div class="dash-board-item">
-                <TopEchartsItemNode
-                    title="JVM内存"
-                    :max="topValues.jvmTotal"
-                    :bottom="`总JVM内存 ${topValues.jvmTotal}G`"
-                    formatter="G"
-                    :value="topValues.jvm"
-                />
+                <TopEchartsItemNode :title="t('DashBoard.components.TopCard.Jvm')" :max="topValues.jvmTotal"
+                    :bottom="`${t('DashBoard.components.TopCard.JvmBot') + topValues.jvmTotal}G`" formatter="G"
+                    :value="topValues.jvm" />
             </div>
             <div class="dash-board-item">
-                <TopEchartsItemNode
-                    :title="t('DashBoard.components.TopCard.5rg346ec9kc0')"
-                    :max="topValues.usageTotal"
-                    :bottom="`总磁盘大小 ${topValues.usageTotal}G`"
-                    formatter="G"
-                    :value="topValues.usage"
-                />
+                <TopEchartsItemNode :title="t('DashBoard.components.TopCard.5rg346ec9kc0')" :max="topValues.usageTotal"
+                    :bottom="`${t('DashBoard.components.TopCard.diskBot') + topValues.usageTotal}G`" formatter="G"
+                    :value="topValues.usage" />
             </div>
             <div class="dash-board-item">
-                <TopEchartsItemNode
-                    :title="t('DashBoard.components.TopCard.5rg346eccjc0')"
+                <TopEchartsItemNode :title="t('DashBoard.components.TopCard.5rg346eccjc0')"
                     :max="topValues.systemUsageTotal"
-                    :bottom="`系统内存 ${topValues.systemUsageTotal}G`"
-                    formatter="G"
-                    :value="topValues.systemUsage"
-                />
+                    :bottom="`${t('DashBoard.components.TopCard.memory') + topValues.systemUsageTotal}G`" formatter="G"
+                    :value="topValues.systemUsage" />
             </div>
         </div>
     </div>
@@ -71,9 +55,9 @@ const serverIdChange = (val: string) => {
 };
 
 const unSub = () => {
-  if (wsRef.value) {
-    wsRef.value.unsubscribe()
-  }
+    if (wsRef.value) {
+        wsRef.value.unsubscribe()
+    }
 }
 
 const getData = () => {
@@ -118,24 +102,24 @@ const getData = () => {
 
 onMounted(() => {
     if (isNoCommunity) {
-      serverNode().then((resp: any) => {
-          if (resp.success) {
-              serverNodeOptions.value = resp.result.map((item: any) => ({
-                  label: item.name,
-                  value: item.id,
-              }));
-              if (serverNodeOptions.value.length) {
-                  serverId.value = serverNodeOptions.value[0]?.value;
-              }
-          }
-      });
+        serverNode().then((resp: any) => {
+            if (resp.success) {
+                serverNodeOptions.value = resp.result.map((item: any) => ({
+                    label: item.name,
+                    value: item.id,
+                }));
+                if (serverNodeOptions.value.length) {
+                    serverId.value = serverNodeOptions.value[0]?.value;
+                }
+            }
+        });
     } else {
-      getData()
+        getData()
     }
 });
 
 onUnmounted(() => {
-  unSub()
+    unSub()
 })
 
 watch(
@@ -158,6 +142,7 @@ watch(
     justify-content: space-between;
     padding: 24px;
     gap: 24px;
+
     .dash-board-item {
         flex: 1;
         //margin: 24px 12px;
@@ -166,10 +151,10 @@ watch(
 }
 
 @media (max-width: 1400px) {
-  .dash-board {
-    .dash-board-item {
-      min-width: calc(50% - 24px);
+    .dash-board {
+        .dash-board-item {
+            min-width: calc(50% - 24px);
+        }
     }
-  }
 }
 </style>

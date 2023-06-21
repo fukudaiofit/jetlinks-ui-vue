@@ -76,7 +76,7 @@
                         <template #label>
                             {{t('components.Media.GB28181.5rg371r68po0')}}
                             <j-tooltip
-                                title="共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置"
+                                :title="t('components.Media.GB28181.clusterTip')"
                             >
                                 <AIcon
                                     type="QuestionCircleOutlined"
@@ -93,7 +93,7 @@
                         <j-row :gutter="[24, 24]">
                             <j-col :span="6">
                                 <j-form-item
-                                    label="SIP地址"
+                                    :label="t('components.Media.GB28181.SIPAddress')"
                                     :name="['hostPort', 'host']"
                                     :rules="[
                                         {
@@ -261,7 +261,7 @@
                                                 <template #label>
                                                     SIP {{t('components.Media.GB28181.5rg371r6a3s0')}}
                                                     <j-tooltip
-                                                        title="到服务器上的网卡地址,绑定到所有网卡:0.0.0.0"
+                                                        :title="t('components.Media.GB28181.SIPTip')"
                                                     >
                                                         <AIcon
                                                             type="QuestionCircleOutlined"

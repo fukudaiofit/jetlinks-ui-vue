@@ -165,11 +165,11 @@
                 <j-col :span="12">
                     <div class="doc" style="height: 600px">
                         <TitleComponent :data="t('components.Edge.index.5rg35yn3ga00')" />
-                        <p>接入方式：{{ provider.name }}</p>
+                        <p>{{ t('components.Edge.index.accessMode') + provider.name }}</p>
                         <p>
                             {{ provider.description }}
                         </p>
-                        <p>消息协议：{{ provider.id }}</p>
+                        <p>{{t('components.Edge.index.agreement') + provider.id }}</p>
                     </div>
                 </j-col>
             </j-row>

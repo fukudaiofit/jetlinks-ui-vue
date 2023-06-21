@@ -2,7 +2,7 @@
     <j-spin :spinning="loading">
         <div class="dash-board">
             <div class="header">
-                <h3>JVM内存使用率趋势</h3>
+                <h3> {{t('DashBoard.components.Jvm.JVM')}}</h3>
                 <j-range-picker
                     @change="pickerTimeChange"
                     :allowClear="false"

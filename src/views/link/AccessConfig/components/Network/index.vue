@@ -235,7 +235,7 @@
                                                 data.provider ===
                                                     'mqtt-client-gateway'
                                                     ? 'topic'
-                                                    : 'URL信息'
+                                                    : t('components.Network.index.URL')
                                             }}
                                         </h1>
                                         <j-scrollbar height="400">

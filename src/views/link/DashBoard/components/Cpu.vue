@@ -2,7 +2,7 @@
     <j-spin :spinning="loading">
         <div class="dash-board">
             <div class="header">
-                <h3>CPU使用率趋势</h3>
+                <h3>{{t('DashBoard.components.Cpu.CPU')}}</h3>
                 <j-range-picker
                     @change="pickerTimeChange"
                     :allowClear="false"

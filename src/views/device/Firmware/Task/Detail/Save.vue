@@ -8,7 +8,7 @@
         @cancel="handleCancel"
         @ok="handleOk"
     >
-        <span>失败原因：{{ data }}</span>
+        <span>{{t('Task.Detail.Save.err') + data }}</span>
     </j-modal>
 </template>
 <script lang="ts" setup name="TaskDetailSavePage">
