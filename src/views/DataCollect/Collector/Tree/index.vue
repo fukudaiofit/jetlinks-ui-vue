@@ -100,7 +100,7 @@
                             :danger="data?.state?.value === 'disabled'"
                             hasPermission="DataCollect/Collector:delete"
                             :popConfirm="{
-                                title: `该操作将会删除下属点位，确定删除？`,
+                                title: t('Collector.Tree.index.tip'),
                                 onConfirm: () => handlDelete(data.id),
                             }"
                         >

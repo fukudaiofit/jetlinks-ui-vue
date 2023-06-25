@@ -107,7 +107,7 @@
                 />
             </j-form-item>
             <div style="color: #616161" v-if="visibleEndian">
-                <p>当前内存布局: {{ endianData }}</p>
+                <p>{{ t('Tree.Save.index.layout') + endianData }}</p>
                 <p>
                     {{t('Tree.Save.index.5rg7wkstums0')}} float)
                     {{t('Tree.Save.index.5rg7wksturk0')}}

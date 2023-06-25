@@ -38,7 +38,7 @@
                 :rules="FormValidate.host"
             >
                 <template #label>
-                    Modbus主机IP
+                    {{t('Channel.Save.index.ip')}}
                     <j-tooltip :title="t('Channel.Save.index.5rg5orzokmc0')">
                         <AIcon
                             type="QuestionCircleOutlined"
@@ -203,7 +203,7 @@ const { t } = useI18n()
 const props = defineProps({
     data: {
         type: Object,
-        default: () => {},
+        default: () => { },
     },
 });
 
@@ -226,8 +226,8 @@ const handleOk = async () => {
     const params = await formRef.value?.validate();
     loading.value = true;
     const response = !id
-        ? await save(params).catch(() => {})
-        : await update(id, { ...props.data, ...params }).catch(() => {});
+        ? await save(params).catch(() => { })
+        : await update(id, { ...props.data, ...params }).catch(() => { });
     emit('change', response?.status === 200);
     loading.value = false;
     formRef.value?.resetFields();

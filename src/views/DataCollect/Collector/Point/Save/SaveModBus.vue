@@ -29,10 +29,10 @@
                     style="width: 100%"
                     v-model:value="formData.configuration.function"
                     :options="[
-                        { label: '01线圈寄存器', value: 'Coils' },
-                        { label: '02离散输入寄存器', value: 'DiscreteInputs' },
-                        { label: '03保存寄存器', value: 'HoldingRegisters' },
-                        { label: '04输入寄存器', value: 'InputRegisters' },
+                        { label: t('Point.Save.SaveModBus.code1'), value: 'Coils' },
+                        { label: t('Point.Save.SaveModBus.code2'), value: 'DiscreteInputs' },
+                        { label: t('Point.Save.SaveModBus.code3'), value: 'HoldingRegisters' },
+                        { label: t('Point.Save.SaveModBus.code4'), value: 'InputRegisters' },
                     ]"
                     :placeholder="t('Point.Save.SaveModBus.5rg7tv8sax80')"
                     allowClear
@@ -62,7 +62,7 @@
                 />
             </j-form-item>
             <p style="color: #616161" v-if="formData.configuration.function">
-                PLC地址: {{
+                {{t('Point.Save.SaveModBus.PCL') + 
                     InitAddress[formData.configuration.function] +
                         Number(formData.pointKey) || 0
                 }}
@@ -389,7 +389,7 @@ const checkProvider = (_rule: Rule, value: string): Promise<any> =>
         if (value) {
             const { quantity } = formData.value.configuration.parameter;
             return checkProviderData[value] > Number(quantity) * 2
-                ? reject(`数据类型长度需 <= ${t('Point.Save.SaveModBus.5rg7tv8sb9w0')} * 2`)
+                ? reject(`${t('Point.Save.SaveModBus.limit')} <= ${t('Point.Save.SaveModBus.5rg7tv8sb9w0')} * 2`)
                 : resolve('');
         } else {
             return reject('');

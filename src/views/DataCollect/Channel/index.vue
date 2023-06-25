@@ -248,7 +248,7 @@ const getActions = (
             },
             icon: state === 'enabled' ? 'StopOutlined' : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${stateText}?`,
+                title: `${t('DataCollect.Channel.index.verify') + stateText}?`,
                 onConfirm: async () => {
                     const res = await update(data.id, updateStatus[state]);
                     if (res.success) {

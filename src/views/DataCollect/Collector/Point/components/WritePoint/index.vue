@@ -14,7 +14,7 @@
                 :rules="[
                     {
                         required: true,
-                        message: `请输入${data.name}`,
+                        message: `${t('components.WritePoint.index.5rg7tjifav40') + data.name}`,
                     },
                 ]"
                 v-if="
@@ -36,7 +36,7 @@
                 :rules="[
                     {
                         required: true,
-                        message: `请输入${data.name}`,
+                        message: `${t('components.WritePoint.index.5rg7tjifav40') + data.name}`,
                     },
                 ]"
                 v-else-if="data.provider === 'OPC_UA'"
@@ -87,7 +87,7 @@
                 :rules="[
                     {
                         required: true,
-                        message: `请输入${data.name}`,
+                        message: `${t('components.WritePoint.index.5rg7tjifav40') + data.name}`,
                     },
                 ]"
                 v-else
