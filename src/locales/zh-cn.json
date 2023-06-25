@@ -1346,7 +1346,8 @@
                 "5rg4zm6w3jo0": "小时",
                 "5rg4zm6w3ow0": "最多可输入64个字符",
                 "5rg4zm6w3sc0": "请输入正确的cron表达式",
-                "5rg4zm6w3wk0": "请输入cron表达式"
+                "5rg4zm6w3wk0": "请输入cron表达式",
+                "expression": "cron表达式"
             },
             "WhenOption": {
                 "5rg52lvzw200": "每天"
@@ -2583,7 +2584,8 @@
                 "5rg593nz8wg0": "确认删除?",
                 "5rg593nz8z80": "未启用，不能手动触发",
                 "5rg593nz9340": "确认手动触发？",
-                "5rg593nz9640": "查看"
+                "5rg593nz9640": "查看",
+                "verify":"确认"
             }
         }
     },
@@ -2998,7 +3000,8 @@
                 "5rg55550v0w0": "定时调用所选功能",
                 "5rg55550vcc0": "是",
                 "5rg55550vj40": "否",
-                "5rg55550vp40": "请输入功能值"
+                "5rg55550vp40": "请输入功能值",
+                "execute": "执行"
             },
             "OrgList": {
                 "5rg55d5xwk80": "名称",
@@ -3034,7 +3037,8 @@
                 "5rg56e7ybpo0": "请选择属性",
                 "5rg56e7ycc40": "定时调用所选属性",
                 "5rg56e7ydlc0": "请选择属性值",
-                "5rg56e7ygj40": "请输入属性值"
+                "5rg56e7ygj40": "请输入属性值",
+                "edit": "修改"
             }
         },
         "Manual": {
@@ -3202,7 +3206,7 @@
                 "5rg4hlqn8ug0": "删除",
                 "5rg4hlqn8y40": "请先禁用该数据，再删除。",
                 "5rg4hlqn91o0": "确认删除?",
-                "verify":"确认"
+                "verify": "确认"
             }
         }
     },
@@ -3262,7 +3266,8 @@
                 "5rg4ngxgl4s0": "请输入时间",
                 "5rg4ngxgljs0": "秒",
                 "5rg4ngxglzg0": "分",
-                "5rg4ngxgm680": "小时"
+                "5rg4ngxgm680": "小时",
+                "action": "后，执行后续动作"
             }
         },
         "Device": {
@@ -3410,7 +3415,8 @@
                 "5rg4wkndiz40": "类型",
                 "5rg4wkndj300": "告警级别",
                 "5rg4wkndj740": "状态",
-                "5rg4wkndjh40": "说明"
+                "5rg4wkndjh40": "说明",
+                "relevance": "关联告警数量："
             }
         }
     },
@@ -3449,8 +3455,14 @@
         },
         "device": {
             "Device": {
-                "5rg4p1ftvoc0": "设备类型",
-                "5rg4p1ftwl40": "产品名称"
+                "5rkdfl2z82w0": "设备类型",
+                "5rkdfl2z9us0": "产品名称",
+                "deviceName": "设备名称",
+                "createTime": "创建时间",
+                "state": "状态",
+                "noActive": "禁用",
+                "offline": "离线",
+                "online": "在线"
             },
             "index": {
                 "5rg4p6h78aw0": "选择方式",
@@ -3636,12 +3648,14 @@
             "BuildIn": {
                 "5rg4u0cs8gg0": "手动输入",
                 "5rg4u0csd1s0": "内置参数",
-                "5rg4u0csdog0": "请选择参数"
+                "5rg4u0csdog0": "请选择参数",
+                "input": "请输入"
             },
             "InputFile": {
                 "5rg4ubxxbsc0": "请上传文件",
                 "5rg4ubxxd1w0": "上传附件",
-                "5rg4ubxxda00": "请上传正确格式图片"
+                "5rg4ubxxda00": "请上传正确格式图片",
+                "limit": "图片大小必须小于4M"
             },
             "Org": {
                 "5rg4um18rf80": "请选择组织"

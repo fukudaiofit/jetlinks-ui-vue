@@ -2,10 +2,10 @@
   <div class='terms-params-item'>
     <div v-if='!isFirst' class='term-type-warp'>
       <DropdownButton
-        :options='[
-            { label: t('action.ListItem.FilterCondition.5rg4quec97w0'), value: "and" },
-            { label: t('action.ListItem.FilterCondition.5rg4quecc3s0'), value: "or" },
-          ]'
+        :options="[
+            { label: t('action.ListItem.FilterCondition.5rg4quec97w0'), value: 'and' },
+            { label: t('action.ListItem.FilterCondition.5rg4quecc3s0'), value: 'or' },
+          ]"
         type='type'
         v-model:value='paramsValue.type'
         @select='typeChange'

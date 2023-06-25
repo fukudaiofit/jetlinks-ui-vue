@@ -132,7 +132,7 @@ const rules = [{
 
 const onSelect = (v: string, item: any) => {
   formModel.functionData = []
-  emit('update:action', `执行${item.name}`)
+  emit('update:action', `${t('Save.Device.InvokeFunction.execute') + item.name}`)
   emit('update:functionId', v)
   emit('update:functionParameters', [])
 }

@@ -133,7 +133,7 @@ const change = (v: string, option: any) => {
   }
   callData.value = [{ id: v, value: undefined }]
   emit('update:value', _data)
-  emit('update:action', `修改${option.name}`)
+  emit('update:action', `${t('Save.Device.WriteProperty.edit') + option.name}`)
 }
 
 const callDataChange = (v: any[]) => {

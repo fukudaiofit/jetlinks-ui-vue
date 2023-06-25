@@ -85,7 +85,7 @@ const onOk = () => {
             {
                 name: `${_value.value} ${
                     timeUnitEnum[unit.value]
-                }后，执行后续动作`,
+                }${t('action.Delay.index.action')}`,
             },
         );
     } else {

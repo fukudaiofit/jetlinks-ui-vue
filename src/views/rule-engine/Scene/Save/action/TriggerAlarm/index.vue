@@ -6,7 +6,7 @@
         visible
         :title="t('action.TriggerAlarm.index.5rg4wkndh9o0')"
     >
-        <div style="margin-bottom: 24px">关联告警数量：{{ count }}</div>
+        <div style="margin-bottom: 24px">{{ t('action.TriggerAlarm.index.relevance') + count }}</div>
         <JProTable
             :columns="columns"
             :request="queryAlarmList"

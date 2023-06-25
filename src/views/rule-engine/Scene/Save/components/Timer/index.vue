@@ -11,7 +11,7 @@
         :options="[
           { label: t('components.Timer.index.5rg4zm6w1mk0'), value: 'week' },
           { label: t('components.Timer.index.5rg4zm6w2pk0'), value: 'month' },
-          { label: 'cron表达式', value: 'cron' },
+          { label: t('components.Timer.index.expression'), value: 'cron' },
         ]"
         option-type='button'
         button-style='solid'
@@ -19,7 +19,7 @@
       />
     </j-form-item>
     <j-form-item v-if='showCron' name='cron' :rules="cronRules">
-      <j-input placeholder='corn表达式' v-model:value='formModel.cron' @change='updateValue' />
+      <j-input :placeholder="t('components.Timer.index.expression')" v-model:value='formModel.cron' @change='updateValue' />
     </j-form-item>
     <template v-else>
       <j-form-item name='when'>

@@ -264,8 +264,8 @@ const getActions = (
                     ? 'StopOutlined'
                     : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${
-                    data.state.value !== 'disable' ? t('rule-engine.Scene.index.5rg593nz7dc0') : t('rule-engine.Scene.index.5rg593nz8080')
+                title: `${t('rule-engine.Scene.index.verify') +
+                    (data.state.value !== 'disable' ? t('rule-engine.Scene.index.5rg593nz7dc0') : t('rule-engine.Scene.index.5rg593nz8080'))
                 }?`,
                 onConfirm: async () => {
                     let response = undefined;
