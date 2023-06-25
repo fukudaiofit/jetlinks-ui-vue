@@ -3078,7 +3078,7 @@
                 "5rg58exxamk0": "请输入说明",
                 "5rg58exxaz80": "保存",
                 "5rg58exxb4k0": "操作成功",
-                "explain":"说明："
+                "explain": "说明："
             },
             "save": {
                 "5rg58okopew0": "名称",
@@ -3114,7 +3114,14 @@
                 "5rg4fahrzrk0": "请复制DuerOS平台中的值，填写到系统管理-应用管理中-redirectUrl中。",
                 "5rg4fahrzy00": "请复制系统管理-应用管理中的secureKey，填写到DuerOS平台。",
                 "5rg4fahs06c0": "请复制并填写：/dueros/product/_query",
-                "5rg4fahs0bo0": "配置说明"
+                "5rg4fahs0bo0": "配置说明",
+                "summarize": "DuerOS支持家居场景下的云端控制，该页面主要将平台的产品与DuerOS支持语音控制的产品进行映射，以到达小度平台控制本平台设备的目的。",
+                "step1": "在百度小度技能平台创建技能，并授权。完成物联网平台与DuerOS的关联。",
+                "copyFilling": "请复制并填写:",
+                "token": "Token地址",
+                "step2": "登录物联网平台，进行平台内产品与DuerOS产品的数据映射。",
+                "step3": "智能家居用户通过物联网平台中的用户，登录小度APP，获取平台内当前用户的所属设备。获取后即可进行语音控制。",
+                "explain": "“设备类型”为DuerOS平台拟定的标准规范，设备类型将决定【动作映射】中“动作”的下拉选项，以及【属性映射】中“Dueros属性”的下拉选项"
             },
             "index": {
                 "5rg4fvdam8g0": "基本信息",
@@ -3142,7 +3149,14 @@
                 "5rg4fvdaqas0": "最多输入200个字符",
                 "5rg4fvdaqek0": "请输入说明",
                 "5rg4fvdaqi80": "保存",
-                "5rg4fvdaqlw0": "操作成功！"
+                "5rg4fvdaqlw0": "操作成功！",
+                "norm": "DuerOS平台拟定的规范",
+                "newAction": "新增动作",
+                "actionMap": "动作映射",
+                "actionTip": "DuerOS平台拟定的设备类型具有的相关动作",
+                "attributeMap": "属性映射",
+                "states": "DuerOS属性",
+                "newAttribute": "新增属性"
             }
         }
     },
@@ -3166,7 +3180,8 @@
                 "5rg4goobz880": "操作失败！",
                 "5rg4goobzfg0": "删除",
                 "5rg4goobzq80": "请先禁用该数据，再删除。",
-                "5rg4gooc0tc0": "确认删除?"
+                "5rg4gooc0tc0": "确认删除?",
+                "verify": "确认"
             }
         },
         "AliCloud": {
@@ -3186,7 +3201,8 @@
                 "5rg4hlqn8qo0": "操作失败！",
                 "5rg4hlqn8ug0": "删除",
                 "5rg4hlqn8y40": "请先禁用该数据，再删除。",
-                "5rg4hlqn91o0": "确认删除?"
+                "5rg4hlqn91o0": "确认删除?",
+                "verify":"确认"
             }
         }
     },
@@ -3202,7 +3218,9 @@
                 "5rg4h2e7as00": "网桥产品",
                 "5rg4h2e7axg0": "物联网平台对于阿里云物联网平台，是一个网关设备，需要映射到阿里云物联网平台的具体产品",
                 "5rg4h2e7b6s0": "产品映射",
-                "5rg4h2e7bcg0": "将阿里云物联网平台中的产品实例与物联网平台的产品实例进行关联。关联后需要进入该产品下的每一个设备的实例信息页，填入对应的阿里云物联网平台设备的DeviceName、DeviceSecret进行一对一绑定。"
+                "5rg4h2e7bcg0": "将阿里云物联网平台中的产品实例与物联网平台的产品实例进行关联。关联后需要进入该产品下的每一个设备的实例信息页，填入对应的阿里云物联网平台设备的DeviceName、DeviceSecret进行一对一绑定。",
+                "disposition": "配置说明",
+                "service": "服务地址"
             },
             "index": {
                 "5rg4hbavf1s0": "基本信息",
@@ -3231,7 +3249,9 @@
                 "5rg4hbavmio0": "最多输入200个字符",
                 "5rg4hbavmos0": "请输入说明",
                 "5rg4hbavmuk0": "保存",
-                "5rg4hbavn100": "操作成功！"
+                "5rg4hbavn100": "操作成功！",
+                "productMap": "产品映射",
+                "add": "添加"
             }
         }
     },

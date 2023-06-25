@@ -79,7 +79,7 @@
                                                 <span>
                                                     {{t('DuerOS.Detail.index.5rg4fvdao7o0')}}
                                                     <j-tooltip
-                                                        title="DuerOS平台拟定的规范"
+                                                        :title="t('DuerOS.Detail.index.norm')"
                                                     >
                                                         <AIcon
                                                             type="QuestionCircleOutlined"
@@ -144,7 +144,7 @@
                                                                   i.id ===
                                                                   item.action,
                                                           )?.name
-                                                        : `动作映射${index + 1}`
+                                                        : `${ t('DuerOS.Detail.index.actionMap') + (index + 1)}`
                                                 "
                                             >
                                                 <template #extra
@@ -170,7 +170,7 @@
                                                                 <span>
                                                                     {{t('DuerOS.Detail.index.5rg4fvdaot00')}}
                                                                     <j-tooltip
-                                                                        title="DuerOS平台拟定的设备类型具有的相关动作"
+                                                                        :title="t('DuerOS.Detail.index.actionTip')"
                                                                     >
                                                                         <AIcon
                                                                             type="QuestionCircleOutlined"
@@ -297,7 +297,7 @@
                                             <AIcon
                                                 type="PlusOutlined"
                                                 style="margin-left: 2px"
-                                            />新增动作
+                                            />{{ t('DuerOS.Detail.index.newAction') }}
                                         </j-button>
                                     </j-col>
                                     <j-col :span="24">
@@ -323,7 +323,7 @@
                                                                   i.id ===
                                                                   item.source,
                                                           )?.name
-                                                        : `属性映射${index + 1}`
+                                                        : `${t('DuerOS.Detail.index.attributeMap') + (index + 1)}`
                                                 "
                                             >
                                                 <template #extra
@@ -338,7 +338,7 @@
                                                 <j-row :gutter="24">
                                                     <j-col :span="12">
                                                         <j-form-item
-                                                            label="DuerOS属性"
+                                                            :label=" t('DuerOS.Detail.index.states')"
                                                             :name="[
                                                                 'propertyMappings',
                                                                 index,
@@ -429,7 +429,7 @@
                                             <AIcon
                                                 type="PlusOutlined"
                                                 style="margin-left: 2px"
-                                            />新增属性
+                                            />{{ t('DuerOS.Detail.index.newAttribute') }}
                                         </j-button>
                                     </j-col>
                                     <j-col :span="24" style="margin-top: 20px">

@@ -255,8 +255,8 @@ const getActions = (
                     ? 'StopOutlined'
                     : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${
-                    data.state.value !== 'disabled' ? t('Northbound.AliCloud.index.5rg4hlqn7yc0') : t('Northbound.AliCloud.index.5rg4hlqn8hc0')
+                title: `${t('Northbound.AliCloud.index.verify') + 
+                    (data.state.value !== 'disabled' ? t('Northbound.AliCloud.index.5rg4hlqn7yc0') : t('Northbound.AliCloud.index.5rg4hlqn8hc0'))
                 }?`,
                 onConfirm: async () => {
                     let response = undefined;

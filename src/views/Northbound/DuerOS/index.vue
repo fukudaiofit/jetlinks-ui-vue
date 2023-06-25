@@ -1,46 +1,26 @@
 <template>
     <page-container>
-        <pro-search
-            :columns="columns"
-            target="northbound-dueros"
-            @search="handleSearch"
-        />
+        <pro-search :columns="columns" target="northbound-dueros" @search="handleSearch" />
         <FullPage>
-            <JProTable
-                ref="instanceRef"
-                :columns="columns"
-                :request="query"
-                :defaultParams="{
-                    sorts: [{ name: 'createTime', order: 'desc' }],
-                }"
-                :params="params"
-            >
+            <JProTable ref="instanceRef" :columns="columns" :request="query" :defaultParams="{
+                sorts: [{ name: 'createTime', order: 'desc' }],
+            }" :params="params">
                 <template #headerTitle>
                     <j-space>
-                        <PermissionButton
-                            type="primary"
-                            @click="handleAdd"
-                            hasPermission="Northbound/DuerOS:add"
-                        >
-                            <template #icon
-                                ><AIcon type="PlusOutlined"
-                            /></template>
-                            {{t('Northbound.DuerOS.index.5rg4goobu0o0')}}
+                        <PermissionButton type="primary" @click="handleAdd" hasPermission="Northbound/DuerOS:add">
+                            <template #icon>
+                                <AIcon type="PlusOutlined" />
+                            </template>
+                            {{ t('Northbound.DuerOS.index.5rg4goobu0o0') }}
                         </PermissionButton>
                     </j-space>
                 </template>
                 <template #card="slotProps">
-                    <CardBox
-                        :value="slotProps"
-                        @click="handleView(slotProps.id)"
-                        :actions="getActions(slotProps, 'card')"
-                        :status="slotProps.state?.value"
-                        :statusText="slotProps.state?.text"
-                        :statusNames="{
+                    <CardBox :value="slotProps" @click="handleView(slotProps.id)" :actions="getActions(slotProps, 'card')"
+                        :status="slotProps.state?.value" :statusText="slotProps.state?.text" :statusNames="{
                             enabled: 'processing',
                             disabled: 'error',
-                        }"
-                    >
+                        }">
                         <template #img>
                             <img :src="getImage('/cloud/dueros.png')" />
                         </template>
@@ -53,7 +33,7 @@
                             <j-row style="margin-top: 15px">
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        {{t('Northbound.DuerOS.index.5rg4goobxh80')}}
+                                        {{ t('Northbound.DuerOS.index.5rg4goobxh80') }}
                                     </div>
                                     <Ellipsis>
                                         <div>{{ slotProps?.productName }}</div>
@@ -61,7 +41,7 @@
                                 </j-col>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        {{t('Northbound.DuerOS.index.5rg4goobxow0')}}
+                                        {{ t('Northbound.DuerOS.index.5rg4goobxow0') }}
                                     </div>
                                     <Ellipsis>
                                         <div>
@@ -72,19 +52,10 @@
                             </j-row>
                         </template>
                         <template #actions="item">
-                            <PermissionButton
-                                :disabled="item.disabled"
-                                :popConfirm="item.popConfirm"
-                                :tooltip="{
-                                    ...item.tooltip,
-                                }"
-                                @click="item.onClick"
-                                :hasPermission="'Northbound/DuerOS:' + item.key"
-                            >
-                                <AIcon
-                                    type="DeleteOutlined"
-                                    v-if="item.key === 'delete'"
-                                />
+                            <PermissionButton :disabled="item.disabled" :popConfirm="item.popConfirm" :tooltip="{
+                                ...item.tooltip,
+                            }" @click="item.onClick" :hasPermission="'Northbound/DuerOS:' + item.key">
+                                <AIcon type="DeleteOutlined" v-if="item.key === 'delete'" />
                                 <template v-else>
                                     <AIcon :type="item.icon" />
                                     <span>{{ item?.text }}</span>
@@ -94,43 +65,27 @@
                     </CardBox>
                 </template>
                 <template #state="slotProps">
-                    <BadgeStatus
-                        :status="slotProps.state?.value"
-                        :text="slotProps.state?.text"
-                        :statusNames="{
-                            enabled: 'processing',
-                            disabled: 'error',
-                        }"
-                    />
+                    <BadgeStatus :status="slotProps.state?.value" :text="slotProps.state?.text" :statusNames="{
+                        enabled: 'processing',
+                        disabled: 'error',
+                    }" />
                 </template>
                 <template #applianceType="slotProps">
                     {{ slotProps.applianceType.text }}
                 </template>
                 <template #action="slotProps">
                     <j-space>
-                        <template
-                            v-for="i in getActions(slotProps, 'table')"
-                            :key="i.key"
-                        >
-                            <PermissionButton
-                                :disabled="i.disabled"
-                                :popConfirm="i.popConfirm"
-                                :tooltip="{
-                                    ...i.tooltip,
-                                }"
-                                style="padding: 0 5px"
-                                @click="i.onClick"
-                                type="link"
-                                :danger="i.key === 'delete'"
-                                :hasPermission="
-                                    i.key === 'view'
+                        <template v-for="i in getActions(slotProps, 'table')" :key="i.key">
+                            <PermissionButton :disabled="i.disabled" :popConfirm="i.popConfirm" :tooltip="{
+                                ...i.tooltip,
+                            }" style="padding: 0 5px" @click="i.onClick" type="link" :danger="i.key === 'delete'"
+                                :hasPermission="i.key === 'view'
                                         ? true
                                         : 'Northbound/DuerOS:' + i.key
-                                "
-                            >
-                                <template #icon
-                                    ><AIcon :type="i.icon"
-                                /></template>
+                                    ">
+                                <template #icon>
+                                    <AIcon :type="i.icon" />
+                                </template>
                             </PermissionButton>
                         </template>
                     </j-space>
@@ -294,9 +249,9 @@ const getActions = (
                     ? 'StopOutlined'
                     : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${
-                    data.state.value !== 'disabled' ? t('Northbound.DuerOS.index.5rg4goobyhc0') : t('Northbound.DuerOS.index.5rg4goobyww0')
-                }?`,
+                title: `${t('Northbound.DuerOS.index.verify') +
+                    (data.state.value !== 'disabled' ? t('Northbound.DuerOS.index.5rg4goobyhc0') : t('Northbound.DuerOS.index.5rg4goobyww0'))
+                    }?`,
                 onConfirm: async () => {
                     let response = undefined;
                     if (data.state.value !== 'disabled') {

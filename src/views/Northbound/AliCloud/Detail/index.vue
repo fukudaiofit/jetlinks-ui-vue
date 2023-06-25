@@ -257,8 +257,8 @@
                                                                   i.productKey ===
                                                                   item.productKey,
                                                           )?.productName ||
-                                                          `产品映射${index + 1}`
-                                                        : `产品映射${index + 1}`
+                                                          `${t('AliCloud.Detail.index.productMap') + (index + 1)}`
+                                                        : `${t('AliCloud.Detail.index.productMap') + (index + 1)}`
                                                 "
                                             >
                                                 <template #extra
@@ -368,7 +368,7 @@
                                             <AIcon
                                                 type="PlusOutlined"
                                                 style="margin-left: 2px"
-                                            />添加
+                                            />{{ t('AliCloud.Detail.index.add') }}
                                         </j-button>
                                     </j-col>
                                     <j-col :span="24" style="margin-top: 20px">
