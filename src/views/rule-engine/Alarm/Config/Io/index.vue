@@ -3,126 +3,70 @@
         <j-row :gutter="24">
             <j-col :span="14">
                 <div class="alarmFlow-left">
-                    <j-card
-                        :head-style="{ borderBottom: 'none', height: '30px' }"
-                        :bordered="false"
-                    >
+                    <j-card :head-style="{ borderBottom: 'none', height: '30px' }" :bordered="false">
                         <template #title>
                             <div class="alarmTitle">
-                                <span>{{t('Config.Io.index.5rg40ihzqpo0')}}</span>
-                                <j-tooltip
-                                    :title="t('Config.Io.index.5rg40ihzs5w0')"
-                                >
-                                    <AIcon
-                                        type="QuestionCircleOutlined"
-                                        style="
+                                <span>{{ t('Config.Io.index.5rg40ihzqpo0') }}</span>
+                                <j-tooltip :title="t('Config.Io.index.5rg40ihzs5w0')">
+                                    <AIcon type="QuestionCircleOutlined" style="
                                             margin-left: 6px;
                                             line-height: 35px;
-                                        "
-                                    />
+                                        " />
                                 </j-tooltip>
 
-                                <PermissionButton
-                                    type="link"
-                                    @click="showOutput"
-                                    hasPermission="device/Instance:update"
-                                >
-                                    <template #icon
-                                        ><AIcon type="EditOutlined"
-                                    /></template>
+                                <PermissionButton type="link" @click="showOutput" hasPermission="device/Instance:update">
+                                    <template #icon>
+                                        <AIcon type="EditOutlined" />
+                                    </template>
                                 </PermissionButton>
                             </div>
                         </template>
-                        <j-descriptions
-                            bordered
-                            :labelStyle="{ width: 112 + 'px' }"
-                            :contentStyle="{ minWidth: 100 + 'px' }"
-                            :column="2"
-                        >
-                            <j-descriptions-item
-                                label="kafka地址"
-                                :content-style="{ minWidth: '200px' }"
-                                ><j-badge
-                                    :status="
-                                        output?.running ? 'success' : 'error'
-                                    "
-                                    :text="
-                                        output?.data?.config?.config?.address ||
-                                        ''
-                                    "
-                                ></j-badge
-                            ></j-descriptions-item>
+                        <j-descriptions bordered :labelStyle="{ width: 112 + 'px' }"
+                            :contentStyle="{ minWidth: 100 + 'px' }" :column="2">
+                            <j-descriptions-item :label="t('Config.Io.index.kafka')"
+                                :content-style="{ minWidth: '200px' }"><j-badge :status="output?.running ? 'success' : 'error'
+                                    " :text="output?.data?.config?.config?.address ||
+        ''
+        "></j-badge></j-descriptions-item>
                             <j-descriptions-item label="topic">{{
                                 output?.data?.config?.config?.topic || ''
                             }}</j-descriptions-item>
-                            <j-descriptions-item :label="t('Config.Io.index.5rg40ihzsbw0')" :span="2"
-                                ><j-badge
-                                    :status="
-                                        output?.data?.state?.value === 'enabled'
-                                            ? 'success'
-                                            : 'error'
-                                    "
-                                    :text="output?.data?.state?.text || ''"
-                                ></j-badge
-                            ></j-descriptions-item>
+                            <j-descriptions-item :label="t('Config.Io.index.5rg40ihzsbw0')" :span="2"><j-badge :status="output?.data?.state?.value === 'enabled'
+                                    ? 'success'
+                                    : 'error'
+                                " :text="output?.data?.state?.text || ''"></j-badge></j-descriptions-item>
                         </j-descriptions>
                     </j-card>
-                    <j-card
-                        :head-style="{ borderBottom: 'none', height: '30px' }"
-                        :bordered="false"
-                    >
+                    <j-card :head-style="{ borderBottom: 'none', height: '30px' }" :bordered="false">
                         <template #title>
                             <div class="alarmTitle">
-                                <span>{{t('Config.Io.index.5rg40ihzsg40')}}</span>
+                                <span>{{ t('Config.Io.index.5rg40ihzsg40') }}</span>
                                 <j-tooltip :title="t('Config.Io.index.5rg40ihzsk00')">
-                                    <AIcon
-                                        type="QuestionCircleOutlined"
-                                        style="
+                                    <AIcon type="QuestionCircleOutlined" style="
                                             margin-left: 6px;
                                             line-height: 35px;
-                                        "
-                                    />
+                                        " />
                                 </j-tooltip>
-                                <PermissionButton
-                                    type="link"
-                                    @click="showInput"
-                                    hasPermission="device/Instance:update"
-                                >
-                                    <template #icon
-                                        ><AIcon type="EditOutlined" /></template
-                                ></PermissionButton>
+                                <PermissionButton type="link" @click="showInput" hasPermission="device/Instance:update">
+                                    <template #icon>
+                                        <AIcon type="EditOutlined" />
+                                    </template>
+                                </PermissionButton>
                             </div>
                         </template>
-                        <j-descriptions
-                            bordered
-                            :labelStyle="{ width: 112 + 'px' }"
-                            :contentStyle="{ minWidth: 150 + 'px' }"
-                            :column="2"
-                        >
-                            <j-descriptions-item label="kafka地址"
-                                ><j-badge
-                                    :status="
-                                        input?.running ? 'success' : 'error'
-                                    "
-                                    :text="
-                                        input?.data?.config?.config?.address ||
-                                        ''
-                                    "
-                                ></j-badge
-                            ></j-descriptions-item>
+                        <j-descriptions bordered :labelStyle="{ width: 112 + 'px' }"
+                            :contentStyle="{ minWidth: 150 + 'px' }" :column="2">
+                            <j-descriptions-item :label="t('Config.Io.index.kafka')"><j-badge :status="input?.running ? 'success' : 'error'
+                                " :text="input?.data?.config?.config?.address ||
+        ''
+        "></j-badge></j-descriptions-item>
                             <j-descriptions-item label="topic">{{
                                 input?.data?.config?.config?.topic || ''
                             }}</j-descriptions-item>
-                            <j-descriptions-item :label="t('Config.Io.index.5rg40ihzsbw0')" :span="2"
-                                ><j-badge
-                                    :status="
-                                        input?.data?.state?.value === 'enabled'
-                                            ? 'success'
-                                            : 'error'
-                                    "
-                                    :text="input?.data?.state?.text || ''"
-                                ></j-badge
-                            ></j-descriptions-item>
+                            <j-descriptions-item :label="t('Config.Io.index.5rg40ihzsbw0')" :span="2"><j-badge :status="input?.data?.state?.value === 'enabled'
+                                    ? 'success'
+                                    : 'error'
+                                " :text="input?.data?.state?.text || ''"></j-badge></j-descriptions-item>
                         </j-descriptions>
                     </j-card>
                 </div>
@@ -130,56 +74,35 @@
             <j-col :span="10">
                 <div class="alarmFlow-right">
                     <div class="doc">
-                        <h1>{{t('Config.Io.index.5rg40ihzsr40')}}</h1>
+                        <h1>{{ t('Config.Io.index.5rg40ihzsr40') }}</h1>
                         <div class="image">
-                            <j-image
-                                width="100%"
-                                :src="getImage('/alarm/io.png')"
-                            ></j-image>
+                            <j-image width="100%" :src="getImage('/alarm/io.png')"></j-image>
                         </div>
-                        <h1>{{t('Config.Io.index.5rg40ihzt0w0')}}</h1>
+                        <h1>{{ t('Config.Io.index.5rg40ihzt0w0') }}</h1>
                         <div>
-                            1、平台支持将告警数据输出到kafka，第三方系统可订阅kafka中的告警数据，进行业务处理。
+                            {{ t('Config.Io.index.explain1') }}
                         </div>
-                        <h2>{{t('Config.Io.index.5rg40ihzt500')}}</h2>
+                        <h2>{{ t('Config.Io.index.5rg40ihzt500') }}</h2>
                         <div>
-                            <j-table
-                                :dataSource="outputData"
-                                :pagination="false"
-                                :columns="outputColumns"
-                            ></j-table>
+                            <j-table :dataSource="outputData" :pagination="false" :columns="outputColumns"></j-table>
                         </div>
-                        <h2>{{t('Config.Io.index.5rg40ihzt8w0')}}</h2>
+                        <h2>{{ t('Config.Io.index.5rg40ihzt8w0') }}</h2>
                         <div v-html="markdownOutputText" class="code"></div>
                         <div>
-                            2、平台支持订阅kafka中告警处理数据，并更新告警记录状态。
+                            {{ t('Config.Io.index.explain2') }}
                         </div>
-                        <h2>{{t('Config.Io.index.5rg40ihztcg0')}}</h2>
+                        <h2>{{ t('Config.Io.index.5rg40ihztcg0') }}</h2>
                         <div>
-                            <j-table
-                                :dataSource="subData"
-                                :pagination="false"
-                                :columns="subColumns"
-                            ></j-table>
+                            <j-table :dataSource="subData" :pagination="false" :columns="subColumns"></j-table>
                         </div>
-                        <h2>{{t('Config.Io.index.5rg40ihzt8w0')}}</h2>
+                        <h2>{{ t('Config.Io.index.5rg40ihzt8w0') }}</h2>
                         <div class="code" v-html="markdownSubText"></div>
                     </div>
                 </div>
             </j-col>
         </j-row>
-        <InputSave
-            :data="input"
-            v-if="inputVisible"
-            @closeModel="closeInput"
-            @saveSuc="saveInput"
-        />
-        <OutputSave
-            :data="output"
-            v-if="outputVisible"
-            @closeModel="closeOutput"
-            @saveSuc="saveOutput"
-        />
+        <InputSave :data="input" v-if="inputVisible" @closeModel="closeInput" @saveSuc="saveInput" />
+        <OutputSave :data="output" v-if="outputVisible" @closeModel="closeOutput" @saveSuc="saveOutput" />
     </div>
 </template>
 
@@ -270,7 +193,7 @@ const outputData = [
         name: t('Config.Io.index.5rg40ihzx800'),
         type: 'string',
         desc: t('Config.Io.index.5rg40ihzxj40'),
-        example: '1楼烟感S01',
+        example: t('Config.Io.index.deviceName'),
     },
     {
         key: 'level',
@@ -284,7 +207,7 @@ const outputData = [
         name: t('Config.Io.index.5rg40ihzxzk0'),
         type: 'string',
         desc: t('Config.Io.index.5rg40ihzynk0'),
-        example: '1楼烟感统一告警规则设置',
+        example:  t('Config.Io.index.rule'),
     },
 ];
 const subData = [
@@ -393,7 +316,7 @@ const subText = `
     "alarmConfigId": "1605111722418597888",
     "alarmTime": "1651233650840",
     "handleTime": "1651233650841",
-    "describe": t('Config.Io.index.5rg40ihzzv00'),
+    "describe": "已联系第三方人员进行告警处理，现告警已恢复",
     "type": "user",
     "state": "normal"
   }
@@ -405,16 +328,16 @@ const outputText = `
     "alarmConfigId": "1605111722418597888",
     "id": "1515992841393119232",
     "alarmConfigId": "1586989804257853441",
-    "alarmConfigName": t('Config.Io.index.5rg40ihztng0'),
+    "alarmConfigName": "烟感告警",
     "alarmRecordId": "ba33a59ca5ebe3dccfcd75fd0575be4e",
     "level": "3",
-    "description": t('Config.Io.index.5rg40ii017k0'),
+    "description": "设备温度过高",
     "alarmTime": "1667202964007",
     "sourceType": "device",
     "sourceId": "1605138218826821632",
     "sourceName": "1楼烟感S01",
     "targetType": "device",
-    "targetName": t('Config.Io.index.5rg40ii01b80'),
+    "targetName": "温度探测设备",
     "targetId": "1583300346713661440"
   }
   ~~~
@@ -477,6 +400,7 @@ const saveOutput = () => {
     margin-bottom: 16px;
     line-height: 30px;
 }
+
 .alarmTitle::before {
     position: absolute;
     top: 0;
@@ -487,15 +411,18 @@ const saveOutput = () => {
     border-radius: 0 3px 3px 0;
     content: ' ';
 }
+
 .alarmFlow-left,
 .alarmFlow-right {
     height: 780px;
     background-color: white;
 }
+
 .alarmFlow-right {
     margin-left: 20px;
     padding-bottom: 24px;
 }
+
 .doc {
     height: 100%;
     padding: 24px;

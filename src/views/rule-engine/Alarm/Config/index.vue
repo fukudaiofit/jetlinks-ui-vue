@@ -36,7 +36,7 @@
                                             "
                                             alt=""
                                         />
-                                        <span>{{ `级别${i + 1}` }}</span>
+                                        <span>{{ t('Alarm.Config.index.level') +`${i + 1}` }}</span>
                                     </div>
                                     <div>
                                         <j-input
@@ -68,10 +68,10 @@
                         <div class="description">
                             <h1>{{t('Alarm.Config.index.5rg40s8eafs0')}}</h1>
                             <div>
-                                1、告警级别用于描述告警的严重程度，请根据业务管理方式进行自定义。
+                                {{t('Alarm.Config.index.explain1')}}
                             </div>
-                            <div>2、告警级别将会在告警配置中被引用。</div>
-                            <div>3、最多可配置5个级别。</div>
+                            <div>{{t('Alarm.Config.index.explain2')}}</div>
+                            <div>{{t('Alarm.Config.index.explain3')}}</div>
                         </div>
                     </FullPage>
                 </j-col>

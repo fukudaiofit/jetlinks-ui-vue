@@ -1,63 +1,33 @@
 <template>
-    <j-modal
-        visible
-        :title="t('Scene.Save.index.5rg41y6hqh00')"
-        :okText="t('Scene.Save.index.5rg41y6hrlc0')"
-        :cancelText="t('Scene.Save.index.5rg41y6hrvo0')"
-        :width="1000"
-        @cancel="closeModal"
-        @ok="saveCorrelation"
-    >
+    <j-modal visible :title="t('Scene.Save.index.5rg41y6hqh00')" :okText="t('Scene.Save.index.5rg41y6hrlc0')"
+        :cancelText="t('Scene.Save.index.5rg41y6hrvo0')" :width="1000" @cancel="closeModal" @ok="saveCorrelation">
         <pro-search :columns="columns" @search="handleSearch" />
         <div style="height: 500px; overflow-y: auto">
-            <JProTable
-                model="CARD"
-                :request="query"
-                :rowSelection="{
-                    selectedRowKeys: _selectedRowKeys,
-                }"
-                @cancelSelect="cancelSelect"
-                :gridColumns="[1, 1, 1]"
-                :defaultParams="{
-                    sorts: [
-                        {
-                            name: 'createTime',
-                            order: 'desc',
-                        },
-                    ],
-                    terms,
-                }"
-                :params="params"
-            >
+            <JProTable model="CARD" :request="query" :rowSelection="{
+                selectedRowKeys: _selectedRowKeys,
+            }" @cancelSelect="cancelSelect" :gridColumns="[1, 1, 1]" :defaultParams="{
+    sorts: [
+        {
+            name: 'createTime',
+            order: 'desc',
+        },
+    ],
+    terms,
+}" :params="params">
                 <template #card="slotProps">
-                    <CardBox
-                        :value="slotProps"
-                        :status="slotProps.state?.value"
-                        :statusText="slotProps.state?.text"
-                        :active="_selectedRowKeys.includes(slotProps.id)"
-                        @click="handleClick"
-                        :statusNames="{
+                    <CardBox :value="slotProps" :status="slotProps.state?.value" :statusText="slotProps.state?.text"
+                        :active="_selectedRowKeys.includes(slotProps.id)" @click="handleClick" :statusNames="{
                             started: 'processing',
                             disable: 'error',
-                        }"
-                    >
+                        }">
                         <template #type>
-                            <span
-                                ><img
-                                    :height="16"
-                                    :src="
-                                        typeMap.get(slotProps.triggerType)?.icon
-                                    "
-                                    style="margin-right: 5px"
-                                />{{
-                                    typeMap.get(slotProps.triggerType)?.text
-                                }}</span
-                            >
+                            <span><img :height="16" :src="typeMap.get(slotProps.triggerType)?.icon
+                                " style="margin-right: 5px" />{{
+        typeMap.get(slotProps.triggerType)?.text
+    }}</span>
                         </template>
                         <template #img>
-                            <img
-                                :src="typeMap.get(slotProps.triggerType)?.img"
-                            />
+                            <img :src="typeMap.get(slotProps.triggerType)?.img" />
                         </template>
                         <template #content>
                             <Ellipsis style="width: calc(100% - 100px)">
@@ -67,9 +37,9 @@
                             </Ellipsis>
                             <Ellipsis :lineClamp="2">
                                 <div class="subTitle">
-                                    说明：{{
-                                        slotProps?.description ||
-                                        typeMap.get(slotProps.triggerType)?.tip
+                                    {{ t('Scene.Save.index.5rg41y6hrvo0') +
+                                        (slotProps?.description ||
+                                            typeMap.get(slotProps.triggerType)?.tip)
                                     }}
                                 </div>
                             </Ellipsis>
@@ -201,7 +171,7 @@ const handleClick = (dt: any) => {
 const cancelSelect = () => {
     _selectedRowKeys.value = [];
 };
-const log = () => {};
+const log = () => { };
 log();
 const handleSearch = (e: any) => {
     params.value = e;

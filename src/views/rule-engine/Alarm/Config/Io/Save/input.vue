@@ -11,7 +11,7 @@
     >
         <j-form layout="vertical" :model="inputData" ref="formRef">
             <j-form-item
-                label="kafka地址"
+                :label="t('Io.Save.input.kafka')"
                 name="address"
                 :rules="[
                     {
