@@ -8,16 +8,16 @@
     >
         <j-row>
             <j-col :span="8">
-                <div>成功：{{ count }}</div>
+                <div>{{t('Resource.Issue.Result.suc') + count }}</div>
                 <div>
-                    失败：{{ countErr }}
+                    {{t('Resource.Issue.Result.lose') +  countErr }}
                     <j-button @click="_download(errMessage || '', t('Resource.Issue.Result.5rg5elnyjjo0'))" v-if="errMessage.length" type="link"
                         >{{t('Resource.Issue.Result.5rg5elnyjto0')}}</j-button
                     >
                 </div>
             </j-col>
-            <j-col :span="8">下发设备数量：{{ list.length || 0 }}</j-col>
-            <j-col :span="8">已下发数量：{{ countErr + count }}</j-col>
+            <j-col :span="8">{{ t('Resource.Issue.Result.issue') + (list.length || 0 )}}</j-col>
+            <j-col :span="8">{{ t('Resource.Issue.Result.issued') + (countErr + count) }}</j-col>
         </j-row>
         <div v-if="!flag">
             <j-textarea :rows="10" :value="JSON.stringify(errMessage)" />

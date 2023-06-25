@@ -10,7 +10,8 @@
             <AIcon
                 type="InfoCircleOutlined"
                 style="margin-right: 10px"
-            />离线设备无法进行设备模板下发
+            />
+            {{t('Resource.Issue.index.5rke52loink0')}}
         </div>
         <pro-search
             :columns="columns"

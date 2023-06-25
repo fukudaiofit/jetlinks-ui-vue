@@ -1,36 +1,18 @@
 <template>
     <page-container>
-        <pro-search
-            :columns="columns"
-            target="edge-resource"
-            @search="handleSearch"
-        />
+        <pro-search :columns="columns" target="edge-resource" @search="handleSearch" />
         <FullPage>
-            <JProTable
-                ref="edgeResourceRef"
-                :columns="columns"
-                :request="query"
-                :defaultParams="defaultParams"
-                :params="params"
-            >
+            <JProTable ref="edgeResourceRef" :columns="columns" :request="query" :defaultParams="defaultParams"
+                :params="params">
                 <template #card="slotProps">
-                    <CardBox
-                        :value="slotProps"
-                        @click="handleView(slotProps)"
-                        :actions="getActions(slotProps, 'card')"
-                        :status="slotProps.state?.value"
-                        :statusText="slotProps.state?.text"
-                        :statusNames="{
+                    <CardBox :value="slotProps" @click="handleView(slotProps)" :actions="getActions(slotProps, 'card')"
+                        :status="slotProps.state?.value" :statusText="slotProps.state?.text" :statusNames="{
                             enabled: 'processing',
                             disabled: 'error',
-                        }"
-                    >
+                        }">
                         <template #img>
-                            <img
-                                :src="
-                                    getImage('/device/instance/device-card.png')
-                                "
-                            />
+                            <img :src="getImage('/device/instance/device-card.png')
+                                " />
                         </template>
                         <template #content>
                             <Ellipsis style="width: calc(100% - 100px)">
@@ -41,7 +23,7 @@
                             <j-row style="margin-top: 18px">
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        {{t('edge.Resource.index.5rg5fwsihz80')}}
+                                        {{ t('edge.Resource.index.5rg5fwsihz80') }}
                                     </div>
                                     <Ellipsis>{{
                                         options.find(
@@ -52,7 +34,7 @@
                                 </j-col>
                                 <j-col :span="12">
                                     <div class="card-item-content-text">
-                                        {{t('edge.Resource.index.5rg5fwsij3k0')}}
+                                        {{ t('edge.Resource.index.5rg5fwsij3k0') }}
                                     </div>
                                     <Ellipsis style="width: 100%">
                                         {{ slotProps.sourceName }}
@@ -61,19 +43,10 @@
                             </j-row>
                         </template>
                         <template #actions="item">
-                            <PermissionButton
-                                :disabled="item.disabled"
-                                :popConfirm="item.popConfirm"
-                                :tooltip="{
-                                    ...item.tooltip,
-                                }"
-                                @click="item.onClick"
-                                :hasPermission="'edge/Resource:' + item.key"
-                            >
-                                <AIcon
-                                    type="DeleteOutlined"
-                                    v-if="item.key === 'delete'"
-                                />
+                            <PermissionButton :disabled="item.disabled" :popConfirm="item.popConfirm" :tooltip="{
+                                ...item.tooltip,
+                            }" @click="item.onClick" :hasPermission="'edge/Resource:' + item.key">
+                                <AIcon type="DeleteOutlined" v-if="item.key === 'delete'" />
                                 <template v-else>
                                     <AIcon :type="item.icon" />
                                     <span>{{ item?.text }}</span>
@@ -83,14 +56,10 @@
                     </CardBox>
                 </template>
                 <template #state="slotProps">
-                    <BadgeStatus
-                        :status="slotProps.state?.value"
-                        :text="slotProps.state?.text"
-                        :statusNames="{
-                            enabled: 'processing',
-                            disabled: 'error',
-                        }"
-                    />
+                    <BadgeStatus :status="slotProps.state?.value" :text="slotProps.state?.text" :statusNames="{
+                        enabled: 'processing',
+                        disabled: 'error',
+                    }" />
                 </template>
                 <template #sourceId="slotProps">
                     {{ slotProps.sourceName }}
@@ -110,29 +79,17 @@
                 </template>
                 <template #action="slotProps">
                     <j-space>
-                        <template
-                            v-for="i in getActions(slotProps, 'table')"
-                            :key="i.key"
-                        >
-                            <PermissionButton
-                                :disabled="i.disabled"
-                                :popConfirm="i.popConfirm"
-                                :tooltip="{
-                                    ...i.tooltip,
-                                }"
-                                @click="i.onClick"
-                                type="link"
-                                style="padding: 0 5px"
-                                :danger="i.key === 'delete'"
-                                :hasPermission="
-                                    i.key === 'view'
+                        <template v-for="i in getActions(slotProps, 'table')" :key="i.key">
+                            <PermissionButton :disabled="i.disabled" :popConfirm="i.popConfirm" :tooltip="{
+                                ...i.tooltip,
+                            }" @click="i.onClick" type="link" style="padding: 0 5px" :danger="i.key === 'delete'"
+                                :hasPermission="i.key === 'view'
                                         ? true
                                         : 'edge/Resource:' + i.key
-                                "
-                            >
-                                <template #icon
-                                    ><AIcon :type="i.icon"
-                                /></template>
+                                    ">
+                                <template #icon>
+                                    <AIcon :type="i.icon" />
+                                </template>
                             </PermissionButton>
                         </template>
                     </j-space>
@@ -140,17 +97,8 @@
             </JProTable>
         </FullPage>
 
-        <Save
-            v-if="visible"
-            :data="current"
-            @close="visible = false"
-            @save="saveBtn"
-        />
-        <Issue
-            v-if="settingVisible"
-            :data="current"
-            @close="settingVisible = false"
-        />
+        <Save v-if="visible" :data="current" @close="visible = false" @save="saveBtn" />
+        <Issue v-if="settingVisible" :data="current" @close="settingVisible = false" />
     </page-container>
 </template>
   
@@ -177,11 +125,11 @@ statusMap.set('enabled', 'processing');
 statusMap.set('disabled', 'error');
 
 const options = [
-    { label: 'UA接入', value: 'OPC_UA' },
-    { label: 'Modbus TCP接入', value: 'MODBUS_TCP' },
-    { label: 'S7-200接入', value: 'snap7' },
-    { label: 'BACnet接入', value: 'BACNetIp' },
-    { label: 'MODBUS_RTU接入', value: 'MODBUS_RTU' },
+    { label: t('edge.Resource.index.UA'), value: 'OPC_UA' },
+    { label: t('edge.Resource.index.ModbusTCP'), value: 'MODBUS_TCP' },
+    { label: t('edge.Resource.index.S7-200'), value: 'snap7' },
+    { label: t('edge.Resource.index.BACnet'), value: 'BACNetIp' },
+    { label: t('edge.Resource.index.MODBUS_RTU'), value: 'MODBUS_RTU' },
 ];
 
 const params = ref<Record<string, any>>({});
@@ -331,9 +279,9 @@ const getActions = (
                     ? 'StopOutlined'
                     : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${
-                    data.state.value !== 'disabled' ? t('edge.Resource.index.5rg5fwsijts0') : t('edge.Resource.index.5rg5fwsikmg0')
-                }?`,
+                title: `${t('edge.Resource.index.verify') +
+                    (data.state.value !== 'disabled' ? t('edge.Resource.index.5rg5fwsijts0') : t('edge.Resource.index.5rg5fwsikmg0'))
+                    }?`,
                 onConfirm: async () => {
                     let response = undefined;
                     if (data.state.value !== 'disabled') {
@@ -399,6 +347,5 @@ const onRefresh = () => {
 };
 </script>
 
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>
 

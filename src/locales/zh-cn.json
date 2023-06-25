@@ -2585,7 +2585,7 @@
                 "5rg593nz8z80": "未启用，不能手动触发",
                 "5rg593nz9340": "确认手动触发？",
                 "5rg593nz9640": "查看",
-                "verify":"确认"
+                "verify": "确认"
             }
         }
     },
@@ -3518,7 +3518,6 @@
                 "5rg8ellkoz40": "设备名称",
                 "5rg8ellkp3o0": "请输入设备名称",
                 "5rg8ellkp7s0": "最多可输入64个字符",
-                "5rg8ellkpbw0": "所属产品",
                 "5rg8ellkpgo0": "请选择所属产品",
                 "5rg8ellkpkg0": "接入密码",
                 "5rg8ellkpos0": "请输入接入密码",
@@ -3547,7 +3546,9 @@
                 "5rg8ellksb00": "注：当前页面为新增视频设备，新增完成后点击设备的“通道”按钮，添加通道。",
                 "5rg8ellkseg0": "设备唯一标识，若不填写，系统将自动生成唯一标识。",
                 "5rg8ellkshs0": "只能选择接入方式为固定地址的产品，若当前无对应产品，可点击右侧快速添加按钮，填写产品名称和选择固定地址类型的网关完成产品创建。",
-                "5rg8ellkskw0": "保存成功"
+                "5rg8ellkskw0": "保存成功",
+                "5rke0desopk0": "所属产品",
+                "IDRepeat": "ID重复"
             },
             "SaveProduct": {
                 "5rg8folmzl00": "快速添加",
@@ -3706,7 +3707,8 @@
                 "5rg5czh101g0": "删除",
                 "5rg5czh10480": "已启用的设备不能删除",
                 "5rg5czh107g0": "确认删除?",
-                "5rg5czh10a40": "其他"
+                "5rg5czh10a40": "其他",
+                "verify": "确认"
             }
         },
         "Resource": {
@@ -3729,7 +3731,13 @@
                 "5rg5fwsikxo0": "操作失败！",
                 "5rg5fwsil1o0": "删除",
                 "5rg5fwsil540": "请先禁用，再删除。",
-                "5rg5fwsil9k0": "确认删除?"
+                "5rg5fwsil9k0": "确认删除?",
+                "verify": "确认",
+                "UA": "UA接入",
+                "ModbusTCP": "Modbus TCP接入",
+                "S7-200": "S7-200接入",
+                "BACnet":"BACnet接入",
+                "MODBUS_RTU":"MODBUS_RTU接入"
             }
         }
     },
@@ -3744,12 +3752,17 @@
                 "5rg5eezjz000": "禁用",
                 "5rg5eezjz800": "离线",
                 "5rg5eezjzds0": "在线",
-                "5rg5eezjzjo0": "请选择设备"
+                "5rg5eezjzjo0": "请选择设备",
+                "5rke52loink0": "离线设备无法进行设备模板下发"
             },
             "Result": {
                 "5rg5elnyh480": "下发结果",
                 "5rg5elnyjjo0": "下发失败原因",
-                "5rg5elnyjto0": "下载"
+                "5rg5elnyjto0": "下载",
+                "suc": "成功：",
+                "lose": "失败：",
+                "issue": "下发设备数量：",
+                "issued": "已下发数量："
             }
         },
         "Save": {

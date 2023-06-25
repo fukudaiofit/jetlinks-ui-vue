@@ -87,7 +87,8 @@
                         >
                             <template #label>
                                 <span
-                                    >所属产品
+                                    >
+                                    {{t('Device.Save.index.5rke0desopk0')}}
                                     <j-tooltip :title="t('Device.Save.index.5rg5cooxu4s0')">
                                         <AIcon
                                             type="QuestionCircleOutlined"
@@ -187,7 +188,7 @@ const vailId = async (_: Record<string, any>, value: string) => {
     if (!props?.data?.id && value) {
         const resp = await isExists(value);
         if (resp.status === 200 && resp.result) {
-            return Promise.reject('ID重复');
+            return Promise.reject(t('Device.Save.index.IDRepeat'));
         } else {
             return Promise.resolve();
         }
