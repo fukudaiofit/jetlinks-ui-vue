@@ -2383,7 +2383,25 @@
                 "5rg8qqd9zns0": "操作成功！",
                 "5rg8qqd9zug0": "操作失败！",
                 "5rg8qqda00c0": "删除",
-                "5rg8qqda05s0": "确认删除?"
+                "5rg8qqda05s0": "确认删除?",
+                "channel":"通道数量：",
+                "SIPID":"上级SIP ID",
+                "SIPAddress":"上级SIP 地址",
+                "deleteTip":"请先禁用, 再删除"
+            }
+        },
+        "DashBoard": {
+            "index": {
+                "5rkgzvpoujc0": "设备数量",
+                "5rkgzvpowvw0": "通道数量",
+                "5rkgzvpox3c0": "录像数量",
+                "5rkgzvpox8s0": "播放中数量",
+                "5rkgzvpoxxo0": "当前正在播放的通道数量之和",
+                "5rkgzvpoy300": "播放数量(人次)",
+                "5rkgzvpoy7k0": "在线",
+                "5rkgzvpoz0w0": "离线",
+                "5rkgzvpoz640": "总时长",
+                "5rkgzvpozf00": "播放人数"
             }
         }
     },
@@ -3548,7 +3566,21 @@
                 "5rg8ellkshs0": "只能选择接入方式为固定地址的产品，若当前无对应产品，可点击右侧快速添加按钮，填写产品名称和选择固定地址类型的网关完成产品创建。",
                 "5rg8ellkskw0": "保存成功",
                 "5rke0desopk0": "所属产品",
-                "IDRepeat": "ID重复"
+                "IDRepeat": "ID重复",
+                "TCP": "TCP被动",
+                "summarize": "概述",
+                "explain": "配置说明",
+                "product": "所属产品",
+                "accessPwd": "接入密码",
+                "SIPID": "SIP服务器编号/SIP域",
+                "SIPIDContent": " SIP服务器编号填入该设备所属产品-接入方式页面“连接信息”的SIP。SIP域通常为SIP服务器编号的前10位。",
+                "SIPPort": "SIP服务器IP/端口",
+                "SIPPortContent": "SIP服务器IP/端口填入该设备所属产品-接入方式页面中“连接信息”的IP/端口。",
+                "equipmentNum": "设备编号",
+                "pwd": "注册密码",
+                "other": "其他字段",
+                "addDevice": "添加视频设备",
+                "addChannel": "添加视频下的通道地址。"
             },
             "SaveProduct": {
                 "5rg8folmzl00": "快速添加",
@@ -3563,7 +3595,9 @@
                 "5rg8foln1qo0": "暂无权限,",
                 "5rg8foln1uk0": "请联系管理员",
                 "5rg8foln1yc0": "暂无数据，请先",
-                "5rg8foln23w0": "操作成功"
+                "5rg8foln23w0": "操作成功",
+                "select": "请选择",
+                "input": "请输入"
             }
         },
         "Channel": {
@@ -3637,7 +3671,8 @@
                 "5rg8bx46ai00": "播放",
                 "5rg8bx46anc0": "下载录像文件",
                 "5rg8bx46ark0": "查看",
-                "5rg8bx46auw0": "下载到云端"
+                "5rg8bx46auw0": "下载到云端",
+                "type": "类型: "
             },
             "timeLine": {
                 "5rg8ebenifk0": "没有可播放的视频资源"
@@ -4089,7 +4124,11 @@
                 "5rg8ogcinoc0": "推送",
                 "5rg8ogcitds0": "取消",
                 "5rg8ogcitwc0": "确定",
-                "5rg8ogciu4g0": "下载"
+                "5rg8ogciu4g0": "下载",
+                "suc":"成功：",
+                "lose":"失败：",
+                "push":"推送通道数量：",
+                "pushed":"已推送通道数量："
             }
         },
         "Save": {
@@ -4156,7 +4195,27 @@
                 "5rg8oqlckqw0": "差所经过的运行时间。",
                 "5rg8oqlcktg0": "请输入正确的IP地址",
                 "5rg8oqlckw00": "端口请输入1~65535之间的正整数",
-                "5rg8oqlckyk0": "操作成功"
+                "5rg8oqlckyk0": "操作成功",
+                "ID":"上级SIP ID",
+                "IDTip":"请输入上级SIP ID",
+                "gatewayID":"本地SIP ID",
+                "gatewayIDRules":"请输入网关侧的SIP ID",
+                "gatewayIDTip":"网关侧的SIP ID",
+                "SIPAddress":"SIP地址",
+                "longRange":"SIP远程地址",
+                "summarize":"概述",
+                "explain":"配置说明",
+                "domain":"SIP ID域",
+                "SIP":"上级SIP",
+                "IDAddress":"SIP ID地址",
+                "localAddress":"SIP本地地址",
+                "user":"用户",
+                "connection":"如有疑问请联系系统运维人员。",
+                "value":"值",
+                "versions":"厂商/型号/版本号",
+                "heartbeat":"心跳周期",
+                "interval":"注册间隔",
+                "intervalContent":"SIP代理与 SIP服务器出现1s误"
             }
         }
     },

@@ -246,8 +246,8 @@ const handleClick = async (e: any) => {
         required: !!item.type.expands?.required,
         message:
             item.type?.type === 'enum'
-                ? `请选择${item.name}`
-                : `请输入${item.name}`,
+                ? `${t('Device.Save.SaveProduct.select') + item.name}`
+                : `${t('Device.Save.SaveProduct.input') + item.name}`,
     }));
 };
 

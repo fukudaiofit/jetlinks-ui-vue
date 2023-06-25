@@ -107,12 +107,12 @@
                             </j-col>
                             <j-col :span="24">
                                 <j-form-item
-                                    label="上级SIP ID"
+                                    :label="t('Cascade.Save.index.ID')"
                                     name="sipId"
                                     :rules="[
                                         {
                                             required: true,
-                                            message: '请输入上级SIP ID',
+                                            message: t('Cascade.Save.index.IDTip'),
                                         },
                                         {
                                             max: 64,
@@ -122,7 +122,7 @@
                                 >
                                     <j-input
                                         v-model:value="formData.sipId"
-                                        placeholder="请输入上级SIP ID"
+                                        :placeholder="t('Cascade.Save.index.IDTip')"
                                     />
                                 </j-form-item>
                             </j-col>
@@ -192,7 +192,7 @@
                                     :rules="[
                                         {
                                             required: true,
-                                            message: '请输入网关侧的SIP ID',
+                                            message: t('Cascade.Save.index.gatewayIDRules'),
                                         },
                                         {
                                             max: 64,
@@ -202,7 +202,7 @@
                                 >
                                     <j-input
                                         v-model:value="formData.localSipId"
-                                        placeholder="网关侧的SIP ID"
+                                        :placeholder="t('Cascade.Save.index.gatewayIDTip')"
                                     />
                                 </j-form-item>
                             </j-col>
@@ -221,7 +221,7 @@
                                 >
                                     <template #label>
                                         <span>
-                                            SIP本地地址
+                                            {{ t('Cascade.Save.index.SIPAddress') }}
                                             <j-tooltip
                                                 :title="t('Cascade.Save.index.5rg8oqlchq00')"
                                             >
@@ -254,7 +254,7 @@
                             </j-col>
                             <j-col :span="12">
                                 <j-form-item
-                                    label="SIP远程地址"
+                                    :label="t('Cascade.Save.index.longRange')"
                                     name="publicHost"
                                     :rules="[
                                         {
@@ -478,7 +478,7 @@
                 </j-col>
                 <j-col :span="12">
                     <div class="doc">
-                        <h1>1.概述</h1>
+                        <h1>1.{{t('Cascade.Save.index.summarize')}}</h1>
                         <div>
                             {{t('Cascade.Save.index.5rg8oqlcjd80')}}
                         </div>
@@ -489,11 +489,11 @@
                                 show-icon
                             />
                         </div>
-                        <h1>2.配置说明</h1>
+                        <h1>2.{{t('Cascade.Save.index.explain')}}</h1>
                         <div>
                             {{t('Cascade.Save.index.5rg8oqlcjkc0')}}
                         </div>
-                        <h2>1、上级SIP ID</h2>
+                        <h2>1、{{t('Cascade.Save.index.ID')}}</h2>
                         <div>{{t('Cascade.Save.index.5rg8oqlcjnc0')}}<b>SIP ID</b>。</div>
                         <div class="image">
                             <j-image
@@ -501,54 +501,53 @@
                                 :src="getImage('/northbound/doc2.png')"
                             />
                         </div>
-                        <h2>2、上级SIP {{t('Cascade.Save.index.5rg8oqlcjpw0')}}</h2>
-                        <div>{{t('Cascade.Save.index.5rg8oqlcjnc0')}}<b>SIP ID域</b>。</div>
+                        <h2>2、{{t('Cascade.Save.index.SIP') + t('Cascade.Save.index.5rg8oqlcjpw0')}}</h2>
+                        <div>{{t('Cascade.Save.index.5rg8oqlcjnc0')}}<b>{{ t('Cascade.Save.index.domain') }}</b>。</div>
                         <div class="image">
                             <j-image
                                 width="100%"
                                 :src="getImage('/northbound/doc1.png')"
                             />
                         </div>
-                        <h2>3、上级SIP {{t('Cascade.Save.index.5rg8oqlcjso0')}}</h2>
-                        <div>{{t('Cascade.Save.index.5rg8oqlcjnc0')}}<b>SIP ID地址</b>。</div>
+                        <h2>3、{{t('Cascade.Save.index.SIP') + t('Cascade.Save.index.5rg8oqlcjso0')}}</h2>
+                        <div>{{t('Cascade.Save.index.5rg8oqlcjnc0')}}<b>{{t('Cascade.Save.index.IDAddress')}}</b>。</div>
                         <div class="image">
                             <j-image
                                 width="100%"
                                 :src="getImage('/northbound/doc3.png')"
                             />
                         </div>
-                        <h2>4、本地SIP ID</h2>
+                        <h2>4、{{t('Cascade.Save.index.gatewayID')}}</h2>
                         <div>
-                            {{t('Cascade.Save.index.5rg8oqlcjvo0')}}<b>SIP ID地址</b>。
+                            {{t('Cascade.Save.index.5rg8oqlcjvo0')}}<b>{{t('Cascade.Save.index.IDAddress')}}</b>。
                             {{t('Cascade.Save.index.5rg8oqlcjy40')}}
                             {{t('Cascade.Save.index.5rg8oqlck0o0')}}
                         </div>
-                        <h2>5、SIP本地地址</h2>
+                        <h2>5、{{t('Cascade.Save.index.localAddress')}}</h2>
                         <div>
-                            {{t('Cascade.Save.index.5rg8oqlck3c0')}}<b>{{t('Cascade.Save.index.5rg8oqlck7c0')}}</b>，如有疑问请联系系统运维人员。
+                            {{t('Cascade.Save.index.5rg8oqlck3c0')}}<b>{{t('Cascade.Save.index.5rg8oqlck7c0')}}</b>，{{t('Cascade.Save.index.connection')}}
                         </div>
-                        <h2>6、用户</h2>
+                        <h2>6、{{t('Cascade.Save.index.user')}}</h2>
                         <div>
                             {{t('Cascade.Save.index.5rg8oqlck9s0')}}<b
                                 >{{t('Cascade.Save.index.5rg8oqlckck0')}} ID</b
-                            >值。
+                            >{{t('Cascade.Save.index.5rg8oqlckck0')}}。
                         </div>
-                        <h2>7、接入密码</h2>
+                        <h2>7、{{t('Cascade.Save.index.5rg8oqlcidc0')}}</h2>
                         <div>
                             {{t('Cascade.Save.index.5rg8oqlckfg0')}}
                         </div>
-                        <h2>8、厂商/型号/版本号</h2>
+                        <h2>8、 {{t('Cascade.Save.index.versions')}}</h2>
                         <div>
                             {{t('Cascade.Save.index.5rg8oqlckhw0')}}
                         </div>
-                        <h2>9、心跳周期</h2>
+                        <h2>9、 {{t('Cascade.Save.index.heartbeat')}}</h2>
                         <div>
                             {{t('Cascade.Save.index.5rg8oqlckls0')}}
                         </div>
-                        <h2>10、注册间隔</h2>
+                        <h2>10、 {{t('Cascade.Save.index.interval')}}</h2>
                         <div>
-                            {{t('Cascade.Save.index.5rg8oqlckoc0')}}
-                            SIP代理与 SIP服务器出现1s误 {{t('Cascade.Save.index.5rg8oqlckqw0')}}
+                            {{t('Cascade.Save.index.5rg8oqlckoc0') + t('Cascade.Save.index.intervalContent') + t('Cascade.Save.index.5rg8oqlckqw0')}}
                         </div>
                     </div>
                 </j-col>

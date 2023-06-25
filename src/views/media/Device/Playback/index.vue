@@ -61,7 +61,7 @@
                                 <div>{{t('Device.Playback.index.5rg8bx469sg0')}}</div>
                             </template>
                             <div>
-                                类型: <AIcon type="QuestionCircleOutlined" />
+                                {{ t('Device.Playback.index.type') }}<AIcon type="QuestionCircleOutlined" />
                             </div>
                         </j-tooltip>
                         <RadioCard

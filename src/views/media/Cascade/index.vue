@@ -55,7 +55,7 @@
                             <h3 class="card-item-content-title">
                                 {{ slotProps.name }}
                             </h3>
-                            <p>通道数量：{{ slotProps.count || 0 }}</p>
+                            <p>{{t('media.Cascade.index.channel')  + (slotProps.count || 0 )}}</p>
                             <Ellipsis>
                                 <j-badge
                                     :text="`sip:${slotProps.sipConfigs[0]?.sipId}@${slotProps.sipConfigs[0]?.hostAndPort}`"
@@ -178,13 +178,13 @@ const columns = [
         },
     },
     {
-        title: '上级SIP ID',
+        title: t('media.Cascade.index.SIPID'),
         dataIndex: 'sipId',
         key: 'sipId',
         scopedSlots: true,
     },
     {
-        title: '上级SIP 地址',
+        title: t('media.Cascade.index.SIPAddress'),
         dataIndex: 'publicHost',
         key: 'publicHost',
         scopedSlots: true,
@@ -369,7 +369,7 @@ const getActions = (
             tooltip: {
                 title:
                     data.status?.value === 'enabled'
-                        ? '请先禁用, 再删除'
+                        ? t('media.Cascade.index.deleteTip')
                         : t('media.Cascade.index.5rg8qqda00c0'),
             },
             disabled: data.status?.value === 'enabled',
