@@ -31,7 +31,7 @@
     <div style="margin-top: 20px" v-if="importLoading">
         <j-badge v-if="flag" status="processing" :text="t('iot-card.CardManagement.UploadFile.5rgbhe4qslw0')" />
         <j-badge v-else status="success" :text="t('iot-card.CardManagement.UploadFile.5rgbhe4qsww0')" />
-        <span>总数量：{{ count }}</span>
+        <span>{{t('iot-card.CardManagement.UploadFile.total') + count }}</span>
         <p style="color: red">{{ errMessage }}</p>
     </div>
 </template>

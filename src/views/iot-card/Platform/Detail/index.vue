@@ -41,7 +41,7 @@
                             <j-form-item label="App ID" name="appId">
                                 <j-input
                                     v-model:value="form.appId"
-                                    placeholder="请输入App ID"
+                                    :placeholder="t('Platform.Detail.index.IDTip')"
                                 />
                             </j-form-item>
                             <j-form-item label="Password" name="passWord">
@@ -83,13 +83,13 @@
                             <j-form-item label="App ID" name="appId">
                                 <j-input
                                     v-model:value="form.appId"
-                                    placeholder="请输入App ID"
+                                    :placeholder="t('Platform.Detail.index.IDTip')"
                                 />
                             </j-form-item>
                             <j-form-item label="App Secret" name="appSecret">
                                 <j-input
                                     v-model:value="form.appSecret"
-                                    placeholder="请输入App Secret"
+                                    :placeholder="t('Platform.Detail.index.Secret')"
                                 />
                             </j-form-item>
                             <j-form-item :label="t('Platform.Detail.index.5rgbk1o79vs0')" name="openId">
@@ -166,7 +166,7 @@ const rules = {
         { max: 64, message: t('Platform.Detail.index.5rgbk1o7ahw0') },
     ],
     appId: [
-        { required: true, message: '请输入App ID' },
+        { required: true, message: t('Platform.Detail.index.IDTip') },
         { max: 64, message: t('Platform.Detail.index.5rgbk1o7ahw0') },
     ],
     passWord: [
@@ -175,11 +175,11 @@ const rules = {
     ],
     apiAddr: [{ required: true, message: t('Platform.Detail.index.5rgbk1o797c0') }],
     userId: [
-        { required: true, message: '请输入用户 ID' },
+        { required: true, message: t('Platform.Detail.index.userID') },
         { max: 64, message: t('Platform.Detail.index.5rgbk1o7ahw0') },
     ],
     secretKey: [{ required: true, message: t('Platform.Detail.index.5rgbk1o79qo0') }, { max: 64, message: t('Platform.Detail.index.5rgbk1o7ahw0') },],
-    appSecret: [{ required: true, message: '请输入App Secret' }, { max: 64, message: t('Platform.Detail.index.5rgbk1o7ahw0') },],
+    appSecret: [{ required: true, message: t('Platform.Detail.index.Secret') }, { max: 64, message: t('Platform.Detail.index.5rgbk1o7ahw0') },],
     openId: [{ required: true, message: t('Platform.Detail.index.5rgbk1o79zs0') }, { max: 64, message: t('Platform.Detail.index.5rgbk1o7ahw0') },],
     explain: [{ required: false, max: 200, message: t('Platform.Detail.index.5rgbk1o7amc0') }],
 };

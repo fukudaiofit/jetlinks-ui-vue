@@ -28,7 +28,7 @@
                     <template #label>
                         <span>
                             ICCID
-                            <j-tooltip title="IC卡的唯一识别号码">
+                            <j-tooltip :title="t('iot-card.CardManagement.Save.ICTip')">
                                 <AIcon
                                     type="QuestionCircleOutlined"
                                     style="margin-left: 2px"

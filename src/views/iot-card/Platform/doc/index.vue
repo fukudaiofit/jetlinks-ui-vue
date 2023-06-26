@@ -11,15 +11,14 @@
                 https://api.iot.10086.cn/api/index.html#/login
             </a>
         </div>
-        <h1>1.概述</h1>
+        <h1>1.{{t('Platform.doc.index.summarize')}}</h1>
         <p>
             {{t('Platform.doc.index.5rgbkd1ftjg0')}}
         </p>
-        <h1>2.配置说明</h1>
+        <h1>2.{{t('Platform.doc.index.explain')}}</h1>
         <h2>1、APP ID</h2>
         <p>
-            {{t('Platform.doc.index.5rgbkd1ftps0')}} OneLink
-            {{t('Platform.doc.index.5rgbkd1fttw0')}}
+            {{t('Platform.doc.index.5rgbkd1ftps0')}}
             <br />
             {{t('Platform.doc.index.5rgbkd1ftx00')}}
         </p>
@@ -31,8 +30,7 @@
         </div>
         <h2>2、Password</h2>
         <p>
-            API {{t('Platform.doc.index.5rgbkd1fu0c0')}}
-            {{t('Platform.doc.index.5rgbkd1fu2w0')}}
+            {{t('Platform.doc.index.5rgbkd1fu0c0')}}
             <br />
             {{t('Platform.doc.index.5rgbkd1ftx00')}}
         </p>
@@ -42,19 +40,19 @@
                 :src="getImage('/iot-card/onelink-pass.png')"
             />
         </div>
-        <h2>3、接口地址</h2>
+        <h2>3、{{t('Platform.doc.index.portAddress')}}</h2>
         <p>
             https://api.iot.10086.cn/v5/ec/get/token
             <br />
-            token后缀请根据实际情况填写
+            {{t('Platform.doc.index.writeToken')}}
             <br />
-            示例：https://api.iot.10086.cn/v5/authService?appid=xxx&password=xxx&transid=xxx
+            {{t('Platform.doc.index.example')}}https://api.iot.10086.cn/v5/authService?appid=xxx&password=xxx&transid=xxx
         </p>
     </div>
 
     <div v-if="type === 'ctwing'" class="doc">
         <div class="url">
-            5G连接管理平台：
+            {{t('Platform.doc.index.platform')}}
             <a
                 style="word-break: break-all"
                 href="https://cmp.ctwing.cn:4821/login"
@@ -65,14 +63,14 @@
             </a>
         </div>
         <div>
-            <h1>1.概述</h1>
+            <h1>1.{{t('Platform.doc.index.summarize')}}</h1>
             <p>
                 {{t('Platform.doc.index.5rgbkd1ftjg0')}}
             </p>
-            <h1>2.配置说明</h1>
-            <h2>1、用户 id</h2>
+            <h1>2.{{t('Platform.doc.index.explain')}}</h1>
+            <h2>1、{{t('Platform.doc.index.userID')}}</h2>
             <p>
-                5G连接管理平台用户的唯一标识，用于身份识别。
+                {{t('Platform.doc.index.platformTip')}}
                 <br />
                 {{t('Platform.doc.index.5rgbkd1fu5o0')}}
             </p>
@@ -83,7 +81,7 @@
                 />
             </div>
 
-            <h2>2、密码</h2>
+            <h2>2、{{t('Platform.doc.index.pwd')}}</h2>
             <p>
                 {{t('Platform.doc.index.5rgbkd1fu9s0')}}
                 <br />
@@ -98,7 +96,7 @@
 
             <h2>3、secretKey</h2>
             <p>
-                APP secret唯一秘钥。
+                {{t('Platform.doc.index.secretKeyTip')}}
                 <br />
                 {{t('Platform.doc.index.5rgbkd1fu5o0')}}
             </p>
@@ -125,11 +123,11 @@
         </div>
 
         <div>
-            <h1>1.概述</h1>
+            <h1>1.{{t('Platform.doc.index.summarize')}}</h1>
             <p>
                 {{t('Platform.doc.index.5rgbkd1ftjg0')}}
             </p>
-            <h1>2.配置说明</h1>
+            <h1>2.{{t('Platform.doc.index.explain')}}</h1>
             <h2>1、APP ID</h2>
             <p>
                 {{t('Platform.doc.index.5rgbkd1fues0')}}
@@ -145,7 +143,7 @@
 
             <h2>2、App Secret</h2>
             <p>
-                API {{t('Platform.doc.index.5rgbkd1fuk00')}}
+                {{t('Platform.doc.index.5rgbkd1fuk00')}}
                 <br />
                 {{t('Platform.doc.index.5rgbkd1fuhk0')}}
             </p>
@@ -156,9 +154,9 @@
                 />
             </div>
 
-            <h2>3、创建者ID</h2>
+            <h2>3、{{t('Platform.doc.index.creatorID')}}</h2>
             <p>
-                {{t('Platform.doc.index.5rgbkd1fums0')}} OpenId。
+                {{t('Platform.doc.index.5rgbkd1fums0')}}
                 <br />
                 {{t('Platform.doc.index.5rgbkd1fuhk0')}}
                 <br />

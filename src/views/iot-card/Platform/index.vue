@@ -188,9 +188,9 @@ const getActions = (
                     ? 'StopOutlined'
                     : 'PlayCircleOutlined',
             popConfirm: {
-                title: `确认${data.state.value === 'enabled' ? t('iot-card.Platform.index.5rgbkt23jrg0') : t('iot-card.Platform.index.5rgbkt23jng0')
+                title: `${t('iot-card.Platform.index.verify') + (data.state.value === 'enabled' ? t('iot-card.Platform.index.5rgbkt23jrg0') : t('iot-card.Platform.index.5rgbkt23jng0'))
                     }？`,
-                okText: ' 确定',
+                okText: t('iot-card.Platform.index.confirm'),
                 cancelText: t('iot-card.Platform.index.5rgbkt23kcs0'),
                 onConfirm: () => {
                     if (data.state.value === 'enabled') {
@@ -221,7 +221,7 @@ const getActions = (
             disabled: data.state.value === 'enabled',
             popConfirm: {
                 title: t('iot-card.Platform.index.5rgbkt23kts0'),
-                okText: ' 确定',
+                okText: t('iot-card.Platform.index.confirm'),
                 cancelText: t('iot-card.Platform.index.5rgbkt23kcs0'),
                 onConfirm: async () => {
                     const resp: any = await del(data.id);

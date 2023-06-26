@@ -1467,13 +1467,13 @@
                 "5rga8u77ze40": "手动输入",
                 "5rga8u780uo0": "内置参数",
                 "5rga8u781ms0": "请选择参数",
-                "input":"请输入"
+                "input": "请输入"
             },
             "InputFile": {
                 "5rga92u1g280": "请上传文件",
                 "5rga92u1h5k0": "上传附件",
                 "5rga92u1hbs0": "请上传正确格式图片",
-                "limit":"图片大小必须小于4M"
+                "limit": "图片大小必须小于4M"
             },
             "Tag": {
                 "5rga993m65w0": "请选择标签"
@@ -5002,6 +5002,12 @@
         "components": {
             "LineChart": {
                 "5rgbby6e0uo0": "流量消耗"
+            },
+            "TimeSelect": {
+                "5rl8267ns4g0": "今日",
+                "5rl8267ntg00": "近一周",
+                "5rl8267ntow0": "近一月",
+                "5rl8267nvg80": "近一年"
             }
         },
         "CardManagement": {
@@ -5112,7 +5118,8 @@
                 "5rgbgvn6i400": "请输入说明",
                 "5rgbgvn6idc0": "请输入输入正确的ICCID",
                 "5rgbgvn6ikw0": "最多输入64个字符",
-                "5rgbgvn6irk0": "操作成功"
+                "5rgbgvn6irk0": "操作成功",
+                "ICTip": "IC卡的唯一识别号码"
             },
             "UploadFile": {
                 "5rgbhe4qr880": "文件上传",
@@ -5122,7 +5129,8 @@
                 "5rgbhe4qt7w0": "请上传.csv格式文件",
                 "5rgbhe4qtdo0": "请上传.xlsx格式文件",
                 "5rgbhe4qtis0": "导入成功",
-                "5rgbhe4qtno0": "导入失败"
+                "5rgbhe4qtno0": "导入失败",
+                "total": "总数量："
             }
         },
         "Recharge": {
@@ -5189,7 +5197,9 @@
                 "5rgbkt23kpc0": "请先禁用再删除",
                 "5rgbkt23kts0": "确认删除?",
                 "5rgbkt23l0w0": "操作成功！",
-                "5rgbkt23l9g0": "操作失败！"
+                "5rgbkt23l9g0": "操作失败！",
+                "verify": "确认",
+                "confirm": "确定"
             }
         },
         "Record": {
@@ -5252,25 +5262,37 @@
                 "5rgbk1o7ad40": "保存",
                 "5rgbk1o7ahw0": "最多可输入64个字符",
                 "5rgbk1o7amc0": "最多可输入200个字符",
-                "5rgbk1o7av80": "保存成功！"
+                "5rgbk1o7av80": "保存成功！",
+                "IDTip": "请输入App ID",
+                "Secret": "请输入App Secret",
+                "userID": "请输入用户 ID"
             }
         },
         "doc": {
             "index": {
                 "5rgbkd1fs9s0": "中国移动物联卡能力开放平台：",
                 "5rgbkd1ftjg0": "平台对接通过API的方式与三方系统进行数据对接，为物联卡的管理提供数据交互支持。",
-                "5rgbkd1ftps0": "第三方应用唯一标识，中国移动物联网全网管理员在",
-                "5rgbkd1fttw0": "能力开放平台上分配并展示给集团客户。",
+                "5rgbkd1ftps0": "第三方应用唯一标识，中国移动物联网全网管理员在OneLink能力开放平台上分配并展示给集团客户。",
                 "5rgbkd1ftx00": "获取路径：“中移物联卡能力开放平台”--“个人中心”--“客户信息”--“接入信息”",
-                "5rgbkd1fu0c0": "接入秘钥,由中国移动物联网提供，集团客户从“OneLink",
-                "5rgbkd1fu2w0": "能力开放平台”获取。",
+                "5rgbkd1fu0c0": "API 接入秘钥,由中国移动物联网提供，集团客户从“OneLink能力开放平台”获取。",
                 "5rgbkd1fu5o0": "获取路径：“5G连接管理平台”--“能力开放”--“API网关账号管理”",
                 "5rgbkd1fu9s0": "用户id经加密之后的密码。",
                 "5rgbkd1fuc80": "雁飞智连CMP平台：",
                 "5rgbkd1fues0": "第三方应用唯一标识。",
                 "5rgbkd1fuhk0": "获取路径：“雁飞智连CMP平台”--“我的应用”--“应用列表”",
-                "5rgbkd1fuk00": "接入秘钥。",
-                "5rgbkd1fums0": "接口参数中的"
+                "5rgbkd1fuk00": "API 接入秘钥。",
+                "5rgbkd1fums0": "接口参数中的 OpenId。",
+                "summarize": "概述",
+                "explain": "配置说明",
+                "portAddress": "接口地址",
+                "writeToken": "token后缀请根据实际情况填写",
+                "example": "示例：",
+                "platform": "5G连接管理平台：",
+                "userID": "用户 id",
+                "platformTip": "5G连接管理平台用户的唯一标识，用于身份识别。",
+                "pwd": "密码",
+                "secretKeyTip": "APP secret唯一秘钥。",
+                "creatorID": "创建者ID"
             }
         }
     },
