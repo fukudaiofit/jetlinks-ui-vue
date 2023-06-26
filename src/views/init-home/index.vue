@@ -2,7 +2,7 @@
 <template>
     <div class="page-container">
         <div class="container-text">
-            <div class="container-title">系统初始化</div>
+            <div class="container-title">{{t('views.init-home.index.5rlc5ey0ixc0')}}</div>
         </div>
         <div class="container-box">
             <div class="container-main">
@@ -11,36 +11,36 @@
                         <j-collapse v-model:activeKey="activeKey" accordion>
                             <j-collapse-panel key="1">
                                 <template #header>
-                                    <span class="title">基本信息</span>
+                                    <span class="title">{{t('views.init-home.index.5rlc5ey0jwk0')}}</span>
                                     <span class="sub-title"
-                                        >配置平台名称、登录背景图、主题色等基本信息</span
+                                        >{{t('views.init-home.index.5rlc5ey0k380')}}</span
                                     >
                                 </template>
                                 <Basic ref="basicRef" />
                             </j-collapse-panel>
                             <j-collapse-panel key="2" forceRender>
                                 <template #header>
-                                    <span class="title">菜单初始化</span>
+                                    <span class="title">{{t('views.init-home.index.5rlc5ey0kfk0')}}</span>
                                     <span class="sub-title"
-                                        >初始化菜单数据</span
+                                        >{{t('views.init-home.index.5rlc5ey0kk80')}}</span
                                     >
                                 </template>
                                 <Menu ref="menuRef"></Menu>
                             </j-collapse-panel>
                             <j-collapse-panel key="3" forceRender>
                                 <template #header>
-                                    <span class="title">角色初始化</span>
+                                    <span class="title">{{t('views.init-home.index.5rlc5ey0kpk0')}}</span>
                                     <span class="sub-title"
-                                        >初始化内置角色与权限数据</span
+                                        >{{t('views.init-home.index.5rlc5ey0kuc0')}}</span
                                     >
                                 </template>
                                 <Role ref="roleRef"></Role>
                             </j-collapse-panel>
                             <j-collapse-panel key="4" forceRender>
                                 <template #header>
-                                    <span class="title">初始化数据</span>
+                                    <span class="title">{{t('views.init-home.index.5rlc5ey0kyo0')}}</span>
                                     <span class="sub-title"
-                                        >初始化设备接入示例数据</span
+                                        >{{t('views.init-home.index.5rlc5ey0l3k0')}}</span
                                     >
                                 </template>
                                 <InitData ref="initDataRef"></InitData>
@@ -52,7 +52,7 @@
                         class="btn-style"
                         @click="submitData"
                         :loading="loading"
-                        >确定</j-button
+                        >{{t('views.init-home.index.5rlc5ey0lb00')}}</j-button
                     >
                 </div>
             </div>
@@ -70,6 +70,9 @@ import { FILE_UPLOAD } from '@/api/comm';
 import { LocalStore } from '@/utils/comm';
 import { message } from 'jetlinks-ui-components';
 import { useUserInfo } from '@/store/userInfo';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const basicRef = ref();
 const roleRef = ref();
 const initDataRef = ref();
@@ -121,7 +124,7 @@ const submitData = async () => {
     loading.value = false;
     // 当前数据是否成功提交
     if (basicRes && menuRes && roleRes && initDataRes) {
-        message.success('保存成功');
+        message.success(t('views.init-home.index.5rlc5ey0lf00'));
         //     // 记录初始化数据，跳转首页
         const res = await saveInit();
         if (res.status === 200) {

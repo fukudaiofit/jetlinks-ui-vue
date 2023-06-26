@@ -4,29 +4,29 @@
         <j-row :span="24" :gutter="24">
             <j-col :span="12">
                 <j-form-item
-                    label="系统名称"
+                    :label="t('init-home.Basic.index.5rl9g0iy3t80')"
                     name="title"
                     v-bind="validateInfos.title"
                 >
                     <j-input
                         v-model:value="form.title"
-                        placeholder="请输入系统名称"
+                        :placeholder="t('init-home.Basic.index.5rl9g0iy4q80')"
                     />
                 </j-form-item>
                 <j-form-item
-                    label="主题色"
+                    :label="t('init-home.Basic.index.5rl9g0iy4ws0')"
                     name="headerTheme"
                     v-bind="validateInfos.headerTheme"
                 >
                     <j-select v-model:value="form.headerTheme">
-                        <j-select-option value="light">白色</j-select-option>
-                        <j-select-option value="dark">黑色</j-select-option>
+                        <j-select-option value="light">{{t('init-home.Basic.index.5rl9g0iy52k0')}}</j-select-option>
+                        <j-select-option value="dark">{{t('init-home.Basic.index.5rl9g0iy5800')}}</j-select-option>
                     </j-select>
                 </j-form-item>
                 <j-form-item>
                     <template #label>
-                        <span>高德API Key</span>
-                        <j-tooltip title="配置后平台可调用高德地图GIS服务">
+                        <span>{{t('init-home.Basic.index.5rl9g0iy5ds0')}} Key</span>
+                        <j-tooltip :title="t('init-home.Basic.index.5rl9g0iy5jk0')">
                             <img
                                 class="img-style"
                                 :src="getImage('/init-home/mark.png')"
@@ -35,13 +35,13 @@
                     </template>
                     <j-input
                         v-model:value="form.apikey"
-                        placeholder="请输入高德API Key"
+                        :placeholder="t('init-home.Basic.index.inputApi')"
                     />
                 </j-form-item>
                 <j-form-item name="basePath" v-bind="validateInfos.basePath">
                     <template #label>
                         <span>base-path</span>
-                        <j-tooltip title="系统后台访问的url">
+                        <j-tooltip :title="t('init-home.Basic.index.5rl9g0iy5ok0')">
                             <img
                                 class="img-style"
                                 :src="getImage('/init-home/mark.png')"
@@ -50,12 +50,12 @@
                     </template>
                     <j-input
                         v-model:value="form.basePath"
-                        placeholder="请输入base-path"
+                        :placeholder="t('init-home.Basic.index.5rl9g0iy5to0')"
                     />
                 </j-form-item>
                 <j-row :gutter="24" :span="24">
                     <j-col>
-                        <j-form-item label="系统logo">
+                        <j-form-item :label="t('init-home.Basic.index.5rl9g0iy5z40')">
                             <div class="upload-image-warp-logo">
                                 <div class="upload-image-border-logo">
                                     <j-upload
@@ -93,7 +93,7 @@
                                                 v-if="form.logo"
                                                 class="upload-image-mask"
                                             >
-                                                点击修改
+                                                {{t('init-home.Basic.index.5rl9g0iy63k0')}}
                                             </div>
                                             <div v-else>
                                                 <div v-if="logoLoading">
@@ -120,15 +120,15 @@
                                 </div>
                             </div>
 
-                            <div class="upload-tips">推荐尺寸200*200</div>
-                            <div class="upload-tips">支持jpg,png</div>
+                            <div class="upload-tips">{{t('init-home.Basic.index.5rl9g0iy6bk0')}}</div>
+                            <div class="upload-tips">{{t('init-home.Basic.index.5rl9g0iy6g00')}}</div>
                         </j-form-item>
                     </j-col>
                     <j-col>
                         <j-form-item>
                             <template #label>
-                                <span>浏览器页签</span>
-                                <j-tooltip title="浏览器tab页中显示的图片元素">
+                                <span>{{t('init-home.Basic.index.5rl9g0iy6kw0')}}</span>
+                                <j-tooltip :title="t('init-home.Basic.index.5rl9g0iy6tc0')">
                                     <img
                                         class="img-style"
                                         :src="getImage('/init-home/mark.png')"
@@ -172,7 +172,7 @@
                                                 v-if="form.ico"
                                                 class="upload-image-mask"
                                             >
-                                                点击修改
+                                                {{t('init-home.Basic.index.5rl9g0iy63k0')}}
                                             </div>
                                             <div v-else>
                                                 <div>
@@ -186,14 +186,14 @@
                                 </div>
                             </div>
 
-                            <div class="upload-tips">推荐尺寸64*64</div>
-                            <div class="upload-tips">支持ico格式</div>
+                            <div class="upload-tips">{{t('init-home.Basic.index.5rl9g0iy6y00')}}</div>
+                            <div class="upload-tips">{{t('init-home.Basic.index.5rl9g0iy73k0')}}</div>
                         </j-form-item>
                     </j-col>
                 </j-row>
             </j-col>
             <j-col :span="12">
-                <j-form-item label="登录背景图">
+                <j-form-item :label="t('init-home.Basic.index.5rl9g0iy7800')">
                     <div class="upload-image-warp-back">
                         <div class="upload-image-border-back">
                             <j-upload
@@ -231,7 +231,7 @@
                                         v-if="form.background"
                                         class="upload-image-mask"
                                     >
-                                        点击修改
+                                        {{t('init-home.Basic.index.5rl9g0iy63k0')}}
                                     </div>
                                     <div v-else>
                                         <div>
@@ -244,8 +244,8 @@
                             </j-upload>
                         </div>
                     </div>
-                    <div class="upload-tips">支持4M以内的图片:支持jpg、png</div>
-                    <div class="upload-tips">建议尺寸1400x1080</div>
+                    <div class="upload-tips">{{t('init-home.Basic.index.imgFormat')}}</div>
+                    <div class="upload-tips">{{t('init-home.Basic.index.5rl9g0iy7ck0')}}</div>
                 </j-form-item>
             </j-col>
         </j-row>
@@ -262,6 +262,9 @@ import {
 import { LocalStore } from '@/utils/comm';
 import { TOKEN_KEY } from '@/utils/variable';
 import { SystemConst } from '@/utils/consts';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const formRef = ref();
 const menuRef = ref();
 const formBasicRef = ref();
@@ -288,21 +291,21 @@ const rulesFrom = ref({
     title: [
         {
             max: 64,
-            message: '最多可输入64位',
+            message: t('init-home.Basic.index.5rl9g0iy7hs0'),
             trigger: 'change',
         },
     ],
     headerTheme: [
         {
             required: true,
-            message: '请选择主题色',
+            message: t('init-home.Basic.index.5rl9g0iy7ok0'),
             trigger: 'blur',
         },
     ],
     basePath: [
         {
             required: true,
-            message: '请输入base-path',
+            message: t('init-home.Basic.index.5rl9g0iy5to0'),
             trigger: 'blur',
         },
     ],
@@ -366,7 +369,7 @@ const saveBasicInfo = () => {
 const beforeLogoUpload = (file: any) => {
     const isType: any = imageTypes.value.includes(file.type);
     if (!isType) {
-        message.error(`请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片`);
+        message.error(t('init-home.Basic.index.formatTip'));
         return false;
     }
     const isSize = file.size / 1024 / 1024 < 4;
@@ -395,12 +398,12 @@ const handleChangeLogo = (info: any) => {
 const beforeIconUpload = (file: any) => {
     const isType = iconTypes.value.includes(file.type);
     if (!isType) {
-        message.error('请上传ico格式的图片');
+        message.error(t('init-home.Basic.index.5rl9g0iy7ss0'));
         return false;
     }
     const isSize = file.size / 1024 / 1024 < 1;
     if (!isSize) {
-        message.error('支持1M以内的图片');
+        message.error(t('init-home.Basic.index.5rl9g0iy7zk0'));
     }
     return isType && isSize;
 };
@@ -423,7 +426,7 @@ const changeIconUpload = (info: any) => {
 const beforeBackUpload = (file: any) => {
     const isType = imageTypes.value.includes(file.type);
     if (!isType) {
-        message.error(`请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片`);
+        message.error(t('init-home.Basic.index.formatTip'));
         return false;
     }
     const isSize = file.size / 1024 / 1024 < 4;

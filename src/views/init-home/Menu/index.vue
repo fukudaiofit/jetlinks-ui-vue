@@ -5,7 +5,7 @@
         </div>
         <div class="menu-info">
             <b>系统初始化{{ count }}个菜单</b>
-            <div>初始化后的菜单可在“菜单管理”页面进行维护管理</div>
+            <div>{{t('init-home.Menu.index.5rlbq599jhs0')}}</div>
         </div>
     </div>
 </template>
@@ -14,6 +14,9 @@
 import { getImage } from '@/utils/comm';
 import BaseMenu, { MESSAGE_SUBSCRIBE_MENU_DATA, USER_CENTER_MENU_DATA } from '../data/baseMenu'
 import { getSystemPermission, updateMenus } from '@/api/initHome';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 /**
  * 获取菜单数据
  */

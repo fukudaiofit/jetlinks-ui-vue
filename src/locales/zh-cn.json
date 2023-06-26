@@ -1512,6 +1512,17 @@
                 "5rgb1dttw0g0": "删除图标",
                 "formatTip": "请上传正确格式的图片"
             }
+        },
+        "AMapComponent": {
+            "index": {
+                "5rlc67k3b7g0": "请配置高德地图key"
+            }
+        },
+        "BatchDropdown": {
+            "index": {
+                "5rlc6t9b44k0": "重选",
+                "5rlc6t9b58k0": "批量操作"
+            }
         }
     },
     "Instance": {
@@ -2208,6 +2219,21 @@
             "index": {
                 "5rg3dtx8n4g0": "访问日志",
                 "5rg3dtx8o0s0": "系统日志"
+            }
+        },
+        "init-home": {
+            "index": {
+                "5rlc5ey0ixc0": "系统初始化",
+                "5rlc5ey0jwk0": "基本信息",
+                "5rlc5ey0k380": "配置平台名称、登录背景图、主题色等基本信息",
+                "5rlc5ey0kfk0": "菜单初始化",
+                "5rlc5ey0kk80": "初始化菜单数据",
+                "5rlc5ey0kpk0": "角色初始化",
+                "5rlc5ey0kuc0": "初始化内置角色与权限数据",
+                "5rlc5ey0kyo0": "初始化数据",
+                "5rlc5ey0l3k0": "初始化设备接入示例数据",
+                "5rlc5ey0lb00": "确定",
+                "5rlc5ey0lf00": "保存成功"
             }
         }
     },
@@ -5313,6 +5339,77 @@
             "index": {
                 "5rkju6fy9nw0": "权限分配",
                 "5rkju6fyaws0": "用户管理"
+            }
+        }
+    },
+    "init-home": {
+        "Basic": {
+            "index": {
+                "5rl9g0iy3t80": "系统名称",
+                "5rl9g0iy4q80": "请输入系统名称",
+                "5rl9g0iy4ws0": "主题色",
+                "5rl9g0iy52k0": "白色",
+                "5rl9g0iy5800": "黑色",
+                "5rl9g0iy5ds0": "高德API",
+                "5rl9g0iy5jk0": "配置后平台可调用高德地图GIS服务",
+                "5rl9g0iy5ok0": "系统后台访问的url",
+                "5rl9g0iy5to0": "请输入base-path",
+                "5rl9g0iy5z40": "系统logo",
+                "5rl9g0iy63k0": "点击修改",
+                "5rl9g0iy6bk0": "推荐尺寸200*200",
+                "5rl9g0iy6g00": "支持jpg,png",
+                "5rl9g0iy6kw0": "浏览器页签",
+                "5rl9g0iy6tc0": "浏览器tab页中显示的图片元素",
+                "5rl9g0iy6y00": "推荐尺寸64*64",
+                "5rl9g0iy73k0": "支持ico格式",
+                "5rl9g0iy7800": "登录背景图",
+                "5rl9g0iy7ck0": "建议尺寸1400x1080",
+                "5rl9g0iy7hs0": "最多可输入64位",
+                "5rl9g0iy7ok0": "请选择主题色",
+                "5rl9g0iy7ss0": "请上传ico格式的图片",
+                "5rl9g0iy7zk0": "支持1M以内的图片",
+                "inputApi": "请输入高德API Key",
+                "imgFormat": "支持4M以内的图片:支持jpg、png",
+                "formatTip": "请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片"
+            }
+        },
+        "InitData": {
+            "index": {
+                "5rlbndz7cn40": "初始数据",
+                "5rlbndz7dpk0": "确定",
+                "5rlbndz7dxo0": "取消",
+                "5rlbndz7e4w0": "初始化数据包括MQTT产品、MQTT设备、MQTT类型设备接入网关、MQTT网络组件、Jetlinks",
+                "5rlbndz7eg40": "官方协议",
+                "5rlbndz7en40": "本地地址",
+                "5rlbndz7esk0": "公网地址",
+                "5rlbndz7ey40": "对外提供访问的地址内网环境时填写服务器的内网IP地址",
+                "5rlbndz7f4s0": "请输入公网地址",
+                "5rlbndz7fb00": "本地端口",
+                "5rlbndz7fgc0": "监听指定端口的请求",
+                "5rlbndz7fm40": "请选择本地端口",
+                "5rlbndz7fy00": "公网端口",
+                "5rlbndz7g400": "对外提供访问的端口",
+                "5rlbndz7g9w0": "请输入公网端口",
+                "5rlbndz7gfw0": "请输入正确的公网地址",
+                "5rlbndz7glo0": "请输入1~65535的正整数",
+                "5rlbndz7gw40": "请选择本地地址",
+                "5rlbndz7h7s0": "保存成功",
+                "localAddress": "绑定到服务器上的网卡地址,绑定到所有网卡:0.0.0.0"
+            }
+        },
+        "Menu": {
+            "index": {
+                "5rlbq599jhs0": "初始化后的菜单可在“菜单管理”页面进行维护管理"
+            }
+        },
+        "Role": {
+            "index": {
+                "5rlc4uc3p0c0": "设备接入岗",
+                "5rlc4uc3q1k0": "该角色负责设备接入模块的维护管理",
+                "5rlc4uc3q880": "运维管理岗",
+                "5rlc4uc3qdw0": "该角色负责系统运维模块的维护管理",
+                "5rlc4uc3qj00": "综合管理岗",
+                "5rlc4uc3qss0": "该角色负责系统运维和设备接入模块的维护管理"
             }
         }
     }
