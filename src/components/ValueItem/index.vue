@@ -51,7 +51,7 @@
         <j-input
             v-else-if="typeMap.get(itemType) === 'file'"
             v-model:value="myValue"
-            placeholder="请输入链接"
+            :placeholder="t('components.ValueItem.index.5rlcncp1q280')"
             allowClear
             @change='inputChange'
         >
@@ -86,9 +86,9 @@
 
         <!-- 代码编辑器弹窗 -->
         <j-modal
-            title="编辑"
-            ok-text="确认"
-            cancel-text="取消"
+            :title="t('components.ValueItem.index.5rlcncp1r7s0')"
+            :ok-text="t('components.ValueItem.index.5rlcncp1rd40')"
+            :cancel-text="t('components.ValueItem.index.5rlcncp1rho0')"
             v-model:visible="modalVis"
             width="700px"
             @cancel="modalVis = false"
@@ -112,7 +112,9 @@ import { LocalStore } from '@/utils/comm';
 import { ItemData, ITypes } from './types';
 import { FILE_UPLOAD } from '@/api/comm';
 import { Upload } from 'jetlinks-ui-components'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 type Emits = {
     (e: 'update:modelValue', data: string | number | boolean): void;
     (e: 'change', data: any, item?: any): void;

@@ -1,6 +1,6 @@
 <template>
   <div class="operator-box">
-    <j-input-search @search="search" allow-clear placeholder="搜索关键字" />
+    <j-input-search @search="search" allow-clear :placeholder="t('FRuleEditor.Operator.index.5rlca4rnhls0')" />
     <div class="tree">
       <j-tree @select="selectTree" :field-names="{ title: 'name', key: 'id', }" auto-expand-parent
         :tree-data="data">
@@ -8,26 +8,26 @@
           <div class="node">
             <div style="max-width: 180px"><Ellipsis>{{ node.name }}</Ellipsis></div>
             <div :class="node.children?.length > 0 ? 'parent' : 'add'">
-              <j-popover v-if="node.type === 'property'" placement="right" title="请选择使用值">
+              <j-popover v-if="node.type === 'property'" placement="right" :title="t('FRuleEditor.Operator.index.5rlca4rnj3s0')">
                 <template #content>
                   <j-space direction="vertical">
-                    <j-tooltip placement="right" title="实时值为空时获取上一有效值补齐，实时值不为空则使用实时值">
+                    <j-tooltip placement="right" :title="t('FRuleEditor.Operator.index.5rlca4rnjfc0')">
                       <j-button type="text" @click="recentClick(node)">
                         $recent实时值
                       </j-button>
                     </j-tooltip>
-                    <j-tooltip placement="right" title="实时值的上一有效值">
+                    <j-tooltip placement="right" :title="t('FRuleEditor.Operator.index.5rlca4rnji40')">
                       <j-button @click="lastClick(node)" type="text">
-                        上一值
+                        {{t('FRuleEditor.Operator.index.5rlca4rnjls0')}}
                       </j-button>
                     </j-tooltip>
                   </j-space>
                 </template>
-                <a>添加</a>
+                <a>{{t('FRuleEditor.Operator.index.5rlca4rnjw00')}}</a>
               </j-popover>
 
               <a v-else @click="addClick(node)">
-                添加
+                {{t('FRuleEditor.Operator.index.5rlca4rnjw00')}}
               </a>
             </div>
           </div>
@@ -46,7 +46,9 @@ import { treeFilter } from '@/utils/tree'
 import { PropertyMetadata } from '@/views/device/Product/typings';
 import { getOperator } from '@/api/device/product'
 import Markdown from 'vue3-markdown-it'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
   id: String
 })
@@ -90,7 +92,7 @@ const getData = async (id?: string) => {
   const _properties = JSON.parse(metadata).properties || [] as PropertyMetadata[]
   const properties = {
     id: 'property',
-    name: '属性',
+    name: t('FRuleEditor.Operator.index.5rlca4rnk2c0'),
     description: '',
     code: '',
     children: _properties

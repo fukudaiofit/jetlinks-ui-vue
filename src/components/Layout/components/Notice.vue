@@ -30,7 +30,9 @@ import { changeStatus_api } from '@/api/account/notificationRecord';
 import { useUserInfo } from '@/store/userInfo';
 
 import { useMenuStore } from '@/store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const { jumpPage } = useMenuStore();
 const updateCount = computed(() => useUserInfo().$state.alarmUpdateCount);
 
@@ -79,7 +81,7 @@ const subscribeNotice = () => {
                       }
                     },
                     {
-                      default: () => "标记已读"
+                      default: () => t('Layout.components.Notice.5rlcd0kkc7w0')
                     }
                   ),
             });

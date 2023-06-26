@@ -1523,6 +1523,87 @@
                 "5rlc6t9b44k0": "重选",
                 "5rlc6t9b58k0": "批量操作"
             }
+        },
+        "FileFormat": {
+            "index": {
+                "5rlc88rnw6c0": "请选择文件格式",
+                "5rlc88rnxng0": "自动启用"
+            }
+        },
+        "GeoComponent": {
+            "index": {
+                "5rlcb96qjeo0": "地理位置",
+                "5rlcb96ql8w0": "确认",
+                "5rlcb96qlqc0": "取消"
+            }
+        },
+        "InputSelect": {
+            "index": {
+                "5rlcbk16jhc0": "请选择单位"
+            }
+        },
+        "JIndicators": {
+            "index": {
+                "5rlcbyefphs0": "请输入",
+                "5rlcbyefuvk0": "请选择",
+                "5rlcbyefviw0": "范围"
+            }
+        },
+        "NormalUpload": {
+            "index": {
+                "5rlcirxqb500": "文件上传",
+                "5rlcirxqcmo0": "下载模板",
+                "5rlcirxqcts0": "进行中",
+                "5rlcirxqcys0": "已完成",
+                "5rlcirxqd400": "请上传.csv格式文件",
+                "5rlcirxqd9k0": "请上传.xlsx格式文件",
+                "5rlcirxqdf40": "失败",
+                "5rlcirxqdkg0": "暂无权限，请联系管理员",
+                "5rlcirxqdpg0": "请先上传文件",
+                "total": "总数量："
+            }
+        },
+        "PermissionButton": {
+            "index": {
+                "5rlck0ff7680": "暂无权限，请联系管理员"
+            }
+        },
+        "Player": {
+            "ScreenPlayer": {
+                "5rlckv19qic0": "单屏",
+                "5rlckv19rx40": "四分屏",
+                "5rlckv19s7o0": "九分屏",
+                "5rlckv19sf40": "全屏",
+                "5rlckv19smk0": "可保存分屏配置记录",
+                "5rlckv19sug0": "分屏名称",
+                "5rlckv19to40": "请输入名称",
+                "5rlckv19u5s0": "最多可输入64个字符",
+                "5rlckv19uek0": "保存",
+                "5rlckv19ujo0": "暂无数据",
+                "5rlckv19uok0": "确认删除?",
+                "5rlckv19uv80": "确认",
+                "5rlckv19v100": "取消",
+                "5rlckv19v8c0": "刷新",
+                "5rlckv19vg40": "保存成功",
+                "5rlckv19vn40": "保存失败"
+            }
+        },
+        "Upload": {
+            "Cropper": {
+                "5rlcmafot0w0": "图片编辑"
+            },
+            "index": {
+                "5rlcmiveuj40": "点击修改",
+                "5rlcmivew2s0": "上传失败"
+            }
+        },
+        "ValueItem": {
+            "index": {
+                "5rlcncp1q280": "请输入链接",
+                "5rlcncp1r7s0": "编辑",
+                "5rlcncp1rd40": "确认",
+                "5rlcncp1rho0": "取消"
+            }
         }
     },
     "Instance": {
@@ -5410,6 +5491,137 @@
                 "5rlc4uc3qdw0": "该角色负责系统运维模块的维护管理",
                 "5rlc4uc3qj00": "综合管理岗",
                 "5rlc4uc3qss0": "该角色负责系统运维和设备接入模块的维护管理"
+            }
+        }
+    },
+    "FRuleEditor": {
+        "Advance": {
+            "index": {
+                "5rlc8p41ek80": "设置属性规则"
+            }
+        },
+        "Debug": {
+            "index": {
+                "5rlc8zkngwo0": "属性赋值",
+                "5rlc8zknhoo0": "请对上方规则使用的属性进行赋值",
+                "5rlc8zknhuc0": "发送数据",
+                "5rlc8zknhys0": "添加条目",
+                "5rlc8zkni380": "运行结果",
+                "5rlc8zkniao0": "开始运行",
+                "5rlc8zknif40": "停止运行",
+                "5rlc8zknij80": "清空",
+                "5rlc8zkniog0": "属性ID",
+                "5rlc8zknisw0": "当前值",
+                "5rlc8zknix80": "上一值",
+                "5rlc8zknj3s0": "请编辑规则"
+            }
+        },
+        "Editor": {
+            "index": {
+                "5rlc9j4n8fo0": "请先输入标识",
+                "5rlc9j4n9io0": "设置属性规则"
+            }
+        },
+        "Operator": {
+            "index": {
+                "5rlca4rnhls0": "搜索关键字",
+                "5rlca4rnj3s0": "请选择使用值",
+                "5rlca4rnjfc0": "实时值为空时获取上一有效值补齐，实时值不为空则使用实时值",
+                "5rlca4rnji40": "实时值的上一有效值",
+                "5rlca4rnjls0": "上一值",
+                "5rlca4rnjw00": "添加",
+                "5rlca4rnk2c0": "属性"
+            }
+        }
+    },
+    "Layout": {
+        "components": {
+            "Notice": {
+                "5rlcd0kkc7w0": "标记已读"
+            },
+            "NoticeInfo": {
+                "5rlcdb49e5w0": "未读消息",
+                "5rlcdb49ibc0": "当前标记为已读",
+                "5rlcdb49itg0": "查看更多"
+            },
+            "UserInfo": {
+                "5rlcdj5d56o0": "个人中心",
+                "5rlcdj5d6tc0": "退出登录"
+            }
+        }
+    },
+    "Metadata": {
+        "ArrayParam": {
+            "index": {
+                "5rlcdyw67z80": "配置元素",
+                "5rlcdyw692c0": "说明",
+                "5rlcdyw699c0": "最多可输入200个字符",
+                "5rlcdyw69fs0": "请输入说明"
+            }
+        },
+        "BooleanParam": {
+            "index": {
+                "5rlce6hidzo0": "请输入trueText",
+                "5rlce6hifec0": "最多可输入64个字符",
+                "5rlce6hifkw0": "请输入trueValue",
+                "5rlce6hifq00": "请输入falseText",
+                "5rlce6hifvo0": "请输入falseValue",
+                "5rlce6hig180": "是",
+                "5rlce6hig9s0": "否"
+            }
+        },
+        "EnumParam": {
+            "index": {
+                "5rlcf40ymec0": "枚举项配置",
+                "5rlcf40yo200": "请输入Value",
+                "5rlcf40yocg0": "最多可输入64个字符",
+                "5rlcf40yokc0": "请输入Text",
+                "5rlcf40yors0": "新增枚举型"
+            }
+        },
+        "JsonParam": {
+            "index": {
+                "5rlcfd0mg9o0": "配置参数",
+                "5rlcfd0miqg0": "标识",
+                "5rlcfd0mj1s0": "请输入标识",
+                "5rlcfd0mj980": "最多可输入64个字符",
+                "5rlcfd0mjf00": "名称",
+                "5rlcfd0mjl00": "请输入名称",
+                "5rlcfd0mjts0": "添加参数",
+                "format": "ID只能由数字、字母、下划线、中划线组成"
+            }
+        },
+        "MetricsParam": {
+            "index": {
+                "5rlcgeizw900": "配置参数",
+                "5rlcgeizx680": "标识",
+                "5rlcgeizxcg0": "请输入标识",
+                "5rlcgeizxh00": "最多可输入64个字符",
+                "5rlcgeizxmc0": "名称",
+                "5rlcgeizxs00": "请输入名称",
+                "5rlcgeizxyo0": "指标值",
+                "5rlcgeizyeo0": "请输入指标值",
+                "5rlcgeizyoc0": "添加指标",
+                "format": "ID只能由数字、字母、下划线、中划线组成"
+            }
+        },
+        "VirtualRuleParam": {
+            "index": {
+                "5rlch8lvx5o0": "规则配置",
+                "5rlch8lvxyo0": "窗口",
+                "5rlch8lvy7g0": "请选择窗口",
+                "5rlch8lvyco0": "聚合函数",
+                "5rlch8lvyhw0": "请选择聚合函数",
+                "5rlch8lvynk0": "请输入窗口长度",
+                "5rlch8lvyt80": "请输入步长",
+                "5rlch8lvyy80": "时间窗口",
+                "5rlch8lvz6w0": "次数窗口",
+                "5rlch8lvzbw0": "窗口长度（秒）",
+                "5rlch8lvzgo0": "窗口长度（次）",
+                "5rlch8lvzls0": "窗口长度",
+                "5rlch8lvzq00": "步长（秒）",
+                "5rlch8lvzv00": "步长（次）",
+                "5rlch8lvzzk0": "步长"
             }
         }
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="notice-info-container">
         <j-tabs :activeKey="'default'">
-            <j-tab-pane key="default" tab="未读消息">
+            <j-tab-pane key="default" :tab="t('Layout.components.NoticeInfo.5rlcdb49e5w0')">
                 <div class="no-data" v-if="props.data.length === 0">
                     <img
                         src="https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg"
@@ -21,9 +21,9 @@
                         </div>
                     </j-scrollbar>
                     <div class="btns">
-                        <span @click="read()">当前标记为已读</span>
+                        <span @click="read()">{{t('Layout.components.NoticeInfo.5rlcdb49ibc0')}}</span>
                         <span @click="jumpPage('account/NotificationRecord')"
-                            >查看更多</span
+                            >{{t('Layout.components.NoticeInfo.5rlcdb49itg0')}}</span
                         >
                     </div>
                 </div>
@@ -35,7 +35,9 @@
 <script setup lang="ts">
 import { changeStatus_api } from '@/api/account/notificationRecord';
 import { useMenuStore } from '@/store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emits = defineEmits(['onAction']);
 const props = defineProps<{
     data: any[];

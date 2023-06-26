@@ -1,6 +1,6 @@
 <template>
   <j-modal
-      title="图片编辑"
+      :title="t('components.Upload.Cropper.5rlcmafot0w0')"
       visible
       :width="400"
       @cancel="cancel"
@@ -25,7 +25,9 @@
 import 'vue-cropper/dist/index.css'
 import { VueCropper } from 'vue-cropper';
 import { fileUpload } from '@/api/comm';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
   img: {
     type: String

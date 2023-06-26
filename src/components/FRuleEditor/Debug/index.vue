@@ -4,11 +4,11 @@
       <div class="header">
         <div>
           <div class="title">
-            属性赋值
-            <div class="description">请对上方规则使用的属性进行赋值</div>
+            {{t('FRuleEditor.Debug.index.5rlc8zkngwo0')}}
+            <div class="description">{{t('FRuleEditor.Debug.index.5rlc8zknhoo0')}}</div>
           </div>
           <div v-if="!isBeginning && virtualRule?.type === 'window'" class="action" @click="runScriptAgain">
-            <a style="margin-left: 75px;">发送数据</a>
+            <a style="margin-left: 75px;">{{t('FRuleEditor.Debug.index.5rlc8zknhuc0')}}</a>
           </div>
         </div>
       </div>
@@ -32,26 +32,26 @@
         <template #icon>
           <AIcon type="PlusOutlined" />
         </template>
-        添加条目
+        {{t('FRuleEditor.Debug.index.5rlc8zknhys0')}}
       </j-button>
     </div>
     <div class="right">
       <div class="header">
         <div class="title">
-          <div>运行结果</div>
+          <div>{{t('FRuleEditor.Debug.index.5rlc8zkni380')}}</div>
         </div>
         <div class="action">
           <div>
             <a v-if="isBeginning" @click="beginAction">
-              开始运行
+              {{t('FRuleEditor.Debug.index.5rlc8zkniao0')}}
             </a>
             <a v-else @click="stopAction">
-              停止运行
+              {{t('FRuleEditor.Debug.index.5rlc8zknif40')}}
             </a>
           </div>
           <div>
             <a @click="clearAction">
-              清空
+              {{t('FRuleEditor.Debug.index.5rlc8zknij80')}}
             </a>
           </div>
         </div>
@@ -78,8 +78,9 @@ import { useRuleEditorStore } from '@/store/ruleEditor';
 import moment from 'moment';
 import { getWebSocket } from '@/utils/websocket';
 import { PropertyMetadata } from '@/views/device/Product/typings';
+import { useI18n } from 'vue-i18n'
 
-
+const { t } = useI18n()
 const props = defineProps({
   virtualRule: Object as PropType<Record<any, any>>,
   id: String,
@@ -95,15 +96,15 @@ type propertyType = {
 const property = ref<propertyType[]>([])
 
 const columns = [{
-  title: '属性ID',
+  title: t('FRuleEditor.Debug.index.5rlc8zkniog0'),
   dataIndex: 'id',
   key: 'id'
 }, {
-  title: '当前值',
+  title: t('FRuleEditor.Debug.index.5rlc8zknisw0'),
   dataIndex: 'current',
   key: 'current'
 }, {
-  title: '上一值',
+  title: t('FRuleEditor.Debug.index.5rlc8zknix80'),
   dataIndex: 'last',
   key: 'last'
 }, {
@@ -137,7 +138,7 @@ const runScript = () => {
   }
   if (!props.virtualRule?.script) {
     isBeginning.value = true;
-    message.warning('请编辑规则');
+    message.warning(t('FRuleEditor.Debug.index.5rlc8zknj3s0'));
     return;
   }
   ws.value = getWebSocket(`virtual-property-debug-${props.id}-${new Date().getTime()}`,

@@ -17,21 +17,21 @@
         >
             <j-button>
                 <template #icon><AIcon type="UploadOutlined" /></template>
-                文件上传
+                {{t('components.NormalUpload.index.5rlcirxqb500')}}
             </j-button>
         </j-upload>
         <div style="margin-left: 20px">
             <j-space>
-                下载模板
+                {{t('components.NormalUpload.index.5rlcirxqcmo0')}}
                 <a @click="downFile('xlsx')">.xlsx</a>
                 <a @click="downFile('csv')">.csv</a>
             </j-space>
         </div>
     </j-space>
     <div style="margin-top: 20px" v-if="importLoading">
-        <j-badge v-if="flag" status="processing" text="进行中" />
-        <j-badge v-else status="success" text="已完成" />
-        <span>总数量：{{ count }}</span>
+        <j-badge v-if="flag" status="processing" :text="t('components.NormalUpload.index.5rlcirxqcts0')" />
+        <j-badge v-else status="success" :text="t('components.NormalUpload.index.5rlcirxqcys0')" />
+        <span>{{t('components.NormalUpload.index.total') + count }}</span>
         <p style="color: red">{{ errMessage }}</p>
     </div>
 </template>
@@ -47,7 +47,9 @@ import {
 } from '@/api/device/instance';
 import { EventSourcePolyfill } from 'event-source-polyfill';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 type Emits = {
     (e: 'update:modelValue', data: string[]): void;
 };
@@ -102,10 +104,10 @@ const beforeUpload = (_file: any) => {
     const isCsv = _file.type === 'text/csv';
     const isXlsx = _file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
     if (!isCsv && fileType !== 'xlsx') {
-        onlyMessage('请上传.csv格式文件', 'warning');
+        onlyMessage(t('components.NormalUpload.index.5rlcirxqd400'), 'warning');
     }
     if (!isXlsx && fileType !== 'csv') {
-        onlyMessage('请上传.xlsx格式文件', 'warning');
+        onlyMessage(t('components.NormalUpload.index.5rlcirxqd9k0'), 'warning');
     }
     return (isCsv && fileType !== 'xlsx') || (isXlsx && fileType !== 'csv');
 };
@@ -128,17 +130,17 @@ const submitData = async (fileUrl: string) => {
                 dt += temp;
                 count.value = dt;
             } else {
-                errMessage.value = res.message || '失败';
+                errMessage.value = res.message || t('components.NormalUpload.index.5rlcirxqdf40');
             }
         };
         source.onerror = (e: { status: number }) => {
-            if (e.status === 403) errMessage.value = '暂无权限，请联系管理员';
+            if (e.status === 403) errMessage.value = t('components.NormalUpload.index.5rlcirxqdkg0');
             flag.value = false;
             source.close();
         };
         source.onopen = () => {};
     } else {
-        message.error('请先上传文件');
+        message.error(t('components.NormalUpload.index.5rlcirxqdpg0'));
     }
 };
 
