@@ -85,7 +85,8 @@
         />
 
         <j-button type="dashed" @click="addRow" class="add-btn">
-            <AIcon type="PlusOutlined" />新增
+            <AIcon type="PlusOutlined" />
+            {{t('Save.components.RequestTable.5rl7i5k9yvw0')}}
         </j-button>
     </div>
 </template>

@@ -59,7 +59,7 @@
                                         <PermissionButton
                                             :hasPermission="`${permission}:export`"
                                             :popConfirm="{
-                                                title: `确认导出？`,
+                                                title: t('system.Permission.index.export'),
                                                 onConfirm: () =>
                                                     table.clickExport(),
                                             }"

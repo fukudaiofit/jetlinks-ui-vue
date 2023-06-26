@@ -29,7 +29,7 @@
                         { validator: checkUrl, trigger: 'blur' },
                     ]">
                         <j-input v-model:value="form.data.shareConfig.url"
-                            placeholder="请输入r2bdc或者jdbc连接地址，示例：r2dbc:mysql://127.0.0.1:3306/test" />
+                            :placeholder="t('DataSource.components.EditDialog.joinAddress')" />
                     </j-form-item>
                 </j-col>
             </j-row>
@@ -40,7 +40,7 @@
                         { validator: validateAdminUrl },
                     ]">
                         <j-input v-model:value="form.data.shareConfig.adminUrl"
-                            placeholder="请输入管理地址，示例：http://localhost:15672" />
+                            :placeholder="t('DataSource.components.EditDialog.manageAddress')" />
                     </j-form-item>
                 </j-col>
             </j-row>
@@ -50,7 +50,7 @@
                         { required: true, message: t('DataSource.components.EditDialog.5rg9yza91ho0') },
                         { validator: validateAddress },
                     ]">
-                        <j-input v-model:value="form.data.shareConfig.addresses" placeholder="请输入链接地址，示例：localhost:5672" />
+                        <j-input v-model:value="form.data.shareConfig.addresses" :placeholder="t('DataSource.components.EditDialog.linkAddress')" />
                     </j-form-item>
                 </j-col>
             </j-row>

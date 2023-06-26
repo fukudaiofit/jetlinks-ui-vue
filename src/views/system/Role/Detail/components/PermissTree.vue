@@ -15,14 +15,14 @@
                         v-model:checked="selectedAll"
                         :indeterminate="indeterminate"
                         @change="selectAllChange"
-                        >菜单权限</j-checkbox
+                        >{{t('Detail.components.PermissTree.5rkjp3nvhzw0')}}</j-checkbox
                     >
                 </div>
                 <div v-else-if="column.key === 'data'">
-                    <span style="">数据权限</span>
+                    <span style="">{{t('Detail.components.PermissTree.5rkjp3nvj940')}}</span>
                     <j-tooltip>
                         <template #title
-                            >勾选任意数据权限均能看到自己创建的数据权限</template
+                            >{{t('Detail.components.PermissTree.5rkjp3nvji00')}}</template
                         >
                         <AIcon type="QuestionCircleOutlined" />
                     </j-tooltip>
@@ -30,7 +30,7 @@
                         v-model:checked="bulkShow"
                         @change="bulkValue = ''"
                         style="margin-left: 10px"
-                        >批量设置</j-checkbox
+                        >{{t('Detail.components.PermissTree.5rkjp3nvjpc0')}}</j-checkbox
                     >
                     <j-select
                         v-show="bulkShow"
@@ -39,7 +39,7 @@
                         style="width: 200px"
                         :options="bulkOptions"
                         @change="bulkChange"
-                        placeholder="请选择"
+                        :placeholder="t('Detail.components.PermissTree.5rkjp3nvjv40')"
                     ></j-select>
                 </div>
                 <div v-else>
@@ -72,7 +72,7 @@
 
                 <div v-else-if="column.key === 'data'">
                     <span v-if="record.accessSupport === undefined">
-                        不支持数据权限配置，默认可查看全部数据
+                        {{t('Detail.components.PermissTree.5rkjp3nvk240')}}
                     </span>
                     <div v-else-if="record.accessSupport.value === 'support'">
                         <j-radio-group
@@ -110,7 +110,9 @@ import {
   MESSAGE_SUBSCRIBE_MENU_CODE
 } from '@/utils/consts'
 import { isNoCommunity } from '@/utils/utils'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n() 
 const emits = defineEmits(['update:selectItems']);
 const route = useRoute();
 const props = defineProps({
@@ -122,13 +124,13 @@ const flatTableData: tableItemType[] = []; // 表格数据的扁平化版本--�
 
 const columns = [
     {
-        title: '菜单权限',
+        title: t('Detail.components.PermissTree.5rkjp3nvhzw0'),
         dataIndex: 'menu',
         key: 'menu',
         width: '260px',
     },
     {
-        title: '操作权限',
+        title: t('Detail.components.PermissTree.5rkjp3nvka40'),
         dataIndex: 'action',
         key: 'action',
         width: '260px',
@@ -137,7 +139,7 @@ const columns = [
 
 if(isNoCommunity){
     columns.push({
-        title: '数据权限',
+        title: t('Detail.components.PermissTree.5rkjp3nvj940'),
         dataIndex: 'data',
         key: 'data',
         width: '50%',

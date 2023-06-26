@@ -13,7 +13,8 @@
 }">
                     <template #headerTitle>
                         <PermissionButton type="primary" :hasPermission="`${permission}:add`" @click="table.openDialog({})">
-                            <AIcon type="PlusOutlined" />新增
+                            <AIcon type="PlusOutlined" />
+                            {{t('system.DataSource.index.5rkk8mo8z800')}}
                         </PermissionButton>
                     </template>
                     <template #state="slotProps">
@@ -77,7 +78,7 @@
                                     ? t('system.DataSource.index.5rg9zyk75cs0')
                                     : t('system.DataSource.index.5rg9zyk75i40'),
                             }" :danger="true" :popConfirm="{
-    title: `确认删除`,
+    title: t('system.DataSource.index.deleteTip'),
     onConfirm: () => table.clickDel(slotProps),
 }" :disabled="table.getRowStatus(slotProps)">
                                 <AIcon type="DeleteOutlined" />

@@ -14,7 +14,8 @@
                     <template #headerTitle>
                         <PermissionButton :hasPermission="`${permission}:add`" type="primary"
                             @click="table.openDialog('add')">
-                            <AIcon type="PlusOutlined" />新增
+                            <AIcon type="PlusOutlined" />
+                            {{t('system.User.index.5rkjhmivlto0')}}
                         </PermissionButton>
                     </template>
                     <template #type="slotProps">
@@ -56,7 +57,7 @@
                                     ? t('system.User.index.5rg8tfggne40')
                                     : t('system.User.index.5rg8tfggnlw0'),
                             }" :popConfirm="{
-    title: `确认删除`,
+    title: t('system.User.index.deleteTip'),
     onConfirm: () =>
         table.clickDel(slotProps.id),
 }" :disabled="slotProps.status">

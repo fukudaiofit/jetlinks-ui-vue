@@ -30,7 +30,8 @@
                             type="primary"
                             @click="table.clickAdd('handle')"
                         >
-                            <AIcon type="PlusOutlined" />资产分配
+                            <AIcon type="PlusOutlined" />
+                            {{t('Department.device.index.5rkjjv4hxso0')}}
                         </PermissionButton>
                         <j-dropdown trigger="hover">
                             <j-button>{{t('Department.device.index.5rg94fwttp80')}}</j-button>
@@ -40,14 +41,15 @@
                                         <PermissionButton
                                             :hasPermission="`${permission}:bind`"
                                             :popConfirm="{
-                                                title: `是否批量解除绑定`,
+                                                title: t('Department.device.index.untieTip'),
                                                 onConfirm: () =>
                                                     table.clickUnBind(),
                                             }"
                                         >
                                             <AIcon
                                                 type="DisconnectOutlined"
-                                            />批量解绑
+                                            />
+                                            {{t('Department.device.index.5rkjjz9ny0c0')}}
                                         </PermissionButton>
                                     </j-menu-item>
                                     <j-menu-item>
@@ -57,7 +59,8 @@
                                         >
                                             <AIcon
                                                 type="EditOutlined"
-                                            />批量编辑
+                                            />
+                                            {{t('Department.device.index.5rkjk30q66w0')}}
                                         </PermissionButton>
                                     </j-menu-item>
                                 </j-menu>

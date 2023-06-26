@@ -736,6 +736,22 @@
         "components": {
             "MSelect": {
                 "5rcyej679y00": "请选择"
+            },
+            "AddUserDialog": {
+                "5rkjopn8q0s0": "新增",
+                "5rkjopn8rco0": "姓名",
+                "5rkjopn8rmg0": "用户名",
+                "5rkjopn8ru80": "请至少选择一项",
+                "5rkjopn8s180": "操作成功"
+            },
+            "PermissTree": {
+                "5rkjp3nvhzw0": "菜单权限",
+                "5rkjp3nvj940": "数据权限",
+                "5rkjp3nvji00": "勾选任意数据权限均能看到自己创建的数据权限",
+                "5rkjp3nvjpc0": "批量设置",
+                "5rkjp3nvjv40": "请选择",
+                "5rkjp3nvk240": "不支持数据权限配置，默认可查看全部数据",
+                "5rkjp3nvka40": "操作权限"
             }
         },
         "Diagnose": {
@@ -882,6 +898,38 @@
                 "5rg4ez76nv80": "请选择功能",
                 "5rg4ez76o0w0": "参数列表",
                 "5rg4ez76o6w0": "请输入参数列表"
+            }
+        },
+        "Permiss": {
+            "index": {
+                "5rkjrj4xs2s0": "基本信息",
+                "5rkjrj4xtio0": "名称",
+                "5rkjrj4xtpw0": "请输入名称",
+                "5rkjrj4xtv40": "最多可输入64个字符",
+                "5rkjrj4xu080": "请输入角色名称",
+                "5rkjrj4xu5k0": "说明",
+                "5rkjrj4xuac0": "请输入说明",
+                "5rkjrj4xufc0": "权限分配",
+                "5rkjrj4xukc0": "保存",
+                "5rkjrj4xuro0": "操作成功"
+            }
+        },
+        "User": {
+            "index": {
+                "5rkjrwlp1mw0": "正常",
+                "5rkjrwlp3es0": "禁用",
+                "5rkjrwlp3v80": "解绑",
+                "5rkjrwlp4300": "姓名",
+                "5rkjrwlp4ac0": "用户名",
+                "5rkjrwlp4i80": "创建时间",
+                "5rkjrwlp4po0": "状态",
+                "5rkjrwlp4ws0": "操作",
+                "5rkjrwlp54g0": "请勾选数据",
+                "5rkjrwlp5b00": "操作成功",
+                "5rkjscuv3cs0": "新增",
+                "5rkjscuv4po0": "批量解绑",
+                "untieTip": "确认解绑",
+                "batchUntieTip": "是否批量解除绑定"
             }
         }
     },
@@ -1418,12 +1466,14 @@
             "BuildIn": {
                 "5rga8u77ze40": "手动输入",
                 "5rga8u780uo0": "内置参数",
-                "5rga8u781ms0": "请选择参数"
+                "5rga8u781ms0": "请选择参数",
+                "input":"请输入"
             },
             "InputFile": {
                 "5rga92u1g280": "请上传文件",
                 "5rga92u1h5k0": "上传附件",
-                "5rga92u1hbs0": "请上传正确格式图片"
+                "5rga92u1hbs0": "请上传正确格式图片",
+                "limit":"图片大小必须小于4M"
             },
             "Tag": {
                 "5rga993m65w0": "请选择标签"
@@ -1459,7 +1509,8 @@
             },
             "MUpload": {
                 "5rgb1dttv2w0": "替换图标",
-                "5rgb1dttw0g0": "删除图标"
+                "5rgb1dttw0g0": "删除图标",
+                "formatTip": "请上传正确格式的图片"
             }
         }
     },
@@ -2384,10 +2435,10 @@
                 "5rg8qqd9zug0": "操作失败！",
                 "5rg8qqda00c0": "删除",
                 "5rg8qqda05s0": "确认删除?",
-                "channel":"通道数量：",
-                "SIPID":"上级SIP ID",
-                "SIPAddress":"上级SIP 地址",
-                "deleteTip":"请先禁用, 再删除"
+                "channel": "通道数量：",
+                "SIPID": "上级SIP ID",
+                "SIPAddress": "上级SIP 地址",
+                "deleteTip": "请先禁用, 再删除"
             }
         },
         "DashBoard": {
@@ -2828,56 +2879,39 @@
                 "5rgaa0i4l8w0": "请选择"
             },
             "Does": {
-                "5rgb1lt1h000": "内部独立应用适用于将",
-                "5rgb1lt1ibk0": "官方开发",
-                "5rgb1lt1ijs0": "的其他应用与",
-                "5rgb1lt1ip80": "物联网平台相互集成",
-                "5rgb1lt1itc0": "内部独立应用的",
-                "5rgb1lt1ixw0": "后端服务",
-                "5rgb1lt1j1s0": "相互",
-                "5rgb1lt1j5k0": "独立运行",
-                "5rgb1lt1j9s0": "集成其他应用的",
-                "5rgb1lt1jdk0": "前端页面",
-                "5rgb1lt1jh00": "通常还需要配置API服务",
-                "5rgb1lt1jl40": "物联网平台",
-                "5rgb1lt1jow0": "请求",
-                "5rgb1lt1jsk0": "其他应用",
-                "5rgb1lt1jw40": "的接口，以实现将物联网平台集成至其他应用系统。如需实现",
-                "5rgb1lt1jzk0": "登录后可以访问",
-                "5rgb1lt1k3g0": "页面，",
-                "5rgb1lt1k740": "还需要配置单点登录",
-                "5rgb1lt1kas0": "外部应用",
-                "5rgb1lt1kec0": "通常还需要配置页面集成",
-                "5rgb1lt1kjs0": "配置API服务后，系统将",
-                "5rgb1lt1kmo0": "自动创建",
-                "5rgb1lt1kq80": "对应的",
-                "5rgb1lt1ksw0": "账号/密码",
-                "5rgb1lt1kwc0": "第三方用户",
-                "5rgb1lt1kz40": "可调用的API服务",
-                "5rgb1lt1l1w0": "在其应用管理卡片的",
-                "5rgb1lt1l4o0": "页面，进行",
-                "5rgb1lt1l7k0": "自定义配置",
-                "5rgb1lt1lac0": "通过",
-                "5rgb1lt1ldc0": "第三方平台账号",
-                "5rgb1lt1lg40": "登录到物联网平台。",
-                "5rgb1lt1lis0": "内部集成应用适用于将",
-                "5rgb1lt1llk0": "后端服务在同一个环境运行",
-                "5rgb1lt1lo80": "至物联网平台中。集成后系统顶部将新增对应的应用管理菜单",
+                "5rgb1lt1h000": "内部独立应用适用于将官方开发的其他应用与物联网平台相互集成，例如将可视化平台集成至物联网平台，或者将物联网平台集成至可视化平台。以实现多处访问、集中管控的业务场景。",
+                "5rgb1lt1itc0": "内部独立应用的后端服务相互独立运行，互不影响。",
+                "5rgb1lt1j9s0": "集成其他应用的前端页面至物联网平台中。为实现应用与物联网平台数据互联互通，通常还需要配置API服务。",
+                "5rgb1lt1jl40": "物联网平台请求其他应用 的接口，以实现将物联网平台集成至其他应用系统。如需实现其他应用 登录后可以访问物联网平台页面，还需要配置单点登录。",
+                "5rgb1lt1kas0": "外部应用请求物联网平台的接口，实现物联网平台的服务调用能力， 通常还需要配置页面集成。 配置API服务后，系统将自动创建对应的“第三方应用”用户。用户的 账号/密码分别对应appid/secureKey。",
+                "5rgb1lt1kwc0": "第三方用户可调用的API服务在其应用管理卡片的其他-{'>'}赋权 页面，进行自定义配置。",
+                "5rgb1lt1lac0": "通过第三方平台账号登录到物联网平台。",
+                "5rgb1lt1lis0": "内部集成应用适用于将官方开发的其他应用与物联网平台相互集成 ，例如将可视化平台集成至物联网平台，或者将物联网平台集成至可视化平台。以实现多处访问、集中管控的业务场景。",
+                "5rgb1lt1llk0": "内部独立应用的后端服务在同一个环境运行。",
+                "5rgb1lt1lo80": "集成其他应用的前端页面 至物联网平台中。集成后系统顶部将新增对应的应用管理菜单",
                 "5rgb1lt1lr80": "钉钉开放平台：",
-                "5rgb1lt1luc0": "钉钉企业内部应用适用于通过钉钉登录",
+                "5rgb1lt1luc0": "钉钉企业内部应用适用于通过钉钉登录物联网平台",
                 "5rgb1lt1lx40": "通过钉钉账号登录到物联网平台。",
                 "5rgb1lt1lzw0": "微信开放平台：",
-                "5rgb1lt1m300": "微信网站应用适用于通过微信授权登录",
+                "5rgb1lt1m300": "微信网站应用适用于通过微信授权登录物联网平台",
                 "5rgb1lt1m5s0": "通过微信账号登录到物联网平台。",
                 "5rgb1lt1m900": "概述",
-                "5rgb1lt1mbs0": "第三方应用适用于",
-                "5rgb1lt1meo0": "第三方应用",
-                "5rgb1lt1mj80": "与",
-                "5rgb1lt1mm80": "还需要配置API服务",
-                "5rgb1lt1mp00": "的接口，以实现将物联网平台集成至其他应用。如需实现",
-                "5rgb1lt1mrs0": "通过API服务配置，请求物联网平台接口，实现",
-                "5rgb1lt1mug0": "的服务调用能力，",
-                "5rgb1lt1mx00": "暂未开发"
+                "5rgb1lt1mbs0": "第三方应用适用于第三方应用与物联网平台相互集成 。例如将公司业务管理系统集成至物联网平台，或者将物联网平台集成至业务管理系统。以实现多处访问、集中管控的业务场景。",
+                "5rgb1lt1mm80": "集成其他应用的前端页面至物联网平台中。为实现应用与物联网平台数据互联互通， 还需要配置API服务。",
+                "5rgb1lt1mp00": "物联网平台请求第三方应用 的接口，以实现将物联网平台集成至其他应用。如需实现第三方应用登录后可以访问 物联网平台页面，还需要配置单点登录。",
+                "5rgb1lt1mrs0": "第三方应用通过API服务配置，请求物联网平台接口，实现物联网平台 的服务调用能力，通常还需要配置页面集成。",
+                "5rgb1lt1kmo0": "配置API服务后，系统将自动创建对应的“第三方应用”用户。用户的 账号/密码分别对应appid/secureKey。",
+                "5rgb1lt1kz40": "第三方用户可调用的API服务在其应用管理卡片的其他-{'>'}赋权 页面，进行自定义配置。",
+                "5rgb1lt1ldc0": "通过第三方平台账号登录到物联网平台。",
+                "5rgb1lt1mx00": "暂未开发",
+                "summarize": "概述",
+                "accessExplain": "接入方式说明",
+                "5rkm01ocqy40": "物联网平台去请求其他应用的接口，以实现将物联网平台集成至其他应用",
+                "integration": "页面集成",
+                "API": "API客户端",
+                "APIService": "API服务",
+                "enter": "单点登录",
+                "explain": "接入方式说明"
             },
             "EditForm": {
                 "5rgb2bzputc0": "名称",
@@ -2965,10 +2999,23 @@
                 "5rgb2bzq5lc0": "请输入完整的请求头",
                 "5rgb2bzq5o40": "请输入完整的请求参数",
                 "5rgb2bzq5wo0": "配置单点登录需同时配置API客服端",
-                "5rgb2bzq6080": "保存成功"
+                "5rgb2bzq6080": "保存成功",
+                "argument": "自定义参数,格式${name}",
+                "APIClient": "API客户端",
+                "tokenAddress": "token地址",
+                "authentication": "bearer认证",
+                "APIService": "API服务",
+                "whiteList": "IP白名单",
+                "IDTip": "输入从用户信息接口返回数据中的用户ID字段。示例:result.id",
+                "nameTip": "输入从用户信息接口返回数据中的用户名字段。示例:result.name",
+                "avatarTip": "输入从用户信息接口返回数据中的用户头像字段。示例:result.avatar",
+                "client": "API客户端",
+                "service": "API服务",
+                "errAddress": "不是正确的IP地址"
             },
             "RequestTable": {
-                "5rgb30d4w4g0": "该字段为必填字段"
+                "5rgb30d4w4g0": "该字段为必填字段",
+                "5rl7i5k9yvw0": "新增"
             }
         },
         "Device": {
@@ -4125,10 +4172,10 @@
                 "5rg8ogcitds0": "取消",
                 "5rg8ogcitwc0": "确定",
                 "5rg8ogciu4g0": "下载",
-                "suc":"成功：",
-                "lose":"失败：",
-                "push":"推送通道数量：",
-                "pushed":"已推送通道数量："
+                "suc": "成功：",
+                "lose": "失败：",
+                "push": "推送通道数量：",
+                "pushed": "已推送通道数量："
             }
         },
         "Save": {
@@ -4196,26 +4243,26 @@
                 "5rg8oqlcktg0": "请输入正确的IP地址",
                 "5rg8oqlckw00": "端口请输入1~65535之间的正整数",
                 "5rg8oqlckyk0": "操作成功",
-                "ID":"上级SIP ID",
-                "IDTip":"请输入上级SIP ID",
-                "gatewayID":"本地SIP ID",
-                "gatewayIDRules":"请输入网关侧的SIP ID",
-                "gatewayIDTip":"网关侧的SIP ID",
-                "SIPAddress":"SIP地址",
-                "longRange":"SIP远程地址",
-                "summarize":"概述",
-                "explain":"配置说明",
-                "domain":"SIP ID域",
-                "SIP":"上级SIP",
-                "IDAddress":"SIP ID地址",
-                "localAddress":"SIP本地地址",
-                "user":"用户",
-                "connection":"如有疑问请联系系统运维人员。",
-                "value":"值",
-                "versions":"厂商/型号/版本号",
-                "heartbeat":"心跳周期",
-                "interval":"注册间隔",
-                "intervalContent":"SIP代理与 SIP服务器出现1s误"
+                "ID": "上级SIP ID",
+                "IDTip": "请输入上级SIP ID",
+                "gatewayID": "本地SIP ID",
+                "gatewayIDRules": "请输入网关侧的SIP ID",
+                "gatewayIDTip": "网关侧的SIP ID",
+                "SIPAddress": "SIP地址",
+                "longRange": "SIP远程地址",
+                "summarize": "概述",
+                "explain": "配置说明",
+                "domain": "SIP ID域",
+                "SIP": "上级SIP",
+                "IDAddress": "SIP ID地址",
+                "localAddress": "SIP本地地址",
+                "user": "用户",
+                "connection": "如有疑问请联系系统运维人员。",
+                "value": "值",
+                "versions": "厂商/型号/版本号",
+                "heartbeat": "心跳周期",
+                "interval": "注册间隔",
+                "intervalContent": "SIP代理与 SIP服务器出现1s误"
             }
         }
     },
@@ -4233,7 +4280,7 @@
                 "5rg8sgvikwg0": "系统logo",
                 "5rg8sgvil1k0": "点击修改",
                 "5rg8sgvil600": "推荐尺寸200*200",
-                "5rg8sgvilak0": "支持jpg,png,jfif,pjp,pjpeg,jpeg",
+                "5rg8sgvilak0": "支持4M以内的图片：支持jpg,png,jfif,pjp,pjpeg,jpeg",
                 "5rg8sgvilf40": "浏览器页签",
                 "5rg8sgviljk0": "浏览器tab页中显示的图片元素",
                 "5rg8sgvilo80": "推荐尺寸64*64",
@@ -4249,7 +4296,12 @@
                 "5rg8sgvin6c0": "暂无权限，请联系管理员",
                 "5rg8sgvinc80": "系统logo上传失败，请稍后再试",
                 "5rg8sgvini00": "背景图上传失败，请稍后再试",
-                "5rg8sgvinrk0": "浏览器页签上传失败，请稍后再试"
+                "5rg8sgvinrk0": "浏览器页签上传失败，请稍后再试",
+                "inputApi": "请输入高德API Key",
+                "basePath": "格式：{http/https}: //{前端所在服务器IP地址}:{前端暴露的服务端口}/api",
+                "imgTip": "请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片",
+                "imgLimit": "图片大小必须小于4M",
+                "icon": "请上传ico格式的图片"
             }
         },
         "User": {
@@ -4268,7 +4320,9 @@
                 "5rg8tfggo6w0": "手机号",
                 "5rg8tfggoa80": "邮箱",
                 "5rg8tfggodw0": "操作",
-                "5rg8tfggoh80": "操作成功"
+                "5rg8tfggoh80": "操作成功",
+                "5rkjhmivlto0": "新增",
+                "deleteTip": "确认删除"
             }
         },
         "Menu": {
@@ -4284,7 +4338,9 @@
                 "5rg9r9vz8sw0": "说明",
                 "5rg9r9vz8wg0": "创建时间",
                 "5rg9r9vz8zk0": "操作",
-                "5rg9r9vz9300": "操作成功!"
+                "5rg9r9vz9300": "操作成功!",
+                "5rkjz12gyhs0": "新增",
+                "deleteTip": "是否删除该菜单"
             }
         },
         "Permission": {
@@ -4309,7 +4365,8 @@
                 "5rg9un6blsk0": "导出成功",
                 "5rg9un6bm1c0": "导出错误",
                 "5rg9un6bmdc0": "操作成功",
-                "5rg9un6bmnw0": "操作成功!"
+                "5rg9un6bmnw0": "操作成功!",
+                "export": "确认导出？"
             }
         },
         "Relationship": {
@@ -4324,7 +4381,8 @@
                 "5rg9wmwc1ik0": "被关联方",
                 "5rg9wmwc1ms0": "说明",
                 "5rg9wmwc1qs0": "操作",
-                "5rg9wmwc1y00": "操作成功!"
+                "5rg9wmwc1y00": "操作成功!",
+                "deleteTip": "确认删除"
             }
         },
         "DataSource": {
@@ -4344,7 +4402,9 @@
                 "5rg9zyk76880": "正常",
                 "5rg9zyk76d80": "操作",
                 "5rg9zyk76i40": "操作成功!",
-                "5rg9zyk76mo0": "操作成功"
+                "5rg9zyk76mo0": "操作成功",
+                "5rkk8mo8z800": "新增",
+                "deleteTip": "确认删除"
             }
         },
         "Platforms": {
@@ -4399,13 +4459,34 @@
                 "5rgb3hpe7600": "其他",
                 "5rgb3hpe7980": "集成菜单",
                 "5rgb3hpe7dw0": "赋权",
-                "5rgb3hpe7hk0": "查看API"
+                "5rgb3hpe7hk0": "查看API",
+                "5rl7inkolgo0": "新增"
             }
         },
         "License": {
             "index": {
                 "5rgb4hv02440": "请配置License",
                 "5rgb4hv03280": "配置成功"
+            }
+        },
+        "Department": {
+            "index": {
+                "5rkjmzizvfg0": "产品",
+                "5rkjmzizwis0": "设备",
+                "5rkjmzizwog0": "用户"
+            }
+        },
+        "Role": {
+            "index": {
+                "5rkjulbvr2k0": "新增",
+                "5rkjulbvs5s0": "编辑",
+                "5rkjulbvsf80": "删除",
+                "5rkjulbvsm80": "标识",
+                "5rkjulbvst00": "名称",
+                "5rkjulbvt0o0": "说明",
+                "5rkjulbvt7c0": "操作",
+                "5rkjulbvtd80": "操作成功!",
+                "deleteTip": "确定要删除吗"
             }
         }
     },
@@ -4487,7 +4568,8 @@
                 "5rg93yswrq40": "新增子组织",
                 "5rg93yswru40": "删除",
                 "5rg93yswrxs0": "暂无数据",
-                "5rg93ysws1w0": "操作成功"
+                "5rg93ysws1w0": "操作成功",
+                "deleteTip": "确定要删除吗"
             },
             "NextDialog": {
                 "5rg946akc0o0": "绑定",
@@ -4510,7 +4592,11 @@
                 "5rg94fwtzt00": "解除绑定",
                 "5rg94fwtzxk0": "请勾选需要编辑的数据",
                 "5rg94fwu02w0": "请勾选需要解绑的数据",
-                "5rg94fwu0bc0": "操作成功"
+                "5rg94fwu0bc0": "操作成功",
+                "5rkjjv4hxso0": "资产分配",
+                "5rkjjz9ny0c0": "批量解绑",
+                "5rkjk30q66w0": "批量编辑",
+                "untieTip": "是否批量解除绑定"
             }
         },
         "product": {
@@ -4530,7 +4616,8 @@
                 "5rg94stwufg0": "操作成功",
                 "5rg95ejbqcs0": "资产分配",
                 "5rg95ejbrus0": "批量解绑",
-                "5rg95ejbs580": "批量编辑"
+                "5rg95ejbs580": "批量编辑",
+                "untieTip": "是否批量解除绑定"
             }
         },
         "user": {
@@ -4544,7 +4631,8 @@
                 "5rg967xq5qs0": "请勾选需要解绑的数据",
                 "5rg967xq5u80": "操作成功",
                 "5rg96l7e8ts0": "绑定用户",
-                "5rg96l7ebi00": "批量解绑"
+                "5rg96l7ebi00": "批量解绑",
+                "untieTip": "是否解除绑定"
             }
         }
     },
@@ -4620,7 +4708,8 @@
                 "5rg9pbi5vog0": "保存",
                 "5rg9pbi5vrg0": "该编码重复",
                 "5rg9pbi5vws0": "操作成功！",
-                "5rg9pbi5vzk0": "操作失败！"
+                "5rg9pbi5vzk0": "操作失败！",
+                "addressTip": "请正确填写地址，以/开头"
             },
             "ButtonMange": {
                 "5rg9pphvu7k0": "编辑",
@@ -4631,7 +4720,9 @@
                 "5rg9pphvvu00": "名称",
                 "5rg9pphvvy80": "说明",
                 "5rg9pphvw280": "操作",
-                "5rg9pphvw6k0": "操作成功"
+                "5rg9pphvw6k0": "操作成功",
+                "5rkjy042lx40": "新增",
+                "deleteTip": "确认删除"
             },
             "index": {
                 "5rg9qkmkmi80": "基本信息",
@@ -4644,7 +4735,8 @@
                 "5rg9qt8xgc00": "保存",
                 "5rg9qt8xgp40": "保存后当前系统菜单数据将被覆盖，确认操作？",
                 "5rg9qt8xgxg0": "操作成功",
-                "5rg9qt8xhdc0": "仅支持3级菜单"
+                "5rg9qt8xhdc0": "仅支持3级菜单",
+                "5rkjyrsj4s00": "单击可切换菜单未选中/选中状态；操作父级菜单时，对应子菜单状态将默认与其同步，可以单独操作调整；支持拖拽菜单调整展示顺序。"
             }
         }
     },
@@ -4666,7 +4758,8 @@
                 "5rg9t8ka1sc0": "操作成功",
                 "5rg9t8ka1x00": "操作类型",
                 "5rg9t8ka23w0": "说明",
-                "5rg9t8ka28w0": "操作"
+                "5rg9t8ka28w0": "操作",
+                "input": "请输入"
             }
         }
     },
@@ -4719,7 +4812,10 @@
                 "5rg9yza93l80": "请输入正确的URL",
                 "5rg9yza93rw0": "请输入正确的管理地址",
                 "5rg9yza93wk0": "请输入正确的链接地址",
-                "5rg9yza941g0": "操作成功"
+                "5rg9yza941g0": "操作成功",
+                "joinAddress": "请输入r2bdc或者jdbc连接地址，示例：r2dbc:mysql://127.0.0.1:3306/test",
+                "manageAddress": "请输入管理地址，示例：http://localhost:15672",
+                "linkAddress": "请输入链接地址，示例：localhost:5672"
             }
         },
         "Management": {
@@ -4778,7 +4874,9 @@
                 "5rga2ieo5a80": "响应参数",
                 "5rga2ieo5e00": "参数名称",
                 "5rga2ieo5hs0": "参数值",
-                "5rga2ieo5lc0": "操作"
+                "5rga2ieo5lc0": "操作",
+                "5rkkbgpz2t00": "新增",
+                "deleteTip": "确认删除"
             },
             "ChooseApi": {
                 "5rga3nx6p880": "保存",
@@ -4811,7 +4909,11 @@
                 "5rga3xyx9580": "请求方式",
                 "5rga3xyx9hw0": "请求参数",
                 "5rga3xyx9n00": "签名方式",
-                "5rga3xyxals0": "签名示例时间戳"
+                "5rga3xyxals0": "签名示例时间戳",
+                "ascii": " 将参数key按ascii排序得到: ",
+                "Secretkey": "使用拼接时间戳以及密钥得到：",
+                "SDK": "java SDK接入说明",
+                "SDKTip": "JetLinks平台java SDK基于java 8版本开发。"
             },
             "LeftTree": {
                 "5rga4bzkg8w0": "首页"
@@ -5169,6 +5271,26 @@
                 "5rgbkd1fuhk0": "获取路径：“雁飞智连CMP平台”--“我的应用”--“应用列表”",
                 "5rgbkd1fuk00": "接入秘钥。",
                 "5rgbkd1fums0": "接口参数中的"
+            }
+        }
+    },
+    "Role": {
+        "components": {
+            "AddDialog": {
+                "5rkjo56mia80": "新增",
+                "5rkjo56mj380": "名称",
+                "5rkjo56mjf00": "请输入名称",
+                "5rkjo56mjko0": "最多可输入64个字符",
+                "5rkjo56mjpw0": "请输入角色名称",
+                "5rkjo56mjvk0": "说明",
+                "5rkjo56mk0g0": "请输入说明",
+                "5rkjo56mk5g0": "操作成功"
+            }
+        },
+        "Detail": {
+            "index": {
+                "5rkju6fy9nw0": "权限分配",
+                "5rkju6fyaws0": "用户管理"
             }
         }
     }

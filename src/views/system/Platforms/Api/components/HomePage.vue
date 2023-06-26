@@ -25,10 +25,10 @@
                 </p>
                 <div class="div-border">
                     <div class="h3-text">
-                        将参数key按ascii排序得到: pageIndex=0&pageSize=20
+                        {{t('Api.components.HomePage.ascii')}} pageIndex=0&pageSize=20
                     </div>
                     <div class="h3-text">
-                        使用拼接时间戳以及密钥得到:
+                        {{t('Api.components.HomePage.Secretkey')}}
                         pageIndex=0&pageSize=201574993804802testSecure
                     </div>
                     <div class="h3-text">
@@ -109,10 +109,10 @@
             </div>
         </div>
         <div>
-            <h2>java SDK接入说明</h2>
+            <h2>{{ t('Api.components.HomePage.SDK') }}</h2>
             <div class="div-border">
                 <div class="h3-text">
-                    JetLinks平台java SDK基于java 8版本开发。
+                    {{ t('Api.components.HomePage.SDKTip') }}
                 </div>
             </div>
 

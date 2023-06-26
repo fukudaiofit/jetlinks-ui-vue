@@ -22,7 +22,8 @@
                             :hasPermission="`${permission}:add`"
                             @click="table.toDetails({})"
                         >
-                            <AIcon type="PlusOutlined" />新增
+                            <AIcon type="PlusOutlined" />
+                            {{t('system.Menu.index.5rkjz12gyhs0')}}
                         </PermissionButton>
                         <j-button
                             v-if="admin"
@@ -64,7 +65,7 @@
                                 :hasPermission="`${permission}:delete`"
                                 :tooltip="{ title: t('system.Menu.index.5rg9r9vz88g0') }"
                                 :popConfirm="{
-                                    title: `是否删除该菜单`,
+                                    title: t('system.Menu.index.deleteTip'),
                                     onConfirm: () => table.clickDel(slotProps),
                                 }"
                             >

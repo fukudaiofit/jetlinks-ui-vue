@@ -78,7 +78,7 @@
                             :rules="[
                                 {
                                     required: column.key !== 'describe',
-                                    message: `请输入${column.title}`,
+                                    message: `${t('Permission.components.EditDialog.input') + column.title}`,
                                 },
                                 {
                                     max: 64,

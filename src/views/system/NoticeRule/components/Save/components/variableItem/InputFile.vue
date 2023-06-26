@@ -68,7 +68,7 @@ const handleBeforeUpload = (file: any) => {
     }
     const isSize = file.size / 1024 / 1024 < 4;
     if (!isSize) {
-        onlyMessage(`图片大小必须小于4M`, 'error');
+        onlyMessage(t('components.variableItem.InputFile.limit'), 'error');
     }
     return isJpgOrPng && isSize;
 };

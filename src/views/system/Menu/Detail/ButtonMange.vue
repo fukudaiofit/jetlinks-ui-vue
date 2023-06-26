@@ -13,7 +13,8 @@
                     :hasPermission="`${permission}:update`"
                     @click="openDialog('add', {})"
                 >
-                    <AIcon type="PlusOutlined" />新增
+                    <AIcon type="PlusOutlined" />
+                    {{t('Menu.Detail.ButtonMange.5rkjy042lx40')}}
                 </PermissionButton>
             </template>
             <template #action="slotProps">
@@ -38,7 +39,7 @@
                         type="link"
                         :tooltip="{ title: t('Menu.Detail.ButtonMange.5rg9pphvvfg0') }"
                         :popConfirm="{
-                            title: `确认删除`,
+                            title: t('Menu.Detail.ButtonMange.deleteTip'),
                             onConfirm: () => table.clickDel(slotProps),
                         }"
                     >

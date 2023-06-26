@@ -38,7 +38,7 @@
                                         <PermissionButton
                                             :hasPermission="`${permission}:bind`"
                                             :popConfirm="{
-                                                title: `是否批量解除绑定`,
+                                                title: t('Department.product.index.untieTip'),
                                                 onConfirm: () =>
                                                     table.clickUnBind(),
                                             }"

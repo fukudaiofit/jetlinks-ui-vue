@@ -43,7 +43,7 @@
                 allowClear
                 style="width: calc(100% - 120px)"
                 v-else-if="item.type === 'number'"
-                :placeholder="`请输入${item.name}`"
+                :placeholder="`${t('components.variableItem.BuildIn.input') + item.name}`"
                 @change="itemOnChange"
             />
             <j-input
@@ -51,7 +51,7 @@
                 allowClear
                 style="width: calc(100% - 120px)"
                 v-else
-                :placeholder="`请输入${item.name}`"
+                :placeholder="`${t('components.variableItem.BuildIn.input') + item.name}`"
                 @change="(e) => itemOnChange(e.target.value)"
             />
         </template>

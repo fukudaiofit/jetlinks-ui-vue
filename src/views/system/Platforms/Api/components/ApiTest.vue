@@ -68,7 +68,7 @@
                                     <PermissionButton
                                         type="text"
                                         :popConfirm="{
-                                            title: `确定删除`,
+                                            title: t('Api.components.ApiTest.deleteTip'),
                                             onConfirm: () =>
                                                 requestBody.clickDel(index),
                                         }"
@@ -110,7 +110,8 @@
                         @click="requestBody.addRow"
                         style="width: 100%; text-align: center; margin-top: 5px"
                     >
-                        <AIcon type="PlusOutlined" />新增
+                        <AIcon type="PlusOutlined" />
+                       {{ t('Api.components.ApiTest.5rkkbgpz2t00') }}
                     </j-button>
                 </div>
                 <j-monaco-editor

@@ -28,7 +28,7 @@
 
                             <PermissionButton :danger="true" :hasPermission="`${permission}:delete`" type="link"
                                 :tooltip="{ title: t('system.Relationship.index.5rg9wmwc0vk0') }" :popConfirm="{
-                                    title: `确认删除`,
+                                    title: t('system.Relationship.index.deleteTip'),
                                     onConfirm: () => table.clickDel(slotProps),
                                 }" :disabled="slotProps.status">
                                 <AIcon type="DeleteOutlined" />

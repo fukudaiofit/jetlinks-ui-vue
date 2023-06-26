@@ -6,7 +6,6 @@
                 <div class="left-content" :class="{ active: show }">
                     <Tree
                         :deviceId="deviceId"
-                        :on-tree-load="(e) => (show = e)"
                         :on-select="handleSelect"
                     />
                 </div>

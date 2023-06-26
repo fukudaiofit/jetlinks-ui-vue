@@ -101,7 +101,7 @@
                                         message: t('Menu.Detail.BasicInfo.5rg9pbi5u100'),
                                     },
                                     { max: 128, message: t('Menu.Detail.BasicInfo.5rg9pbi5u4g0') },
-                                    { pattern: /^\// ,message:'请正确填写地址，以/开头'},
+                                    { pattern: /^\// ,message:t('Menu.Detail.BasicInfo.addressTip')},
                                 ]"
                             >
                                 <j-input

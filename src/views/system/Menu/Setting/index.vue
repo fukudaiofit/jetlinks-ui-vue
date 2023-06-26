@@ -4,7 +4,8 @@
             <div class="top">
                 <AIcon style="padding: 12px" type="ExclamationCircleOutlined" />
                 <span
-                    >单击可切换菜单未选中/选中状态；操作父级菜单时，对应子菜单状态将默认与其同步，可以单独操作调整；支持拖拽菜单调整展示顺序。
+                    >
+                    {{t('Menu.Setting.index.5rkjyrsj4s00')}}
                 </span>
             </div>
             <div class="content">

@@ -31,7 +31,8 @@
                             :hasPermission="`${permission}:add`"
                             @click="dialogVisible = true"
                         >
-                            <AIcon type="PlusOutlined" />新增
+                            <AIcon type="PlusOutlined" />
+                            {{t('system.Role.index.5rkjulbvr2k0')}}
                         </PermissionButton>
                     </template>
 
@@ -41,7 +42,7 @@
                                 :hasPermission="`${permission}:update`"
                                 type="link"
                                 :tooltip="{
-                                    title: '编辑',
+                                    title: t('system.Role.index.5rkjulbvs5s0'),
                                 }"
                                 @click="
                                     jumpPage(`system/Role/Detail`, {
@@ -54,9 +55,9 @@
                             <PermissionButton
                                 type="link"
                                 :hasPermission="`${permission}:delete`"
-                                :tooltip="{ title: '删除' }"
+                                :tooltip="{ title: t('system.Role.index.5rkjulbvsf80') }"
                                 :popConfirm="{
-                                    title: `确定要删除吗`,
+                                    title: t('system.Role.index.deleteTip'),
                                     onConfirm: () => clickDel(slotProps),
                                 }"
                             >
@@ -78,7 +79,9 @@ import AddDialog from './components/AddDialog.vue';
 import { getRoleList_api, delRole_api } from '@/api/system/role';
 import { message } from 'jetlinks-ui-components';
 import { useMenuStore } from '@/store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n() 
 const permission = 'system/Role';
 const { jumpPage } = useMenuStore();
 
@@ -86,7 +89,7 @@ const isSave = !!useRoute().query.save;
 
 const columns = [
     {
-        title: '标识',
+        title: t('system.Role.index.5rkjulbvsm80'),
         dataIndex: 'id',
         key: 'id',
         ellipsis: true,
@@ -96,7 +99,7 @@ const columns = [
         },
     },
     {
-        title: '名称',
+        title: t('system.Role.index.5rkjulbvst00'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -105,7 +108,7 @@ const columns = [
         },
     },
     {
-        title: '说明',
+        title: t('system.Role.index.5rkjulbvt0o0'),
         key: 'description',
         ellipsis: true,
         dataIndex: 'description',
@@ -114,7 +117,7 @@ const columns = [
         },
     },
     {
-        title: '操作',
+        title: t('system.Role.index.5rkjulbvt7c0'),
         dataIndex: 'action',
         key: 'action',
         width: 120,
@@ -129,7 +132,7 @@ const clickDel = (row: any) => {
     delRole_api(row.id).then((resp: any) => {
         if (resp.status === 200) {
             tableRef.value?.reload();
-            message.success('操作成功!');
+            message.success(t('system.Role.index.5rkjulbvtd80'));
         }
     });
 };

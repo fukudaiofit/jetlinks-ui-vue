@@ -43,7 +43,7 @@
                     <PermissionButton
                         :hasPermission="`${permission}:bind`"
                         :popConfirm="{
-                            title: `是否解除绑定`,
+                            title: t('Department.user.index.untieTip'),
                             onConfirm: () => table.unBind(),
                         }"
                     >
@@ -67,7 +67,7 @@
                             type="link"
                             :hasPermission="`${permission}:bind`"
                             :popConfirm="{
-                                title: `是否解除绑定`,
+                                title: t('Department.user.index.untieTip'),
                                 onConfirm: () => table.unBind(slotProps),
                             }"
                         >

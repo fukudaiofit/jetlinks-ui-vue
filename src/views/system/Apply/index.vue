@@ -10,7 +10,8 @@
                         <div style="display: flex; align-items: center">
                             <PermissionButton :hasPermission="`${permission}:add`" type="primary"
                                 @click="() => table.toSave()">
-                                <AIcon type="PlusOutlined" />新增
+                                <AIcon type="PlusOutlined" />
+                                {{t('system.Apply.index.5rl7inkolgo0')}}
                             </PermissionButton>
                             <p style="margin: 0 0 0 30px; color: #0000008c">
                                 <AIcon type="ExclamationCircleOutlined" style="margin-right: 12px" />

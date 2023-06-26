@@ -70,7 +70,7 @@
                               :hasPermission="`${permission}:delete`"
                               :tooltip="{ title: t('Department.components.LeftTree.5rg93yswru40') }"
                               :popConfirm="{
-                                  title: `确定要删除吗`,
+                                  title: t('Department.components.LeftTree.deleteTip'),
                                   onConfirm: () => delDepartment(data.id),
                               }"
                           >

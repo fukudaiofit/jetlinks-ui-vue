@@ -115,7 +115,7 @@
                         <template #label>
                             <FormLabel
                                 :text="t('Save.components.EditForm.5rgb2bzpy140')"
-                                tooltip="自定义参数,格式${name}"
+                                :tooltip="t('Save.components.EditForm.argument')"
                             />
                         </template>
 
@@ -137,7 +137,7 @@
                 >
                     <template #header>
                         <span>
-                            API客户端
+                            {{t('Save.components.EditForm.APIClient')}}
                             <span
                                 v-show="form.errorNumInfo.apiClient.size"
                                 class="error-info"
@@ -216,7 +216,7 @@
                         >
                             <template #label>
                                 <FormLabel
-                                    text="token地址"
+                                    :text="t('Save.components.EditForm.tokenAddress')"
                                     required
                                     :tooltip="t('Save.components.EditForm.5rgb2bzpzgw0')"
                                 />
@@ -332,7 +332,7 @@
                                     {{t('Save.components.EditForm.5rgb2bzq0co0')}}
                                 </j-select-option>
                                 <j-select-option value="bearer">
-                                    bearer认证
+                                    {{t('Save.components.EditForm.authentication')}}
                                 </j-select-option>
                             </j-select>
                         </j-form-item>
@@ -611,7 +611,7 @@
                 >
                     <template #header>
                         <span>
-                            API服务
+                            {{t('Save.components.EditForm.APIService')}}
                             <span
                                 v-show="form.errorNumInfo.apiServer.size"
                                 class="error-info"
@@ -773,7 +773,7 @@
                             />
                         </j-form-item>
                         <j-form-item
-                            label="IP白名单"
+                            :label="t('Save.components.EditForm.whiteList')"
                             :name="['apiServer', 'ipWhiteList']"
                             :rules="[
                                 {
@@ -985,7 +985,7 @@
                         >
                             <template #label>
                                 <FormLabel
-                                    text="token地址"
+                                    :text="t('Save.components.EditForm.tokenAddress')"
                                     required
                                     :tooltip="t('Save.components.EditForm.5rgb2bzpzgw0')"
                                 />
@@ -1087,7 +1087,7 @@
                                     form.data.sso.configuration.oauth2
                                         .userProperty.userId
                                 "
-                                placeholder="输入从用户信息接口返回数据中的用户ID字段。示例:result.id"
+                                :placeholder="t('Save.components.EditForm.IDTip')"
                             />
                         </j-form-item>
                         <j-form-item
@@ -1111,7 +1111,7 @@
                                     form.data.sso.configuration.oauth2
                                         .userProperty.username
                                 "
-                                placeholder="输入从用户信息接口返回数据中的用户名字段。示例:result.name"
+                                :placeholder="t('Save.components.EditForm.nameTip')"
                             />
                         </j-form-item>
                         <j-form-item :label="t('Save.components.EditForm.5rgb2bzq4a00')">
@@ -1120,7 +1120,7 @@
                                     form.data.sso.configuration.oauth2
                                         .userProperty.avatar
                                 "
-                                placeholder="输入从用户信息接口返回数据中的用户头像字段。示例:result.avatar"
+                                :placeholder="t('Save.components.EditForm.avatarTip')"
                             />
                         </j-form-item>
                     </div>
@@ -1552,11 +1552,11 @@ const joinOptions = computed(() => {
                 value: 'page',
             },
             {
-                label: 'API客户端',
+                label: t('Save.components.EditForm.client'),
                 value: 'apiClient',
             },
             {
-                label: 'API服务',
+                label: t('Save.components.EditForm.service'),
                 value: 'apiServer',
             },
             {
@@ -1571,7 +1571,7 @@ const joinOptions = computed(() => {
                 value: 'page',
             },
             {
-                label: 'API客户端',
+                label: t('Save.components.EditForm.client'),
                 value: 'apiClient',
             },
         ];
@@ -1596,11 +1596,11 @@ const joinOptions = computed(() => {
                 value: 'page',
             },
             {
-                label: 'API客户端',
+                label: t('Save.components.EditForm.client'),
                 value: 'apiClient',
             },
             {
-                label: 'API服务',
+                label: t('Save.components.EditForm.service'),
                 value: 'apiServer',
             },
             {
@@ -1892,7 +1892,7 @@ const validateIP = (_rule: Rule, value: string) => {
       return new Promise((resolve, reject) => {
           !errorIPList?.length
               ? resolve('')
-              : reject(`[${errorIPList}]不是正确的IP地址`);
+              : reject(`[${errorIPList}]${t('Save.components.EditForm.errAddress')}`);
       });
     } else {
       return Promise.resolve()

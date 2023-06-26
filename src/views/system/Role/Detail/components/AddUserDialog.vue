@@ -1,7 +1,7 @@
 <template>
     <j-modal
         visible
-        title="新增"
+        :title="t('Detail.components.AddUserDialog.5rkjopn8q0s0')"
         width="1000px"
         @ok="confirm"
         @cancel="emits('update:visible', false)"
@@ -44,7 +44,9 @@
 <script setup lang="ts">
 import { getUserByRole_api, bindUser_api } from '@/api/system/role';
 import { message } from 'jetlinks-ui-components';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n() 
 const emits = defineEmits(['refresh', 'update:visible']);
 const props = defineProps<{
     visible: boolean;
@@ -53,7 +55,7 @@ const props = defineProps<{
 
 const columns = [
     {
-        title: '姓名',
+        title: t('Detail.components.AddUserDialog.5rkjopn8rco0'),
         dataIndex: 'name',
         key: 'name',
         search: {
@@ -61,7 +63,7 @@ const columns = [
         },
     },
     {
-        title: '用户名',
+        title: t('Detail.components.AddUserDialog.5rkjopn8rmg0'),
         dataIndex: 'username',
         key: 'username',
         search: {
@@ -96,11 +98,11 @@ const getUserList = (oParams: any) => {
 
 const confirm = () => {
     if (selectedRowKeys.value.length < 1) {
-        message.error('请至少选择一项');
+        message.error(t('Detail.components.AddUserDialog.5rkjopn8ru80'));
     } else {
         bindUser_api(props.roleId, selectedRowKeys.value).then((resp) => {
             if (resp.status === 200) {
-                message.success('操作成功');
+                message.success(t('Detail.components.AddUserDialog.5rkjopn8s180'));
                 emits('refresh');
                 emits('update:visible', false);
             }

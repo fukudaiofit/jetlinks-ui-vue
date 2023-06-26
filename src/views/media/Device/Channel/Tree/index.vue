@@ -36,7 +36,7 @@ const { t } = useI18n()
 interface TreeProps {
     deviceId: string;
     onSelect: (id: string) => void;
-    onTreeLoad: (type: boolean) => void;
+    // onTreeLoad: (type: boolean) => void;
 }
 
 const props = defineProps<TreeProps>();
@@ -47,7 +47,7 @@ const selectedKeys = ref<string[]>([]);
 const getTreeData = async (id: string, data?: any) => {
     const { result } = await ChannelApi.queryTree(id, data);
     treeData.value[0].children = result || [];
-    props.onTreeLoad(treeData.value[0].children.length > 10);
+    // props.onTreeLoad(treeData.value[0].children.length > 10);
     treeData.value = treeData.value;
 };
 

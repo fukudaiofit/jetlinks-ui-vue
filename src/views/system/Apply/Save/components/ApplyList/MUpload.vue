@@ -128,7 +128,7 @@ const beforeUpload = (file: UploadProps['fileList'][number]) => {
         if (props.errorMessage) {
             message.error(props.errorMessage);
         } else {
-            message.error(`请上传正确格式的图片`);
+            message.error(t('components.ApplyList.MUpload.formatTip'));
         }
         return false;
     }
