@@ -32,14 +32,14 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const operationMap = new Map();
-operationMap.set('connection', tt('Message.Log.index.5rcyfoe9hqo0'));
-operationMap.set('auth', tt('Message.Log.index.5rcyfoe9jk00'));
-operationMap.set('decode', tt('Message.Log.index.5rcyfoe9juc0'));
-operationMap.set('encode', tt('Message.Log.index.5rcyfoe9k180'));
-operationMap.set('request', tt('Message.Log.index.5rcyfoe9kak0'));
-operationMap.set('response', tt('Message.Log.index.5rcyfoe9ki00'));
-operationMap.set('downstream', tt('Message.Log.index.5rcyfoe9koc0'));
-operationMap.set('upstream', tt('Message.Log.index.5rcyfoe9ku80'));
+operationMap.set('connection', t('Message.Log.index.5rcyfoe9hqo0'));
+operationMap.set('auth', t('Message.Log.index.5rcyfoe9jk00'));
+operationMap.set('decode', t('Message.Log.index.5rcyfoe9juc0'));
+operationMap.set('encode', t('Message.Log.index.5rcyfoe9k180'));
+operationMap.set('request', t('Message.Log.index.5rcyfoe9kak0'));
+operationMap.set('response', t('Message.Log.index.5rcyfoe9ki00'));
+operationMap.set('downstream', t('Message.Log.index.5rcyfoe9koc0'));
+operationMap.set('upstream', t('Message.Log.index.5rcyfoe9ku80'));
 
 const visible = ref<boolean>(false);
 

@@ -88,6 +88,7 @@ const messageArr = computed(() => {
 });
 
 const subscribeLog = () => {
+    
     const id = `device-debug-${instanceStore.current?.id}`;
     const topic = `/debug/device/${instanceStore.current?.id}/trace`;
     diagnoseRef.value = getWebSocket(id, topic, {})
@@ -123,13 +124,13 @@ const subscribeLog = () => {
                     };
                 }
                 const list: any[] = _.cloneDeep(dialogList.value);
-                const t = list.find(
+                const n = list.find(
                     (item) =>
                         item.traceId === data.traceId &&
                         data.downstream === item.downstream &&
                         data.upstream === item.upstream,
                 );
-                if (t) {
+                if (n) {
                     const arr = list.map((item) => {
                         if (item.traceId === data.traceId) {
                             item.list.push(data);

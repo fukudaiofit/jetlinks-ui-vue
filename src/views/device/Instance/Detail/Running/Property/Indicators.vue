@@ -24,13 +24,13 @@
                         <j-form-item
                             :rules="{
                                 required: true,
-                                message: `请${
+                                message: `${
                                     ['date', 'boolean'].includes(
                                         data?.valueType?.type,
                                     )
                                         ? t('Running.Property.Indicators.5rcypfk51j00')
                                         : t('Running.Property.Indicators.5rcypfk51tc0')
-                                }指标值`,
+                                }`,
                             }"
                             :name="['metrics', index, 'value', 0]"
                         >
@@ -71,13 +71,13 @@
                                 :name="['metrics', index, 'value', 1]"
                                 :rules="{
                                     required: true,
-                                    message: `请${
+                                    message: `${
                                         ['date', 'boolean'].includes(
                                             data?.valueType?.type,
                                         )
                                             ? t('Running.Property.Indicators.5rcypfk51j00')
                                             : t('Running.Property.Indicators.5rcypfk51tc0')
-                                    }指标值`,
+                                    }`,
                                 }"
                             >
                                 <ValueItem

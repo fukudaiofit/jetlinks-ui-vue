@@ -70,7 +70,8 @@
                 "5rcy4wlxp6o0": "Operation successful!",
                 "5rcy4wlxpf80": "Operation failed!",
                 "5rcy4wlxpls0": "Explain",
-                "5rcy4wlxprw0": "Add a new category"
+                "5rcy4wlxprw0": "Add a new category",
+                "verify": "Confirm"
             }
         },
         "Instance": {
@@ -760,8 +761,16 @@
             "index": {
                 "5rcyh18y5ak0": "Connection status",
                 "5rcyh18y6wg0": "Message communication",
-                "diagnosed": "Diagnosed",
+                "diagnosed": "{count} number has been diagnosed",
                 "number": "A"
+            },
+            "util": {
+                "diagnosing": "Under diagnosis",
+                "connectErr": "Find connection problems",
+                "connectSuc": "Normal connection status",
+                "diagnosed": "XX cases have been diagnosed",
+                "dealErr": "Please handle the connection exception",
+                "debugChannel": "Message communication is now debuggable"
             }
         },
         "EdgeMap": {
@@ -1771,7 +1780,8 @@
                 "5rg4mi4y9s00": "Operation successful!",
                 "5rg4mi4ya0g0": "Operation failed",
                 "5rg4mi4ya8g0": "Operation failed!",
-                "5rh473it3qc0": "Belonging product"
+                "5rh473it3qc0": "Belonging product",
+                "IDRepeat": "Duplicate ID"
             }
         },
         "Process": {
@@ -1780,7 +1790,10 @@
                 "5rcy8rtodx00": "Synchronization",
                 "5rcy8rtoe500": "Enabling all device",
                 "5rcy8rtoecc0": "Synchronizing device state",
-                "5rcy8rtoeic0": "Finish"
+                "5rcy8rtoeic0": "Finish",
+                "suc": "{count} success rules",
+                "err": "Enable failure: {count}",
+                "imperfection": "The configuration item in the instance information page is incomplete"
             }
         },
         "Import": {
@@ -1938,7 +1951,47 @@
                 "joinDisposition": "Device access configuration",
                 "in": "Medium",
                 "message": "Information, report any piece of data",
-                "contactadministrator": "Please contact the administrator to provide"
+                "contactadministrator": "Please contact the administrator to provide",
+                "inspect": "Check whether the device network is normal, and ensure that the device is connected to：SIP{' '}",
+                "platform": "The three-party cloud platforms need to send a message to notify the platform, triggering the device status to online",
+                "platformTip": "Check whether the configuration items of the three-party platform are correct",
+                "underdevelopment": "underdevelopment",
+                "connection": "Connection details",
+                "gatewayTip": "Check whether the access gateway status is normal. If the access gateway status is disabled, the connection fails",
+                "repair": "One-click repair",
+                "rediagnosis": "rediagnosis"
+            },
+            "ManualInspection": {
+                "inspectTip": "Check whether the configuration item is correctly filled. If you are sure that the item does not need diagnosis, do not need diagnosis",
+                "ignore": "ignore",
+                "explain": "Diagnostic item description",
+                "address": "Interface address",
+                "informTokne": "Notification Token",
+                "cluster": "cluster",
+                "domain": "SIP domain",
+                "SIPAddress": "SIP address",
+                "share": "Shared configuration",
+                "independent": "Independent configuration",
+                "Host": "Public network Host",
+                "node": "node",
+                "nodeName": "Node name",
+                "labour": "Manual inspection",
+                "edit": "Go to modify",
+                "confirm": "confirm"
+            },
+            "util": {
+                "network": "Network component",
+                "networkDesc": "Check whether the configuration of network components is correct. If the configuration is incorrect, the device connection fails",
+                "diagnosing": "Under diagnosis...",
+                "gateway": "Device access gateway",
+                "gatewayDesc": "Check whether the access gateway status is normal. If the access gateway status is disabled, the connection fails",
+                "product": "Product status",
+                "productDesc": "Check whether the product status is normal. If the device is disabled, the device connection fails",
+                "device": "Device status",
+                "deviceDesc": "Check whether the device status is normal. If the device status is disabled, the device connection fails",
+                "gatewayDesc2": "Check whether the access gateway status of the device is normal and the gateway configuration is correct",
+                "parentDevice": "Gateway parent",
+                "parentDeviceDesc": "Check whether the parent device of the gateway is normal. If the device is disabled or offline, the connection fails"
             }
         }
     },
@@ -2118,8 +2171,8 @@
             "Indicators": {
                 "5rcypfk4yvo0": "Edit the indicator",
                 "5rcypfk512w0": "Indicator configuration trigger condition can be referenced on the scenario linkage pack",
-                "5rcypfk51j00": "Choose",
-                "5rcypfk51tc0": "Input",
+                "5rcypfk51j00": "Please select a pointer value",
+                "5rcypfk51tc0": "Please enter the indicator value",
                 "5rcypfk521k0": "Indicator value",
                 "5rcypfk52c40": "Operation successful!"
             },

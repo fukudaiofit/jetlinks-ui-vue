@@ -70,7 +70,8 @@
                 "5rcy4wlxp6o0": "操作成功！",
                 "5rcy4wlxpf80": "操作失败！",
                 "5rcy4wlxpls0": "说明",
-                "5rcy4wlxprw0": "新增分类"
+                "5rcy4wlxprw0": "新增分类",
+                "verify":"确认"
             }
         },
         "Instance": {
@@ -760,8 +761,16 @@
             "index": {
                 "5rcyh18y5ak0": "连接状态",
                 "5rcyh18y6wg0": "消息通信",
-                "diagnosed": "已诊断",
+                "diagnosed": "已诊断{count}个",
                 "number": "个"
+            },
+            "util": {
+                "diagnosing": "正在诊断中",
+                "connectErr": "发现连接问题",
+                "connectSuc": "连接状态正常",
+                "diagnosed": "已诊断XX个",
+                "dealErr": "请处理连接异常",
+                "debugChannel": "现在可调试消息通信"
             }
         },
         "EdgeMap": {
@@ -1771,7 +1780,8 @@
                 "5rg4mi4y9s00": "操作成功！",
                 "5rg4mi4ya0g0": "操作失败",
                 "5rg4mi4ya8g0": "操作失败！",
-                "5rh473it3qc0": "所属产品"
+                "5rh473it3qc0": "所属产品",
+                "IDRepeat":"ID重复"
             }
         },
         "Process": {
@@ -1780,7 +1790,10 @@
                 "5rcy8rtodx00": "同步",
                 "5rcy8rtoe500": "正在启用全部设备",
                 "5rcy8rtoecc0": "正在同步设备状态",
-                "5rcy8rtoeic0": "完成"
+                "5rcy8rtoeic0": "完成",
+                "suc": "成功：{count}条",
+                "err": "启用失败：{ errCount }条",
+                "imperfection": "实例信息页面中的配置项未完善"
             }
         },
         "Import": {
@@ -1938,7 +1951,47 @@
                 "joinDisposition": "设备接入配置",
                 "in": "中",
                 "message": "信息，任意上报一条数据",
-                "contactadministrator": "请联系管理员提供"
+                "contactadministrator": "请联系管理员提供",
+                "inspect": "请检查设备网络是否畅通，并确保设备已连接到：SIP{' '}",
+                "platform": "需要三方云平台主动发送一条消息通知到本平台，触发设备状态为在线",
+                "platformTip": "请检查三方平台配置项是否填写正确",
+                "underdevelopment": "未开发",
+                "connection": "连接详情",
+                "gatewayTip": "诊断设备接入网关状态是否正常，禁用状态将导致连接失败",
+                "repair": "一键修复",
+                "rediagnosis": "重新诊断"
+            },
+            "ManualInspection": {
+                "inspectTip": "请检查配置项是否填写正确，若您确定该项无需诊断可",
+                "ignore": "忽略",
+                "explain": "诊断项说明",
+                "address": "接口地址",
+                "informTokne": "通知Token",
+                "cluster": "集群",
+                "domain": "SIP 域",
+                "SIPAddress": "SIP 地址",
+                "share": "共享配置",
+                "independent": "独立配置",
+                "Host": "公网 Host",
+                "node": "节点",
+                "nodeName": "节点名称",
+                "labour": "人工检查",
+                "edit": "去修改",
+                "confirm": "确认无误"
+            },
+            "util": {
+                "network": "网络组件",
+                "networkDesc": "诊断网络组件配置是否正确，配置错误将导致设备连接失败",
+                "diagnosing": "正在诊断中...",
+                "gateway": "设备接入网关",
+                "gatewayDesc": "诊断设备接入网关状态是否正常，禁用状态将导致连接失败",
+                "product": "产品状态",
+                "productDesc": "诊断产品状态是否正常，禁用状态将导致设备连接失败",
+                "device": "设备状态",
+                "deviceDesc": "诊断设备状态是否正常，禁用状态将导致设备连接失败",
+                "gatewayDesc2": "诊断设备接入网关状态是否正常，网关配置是否正确",
+                "parentDevice": "网关父设备",
+                "parentDeviceDesc": "诊断网关父设备状态是否正常，禁用或离线将导致连接失败"
             }
         }
     },
@@ -2118,8 +2171,8 @@
             "Indicators": {
                 "5rcypfk4yvo0": "编辑指标",
                 "5rcypfk512w0": "场景联动页面可引用指标配置触发条件",
-                "5rcypfk51j00": "选择",
-                "5rcypfk51tc0": "输入",
+                "5rcypfk51j00": "请选择指标值",
+                "5rcypfk51tc0": "请输入指标值",
                 "5rcypfk521k0": "指标值",
                 "5rcypfk52c40": "操作成功！"
             },

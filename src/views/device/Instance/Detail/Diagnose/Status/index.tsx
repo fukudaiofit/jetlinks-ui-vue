@@ -2,7 +2,7 @@ import { Badge, Button, message, Popconfirm, Space } from "jetlinks-ui-component
 import TitleComponent from '@/components/TitleComponent/index.vue'
 import styles from './index.module.less'
 import type { ListProps } from './util'
-import { networkInitList, childInitList, cloudInitList, mediaInitList, TextColorMap, StatusMap, modifyArrayList, isExit, gatewayList, urlMap } from './util'
+import { getNetworkInitList, getChildInitList, getCloudInitList, getMediaInitList, TextColorMap, StatusMap, modifyArrayList, isExit, gatewayList, urlMap } from './util'
 import { useInstanceStore } from "@/store/instance"
 import { startNetwork, startGateway, getGatewayDetail, queryGatewayState, queryProtocolDetail, detail, queryProductState, queryProductConfig, queryDeviceConfig, _deploy } from '@/api/device/instance'
 import { PropType, VNode } from "vue"
@@ -1414,7 +1414,7 @@ const Status = defineComponent({
                                     status="default"
                                     text={
                                         <span>
-                                            请检查设备网络是否畅通，并确保设备已连接到：SIP{' '}
+                                             {t('Instance.tsx.index.inspect')}
                                             <span style={{ marginLeft: 15 }}>
                                                 <Badge color={address.health === -1 ? 'red' : 'green'} />
                                                 {address.address}
@@ -1438,7 +1438,7 @@ const Status = defineComponent({
                                     status="default"
                                     text={
                                         <span>
-                                            请检查设备网络是否畅通，并确保设备已连接到：SIP{' '}
+                                            {t('Instance.tsx.index.inspect')}
                                             <span style={{ marginLeft: 15 }}>
                                                 <Badge color={address.health === -1 ? 'red' : 'green'} />
                                                 {address.address}
@@ -1457,10 +1457,10 @@ const Status = defineComponent({
                     item.push(
                         <Badge
                             status="default"
-                            text="需要三方云平台主动发送一条消息通知到本平台，触发设备状态为在线"
+                            text={t('Instance.tsx.index.platform')}
                         />,
                     );
-                    item.push(<Badge status="default" text="请检查三方平台配置项是否填写正确" />);
+                    item.push(<Badge status="default" text={t('Instance.tsx.index.platformTip')} />);
                 } else if (props.providerType === 'channel') {
                 }
                 info = {
@@ -1485,7 +1485,7 @@ const Status = defineComponent({
             const { providerType } = props
             let arr: any[] = [];
             if (providerType === 'network') {
-                list.value = [...networkInitList];
+                list.value = [...(getNetworkInitList(t))];
                 arr = [
                     diagnoseNetwork,
                     diagnoseGateway,
@@ -1495,7 +1495,7 @@ const Status = defineComponent({
                     diagnoseDeviceAuthConfig,
                 ];
             } else if (providerType === 'child-device') {
-                list.value = [...childInitList];
+                list.value = [...(getChildInitList(t))];
                 arr = [
                     diagnoseGateway,
                     diagnoseParentDevice,
@@ -1505,13 +1505,13 @@ const Status = defineComponent({
                     diagnoseDeviceAuthConfig,
                 ];
             } else if (providerType === 'media') {
-                list.value = [...mediaInitList];
+                list.value = [...(getMediaInitList(t))];
                 arr = [diagnoseGateway, diagnoseProduct, diagnoseDevice];
             } else if (providerType === 'cloud') {
-                list.value = [...cloudInitList];
+                list.value = [...(getCloudInitList(t))];
                 arr = [diagnoseGateway, diagnoseProduct, diagnoseDevice, diagnoseCTWing, diagnoseOnenet];
             } else if (providerType === 'channel') {
-                message.error('未开发');
+                message.error(t('Instance.tsx.index.underdevelopment'));
                 return;
             }
             if (arr.length > 0) {
@@ -1550,7 +1550,7 @@ const Status = defineComponent({
 
         return () => <div class={styles['statusBox']}>
             <div class={styles["statusHeader"]}>
-                <TitleComponent data="连接详情" />
+                <TitleComponent data={t('Instance.tsx.index.connection')} />
                 <Space>
                     {
                         status.value === 'finish' && unref(device).state?.value !== 'online' && <Button type="primary" onClick={async () => {
@@ -1564,7 +1564,7 @@ const Status = defineComponent({
                                     list.value = modifyArrayList(list.value, {
                                         key: 'gateway',
                                         name: t('Instance.tsx.index.gateway'),
-                                        desc: '诊断设备接入网关状态是否正常，禁用状态将导致连接失败',
+                                        desc: t('Instance.tsx.index.gatewayTip'),
                                         status: 'success',
                                         text: t('Instance.tsx.index.normal'),
                                         info: null,
@@ -1645,11 +1645,11 @@ const Status = defineComponent({
                             if (flag) {
                                 message.success(t('Instance.tsx.index.suc'));
                             }
-                        }}>一键修复</Button>
+                        }}>{t('Instance.tsx.index.repair')}</Button>
                     }
                     <Button onClick={() => {
                         handleSearch()
-                    }}>重新诊断</Button>
+                    }}>{t('Instance.tsx.index.rediagnosis')}</Button>
                 </Space>
             </div>
             <div class={styles["statusContent"]}>

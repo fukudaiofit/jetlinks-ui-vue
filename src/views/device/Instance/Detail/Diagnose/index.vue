@@ -28,13 +28,13 @@
                 </div>
                 <div class="diagnose-text">
                     <div class="diagnose-title">
-                        {{ headerTitleMap.get(topState) }}
+                        {{ getHeaderTitleMap(t).get(topState) }}
                     </div>
                     <div class="diagnose-desc">
                         <template v-if="topState !== 'loading'">{{
-                            headerDescMap.get(topState)
+                            getHeaderDescMap(t).get(topState)
                         }}</template>
-                        <template v-else>{{t('Detail.Diagnose.index.diagnosed') + count + t('Detail.Diagnose.index.number')}}</template>
+                        <template v-else>{{t('Detail.Diagnose.index.diagnosed',{count:count + 1}) }}</template>
                     </div>
                 </div>
             </div>
@@ -85,8 +85,8 @@
 import {
     headerImgMap,
     headerColorMap,
-    headerTitleMap,
-    headerDescMap,
+    getHeaderTitleMap,
+    getHeaderDescMap,
     progressMap,
 } from './util';
 import { getImage } from '@/utils/comm';
