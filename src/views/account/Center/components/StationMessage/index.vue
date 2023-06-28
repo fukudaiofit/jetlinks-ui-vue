@@ -8,19 +8,21 @@
 
 <script lang="ts" setup>
 import NotificationRecord from './components/NotificationRecord/index.vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const tabs = [
     {
         key: '1',
-        tab: '告警'
+        tab: t('components.StationMessage.index.5rmxrscb5n00')
     },
     {
         key: '2',
-        tab: '系统运维'
+        tab: t('components.StationMessage.index.5rmxrscb7840')
     },
     {
         key: '3',
-        tab: '业务监控'
+        tab: t('components.StationMessage.index.5rmxrscb7ho0')
     }
 ]
 </script>

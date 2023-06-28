@@ -22,7 +22,7 @@
                 }"
             >
                 <template #headerTitle>
-                    <j-button type="primary">全部已读</j-button>
+                    <j-button type="primary">{{t('components.NotificationRecord.index.5rmxnueqiwg0')}}</j-button>
                 </template>
                 <template #topicProvider="slotProps">
                     {{ slotProps.topicName }}
@@ -51,16 +51,16 @@
                             :popConfirm="{
                                 title: `确认标为${
                                     slotProps.state.value === 'read'
-                                        ? '未读'
-                                        : '已读'
+                                        ? t('components.NotificationRecord.index.5rmxnueqkk80')
+                                        : t('components.NotificationRecord.index.5rmxnueqkv40')
                                 }`,
                                 onConfirm: () => table.changeStatus(slotProps),
                             }"
                             :tooltip="{
                                 title:
                                     slotProps.state.value === 'read'
-                                        ? '标为未读'
-                                        : '标为已读',
+                                        ? t('components.NotificationRecord.index.5rmxnueql300')
+                                        : t('components.NotificationRecord.index.5rmxnueqlaw0'),
                             }"
                         >
                             <AIcon type="icon-a-PIZHU1" />
@@ -68,7 +68,7 @@
                         <PermissionButton
                             type="link"
                             :tooltip="{
-                                title: '查看',
+                                title: t('components.NotificationRecord.index.5rmxnueqlmk0'),
                             }"
                             @click="table.view(slotProps)"
                         >
@@ -102,11 +102,13 @@ import { message } from 'ant-design-vue';
 import { useUserInfo } from '@/store/userInfo';
 import { useRouterParams } from '@/utils/hooks/useParams';
 import dayjs from 'dayjs'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const { updateAlarm } = useUserInfo();
 const columns = [
     {
-        title: '类型',
+        title: t('components.NotificationRecord.index.5rmxnueqlu40'),
         dataIndex: 'topicProvider',
         key: 'topicProvider',
         search: {
@@ -125,7 +127,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '消息',
+        title: t('components.NotificationRecord.index.5rmxnueqm1g0'),
         dataIndex: 'message',
         key: 'message',
         search: {
@@ -135,7 +137,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '通知时间',
+        title: t('components.NotificationRecord.index.5rmxnueqmeo0'),
         dataIndex: 'notifyTime',
         key: 'notifyTime',
         search: {
@@ -145,18 +147,18 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '状态',
+        title: t('components.NotificationRecord.index.5rmxnueqmmo0'),
         dataIndex: 'state',
         key: 'state',
         search: {
             type: 'select',
             options: [
                 {
-                    label: '未读',
+                    label: t('components.NotificationRecord.index.5rmxnueqkk80'),
                     value: 'unread',
                 },
                 {
-                    label: '已读',
+                    label: t('components.NotificationRecord.index.5rmxnueqkv40'),
                     value: 'read',
                 },
             ],
@@ -165,7 +167,7 @@ const columns = [
         ellipsis: true,
     },
     {
-        title: '操作',
+        title: t('components.NotificationRecord.index.5rmxnueqmtw0'),
         dataIndex: 'action',
         key: 'action',
         ellipsis: true,
@@ -181,7 +183,7 @@ const table = {
         const type = row.state.value === 'read' ? '_unread' : '_read';
         changeStatus_api(type, [row.id]).then((resp: any) => {
             if (resp.status === 200) {
-                message.success('操作成功！');
+                message.success(t('components.NotificationRecord.index.5rmxnueqn1k0'));
                 table.refresh();
                 updateAlarm();
             }

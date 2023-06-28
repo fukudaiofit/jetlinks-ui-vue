@@ -18,7 +18,8 @@
             >
                 <template #headerTitle>
                     <PermissionButton type="primary" @click="table.edit()">
-                        <AIcon type="PlusOutlined" />新增
+                        <AIcon type="PlusOutlined" />
+                        {{t('components.NotificationSubscription.index.5rmxpvx36880')}}
                     </PermissionButton>
                 </template>
 
@@ -41,7 +42,7 @@
                         <PermissionButton
                             type="link"
                             :tooltip="{
-                                title: '编辑',
+                                title: t('components.NotificationSubscription.index.5rmxpvx39ao0'),
                             }"
                             @click="table.edit(slotProps)"
                         >
@@ -51,18 +52,18 @@
                         <PermissionButton
                             type="link"
                             :popConfirm="{
-                                title: `确定${
+                                title: `${t('components.NotificationSubscription.index.verify') +(
                                     slotProps.state.value === 'enabled'
-                                        ? '禁用'
-                                        : '启用'
+                                        ? t('components.NotificationSubscription.index.5rmxpvx39nw0')
+                                        : t('components.NotificationSubscription.index.5rmxpvx39v40'))
                                 }`,
                                 onConfirm: () => table.changeStatus(slotProps),
                             }"
                             :tooltip="{
                                 title:
                                     slotProps.state.value === 'enabled'
-                                        ? '禁用'
-                                        : '启用',
+                                        ? t('components.NotificationSubscription.index.5rmxpvx39nw0')
+                                        : t('components.NotificationSubscription.index.5rmxpvx39v40'),
                             }"
                         >
                             <AIcon
@@ -78,11 +79,11 @@
                             :tooltip="{
                                 title:
                                     slotProps.state.value === 'enabled'
-                                        ? '请先禁用，再删除'
-                                        : '删除',
+                                        ? t('components.NotificationSubscription.index.5rmxpvx3a0s0')
+                                        : t('components.NotificationSubscription.index.5rmxpvx3a7k0'),
                             }"
                             :popConfirm="{
-                                title: `确认删除？`,
+                                title: t('components.NotificationSubscription.index.confirmDelete'),
                                 onConfirm: () => table.delete(slotProps),
                             }"
                             :disabled="slotProps.state.value === 'enabled'"
@@ -113,10 +114,12 @@ import {
 } from '@/api/account/notificationSubscription';
 import { rowType } from './typing';
 import { message } from 'ant-design-vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const columns = [
     {
-        title: '名称',
+        title: t('components.NotificationSubscription.index.5rmxpvx3ads0'),
         dataIndex: 'subscribeName',
         key: 'subscribeName',
         ellipsis: true,
@@ -125,28 +128,28 @@ const columns = [
         },
     },
     {
-        title: '类型',
+        title: t('components.NotificationSubscription.index.5rmxpvx3aw80'),
         dataIndex: 'topicName',
         key: 'topicName',
         scopedSlots: true,
         ellipsis: true,
     },
     {
-        title: '告警规则',
+        title: t('components.NotificationSubscription.index.5rmxpvx3b6k0'),
         dataIndex: 'alarmConfigName',
         key: 'alarmConfigName',
         scopedSlots: true,
         ellipsis: true,
     },
     {
-        title: '状态',
+        title: t('components.NotificationSubscription.index.5rmxpvx3bes0'),
         dataIndex: 'state',
         key: 'state',
         scopedSlots: true,
         ellipsis: true,
     },
     {
-        title: '操作',
+        title: t('components.NotificationSubscription.index.5rmxpvx3blk0'),
         dataIndex: 'action',
         key: 'action',
         ellipsis: true,
@@ -169,17 +172,17 @@ const table = {
         const status = row.state.value === 'enabled' ? '_disabled' : '_enabled';
         changeStatus_api(row.id as string, status).then((resp) => {
             if (resp.status === 200) {
-                message.success('操作成功！');
+                message.success(t('components.NotificationSubscription.index.5rmxpvx3bu80'));
                 table.refresh();
-            } else message.warning('操作失败！');
+            } else message.warning(t('components.NotificationSubscription.index.5rmxpvx3c0s0'));
         });
     },
     delete: (row: rowType) => {
         remove_api(row.id as string).then((resp) => {
             if (resp.status === 200) {
-                message.success('操作成功！');
+                message.success(t('components.NotificationSubscription.index.5rmxpvx3bu80'));
                 table.refresh();
-            } else message.warning('操作失败！');
+            } else message.warning(t('components.NotificationSubscription.index.5rmxpvx3c0s0'));
         });
     },
     refresh: () => {

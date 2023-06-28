@@ -1,7 +1,7 @@
 <template>
     <j-modal
         visible
-        :title="props.data.id ? '编辑' : '新增'"
+        :title="props.data.id ? t('NotificationSubscription.components.EditDialog.5rmxpg5f4nw0') : t('NotificationSubscription.components.EditDialog.5rmxpg5f6kw0')
         width="865px"
         :confirmLoading="loading"
         @ok="confirm"
@@ -9,46 +9,46 @@
     >
         <j-form :model="form" layout="vertical" ref="formRef">
             <j-form-item
-                label="名称"
+                :label="t('NotificationSubscription.components.EditDialog.5rmxpg5f6u40')"
                 name="subscribeName"
                 :rules="[
-                    { required: true, message: '请输入名称' },
+                    { required: true, message: t('NotificationSubscription.components.EditDialog.5rmxpg5f70w0') },
                     {
                         max: 64,
-                        message: '最多可输入64个字符',
+                        message: t('NotificationSubscription.components.EditDialog.5rmxpg5f76o0'),
                     },
                 ]"
             >
                 <j-input
                     v-model:value="form.subscribeName"
-                    placeholder="请输入名称"
+                    :placeholder="t('NotificationSubscription.components.EditDialog.5rmxpg5f70w0')"
                 />
             </j-form-item>
 
             <j-row :gutter="24">
                 <j-col :span="12">
                     <j-form-item
-                        label="类型"
+                        :label="t('NotificationSubscription.components.EditDialog.5rmxpg5f7hc0')"
                         name="topicProvider"
-                        :rules="[{ required: true, message: '请选择类型' }]"
+                        :rules="[{ required: true, message: t('NotificationSubscription.components.EditDialog.5rmxpg5f7nk0') }]"
                     >
                         <j-select
                             v-model:value="form.topicProvider"
-                            placeholder="请选择类型"
+                            :placeholder="t('NotificationSubscription.components.EditDialog.5rmxpg5f7nk0')"
                             :options="typeList"
                         />
                     </j-form-item>
                 </j-col>
                 <j-col :span="12">
                     <j-form-item
-                        label="告警规则"
+                        :label="t('NotificationSubscription.components.EditDialog.5rmxpg5f7s80')"
                         :name="['topicConfig', 'alarmConfigId']"
-                        :rules="[{ required: true, message: '请选择告警规则' }]"
+                        :rules="[{ required: true, message: t('NotificationSubscription.components.EditDialog.5rmxpg5f7z40') }]"
                     >
                         <j-select
                             :value="form.topicConfig?.alarmConfigId?.split(',')"
                             :options="alarmList"
-                            placeholder="请选择告警规则"
+                            :placeholder="t('NotificationSubscription.components.EditDialog.5rmxpg5f7z40')"
                             mode="multiple"
                             @change="onSelect"
                         ></j-select>
@@ -57,15 +57,15 @@
             </j-row>
             <j-form-item
                 name="notice"
-                label="通知方式"
-                :rules="[{ required: true, message: '请选择通知方式' }]"
+                :label="t('NotificationSubscription.components.EditDialog.5rmxpg5f8640')"
+                :rules="[{ required: true, message: t('NotificationSubscription.components.EditDialog.5rmxpg5f8bg0') }]"
             >
                 <j-checkbox-group
                     v-model:value="form.notice"
                     name="checkboxgroup"
                     :options="[
                         {
-                            label: '站内通知',
+                            label: t('NotificationSubscription.components.EditDialog.5rmxpg5f8h00'),
                             value: 1,
                         },
                     ]"
@@ -86,7 +86,9 @@ import { optionsType } from '@/views/system/Department/typing';
 import { dictItemType } from '@/views/system/DataSource/typing';
 import { optionItem } from '@/views/rule-engine/Scene/typings';
 import { FormInstance, message } from 'ant-design-vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const emits = defineEmits(['ok', 'update:visible']);
 const props = defineProps<{
     visible: boolean;
@@ -112,7 +114,7 @@ const confirm = () => {
             save_api(form.value)
                 .then((resp) => {
                     if (resp.status === 200) {
-                        message.success('操作成功');
+                        message.success(t('NotificationSubscription.components.EditDialog.5rmxpg5f8m40'));
                         emits('ok');
                         emits('update:visible', false);
                     }

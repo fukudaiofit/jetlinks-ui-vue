@@ -2,7 +2,7 @@
     <div style="margin-top: 24px">
         <div class="alert">
             <AIcon type="InfoCircleOutlined" />
-            你可以在该页面选择需要订阅的主题及接收通知的方式。
+            {{t('components.Subscribe.index.5rmxv2t58vw0')}}
         </div>
         <div style="margin-top: 20px">
             <j-collapse :bordered="false" v-model:activeKey="activeKey">
@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="child-item-left-auth">
                                         <j-tooltip
-                                            title="当产品类型的告警被触发时，你将在已订阅的方式中收到通知"
+                                            :title="t('components.Subscribe.index.5rmxv2t5ago0')"
                                         >
                                             <AIcon
                                                 type="ExclamationCircleOutlined"
@@ -90,82 +90,84 @@ import { getImage } from '@/utils/comm';
 import MCarousel from '@/components/MCarousel/index.vue';
 import Detail from './components/Detail.vue';
 import Error from './components/Error.vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const dataSource = ref([
     {
         id: 'a',
-        name: '告警',
+        name: t('components.Subscribe.index.5rmxv2t5amg0'),
         children: [
             {
                 id: 'product',
-                name: '产品告警',
+                name: t('components.Subscribe.index.5rmxv2t5ar40'),
                 active: true,
                 children: [
                     {
                         id: 'sms9',
-                        name: '站内信',
+                        name: t('components.Subscribe.index.5rmxv2t5avg0'),
                         type: 'sms',
                     },
                     {
                         id: 'dingtalk8',
-                        name: '钉钉',
+                        name: t('components.Subscribe.index.5rmxv2t5b3k0'),
                         type: 'dingtalk',
                     },
                     {
                         id: 'wechat7',
-                        name: '微信',
+                        name: t('components.Subscribe.index.5rmxv2t5b880'),
                         type: 'wechat',
                     },
                     {
                         id: 'email6',
-                        name: '邮箱',
+                        name: t('components.Subscribe.index.5rmxv2t5bcc0'),
                         type: 'email',
                     },
                     {
                         id: 'dingtalk5',
-                        name: '钉钉',
+                        name: t('components.Subscribe.index.5rmxv2t5b3k0'),
                         type: 'dingtalk',
                     },
                     {
                         id: 'wechat4',
-                        name: '微信',
+                        name: t('components.Subscribe.index.5rmxv2t5b880'),
                         type: 'wechat',
                     },
                     {
                         id: 'email3',
-                        name: '邮箱',
+                        name: t('components.Subscribe.index.5rmxv2t5bcc0'),
                         type: 'email',
                     },
                     {
                         id: 'email2',
-                        name: '邮箱',
+                        name: t('components.Subscribe.index.5rmxv2t5bcc0'),
                         type: 'email',
                     },
                     {
                         id: 'email1',
-                        name: '邮箱',
+                        name: t('components.Subscribe.index.5rmxv2t5bcc0'),
                         type: 'email',
                     },
                 ],
             },
             {
                 id: 'device',
-                name: '设备告警',
+                name: t('components.Subscribe.index.5rmxv2t5bio0'),
                 active: false,
                 children: [
                     {
                         id: 'sms11',
-                        name: '站内信',
+                        name: t('components.Subscribe.index.5rmxv2t5avg0'),
                         type: 'sms',
                     },
                     {
                         id: 'wechat11',
-                        name: '微信',
+                        name: t('components.Subscribe.index.5rmxv2t5b880'),
                         type: 'wechat',
                     },
                     {
                         id: 'voice11',
-                        name: '语音',
+                        name: t('components.Subscribe.index.5rmxv2t5bmo0'),
                         type: 'voice',
                     },
                 ],
@@ -174,28 +176,28 @@ const dataSource = ref([
     },
     {
         id: 'b',
-        name: '系统监控',
+        name: t('components.Subscribe.index.5rmxv2t5btw0'),
         children: [
             {
                 id: 'cache',
-                name: '缓冲区数据丢弃',
+                name: t('components.Subscribe.index.5rmxv2t5by80'),
                 active: false,
                 children: [
                     {
                         id: 'message111',
-                        name: '站内信',
+                        name: t('components.Subscribe.index.5rmxv2t5avg0'),
                         type: 'sms',
                     },
                 ],
             },
             {
                 id: 'mqtt',
-                name: 'MQTT并发限制',
+                name: t('components.Subscribe.index.limit'),
                 active: false,
                 children: [
                     {
                         id: 'message22',
-                        name: '站内信',
+                        name: t('components.Subscribe.index.5rmxv2t5avg0'),
                         type: 'sms',
                     },
                 ],
@@ -204,16 +206,16 @@ const dataSource = ref([
     },
     {
         id: 'c',
-        name: '业务监控',
+        name: t('components.Subscribe.index.5rmxv2t5c4o0'),
         children: [
             {
                 id: 'error',
-                name: '透传消息解析异常',
+                name: t('components.Subscribe.index.5rmxv2t5c940'),
                 active: false,
                 children: [
                     {
                         id: 'message333',
-                        name: '站内信',
+                        name: t('components.Subscribe.index.5rmxv2t5avg0'),
                         type: 'sms',
                     },
                 ],

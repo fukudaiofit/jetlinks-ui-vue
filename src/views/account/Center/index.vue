@@ -5,59 +5,44 @@
                 <div class="person-header-item-info">
                     <div class="person-header-item-info-left">
                         <j-avatar :size="64">
-                            <template #icon
-                                ><AIcon type="UserOutlined"
-                            /></template>
+                            <template #icon>
+                                <AIcon type="UserOutlined" />
+                            </template>
                         </j-avatar>
                     </div>
                     <div class="person-header-item-info-right">
                         <div class="person-header-item-info-right-top">
-                            <span>xx部门 · xx角色</span>
+                            <span>{{ t('account.Center.index.title') }}</span>
                         </div>
                         <div class="person-header-item-info-right-info">
-                            <div>用户名 {{user.userInfos?.username}}</div>
-                            <div>账号ID {{user.userInfos?.id}}</div>
+                            <div>{{ t('account.Center.index.5rmy0nei3800') + user.userInfos?.username }} {{}}</div>
+                            <div>{{ t('account.Center.index.5rmy0nei44c0') + user.userInfos?.id}}</div>
                         </div>
                     </div>
                 </div>
                 <div class="person-header-item-action">
                     <div class="person-header-item-action-left">
                         <j-space>
-                            <j-button
-                                @click="onActivated(item.key)"
-                                v-for="item in list"
-                                :type="
-                                    activeKey === item.key
-                                        ? 'primary'
-                                        : 'default'
-                                "
-                                :key="item.key"
-                                >{{ item.title }}</j-button
-                            >
+                            <j-button @click="onActivated(item.key)" v-for="item in list" :type="activeKey === item.key
+                                    ? 'primary'
+                                    : 'default'
+                                " :key="item.key">{{ item.title }}</j-button>
                         </j-space>
                     </div>
                     <div class="person-header-item-action-right">
                         <j-space :size="24">
-                            <j-tooltip title="查看详情"
-                                ><j-button @click="visible = true" shape="circle"
-                                    ><AIcon
-                                        style="font-size: 24px"
-                                        type="FileSearchOutlined" /></j-button
-                            ></j-tooltip>
-                            <j-tooltip title="编辑资料"
-                                ><j-button shape="circle"
-                                @click="editInfoVisible = true"
-                                    ><AIcon
-                                        style="font-size: 24px"
-                                        type="FormOutlined" /></j-button
-                            ></j-tooltip>
-                            <j-tooltip title="修改密码"
-                                ><j-button shape="circle"
-                                @click="editPasswordVisible = true"
-                                    ><AIcon
-                                        style="font-size: 24px"
-                                        type="LockOutlined" /></j-button
-                            ></j-tooltip>
+                            <j-tooltip :title="t('account.Center.index.5rmy0nei4ag0')"><j-button @click="visible = true"
+                                    shape="circle">
+                                    <AIcon style="font-size: 24px" type="FileSearchOutlined" />
+                                </j-button></j-tooltip>
+                            <j-tooltip :title="t('account.Center.index.5rmy0nei4fk0')"><j-button shape="circle"
+                                    @click="editInfoVisible = true">
+                                    <AIcon style="font-size: 24px" type="FormOutlined" />
+                                </j-button></j-tooltip>
+                            <j-tooltip :title="t('account.Center.index.5rmy0nei4ko0')"><j-button shape="circle"
+                                    @click="editPasswordVisible = true">
+                                    <AIcon style="font-size: 24px" type="LockOutlined" />
+                                </j-button></j-tooltip>
                         </j-space>
                     </div>
                 </div>
@@ -72,7 +57,7 @@
                 </FullPage>
             </div>
         </div>
-        <Detail v-if="visible" @close="visible = false"/>
+        <Detail v-if="visible" @close="visible = false" />
         <EditInfo v-if="editInfoVisible" :data="user.userInfos" @close="editInfoVisible = false" @save="onSave" />
         <EditPassword v-if="editPasswordVisible" @close="editPasswordVisible = false" @save="onPasswordSave" />
     </div>
@@ -87,26 +72,28 @@ import Detail from './components/Detail/index.vue';
 import EditInfo from './components/EditInfo/index.vue';
 import EditPassword from './components/EditPassword/index.vue';
 import { useUserInfo } from '@/store/userInfo';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const user = useUserInfo();
 
 type KeyType = 'HomeView' | 'BindThirdAccount' | 'Subscribe' | 'StationMessage';
 const list: { key: KeyType; title: string }[] = [
     {
         key: 'HomeView',
-        title: '首页视图',
+        title: t('account.Center.index.5rmy0nei4q40'),
     },
     {
         key: 'BindThirdAccount',
-        title: '绑定第三方账号',
+        title: t('account.Center.index.5rmy0nei4uw0'),
     },
     {
         key: 'Subscribe',
-        title: '我的订阅',
+        title: t('account.Center.index.5rmy0nei4zk0'),
     },
     {
         key: 'StationMessage',
-        title: '站内信',
+        title: t('account.Center.index.5rmy0nei54k0'),
     },
 ];
 
@@ -147,9 +134,11 @@ const onPasswordSave = () => {
         .person-header-item {
             position: relative;
             height: 100%;
+
             .person-header-item-info {
                 padding-top: 30px;
                 display: flex;
+
                 .person-header-item-info-left {
                     margin-right: 30px;
                 }
@@ -158,22 +147,23 @@ const onPasswordSave = () => {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+
                     .person-header-item-info-right-top {
                         span {
-                            background-color: rgba(
-                                255,
-                                255,
-                                128,
-                                0.43137254901960786
-                            );
+                            background-color: rgba(255,
+                                    255,
+                                    128,
+                                    0.43137254901960786);
                             border-radius: 5px;
                             padding: 0 10px;
                         }
                     }
+
                     .person-header-item-info-right-info {
                         color: #fff;
                         display: flex;
                         font-size: 16px;
+
                         > :not(:last-child) {
                             margin-right: 20px;
                         }
@@ -192,6 +182,7 @@ const onPasswordSave = () => {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
                 .person-header-item-action-left {
                     button {
                         height: 35px;
@@ -212,6 +203,7 @@ const onPasswordSave = () => {
     .person-content {
         width: 100%;
         padding: 0 150px;
+
         .person-content-item-content {
             padding: 20px;
         }

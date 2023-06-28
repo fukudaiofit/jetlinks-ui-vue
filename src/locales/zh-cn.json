@@ -1453,7 +1453,18 @@
                 "5rga8ahummg0": "通知内容",
                 "5rga8ahumq80": "模板变量",
                 "5rga8ahumu80": "用户权限",
-                "5rga8ahumxs0": "确定"
+                "5rga8ahumxs0": "确定",
+                "5rmxl9q904s0": "查看详情",
+                "5rmxl9q91dc0": "用户名",
+                "5rmxl9q91l00": "账号ID",
+                "5rmxl9q91qc0": "姓名",
+                "5rmxl9q91v80": "角色",
+                "5rmxl9q920w0": "组织",
+                "5rmxl9q927g0": "手机号",
+                "5rmxl9q92c80": "邮箱",
+                "5rmxl9q92ho0": "关闭",
+                "5rmxl9q92mo0": "暂无角色",
+                "5rmxl9q92tw0": "暂无组织"
             }
         },
         "Role": {
@@ -1605,6 +1616,136 @@
                 "5rlcncp1r7s0": "编辑",
                 "5rlcncp1rd40": "确认",
                 "5rlcncp1rho0": "取消"
+            }
+        },
+        "BindThirdAccount": {
+            "index": {
+                "5rmxjyjan2k0": "已绑定",
+                "5rmxjyjaoag0": "未绑定",
+                "5rmxjyjaohc0": "确认解除绑定嘛?",
+                "5rmxjyjaomo0": "解除绑定",
+                "5rmxjyjaos80": "立即绑定",
+                "5rmxjyjap5s0": "解绑成功"
+            }
+        },
+        "EditInfo": {
+            "index": {
+                "5rmxm54jtv00": "编辑",
+                "5rmxm54jv0w0": "姓名",
+                "5rmxm54jv700": "姓名必填",
+                "5rmxm54jvck0": "最多可输入64个字符",
+                "5rmxm54jvh00": "请输入姓名",
+                "5rmxm54jvmk0": "用户名",
+                "5rmxm54jvrk0": "请输入用户名",
+                "5rmxm54jvwo0": "角色",
+                "5rmxm54jw280": "请输入角色",
+                "5rmxm54jw6o0": "组织",
+                "5rmxm54jwe80": "请输入组织",
+                "5rmxm54jwj40": "手机号",
+                "5rmxm54jwng0": "请输入正确手机号",
+                "5rmxm54jwsc0": "请输入手机号",
+                "5rmxm54jwx00": "邮箱",
+                "5rmxm54jx1w0": "邮箱不是一个有效的email",
+                "5rmxm54jx6k0": "请输入邮箱",
+                "5rmxm54jxbc0": "保存成功"
+            }
+        },
+        "EditPassword": {
+            "index copy": {
+                "5rmxmivhyqg0": "重置密码",
+                "5rmxmivhzzg0": "旧密码",
+                "5rmxmivi0880": "请输入密码",
+                "5rmxmivi0d40": "请输入旧密码",
+                "5rmxmivi0go0": "密码",
+                "5rmxmivi0n00": "确认密码",
+                "5rmxmivi0rg0": "请输入确认密码",
+                "5rmxmivi0vg0": "请再次输入密码",
+                "5rmxmivi0yw0": "验证失败",
+                "5rmxmivi11k0": "两次密码输入不一致",
+                "5rmxmivi14g0": "保存成功"
+            },
+            "index": {
+                "5rmxmuyx2bo0": "重置密码",
+                "5rmxmuyx3f80": "验证密码",
+                "5rmxmuyx3p40": "设置密码",
+                "5rmxmuyx3x80": "二次确认",
+                "5rmxmuyx44w0": "请输入当前密码",
+                "5rmxmuyx4cc0": "请输入新密码",
+                "5rmxmuyx4kg0": "请确认新密码",
+                "5rmxmuyx4rk0": "取消",
+                "5rmxmuyx4y40": "上一步",
+                "5rmxmuyx5ew0": "下一步",
+                "5rmxmuyx8580": "完成",
+                "5rmxmuyx8hc0": "验证失败",
+                "5rmxmuyx8p80": "两次密码输入不一致",
+                "5rmxmuyx8ww0": "保存成功"
+            }
+        },
+        "HomeView": {
+            "index": {
+                "5rmxndjebd40": "确定",
+                "5rmxndjechc0": "保存成功"
+            }
+        },
+        "NotificationRecord": {
+            "index": {
+                "5rmxnueqiwg0": "全部已读",
+                "5rmxnueqkk80": "未读",
+                "5rmxnueqkv40": "已读",
+                "5rmxnueql300": "标为未读",
+                "5rmxnueqlaw0": "标为已读",
+                "5rmxnueqlmk0": "查看",
+                "5rmxnueqlu40": "类型",
+                "5rmxnueqm1g0": "消息",
+                "5rmxnueqmeo0": "通知时间",
+                "5rmxnueqmmo0": "状态",
+                "5rmxnueqmtw0": "操作",
+                "5rmxnueqn1k0": "操作成功！"
+            }
+        },
+        "NotificationSubscription": {
+            "index": {
+                "5rmxpvx36880": "新增",
+                "5rmxpvx39ao0": "编辑",
+                "5rmxpvx39nw0": "禁用",
+                "5rmxpvx39v40": "启用",
+                "5rmxpvx3a0s0": "请先禁用，再删除",
+                "5rmxpvx3a7k0": "删除",
+                "5rmxpvx3ads0": "名称",
+                "5rmxpvx3aw80": "类型",
+                "5rmxpvx3b6k0": "告警规则",
+                "5rmxpvx3bes0": "状态",
+                "5rmxpvx3blk0": "操作",
+                "5rmxpvx3bu80": "操作成功！",
+                "5rmxpvx3c0s0": "操作失败！",
+                "verify": "确认",
+                "confirmDelete": "确认删除？"
+            }
+        },
+        "StationMessage": {
+            "index": {
+                "5rmxrscb5n00": "告警",
+                "5rmxrscb7840": "系统运维",
+                "5rmxrscb7ho0": "业务监控"
+            }
+        },
+        "Subscribe": {
+            "index": {
+                "5rmxv2t58vw0": "你可以在该页面选择需要订阅的主题及接收通知的方式。",
+                "5rmxv2t5ago0": "当产品类型的告警被触发时，你将在已订阅的方式中收到通知",
+                "5rmxv2t5amg0": "告警",
+                "5rmxv2t5ar40": "产品告警",
+                "5rmxv2t5avg0": "站内信",
+                "5rmxv2t5b3k0": "钉钉",
+                "5rmxv2t5b880": "微信",
+                "5rmxv2t5bcc0": "邮箱",
+                "5rmxv2t5bio0": "设备告警",
+                "5rmxv2t5bmo0": "语音",
+                "5rmxv2t5btw0": "系统监控",
+                "5rmxv2t5by80": "缓冲区数据丢弃",
+                "5rmxv2t5c4o0": "业务监控",
+                "5rmxv2t5c940": "透传消息解析异常",
+                "limit": "MQTT并发限制"
             }
         }
     },
@@ -2317,6 +2458,22 @@
                 "5rlc5ey0l3k0": "初始化设备接入示例数据",
                 "5rlc5ey0lb00": "确定",
                 "5rlc5ey0lf00": "保存成功"
+            }
+        },
+        "oauth": {
+            "index": {
+                "5rmy4okjyok0": "授权登录",
+                "5rmy4okjzz00": "您正在授权登录,",
+                "5rmy4okk07o0": "获取您的个人信息",
+                "5rmy4okk0dk0": "同意授权",
+                "5rmy4okk0j00": "切换账号",
+                "5rmy4okk0os0": "用户名",
+                "5rmy4okk0u80": "密码",
+                "5rmy4okk12g0": "请输入验证码",
+                "5rmy4okk1800": "登录",
+                "userNameTip": "请输入用户名",
+                "pwdTip": "请输入密码",
+                "codeTip": "请输入验证码"
             }
         }
     },
@@ -5624,6 +5781,126 @@
                 "5rlch8lvzq00": "步长（秒）",
                 "5rlch8lvzv00": "步长（次）",
                 "5rlch8lvzzk0": "步长"
+            }
+        }
+    },
+    "Center": {
+        "bind": {
+            "index": {
+                "5rmxfod33ws0": "第三方账户绑定",
+                "5rmxfod3ecc0": "个人信息",
+                "5rmxfod3ez40": "三方账户信息",
+                "5rmxfod3f6o0": "你已通过",
+                "5rmxfod3fj40": "授权,完善以下登录信息即可以完成绑定",
+                "5rmxfod3fvk0": "账户",
+                "5rmxfod3g7k0": "请输入账户",
+                "5rmxfod3gpo0": "密码",
+                "5rmxfod3h200": "请输入密码",
+                "5rmxfod3hf40": "验证码",
+                "5rmxfod3hog0": "请输入验证码",
+                "5rmxfod3hvg0": "登录并绑定账户",
+                "5rmxfod3i780": "钉钉",
+                "5rmxfod3ie00": "微信",
+                "5rmxfod3ikw0": "绑定成功",
+                "5rmxfod3iqo0": "登录成功",
+                "account": "账号：",
+                "userName": "用户名",
+                "bind": "立即绑定",
+                "bindName": "绑定名："
+            }
+        }
+    },
+    "NotificationRecord": {
+        "components": {
+            "ViewDialog": {
+                "5rmxnnwmp9s0": "详情",
+                "5rmxnnwmqr80": "告警设备",
+                "5rmxnnwmqxo0": "设备ID",
+                "5rmxnnwmr300": "告警名称",
+                "5rmxnnwmr7o0": "告警时间",
+                "5rmxnnwmrcs0": "告警级别",
+                "5rmxnnwmrik0": "告警说明",
+                "5rmxnnwmrn80": "告警流水"
+            }
+        }
+    },
+    "NotificationSubscription": {
+        "components": {
+            "EditDialog": {
+                "5rmxpg5f4nw0": "编辑",
+                "5rmxpg5f6kw0": "新增",
+                "5rmxpg5f6u40": "名称",
+                "5rmxpg5f70w0": "请输入名称",
+                "5rmxpg5f76o0": "最多可输入64个字符",
+                "5rmxpg5f7hc0": "类型",
+                "5rmxpg5f7nk0": "请选择类型",
+                "5rmxpg5f7s80": "告警规则",
+                "5rmxpg5f7z40": "请选择告警规则",
+                "5rmxpg5f8640": "通知方式",
+                "5rmxpg5f8bg0": "请选择通知方式",
+                "5rmxpg5f8h00": "站内通知",
+                "5rmxpg5f8m40": "操作成功"
+            }
+        }
+    },
+    "Subscribe": {
+        "components": {
+            "Detail": {
+                "5rmxuhs2ap40": "取消订阅",
+                "5rmxuhs2bpw0": "更换接收账号",
+                "5rmxuhs2bwg0": "当前绑定的账号名称"
+            },
+            "Error": {
+                "5rmxuoavajc0": "请先绑定钉钉账号",
+                "5rmxuoavbtg0": "请先绑定企业微信账号",
+                "5rmxuoavc0g0": "请先绑定邮箱",
+                "5rmxuoavc5k0": "请先绑定手机号",
+                "5rmxuoavcb40": "确定",
+                "5rmxuoavch40": "立即绑定",
+                "5rmxuoavcmg0": "打开详情编辑框"
+            }
+        }
+    },
+    "account": {
+        "Center": {
+            "index copy": {
+                "5rmxwbksi1g0": "更换头像",
+                "5rmxwbksjbs0": "用户名",
+                "5rmxwbksjl40": "账号ID",
+                "5rmxwbksjqg0": "注册时间",
+                "5rmxwbksjvg0": "电话",
+                "5rmxwbksk100": "姓名",
+                "5rmxwbksk640": "角色",
+                "5rmxwbkskaw0": "组织",
+                "5rmxwbkskg00": "邮箱",
+                "5rmxwbkskko0": "修改密码",
+                "5rmxwbkskow0": "安全性高的密码可以使帐号更安全。建议您定期更换密码,设置一个包含字母,符号或数字中至少两项且长度超过8位的密码",
+                "5rmxwbkskts0": "绑定三方账号",
+                "5rmxwbkskyw0": "确认解除绑定嘛?",
+                "5rmxwbksl3g0": "解除绑定",
+                "5rmxwbkslag0": "立即绑定",
+                "5rmxwbksles0": "首页视图",
+                "5rmxwbksljw0": "确定",
+                "5rmxwbksls00": "解绑成功",
+                "5rmxwbkslw80": "上传成功",
+                "5rmxwbksm0w0": "请上传正确格式的图片",
+                "5rmxwbksm8o0": "保存成功",
+                "bindName": "绑定名：",
+                "bindTime": "绑定时间：",
+                "unbind": "未绑定",
+                "fail": "logo上传失败，请稍后再试"
+            },
+            "index": {
+                "5rmy0nei3800": "用户名",
+                "5rmy0nei44c0": "账号ID",
+                "5rmy0nei4ag0": "查看详情",
+                "5rmy0nei4fk0": "编辑资料",
+                "5rmy0nei4ko0": "修改密码",
+                "5rmy0nei4q40": "首页视图",
+                "5rmy0nei4uw0": "绑定第三方账号",
+                "5rmy0nei4zk0": "我的订阅",
+                "5rmy0nei54k0": "站内信",
+                "title": "xx部门 · xx角色"
             }
         }
     }

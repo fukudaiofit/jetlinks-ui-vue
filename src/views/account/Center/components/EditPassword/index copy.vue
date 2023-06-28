@@ -1,7 +1,7 @@
 <template>
     <j-modal
         visible
-        title="重置密码"
+        :title="t('components.EditPassword.index copy.5rmxmivhyqg0')"
         @ok="handleOk"
         width="520px"
         :confirmLoading="loading"
@@ -9,42 +9,42 @@
     >
         <j-form :model="form" layout="vertical" ref="formRef">
             <j-form-item
-                label="旧密码"
+                :label="t('components.EditPassword.index copy.5rmxmivhzzg0')"
                 name="oldPassword"
                 :rules="[
-                    { required: true, message: '请输入密码' },
+                    { required: true, message: t('components.EditPassword.index copy.5rmxmivi0880') },
                     { validator: checkMethods.old, trigger: 'blur' },
                 ]"
             >
                 <j-input
                     v-model:value="form.oldPassword"
-                    placeholder="请输入旧密码"
+                    :placeholder="t('components.EditPassword.index copy.5rmxmivi0d40')"
                 />
             </j-form-item>
             <j-form-item
-                label="密码"
+                :label="t('components.EditPassword.index copy.5rmxmivi0go0')"
                 name="newPassword"
                 :rules="[
-                    { required: true, message: '请输入密码' },
+                    { required: true, message: t('components.EditPassword.index copy.5rmxmivi0880') },
                     { validator: checkMethods.new, trigger: 'blur' },
                 ]"
             >
                 <j-input-password
                     v-model:value="form.newPassword"
-                    placeholder="请输入密码"
+                    :placeholder="t('components.EditPassword.index copy.5rmxmivi0880')"
                 />
             </j-form-item>
             <j-form-item
-                label="确认密码"
+                :label="t('components.EditPassword.index copy.5rmxmivi0n00')"
                 name="confirmPassword"
                 :rules="[
-                    { required: true, message: '请输入确认密码' },
+                    { required: true, message: t('components.EditPassword.index copy.5rmxmivi0rg0') },
                     { validator: checkMethods.confirm, trigger: 'blur' },
                 ]"
             >
                 <j-input-password
                     v-model:value="form.confirmPassword"
-                    placeholder="请再次输入密码"
+                    :placeholder="t('components.EditPassword.index copy.5rmxmivi0vg0')"
                 />
             </j-form-item>
         </j-form>
@@ -58,7 +58,9 @@ import {
     validateField_api,
 } from '@/api/account/center';
 import { onlyMessage } from '@/utils/comm';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 type formType = {
     oldPassword: string;
     newPassword: string;
@@ -77,30 +79,30 @@ const form = ref<formType>({
 
 const checkMethods = {
     old: async (_rule: any, value: string) => {
-        if (!value) return Promise.reject('请输入密码');
+        if (!value) return Promise.reject(t('components.EditPassword.index copy.5rmxmivi0880'));
         try {
             const resp: any = await checkOldPassword_api(value);
             if (resp.status === 200 && !resp.result.passed)
                 return Promise.reject(resp.result.reason);
             else return Promise.resolve();
         } catch (error) {
-            return Promise.reject('验证失败');
+            return Promise.reject(t('components.EditPassword.index copy.5rmxmivi0yw0'));
         }
     },
     new: async (_rule: any, value: string) => {
-        if (!value) return Promise.reject('请输入密码');
+        if (!value) return Promise.reject(t('components.EditPassword.index copy.5rmxmivi0880'));
         else if (
             form.value.confirmPassword &&
             value !== form.value.confirmPassword
         )
-            return Promise.reject('两次密码输入不一致');
+            return Promise.reject(t('components.EditPassword.index copy.5rmxmivi11k0'));
         try {
             const resp: any = await validateField_api('password', value);
             if (resp.status === 200 && !resp.result.passed)
                 return Promise.reject(resp.result.reason);
             else return Promise.resolve();
         } catch (error) {
-            return Promise.reject('验证失败');
+            return Promise.reject(t('components.EditPassword.index copy.5rmxmivi0yw0'));
         }
     },
     confirm: async (_rule: any, value: string) => {
@@ -114,7 +116,7 @@ const checkMethods = {
                 return Promise.reject(resp.result.reason);
             else return Promise.resolve();
         } catch (error) {
-            return Promise.reject('验证失败');
+            return Promise.reject(t('components.EditPassword.index copy.5rmxmivi0yw0'));
         }
     },
 };
@@ -129,7 +131,7 @@ const handleOk = () => {
         updateMepsd_api(params)
             .then((resp) => {
                 if (resp.status === 200) {
-                    onlyMessage('保存成功', 'success');
+                    onlyMessage(t('components.EditPassword.index copy.5rmxmivi14g0'), 'success');
                     emits('save');
                 }
             })

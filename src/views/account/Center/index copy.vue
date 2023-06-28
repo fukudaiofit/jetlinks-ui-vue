@@ -38,7 +38,7 @@
                             >
                                 <j-button>
                                     <AIcon type="UploadOutlined" />
-                                    更换头像
+                                    {{t('account.Center.index copy.5rmxwbksi1g0')}}
                                 </j-button>
                             </j-upload>
                         </div>
@@ -48,15 +48,15 @@
                         style="flex: 1; padding: 15px 0"
                     >
                         <div class="info-card">
-                            <p>用户名</p>
+                            <p>{{t('account.Center.index copy.5rmxwbksjbs0')}}</p>
                             <p>{{ userInfo.username }}</p>
                         </div>
                         <div class="info-card">
-                            <p>账号ID</p>
+                            <p>{{t('account.Center.index copy.5rmxwbksjl40')}}</p>
                             <p>{{ userInfo.id }}</p>
                         </div>
                         <div class="info-card">
-                            <p>注册时间</p>
+                            <p>{{t('account.Center.index copy.5rmxwbksjqg0')}}</p>
                             <p>
                                 {{
                                 userInfo.createTime ? moment(userInfo.createTime).format(
@@ -66,15 +66,15 @@
                             </p>
                         </div>
                         <div class="info-card">
-                            <p>电话</p>
+                            <p>{{t('account.Center.index copy.5rmxwbksjvg0')}}</p>
                             <p>{{ userInfo.telephone || '-' }}</p>
                         </div>
                         <div class="info-card">
-                            <p>姓名</p>
+                            <p>{{t('account.Center.index copy.5rmxwbksk100')}}</p>
                             <p>{{ userInfo.name }}</p>
                         </div>
                         <div class="info-card">
-                            <p>角色</p>
+                            <p>{{t('account.Center.index copy.5rmxwbksk640')}}</p>
                             <p>
                                 {{
                                     (userInfo.roleList &&
@@ -86,7 +86,7 @@
                             </p>
                         </div>
                         <div class="info-card">
-                            <p>组织</p>
+                            <p>{{t('account.Center.index copy.5rmxwbkskaw0')}}</p>
                             <p>
                                 {{
                                     (userInfo.orgList &&
@@ -98,7 +98,7 @@
                             </p>
                         </div>
                         <div class="info-card">
-                            <p>邮箱</p>
+                            <p>{{t('account.Center.index copy.5rmxwbkskg00')}}</p>
                             <p>{{ userInfo.email || '-' }}</p>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class="card" v-if='updatePassword'>
-                <h3>修改密码</h3>
+                <h3>{{t('account.Center.index copy.5rmxwbkskko0')}}</h3>
                 <div class="content">
                     <div class="content" style="align-items: flex-end">
                         <AIcon
@@ -120,7 +120,7 @@
                         />
                         <span
                             style="margin-left: 5px; color: rgba(0, 0, 0, 0.55)"
-                            >安全性高的密码可以使帐号更安全。建议您定期更换密码,设置一个包含字母,符号或数字中至少两项且长度超过8位的密码</span
+                            >{{t('account.Center.index copy.5rmxwbkskow0')}}</span
                         >
                     </div>
                     <span class="edit">
@@ -136,7 +136,7 @@
             </div>
             <!-- 社区版不显示 -->
             <div class="card" v-if="isNoCommunity">
-                <h3>绑定三方账号</h3>
+                <h3>{{t('account.Center.index copy.5rmxwbkskts0')}}</h3>
                 <div class="content">
                     <div class="account-card" v-for="item in bindList">
                         <img
@@ -148,36 +148,36 @@
                         />
                         <Ellipsis style="width: 150px; font-size: 22px">
                             <div v-if="item.bound">
-                                <div>绑定名：{{ item.others.name }}</div>
+                                <div>{{ t('account.Center.index copy.bindName') + item.others.name }}</div>
                                 <div>
-                                    绑定时间：{{
+                                    {{ t('account.Center.index copy.bindTime') +
                                         moment(item.bindTime).format(
                                             'YYYY-MM-DD HH:mm:ss',
                                         )
                                     }}
                                 </div>
                             </div>
-                            <div v-else>{{ item.name }}未绑定</div>
+                            <div v-else>{{ item.name +  t('account.Center.index copy.unbind')}}</div>
                         </Ellipsis>
                         <j-popconfirm
                             v-if="item.bound"
-                            title="确认解除绑定嘛?"
+                            :title="t('account.Center.index copy.5rmxwbkskyw0')"
                             @confirm="() => unBind(item.id)"
                         >
-                            <j-button>解除绑定</j-button>
+                            <j-button>{{t('account.Center.index copy.5rmxwbksl3g0')}}</j-button>
                         </j-popconfirm>
                         <j-button
                             v-else
                             type="primary"
                             @click="clickBind(item.id)"
-                            >立即绑定</j-button
+                            >{{t('account.Center.index copy.5rmxwbkslag0')}}</j-button
                         >
                     </div>
                 </div>
             </div>
             <!-- 第三方用户不显示 -->
             <div class="card" v-if="!isApiUser">
-                <h3>首页视图</h3>
+                <h3>{{t('account.Center.index copy.5rmxwbksles0')}}</h3>
                 <div class="choose-view">
                     <j-row class="view-content" :gutter="24">
                         <j-col
@@ -211,7 +211,7 @@
                         </j-col>
                     </j-row>
                     <j-button type="primary" class="btn" @click="confirm"
-                        >确定</j-button
+                        >{{t('account.Center.index copy.5rmxwbksljw0')}}</j-button
                     >
                 </div>
             </div>
@@ -248,7 +248,9 @@ import { getMe_api, getView_api, setView_api } from '@/api/home';
 import { isNoCommunity } from '@/utils/utils';
 import { userInfoType } from './typing';
 import { usePermissionStore } from 'store/permission'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const btnHasPermission = usePermissionStore().hasPermission;
 const updatePassword = btnHasPermission('account-center:user-center-passwd-update')
 const permission = 'system/User';
@@ -264,7 +266,7 @@ const bindIcon = {
 const unBind = (id: string) => {
     unBind_api(id).then((resp) => {
         if (resp.status === 200) {
-            message.success('解绑成功');
+            message.success(t('account.Center.index copy.5rmxwbksls00'));
             getSsoBinds();
         }
     });
@@ -293,12 +295,12 @@ const upload = reactive({
             userInfo.value.avatar = info.file.response?.result;
             updateMeInfo_api(userInfo.value).then(res => {
               if(res.success) {
-                onlyMessage('上传成功')
+                onlyMessage(t('account.Center.index copy.5rmxwbkslw80'))
               }
             })
         } else if (info.file.status === 'error') {
             upload.uploadLoading = false;
-          onlyMessage('logo上传失败，请稍后再试', 'error');
+          onlyMessage(t('account.Center.index copy.fail'), 'error');
         }
     },
     beforeUpload: ({ size, type }: File) => {
@@ -307,7 +309,7 @@ const upload = reactive({
             imageTypes.filter((typeStr) => type.includes(typeStr)).length > 0;
         const sizeBool = size < 4 * 1024 * 1024;
 
-        (typeBool && sizeBool) || message.error('请上传正确格式的图片');
+        (typeBool && sizeBool) || message.error(t('account.Center.index copy.5rmxwbksm0w0'));
         return typeBool && sizeBool;
     },
 });
@@ -318,7 +320,7 @@ const confirm = () => {
     setView_api({
         name: 'view',
         content: currentView.value,
-    }).then(() => message.success('保存成功'));
+    }).then(() => message.success(t('account.Center.index copy.5rmxwbksm8o0')));
 };
 
 const editInfoVisible = ref<boolean>(false);

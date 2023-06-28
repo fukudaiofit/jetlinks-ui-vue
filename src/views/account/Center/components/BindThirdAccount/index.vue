@@ -14,23 +14,23 @@
                         item?.name
                     }}</Ellipsis>
                     <div>
-                        <j-tag v-if="item.bound">已绑定</j-tag>
-                        <j-tag v-else>未绑定</j-tag>
+                        <j-tag v-if="item.bound">{{t('components.BindThirdAccount.index.5rmxjyjan2k0')}}</j-tag>
+                        <j-tag v-else>{{t('components.BindThirdAccount.index.5rmxjyjaoag0')}}</j-tag>
                     </div>
                     <div v-if="item.others?.name">
-                        绑定名：{{ item.others?.name }}
+                        {{t('components.BindThirdAccount.index.bindName') + item.others?.name }}
                     </div>
                 </div>
                 <div>
                     <j-popconfirm
                         v-if="item.bound"
-                        title="确认解除绑定嘛?"
+                        :title="t('components.BindThirdAccount.index.5rmxjyjaohc0')"
                         @confirm="() => unBind(item.id)"
                     >
-                        <j-button>解除绑定</j-button>
+                        <j-button>{{t('components.BindThirdAccount.index.5rmxjyjaomo0')}}</j-button>
                     </j-popconfirm>
                     <j-button v-else type="primary" @click="clickBind(item.id)"
-                        >立即绑定</j-button
+                        >{{t('components.BindThirdAccount.index.5rmxjyjaos80')}}</j-button
                     >
                 </div>
             </div>
@@ -43,7 +43,9 @@ import { BASE_API_PATH } from '@/utils/variable';
 import { getSsoBinds_api } from '@/api/account/center';
 import { unBind_api } from '@/api/account/center';
 import { onlyMessage, getImage } from '@/utils/comm';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const bindList = ref<any[]>([]);
 const bindIcon = {
     'dingtalk-ent-app': '/notice/dingtalk.png',
@@ -54,7 +56,7 @@ const bindIcon = {
 const unBind = (id: string) => {
     unBind_api(id).then((resp) => {
         if (resp.status === 200) {
-            onlyMessage('解绑成功', 'success');
+            onlyMessage(t('components.BindThirdAccount.index.5rmxjyjap5s0'), 'success');
             getSsoBinds();
         }
     });

@@ -1,67 +1,67 @@
 <template>
     <j-modal
         visible
-        title="重置密码"
+        :title="t('components.EditPassword.index.5rmxmuyx2bo0')"
         width="520px"
         :confirmLoading="loading"
         @cancel="emits('close')"
     >
         <j-steps :current="current" size="small" progress-dot @change="onChange">
-            <j-step title="验证密码" />
-            <j-step title="设置密码" />
-            <j-step title="二次确认" />
+            <j-step :title="t('components.EditPassword.index.5rmxmuyx3f80')" />
+            <j-step :title="t('components.EditPassword.index.5rmxmuyx3p40')" />
+            <j-step :title="t('components.EditPassword.index.5rmxmuyx3x80')" />
         </j-steps>
         <div class="content">
             <j-form :model="form" layout="vertical" ref="formRef">
                 <j-form-item
-                    label="请输入当前密码"
+                    :label="t('components.EditPassword.index.5rmxmuyx44w0')"
                     name="oldPassword"
                     v-show="current === 0"
                     :rules="[
-                        { required: true, message: '请输入当前密码' },
+                        { required: true, message: t('components.EditPassword.index.5rmxmuyx44w0') },
                         { validator: checkMethods.old, trigger: 'blur' },
                     ]"
                 >
                     <j-input
                         v-model:value="form.oldPassword"
-                        placeholder="请输入当前密码"
+                        :placeholder="t('components.EditPassword.index.5rmxmuyx44w0')"
                     />
                 </j-form-item>
                 <j-form-item
-                    label="请输入新密码"
+                    :label="t('components.EditPassword.index.5rmxmuyx4cc0')"
                     name="newPassword"
                     v-show="current === 1"
                     :rules="[
-                        { required: true, message: '请输入新密码' },
+                        { required: true, message: t('components.EditPassword.index.5rmxmuyx4cc0') },
                         { validator: checkMethods.new, trigger: 'blur' },
                     ]"
                 >
                     <j-input-password
                         v-model:value="form.newPassword"
-                        placeholder="请输入新密码"
+                        :placeholder="t('components.EditPassword.index.5rmxmuyx4cc0')"
                     />
                 </j-form-item>
                 <j-form-item
-                    label="请确认新密码"
+                    :label="t('components.EditPassword.index.5rmxmuyx4kg0')"
                     v-show="current === 2"
                     name="confirmPassword"
                     :rules="[
-                        { required: true, message: '请确认新密码' },
+                        { required: true, message: t('components.EditPassword.index.5rmxmuyx4kg0') },
                         { validator: checkMethods.confirm, trigger: 'blur' },
                     ]"
                 >
                     <j-input-password
                         v-model:value="form.confirmPassword"
-                        placeholder="请确认新密码"
+                        :placeholder="t('components.EditPassword.index.5rmxmuyx4kg0')"
                     />
                 </j-form-item>
             </j-form>
         </div>
         <template #footer>
-            <j-button v-if="current === 0" @click="emits('close')">取消</j-button>
-            <j-button v-if="current === 2" @click="onPrev">上一步</j-button>
-            <j-button type="primary" v-else @click="onNext">下一步</j-button>
-            <j-button v-if="current === 2" type="primary" @click="handleOk">完成</j-button>
+            <j-button v-if="current === 0" @click="emits('close')">{{t('components.EditPassword.index.5rmxmuyx4rk0')}}</j-button>
+            <j-button v-if="current === 2" @click="onPrev">{{t('components.EditPassword.index.5rmxmuyx4y40')}}</j-button>
+            <j-button type="primary" v-else @click="onNext">{{t('components.EditPassword.index.5rmxmuyx5ew0')}}</j-button>
+            <j-button v-if="current === 2" type="primary" @click="handleOk">{{t('components.EditPassword.index.5rmxmuyx8580')}}</j-button>
         </template>
     </j-modal>
 </template>
@@ -73,7 +73,9 @@ import {
     validateField_api,
 } from '@/api/account/center';
 import { onlyMessage } from '@/utils/comm';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 type formType = {
     oldPassword: string;
     newPassword: string;
@@ -125,7 +127,7 @@ const checkMethods = {
                 return Promise.reject(resp.result.reason);
             else return Promise.resolve();
         } catch (error) {
-            return Promise.reject('验证失败');
+            return Promise.reject(t('components.EditPassword.index.5rmxmuyx8hc0'));
         }
     },
     new: async (_rule: any, value: string) => {
@@ -136,7 +138,7 @@ const checkMethods = {
                 return Promise.reject(resp.result.reason);
             else return Promise.resolve();
         } catch (error) {
-            return Promise.reject('验证失败');
+            return Promise.reject(t('components.EditPassword.index.5rmxmuyx8hc0'));
         }
     },
     confirm: async (_rule: any, value: string) => {
@@ -145,7 +147,7 @@ const checkMethods = {
             form.value.newPassword &&
             value !== form.value.newPassword
         ) {
-            return Promise.reject('两次密码输入不一致');
+            return Promise.reject(t('components.EditPassword.index.5rmxmuyx8p80'));
         }
         try {
             const resp: any = await validateField_api('password', value);
@@ -153,7 +155,7 @@ const checkMethods = {
                 return Promise.reject(resp.result.reason);
             else return Promise.resolve();
         } catch (error) {
-            return Promise.reject('验证失败');
+            return Promise.reject(t('components.EditPassword.index.5rmxmuyx8hc0'));
         }
     },
 };
@@ -168,7 +170,7 @@ const handleOk = () => {
         updateMepsd_api(params)
             .then((resp) => {
                 if (resp.status === 200) {
-                    onlyMessage('保存成功', 'success');
+                    onlyMessage(t('components.EditPassword.index.5rmxmuyx8ww0'), 'success');
                     emits('save');
                 }
             })

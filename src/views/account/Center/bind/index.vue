@@ -2,7 +2,7 @@
 <template>
   <div class='page-container'>
     <div class='content'>
-      <div class='title'>第三方账户绑定</div>
+      <div class='title'>{{ t('Center.bind.index.5rmxfod33ws0') }}</div>
       <!-- 已登录-绑定三方账号 -->
       <template v-if='!!token'>
         <div class='info'>
@@ -10,18 +10,15 @@
             <template #title>
               <div class='info-head'>
                 <img :src="getImage('/bind/Rectangle.png')" />
-                <span>个人信息</span>
+                <span>{{ t('Center.bind.index.5rmxfod3ecc0') }}</span>
               </div>
             </template>
             <div class='info-body'>
-              <img
-                :src="
-                                    user?.avatar ||
-                                    getImage('/bind/jetlinksLogo.png')
-                                "
-              />
-              <p>账号：{{ user?.username }}</p>
-              <p>用户名：{{ user?.name }}</p>
+              <img :src="user?.avatar ||
+                getImage('/bind/jetlinksLogo.png')
+                " />
+              <p>{{ t('Center.bind.index.acount') + user?.username }}</p>
+              <p>{{ t('Center.bind.index.userName') + user?.name }}</p>
             </div>
           </j-card>
           <img :src="getImage('/bind/Vector.png')" />
@@ -29,27 +26,22 @@
             <template #title>
               <div class='info-head'>
                 <img :src="getImage('/bind/Rectangle.png')" />
-                <span>三方账户信息</span>
+                <span>{{ t('Center.bind.index.5rmxfod3ez40') }}</span>
               </div>
             </template>
             <div class='info-body'>
-              <img
-                :src="
-                                    iconMap.get(
-                                        bindUser?.applicationProvider,
-                                    ) || getImage('/apply/provider1.png')
-                                "
-              />
-              <p>账号：{{ bindUser?.result?.userId || '-' }}</p>
-              <p>用户名：{{ bindUser?.result?.name || '-' }}</p>
+              <img :src="iconMap.get(
+                bindUser?.applicationProvider,
+              ) || getImage('/apply/provider1.png')
+                " />
+              <p>{{ t('Center.bind.index.acount') + bindUser?.result?.userId || '-' }}</p>
+              <p>{{ t('Center.bind.index.userName') + bindUser?.result?.name || '-' }}</p>
             </div>
           </j-card>
         </div>
         <div class='btn'>
-          <j-button type='primary' @click='handleBind'
-          >立即绑定
-          </j-button
-          >
+          <j-button type='primary' @click='handleBind'>{{ t('Center.bind.index.bind') }}
+          </j-button>
         </div>
       </template>
       <!-- 未登录-绑定三方账号 -->
@@ -57,72 +49,40 @@
         <div class='not-login'>
           <div class='logo'>
             <img :src="getImage('/bind/jetlinksLogo.png')" />
-            <img
-              class='arrow'
-              :src="getImage('/bind/Vector.png')"
-            />
-            <img
-              :src='iconMap.get(bindUser?.applicationProvider)'
-            />
+            <img class='arrow' :src="getImage('/bind/Vector.png')" />
+            <img :src='iconMap.get(bindUser?.applicationProvider)' />
           </div>
           <div class='desc'>
-            你已通过
+            {{ t('Center.bind.index.5rmxfod3f6o0') }}
             {{ bindUser?.appName }}
-            授权,完善以下登录信息即可以完成绑定
+            {{ t('Center.bind.index.5rmxfod3fj40') }}
           </div>
           <div class='login-form'>
             <j-form layout='vertical'>
-              <j-form-item
-                label='账户'
-                v-bind='validateInfos.username'
-              >
-                <j-input
-                  v-model:value='formData.username'
-                  placeholder='请输入账户'
-                />
+              <j-form-item :label="t('Center.bind.index.5rmxfod3fvk0')" v-bind='validateInfos.username'>
+                <j-input v-model:value='formData.username' :placeholder="t('Center.bind.index.5rmxfod3g7k0')" />
               </j-form-item>
-              <j-form-item
-                label='密码'
-                v-bind='validateInfos.password'
-              >
-                <j-input-password
-                  v-model:value='formData.password'
-                  placeholder='请输入密码'
-                />
+              <j-form-item :label="t('Center.bind.index.5rmxfod3gpo0')" v-bind='validateInfos.password'>
+                <j-input-password v-model:value='formData.password' :placeholder="t('Center.bind.index.5rmxfod3h200')" />
               </j-form-item>
               <template v-if='captcha.base64'>
-                <j-form-item
-                  label='验证码'
-                  v-bind='validateInfos.verifyCode'
-                  :rules="[
-                    {
-                        required: true,
-                        message: '请输入验证码',
-                    },
-                ]"
-                >
-                  <j-input
-                    v-model:value='formData.verifyCode'
-                    placeholder='请输入验证码'
-                  >
+                <j-form-item :label="t('Center.bind.index.5rmxfod3hf40')" v-bind='validateInfos.verifyCode' :rules="[
+                  {
+                    required: true,
+                    message: t('Center.bind.index.5rmxfod3hog0'),
+                  },
+                ]">
+                  <j-input v-model:value='formData.verifyCode' :placeholder="t('Center.bind.index.5rmxfod3hog0')">
                     <template #addonAfter>
-                      <img
-                        :src='captcha.base64'
-                        @click='getCode'
-                        style='cursor: pointer'
-                      />
+                      <img :src='captcha.base64' @click='getCode' style='cursor: pointer' />
                     </template>
                   </j-input>
                 </j-form-item>
 
               </template>
               <j-form-item>
-                <j-button
-                  type='primary'
-                  @click='handleLoginBind'
-                  style='width: 100%'
-                >
-                  登录并绑定账户
+                <j-button type='primary' @click='handleLoginBind' style='width: 100%'>
+                  {{ t('Center.bind.index.5rmxfod3hvg0') }}
                 </j-button>
               </j-form-item>
             </j-form>
@@ -141,7 +101,9 @@ import { message } from 'ant-design-vue'
 
 import { applicationInfo, bindAccount } from '@/api/bind'
 import { code, authLogin, userDetail } from '@/api/login'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const useForm = Form.useForm
 
 interface formData {
@@ -188,9 +150,9 @@ const getAppInfo = async () => {
   bindUser.value = result
 
   if (result.applicationProvider === 'dingtalk-ent-app') {
-    bindUser.value.appName = '钉钉'
+    bindUser.value.appName = t('Center.bind.index.5rmxfod3i780')
   } else if (result.applicationProvider === 'wechat-webapp') {
-    bindUser.value.appName = '微信'
+    bindUser.value.appName = t('Center.bind.index.5rmxfod3ie00')
   } else {
     bindUser.value.appName = result.applicationName
   }
@@ -204,7 +166,7 @@ const handleBind = async () => {
   const code = getUrlCode()
   const res = await bindAccount(code)
   console.log('bindAccount: ', res)
-  message.success('绑定成功')
+  message.success(t('Center.bind.index.5rmxfod3ikw0'))
   goRedirect()
   setTimeout(() => window.close(), 1000)
 }
@@ -219,13 +181,13 @@ const formRules = ref({
   username: [
     {
       required: true,
-      message: '请输入账户'
+      message: t('Center.bind.index.5rmxfod3g7k0')
     }
   ],
   password: [
     {
       required: true,
-      message: '请输入密码'
+      message: t('Center.bind.index.5rmxfod3h200')
     }
   ]
 })
@@ -250,7 +212,7 @@ const getCode = async () => {
 
 
 /**
- * 登录并绑定账户
+ * {{t('Center.bind.index.5rmxfod3hvg0')}}
  */
 const handleLoginBind = () => {
   validate()
@@ -271,7 +233,7 @@ const handleLoginBind = () => {
       const res = await authLogin(params)
       console.log('res: ', res)
       if (res.success) {
-        message.success('登录成功')
+        message.success(t('Center.bind.index.5rmxfod3iqo0'))
         LocalStore.set(TOKEN_KEY, res.result!.token as string)
         goRedirect()
       }
@@ -307,12 +269,7 @@ getDetail()
 </script>
 
 <style lang='less' scoped>
-:deep(
-        .ant-form-item-label
-            > label.ant-form-item-required:not(
-                .ant-form-item-required-mark-optional
-            )::before
-    ) {
+:deep(.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before) {
   display: none;
 }
 
