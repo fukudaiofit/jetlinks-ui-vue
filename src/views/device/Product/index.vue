@@ -328,7 +328,7 @@ const getActions = (
             },
             icon: data.state !== 0 ? 'StopOutlined' : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${data.state !== 0 ? t('device.Product.index.5rcy142sljs0') : t('device.Product.index.5rcy142tnp40')}?`,
+                title: `${t('device.Product.index.verify') + (data.state !== 0 ? t('device.Product.index.5rcy142sljs0') : t('device.Product.index.5rcy142tnp40'))}?`,
                 onConfirm: async () => {
                     let response = undefined;
                     if (data.state !== 0) {

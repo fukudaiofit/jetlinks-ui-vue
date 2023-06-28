@@ -662,8 +662,7 @@ const getActions = (
                     ? 'StopOutlined'
                     : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${
-                    data.state.value !== 'notActive' ? t('device.Instance.index.5rcy7qt1r8k0') : t('device.Instance.index.5rcy7qt1tuw0')
+                title: `${t('device.Instance.index.verify') + (data.state.value !== 'notActive' ? t('device.Instance.index.5rcy7qt1r8k0') : t('device.Instance.index.5rcy7qt1tuw0'))
                 }?`,
                 onConfirm: async () => {
                     let response = undefined;

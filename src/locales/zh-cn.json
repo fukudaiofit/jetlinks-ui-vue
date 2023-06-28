@@ -49,7 +49,8 @@
                 "5rcy142tpp40": "网关子设备",
                 "5rcy142tpu80": "网关设备",
                 "5rcy142tpz00": "分类",
-                "5rcy142tq4k0": "所属组织"
+                "5rcy142tq4k0": "所属组织",
+                "verify": "确认"
             }
         },
         "Category": {
@@ -116,7 +117,8 @@
                 "5rcy7qt1v7w0": "启用全部设备",
                 "5rcy7qt1vgg0": "确认启用全部设备？",
                 "5rcy7qt1vmw0": "批量删除设备",
-                "5rcy7qt1vso0": "批量禁用设备"
+                "5rcy7qt1vso0": "批量禁用设备",
+                "verify": "确认"
             }
         },
         "Firmware": {
