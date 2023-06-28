@@ -1453,7 +1453,18 @@
                 "5rga8ahummg0": "Content of the notice",
                 "5rga8ahumq80": "Template variable",
                 "5rga8ahumu80": "User permissions",
-                "5rga8ahumxs0": "Confirm"
+                "5rga8ahumxs0": "Confirm",
+                "5rmxl9q904s0": "View details",
+                "5rmxl9q91dc0": "User name",
+                "5rmxl9q91l00": "Account ID",
+                "5rmxl9q91qc0": "Name",
+                "5rmxl9q91v80": "Role",
+                "5rmxl9q920w0": "Organization",
+                "5rmxl9q927g0": "Cell phone number",
+                "5rmxl9q92c80": "Mailbox",
+                "5rmxl9q92ho0": "Close",
+                "5rmxl9q92mo0": "No role yet",
+                "5rmxl9q92tw0": "No organization for the time being"
             }
         },
         "Role": {
@@ -1605,6 +1616,136 @@
                 "5rlcncp1r7s0": "Editor",
                 "5rlcncp1rd40": "Confirm",
                 "5rlcncp1rho0": "Cancel"
+            }
+        },
+        "BindThirdAccount": {
+            "index": {
+                "5rmxjyjan2k0": "Bound",
+                "5rmxjyjaoag0": "Unbound",
+                "5rmxjyjaohc0": "Are you sure to unbind?",
+                "5rmxjyjaomo0": "Unbind",
+                "5rmxjyjaos80": "Bind now",
+                "5rmxjyjap5s0": "Unbind successfully"
+            }
+        },
+        "EditInfo": {
+            "index": {
+                "5rmxm54jtv00": "Editor",
+                "5rmxm54jv0w0": "Name",
+                "5rmxm54jv700": "Name is required",
+                "5rmxm54jvck0": "You can enter up to 64 characters",
+                "5rmxm54jvh00": "Please enter your name",
+                "5rmxm54jvmk0": "User name",
+                "5rmxm54jvrk0": "Please enter a user name",
+                "5rmxm54jvwo0": "Role",
+                "5rmxm54jw280": "Please enter a role",
+                "5rmxm54jw6o0": "Organization",
+                "5rmxm54jwe80": "Please enter an organization",
+                "5rmxm54jwj40": "Cell phone number",
+                "5rmxm54jwng0": "Please enter the correct mobile phone number",
+                "5rmxm54jwsc0": "Please enter your phone number",
+                "5rmxm54jwx00": "Mailbox",
+                "5rmxm54jx1w0": "Email is not a valid email",
+                "5rmxm54jx6k0": "Please enter an email address",
+                "5rmxm54jxbc0": "Saved successfully"
+            }
+        },
+        "EditPassword": {
+            "index copy": {
+                "5rmxmivhyqg0": "Reset the password",
+                "5rmxmivhzzg0": "Old password",
+                "5rmxmivi0880": "Please enter your password",
+                "5rmxmivi0d40": "Please enter your old password",
+                "5rmxmivi0go0": "Password",
+                "5rmxmivi0n00": "Confirm the password",
+                "5rmxmivi0rg0": "Please enter the confirmation password",
+                "5rmxmivi0vg0": "Please enter your password again",
+                "5rmxmivi0yw0": "Validation failed",
+                "5rmxmivi11k0": "The two password entries are inconsistent",
+                "5rmxmivi14g0": "Saved successfully"
+            },
+            "index": {
+                "5rmxmuyx2bo0": "Reset the password",
+                "5rmxmuyx3f80": "Verify the password",
+                "5rmxmuyx3p40": "Set a password",
+                "5rmxmuyx3x80": "Secondary confirmation",
+                "5rmxmuyx44w0": "Please enter your current password",
+                "5rmxmuyx4cc0": "Please enter a new password",
+                "5rmxmuyx4kg0": "Please confirm the new password",
+                "5rmxmuyx4rk0": "Cancel",
+                "5rmxmuyx4y40": "Previous step",
+                "5rmxmuyx5ew0": "Next step",
+                "5rmxmuyx8580": "Finish",
+                "5rmxmuyx8hc0": "Validation failed",
+                "5rmxmuyx8p80": "The two password entries are inconsistent",
+                "5rmxmuyx8ww0": "Saved successfully"
+            }
+        },
+        "HomeView": {
+            "index": {
+                "5rmxndjebd40": "Confirm",
+                "5rmxndjechc0": "Saved successfully"
+            }
+        },
+        "NotificationRecord": {
+            "index": {
+                "5rmxnueqiwg0": "All read",
+                "5rmxnueqkk80": "Unread",
+                "5rmxnueqkv40": "Read",
+                "5rmxnueql300": "Mark as unread",
+                "5rmxnueqlaw0": "Mark as read",
+                "5rmxnueqlmk0": "Check",
+                "5rmxnueqlu40": "Type",
+                "5rmxnueqm1g0": "News",
+                "5rmxnueqmeo0": "Notification time",
+                "5rmxnueqmmo0": "Status",
+                "5rmxnueqmtw0": "Operation",
+                "5rmxnueqn1k0": "Operation successful!"
+            }
+        },
+        "NotificationSubscription": {
+            "index": {
+                "5rmxpvx36880": "Add",
+                "5rmxpvx39ao0": "Editor",
+                "5rmxpvx39nw0": "Disable",
+                "5rmxpvx39v40": "Enable",
+                "5rmxpvx3a0s0": "Please disable before deleting",
+                "5rmxpvx3a7k0": "Delete",
+                "5rmxpvx3ads0": "Name",
+                "5rmxpvx3aw80": "Type",
+                "5rmxpvx3b6k0": "Alarm rules",
+                "5rmxpvx3bes0": "Status",
+                "5rmxpvx3blk0": "Operation",
+                "5rmxpvx3bu80": "Operation successful!",
+                "5rmxpvx3c0s0": "Operation failed!",
+                "verify": "Confirm",
+                "confirmDelete": "Confirm deletion?"
+            }
+        },
+        "StationMessage": {
+            "index": {
+                "5rmxrscb5n00": "Alarm",
+                "5rmxrscb7840": "System operation and maintenance",
+                "5rmxrscb7ho0": "Business monitoring"
+            }
+        },
+        "Subscribe": {
+            "index": {
+                "5rmxv2t58vw0": "On this page, you can choose which topics you want to subscribe to and how you want to receive notifications.",
+                "5rmxv2t5ago0": "When a product-type alert is triggered, you will be notified in the subscribed mode.",
+                "5rmxv2t5amg0": "Alarm",
+                "5rmxv2t5ar40": "Product alarm",
+                "5rmxv2t5avg0": "Letter in the station",
+                "5rmxv2t5b3k0": "Nail",
+                "5rmxv2t5b880": "WeChat",
+                "5rmxv2t5bcc0": "Mailbox",
+                "5rmxv2t5bio0": "Equipment alarm",
+                "5rmxv2t5bmo0": "Voice",
+                "5rmxv2t5btw0": "System monitoring",
+                "5rmxv2t5by80": "Buffer data is discarded",
+                "5rmxv2t5c4o0": "Business monitoring",
+                "5rmxv2t5c940": "Transparent message parsing exception",
+                "limit": "MQTT concurrency limits"
             }
         }
     },
@@ -2317,6 +2458,22 @@
                 "5rlc5ey0l3k0": "Initialize device access sample data",
                 "5rlc5ey0lb00": "Confirm",
                 "5rlc5ey0lf00": "Saved successfully"
+            }
+        },
+        "oauth": {
+            "index": {
+                "5rmy4okjyok0": "Authorize login",
+                "5rmy4okjzz00": "You are authorizing the login,",
+                "5rmy4okk07o0": "Access to your personal information",
+                "5rmy4okk0dk0": "Consent to authorization",
+                "5rmy4okk0j00": "Switch accounts",
+                "5rmy4okk0os0": "User name",
+                "5rmy4okk0u80": "Password",
+                "5rmy4okk12g0": "Please enter the verification code",
+                "5rmy4okk1800": "Sign in",
+                "userNameTip": "Please enter a user name",
+                "pwdTip": "Please enter your password",
+                "codeTip": "Please enter the verification code"
             }
         }
     },
@@ -5624,6 +5781,126 @@
                 "5rlch8lvzq00": "Step size (seconds)",
                 "5rlch8lvzv00": "Step length (times)",
                 "5rlch8lvzzk0": "Step size"
+            }
+        }
+    },
+    "Center": {
+        "bind": {
+            "index": {
+                "5rmxfod33ws0": "Third-party account binding",
+                "5rmxfod3ecc0": "Personal information",
+                "5rmxfod3ez40": "Tripartite Account Information",
+                "5rmxfod3f6o0": "You have passed",
+                "5rmxfod3fj40": "Authorization, complete the following login information to complete the binding",
+                "5rmxfod3fvk0": "Account",
+                "5rmxfod3g7k0": "Please enter an account",
+                "5rmxfod3gpo0": "Password",
+                "5rmxfod3h200": "Please enter your password",
+                "5rmxfod3hf40": "Verification code",
+                "5rmxfod3hog0": "Please enter the verification code",
+                "5rmxfod3hvg0": "Log in and bind account",
+                "5rmxfod3i780": "Nail",
+                "5rmxfod3ie00": "WeChat",
+                "5rmxfod3ikw0": "Binding succeeded",
+                "5rmxfod3iqo0": "Login successful",
+                "account": "Account number",
+                "userName": "User name",
+                "bind": "Bind now",
+                "bindName": "Binding name:"
+            }
+        }
+    },
+    "NotificationRecord": {
+        "components": {
+            "ViewDialog": {
+                "5rmxnnwmp9s0": "Details",
+                "5rmxnnwmqr80": "Alarm device",
+                "5rmxnnwmqxo0": "Device ID",
+                "5rmxnnwmr300": "Alarm name",
+                "5rmxnnwmr7o0": "Alarm time",
+                "5rmxnnwmrcs0": "Alarm level",
+                "5rmxnnwmrik0": "Alarm description",
+                "5rmxnnwmrn80": "Alarm flow"
+            }
+        }
+    },
+    "NotificationSubscription": {
+        "components": {
+            "EditDialog": {
+                "5rmxpg5f4nw0": "Editor",
+                "5rmxpg5f6kw0": "Add",
+                "5rmxpg5f6u40": "Name",
+                "5rmxpg5f70w0": "Please enter a name",
+                "5rmxpg5f76o0": "You can enter up to 64 characters",
+                "5rmxpg5f7hc0": "Type",
+                "5rmxpg5f7nk0": "Please select a type",
+                "5rmxpg5f7s80": "Alarm rules",
+                "5rmxpg5f7z40": "Please select alarm rule",
+                "5rmxpg5f8640": "Notification method",
+                "5rmxpg5f8bg0": "Please select a notification method",
+                "5rmxpg5f8h00": "In-station notification",
+                "5rmxpg5f8m40": "Operation succeeded"
+            }
+        }
+    },
+    "Subscribe": {
+        "components": {
+            "Detail": {
+                "5rmxuhs2ap40": "Cancel the subscription",
+                "5rmxuhs2bpw0": "Change the receiving account",
+                "5rmxuhs2bwg0": "Name of the currently bound account"
+            },
+            "Error": {
+                "5rmxuoavajc0": "Please bind the nail account first.",
+                "5rmxuoavbtg0": "Please bind the enterprise WeChat account first.",
+                "5rmxuoavc0g0": "Please bind the mailbox first",
+                "5rmxuoavc5k0": "Please bind the mobile phone number first",
+                "5rmxuoavcb40": "Confirm",
+                "5rmxuoavch40": "Bind now",
+                "5rmxuoavcmg0": "Open the detail edit box"
+            }
+        }
+    },
+    "account": {
+        "Center": {
+            "index copy": {
+                "5rmxwbksi1g0": "Change your avatar",
+                "5rmxwbksjbs0": "User name",
+                "5rmxwbksjl40": "Account ID",
+                "5rmxwbksjqg0": "Registration time",
+                "5rmxwbksjvg0": "Phone",
+                "5rmxwbksk100": "Name",
+                "5rmxwbksk640": "Role",
+                "5rmxwbkskaw0": "Organization",
+                "5rmxwbkskg00": "Mailbox",
+                "5rmxwbkskko0": "Change the password",
+                "5rmxwbkskow0": "A strong password makes your account more secure. It is recommended that you change your password regularly and set a password that contains at least two letters, symbols, or numbers and is more than 8 digits in length",
+                "5rmxwbkskts0": "Binding tripartite account",
+                "5rmxwbkskyw0": "Are you sure to unbind?",
+                "5rmxwbksl3g0": "Unbind",
+                "5rmxwbkslag0": "Bind now",
+                "5rmxwbksles0": "First page view",
+                "5rmxwbksljw0": "Confirm",
+                "5rmxwbksls00": "Unbind successfully",
+                "5rmxwbkslw80": "Upload succeeded",
+                "5rmxwbksm0w0": "Please upload a picture in the correct format",
+                "5rmxwbksm8o0": "Saved successfully",
+                "bindName": "Binding name:",
+                "bindTime": "Binding time:",
+                "unbind": "Unbound",
+                "fail": "Failed to upload logo. Please try again later"
+            },
+            "index": {
+                "5rmy0nei3800": "User name",
+                "5rmy0nei44c0": "Account ID",
+                "5rmy0nei4ag0": "View details",
+                "5rmy0nei4fk0": "Edit the data",
+                "5rmy0nei4ko0": "Change the password",
+                "5rmy0nei4q40": "First page view",
+                "5rmy0nei4uw0": "Bind a third-party account",
+                "5rmy0nei4zk0": "My subscription",
+                "5rmy0nei54k0": "Letter in the station",
+                "title": "XX Department · XX Role"
             }
         }
     }
