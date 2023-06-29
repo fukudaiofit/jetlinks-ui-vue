@@ -123,7 +123,7 @@ const rules = [{
       let hasValue = value.find((item: { name: string, value: any}) => item.value === undefined)
       if (hasValue) {
         const functionItem = functionData.value.find((item: any) => item.id === hasValue.name)
-        return Promise.reject(functionItem?.name ? `请输入${functionItem?.name}值` : t('Save.Device.InvokeFunction.5rg55550vp40'))
+        return Promise.reject(functionItem?.name ? t('Save.Device.InvokeFunction.inputTip',{name:functionItem?.name}) : t('Save.Device.InvokeFunction.5rg55550vp40'))
       }
     }
     return Promise.resolve();

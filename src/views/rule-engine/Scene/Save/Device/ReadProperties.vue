@@ -70,10 +70,10 @@ const change = (values: string[], optionItems: any[]) => {
   }, '');
 
   if (isLimit && names.length - 1 > indexOf) {
-    extraStr += `等${optionItems.length}个属性`;
+    extraStr += t('Save.Device.ReadProperties.stats',{length:optionItems.length});
   }
   emit('update:value', values)
-  emit('update:action', `读取 ${extraStr}`)
+  emit('update:action', `${t('Save.Device.ReadProperties.stats') + extraStr}`)
 }
 
 </script>

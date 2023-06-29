@@ -187,7 +187,7 @@ const functionRules = [
                     );
                     return Promise.reject(
                         functionItem?.name
-                            ? `请输入${functionItem.name}值`
+                            ? t('Device.actions.index.inputTip',{name:functionItem.name})
                             : t('Device.actions.index.5rg4oblr0440'),
                     );
                 }

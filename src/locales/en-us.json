@@ -1416,6 +1416,24 @@
                 "5rg4zm6w3wk0": "Please enter a cron expression",
                 "expression": "A cron expression"
             },
+            "util": {
+                "Monday": "Monday",
+                "Tuesday": "Tuesday",
+                "Wednesday": "Wednesday",
+                "Thursday": "Thursday",
+                "Friday": "Friday",
+                "Saturday": "Saturday",
+                "Sunday": "Sunday",
+                "seconds": "seconds",
+                "minutes": "minutes",
+                "hours": "hours",
+                "everyday": "everyday",
+                "weekly": "weekly",
+                "monthly": "monthly",
+                "wait": "...Wait for {when} days",
+                "execute": "Execute 1 time",
+                "executing": "This command is executed once every {every}{unit}"
+            },
             "WhenOption": {
                 "5rg52lvzw200": "Every day"
             }
@@ -3459,7 +3477,8 @@
                 "5rg55550vcc0": "Yes",
                 "5rg55550vj40": "No",
                 "5rg55550vp40": "Please enter a function value",
-                "execute": "Carry out"
+                "execute": "Carry out",
+                "inputTip":"Please enter the {name} value"
             },
             "OrgList": {
                 "5rg55d5xwk80": "Name",
@@ -3482,13 +3501,27 @@
             },
             "ReadProperties": {
                 "5rg55xpch2s0": "Please select a property",
-                "5rg55xpcjjc0": "Read the selected attribute value periodically"
+                "5rg55xpcjjc0": "Read the selected attribute value periodically",
+                "stats":"Such as {length} attributes",
+                "read": "read"
             },
             "Type": {
                 "5rg5643j7xs0": "Trigger type",
                 "5rg5643jadc0": "Please select an event",
                 "5rg5643japc0": "The device is online",
-                "5rg5643jaxs0": "The device is offline"
+                "5rg5643jaxs0": "The device is offline",
+                "report": "report"
+            },
+            "util": {
+                "online": "Equipment online",
+                "offline": "Equipment offline",
+                "reportEvent": "Event reporting",
+                "reportProperty": "Attribute reporting",
+                "readProperty": "Read attribute",
+                "writeProperty": "Modify attribute",
+                "invokeFunction": "Function call",
+                "read": "Read attribute",
+                "edit": "Modify attribute"
             },
             "WriteProperty": {
                 "5rg56e7y9z80": "Please enter the modified value",
@@ -3496,7 +3529,8 @@
                 "5rg56e7ycc40": "Timed invocation of selected properties",
                 "5rg56e7ydlc0": "Please select a property value",
                 "5rg56e7ygj40": "Please enter a property value",
-                "edit": "Modification"
+                "edit": "Modification",
+                "inputTip":"Please enter the {name} value"
             }
         },
         "Manual": {
@@ -3798,7 +3832,7 @@
                 "5rg4saoj7k00": "Voice",
                 "5rg4saoj7ow0": "Text messages",
                 "5rg4saoj7tg0": "For",
-                "5rg4saoj7yc0": "Have the same",
+                "5rg4saoj7yc0": "{propertiesName} of {productName} device with the same {relationName}",
                 "5rg4saoj8580": "Click Configure to execute the action",
                 "5rg4saoj89w0": "Confirm deletion?",
                 "5rg4saoj8hs0": "Perform subsequent actions when this condition is met",
@@ -3899,7 +3933,8 @@
                 "5rg4oblqzmw0": "Please select a read attribute",
                 "5rg4oblqzt80": "Please select a property",
                 "5rg4oblqzz00": "Set properties",
-                "5rg4oblr0440": "Please enter a function value"
+                "5rg4oblr0440": "Please enter a function value",
+                "inputTip": "Please enter the {name} value"
             },
             "WriteProperty": {
                 "5rg4oji3a3s0": "Set properties",

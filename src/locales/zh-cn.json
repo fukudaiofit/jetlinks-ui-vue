@@ -1393,6 +1393,9 @@
                 "5rg4ytrtt7k0": "请选择操作符",
                 "5rg4ytrttbs0": "请选择或输入参数值"
             },
+            "util": {
+                "execute": "至少配置一个执行动作"
+            },
             "WhenItem": {
                 "5rg4yz2khok0": "并且",
                 "5rg4yz2kj1c0": "或者",
@@ -1415,6 +1418,24 @@
                 "5rg4zm6w3sc0": "请输入正确的cron表达式",
                 "5rg4zm6w3wk0": "请输入cron表达式",
                 "expression": "cron表达式"
+            },
+            "util": {
+                "Monday": "星期一",
+                "Tuesday": "星期二",
+                "Wednesday": "星期三",
+                "Thursday": "星期四",
+                "Friday": "星期五",
+                "Saturday": "星期六",
+                "Sunday": "星期日",
+                "seconds": "秒",
+                "minutes": "分",
+                "hours": "小时",
+                "everyday": "每天",
+                "weekly": "每周",
+                "monthly": "每月",
+                "wait": "...等{when}天",
+                "execute": "执行1次",
+                "executing": "每{every}{unit}执行1次"
             },
             "WhenOption": {
                 "5rg52lvzw200": "每天"
@@ -3231,7 +3252,7 @@
                 "5rg425yip440": "解绑",
                 "5rg425yip8w0": "确定解绑？",
                 "5rg425yipe80": "操作成功",
-                "explain":"说明："
+                "explain": "说明："
             }
         },
         "action": {
@@ -3459,7 +3480,8 @@
                 "5rg55550vcc0": "是",
                 "5rg55550vj40": "否",
                 "5rg55550vp40": "请输入功能值",
-                "execute": "执行"
+                "execute": "执行",
+                "inputTip": "请输入{name}值"
             },
             "OrgList": {
                 "5rg55d5xwk80": "名称",
@@ -3482,13 +3504,27 @@
             },
             "ReadProperties": {
                 "5rg55xpch2s0": "请选择属性",
-                "5rg55xpcjjc0": "定时读取所选属性值"
+                "5rg55xpcjjc0": "定时读取所选属性值",
+                "stats": "等{length}个属性",
+                "read": "读取"
             },
             "Type": {
                 "5rg5643j7xs0": "触发类型",
                 "5rg5643jadc0": "请选择事件",
                 "5rg5643japc0": "设备上线",
-                "5rg5643jaxs0": "设备离线"
+                "5rg5643jaxs0": "设备离线",
+                "report": "上报"
+            },
+            "util": {
+                "online": "设备上线",
+                "offline": "设备离线",
+                "reportEvent": "事件上报",
+                "reportProperty": "属性上报",
+                "readProperty": "读取属性",
+                "writeProperty": "修改属性",
+                "invokeFunction": "功能调用",
+                "read": "读取属性",
+                "edit": "修改属性"
             },
             "WriteProperty": {
                 "5rg56e7y9z80": "请输入修改值",
@@ -3496,7 +3532,8 @@
                 "5rg56e7ycc40": "定时调用所选属性",
                 "5rg56e7ydlc0": "请选择属性值",
                 "5rg56e7ygj40": "请输入属性值",
-                "edit": "修改"
+                "edit": "修改",
+                "inputTip":"请输入{name}值"
             }
         },
         "Manual": {
@@ -3798,7 +3835,7 @@
                 "5rg4saoj7k00": "语音",
                 "5rg4saoj7ow0": "短信",
                 "5rg4saoj7tg0": "为",
-                "5rg4saoj7yc0": "具有相同",
+                "5rg4saoj7yc0": "具有相同{relationName}的{productName}设备的{propertiesName}",
                 "5rg4saoj8580": "点击配置执行动作",
                 "5rg4saoj89w0": "确认删除？",
                 "5rg4saoj8hs0": "满足此条件后执行后续动作",
@@ -3899,7 +3936,8 @@
                 "5rg4oblqzmw0": "请选择读取属性",
                 "5rg4oblqzt80": "请选择属性",
                 "5rg4oblqzz00": "设置属性",
-                "5rg4oblr0440": "请输入功能值"
+                "5rg4oblr0440": "请输入功能值",
+                "inputTip": "请输入{name}值"
             },
             "WriteProperty": {
                 "5rg4oji3a3s0": "设置属性",

@@ -188,7 +188,7 @@ const showTimer = computed(() => {
 })
 
 const eventSelect = (_: string, eventItem: any) => {
-  optionCache.action = `${eventItem.name}上报`
+  optionCache.action = `${eventItem.name + t('Save.Device.Type.report')}`
 }
 
 defineExpose({

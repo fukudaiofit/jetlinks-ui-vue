@@ -152,7 +152,7 @@ const rules = [{
       if (hasValue) {
         const item = callDataOptions.value.find((item: any) => item.id === hasValue.name)
         console.log()
-        return Promise.reject(item?.name ? `请输入${item?.name}值` : t('Save.Device.WriteProperty.5rg56e7ygj40'))
+        return Promise.reject(item?.name ?  t('Save.Device.WriteProperty.inputTip',{name:item?.name}) : t('Save.Device.WriteProperty.5rg56e7ygj40'))
       }
     }
     return Promise.resolve();
