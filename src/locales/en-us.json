@@ -3230,7 +3230,8 @@
                 "5rg425yioxs0": "Applies when the device data or behavior meets the trigger condition and performs the specified action",
                 "5rg425yip440": "Untie",
                 "5rg425yip8w0": "Are you sure to unbind?",
-                "5rg425yipe80": "Operation succeeded"
+                "5rg425yipe80": "Operation succeeded",
+                "explain": "Instructions:"
             }
         },
         "action": {

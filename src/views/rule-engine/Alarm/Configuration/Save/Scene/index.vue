@@ -54,9 +54,9 @@
                         </Ellipsis>
                         <Ellipsis :lineClamp="2">
                             <div class="subTitle">
-                                说明：{{
+                                {{ t('Save.Scene.index.explain') + (
                                     slotProps?.description ||
-                                    typeMap.get(slotProps.triggerType)?.tip
+                                    typeMap.get(slotProps.triggerType)?.tip)
                                 }}
                             </div>
                         </Ellipsis>
