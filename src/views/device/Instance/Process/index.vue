@@ -10,9 +10,9 @@
             </div>
             <div v-else>
                 <p>{{ (type === 'active' ? t('Instance.Process.index.5rcy8rtoch40') :
-                    t('Instance.Process.index.5rcy8rtodx00')) + t('Instance.Process.index.suc'), { count: count }}}</p>
-                <p v-if="type === 'active'">{{ t('Instance.Process.index.err'), { errCount: errCount } }}<j-tooltip
-                        title="实例信息页面中的配置项未完善">
+                    t('Instance.Process.index.5rcy8rtodx00')) + t('Instance.Process.index.suc', { count: count })}}</p>
+                <p v-if="type === 'active'">{{ t('Instance.Process.index.err',{ errCount: errCount } )}}<j-tooltip
+                        :title="t('Instance.Process.index.imperfection')">
                         <AIcon style="margin-left: 5px" type="QuestionCircleOutlined" />
                     </j-tooltip></p>
             </div>

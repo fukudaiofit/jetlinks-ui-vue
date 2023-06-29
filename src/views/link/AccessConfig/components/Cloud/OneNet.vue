@@ -85,7 +85,7 @@
                                         ]">
                                             <template #label>
                                                 aesKey
-                                                <j-tooltip title="OneNet端生成的消息加密key">
+                                                <j-tooltip :title="t('components.Cloud.OneNet.encipher')">
                                                     <AIcon type="QuestionCircleOutlined" style="margin-left: 2px" />
                                                 </j-tooltip>
                                             </template>
@@ -243,18 +243,17 @@
                         <p>{{ t('components.Cloud.OneNet.agreement') + procotolCurrent }}</p>
                         <TitleComponent :data="t('components.Cloud.OneNet.5rg35msy1mc0')" />
                         <p>
-                            1、创建类型为{{
-                                props?.provider?.id === 'OneNet'
+                            1、{{ t('components.Cloud.OneNet.accessStep1',{type:  props?.provider?.id === 'OneNet'
                                 ? 'OneNet'
-                                : 'CTWing'
-                            }}的设备接入网关
+                                : 'CTWing'})
+                            }}
                         </p>
                         <p>
                             2、
                             {{ t('components.Cloud.OneNet.accessStep2') +
-                                props?.provider?.id === 'OneNet'
+                                (props?.provider?.id === 'OneNet'
                                 ? 'OneNet'
-                                : 'CTWing,选中后需填写CTWing平台中的产品ID、Master-APIkey。'
+                                : t('components.Cloud.OneNet.CTWing'))
                             }}
                         </p>
                         <p>

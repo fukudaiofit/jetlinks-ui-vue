@@ -97,7 +97,7 @@ const vailId = async (_: any, value: string) => {
   if (!props.data.id && value) { // 新增校验
     const resp = await vailIdFn(value)
     if (resp.success && resp.result && !resp.result.passed) {
-      return Promise.reject('ID重复');
+      return Promise.reject(t('link.plugin.Save.IDRepeat'));
     }
   }
   return Promise.resolve();

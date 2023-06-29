@@ -42,8 +42,8 @@
                     </p>
                     <p>{{ t('components.Channel.index.agreement') + provider.id }}</p>
                     <TitleComponent :data="t('components.Channel.index.5rg34u5fk540')" />
-                    <p>1、配置{{ provider.name }}通道</p>
-                    <p>2、创建{{ provider.name }}设备接入网关</p>
+                    <p>1、{{ t('components.Channel.index.channel', { name: provider.name }) }}</p>
+                    <p>2、{{ t('components.Channel.index.accessGateway', { name: provider.name }) }}</p>
                     <p>3、{{ t('components.Channel.index.productTip') + provider.name }}</p>
                     <p>4、{{ t('components.Channel.index.bind') }}</p>
                 </div>

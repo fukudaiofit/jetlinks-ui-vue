@@ -71,7 +71,7 @@
                 "5rcy4wlxpf80": "操作失败！",
                 "5rcy4wlxpls0": "说明",
                 "5rcy4wlxprw0": "新增分类",
-                "verify":"确认"
+                "verify": "确认"
             }
         },
         "Instance": {
@@ -1080,7 +1080,9 @@
                 "accessMode": "接入方式：",
                 "agreement": "消息协议：",
                 "productTip": "创建产品，并选中接入方式为",
-                "bind": "添加设备，单独为每一个设备进行数据点绑定"
+                "bind": "添加设备，单独为每一个设备进行数据点绑定",
+                "channel": "配置{name}通道",
+                "accessGateway": "创建{name}设备接入网关"
             }
         },
         "Cloud": {
@@ -1122,7 +1124,9 @@
                 "accessMode": "接入方式：",
                 "agreement": "消息协议：",
                 "accessDeviceStep2": "创建产品，并选中接入方式为",
-                "accessDeviceStep3": "添加设备，为每一台设备设置唯一的IMEI、IMSI码（需与OneNet平台中填写的值一致，若OneNet平台没有对应的设备，将会通过OneNet平台提供的LWM2M协议自动创建）"
+                "accessDeviceStep3": "添加设备，为每一台设备设置唯一的IMEI、IMSI码（需与OneNet平台中填写的值一致，若OneNet平台没有对应的设备，将会通过OneNet平台提供的LWM2M协议自动创建）",
+                "accessDeviceStep1": "创建类型为{type}的设备接入网关",
+                "CTWing": "CTWing,选中后需填写CTWing平台中的产品ID、Master-APIkey。"
             },
             "OneNet": {
                 "5rg35msxx1s0": "通过OneNet平台的HTTP推送服务进行数据接入",
@@ -1176,7 +1180,10 @@
                 "accessMode": "接入方式：",
                 "agreement": "消息协议：",
                 "accessStep2": "创建产品，并选中接入方式为",
-                "accessStep3": "添加设备，为每一台设备设置唯一的IMEI、SN、IMSI、PSK码（需与CTWingt平台中填写的值一致，若CTWing平台没有对应的设备，将会通过CTWing平台提供的LWM2M协议自动创建）"
+                "accessStep3": "添加设备，为每一台设备设置唯一的IMEI、SN、IMSI、PSK码（需与CTWingt平台中填写的值一致，若CTWing平台没有对应的设备，将会通过CTWing平台提供的LWM2M协议自动创建）",
+                "encipher": "OneNet端生成的消息加密key",
+                "accessStep1": "创建类型为{type}的设备接入网关",
+                "CTWing": "CTWing,选中后需填写CTWing平台中的产品ID、Master-APIkey。"
             }
         },
         "Edge": {
@@ -1250,7 +1257,8 @@
                 "5rg371r6bzk0": "请新增或完善配置",
                 "clusterTip": "共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置",
                 "SIPAddress": "SIP地址",
-                "SIPTip": "到服务器上的网卡地址,绑定到所有网卡:0.0.0.0"
+                "SIPTip": "到服务器上的网卡地址,绑定到所有网卡:0.0.0.0",
+                "SIP": "SIP域"
             },
             "index": {
                 "5rg37iwxsow0": "基本信息",
@@ -1756,6 +1764,14 @@
                 "5rmxv2t5c940": "透传消息解析异常",
                 "limit": "MQTT并发限制"
             }
+        },
+        "InklingDevice": {
+            "index": {
+                "5rnqdm6q8b40": "全选",
+                "5rnqdm6qi7c0": "该设备已绑定平台设备",
+                "5rnqdm6qikc0": "暂无数据",
+                "5rnqdm6qk640": "第{position}条/总共{total}条"
+            }
         }
     },
     "Instance": {
@@ -1781,7 +1797,7 @@
                 "5rg4mi4ya0g0": "操作失败",
                 "5rg4mi4ya8g0": "操作失败！",
                 "5rh473it3qc0": "所属产品",
-                "IDRepeat":"ID重复"
+                "IDRepeat": "ID重复"
             }
         },
         "Process": {
@@ -2270,6 +2286,19 @@
                 "5rg395qkgdo0": "删除",
                 "5rg395qkgj80": "请先禁用，再删除",
                 "5rg395qkgpc0": "确认删除?"
+            },
+            "data": {
+                "UDP": "UDP可以让设备无需建立连接就可以与平台传输数据。在允许一定程度丢包的情况下，提供轻量化且简单的连接。",
+                "TCP": "TCP服务是一种面向连接的、可靠的、基于字节流的传输层通信协议。设备可通过TCP服务与平台进行长链接，实时更新状态并发送消息。可自定义多种粘拆包规则，处理传输过程中可能发生的粘拆包问题。",
+                "webSocket": "WebSocket是一种在单个TCP连接上进行全双工通信的协议，允许服务端主动向客户端推送数据。设备通过WebSocket服务与平台进行长链接，实时更新状态并发送消息，且可以发布订阅消息",
+                "mqttClient": "MQTT是ISO 标准下基于发布/订阅范式的消息协议，具有轻量、简单、开放和易于实现的特点。平台使用指定的ID接入其他远程平台，订阅消息。也可添加用户名和密码校验。可设置最大消息长度。可统一设置共享的订阅前缀。",
+                "http": "HTTP服务是一个简单的请求-响应的基于TCP的无状态协议。设备通过HTTP服务与平台进行灵活的短链接通信，仅支持设备和平台之间单对单的请求-响应模式",
+                "mqttServer": "MQTT是ISO 标准下基于发布/订阅范式的消息协议，具有轻量、简单、开放和易于实现的特点。提供MQTT的服务端，以供设备以长链接的方式接入平台。设备使用唯一的ID，也可添加用户名和密码校验。可设置最大消息长度。",
+                "coap": "CoAP是针对只有少量的内存空间和有限的计算能力提供的一种基于UDP的协议。便于低功耗或网络受限的设备与平台通信，仅支持设备和平台之间单对单的请求-响应模式。",
+                "stream": "上下行",
+                "description": "说明",
+                "address": "地址",
+                "example": "示例"
             }
         },
         "Protocol": {
@@ -2306,6 +2335,42 @@
                 "5rg3f4livhs0": "删除",
                 "5rg3f4livlo0": "请先禁用该组件，再删除。",
                 "5rg3f4livp00": "确认删除?"
+            },
+            "data": {
+                "DIRECT": "不处理",
+                "DELIMITED": "分隔符",
+                "SCRIPT": "自定义脚本",
+                "FIXED_LENGTH": "固定长度",
+                "LENGTH_FIELD": "长度字段",
+                "bigPort": "大端",
+                "smallPort": "小端",
+                "addressTip": "请输入正确的IP地址或者域名",
+                "nameTip": "请输入名称",
+                "64max": "最大可输入64个字符",
+                "type": "请选择类型",
+                "cluster": "请选择集群",
+                "nodeName": "请选择节点名称",
+                "localAddress": "请选择本地地址",
+                "localPort": "请选择本地端口",
+                "publicNetwork": "请输入公网地址",
+                "publicPort": "请输入公网端口",
+                "inputTip": "请输入1-65535之间的正整数",
+                "inputTip2": "请输入0-65535之间的正整数",
+                "longRange": "请输入远程地址",
+                "IPTip": "请输入正确格式的域名或ip",
+                "longRangePort": "输入远程端口",
+                "clientId": "请输入ClientId",
+                "userName": "请输入用户名",
+                "pwd": "请输入密码",
+                "maxLength": "请输入最大消息长度",
+                "certificate": "请选择证书",
+                "privateKey": "请输入私钥别名",
+                "separator": "请输入分隔符",
+                "rule": "请选择粘拆包规则",
+                "scripitingLan": "请选择脚本语言",
+                "inputScript": "请输入脚本",
+                "lengthValue": "请输入长度值",
+                "selectLength": "请选择长度值"
             }
         },
         "Certificate": {
@@ -2350,7 +2415,8 @@
                 "5rg3orwtb140": "版本：",
                 "5rg3orwtb5g0": "说明",
                 "5rg3orwtbb00": "请输入说明",
-                "5rg3orwtbgs0": "操作成功！"
+                "5rg3orwtbgs0": "操作成功！",
+                "IDRepeat": "ID重复"
             },
             "UploadFile": {
                 "5rg3pdwr2co0": "上传文件",
@@ -2359,6 +2425,10 @@
                 "5rg3pdwr41g0": "上传成功！",
                 "5rg3pdwr45c0": "系统提示",
                 "5rg3pdwr4a80": "系统未知错误，请反馈给管理员"
+            },
+            "util": {
+                "access": "设备接入网关",
+                "thingsManager": "物管理"
             }
         }
     },
@@ -2597,7 +2667,8 @@
                 "5rg3eiq3j3o0": "操作成功",
                 "cluster": "共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置",
                 "address": "绑定到服务器上的网卡地址,绑定到所有网卡:0.0.0.0",
-                "maxTip": "单次收发消息的最大长度,单位:字节;设置过大可能会影响性能"
+                "maxTip": "单次收发消息的最大长度,单位:字节;设置过大可能会影响性能",
+                "EMQ": "当连接的服务为EMQ时,可能需要使用共享的订阅前缀,如:$queue或$share"
             },
             "LocalAddressSelect": {
                 "5rg3etsypko0": "请选择本地地址"
@@ -2679,7 +2750,8 @@
                 "5rg3jccpkok0": "操作成功",
                 "5rg3jccpkxs0": "删除",
                 "5rg3jccpl3w0": "正常的流媒体不能删除",
-                "5rg3jccpl9w0": "确认删除?"
+                "5rg3jccpl9w0": "确认删除?",
+                "verify": "确认"
             }
         },
         "Home": {
@@ -2856,7 +2928,8 @@
                 "5rg3ld5xvkg0": "查看",
                 "5rg3ld5xvps0": "重试",
                 "5rg3ld5xvv40": "操作成功",
-                "batchRetry": "确定批量重试"
+                "batchRetry": "确定批量重试",
+                "retry": "确认重试?"
             },
             "Save": {
                 "5rg3lv59ig00": "查看",
@@ -5835,6 +5908,33 @@
                 "5rlch8lvzv00": "步长（次）",
                 "5rlch8lvzzk0": "步长"
             }
+        },
+        "Base": {
+            "index": {
+                "5rnt09cyfcs0": "请输入名称",
+                "5rnt09cyjb00": "当前的存储方式不支持新增",
+                "5rnt09cyjk00": "新增",
+                "5rnt09cyjp40": "是",
+                "5rnt09cyjw40": "否",
+                "5rnt09cyk3o0": "当前的存储方式不支持编辑",
+                "5rnt09cyk8k0": "编辑",
+                "5rnt09cykck0": "确认删除？",
+                "5rnt09cykn40": "删除",
+                "5rnt09cykug0": "普通",
+                "5rnt09cykzo0": "警告",
+                "5rnt09cyl6c0": "紧急",
+                "5rnt09cylk80": "设备",
+                "5rnt09cylpo0": "手动",
+                "5rnt09cyltk0": "规则",
+                "5rnt09cylxw0": "读",
+                "5rnt09cym2c0": "写",
+                "5rnt09cym6c0": "上报",
+                "5rnt09cymac0": "操作",
+                "5rnt09cymew0": "修改物模型后会脱离产品物模型",
+                "5rnt09cymw40": "操作成功！",
+                "5rnt09cyn000": "操作失败！",
+                "pagination": "第{position}条/总共{total}条"
+            }
         }
     },
     "Center": {
@@ -5954,6 +6054,81 @@
                 "5rmy0nei4zk0": "我的订阅",
                 "5rmy0nei54k0": "站内信",
                 "title": "xx部门 · xx角色"
+            }
+        }
+    },
+    "Base": {
+        "Edit": {
+            "BaseForm": {
+                "5rnr8p5wlas0": "标识",
+                "5rnr8p5wmf00": "请输入标识",
+                "5rnr8p5wmlk0": "最多可输入64个字符",
+                "5rnr8p5wmug0": "名称",
+                "5rnr8p5wmzg0": "请输入名称",
+                "5rnr8p5wn480": "数据类型",
+                "5rnr8p5wnag0": "是否异步",
+                "5rnr8p5wnf00": "请选择是否异步",
+                "5rnr8p5wnnc0": "是",
+                "5rnr8p5wntw0": "否",
+                "5rnr8p5wnyk0": "输入参数",
+                "5rnr8p5wo700": "输出参数",
+                "5rnr8p5woe80": "级别",
+                "5rnr8p5woig0": "请选择级别",
+                "5rnr8p5wow80": "读写类型",
+                "5rnr8p5wp0g0": "请选择读写类型",
+                "5rnr8p5wp740": "说明",
+                "5rnr8p5wpfs0": "最多可输入200个字符",
+                "5rnr8p5wpk40": "请输入说明",
+                "IDRule": "ID只能由数字、字母、下划线、中划线组成"
+            },
+            "ExpandsForm": {
+                "5rnrcmns8vg0": "来源",
+                "5rnrcmnsaao0": "请选择来源",
+                "5rnrcmnsalw0": "读写类型",
+                "5rnrcmnsats0": "请选择读写类型",
+                "5rnrcmnsb5k0": "其它配置",
+                "5rnrcmnsbf40": "请输入指标配置",
+                "5rnrcmnsbn00": "指标配置",
+                "5rnrcmnsbu00": "场景联动页面可引用指标配置作为触发条件"
+            },
+            "index": {
+                "5rnremjfr100": "保存",
+                "5rnremjfs200": "属性",
+                "5rnremjfs900": "事件",
+                "5rnremjfsek0": "功能",
+                "5rnremjfsjs0": "标签",
+                "5rnremjfspg0": "新增",
+                "5rnremjfsu40": "编辑",
+                "5rnremjfsyw0": "标识已存在",
+                "5rnremjft3k0": "操作成功！",
+                "5rnremjft840": "操作失败！"
+            },
+            "validator": {
+                "enumeration": "请配置枚举项",
+                "element": "请输入元素配置",
+                "argument": "配置参数",
+                "input": "请输入",
+                "identification": "请输入标识",
+                "name": "请输入名称",
+                "dataType": "数据类型",
+                "select": "请选择",
+                "fileType": "请选择文件类型"
+            },
+            "ValueTypeForm": {
+                "5rnsvmmu5a00": "单位",
+                "5rnsvmmu6tg0": "精度",
+                "5rnsvmmu73c0": "请输入精度",
+                "5rnsvmmu78k0": "时间格式",
+                "5rnsvmmu7h80": "布尔值",
+                "5rnsvmmu7o00": "枚举项",
+                "5rnsvmmu7ts0": "最大长度",
+                "5rnsvmmu85c0": "字节",
+                "5rnsvmmu8mc0": "请输入最大长度",
+                "5rnsvmmu8s00": "元素配置",
+                "5rnsvmmu8xc0": "文件类型",
+                "5rnsvmmu9400": "请选择文件类型",
+                "5rnsvmmu99o0": "数据类型",
+                "select": "请选择"
             }
         }
     }

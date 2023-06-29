@@ -2,7 +2,7 @@
   <j-drawer :mask-closable="false" width="25vw" visible :title="`${title}-${typeMapping[metadataStore.model.type]}`"
     @close="close" destroy-on-close :z-index="1000" placement="right">
     <template #extra>
-      <j-button :loading="save.loading" type="primary" @click="() => save.saveMetadata()">保存</j-button>
+      <j-button :loading="save.loading" type="primary" @click="() => save.saveMetadata()">{{t('Base.Edit.index.5rnremjfr100')}}</j-button>
     </template>
     <j-form ref="formRef" :model="form.model" layout="vertical">
       <BaseForm :model-type="metadataStore.model.type" :type="type" v-model:value="form.model"></BaseForm>
@@ -23,7 +23,9 @@ import BaseForm from './BaseForm.vue';
 import { PropType } from 'vue';
 import { _deploy } from '@/api/device/product';
 import { cloneDeep } from 'lodash';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
   type: {
     type: String as PropType<'product' | 'device'>,
@@ -45,17 +47,17 @@ const instanceStore = useInstanceStore()
 const productStore = useProductStore()
 const metadataStore = useMetadataStore()
 const typeMapping: Record<string, string> = {
-  properties: '属性',
-  events: '事件',
-  functions: '功能',
-  tags: '标签',
+  properties: t('Base.Edit.index.5rnremjfs200'),
+  events: t('Base.Edit.index.5rnremjfs900'),
+  functions: t('Base.Edit.index.5rnremjfsek0'),
+  tags: t('Base.Edit.index.5rnremjfsjs0'),
 };
 const close = () => {
   metadataStore.set('edit', false)
   metadataStore.set('item', {})
 }
 
-const title = computed(() => metadataStore.model.action === 'add' ? '新增' : '编辑')
+const title = computed(() => metadataStore.model.action === 'add' ? t('Base.Edit.index.5rnremjfspg0') : t('Base.Edit.index.5rnremjfsu40'))
 
 const form = reactive({
   model: {} as any,
@@ -79,7 +81,7 @@ const save = reactive({
       const list = (_metadata[type] as any[]) || []
       if (formValue.id) {
         if (metadataStore.model.action === 'add' && list.some(item => item.id === formValue.id)) {
-          message.error('标识已存在')
+          message.error(t('Base.Edit.index.5rnremjfsyw0'))
           save.loading = false
           return
         }
@@ -118,17 +120,17 @@ const save = reactive({
               save.resetMetadata();
               message.success({
                 key: 'metadata',
-                content: '操作成功！',
+                content: t('Base.Edit.index.5rnremjft3k0'),
               });
             } else {
-              message.error('操作失败！');
+              message.error(t('Base.Edit.index.5rnremjft840'));
             }
             // Store.set('product-deploy', deploy);
           } else {
             // save.resetMetadata();
             message.success({
               key: 'metadata',
-              content: '操作成功！',
+              content: t('Base.Edit.index.5rnremjft3k0'),
             });
           }
           metadataStore.set('edit', false)
@@ -138,7 +140,7 @@ const save = reactive({
           // }
         }
       } else {
-        message.error('操作失败！');
+        message.error(t('Base.Edit.index.5rnremjft840'));
       }
       save.loading = false
     })

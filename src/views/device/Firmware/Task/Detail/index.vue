@@ -2,51 +2,32 @@
     <page-container>
         <div>
             <div class="state-container">
-                <div
-                    class="state-body"
-                    v-for="item in stateList"
-                    :key="item.key"
-                >
+                <div class="state-body" v-for="item in stateList" :key="item.key">
                     <div class="state-content">
                         <div class="state-header">
                             <div class="state-title">
-                                <j-badge
-                                    :text="item.name"
-                                    :color="colorMap.get(item.key)"
-                                />
+                                <j-badge :text="item.name" :color="colorMap.get(item.key)" />
                             </div>
 
                             <div class="state-title-right">
                                 <div class="state-button">
-                                    <PermissionButton
-                                        type="link"
-                                        v-if="
-                                            item.key === 'failed' &&
-                                            stateInfo?.mode?.value === 'push'
-                                        "
-                                        hasPermission="device/Firmware:update"
-                                        :popConfirm="{
-                                            title: t('Task.Detail.index.batchRetry'),
-                                            onConfirm: confirm,
-                                        }"
-                                    >
-                                        {{t('Task.Detail.index.5rg3ld5xs5k0')}}
+                                    <PermissionButton type="link" v-if="item.key === 'failed' &&
+                                        stateInfo?.mode?.value === 'push'
+                                        " hasPermission="device/Firmware:update" :popConfirm="{
+        title: t('Task.Detail.index.batchRetry'),
+        onConfirm: confirm,
+    }">
+                                        {{ t('Task.Detail.index.5rg3ld5xs5k0') }}
                                     </PermissionButton>
                                 </div>
 
                                 <div class="img">
-                                    <img
-                                        :src="buttonImg"
-                                        @click="handleRefresh(item.key)"
-                                    />
+                                    <img :src="buttonImg" @click="handleRefresh(item.key)" />
                                 </div>
                             </div>
                         </div>
                         <div class="state-box">
-                            <div
-                                class="state-left"
-                                :style="`color: ${colorMap.get(item.key)}`"
-                            >
+                            <div class="state-left" :style="`color: ${colorMap.get(item.key)}`">
                                 {{ state[item.key] }}
                             </div>
                             <img class="state-right" :src="item.img" />
@@ -55,30 +36,19 @@
                 </div>
             </div>
 
-            <pro-search
-                :columns="columns"
-                target="search"
-                @search="handleSearch"
-            />
+            <pro-search :columns="columns" target="search" @search="handleSearch" />
             <FullPage>
-                <j-pro-table
-                    ref="tableRef"
-                    model="TABLE"
-                    :columns="columns"
-                    :request="history"
-                    :defaultParams="{
-                        sorts: [{ name: 'createTime', order: 'desc' }],
-                        terms: defaultParams,
-                    }"
-                    :params="params"
-                >
-                  <template #completeTime="slotProps">
+                <j-pro-table ref="tableRef" model="TABLE" :columns="columns" :request="history" :defaultParams="{
+                    sorts: [{ name: 'createTime', order: 'desc' }],
+                    terms: defaultParams,
+                }" :params="params">
+                    <template #completeTime="slotProps">
                         <span>{{
                             moment(slotProps.completeTime).format(
-                              'YYYY-MM-DD HH:mm:ss',
+                                'YYYY-MM-DD HH:mm:ss',
                             )
-                          }}</span>
-                  </template>
+                        }}</span>
+                    </template>
                     <template #createTime="slotProps">
                         <span>{{
                             moment(slotProps.createTime).format(
@@ -90,34 +60,21 @@
                         <span>{{ slotProps.productName }}</span>
                     </template>
                     <template #state="slotProps">
-                        <j-badge
-                            :text="slotProps.state.text"
-                            :color="colorMap.get(slotProps.state.value)"
-                        />
+                        <j-badge :text="slotProps.state.text" :color="colorMap.get(slotProps.state.value)" />
                     </template>
                     <template #progress="slotProps">
                         <span>{{ slotProps.progress }}%</span>
                     </template>
                     <template #action="slotProps">
                         <j-space>
-                            <template
-                                v-for="i in getActions(slotProps)"
-                                :key="i.key"
-                            >
-                                <PermissionButton
-                                    :disabled="i.disabled"
-                                    :popConfirm="i.popConfirm"
-                                    :tooltip="{
-                                        ...i.tooltip,
-                                    }"
-                                    style="padding: 0px"
-                                    @click="i.onClick"
-                                    type="link"
-                                    :hasPermission="'device/Firmware:' + i.key"
-                                >
-                                    <template #icon
-                                        ><AIcon :type="i.icon"
-                                    /></template>
+                            <template v-for="i in getActions(slotProps)" :key="i.key">
+                                <PermissionButton :disabled="i.disabled" :popConfirm="i.popConfirm" :tooltip="{
+                                    ...i.tooltip,
+                                }" style="padding: 0px" @click="i.onClick" type="link"
+                                    :hasPermission="'device/Firmware:' + i.key">
+                                    <template #icon>
+                                        <AIcon :type="i.icon" />
+                                    </template>
                                 </PermissionButton>
                             </template>
                         </j-space>
@@ -315,7 +272,7 @@ const getActions = (data: Partial<Record<string, any>>): ActionsType[] => {
             },
             icon: 'RedoOutlined',
             popConfirm: {
-                title: `确认重试?`,
+                title: t('Task.Detail.index.retry'),
                 onConfirm: async () => {
                     handlTry(data.id);
                 },
@@ -389,16 +346,16 @@ const handleSearch = (e: any) => {
     margin-bottom: 24px;
     display: flex;
     flex-wrap: wrap;
+
     .state-body {
-        background: linear-gradient(
-            135.62deg,
-            #f6f7fd 22.27%,
-            rgba(255, 255, 255, 0.86) 91.82%
-        );
+        background: linear-gradient(135.62deg,
+                #f6f7fd 22.27%,
+                rgba(255, 255, 255, 0.86) 91.82%);
         min-width: 185px;
         max-width: 580px;
         flex: 1px;
         margin: 0 12px;
+
         .state-content {
             width: 100% -15px;
             height: 100%;
@@ -409,30 +366,37 @@ const handleSearch = (e: any) => {
                 display: flex;
                 justify-content: space-between;
                 height: 22px;
+
                 .state-title-right {
                     z-index: 1;
                     display: flex;
+
                     .img {
                         width: 22px;
                         margin: 0 10px;
                         cursor: pointer;
+
                         img {
                             width: 22px;
                             margin-top: -5px;
                         }
                     }
+
                     .img:active {
                         border: 1px #40a9ff solid;
                     }
                 }
             }
+
             .state-box {
                 display: flex;
                 justify-content: space-between;
+
                 .state-left {
                     flex: 1;
                     font-size: 52px;
                 }
+
                 .state-right {
                     height: 100%;
                     flex: 1;
@@ -444,6 +408,7 @@ const handleSearch = (e: any) => {
         }
     }
 }
+
 .state-button {
     margin-top: -5px;
     margin-right: -12px;

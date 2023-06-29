@@ -187,18 +187,19 @@
                         <p>{{ t('components.Cloud.Ctwing.agreement') + procotolCurrent }}</p>
                         <TitleComponent :data="t('components.Cloud.Ctwing.5rg357paxeg0')" />
                         <p>
-                            1、创建类型为{{
-                                props?.provider?.id === 'OneNet'
-                                ? 'OneNet'
-                                : 'CTWing'
-                            }}的设备接入网关
+                            1、{{ t('components.Cloud.Ctwing.accessDeviceStep1', {
+                                type: props?.provider?.id === 'OneNet'
+                                    ? 'OneNet'
+                                    : 'CTWing'
+                            })
+                            }}
                         </p>
                         <p>
                             2、
-                            {{ t('components.Cloud.Ctwing.accessDeviceStep2') +
+                            {{ t('components.Cloud.Ctwing.accessDeviceStep2') + (
                                 props?.provider?.id === 'OneNet'
                                 ? 'OneNet'
-                                : 'CTWing,选中后需填写CTWing平台中的产品ID、Master-APIkey。'
+                                : t('components.Cloud.Ctwing.CTWing'))
                             }}
                         </p>
                         <p>

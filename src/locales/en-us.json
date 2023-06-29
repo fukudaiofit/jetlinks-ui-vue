@@ -1080,7 +1080,9 @@
                 "accessMode": "Access method:",
                 "agreement": "Message protocol:",
                 "productTip": "Create a product and select the access method as",
-                "bind": "Add devices and perform data point binding for each device separately"
+                "bind": "Add devices and perform data point binding for each device separately",
+                "channel": "Configuration {name} channel",
+                "accessGateway": "Create {name} device access gateway "
             }
         },
         "Cloud": {
@@ -1122,7 +1124,9 @@
                 "accessMode": "Access method:",
                 "agreement": "Message protocol:",
                 "accessDeviceStep2": "Create a product and select the access method as",
-                "accessDeviceStep3": "Add devices, and set unique IMEI and IMSI codes for each device (the values shall be consistent with those filled in the OneNet platform. If there is no corresponding device in the OneNet platform, it will be automatically created through the LWM2M protocol provided by the Onenet platform)"
+                "accessDeviceStep3": "Add devices, and set unique IMEI and IMSI codes for each device (the values shall be consistent with those filled in the OneNet platform. If there is no corresponding device in the OneNet platform, it will be automatically created through the LWM2M protocol provided by the Onenet platform)",
+                "accessDeviceStep1": "Example Create a device access gateway of type {type}",
+                "CTWing": "CTWing,If selected, enter the product ID and Master-APIkey in the CTWing platform."
             },
             "OneNet": {
                 "5rg35msxx1s0": "Data access through HTTP push service of OneNet platform",
@@ -1176,7 +1180,10 @@
                 "accessMode": "Access method:",
                 "agreement": "Message protocol:",
                 "accessStep2": "Create a product and select the access method as",
-                "accessStep3": "Add devices and set unique IMEI, SN, IMSI and PSK codes for each device (the values shall be consistent with those filled in the CTWing platform. If there is no corresponding device on the CTWing platform, it will be automatically created through the LWM2M protocol provided by the CTWing)"
+                "accessStep3": "Add devices and set unique IMEI, SN, IMSI and PSK codes for each device (the values shall be consistent with those filled in the CTWing platform. If there is no corresponding device on the CTWing platform, it will be automatically created through the LWM2M protocol provided by the CTWing)",
+                "encipher": "Message encryption key generated on the OneNet",
+                "accessStep1": "Example Create a device access gateway of type {type}",
+                "CTWing": "CTWing，If selected, enter the product ID and Master-APIkey in the CTWing platform。"
             }
         },
         "Edge": {
@@ -1250,7 +1257,8 @@
                 "5rg371r6bzk0": "Please add or improve the configuration",
                 "clusterTip": "Shared configuration: All nodes in the cluster share the same configuration. Independent configuration: Different nodes in the cluster use different configurations",
                 "SIPAddress": "SIP address",
-                "SIPTip": "To the network card address on the server, bind to all network cards: 0.0.0.0"
+                "SIPTip": "To the network card address on the server, bind to all network cards: 0.0.0.0",
+                "SIP": "SIP domain"
             },
             "index": {
                 "5rg37iwxsow0": "Basic information",
@@ -1755,6 +1763,14 @@
                 "5rmxv2t5c4o0": "Business monitoring",
                 "5rmxv2t5c940": "Transparent message parsing exception",
                 "limit": "MQTT concurrency limits"
+            }
+        },
+        "InklingDevice": {
+            "index": {
+                "5rnqdm6q8b40": "select all",
+                "5rnqdm6qi7c0": "The device has been bound to the platform device",
+                "5rnqdm6qikc0": "No data available",
+                "5rnqdm6qk640": "{position}/total{total}"
             }
         }
     },
@@ -2270,6 +2286,19 @@
                 "5rg395qkgdo0": "Delete",
                 "5rg395qkgj80": "Please disable before deleting",
                 "5rg395qkgpc0": "Confirm deletion?"
+            },
+            "data": {
+                "UDP": "UDP allows devices to transmit data to the platform without establishing a connection. Provides lightweight and simple connections while allowing some degree of packet loss。",
+                "TCP": "TCP service is a connection-oriented, reliable transport layer communication protocol based on byte stream. Devices can have a long link to the platform through TCP services, update status and send messages in real time. You can customize a variety of sticky and unpacking rules to deal with sticky and unpacking problems that may occur during transmission。",
+                "webSocket": "WebSocket is a protocol for full-duplex communication over a single TCP connection, allowing a server to actively push data to a client. The device has a long link to the platform through the WebSocket service, updates status and sends messages in real time, and can publish subscription messages。",
+                "mqttClient": "MQTT is a messaging protocol based on publish/subscribe paradigm under ISO standard, which is lightweight, simple, open and easy to implement. The platform uses the specified ID to access other remote platforms and subscribe to messages. You can also add user name and password verification. The maximum message length can be set. The shared subscription prefix can be set uniformly。",
+                "http": "The HTTP service is a simple request-response stateless protocol based on TCP. The device communicates with the platform through a flexible short link via the HTTP service, supporting only a one-to-one request-response mode between the device and the platform。",
+                "mqttServer": "MQTT is a messaging protocol based on publish/subscribe paradigm under ISO standard, which is lightweight, simple, open and easy to implement. A server side of MQTT is provided for devices to access the platform in the form of long links. The device uses a unique ID. You can also add a user name and password for verification. The maximum message length can be set。",
+                "coap": "CoAP is a UDP-based protocol for only a small amount of memory space and limited computing power. Facilitates communication between low-power or network-constrained devices and platforms, and supports only a one-to-one request-response mode between devices and platforms。",
+                "stream": "Upstream and downstream",
+                "description": "description",
+                "address": "address",
+                "example": "example"
             }
         },
         "Protocol": {
@@ -2306,6 +2335,42 @@
                 "5rg3f4livhs0": "Delete",
                 "5rg3f4livlo0": "Please disable this component before removing it.",
                 "5rg3f4livp00": "Confirm deletion?"
+            },
+            "data": {
+                "DIRECT": "Not process",
+                "DELIMITED": "separator",
+                "SCRIPT": "Custom script",
+                "FIXED_LENGTH": "Fixed length",
+                "LENGTH_FIELD": "Length field",
+                "bigPort": "bigPort",
+                "smallPort": "smallPort",
+                "addressTip": "Enter the correct IP address or domain name",
+                "nameTip": "Please enter name",
+                "64max": "The value contains a maximum of 64 characters",
+                "type": "Please select a type",
+                "cluster": "Please select cluster",
+                "nodeName": "Select a node name",
+                "localAddress": "Please select a local address",
+                "localPort": "Please select a local port",
+                "publicNetwork": "Please enter the public address",
+                "publicPort": "Please enter the public network port",
+                "inputTip": "Please enter a positive integer between 1 and 65535",
+                "inputTip2": "Please enter a positive integer between 0 and 65535",
+                "longRange": "Please enter the remote address",
+                "IPTip": "Please enter the domain name or ip in the correct format",
+                "longRangePort": "Input remote port",
+                "clientId": "Please enter ClientId",
+                "userName": "Please enter your username",
+                "pwd": "Please enter password",
+                "maxLength": "Please enter the maximum message length",
+                "certificate": "Please select Certificate",
+                "privateKey": "Please enter the private key alias",
+                "separator": "Please enter a separator",
+                "rule": "Please select a sticky unpacking rule",
+                "scripitingLan": "Please select a scripting language",
+                "inputScript": "Please enter the script",
+                "lengthValue": "Please enter a length value",
+                "selectLength": "Please select a length value"
             }
         },
         "Certificate": {
@@ -2350,7 +2415,8 @@
                 "5rg3orwtb140": "Version",
                 "5rg3orwtb5g0": "Explain",
                 "5rg3orwtbb00": "Please enter a description",
-                "5rg3orwtbgs0": "Operation successful!"
+                "5rg3orwtbgs0": "Operation successful!",
+                "IDRepeat": "IDRepeat"
             },
             "UploadFile": {
                 "5rg3pdwr2co0": "Upload the file",
@@ -2359,6 +2425,10 @@
                 "5rg3pdwr41g0": "Upload successful!",
                 "5rg3pdwr45c0": "System prompt",
                 "5rg3pdwr4a80": "Unknown system error, please feedback to the administrator"
+            },
+            "util": {
+                "access": "Device access gateway",
+                "thingsManager": "Material management"
             }
         }
     },
@@ -2597,7 +2667,8 @@
                 "5rg3eiq3j3o0": "Operation succeeded",
                 "cluster": "Shared configuration: All nodes in the cluster share the same configuration. Independent configuration: Different nodes in the cluster use different configurations",
                 "address": "Bind to the network card address on the server, bind to all network cards: 0.0.0.0",
-                "maxTip": "The maximum length of a single received and sent message, in bytes; Too large a setting may affect performance"
+                "maxTip": "The maximum length of a single received and sent message, in bytes; Too large a setting may affect performance",
+                "EMQ": "When the connected service is EMQ, you may need to use a shared subscription prefix, such as:$queue或$share"
             },
             "LocalAddressSelect": {
                 "5rg3etsypko0": "Please select a local addr"
@@ -2679,7 +2750,8 @@
                 "5rg3jccpkok0": "Operation succeeded",
                 "5rg3jccpkxs0": "Delete",
                 "5rg3jccpl3w0": "Normal streaming media cannot be deleted",
-                "5rg3jccpl9w0": "Confirm deletion?"
+                "5rg3jccpl9w0": "Confirm deletion?",
+                "verify": "Confirm"
             }
         },
         "Home": {
@@ -2856,7 +2928,8 @@
                 "5rg3ld5xvkg0": "Check",
                 "5rg3ld5xvps0": "Try again",
                 "5rg3ld5xvv40": "Operation succeeded",
-                "batchRetry": "Confirm Batch Retry"
+                "batchRetry": "Confirm Batch Retry",
+                "retry": "Confirmation retry?"
             },
             "Save": {
                 "5rg3lv59ig00": "Check",
@@ -5835,6 +5908,33 @@
                 "5rlch8lvzv00": "Step length (times)",
                 "5rlch8lvzzk0": "Step size"
             }
+        },
+        "Base": {
+            "index": {
+                "5rnt09cyfcs0": "Please enter name",
+                "5rnt09cyjb00": "The current storage mode cannot be added",
+                "5rnt09cyjk00": "new",
+                "5rnt09cyjp40": "is",
+                "5rnt09cyjw40": "no",
+                "5rnt09cyk3o0": "The current storage method does not support editing",
+                "5rnt09cyk8k0": "compile",
+                "5rnt09cykck0": "Confirm deletion？",
+                "5rnt09cykn40": "delete",
+                "5rnt09cykug0": "normal",
+                "5rnt09cykzo0": "alarm",
+                "5rnt09cyl6c0": "exigency",
+                "5rnt09cylk80": "deivce",
+                "5rnt09cylpo0": "Manual operation",
+                "5rnt09cyltk0": "rule",
+                "5rnt09cylxw0": "read",
+                "5rnt09cym2c0": "write",
+                "5rnt09cym6c0": "report",
+                "5rnt09cymac0": "controls",
+                "5rnt09cymew0": "After modifying the object model, it is removed from the product object model",
+                "5rnt09cymw40": "Operation is successful!",
+                "5rnt09cyn000": "Operation failed!",
+                "pagination": "{position}/total{total}"
+            }
         }
     },
     "Center": {
@@ -5954,6 +6054,81 @@
                 "5rmy0nei4zk0": "My subscription",
                 "5rmy0nei54k0": "Letter in the station",
                 "title": "XX Department · XX Role"
+            }
+        }
+    },
+    "Base": {
+        "Edit": {
+            "BaseForm": {
+                "5rnr8p5wlas0": "identification",
+                "5rnr8p5wmf00": "Please enter identification",
+                "5rnr8p5wmlk0": "A maximum of 64 characters can be entered",
+                "5rnr8p5wmug0": "name",
+                "5rnr8p5wmzg0": "Please enter name",
+                "5rnr8p5wn480": "Data type",
+                "5rnr8p5wnag0": "Asynchronous or not",
+                "5rnr8p5wnf00": "Select whether to be asynchronous",
+                "5rnr8p5wnnc0": "is",
+                "5rnr8p5wntw0": "no",
+                "5rnr8p5wnyk0": "Input parameter",
+                "5rnr8p5wo700": "Output parameter",
+                "5rnr8p5woe80": "rank",
+                "5rnr8p5woig0": "Please select level",
+                "5rnr8p5wow80": "Read-write type",
+                "5rnr8p5wp0g0": "Please select a read/write type",
+                "5rnr8p5wp740": "explain",
+                "5rnr8p5wpfs0": "A maximum of 200 characters can be entered",
+                "5rnr8p5wpk40": "Please enter a description",
+                "IDRule": "The ID can contain only digits, letters, underscores (_), and hyphens (-)"
+            },
+            "ExpandsForm": {
+                "5rnrcmns8vg0": "source",
+                "5rnrcmnsaao0": "Please select a source",
+                "5rnrcmnsalw0": "Read-write type",
+                "5rnrcmnsats0": "Please select a read/write type",
+                "5rnrcmnsb5k0": "Other configuration",
+                "5rnrcmnsbf40": "Please enter the indicator configuration",
+                "5rnrcmnsbn00": "Index configuration",
+                "5rnrcmnsbu00": "The scenario linkage page can reference the indicator configuration as the trigger condition"
+            },
+            "index": {
+                "5rnremjfr100": "save",
+                "5rnremjfs200": "property",
+                "5rnremjfs900": "incident",
+                "5rnremjfsek0": "feature",
+                "5rnremjfsjs0": "tag",
+                "5rnremjfspg0": "new",
+                "5rnremjfsu40": "redact",
+                "5rnremjfsyw0": "Mark already exists",
+                "5rnremjft3k0": "Operation is successful！",
+                "5rnremjft840": "Operation failure！"
+            },
+            "validator": {
+                "enumeration": "Please configure enumeration items",
+                "element": "Please enter element configuration",
+                "argument": "configuration parameter",
+                "input": "Please enter",
+                "identification": "Please enter identification",
+                "name": "Please enter name",
+                "dataType": "data type",
+                "select": "Please select",
+                "fileType": "Please select a file type"
+            },
+            "ValueTypeForm": {
+                "5rnsvmmu5a00": "unit",
+                "5rnsvmmu6tg0": "precision",
+                "5rnsvmmu73c0": "Please enter precision",
+                "5rnsvmmu78k0": "Time format",
+                "5rnsvmmu7h80": "Boolean value",
+                "5rnsvmmu7o00": "Enumeration item",
+                "5rnsvmmu7ts0": "Maximum length",
+                "5rnsvmmu85c0": "byte",
+                "5rnsvmmu8mc0": "Please enter the maximum length",
+                "5rnsvmmu8s00": "Element configuration",
+                "5rnsvmmu8xc0": "File type",
+                "5rnsvmmu9400": "Please select a file type",
+                "5rnsvmmu99o0": "Data type",
+                "select": "Please select"
             }
         }
     }

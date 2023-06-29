@@ -555,7 +555,7 @@
                                                     <template #label>
                                                         {{t('Type.Detail.index.5rg3eiq3g940')}}
                                                         <j-tooltip
-                                                            title="当连接的服务为EMQ时,可能需要使用共享的订阅前缀,如:$queue或$share"
+                                                            :title="t('Type.Detail.index.EMQ')"
                                                         >
                                                             <AIcon
                                                                 type="QuestionCircleOutlined"
@@ -1140,8 +1140,7 @@ import type { FormData2Type, FormDataType } from '../type';
 import { Store } from 'jetlinks-store';
 import LocalAddressSelect from './LocalAddressSelect.vue';
 import { isNoCommunity } from '@/utils/utils';
-import { useI18n } from 'vue-i18n'
-
+import { useI18n } from 'vue-i18n';
 const { t } = useI18n()
 const route = useRoute();
 const NetworkType = route.query.type as string;
@@ -1282,8 +1281,9 @@ const changeHost = (
     serverId: string | undefined,
     value: string | undefined,
     index: number,
-    flag?: boolean
+    flag?: boolean 
 ) => {
+    console.log(index,dynamicValidateForm.cluster)
     const { configuration } = dynamicValidateForm.cluster[index];
     if(!flag){
         configuration.port = undefined;

@@ -20,7 +20,7 @@
                     <j-row :gutter="[24, 24]">
                         <j-col :span="12">
                             <j-form-item
-                                label="SIP域"
+                                :label="t('components.Media.GB28181.SIP')"
                                 name="domain"
                                 :rules="[
                                     {
