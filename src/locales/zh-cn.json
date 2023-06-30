@@ -2824,6 +2824,10 @@
                 "5rg8fywrsmo0": "确认删除?",
                 "5rg8fywrsww0": "操作成功！",
                 "5rg8fywrt1o0": "操作失败！"
+            },
+            "const": {
+                "fixed": "固定地址",
+                "TCP": "TCP被动"
             }
         },
         "Cascade": {
@@ -4070,12 +4074,12 @@
                 "5rg8foln1ew0": "请输入名称",
                 "5rg8foln1ik0": "接入网关",
                 "5rg8foln1ms0": "请选择接入网关",
-                "5rg8foln1qo0": "暂无权限,",
-                "5rg8foln1uk0": "请联系管理员",
+                "5rg8foln1qo0": "暂无权限,请联系管理员",
                 "5rg8foln1yc0": "暂无数据，请先",
                 "5rg8foln23w0": "操作成功",
                 "select": "请选择",
-                "input": "请输入"
+                "input": "请输入",
+                "addGateway": "添加{channel}接入网关"
             }
         },
         "Channel": {
@@ -4449,7 +4453,7 @@
                 "selectDataArea": "请选择是否写入数据区长度",
                 "inputDataArea": "请输入自定义数据区长度(byte)",
                 "frequency": "请输入采集频率",
-                "200max":"最多可输入200个字符",
+                "200max": "最多可输入200个字符",
                 "inputTip3": "请输入0或者正整数",
                 "channel": "请选择所属通道",
                 "harvester": "请输入采集器名称",
@@ -4462,7 +4466,7 @@
                 "accessType": "访问类型",
                 "interval": "采集频率",
                 "features": "只推送变化的数据",
-                "action":"操作"
+                "action": "操作"
             }
         }
     },

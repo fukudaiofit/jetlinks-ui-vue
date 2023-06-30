@@ -2821,6 +2821,10 @@
                 "5rg8fywrsmo0": "Confirm deletion?",
                 "5rg8fywrsww0": "Operation successful!",
                 "5rg8fywrt1o0": "Operation failed!"
+            },
+            "const": {
+                "fixed": "Fixed address",
+                "TCP": "TCP passive"
             }
         },
         "Cascade": {
@@ -4067,12 +4071,12 @@
                 "5rg8foln1ew0": "Please enter a name",
                 "5rg8foln1ik0": "Access Gateway",
                 "5rg8foln1ms0": "Please select an access gateway",
-                "5rg8foln1qo0": "No permission at present,",
-                "5rg8foln1uk0": "Please contact the administrator",
+                "5rg8foln1qo0": "No permission at present,please contact the administrator",
                 "5rg8foln1yc0": "No data available, please",
                 "5rg8foln23w0": "Operation succeeded",
                 "select": "Please select",
-                "input": "Please enter"
+                "input": "Please enter",
+                "addGateway": "Add  {channel} access gateway"
             }
         },
         "Channel": {
@@ -4446,7 +4450,7 @@
                 "selectDataArea": "Please select whether to write the data area length",
                 "inputDataArea": "Please enter a custom data area length(byte)",
                 "frequency": "Please enter the collection frequency",
-                "200max":"A maximum of 200 characters can be entered",
+                "200max": "A maximum of 200 characters can be entered",
                 "inputTip3": "Please enter 0 or a positive integer",
                 "channel": "Please select a channel",
                 "harvester": "Please enter the collector name",
@@ -4459,7 +4463,7 @@
                 "accessType": "Access type",
                 "interval": "Acquisition frequency",
                 "features": "Push only the changed data",
-                "action":"Controls"
+                "action": "Controls"
             }
         }
     },
@@ -4574,7 +4578,7 @@
                 "5rg7w8bn3yo0": "Operation succeeded",
                 "5rg7w8bn45s0": "Acquisition frequency",
                 "5rg7w8bn4hk0": "Subscribe",
-                "deleteTip":"Are you sure to delete?"
+                "deleteTip": "Are you sure to delete?"
             }
         },
         "Tree": {

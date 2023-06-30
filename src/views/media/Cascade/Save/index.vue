@@ -187,7 +187,7 @@
 
                             <j-col :span="24">
                                 <j-form-item
-                                    label="本地SIP ID"
+                                    :label="t('Cascade.Save.index.gatewayID')"
                                     name="localSipId"
                                     :rules="[
                                         {

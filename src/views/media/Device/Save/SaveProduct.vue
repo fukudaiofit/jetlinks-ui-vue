@@ -74,7 +74,7 @@
                     >
                         <template #description>
                             <template v-if="!isPermission"
-                                >{{t('Device.Save.SaveProduct.5rg8foln1qo0')}} {{t('Device.Save.SaveProduct.5rg8foln1uk0')}}</template
+                                >{{t('Device.Save.SaveProduct.5rg8foln1qo0')}}</template
                             >
                             <template v-else>
                                 {{t('Device.Save.SaveProduct.5rg8foln1yc0')}}
@@ -83,9 +83,7 @@
                                     style="padding: 0"
                                     @click="handleAdd"
                                 >
-                                    添加{{
-                                        providerType[props.channel]
-                                    }}接入网关
+                                    {{ t('Device.Save.SaveProduct.addGateway',{channel:providerType[props.channel]})}}
                                 </j-button>
                             </template>
                         </template>
