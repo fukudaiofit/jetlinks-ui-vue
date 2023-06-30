@@ -67,7 +67,7 @@
                                             <PermissionButton
                                                 hasPermission="DataCollect/Collector:delete"
                                                 :popConfirm="{
-                                                    title: `确定删除？`,
+                                                    title: t('Collector.Point.index.deleteTip'),
                                                     onConfirm: () =>
                                                         handlBatchDelete(),
                                                 }"
@@ -124,7 +124,7 @@
                                         }"
                                         hasPermission="DataCollect/Collector:delete"
                                         :popConfirm="{
-                                            title: `确定删除？`,
+                                            title: t('Collector.Point.index.deleteTip'),
                                             onConfirm: () =>
                                                 handlDelete(slotProps.id),
                                         }"

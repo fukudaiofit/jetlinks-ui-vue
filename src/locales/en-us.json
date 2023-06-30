@@ -3478,7 +3478,7 @@
                 "5rg55550vj40": "No",
                 "5rg55550vp40": "Please enter a function value",
                 "execute": "Carry out",
-                "inputTip":"Please enter the {name} value"
+                "inputTip": "Please enter the {name} value"
             },
             "OrgList": {
                 "5rg55d5xwk80": "Name",
@@ -3502,7 +3502,7 @@
             "ReadProperties": {
                 "5rg55xpch2s0": "Please select a property",
                 "5rg55xpcjjc0": "Read the selected attribute value periodically",
-                "stats":"Such as {length} attributes",
+                "stats": "Such as {length} attributes",
                 "read": "read"
             },
             "Type": {
@@ -3530,7 +3530,7 @@
                 "5rg56e7ydlc0": "Please select a property value",
                 "5rg56e7ygj40": "Please enter a property value",
                 "edit": "Modification",
-                "inputTip":"Please enter the {name} value"
+                "inputTip": "Please enter the {name} value"
             }
         },
         "Manual": {
@@ -4391,6 +4391,75 @@
                 "5rg5p0xfy0c0": "Please disable this component before removing it.",
                 "5rg5p0xfy6w0": "This operation will delete subordinate collectors and points. Are you sure you want to delete them?",
                 "verify": "Confirm"
+            },
+            "data": {
+                "nameTip": "Please enter name",
+                "64max": "The value contains a maximum of 64 characters",
+                "agreementTip": "Please select a communication protocol",
+                "ModbusIP": "Enter the Modbus host IP address",
+                "ModbusIPFormat": "Enter the Modbus host IP address in a correct format",
+                "portTip": "Please enter port",
+                "inputLimit": "Please enter a positive integer between 0 and 65535",
+                "urlTip": "Please enter the endpoint url",
+                "tacticsTip": "Select a security policy",
+                "modeTip": "Please select safe mode",
+                "certificateTip": "Please select Certificate",
+                "authenticationTip": "Please select permission authentication",
+                "userName": "Please enter your username",
+                "pwd": "Please enter password",
+                "200max": "A maximum of 200 characters can be entered",
+                "channelName": "channel name",
+                "provider": "communication protocol",
+                "state": "status",
+                "enabled": "normal",
+                "disabled": "forbidden",
+                "runningState": "running state",
+                "running": "In operation",
+                "partialError": "Partial error",
+                "failed": "mistake",
+                "description": "Instructions",
+                "action": "Controls"
+            }
+        },
+        "DashBoard": {
+            "tool": {
+                "abnormal_channel": "Abnormal channel",
+                "channel_number": "Number of channels",
+                "abnormal_collector": "Exception collector",
+                "collector_number": "Number of collectors",
+                "abnormal_point": "Anomaly point",
+                "point_number": "Collection point"
+            }
+        },
+        "Collector": {
+            "data": {
+                "pointName": "Please enter a point name",
+                "64max": "The value contains a maximum of 64 characters",
+                "functionCode": "Please select a function code",
+                "addressTip": "Please enter the address",
+                "inputLimit": "Please enter a positive integer between 0 and 999999999",
+                "register": "Please enter the number of registers",
+                "inputLimit2": "Please enter a positive integer between 1 and 255",
+                "dataType": "Please select a data type",
+                "zoom": "Please enter the scaling factor",
+                "interviewType": "Please select an access type",
+                "selectDataArea": "Please select whether to write the data area length",
+                "inputDataArea": "Please enter a custom data area length(byte)",
+                "frequency": "Please enter the collection frequency",
+                "200max":"A maximum of 200 characters can be entered",
+                "inputTip3": "Please enter 0 or a positive integer",
+                "channel": "Please select a channel",
+                "harvester": "Please enter the collector name",
+                "slave": "Please enter the slave address",
+                "inputTip4": "Please enter a positive integer between 0 and 255",
+                "handle": "Please select a processing mode",
+                "endian": "Please select double - word high - low - bit switch",
+                "endianIn": "Please select single-word high-low bit toggle",
+                "name": "name",
+                "accessType": "Access type",
+                "interval": "Acquisition frequency",
+                "features": "Push only the changed data",
+                "action":"Controls"
             }
         }
     },
@@ -4504,7 +4573,8 @@
                 "5rg7w8bn3qo0": "Please select first",
                 "5rg7w8bn3yo0": "Operation succeeded",
                 "5rg7w8bn45s0": "Acquisition frequency",
-                "5rg7w8bn4hk0": "Subscribe"
+                "5rg7w8bn4hk0": "Subscribe",
+                "deleteTip":"Are you sure to delete?"
             }
         },
         "Tree": {

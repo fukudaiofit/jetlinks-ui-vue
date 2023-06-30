@@ -3533,7 +3533,7 @@
                 "5rg56e7ydlc0": "请选择属性值",
                 "5rg56e7ygj40": "请输入属性值",
                 "edit": "修改",
-                "inputTip":"请输入{name}值"
+                "inputTip": "请输入{name}值"
             }
         },
         "Manual": {
@@ -4394,6 +4394,75 @@
                 "5rg5p0xfy0c0": "请先禁用该组件，再删除。",
                 "5rg5p0xfy6w0": "该操作将会删除下属采集器与点位，确定删除?",
                 "verify": "确认"
+            },
+            "data": {
+                "nameTip": "请输入名称",
+                "64max": "最大可输入64个字符",
+                "agreementTip": "请选择通讯协议",
+                "ModbusIP": "请输入Modbus主机IP",
+                "ModbusIPFormat": "请输入正确格式的Modbus主机IP地址",
+                "portTip": "请输入端口",
+                "inputLimit": "请输入0-65535之间的正整数",
+                "urlTip": "请输入端点url",
+                "tacticsTip": "请选择安全策略",
+                "modeTip": "请选择安全模式",
+                "certificateTip": "请选择证书",
+                "authenticationTip": "请选择权限认证",
+                "userName": "请输入用户名",
+                "pwd": "请输入密码",
+                "200max": "最多可输入200个字符",
+                "channelName": "通道名称",
+                "provider": "通讯协议",
+                "state": "状态",
+                "enabled": "正常",
+                "disabled": "禁用",
+                "runningState": "运行状态",
+                "running": "运行中",
+                "partialError": "部分错误",
+                "failed": "错误",
+                "description": "说明",
+                "action": "操作"
+            }
+        },
+        "DashBoard": {
+            "tool": {
+                "abnormal_channel": "异常通道",
+                "channel_number": "通道数量",
+                "abnormal_collector": "异常采集器",
+                "collector_number": "采集器数量",
+                "abnormal_point": "异常点位",
+                "point_number": "采集点位"
+            }
+        },
+        "Collector": {
+            "data": {
+                "pointName": "请输入点位名称",
+                "64max": "最大可输入64个字符",
+                "functionCode": "请选择功能码",
+                "addressTip": "请输入地址",
+                "inputLimit": "请输入0-999999999之间的正整数",
+                "register": "请输入寄存器数量",
+                "inputLimit2": "请输入1-255之间的正整数",
+                "dataType": "请选择数据类型",
+                "zoom": "请输入缩放因子",
+                "interviewType": "请选择访问类型",
+                "selectDataArea": "请选择是否写入数据区长度",
+                "inputDataArea": "请输入自定义数据区长度(byte)",
+                "frequency": "请输入采集频率",
+                "200max":"最多可输入200个字符",
+                "inputTip3": "请输入0或者正整数",
+                "channel": "请选择所属通道",
+                "harvester": "请输入采集器名称",
+                "slave": "请输入从机地址",
+                "inputTip4": "请输入0-255之间的正整数",
+                "handle": "请选择处理方式",
+                "endian": "请选择双字高低位切换",
+                "endianIn": "请选择单字高低位切换",
+                "name": "名称",
+                "accessType": "访问类型",
+                "interval": "采集频率",
+                "features": "只推送变化的数据",
+                "action":"操作"
             }
         }
     },
@@ -4507,7 +4576,8 @@
                 "5rg7w8bn3qo0": "请先选择",
                 "5rg7w8bn3yo0": "操作成功",
                 "5rg7w8bn45s0": "采集频率",
-                "5rg7w8bn4hk0": "订阅"
+                "5rg7w8bn4hk0": "订阅",
+                "deleteTip": "确定删除？"
             }
         },
         "Tree": {

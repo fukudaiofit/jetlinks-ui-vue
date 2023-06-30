@@ -1,7 +1,8 @@
 import { validateField } from '@/api/data-collect/channel';
 import { FormDataType } from './type.d';
 import type { Rule } from 'ant-design-vue/lib/form';
-
+import createI18n from '@/locales/index';
+const { t } = createI18n.global
 export const FormState: FormDataType = {
     name: '',
     provider: undefined,
@@ -55,35 +56,35 @@ export const checkEndpoint = (_rule: Rule, value: string): Promise<any> =>
     });
 export const FormValidate = {
     name: [
-        { required: true, message: '请输入名称', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('DataCollect.Channel.data.nameTip'), trigger: 'blur' },
+        { max: 64, message: t('DataCollect.Channel.data.64max') },
     ],
-    provider: [{ required: true, message: '请选择通讯协议' }],
+    provider: [{ required: true, message: t('DataCollect.Channel.data.agreementTip') }],
     host: [
         {
             required: true,
-            message: '请输入Modbus主机IP',
+            message: t('DataCollect.Channel.data.ModbusIP'),
         },
         {
             pattern: regIP || regIPv6 || regDomain,
-            message: '请输入正确格式的Modbus主机IP地址',
+            message: t('DataCollect.Channel.data.ModbusIPFormat'),
         },
     ],
     port: [
         {
             required: true,
-            message: '请输入端口',
+            message: t('DataCollect.Channel.data.portTip'),
         },
         {
             pattern: regOnlyNumber,
-            message: '请输入0-65535之间的正整数',
+            message: t('DataCollect.Channel.data.inputLimit'),
         },
     ],
 
     endpoint: [
         {
             required: true,
-            message: '请输入端点url',
+            message: t('DataCollect.Channel.data.urlTip'),
         },
         {
             validator: checkEndpoint,
@@ -94,41 +95,41 @@ export const FormValidate = {
     securityPolicy: [
         {
             required: true,
-            message: '请选择安全策略',
+            message: t('DataCollect.Channel.data.tacticsTip'),
         },
     ],
     securityMode: [
         {
             required: true,
-            message: '请选择安全模式',
+            message: t('DataCollect.Channel.data.modeTip'),
         },
     ],
     certId: [
         {
             required: true,
-            message: '请选择证书',
+            message: t('DataCollect.Channel.data.certificateTip'),
         },
     ],
     authType: [
         {
             required: true,
-            message: '请选择权限认证',
+            message: t('DataCollect.Channel.data.authenticationTip'),
         },
     ],
     username: [
-        { required: true, message: '请输入用户名', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('DataCollect.Channel.data.userName'), trigger: 'blur' },
+        { max: 64, message: t('DataCollect.Channel.data.64max') },
     ],
     password: [
-        { required: true, message: '请输入密码', trigger: 'blur' },
-        { max: 64, message: '最多可输入64个字符' },
+        { required: true, message: t('DataCollect.Channel.data.pwd'), trigger: 'blur' },
+        { max: 64, message: t('DataCollect.Channel.data.64max') },
     ],
 
-    description: [{ max: 200, message: '最多可输入200个字符' }],
+    description: [{ max: 200, message: t('DataCollect.Channel.data.200max') }],
 };
 export const columns = [
     {
-        title: '通道名称',
+        title: t('DataCollect.Channel.data.channelName'),
         dataIndex: 'name',
         key: 'name',
         ellipsis: true,
@@ -138,7 +139,7 @@ export const columns = [
         },
     },
     {
-        title: '通讯协议',
+        title: t('DataCollect.Channel.data.provider'),
         dataIndex: 'provider',
         key: 'provider',
         ellipsis: true,
@@ -151,7 +152,7 @@ export const columns = [
         },
     },
     {
-        title: '状态',
+        title: t('DataCollect.Channel.data.state'),
         dataIndex: 'state',
         key: 'state',
         ellipsis: true,
@@ -159,13 +160,13 @@ export const columns = [
         search: {
             type: 'select',
             options: [
-                { label: '正常', value: 'enabled' },
-                { label: '禁用', value: 'disabled' },
+                { label: t('DataCollect.Channel.data.enabled'), value: 'enabled' },
+                { label: t('DataCollect.Channel.data.disabled'), value: 'disabled' },
             ],
         },
     },
     {
-        title: '运行状态',
+        title: t('DataCollect.Channel.data.runningState'),
         dataIndex: 'runningState',
         key: 'runningState',
         ellipsis: true,
@@ -173,20 +174,20 @@ export const columns = [
         search: {
             type: 'select',
             options: [
-                { label: '运行中', value: 'running' },
-                { label: '部分错误', value: 'partialError' },
-                { label: '错误', value: 'failed' },
+                { label: t('DataCollect.Channel.data.running'), value: 'running' },
+                { label: t('DataCollect.Channel.data.partialError'), value: 'partialError' },
+                { label: t('DataCollect.Channel.data.failed'), value: 'failed' },
             ],
         },
     },
     {
-        title: '说明',
+        title: t('DataCollect.Channel.data.description'),
         dataIndex: 'description',
         key: 'description',
         ellipsis: true,
     },
     {
-        title: '操作',
+        title: t('DataCollect.Channel.data.action'),
         key: 'action',
         fixed: 'right',
         width: 200,
