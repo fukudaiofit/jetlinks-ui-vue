@@ -90,11 +90,11 @@ const columns = [
             type: 'select',
             options: [
                 {
-                    label: '在线',
+                    label: t('common.online'),
                     value: 'online',
                 },
                 {
-                    label: '离线',
+                    label: t('common.offline'),
                     value: 'offline',
                 },
             ],

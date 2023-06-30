@@ -225,7 +225,9 @@
         "summarizeContent": " 通知配置可以结合通知配置为告警消息通知提供支撑。也可以用于系统中其他自定义模块的调用。",
         "noticonfigdes": "通知配置说明",
         "suc": "成功",
-        "err": "失败"
+        "err": "失败",
+        "online": "在线",
+        "offline": "离线"
     },
     "login": {
         "remember": "记住我",
