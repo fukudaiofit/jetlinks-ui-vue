@@ -5885,7 +5885,8 @@
         },
         "Menu": {
             "index": {
-                "5rlbq599jhs0": "The initialized menu can be maintained and managed on the Menu Management page."
+                "5rlbq599jhs0": "The initialized menu can be maintained and managed on the Menu Management page.",
+                "initialize": "The system initializes the {count} menu"
             }
         },
         "Role": {

@@ -4,8 +4,8 @@
             <img :src="getImage('/init-home/menu.png')" />
         </div>
         <div class="menu-info">
-            <b>系统初始化{{ count }}个菜单</b>
-            <div>{{t('init-home.Menu.index.5rlbq599jhs0')}}</div>
+            <b>{{ t('init-home.Menu.index.initialize', { count: count }) }}</b>
+            <div>{{ t('init-home.Menu.index.5rlbq599jhs0') }}</div>
         </div>
     </div>
 </template>
@@ -73,7 +73,7 @@ const menuCount = (menus: any[]) => {
  */
 const initMenu = async () => {
     return new Promise(async (resolve) => {
-      //  用户中心
+        //  用户中心
         const res = await updateMenus([...menuDatas.current!, USER_CENTER_MENU_DATA, MESSAGE_SUBSCRIBE_MENU_DATA]);
         if (res.status === 200) {
             resolve(true);
@@ -92,6 +92,7 @@ defineExpose({
 .menu-style {
     display: flex;
     align-items: center;
+
     .menu-img {
         margin-right: 16px;
     }

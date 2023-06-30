@@ -1,7 +1,7 @@
 <template>
     <j-modal
         visible
-        :title="props.data.id ? t('NotificationSubscription.components.EditDialog.5rmxpg5f4nw0') : t('NotificationSubscription.components.EditDialog.5rmxpg5f6kw0')
+        :title="props.data.id ? t('NotificationSubscription.components.EditDialog.5rmxpg5f4nw0') : t('NotificationSubscription.components.EditDialog.5rmxpg5f6kw0')"
         width="865px"
         :confirmLoading="loading"
         @ok="confirm"

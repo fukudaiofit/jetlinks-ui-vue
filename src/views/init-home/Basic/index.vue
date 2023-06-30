@@ -374,7 +374,7 @@ const beforeLogoUpload = (file: any) => {
     }
     const isSize = file.size / 1024 / 1024 < 4;
     if (!isSize) {
-        message.error(`图片大小必须小于${4}M`);
+        message.error(t('init-home.Basic.index.imgSize'));
     }
     return isType && isSize;
 };
@@ -431,7 +431,7 @@ const beforeBackUpload = (file: any) => {
     }
     const isSize = file.size / 1024 / 1024 < 4;
     if (!isSize) {
-        message.error(`图片大小必须小于${4}M`);
+        message.error(t('init-home.Basic.index.imgSize'));
     }
     return isType && isSize;
 };

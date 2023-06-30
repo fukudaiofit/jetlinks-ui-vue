@@ -5859,7 +5859,8 @@
                 "5rl9g0iy7zk0": "支持1M以内的图片",
                 "inputApi": "请输入高德API Key",
                 "imgFormat": "支持4M以内的图片:支持jpg、png",
-                "formatTip": "请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片"
+                "formatTip": "请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片",
+                "imgSize": "图片大小必须小于4M"
             }
         },
         "InitData": {
@@ -5888,7 +5889,8 @@
         },
         "Menu": {
             "index": {
-                "5rlbq599jhs0": "初始化后的菜单可在“菜单管理”页面进行维护管理"
+                "5rlbq599jhs0": "初始化后的菜单可在“菜单管理”页面进行维护管理",
+                "initialize": "系统初始化{ count }个菜单"
             }
         },
         "Role": {
