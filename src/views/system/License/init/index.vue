@@ -6,7 +6,7 @@
             :license-data="license"
             :licenseTime="licenseTime"
         >
-            <div style="width: 200px">到期时间:{{ licenseTime?.expire }}</div>
+            <div style="width: 200px">{{t('License.init.index.expire') + licenseTime?.expire }}</div>
         </Card>
     </page-container>
 </template>

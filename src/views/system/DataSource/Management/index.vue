@@ -92,7 +92,7 @@
                             <template v-else-if="column.key === 'action'">
                                 <PermissionButton hasPermission="system/DataSource:delete" type="link"
                                     :tooltip="{ title: t('DataSource.Management.index.5rg9zlwj4ek0') }" :danger="true" :popConfirm="{
-                                        title: `确认删除`,
+                                        title: t('DataSource.Management.index.deleteTip'),
                                         onConfirm: () =>
                                             clickDel(record, index),
                                     }" :disabled="record.status">

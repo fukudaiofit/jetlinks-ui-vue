@@ -14,7 +14,7 @@
                     <template #headerTitle>
                         <PermissionButton type="primary" :hasPermission="`${permission}:add`" @click="table.openDialog({})">
                             <AIcon type="PlusOutlined" />
-                            {{t('system.DataSource.index.5rkk8mo8z800')}}
+                            {{ t('system.DataSource.index.5rkk8mo8z800') }}
                         </PermissionButton>
                     </template>
                     <template #state="slotProps">
@@ -46,19 +46,20 @@
                                             ? t('system.DataSource.index.5rg9zyk74nk0')
                                             : t('system.DataSource.index.5rg9zyk74t80'),
                             }" @click="() =>
-        router.push(
-            `/system/DataSource/Management?id=${slotProps.id}`,
-        )
+    router.push(
+        `/system/DataSource/Management?id=${slotProps.id}`,
+    )
     " :disabled="slotProps?.typeId === 'rabbitmq' ||
         !table.getRowStatus(slotProps)
         ">
                                 <AIcon type="icon-ziyuankuguanli" />
                             </PermissionButton>
                             <PermissionButton :hasPermission="`${permission}:action`" type="link" :popConfirm="{
-                                title: `确定要${table.getRowStatus(slotProps)
+                                title: t('system.DataSource.index.tip', {
+                                    action: table.getRowStatus(slotProps)
                                         ? t('system.DataSource.index.5rg9zyk74yo0')
                                         : t('system.DataSource.index.5rg9zyk75780')
-                                    }吗？`,
+                                }),
                                 onConfirm: () =>
                                     table.clickChangeStatus(slotProps),
                             }" :tooltip="{
@@ -67,8 +68,8 @@
         : t('system.DataSource.index.5rg9zyk75780'),
 }">
                                 <AIcon :type="table.getRowStatus(slotProps)
-                                        ? 'StopOutlined'
-                                        : 'PlayCircleOutlined'
+                                    ? 'StopOutlined'
+                                    : 'PlayCircleOutlined'
                                     " />
                                 <!-- <AIcon type="PlayCircleOutlined" /> -->
                             </PermissionButton>

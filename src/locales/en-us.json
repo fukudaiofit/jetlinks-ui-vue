@@ -1558,7 +1558,8 @@
             "MUpload": {
                 "5rgb1dttv2w0": "Replace the icon",
                 "5rgb1dttw0g0": "Remove the icon",
-                "formatTip": "Please upload a picture in the correct format"
+                "formatTip": "Please upload a picture in the correct format",
+                "imgLimit": "The image size must be less than {size}M"
             }
         },
         "AMapComponent": {
@@ -4868,7 +4869,8 @@
                 "5rg9un6bm1c0": "Export error",
                 "5rg9un6bmdc0": "Operation succeeded",
                 "5rg9un6bmnw0": "Operation successful!",
-                "export": "Confirm Export?"
+                "export": "Confirm Export?",
+                "deleteTip": "Confirm deletion"
             }
         },
         "Relationship": {
@@ -4906,7 +4908,8 @@
                 "5rg9zyk76i40": "Operation successful!",
                 "5rg9zyk76mo0": "Operation succeeded",
                 "5rkk8mo8z800": "Add",
-                "deleteTip": "Confirm deletion"
+                "deleteTip": "Confirm deletion",
+                "tip": "Are you sure you want {action}?"
             }
         },
         "Platforms": {
@@ -4933,7 +4936,8 @@
                 "5rgaaeoqlmg0": "System monitoring",
                 "5rgaaeoqlu80": "Buffer data is discarded",
                 "5rgaaeoqly80": "Business monitoring",
-                "5rgaaeoqm2c0": "Transparent message parsing exception"
+                "5rgaaeoqm2c0": "Transparent message parsing exception",
+                "MQTT": "MQTT concurrency limit"
             }
         },
         "Apply": {
@@ -4962,7 +4966,8 @@
                 "5rgb3hpe7980": "Integration menu",
                 "5rgb3hpe7dw0": "Empowerment",
                 "5rgb3hpe7hk0": "View the API",
-                "5rl7inkolgo0": "Add"
+                "5rl7inkolgo0": "Add",
+                "verify": "Confirm"
             }
         },
         "License": {
@@ -5098,7 +5103,8 @@
                 "5rkjjv4hxso0": "Asset allocation",
                 "5rkjjz9ny0c0": "Batch unbind",
                 "5rkjk30q66w0": "Bulk editing",
-                "untieTip": "Batch unbind?"
+                "untieTip": "Batch unbind?",
+                "unbind": "Unbind or not"
             }
         },
         "product": {
@@ -5119,7 +5125,8 @@
                 "5rg95ejbqcs0": "Asset allocation",
                 "5rg95ejbrus0": "Batch unbind",
                 "5rg95ejbs580": "Bulk editing",
-                "untieTip": "Batch unbind?"
+                "untieTip": "Batch unbind?",
+                "unbind": "Unbind or not"
             }
         },
         "user": {
@@ -5345,7 +5352,8 @@
                 "5rg9zlwj5o80": "Operation",
                 "5rg9zlwj5r80": "Please configure the data source field",
                 "5rg9zlwj5ug0": "Operation succeeded",
-                "5rg9zlwj5x00": "Cannot start with a number"
+                "5rg9zlwj5x00": "Cannot start with a number",
+                "deleteTip": "Confirm deletion"
             }
         }
     },
@@ -5427,7 +5435,8 @@
             "index": {
                 "5rga4ixze680": "Return",
                 "5rga4ixzftc0": "Documentation",
-                "5rga4ixzg340": "Debugging"
+                "5rga4ixzg340": "Debugging",
+                "API": "API documentation"
             }
         },
         "Setting": {
@@ -5464,7 +5473,8 @@
         "init": {
             "index": {
                 "5rgb4b0pcrk0": "Please configure the License",
-                "5rgb4b0pdnc0": "Configuration succeeded"
+                "5rgb4b0pdnc0": "Configuration succeeded",
+                "expire": "Expiration time:"
             }
         }
     },

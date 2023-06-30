@@ -278,7 +278,7 @@ const dataSource = ref([
             },
             {
                 id: 'mqtt',
-                name: 'MQTT并发限制',
+                name: t('system.NoticeRule.index.MQTT'),
                 active: false,
                 children: [
                     {

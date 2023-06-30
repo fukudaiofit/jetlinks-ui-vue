@@ -288,7 +288,7 @@ const table = {
                     title: disabled ? t('system.Apply.index.5rgb3hpe64k0') : t('system.Apply.index.5rgb3hpe6kw0'),
                 },
                 popConfirm: {
-                    title: `确认${disabled ? t('system.Apply.index.5rgb3hpe64k0') : t('system.Apply.index.5rgb3hpe6kw0')}`,
+                    title: `${t('system.Apply.index.verify') + (disabled ? t('system.Apply.index.5rgb3hpe64k0') : t('system.Apply.index.5rgb3hpe6kw0'))}`,
                     onConfirm: () => table.changeStatus(data),
                 },
                 icon: disabled ? 'StopOutlined' : 'PlayCircleOutlined',

@@ -126,7 +126,7 @@
                                         : t('system.Permission.index.5rg9un6bjpg0'),
                                 }"
                                 :popConfirm="{
-                                    title: `确认删除`,
+                                    title: t('system.Permission.index.deleteTip'),
                                     onConfirm: () => table.clickDel(slotProps),
                                 }"
                                 :disabled="slotProps.status"

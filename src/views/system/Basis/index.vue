@@ -39,7 +39,7 @@
                                                     {{ t('system.Basis.index.5rg8sgvikr40') }}
                                                 </div>
                                                 <div>
-                                                    格式：{http/https}: //{前端所在服务器IP地址}:{前端暴露的服务端口}/api
+                                                    {{ t('system.Basis.index.basePath') }}
                                                 </div>
                                             </div>
                                         </template>
@@ -49,7 +49,7 @@
                                     </j-tooltip>
                                 </template>
                                 <j-input v-model:value="formValue['base-path']"
-                                    placeholder="格式：{http/https}: //{前端所在服务器IP地址}:{前端暴露的服务端口}/api" />
+                                    :placeholder="t('system.Basis.index.basePath')" />
                             </j-form-item>
                             <j-row :gutter="24" :span="24">
                                 <j-col>

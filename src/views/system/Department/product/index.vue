@@ -370,7 +370,7 @@ const table = {
                     key: 'unbind',
                     tooltip: { title: t('Department.product.index.5rg94stwteg0') },
                     popConfirm: {
-                        title: `是否解除绑定`,
+                        title: t('Department.product.index.unbind'),
                         onConfirm: () => table.clickUnBind(data),
                     },
                     icon: 'DisconnectOutlined',

@@ -1561,7 +1561,8 @@
             "MUpload": {
                 "5rgb1dttv2w0": "替换图标",
                 "5rgb1dttw0g0": "删除图标",
-                "formatTip": "请上传正确格式的图片"
+                "formatTip": "请上传正确格式的图片",
+                "imgLimit": "图片大小必须小于{size}M"
             }
         },
         "AMapComponent": {
@@ -4871,7 +4872,8 @@
                 "5rg9un6bm1c0": "导出错误",
                 "5rg9un6bmdc0": "操作成功",
                 "5rg9un6bmnw0": "操作成功!",
-                "export": "确认导出？"
+                "export": "确认导出？",
+                "deleteTip": "确认删除"
             }
         },
         "Relationship": {
@@ -4909,7 +4911,8 @@
                 "5rg9zyk76i40": "操作成功!",
                 "5rg9zyk76mo0": "操作成功",
                 "5rkk8mo8z800": "新增",
-                "deleteTip": "确认删除"
+                "deleteTip": "确认删除",
+                "tip": "确定要{action}吗？"
             }
         },
         "Platforms": {
@@ -4936,7 +4939,8 @@
                 "5rgaaeoqlmg0": "系统监控",
                 "5rgaaeoqlu80": "缓冲区数据丢弃",
                 "5rgaaeoqly80": "业务监控",
-                "5rgaaeoqm2c0": "透传消息解析异常"
+                "5rgaaeoqm2c0": "透传消息解析异常",
+                "MQTT": "MQTT并发限制"
             }
         },
         "Apply": {
@@ -4965,7 +4969,8 @@
                 "5rgb3hpe7980": "集成菜单",
                 "5rgb3hpe7dw0": "赋权",
                 "5rgb3hpe7hk0": "查看API",
-                "5rl7inkolgo0": "新增"
+                "5rl7inkolgo0": "新增",
+                "verify": "确认"
             }
         },
         "License": {
@@ -5101,7 +5106,8 @@
                 "5rkjjv4hxso0": "资产分配",
                 "5rkjjz9ny0c0": "批量解绑",
                 "5rkjk30q66w0": "批量编辑",
-                "untieTip": "是否批量解除绑定"
+                "untieTip": "是否批量解除绑定",
+                "unbind": "是否解除绑定"
             }
         },
         "product": {
@@ -5122,7 +5128,8 @@
                 "5rg95ejbqcs0": "资产分配",
                 "5rg95ejbrus0": "批量解绑",
                 "5rg95ejbs580": "批量编辑",
-                "untieTip": "是否批量解除绑定"
+                "untieTip": "是否批量解除绑定",
+                "unbind": "是否解除绑定"
             }
         },
         "user": {
@@ -5348,7 +5355,8 @@
                 "5rg9zlwj5o80": "操作",
                 "5rg9zlwj5r80": "请配置数据源字段",
                 "5rg9zlwj5ug0": "操作成功",
-                "5rg9zlwj5x00": "不能以数字开头"
+                "5rg9zlwj5x00": "不能以数字开头",
+                "deleteTip": "确认删除"
             }
         }
     },
@@ -5430,7 +5438,8 @@
             "index": {
                 "5rga4ixze680": "返回",
                 "5rga4ixzftc0": "文档",
-                "5rga4ixzg340": "调试"
+                "5rga4ixzg340": "调试",
+                "API": "API文档"
             }
         },
         "Setting": {
@@ -5467,7 +5476,8 @@
         "init": {
             "index": {
                 "5rgb4b0pcrk0": "请配置License",
-                "5rgb4b0pdnc0": "配置成功"
+                "5rgb4b0pdnc0": "配置成功",
+                "expire": "到期时间："
             }
         }
     },

@@ -140,7 +140,7 @@
                             <PermissionButton
                                 :hasPermission="`${permission}:bind`"
                                 :popConfirm="{
-                                    title: `是否解除绑定`,
+                                    title: t('Department.device.index.unbind'),
                                     onConfirm: () =>
                                         table.clickUnBind(slotProps),
                                 }"
@@ -385,7 +385,7 @@ const table = {
                     key: 'unbind',
                     tooltip: { title: t('Department.device.index.5rg94fwtzt00') },
                     popConfirm: {
-                        title: `是否解除绑定`,
+                        title:  t('Department.device.index.unbind'),
                         onConfirm: () => table.clickUnBind(data),
                     },
                     icon: 'DisconnectOutlined',
