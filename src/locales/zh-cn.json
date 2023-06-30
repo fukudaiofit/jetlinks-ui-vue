@@ -1796,6 +1796,12 @@
                 "5rnqdm6qikc0": "暂无数据",
                 "5rnqdm6qk640": "第{position}条/总共{total}条"
             }
+        },
+        "InitHome": {
+            "index": {
+                "5rovdljazws0": "请选择首页视图",
+                "5rovdljb1q00": "确定"
+            }
         }
     },
     "Instance": {
@@ -2621,6 +2627,11 @@
                 "userNameTip": "请输入用户名",
                 "pwdTip": "请输入密码",
                 "codeTip": "请输入验证码"
+            }
+        },
+        "home": {
+            "index": {
+                "5rovh57d0uo0": "基本信息"
             }
         }
     },
@@ -6256,6 +6267,19 @@
                 "5rnsvmmu9400": "请选择文件类型",
                 "5rnsvmmu99o0": "数据类型",
                 "select": "请选择"
+            }
+        }
+    },
+    "home": {
+        "components": {
+            "BootCard": {
+                "5roveshh4xw0": "暂无权限，请联系管理员"
+            },
+            "BootCardSmall": {
+                "5rovg1zii8o0": "暂无权限，请联系管理员"
+            },
+            "StepCard": {
+                "5rovgp3dsts0": "暂无权限，请联系管理员"
             }
         }
     }

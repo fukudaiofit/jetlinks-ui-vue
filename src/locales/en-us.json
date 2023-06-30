@@ -1791,6 +1791,12 @@
                 "5rnqdm6qikc0": "No data available",
                 "5rnqdm6qk640": "{position}/total{total}"
             }
+        },
+        "InitHome": {
+            "index": {
+                "5rovdljazws0": "Please select Home view",
+                "5rovdljb1q00": "confirm"
+            }
         }
     },
     "Instance": {
@@ -2616,6 +2622,11 @@
                 "userNameTip": "Please enter a user name",
                 "pwdTip": "Please enter your password",
                 "codeTip": "Please enter the verification code"
+            }
+        },
+        "home": {
+            "index": {
+                "5rovh57d0uo0": "Basic information"
             }
         }
     },
@@ -6250,6 +6261,19 @@
                 "5rnsvmmu9400": "Please select a file type",
                 "5rnsvmmu99o0": "Data type",
                 "select": "Please select"
+            }
+        }
+    },
+    "home": {
+        "components": {
+            "BootCard": {
+                "5roveshh4xw0": "No permission, please contact the administrator"
+            },
+            "BootCardSmall": {
+                "5rovg1zii8o0": "No permission, please contact the administrator"
+            },
+            "StepCard": {
+                "5rovgp3dsts0": "No permission, please contact the administrator"
             }
         }
     }

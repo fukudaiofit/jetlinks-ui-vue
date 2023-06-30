@@ -28,7 +28,9 @@
 import { message } from 'ant-design-vue';
 import { bootConfig } from '../typing';
 import { useMenuStore } from '@/store/menu';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     cardData: Array<bootConfig>,
     cardTitle: String,
@@ -40,7 +42,7 @@ const jumpPage = (item: bootConfig) => {
     if (item.auth === undefined || item.auth) {
         _jumpPage(item.link, item.params);
     } else {
-        message.warning('暂无权限，请联系管理员');
+        message.warning(t('home.components.BootCardSmall.5rovg1zii8o0'));
     }
 };
 </script>
