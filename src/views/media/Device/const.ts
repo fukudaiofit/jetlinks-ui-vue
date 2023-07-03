@@ -6,7 +6,7 @@ export const PROVIDER_OPTIONS = [
 ]
 export const streamMode = [
     { label: 'UDP', value: 'UDP' },
-    { label: t('media.Device.cosnt.TCP'), value: 'TCP_PASSIVE' },
+    { label: t('media.Device.const.TCP'), value: 'TCP_PASSIVE' },
 ]
 
 export const providerType = {
