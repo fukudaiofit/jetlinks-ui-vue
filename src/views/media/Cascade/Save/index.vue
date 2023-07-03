@@ -692,7 +692,7 @@ const checkHost = (host: string, port: string | number | undefined) => {
     if (!host) {
         return Promise.resolve();
     } else if (!host) {
-        return Promise.reject(new Error('请输入IP 地址'));
+        return Promise.reject(new Error(t('Cascade.Save.index.IPAddress')));
     } else if (host && !regDomain.test(host)) {
         return Promise.reject(new Error(t('Cascade.Save.index.5rg8oqlcktg0')));
     } else if (!port) {

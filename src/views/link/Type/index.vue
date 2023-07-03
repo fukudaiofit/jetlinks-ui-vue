@@ -308,7 +308,7 @@ const getActions = (
             },
             icon: state === 'enabled' ? 'StopOutlined' : 'CheckCircleOutlined',
             popConfirm: {
-                title: `确认${stateText}?`,
+                title: t('link.Type.index.verify',{stateText:stateText}),
                 onConfirm: async () => {
                     let res =
                         state === 'enabled'

@@ -352,7 +352,7 @@ const uploader: uploaderType = {
         if (!typeBool) {
             message.error(t('system.Basis.index.icon'));
         } else if (!sizeBool) {
-            message.error(`图片大小必须小于${1}M`);
+            message.error(t('system.Basis.index.iconLimit'));
         }
         return typeBool && sizeBool;
     },

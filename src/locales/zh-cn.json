@@ -2364,7 +2364,8 @@
                 "5rg395qkg880": "操作成功",
                 "5rg395qkgdo0": "删除",
                 "5rg395qkgj80": "请先禁用，再删除",
-                "5rg395qkgpc0": "确认删除?"
+                "5rg395qkgpc0": "确认删除?",
+                "verify": "确认{stateText}？"
             },
             "data": {
                 "UDP": "UDP可以让设备无需建立连接就可以与平台传输数据。在允许一定程度丢包的情况下，提供轻量化且简单的连接。",
@@ -2413,7 +2414,8 @@
                 "5rg3f4livb00": "操作成功",
                 "5rg3f4livhs0": "删除",
                 "5rg3f4livlo0": "请先禁用该组件，再删除。",
-                "5rg3f4livp00": "确认删除?"
+                "5rg3f4livp00": "确认删除?",
+                "verify": "确认{stateText}？"
             },
             "data": {
                 "DIRECT": "不处理",
@@ -2665,7 +2667,7 @@
         "oauth": {
             "index": {
                 "5rmy4okjyok0": "授权登录",
-                "5rmy4okjzz00": "您正在授权登录,",
+                "5rmy4okjzz00": "您正在授权登录,{appName}将获得以下权限:",
                 "5rmy4okk07o0": "获取您的个人信息",
                 "5rmy4okk0dk0": "同意授权",
                 "5rmy4okk0j00": "切换账号",
@@ -2675,7 +2677,8 @@
                 "5rmy4okk1800": "登录",
                 "userNameTip": "请输入用户名",
                 "pwdTip": "请输入密码",
-                "codeTip": "请输入验证码"
+                "codeTip": "请输入验证码",
+                "relevance":"关联{userName}账号"
             }
         },
         "device": {
@@ -2709,6 +2712,22 @@
                 "ALIPAY_WEB": "支付宝网页及时到账支付",
                 "WEIXIN_JSAPI": "微信公众号支付",
                 "WEIXIN_NATIVE": "微信扫码支付"
+            }
+        },
+        "notice": {
+            "const": {
+                "dingding": "钉钉",
+                "weixin": "微信",
+                "email": "邮件",
+                "voice": "语音",
+                "sms": "短信",
+                "dingTalkMessage": "钉钉消息",
+                "dingTalkRobotWebHook": "群机器人消息",
+                "corpMessage": "企业消息",
+                "aliyun": "阿里云语音",
+                "aliyunSms": "阿里云短信",
+                "notification": "语音通知",
+                "tts": "语音验证码"
             }
         }
     },
@@ -3131,7 +3150,8 @@
                 "5rg4mqvp84g0": "操作失败！",
                 "5rg4mqvp8840": "删除",
                 "5rg4mqvp8dc0": "请先禁用再删除",
-                "5rg4mqvp8h80": "确认删除?"
+                "5rg4mqvp8h80": "确认删除?",
+                "verify":"确认{stateText}？"
             }
         },
         "Scene": {
@@ -4858,7 +4878,8 @@
                 "versions": "厂商/型号/版本号",
                 "heartbeat": "心跳周期",
                 "interval": "注册间隔",
-                "intervalContent": "SIP代理与 SIP服务器出现1s误"
+                "intervalContent": "SIP代理与 SIP服务器出现1s误",
+                "IPAddress": "请输入IP 地址"
             }
         }
     },
@@ -4897,7 +4918,8 @@
                 "basePath": "格式：{http/https}: //{前端所在服务器IP地址}:{前端暴露的服务端口}/api",
                 "imgTip": "请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片",
                 "imgLimit": "图片大小必须小于4M",
-                "icon": "请上传ico格式的图片"
+                "icon": "请上传ico格式的图片",
+                "iconLimit":"图片大小必须小于1M`"
             }
         },
         "User": {
@@ -4918,7 +4940,8 @@
                 "5rg8tfggodw0": "操作",
                 "5rg8tfggoh80": "操作成功",
                 "5rkjhmivlto0": "新增",
-                "deleteTip": "确认删除"
+                "deleteTip": "确认删除",
+                "verify":"确认{stateText}吗？"
             }
         },
         "Menu": {
@@ -4963,7 +4986,8 @@
                 "5rg9un6bmdc0": "操作成功",
                 "5rg9un6bmnw0": "操作成功!",
                 "export": "确认导出？",
-                "deleteTip": "确认删除"
+                "deleteTip": "确认删除",
+                "verify":"确认{stateText}吗？"
             }
         },
         "Relationship": {

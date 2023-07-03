@@ -39,7 +39,7 @@
                             <PermissionButton :hasPermission="`${permission}:action`" type="link" :tooltip="{
                                 title: `${slotProps.status ? t('system.User.index.5rg8tfggmow0') : t('system.User.index.5rg8tfggn1w0')}`,
                             }" :popConfirm="{
-    title: `确定${slotProps.status ? t('system.User.index.5rg8tfggmow0') : t('system.User.index.5rg8tfggn1w0')}吗？`, onConfirm: () =>
+    title:t('system.User.index.verify',{stateText:slotProps.status ? t('system.User.index.5rg8tfggmow0') : t('system.User.index.5rg8tfggn1w0')}), onConfirm: () =>
         table.changeStatus(slotProps),
 }">
                                 <AIcon :type="slotProps.status

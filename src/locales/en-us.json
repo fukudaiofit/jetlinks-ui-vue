@@ -2358,7 +2358,8 @@
                 "5rg395qkg880": "Operation succeeded",
                 "5rg395qkgdo0": "Delete",
                 "5rg395qkgj80": "Please disable before deleting",
-                "5rg395qkgpc0": "Confirm deletion?"
+                "5rg395qkgpc0": "Confirm deletion?",
+                "verify": "Confirm {stateText}？"
             },
             "data": {
                 "UDP": "UDP allows devices to transmit data to the platform without establishing a connection. Provides lightweight and simple connections while allowing some degree of packet loss。",
@@ -2407,7 +2408,8 @@
                 "5rg3f4livb00": "Operation succeeded",
                 "5rg3f4livhs0": "Delete",
                 "5rg3f4livlo0": "Please disable this component before removing it.",
-                "5rg3f4livp00": "Confirm deletion?"
+                "5rg3f4livp00": "Confirm deletion?",
+                "verify": "Confirm {stateText}？"
             },
             "data": {
                 "DIRECT": "Not process",
@@ -2659,7 +2661,7 @@
         "oauth": {
             "index": {
                 "5rmy4okjyok0": "Authorize login",
-                "5rmy4okjzz00": "You are authorizing the login,",
+                "5rmy4okjzz00": "You are authorizing to log in, and {appName} will receive the following permissions:",
                 "5rmy4okk07o0": "Access to your personal information",
                 "5rmy4okk0dk0": "Consent to authorization",
                 "5rmy4okk0j00": "Switch accounts",
@@ -2669,7 +2671,8 @@
                 "5rmy4okk1800": "Sign in",
                 "userNameTip": "Please enter a user name",
                 "pwdTip": "Please enter your password",
-                "codeTip": "Please enter the verification code"
+                "codeTip": "Please enter the verification code",
+                "relevance":"Associate the {userName} account"
             }
         },
         "device": {
@@ -2703,6 +2706,22 @@
                 "ALIPAY_WEB": "Alipay website timely arrival payment",
                 "WEIXIN_JSAPI": "Wechat public account payment",
                 "WEIXIN_NATIVE": "Wechat scan code payment"
+            }
+        },
+        "notice": {
+            "const": {
+                "dingding": "Dingtalk",
+                "weixin": "wechat",
+                "email": "email",
+                "voice": "voice",
+                "sms": "Short message",
+                "dingTalkMessage": "Dingdingnews",
+                "dingTalkRobotWebHook": "Swarm robot message",
+                "corpMessage": "Enterprise news",
+                "aliyun": "Alibaba Cloud voice",
+                "aliyunSms": "Alibaba cloud SMS",
+                "notification": "Voice notification",
+                "tts": "Speech verification code"
             }
         }
     },
@@ -3125,7 +3144,8 @@
                 "5rg4mqvp84g0": "Operation failed!",
                 "5rg4mqvp8840": "Delete",
                 "5rg4mqvp8dc0": "Please disable before deleting",
-                "5rg4mqvp8h80": "Confirm deletion?"
+                "5rg4mqvp8h80": "Confirm deletion?",
+                "verify":"Confirm {stateText}？"
             }
         },
         "Scene": {
@@ -4852,7 +4872,8 @@
                 "versions": "Manufacturer/Model/Version No.",
                 "heartbeat": "Heartbeat cycle",
                 "interval": "Registration interval",
-                "intervalContent": "SIP proxy and SIP server 1s error"
+                "intervalContent": "SIP proxy and SIP server 1s error",
+                "IPAddress": "Please enter the IP address"
             }
         }
     },
@@ -4891,7 +4912,8 @@
                 "basePath": "Format: { HTTP/HTTPS }://{ IP address of the server where the front end is located }: { service port exposed by the front end }/API",
                 "imgTip": "Please upload a picture in. JPG. PNG. Jfif. Pjp. Pjpeg. JPEG format",
                 "imgLimit": "Image size must be less than 4m",
-                "icon": "Please upload pictures in ico format"
+                "icon": "Please upload pictures in ico format",
+                "iconLimit":"The image size must be less than 1M`"
             }
         },
         "User": {
@@ -4912,7 +4934,8 @@
                 "5rg8tfggodw0": "Operation",
                 "5rg8tfggoh80": "Operation succeeded",
                 "5rkjhmivlto0": "Add",
-                "deleteTip": "Confirm deletion"
+                "deleteTip": "Confirm deletion",
+                "verify":"Confirm {stateText}?"
             }
         },
         "Menu": {
@@ -4957,7 +4980,8 @@
                 "5rg9un6bmdc0": "Operation succeeded",
                 "5rg9un6bmnw0": "Operation successful!",
                 "export": "Confirm Export?",
-                "deleteTip": "Confirm deletion"
+                "deleteTip": "Confirm deletion",
+                "verify":"Confirm {stateText}?"
             }
         },
         "Relationship": {

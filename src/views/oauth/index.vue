@@ -17,10 +17,10 @@
                   <h2>{{t('views.oauth.index.5rmy4okjyok0')}}</h2>
                   <div class='oauth-content-content'>
                     <div class='oauth-content-content-text'>
-                      {{t('views.oauth.index.5rmy4okjzz00')}} {{ appName }} 将获得以下权限:
+                      {{t('views.oauth.index.5rmy4okjzz00',{appName:appName})}}
                     </div>
                     <ul>
-                      <li>关联{{userName}}账号</li>
+                      <li>{{t('views.oauth.index.relevance',{userName:userName})}}</li>
                       <li>{{t('views.oauth.index.5rmy4okk07o0')}}</li>
                     </ul>
                     <div class='oauth-content-button'>

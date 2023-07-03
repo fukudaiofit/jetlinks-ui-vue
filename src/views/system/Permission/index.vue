@@ -98,9 +98,7 @@
                                 :hasPermission="`${permission}:action`"
                                 type="link"
                                 :popConfirm="{
-                                    title: `确定要${
-                                        slotProps.status ? t('system.Permission.index.5rg9un6bisk0') : t('system.Permission.index.5rg9un6bik40')
-                                    }吗？`,
+                                    title: t('system.Permission.index.verify',{stateText: slotProps.status ? t('system.Permission.index.5rg9un6bisk0') : t('system.Permission.index.5rg9un6bik40') }) ,
                                     onConfirm: () =>
                                         table.changeStatus(slotProps),
                                 }"
