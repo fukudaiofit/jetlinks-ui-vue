@@ -1391,8 +1391,7 @@ const Status = defineComponent({
                                         status="default"
                                         text={
                                             <span>
-                                                请联系管理员提供${urlMap.get(unref(device)?.accessProvider) || ''}
-                                                信息，并根据URL信息任意上报一条数据
+                                                 {t('Instance.tsx.index.tip',{accessProvider: urlMap.get(unref(device)?.accessProvider) || ''})}
                                             </span>
                                         }
                                     />,

@@ -4,7 +4,7 @@
     { max: 64, message: t('Base.Edit.BaseForm.5rnr8p5wmlk0') },
     {
       pattern: /^[a-zA-Z0-9_\-]+$/,
-      message: 'ID只能由数字、字母、下划线、中划线组成',
+      message: t('Base.Edit.BaseForm.IDRule'),
     },
   ]">
     <j-input v-model:value="value.id" size="small" @change="asyncOtherConfig" :disabled="metadataStore.model.action === 'edit'" :placeholder="t('Base.Edit.BaseForm.5rnr8p5wmf00')"></j-input>

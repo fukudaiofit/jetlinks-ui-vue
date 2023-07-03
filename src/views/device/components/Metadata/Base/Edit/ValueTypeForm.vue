@@ -88,7 +88,7 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: t('Base.Edit.ValueTypeForm.5rnsvmmu99o0')
+    default: "数据类型"
   },
   required: {
     type: Boolean,

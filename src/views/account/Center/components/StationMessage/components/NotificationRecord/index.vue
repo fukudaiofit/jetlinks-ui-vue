@@ -49,11 +49,9 @@
                         <PermissionButton
                             type="link"
                             :popConfirm="{
-                                title: `确认标为${
-                                    slotProps.state.value === 'read'
+                                title: t('components.NotificationRecord.index.Markers',{type:slotProps.state.value === 'read'
                                         ? t('components.NotificationRecord.index.5rmxnueqkk80')
-                                        : t('components.NotificationRecord.index.5rmxnueqkv40')
-                                }`,
+                                        : t('components.NotificationRecord.index.5rmxnueqkv40')}),
                                 onConfirm: () => table.changeStatus(slotProps),
                             }"
                             :tooltip="{

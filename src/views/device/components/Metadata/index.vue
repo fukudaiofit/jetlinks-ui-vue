@@ -2,14 +2,14 @@
     <div class='device-detail-metadata' style="position: relative;">
       <div class="tips">
         <j-tooltip :title="instanceStore.detail?.independentMetadata && type === 'device'
-        ? '该设备已脱离产品物模型，修改产品物模型对该设备无影响'
-        : '设备会默认继承产品的物模型，修改设备物模型后将脱离产品物模型'">
+        ? t('components.Metadata.index.5rra77wj7940')
+        : t('components.Metadata.index.5rra77wj8qs0')">
           <div class="ellipsis" style='color: #999;'>
             <AIcon type="InfoCircleOutlined" style="margin-right: 3px" />
             {{
               instanceStore.detail?.independentMetadata && type === 'device'
-                ? '该设备已脱离产品物模型，修改产品物模型对该设备无影响'
-                : '设备会默认继承产品的物模型，修改设备物模型后将脱离产品物模型'
+                ? t('components.Metadata.index.5rra77wj7940')
+                : t('components.Metadata.index.5rra77wj8qs0')
             }}
           </div>
         </j-tooltip>
@@ -18,25 +18,25 @@
         <template #rightExtra>
           <j-space>
             <PermissionButton v-if="type === 'device' && instanceStore.detail?.independentMetadata"
-              :hasPermission="`${permission}:update`" :popConfirm="{ title: '确认重置？', onConfirm: resetMetadata, }"
-              :tooltip="{ title: '重置后将使用产品的物模型配置' }" key="reload">
-              重置操作
+              :hasPermission="`${permission}:update`" :popConfirm="{ title: t('components.Metadata.index.5rra77wj8y80'), onConfirm: resetMetadata, }"
+              :tooltip="{ title: t('components.Metadata.index.5rra77wj93k0') }" key="reload">
+              {{t('components.Metadata.index.5rra77wj9ek0')}}
             </PermissionButton>
-            <PermissionButton :hasPermission="`${permission}:update`" @click="visible = true" key="import">快速导入</PermissionButton>
-            <PermissionButton :hasPermission="`${permission}:update`" @click="cat = true" key="tsl">物模型TSL</PermissionButton>
+            <PermissionButton :hasPermission="`${permission}:update`" @click="visible = true" key="import">{{t('components.Metadata.index.5rra77wj9lk0')}}</PermissionButton>
+            <PermissionButton :hasPermission="`${permission}:update`" @click="cat = true" key="tsl">{{t('components.Metadata.index.5rra77wj9r80')}}</PermissionButton>
           </j-space>
         </template>
 
-        <j-tab-pane tab="属性定义" key="properties">
+        <j-tab-pane :tab="t('components.Metadata.index.5rra77wj9ws0')" key="properties">
           <BaseMetadata :target="type" type="properties" :permission="permission" />
         </j-tab-pane>
-        <j-tab-pane tab="功能定义" key="functions">
+        <j-tab-pane :tab="t('components.Metadata.index.5rra77wja2w0')" key="functions">
           <BaseMetadata :target="type" type="functions" :permission="permission" />
         </j-tab-pane>
-        <j-tab-pane tab="事件定义" key="events">
+        <j-tab-pane :tab="t('components.Metadata.index.5rra77wja900')" key="events">
           <BaseMetadata :target="type" type="events" :permission="permission" />
         </j-tab-pane>
-        <j-tab-pane tab="标签定义" key="tags">
+        <j-tab-pane :tab="t('components.Metadata.index.5rra77wjae40')" key="tags">
           <BaseMetadata :target="type" type="tags" :permission="permission" />
         </j-tab-pane>
       </j-tabs>
@@ -53,7 +53,9 @@ import Import from './Import/index.vue'
 import Cat from './Cat/index.vue'
 import BaseMetadata from './Base/index.vue'
 import { useMetadataStore } from '@/store/metadata'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const route = useRoute()
 const instanceStore = useInstanceStore()
 const metadataStore = useMetadataStore()
@@ -72,7 +74,7 @@ const resetMetadata = async () => {
   const { id } = route.params
   const resp = await deleteMetadata(id as string)
   if (resp.status === 200) {
-    message.info('操作成功')
+    message.info(t('components.Metadata.index.5rra77wjakk0'))
     instanceStore.refresh(id as string).then(() => {
       metadataStore.set('importMetadata', true)
     })

@@ -687,6 +687,16 @@
                 "5rcy30umvq00": "Keep only the attributes in the plug-in",
                 "5rcy30umvyw0": "Operation successful!",
                 "processingMode": "Please select the processing method"
+            },
+            "util": {
+                "allocation": "Configurator model",
+                "allocationDes": "Configure the product model to realize the function description of the device in the cloud.",
+                "enable": "Enable product",
+                "enableDes": "After the product is enabled, you can add devices under the product.",
+                "append": "Add device",
+                "appendDes": "Add devices and connect to the platform.",
+                "fillOut": "Fill in configuration",
+                "fillOutDes": "Enter the configuration parameters required for device access."
             }
         },
         "MetadataMap": {
@@ -1757,7 +1767,8 @@
                 "5rmxnueqmeo0": "Notification time",
                 "5rmxnueqmmo0": "Status",
                 "5rmxnueqmtw0": "Operation",
-                "5rmxnueqn1k0": "Operation successful!"
+                "5rmxnueqn1k0": "Operation successful!",
+                "Markers": "Confirmation label {type}"
             }
         },
         "NotificationSubscription": {
@@ -1817,6 +1828,22 @@
             "index": {
                 "5rovdljazws0": "Please select Home view",
                 "5rovdljb1q00": "confirm"
+            }
+        },
+        "Metadata": {
+            "index": {
+                "5rra77wj7940": "The device has been removed from the product physical model, and modifying the product physical model has no effect on the device",
+                "5rra77wj8qs0": "The device inherits the object model of the product by default, and the device object model will be removed from the product object model after modification",
+                "5rra77wj8y80": "Confirm reset?",
+                "5rra77wj93k0": "The object model configuration of the product will be used after the reset",
+                "5rra77wj9ek0": "Reset operation",
+                "5rra77wj9lk0": "Quick import",
+                "5rra77wj9r80": "Physical model TSL",
+                "5rra77wj9ws0": "Attribute definition",
+                "5rra77wja2w0": "Function definition",
+                "5rra77wja900": "Event definition",
+                "5rra77wjae40": "Label definition",
+                "5rra77wjakk0": "Successful operation"
             }
         }
     },
@@ -2643,6 +2670,19 @@
                 "userNameTip": "Please enter a user name",
                 "pwdTip": "Please enter your password",
                 "codeTip": "Please enter the verification code"
+            }
+        },
+        "device": {
+            "data": {
+                "device": "equipment",
+                "manual": "Manual operation",
+                "rule": "rule",
+                "ordinary": "normal",
+                "warn": "warn",
+                "urgent": "urgent",
+                "read":"read",
+                "write":"write",
+                "report":"report"
             }
         },
         "home": {
@@ -6088,6 +6128,56 @@
                 "5rnt09cymw40": "Operation is successful!",
                 "5rnt09cyn000": "Operation failed!",
                 "pagination": "{position}/total{total}"
+            },
+            "columns": {
+                "device": "device",
+                "manual": "Manual operation",
+                "rule": "rule",
+                "write": "write",
+                "read": "read",
+                "report": "report",
+                "id": "id",
+                "name": "name",
+                "description": "description",
+                "level": "Event level",
+                "async": "Asynchronous or not",
+                "valueType": "Data type",
+                "type": "Read-write type",
+                "source": "Attribute source"
+            }
+        },
+        "Cat": {
+            "index": {
+                "5rr7te0yv840": "View object model",
+                "5rr7te0ywhw0": "export",
+                "5rr7te0ywq80": "A physical model is a description of a device's functionality in the cloud, including the device's properties, services, and events. The Internet of Things platform describes the object model by defining a description Language of things, called TSL (Thing Specification Language), using JSON format, you can assemble the data of the reported device according to TSL. You can export complete physical models for cloud application development.",
+                "5rr7te0yx600": "Configure the object model first"
+            }
+        },
+        "Import": {
+            "index": {
+                "5rr9yun0mrs0": "Import model",
+                "5rr9yun0omg0": "The imported object model overrides the original properties, functions, events, and labels. Exercise caution when performing this operation.",
+                "5rr9yun0p240": "Import mode",
+                "5rr9yun0pb40": "Copy product",
+                "5rr9yun0pkg0": "Select product",
+                "5rr9yun0ptk0": "Object model type",
+                "5rr9yun0q2s0": "Ali cloud model TSL",
+                "5rr9yun0qag0": "Import type",
+                "5rr9yun0qiw0": "File upload",
+                "5rr9yun0r1w0": "SCRIPT",
+                "5rr9yun0r9g0": "Object model",
+                "5rr9yun0ri40": "Write object model scripts in an online editor",
+                "5rr9yun0rpk0": "Select an import mode",
+                "5rr9yun0ryo0": "Please select a product",
+                "5rr9yun0s5w0": "Please select object model type",
+                "5rr9yun0sdk0": "Please select an import type",
+                "5rr9yun0spw0": "Please upload file",
+                "5rr9yun0t180": "Please enter object model",
+                "5rr9yun0t940": "Import successfully",
+                "5rr9yun0ths0": "The object model data is incorrect",
+                "5rr9yun0tu40": "Upload the object model file in json format",
+                "objectModel": "Jetlinks object model"
             }
         }
     },

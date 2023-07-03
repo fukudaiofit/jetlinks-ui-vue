@@ -1,30 +1,31 @@
 import { ColumnProps } from "ant-design-vue/es/table";
-
+import createI18n from "@/locales/index"
+const t = createI18n.global.t
 const SourceMap = {
-  device: '设备',
-  manual: '手动',
-  rule: '规则',
+  device: t('Metadata.Base.columns.device'),
+  manual: t('Metadata.Base.columns.manual'),
+  rule: t('Metadata.Base.columns.ruls'),
 };
 
 const type = {
-  read: '读',
-  write: '写',
-  report: '上报',
+  read: t('Metadata.Base.columns.read'),
+  write: t('Metadata.Base.columns.write'),
+  report: t('Metadata.Base.columns.report'),
 };
 
 const BaseColumns: ColumnProps[] = [
   {
-    title: '标识',
+    title: t('Metadata.Base.columns.id'),
     dataIndex: 'id',
     width: 100
   },
   {
-    title: '名称',
+    title: t('Metadata.Base.columns.name'),
     dataIndex: 'name',
     width: 200
   },
   {
-    title: '说明',
+    title: t('Metadata.Base.columns.description'),
     dataIndex: 'description',
     width: 200
   },
@@ -32,14 +33,14 @@ const BaseColumns: ColumnProps[] = [
 
 const EventColumns: ColumnProps[] = BaseColumns.concat([
   {
-    title: '事件级别',
+    title: t('Metadata.Base.columns.level'),
     dataIndex: 'level',
   },
 ]);
 
 const FunctionColumns: ColumnProps[] = BaseColumns.concat([
   {
-    title: '是否异步',
+    title: t('Metadata.Base.columns.async'),
     dataIndex: 'async',
   },
   // {
@@ -51,26 +52,26 @@ const FunctionColumns: ColumnProps[] = BaseColumns.concat([
 
 const PropertyColumns: ColumnProps[] = BaseColumns.concat([
   {
-    title: '数据类型',
+    title: t('Metadata.Base.columns.valueType'),
     dataIndex: 'valueType',
   },
   {
-    title: '属性来源',
+    title: t('Metadata.Base.columns.source'),
     dataIndex: 'source',
   },
   {
-    title: '读写类型',
+    title: t('Metadata.Base.columns.type'),
     dataIndex: 'type',
   },
 ]);
 
 const TagColumns: ColumnProps[] = BaseColumns.concat([
   {
-    title: '数据类型',
+    title: t('Metadata.Base.columns.valueType'),
     dataIndex: 'valueType',
   },
   {
-    title: '读写类型',
+    title: t('Metadata.Base.columns.type'),
     dataIndex: 'type',
   },
 ]);

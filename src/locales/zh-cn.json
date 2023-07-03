@@ -689,6 +689,16 @@
                 "5rcy30umvq00": "仅保留插件中的属性",
                 "5rcy30umvyw0": "操作成功！",
                 "processingMode": "请选择处理方式"
+            },
+            "util": {
+                "allocation": "配置物模型",
+                "allocationDes": "配置产品物模型，实现设备在云端的功能描述。",
+                "enable": "启用产品",
+                "enableDes": "启用产品后，可在产品下新增设备。",
+                "append": "添加设备",
+                "appendDes": "添加设备，并连接到平台。",
+                "fillOut": "填写配置",
+                "fillOutDes": "填写设备接入所需的配置参数。"
             }
         },
         "MetadataMap": {
@@ -1762,7 +1772,8 @@
                 "5rmxnueqmeo0": "通知时间",
                 "5rmxnueqmmo0": "状态",
                 "5rmxnueqmtw0": "操作",
-                "5rmxnueqn1k0": "操作成功！"
+                "5rmxnueqn1k0": "操作成功！",
+                "Markers": "确认标为{type}"
             }
         },
         "NotificationSubscription": {
@@ -1822,6 +1833,22 @@
             "index": {
                 "5rovdljazws0": "请选择首页视图",
                 "5rovdljb1q00": "确定"
+            }
+        },
+        "Metadata": {
+            "index": {
+                "5rra77wj7940": "该设备已脱离产品物模型，修改产品物模型对该设备无影响",
+                "5rra77wj8qs0": "设备会默认继承产品的物模型，修改设备物模型后将脱离产品物模型",
+                "5rra77wj8y80": "确认重置？",
+                "5rra77wj93k0": "重置后将使用产品的物模型配置",
+                "5rra77wj9ek0": "重置操作",
+                "5rra77wj9lk0": "快速导入",
+                "5rra77wj9r80": "物模型TSL",
+                "5rra77wj9ws0": "属性定义",
+                "5rra77wja2w0": "功能定义",
+                "5rra77wja900": "事件定义",
+                "5rra77wjae40": "标签定义",
+                "5rra77wjakk0": "操作成功"
             }
         }
     },
@@ -2026,7 +2053,8 @@
                 "connection": "连接详情",
                 "gatewayTip": "诊断设备接入网关状态是否正常，禁用状态将导致连接失败",
                 "repair": "一键修复",
-                "rediagnosis": "重新诊断"
+                "rediagnosis": "重新诊断",
+                "tip": " 请联系管理员提供{accessProvider}信息，并根据URL信息任意上报一条数据"
             },
             "ManualInspection": {
                 "inspectTip": "请检查配置项是否填写正确，若您确定该项无需诊断可",
@@ -2648,6 +2676,19 @@
                 "userNameTip": "请输入用户名",
                 "pwdTip": "请输入密码",
                 "codeTip": "请输入验证码"
+            }
+        },
+        "device": {
+            "data": {
+                "device": "设备",
+                "manual": "手动",
+                "rule": "规则",
+                "ordinary": "普通",
+                "warn": "警告",
+                "urgent": "紧急",
+                "read":"读",
+                "write":"写",
+                "report":"上报"
             }
         },
         "home": {
@@ -6094,6 +6135,56 @@
                 "5rnt09cymw40": "操作成功！",
                 "5rnt09cyn000": "操作失败！",
                 "pagination": "第{position}条/总共{total}条"
+            },
+            "columns": {
+                "device": "设备",
+                "manual": "手动",
+                "rule": "规则",
+                "write": "写",
+                "read": "读",
+                "report": "上报",
+                "id": "标识",
+                "name": "名称",
+                "description": "说明",
+                "level": "事件级别",
+                "async": "是否异步",
+                "valueType": "数据类型",
+                "type": "读写类型",
+                "source": "属性来源"
+            }
+        },
+        "Cat": {
+            "index": {
+                "5rr7te0yv840": "查看物模型",
+                "5rr7te0ywhw0": "导出",
+                "5rr7te0ywq80": "物模型是对设备在云端的功能描述，包括设备的属性、服务和事件。物联网平台通过定义一种物的描述语言来描述物模型，称之为TSL（即 Thing Specification Language），采用 JSON格式，您可以根据TSL组装上报设备的数据。您可以导出完整物模型，用于云端应用开发。",
+                "5rr7te0yx600": "请先配置物模型"
+            }
+        },
+        "Import": {
+            "index": {
+                "5rr9yun0mrs0": "导入物模型",
+                "5rr9yun0omg0": "导入的物模型会覆盖原来的属性、功能、事件、标签，请谨慎操作。",
+                "5rr9yun0p240": "导入方式",
+                "5rr9yun0pb40": "拷贝产品",
+                "5rr9yun0pkg0": "选择产品",
+                "5rr9yun0ptk0": "物模型类型",
+                "5rr9yun0q2s0": "阿里云物模型TSL",
+                "5rr9yun0qag0": "导入类型",
+                "5rr9yun0qiw0": "文件上传",
+                "5rr9yun0r1w0": "脚本",
+                "5rr9yun0r9g0": "物模型",
+                "5rr9yun0ri40": "在线编辑器中编写物模型脚本",
+                "5rr9yun0rpk0": "请选择导入方式",
+                "5rr9yun0ryo0": "请选择产品",
+                "5rr9yun0s5w0": "请选择物模型类型",
+                "5rr9yun0sdk0": "请选择导入类型",
+                "5rr9yun0spw0": "请上传文件",
+                "5rr9yun0t180": "请输入物模型",
+                "5rr9yun0t940": "导入成功",
+                "5rr9yun0ths0": "物模型数据不正确",
+                "5rr9yun0tu40": "上传json格式的物模型文件",
+                "objectModel": "Jetlinks物模型"
             }
         }
     },
