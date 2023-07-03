@@ -24,23 +24,23 @@ export const platformTypeList = [
 ];
 
 export const OperatorMap = {
-  onelink: t('view.iot-card.data.onelink'),
-  ctwing: t('view.iot-card.data.ctwing'),
-  unicom: t('view.iot-card.data.unicom'),
+  onelink: t('views.iot-card.data.onelink'),
+  ctwing: t('views.iot-card.data.ctwing'),
+  unicom: t('views.iot-card.data.unicom'),
 }
 
 //运营商
 export const OperatorList = [
   {
-    label: t('view.iot-card.data.onelink'),
+    label: t('views.iot-card.data.onelink'),
     value: 'onelink',
   },
   {
-    label: t('view.iot-card.data.ctwing'),
+    label: t('views.iot-card.data.ctwing'),
     value: 'ctwing',
   },
   {
-    label: t('view.iot-card.data.unicom'),
+    label: t('views.iot-card.data.unicom'),
     value: 'unicom',
   },
 ];
@@ -48,19 +48,19 @@ export const OperatorList = [
 // 类型
 export const TypeList = [
   {
-    label: t('view.iot-card.data.year'),
+    label: t('views.iot-card.data.year'),
     value: 'year',
   },
   {
-    label: t('view.iot-card.data.season'),
+    label: t('views.iot-card.data.season'),
     value: 'season',
   },
   {
-    label: t('view.iot-card.data.yemonthar'),
+    label: t('views.iot-card.data.yemonthar'),
     value: 'month',
   },
   {
-    label: t('view.iot-card.data.other'),
+    label: t('views.iot-card.data.other'),
     value: 'other',
   },
 ];
@@ -68,19 +68,19 @@ export const TypeList = [
 // 支付方式
 export const PaymentMethod = [
   {
-    label: t('view.iot-card.data.ALIPAY_WAP'),
+    label: t('views.iot-card.data.ALIPAY_WAP'),
     value: 'ALIPAY_WAP',
   },
   {
-    label: t('view.iot-card.data.ALIPAY_WEB'),
+    label: t('views.iot-card.data.ALIPAY_WEB'),
     value: 'ALIPAY_WEB',
   },
   {
-    label: t('view.iot-card.data.WEIXIN_JSAPI'),
+    label: t('views.iot-card.data.WEIXIN_JSAPI'),
     value: 'WEIXIN_JSAPI',
   },
   {
-    label: t('view.iot-card.data.WEIXIN_NATIVE'),
+    label: t('views.iot-card.data.WEIXIN_NATIVE'),
     value: 'WEIXIN_NATIVE',
   },
 ];
