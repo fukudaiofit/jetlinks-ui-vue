@@ -225,7 +225,9 @@
         "summarizeContent": "The notification configuration may provide support for alert message notification in conjunction with the notification configuration. It can also be used to call other custom modules in the system.",
         "noticonfigdes": "Notification configuration description",
         "suc": "Success",
-        "err": "Failure"
+        "err": "Failure",
+        "online": "online",
+        "offline": "offline"
     },
     "login": {
         "remember": "Remember me",
@@ -1403,6 +1405,9 @@
                 "5rg4ytrtt7k0": "Please select an operator",
                 "5rg4ytrttbs0": "Please select or enter a parameter value"
             },
+            "util": {
+                "execute": "Configure at least one execution action"
+            },
             "WhenItem": {
                 "5rg4yz2khok0": "And",
                 "5rg4yz2kj1c0": "Or",
@@ -2048,7 +2053,8 @@
                 "connection": "Connection details",
                 "gatewayTip": "Check whether the access gateway status is normal. If the access gateway status is disabled, the connection fails",
                 "repair": "One-click repair",
-                "rediagnosis": "rediagnosis"
+                "rediagnosis": "rediagnosis",
+                "tip": "Contact the administrator to provide {accessProvider} information and report any data based on the URL information"
             },
             "ManualInspection": {
                 "inspectTip": "Check whether the configuration item is correctly filled. If you are sure that the item does not need diagnosis, do not need diagnosis",
@@ -5967,7 +5973,8 @@
                 "5rl9g0iy7zk0": "Support images within 1m",
                 "inputApi": "Please enter AutoNavi API Key",
                 "imgFormat": "Support images within 4m: support JPG and PNG",
-                "formatTip": "Please upload a picture in. JPG. PNG. Jfif. Pjp. Pjpeg. JPEG format"
+                "formatTip": "Please upload a picture in. JPG. PNG. Jfif. Pjp. Pjpeg. JPEG format",
+                "imgSize": "The image must be less than 4M in size"
             }
         },
         "InitData": {
