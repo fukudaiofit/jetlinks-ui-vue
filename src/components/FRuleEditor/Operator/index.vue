@@ -2,32 +2,34 @@
   <div class="operator-box">
     <j-input-search @search="search" allow-clear :placeholder="t('FRuleEditor.Operator.index.5rlca4rnhls0')" />
     <div class="tree">
-      <j-tree @select="selectTree" :field-names="{ title: 'name', key: 'id', }" auto-expand-parent
-        :tree-data="data">
+      <j-tree @select="selectTree" :field-names="{ title: 'name', key: 'id', }" auto-expand-parent :tree-data="data">
         <template #title="node">
           <div class="node">
-            <div style="max-width: 180px"><Ellipsis>{{ node.name }}</Ellipsis></div>
+            <div style="max-width: 180px">
+              <Ellipsis>{{ node.name }}</Ellipsis>
+            </div>
             <div :class="node.children?.length > 0 ? 'parent' : 'add'">
-              <j-popover v-if="node.type === 'property'" placement="right" :title="t('FRuleEditor.Operator.index.5rlca4rnj3s0')">
+              <j-popover v-if="node.type === 'property'" placement="right"
+                :title="t('FRuleEditor.Operator.index.5rlca4rnj3s0')">
                 <template #content>
                   <j-space direction="vertical">
                     <j-tooltip placement="right" :title="t('FRuleEditor.Operator.index.5rlca4rnjfc0')">
                       <j-button type="text" @click="recentClick(node)">
-                        $recent实时值
+                        {{ t('FRuleEditor.Operator.index.realTime') }}
                       </j-button>
                     </j-tooltip>
                     <j-tooltip placement="right" :title="t('FRuleEditor.Operator.index.5rlca4rnji40')">
                       <j-button @click="lastClick(node)" type="text">
-                        {{t('FRuleEditor.Operator.index.5rlca4rnjls0')}}
+                        {{ t('FRuleEditor.Operator.index.5rlca4rnjls0') }}
                       </j-button>
                     </j-tooltip>
                   </j-space>
                 </template>
-                <a>{{t('FRuleEditor.Operator.index.5rlca4rnjw00')}}</a>
+                <a>{{ t('FRuleEditor.Operator.index.5rlca4rnjw00') }}</a>
               </j-popover>
 
               <a v-else @click="addClick(node)">
-                {{t('FRuleEditor.Operator.index.5rlca4rnjw00')}}
+                {{ t('FRuleEditor.Operator.index.5rlca4rnjw00') }}
               </a>
             </div>
           </div>

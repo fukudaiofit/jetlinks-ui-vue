@@ -140,7 +140,7 @@ const rules = {
         {
             validator(_: any, value: string) {
                 if (!value) {
-                    return Promise.reject('请输入账号!')
+                    return Promise.reject(t('common.idTips'))
                 }
                 return Promise.resolve()
             }
@@ -150,7 +150,7 @@ const rules = {
         {
             validator(_: any, value: string) {
                 if (!value) {
-                    return Promise.reject('请输入密码!')
+                    return Promise.reject(t('common.pwdTips'))
                 }
                 return Promise.resolve()
             }
@@ -160,7 +160,7 @@ const rules = {
         {
             validator(_: any, value: string) {
                 if (!value) {
-                    return Promise.reject('请输入验证码!')
+                    return Promise.reject(t('common.verificationTips'))
                 }
                 return Promise.resolve()
             }

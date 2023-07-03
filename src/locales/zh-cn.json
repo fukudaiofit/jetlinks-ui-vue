@@ -1584,6 +1584,17 @@
                 "5rlc88rnxng0": "自动启用"
             }
         },
+        "Form": {
+            "rules": {
+                "Maximum": "最多输入{length}个字符",
+                "input": "输入",
+                "select": "选择",
+                "please": "请{typeName}{name}",
+                "IDRule": "请输入英文或者数字或者-或者_",
+                "minRule": "最小仅输入-{baseNumber}",
+                "maxRule": "最大可输入{baseNumber}"
+            }
+        },
         "GeoComponent": {
             "index": {
                 "5rlcb96qjeo0": "地理位置",
@@ -1640,6 +1651,16 @@
                 "5rlckv19v8c0": "刷新",
                 "5rlckv19vg40": "保存成功",
                 "5rlckv19vn40": "保存失败"
+            }
+        },
+        "Search": {
+            "util": {
+                "or": "或者",
+                "and": "并且",
+                "like": "包含",
+                "nlike": "不包含",
+                "in": "属于",
+                "nin": "不属于"
             }
         },
         "Upload": {
@@ -5953,7 +5974,8 @@
                 "5rlca4rnji40": "实时值的上一有效值",
                 "5rlca4rnjls0": "上一值",
                 "5rlca4rnjw00": "添加",
-                "5rlca4rnk2c0": "属性"
+                "5rlca4rnk2c0": "属性",
+                "realTime": "$recent实时值"
             }
         }
     },

@@ -1579,6 +1579,17 @@
                 "5rlc88rnxng0": "Enable automatically"
             }
         },
+        "Form": {
+            "rules": {
+                "Maximum": "Enter a maximum of {length} characters",
+                "input": "input",
+                "select": "select",
+                "please": "Please {typeName}{name}",
+                "IDRule": "Please enter English or numbers or - or _",
+                "minRule": "Minimum input only -{baseNumber}",
+                "maxRule": "Maximum input {baseNumber}"
+            }
+        },
         "GeoComponent": {
             "index": {
                 "5rlcb96qjeo0": "Geographical location",
@@ -1635,6 +1646,16 @@
                 "5rlckv19v8c0": "Refresh",
                 "5rlckv19vg40": "Saved successfully",
                 "5rlckv19vn40": "Save failed"
+            }
+        },
+        "Search": {
+            "util": {
+                "or": "or",
+                "and": "and",
+                "like": "contain",
+                "nlike": "exclude",
+                "in": "Belong to",
+                "nin": "Not belong to"
             }
         },
         "Upload": {
@@ -5947,7 +5968,8 @@
                 "5rlca4rnji40": "Last valid value of a real-time value",
                 "5rlca4rnjls0": "Last value",
                 "5rlca4rnjw00": "Add to",
-                "5rlca4rnk2c0": "Attribute"
+                "5rlca4rnk2c0": "Attribute",
+                "realTime": "$recent Indicates the real time value"
             }
         }
     },
