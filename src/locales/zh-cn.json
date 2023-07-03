@@ -2686,14 +2686,29 @@
                 "ordinary": "普通",
                 "warn": "警告",
                 "urgent": "紧急",
-                "read":"读",
-                "write":"写",
-                "report":"上报"
+                "read": "读",
+                "write": "写",
+                "report": "上报"
             }
         },
         "home": {
             "index": {
                 "5rovh57d0uo0": "基本信息"
+            }
+        },
+        "iot-card": {
+            "data": {
+                "onelink": "移动",
+                "ctwing": "电信",
+                "unicom": "联通",
+                "year": "年卡",
+                "season": "季卡",
+                "month": "月卡",
+                "other": "其他",
+                "ALIPAY_WAP": "支付宝手机网站支付",
+                "ALIPAY_WEB": "支付宝网页及时到账支付",
+                "WEIXIN_JSAPI": "微信公众号支付",
+                "WEIXIN_NATIVE": "微信扫码支付"
             }
         }
     },

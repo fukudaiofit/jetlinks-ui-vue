@@ -2680,14 +2680,29 @@
                 "ordinary": "normal",
                 "warn": "warn",
                 "urgent": "urgent",
-                "read":"read",
-                "write":"write",
-                "report":"report"
+                "read": "read",
+                "write": "write",
+                "report": "report"
             }
         },
         "home": {
             "index": {
                 "5rovh57d0uo0": "Basic information"
+            }
+        },
+        "iot-card": {
+            "data": {
+                "onelink": "onelink",
+                "ctwing": "ctwing",
+                "unicom": "unicom",
+                "year": "Annual card",
+                "season": "Season card",
+                "month": "month card",
+                "other": "other",
+                "ALIPAY_WAP": "Alipay mobile website payment",
+                "ALIPAY_WEB": "Alipay website timely arrival payment",
+                "WEIXIN_JSAPI": "Wechat public account payment",
+                "WEIXIN_NATIVE": "Wechat scan code payment"
             }
         }
     },
