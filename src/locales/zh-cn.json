@@ -1673,6 +1673,13 @@
                 "nin": "不属于"
             }
         },
+        "Table": {
+            "index": {
+                "Selected": "已选择{length}项",
+                "deselect": "取消选择",
+                "paging":"第{num}条/总共{total} 条"
+            }
+        },
         "Upload": {
             "Cropper": {
                 "5rlcmafot0w0": "图片编辑"
@@ -2678,7 +2685,7 @@
                 "userNameTip": "请输入用户名",
                 "pwdTip": "请输入密码",
                 "codeTip": "请输入验证码",
-                "relevance":"关联{userName}账号"
+                "relevance": "关联{userName}账号"
             }
         },
         "device": {
@@ -3151,7 +3158,7 @@
                 "5rg4mqvp8840": "删除",
                 "5rg4mqvp8dc0": "请先禁用再删除",
                 "5rg4mqvp8h80": "确认删除?",
-                "verify":"确认{stateText}？"
+                "verify": "确认{stateText}？"
             }
         },
         "Scene": {
@@ -3183,6 +3190,11 @@
                 "5rg593nz9340": "确认手动触发？",
                 "5rg593nz9640": "查看",
                 "verify": "确认"
+            },
+            "typings":{
+                "Manual":"手动触发",
+                "timing":"定时触发",
+                "device":"设备触发"
             }
         }
     },
@@ -4919,7 +4931,7 @@
                 "imgTip": "请上传.jpg.png.jfif.pjp.pjpeg.jpeg格式的图片",
                 "imgLimit": "图片大小必须小于4M",
                 "icon": "请上传ico格式的图片",
-                "iconLimit":"图片大小必须小于1M`"
+                "iconLimit": "图片大小必须小于1M`"
             }
         },
         "User": {
@@ -4941,7 +4953,7 @@
                 "5rg8tfggoh80": "操作成功",
                 "5rkjhmivlto0": "新增",
                 "deleteTip": "确认删除",
-                "verify":"确认{stateText}吗？"
+                "verify": "确认{stateText}吗？"
             }
         },
         "Menu": {
@@ -4987,7 +4999,7 @@
                 "5rg9un6bmnw0": "操作成功!",
                 "export": "确认导出？",
                 "deleteTip": "确认删除",
-                "verify":"确认{stateText}吗？"
+                "verify": "确认{stateText}吗？"
             }
         },
         "Relationship": {

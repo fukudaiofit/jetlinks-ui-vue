@@ -19,7 +19,7 @@
             </j-form-item>
             <j-form-item
                 v-if="outputData.status"
-                label="t('Io.Save.output.kafka')"
+                :label="t('Io.Save.output.kafka')"
                 name="address"
                 :rules="[
                     {

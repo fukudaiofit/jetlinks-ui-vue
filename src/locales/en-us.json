@@ -1673,6 +1673,13 @@
                 "nin": "Not belong to"
             }
         },
+        "Table": {
+            "index": {
+                "Selected": "The {length} item has been selected",
+                "deselect": "deselect",
+                "paging": "Article {num} / {total}"
+            }
+        },
         "Upload": {
             "Cropper": {
                 "5rlcmafot0w0": "Photo editing"
@@ -2678,7 +2685,7 @@
                 "userNameTip": "Please enter a user name",
                 "pwdTip": "Please enter your password",
                 "codeTip": "Please enter the verification code",
-                "relevance":"Associate the {userName} account"
+                "relevance": "Associate the {userName} account"
             }
         },
         "device": {
@@ -3151,7 +3158,7 @@
                 "5rg4mqvp8840": "Delete",
                 "5rg4mqvp8dc0": "Please disable before deleting",
                 "5rg4mqvp8h80": "Confirm deletion?",
-                "verify":"Confirm {stateText}？"
+                "verify": "Confirm {stateText}？"
             }
         },
         "Scene": {
@@ -3183,6 +3190,11 @@
                 "5rg593nz9340": "Confirm manual trigger?",
                 "5rg593nz9640": "Check",
                 "verify": "Confirm"
+            },
+            "typings": {
+                "Manual": "Manual trigger",
+                "timing": "Timing trigger",
+                "device": "Device trigger"
             }
         }
     },
@@ -4331,7 +4343,7 @@
                 "5rg5czh0zm40": "Operation failed!",
                 "5rg5czh0zpc0": "Remote control",
                 "5rg5czh0zv40": "Reset the password",
-                "5rg5czh0zyg0": "Confirm reset password to P @ ssw0rd?",
+                "5rg5czh0zyg0": "Confirm reset password to P@ssw0rd?",
                 "5rg5czh101g0": "Delete",
                 "5rg5czh10480": "Enabled devices cannot be deleted",
                 "5rg5czh107g0": "Confirm deletion?",
@@ -4919,7 +4931,7 @@
                 "imgTip": "Please upload a picture in. JPG. PNG. Jfif. Pjp. Pjpeg. JPEG format",
                 "imgLimit": "Image size must be less than 4m",
                 "icon": "Please upload pictures in ico format",
-                "iconLimit":"The image size must be less than 1M`"
+                "iconLimit": "The image size must be less than 1M`"
             }
         },
         "User": {
@@ -4941,7 +4953,7 @@
                 "5rg8tfggoh80": "Operation succeeded",
                 "5rkjhmivlto0": "Add",
                 "deleteTip": "Confirm deletion",
-                "verify":"Confirm {stateText}?"
+                "verify": "Confirm {stateText}?"
             }
         },
         "Menu": {
@@ -4987,7 +4999,7 @@
                 "5rg9un6bmnw0": "Operation successful!",
                 "export": "Confirm Export?",
                 "deleteTip": "Confirm deletion",
-                "verify":"Confirm {stateText}?"
+                "verify": "Confirm {stateText}?"
             }
         },
         "Relationship": {
