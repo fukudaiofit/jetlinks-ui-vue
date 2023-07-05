@@ -207,7 +207,7 @@
                                     :header="
                                         cluster.clusterNodeId
                                             ? cluster.clusterNodeId
-                                            : `#${index + 1}.配置信息`
+                                            : `#${index + 1 + '.'+ t('components.Media.GB28181.disposition')}`
                                     "
                                 >
                                     <template #extra>

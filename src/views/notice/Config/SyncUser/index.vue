@@ -50,7 +50,7 @@
                             pageSizeOptions: ['10', '20', '50', '100'],
                             showSizeChanger: true,
                             hideOnSinglePage: false,
-                            showTotal: (total: number, range: number) => `第 ${range[0]} - ${range[1]} 条/总共 ${total} 条`,
+                            showTotal: (total: number, range: number) => t('pages.iot.notice.config.paging',{num:`${range[0]} - ${range[1]}`,total:total}),
                         }"
                         @change="handleTableChange"
                     >

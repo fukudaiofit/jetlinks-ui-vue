@@ -122,8 +122,8 @@
                                                         ? cluster.serverId
                                                         : !formData.shareCluster
                                                         ? `#${
-                                                              index + 1
-                                                          }.配置信息`
+                                                              index + 1 + '.' + t('Type.Detail.index.disposition')
+                                                          }`
                                                         : ''
                                                 }}
                                             </div>

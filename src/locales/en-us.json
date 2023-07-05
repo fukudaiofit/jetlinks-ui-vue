@@ -344,7 +344,8 @@
                     "bind": "Bind the user",
                     "userTip": "Please select a user",
                     "bindState": "Binding status",
-                    "dingdingName": "Nail the user name"
+                    "dingdingName": "Nail the user name",
+                    "paging":"{num} / total:{total}"
                 },
                 "template": {
                     "templateName": "Template name",
@@ -668,7 +669,8 @@
                 "5rcy2w1loe80": "Streaming mode",
                 "5rcy2w1loho0": "Operation successful!",
                 "5rcy2w1lokw0": "The access mode cannot be changed when there is a device instance under the product",
-                "5rcy2w1lors0": "The access mode can only be changed after the product is deactivated"
+                "5rcy2w1lors0": "The access mode can only be changed after the product is deactivated",
+                "productTip": "Please select the product type"
             },
             "metadataModal": {
                 "5rcy30umqtc0": "Select the processing method",
@@ -1270,7 +1272,8 @@
                 "clusterTip": "Shared configuration: All nodes in the cluster share the same configuration. Independent configuration: Different nodes in the cluster use different configurations",
                 "SIPAddress": "SIP address",
                 "SIPTip": "To the network card address on the server, bind to all network cards: 0.0.0.0",
-                "SIP": "SIP domain"
+                "SIP": "SIP domain",
+                "disposition": "Configuration information"
             },
             "index": {
                 "5rg37iwxsow0": "Basic information",
@@ -2806,7 +2809,8 @@
                 "cluster": "Shared configuration: All nodes in the cluster share the same configuration. Independent configuration: Different nodes in the cluster use different configurations",
                 "address": "Bind to the network card address on the server, bind to all network cards: 0.0.0.0",
                 "maxTip": "The maximum length of a single received and sent message, in bytes; Too large a setting may affect performance",
-                "EMQ": "When the connected service is EMQ, you may need to use a shared subscription prefix, such as:$queue或$share"
+                "EMQ": "When the connected service is EMQ, you may need to use a shared subscription prefix, such as:$queue或$share",
+                "disposition": "Configuration information"
             },
             "LocalAddressSelect": {
                 "5rg3etsypko0": "Please select a local addr"

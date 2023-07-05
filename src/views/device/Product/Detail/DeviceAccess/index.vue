@@ -75,7 +75,7 @@
                 </div>
                 <!--        产品类型        -->
                 <j-form ref="pluginFormRef" :model="productData" layout="vertical" v-if='productTypes.length'>
-                  <j-form-item name='id' :label="t('Detail.DeviceAccess.index.5rcy2w1lls00')" :rules='[{ required: true, message: "请选择产品类型"}]'>
+                  <j-form-item name='id' :label="t('Detail.DeviceAccess.index.5rcy2w1lls00')" :rules="[{ required: true, message: t('Detail.DeviceAccess.index.productTip')}]">
                     <j-select
                       v-model:value='productData.id'
                       :options='productTypes'

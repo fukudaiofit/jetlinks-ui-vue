@@ -344,7 +344,8 @@
                     "bind": "绑定用户",
                     "userTip": "请选择用户",
                     "bindState": "绑定状态",
-                    "dingdingName": "钉钉用户名"
+                    "dingdingName": "钉钉用户名",
+                    "paging": "第{num}条/总共{total} 条"
                 },
                 "template": {
                     "templateName": "模板名称",
@@ -668,7 +669,8 @@
                 "5rcy2w1loe80": "流传输模式",
                 "5rcy2w1loho0": "操作成功！",
                 "5rcy2w1lokw0": "产品下有设备实例时不能更换接入方式",
-                "5rcy2w1lors0": "停用产品后才可更换接入方式"
+                "5rcy2w1lors0": "停用产品后才可更换接入方式",
+                "productTip": "请选择产品类型"
             },
             "metadataModal": {
                 "5rcy30umqtc0": "选择处理方式",
@@ -1270,7 +1272,8 @@
                 "clusterTip": "共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置",
                 "SIPAddress": "SIP地址",
                 "SIPTip": "到服务器上的网卡地址,绑定到所有网卡:0.0.0.0",
-                "SIP": "SIP域"
+                "SIP": "SIP域",
+                "disposition": "配置信息"
             },
             "index": {
                 "5rg37iwxsow0": "基本信息",
@@ -1677,7 +1680,7 @@
             "index": {
                 "Selected": "已选择{length}项",
                 "deselect": "取消选择",
-                "paging":"第{num}条/总共{total} 条"
+                "paging": "第{num}条/总共{total} 条"
             }
         },
         "Upload": {
@@ -2806,7 +2809,8 @@
                 "cluster": "共享配置:集群下所有节点共用同一配置,独立配置:集群下不同节点使用不同配置",
                 "address": "绑定到服务器上的网卡地址,绑定到所有网卡:0.0.0.0",
                 "maxTip": "单次收发消息的最大长度,单位:字节;设置过大可能会影响性能",
-                "EMQ": "当连接的服务为EMQ时,可能需要使用共享的订阅前缀,如:$queue或$share"
+                "EMQ": "当连接的服务为EMQ时,可能需要使用共享的订阅前缀,如:$queue或$share",
+                "disposition": "配置信息"
             },
             "LocalAddressSelect": {
                 "5rg3etsypko0": "请选择本地地址"
@@ -3191,10 +3195,10 @@
                 "5rg593nz9640": "查看",
                 "verify": "确认"
             },
-            "typings":{
-                "Manual":"手动触发",
-                "timing":"定时触发",
-                "device":"设备触发"
+            "typings": {
+                "Manual": "手动触发",
+                "timing": "定时触发",
+                "device": "设备触发"
             }
         }
     },
