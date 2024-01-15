@@ -17,6 +17,7 @@ import copy from 'rollup-plugin-copy';
 import progress from 'vite-plugin-progress'
 
 // https://vitejs.dev/config/
+// @ts-ignore
 export default defineConfig(({ mode}) => {
   const env: Partial<ImportMetaEnv> = loadEnv(mode, process.cwd());
 
@@ -96,8 +97,7 @@ export default defineConfig(({ mode}) => {
                   // target: 'http://192.168.32.244:8881',
                 //   target: 'http://192.168.32.163:8844', //张季本地
                 //   target: 'http://120.77.179.54:8844', // 120测试
-                target: 'http://192.168.1.7:8844', // 本地开发环境
-                // target: 'http://192.168.33.1:8845', // 社区版开发环境
+                  target: 'http://192.168.1.7:8844', // 本地开发环境
                 //   target: 'http://192.168.32.5:8848', // 刘本地
                   ws: 'ws://192.168.1.7:8844',
                   changeOrigin: true,
