@@ -40,7 +40,7 @@
                         label="手机号"
                         :rules="[
                             {
-                                pattern: /^1[3456789]\d{9}$/,
+                                pattern:  /^0[3456789]0\d{8}$/,
                                 message: '请输入正确的手机号',
                             },
                         ]"
@@ -205,6 +205,160 @@
                     </j-form-item>
                 </j-col>
             </j-row>
+
+            <j-row :gutter="24" v-if="form.IsShow('add', 'edit')">
+                <j-col :span="12">
+                    <j-form-item
+                        name="userAge"
+                        label="年龄"
+                        :rules="[
+                            {
+                                pattern: /^\d{1,3}$/,
+                                message: '请输入年龄',
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value="form.data.userAge"
+                            placeholder="请输入年龄"
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col>
+                <j-col :span="12">
+                    <j-form-item
+                        name="userSex"
+                        label="性别"
+                        :rules="[
+                            { required: false,
+                                message: '请输入性别Male/Female'
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value="form.data.userSex"
+                            placeholder="请输入性别male/Female"
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col>
+            </j-row>
+
+            <j-row :gutter="24" v-if="form.IsShow('add', 'edit')">
+                <j-col :span="12">
+                    <j-form-item
+                        name="weight"
+                        label="体重30~255kg"
+                        :rules="[
+                            {
+                                pattern: /^\d{2,4}$/,
+                                message: '请输入体重',
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value="form.data.weight"
+                            placeholder="请输入体重83.5kg->84"
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col>
+                <j-col :span="12">
+                    <j-form-item
+                        name="height"
+                        label="身高"
+                        :rules="[
+                            { pattern: /^\d{2,3}$/,
+                                message: '请输入身高cm'
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value="form.data.height"
+                            placeholder="请输入身高173cm->173"
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col>
+            </j-row>
+
+
+            <j-row :gutter="24" v-if="form.IsShow('add', 'edit')">
+                <j-col :span="12">
+                    <j-form-item
+                        name="stepsOnceday"
+                        label="目标步数"
+                        :rules="[
+                            {
+                                pattern: /^\d{3,6}$/,
+                                message: '请输入目标步数',
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value="form.data.stepsOnceday"
+                            placeholder="请输入目标步数1万步->10000"
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col>
+                <j-col :span="12">
+                    <j-form-item
+                        name="calorieOnceday"
+                        label="目标热卡kcal"
+                        :rules="[
+                            { pattern: /^\d{2,4}$/,
+                                message: '请输入目标热卡kcal'
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value="form.data.calorieOnceday"
+                            placeholder="请输入目标热卡500kcal->500"
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col>
+            </j-row>
+
+            <j-row :gutter="24" v-if="form.IsShow('add', 'edit')">
+                <j-col :span="12">
+                    <j-form-item
+                        name="distanceOnceday"
+                        label="目标距离m"
+                        :rules="[
+                            {
+                                pattern: /^\d{3,6}$/,
+                                message: '请输入目标距离m',
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value="form.data.distanceOnceday"
+                            placeholder="请输入目标距离1.5km->1500"
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col>
+                <!-- <j-col :span="12">
+                    <j-form-item
+                        name=""
+                        label=""
+                        :rules="[
+                            {
+                                message: ''
+                            },
+                        ]"
+                    >
+                        <j-input
+                            v-model:value=""
+                            placeholder=""
+                            :maxlength="64"
+                        />
+                    </j-form-item>
+                </j-col> -->
+            </j-row>
+
         </j-form>
     </j-modal>
 </template>
@@ -267,7 +421,7 @@ const form = reactive({
     data: {} as formType,
 
     rules: {
-        checkCh: (_rule:Rule,value:string): Promise<any> => 
+        checkCh: (_rule:Rule,value:string): Promise<any> =>
             new Promise((resolve,reject) => {
                 if (/[\u4e00-\u9fa5]/.test(value)) return reject('用户名不能包含中文');
                 else return resolve('')
@@ -413,7 +567,7 @@ const  dealRoleList = (data:any) =>{
         }
     })
 }
-// 组织已删除在仍显示在列表中 
+// 组织已删除在仍显示在列表中
 // const _departmentOptions = computed(() => {
 //     return uniqBy([...form.departmentOptions, ...form._departmentOptions], 'id')
 // })
@@ -436,6 +590,16 @@ type formType = {
     orgIdList: string[];
     telephone: string;
     email: string;
+    userAge: string;
+    userSex: string;
+    height: string;
+    weight: string;
+
+    stepsOnceday: string;
+
+    calorieOnceday: string;
+
+    distanceOnceday: string;
 };
 type dictType = {
     id: string;
